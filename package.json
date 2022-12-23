@@ -1,0 +1,25 @@
+{
+  "description": "Configurable instrument display",
+  "keywords": [
+    "signalk-vhfinfo-plugin",
+    "signalk-webapp"
+  ],
+  "license": "ISC",
+  "author": "hans@defect.org",
+  "main": "plugins/signalk/plugin/index.js",
+  "name": "signalk-vhfinfo-plugin",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/htool/vhfinfo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/htool/vhfinfo/issues"
+  },
+  "homepage": "https://github.com/htool/vhfinfo#readme",
+  "dependencies": {
+    "@turf/nearest-point": "^6.5.0",
+    "@turf/turf": "^6.5.0",
+    "turf-point": "^2.0.1"
+  }
+}
