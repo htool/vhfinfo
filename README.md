@@ -78,13 +78,13 @@ Use the following template to populate the properties part on the right in the [
 ```
 
 ### Create a change proposal to a country file
-- Go to the [VHFinfo GitHub repository](https://github.com/htool/vhfinfo/data/) and select the country file you want to add your data to, e.g. [NL](https://github.com/htool/vhfinfo/data/NL.json).
+- Go to the [VHFinfo GitHub repository](https://github.com/htool/vhfinfo/data/) and select the country file you want to add your data to, e.g. [NL](https://github.com/htool/vhfinfo/blob/main/data/NL.json).
 - Press 'E' or use the pencil button on the top right of the file to start editing the file. Now copy-paste the `feature` part of the JSON from the [GeoJSON.io](https://geojson.io/) website into the GitHub editor.
 - Add a `,` to the last `}` of the previous feature if needed.
 - At the bottom click `submit proposal`
 
 ### Editing existing information
-- Go to the [VHFinfo GitHub repository](https://github.com/htool/vhfinfo/data/) and select the country file you want to edit, e.g. [NL](https://github.com/htool/vhfinfo/data/NL.json).
+- Go to the [VHFinfo GitHub repository](https://github.com/htool/vhfinfo/data/) and select the country file you want to edit, e.g. [NL](https://github.com/htool/vhfinfo/blob/main/data/NL.json).
 - Press 'E' or use the pencil button on the top right of the file to start editing the file.
 - Make your changes
 - At the bottom click `submit proposal`
