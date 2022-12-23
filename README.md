@@ -14,8 +14,7 @@ The information is collected as [GeoJSON](https://geojson.org/) which holds both
 ## Viewing information
 To see if certain VHF information is already present, you can use only of the following country links to see the data plotted on a map.
 
-[NL](https://geojson.io/#data=data:text/x-url,https://github.com/htool/vhfinfo/data/NL.json&map=2/0/20)
-
+[NL](https://geojson.io/#data=data:text/x-url,https://raw.githubusercontent.com/htool/vhfinfo/main/data/NL.json&map=2/0/20)
 
 ## Adding information
 To add information you'll have to
@@ -88,3 +87,10 @@ Use the following template to populate the properties part on the right in the [
 - Press 'E' or use the pencil button on the top right of the file to start editing the file.
 - Make your changes
 - At the bottom click `submit proposal`
+
+
+## Plugins
+Plugins can be create separate from this repository and just use VHFinfo as database. Listing them here could make them easier to find.
+
+### SignalK
+A plugin is currently under development.
