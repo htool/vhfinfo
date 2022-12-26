@@ -1,5 +1,5 @@
 {
-  "description": "Configurable instrument display",
+  "description": "VHF GeoJSON information with SignalK plugin",
   "keywords": [
     "vhfinfo",
     "signalk-node-server-plugin",
@@ -9,7 +9,7 @@
   "author": "hans@defect.org",
   "main": "plugin/index.js",
   "name": "vhfinfo",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/htool/vhfinfo.git"
