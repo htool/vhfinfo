@@ -14,7 +14,7 @@ The information is collected as [GeoJSON](https://geojson.org/) which holds both
 ## Viewing information
 To see if certain VHF information is already present, you can use only of the following country links to see the data plotted on a map.
 
-[NL](https://geojson.io/#data=data:text/x-url,https://raw.githubusercontent.com/htool/vhfinfo/main/data/NL.json&map=2/0/20)
+[NLD](https://geojson.io/#data=data:text/x-url,https://raw.githubusercontent.com/htool/vhfinfo/main/data/NLD.json&map=2/0/20)
 
 ## Adding information
 To add information you'll have to
@@ -78,14 +78,14 @@ Use the following template to populate the properties part on the right in the [
 
 ### Create a change proposal to a country file
 - A GitHub account is needed for this part
-- Go to the [VHFinfo GitHub repository](https://github.com/htool/vhfinfo/data/) and select the country file you want to add your data to, e.g. [NL](https://github.com/htool/vhfinfo/blob/main/data/NL.json).
+- Go to the [VHFinfo GitHub repository](https://github.com/htool/vhfinfo/data/) and select the country file you want to add your data to, e.g. [NLD](https://github.com/htool/vhfinfo/blob/main/data/NLD.json).
 - Press 'E' or use the pencil button on the top right of the file to start editing the file. Now copy-paste the `feature` part of the JSON from the [GeoJSON.io](https://geojson.io/) website into the GitHub editor.
 - Add a `,` to the last `}` of the previous feature if needed.
 - At the bottom click `submit proposal`
 
 ### Editing existing information
 - A GitHub account is needed for this part
-- Go to the [VHFinfo GitHub repository](https://github.com/htool/vhfinfo/data/) and select the country file you want to edit, e.g. [NL](https://github.com/htool/vhfinfo/blob/main/data/NL.json).
+- Go to the [VHFinfo GitHub repository](https://github.com/htool/vhfinfo/data/) and select the country file you want to edit, e.g. [NLD](https://github.com/htool/vhfinfo/blob/main/data/NLD.json).
 - Press 'E' or use the pencil button on the top right of the file to start editing the file.
 - Make your changes
 - At the bottom click `submit proposal`
@@ -95,4 +95,23 @@ Use the following template to populate the properties part on the right in the [
 Plugins can be create separate from this repository and just use VHFinfo as database. Listing them here could make them easier to find.
 
 ### SignalK
-A plugin is currently under development.
+The plugin lets you configure the search 'beam' by specifying the length and angle as well as the SignalK path to write to.
+The plugin flow is as follows:
+ 1. Determine own location using `navigation.position`
+ 2. Draw a boundry box around the location with 100Nm (configurable) ribs
+ 3. Use countries_bbox.json to create bboxes and check if they intersect with the locationBox from step 2
+ 4. Read features from intersecting to see which intersect with locationBox from 2 and keep them in memory (featuresInBox)
+ 5. Use heading and location to crete a searchPolygon 'beam' using the plugin config parameters
+ 6. Go through the features in featuresInBox and check if they intersect with searchPolygon
+ 7. Use result of 6 to calculate distance to each feature and sort by distance (negative distance means your located inside the feature)
+ 8. /plugin/vhfinfo/nearby can be called to pull the whole result set of 7.
+ 9. Write the nearest POI and VTS to the path configured in the plugin
+
+#### API
+The resulting nearby VHF info objects array can be queried here:
+```
+/plugins/vhfinfo/nearby
+```
+
+#### SignalK path
+You can configure where the plugin writes the two nearest Point of Interest (lock, bridge, marina) and VTS (Vessel Traffic Service). This can be used together with the [SignalK Instrument Display Plugin](https://www.npmjs.com/package/signalk-instrument-display-plugin) to display current VHF info on any display.

@@ -270,6 +270,7 @@
       "type": "Feature",
       "properties": {
         "name": "Sector Schellingwoude",
+        "callname": "Schellingwoude",
         "type": "vts",
         "url": "https://www.binnenvaartkennis.nl/wp-content/uploads/2021/02/VTS-Amsterdam.pdf",
         "phone": "+31206221515",
