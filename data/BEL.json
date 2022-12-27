@@ -1,5 +1,75 @@
 {
   "type": "FeatureCollection",
   "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Traffic Centre Steenbank",
+        "callname": "Steenbank",
+        "type": "vts",
+        "url": "https://www.vts-scheldt.net/nautical/vhf",
+        "phone": "+31887980700",
+        "vhfdata": {
+          "generic": {
+            "channel": 64,
+            "mode": "report",
+            "note": "Reporting details behind link."
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "update": {
+            "time": "5 *"
+          }
+        }
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              3.49861111,
+              51.8325
+            ],
+            [
+              3.4887289732339832,
+              51.56499347987149
+            ],
+            [
+              3.4349618232085106,
+              51.54123469155155
+            ],
+            [
+              3.4326620189935504,
+              51.52488699557179
+            ],
+            [
+              3.4916666666666667,
+              51.4913889
+            ],
+            [
+              3.4922222222222223,
+              51.4844444
+            ],
+            [
+              3.4066666666666667,
+              51.4152778
+            ],
+            [
+              3.144722222222222,
+              51.5730556
+            ],
+            [
+              3.1438888888888887,
+              51.8333333
+            ],            
+            [
+              3.49861111,
+              51.8325
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    }
   ]
 }
