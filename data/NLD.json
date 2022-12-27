@@ -44,6 +44,48 @@
         "type": "Polygon"
       }
     },
+     {
+      "type": "Feature",
+      "properties": {
+        "name": "Stevinsluis",
+        "type": "lock",
+        "url": "https://waterkaart.net/gids/sluis.php?naam=Stevinsluis",
+        "phone": "+31887974540",
+        "vhfdata": {
+          "generic": {
+            "mode": "report",
+            "channel": 20
+          }
+        }
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              5.047716383112771,
+              52.93022613095255
+            ],
+            [
+              5.046274389477901,
+              52.9313641849142
+            ],
+            [
+              5.046076246588854,
+              52.931274608687545
+            ],
+            [
+              5.0475319038572195,
+              52.93014890746488
+            ],
+            [
+              5.047716383112771,
+              52.93022613095255
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
     {
       "type": "Feature",
       "properties": {
