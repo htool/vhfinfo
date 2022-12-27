@@ -239,7 +239,7 @@
     {
       "type": "Feature",
       "properties": {
-      "name": "Centrale Meldpost Waddenzee",
+        "name": "Centrale Meldpost Waddenzee",
         "type": "vts",
         "url": "",
         "phone": "+31887974599",
@@ -251,6 +251,7 @@
           "cargo": {
             "mode": "report",
             "note": "Ships with dangerous cargo and special transports have a reporting obligation"
+          }
         }
       },
       "geometry": {
