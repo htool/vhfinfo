@@ -197,6 +197,56 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "VTS Maasmond",
+        "callname": "Sector Maasmond",
+        "type": "vts",
+        "url": "https://www.portofrotterdam.com/sites/default/files/2021-05/aanbevolen-oversteekroute-voor-kleine-vaartuigen-haven-rotterdam.pdf",
+        "phone": "+31102522801",
+        "vhfdata": {
+          "generic": {
+            "channel": 3
+          },
+          "pleasure": {
+            "mode": "report",
+            "note": "Report upon entering ship name, direction and current position relative to buoy MV or MN1",
+          },
+          "passenger": {
+            "mode": "report",
+            "note": "Report upon entering ship name, direction and current position relative to buoy MV or MN1",
+          }
+        }
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.0315482177734685,
+              52.03677447476586
+            ],
+            [
+              4.043221191406307,
+              52.03170546166522
+            ],
+            [
+              3.945202545166072,
+              51.973581992163204
+            ],
+            [
+              3.930096343994195,
+              51.97855185636004
+            ],
+            [
+              4.0315482177734685,
+              52.03677447476586
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "Waddenhaven Vlieland",
         "type": "marina",
         "url": "http://www.waddenhavenvlieland.nl/",
