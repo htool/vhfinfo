@@ -47,6 +47,88 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "VTS Terschelling"
+        "type": "vts",
+        "url": "",
+        "phone": "+31887974599",
+        "vhfdata": {
+          "generic": {
+            "channel": 2,
+            "mode": "listen"
+          },
+          "passenger": {
+            "mode": "report",
+            "note": "Report number of head onboard and destination"
+          }
+        }
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+             5.23533333,
+             53.3583333
+            ],
+            [
+            5.23533333,
+            53.3228333
+            ],
+            [
+              5.28,
+              53.3228333
+            ],
+            [
+              5.28,
+              53.2961667
+            ],
+            [
+              5.19275,
+              53.24525
+            ],
+            [
+              5.14366666,
+              53.24525
+            ],
+            [
+              5.0755,
+              53.2955833
+            ],
+            [
+              4.983666666,
+              53.28925
+            ],
+            [
+              4.931666666,
+              53.3298333
+            ],
+            [
+              5.03865,
+              53.4025833
+            ],
+            [
+              5.03865,
+              53.43675
+            ],
+            [
+              5.16115,
+              53.43675
+            ],
+            [
+              5.19253333,
+              53.3926333
+            ],
+            [
+             5.23533333,
+             53.3583333
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "Prinses Margrietsluis ",
         "type": "lock",
         "url": "https://waterkaart.net/gids/sluis.php?naam=Prinses%20Margrietsluis",
