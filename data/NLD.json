@@ -208,11 +208,11 @@
           },
           "pleasure": {
             "mode": "report",
-            "note": "Report upon entering ship name, direction and current position relative to buoy MV or MN1",
+            "note": "Report upon entering ship name, direction and current position relative to buoy MV or MN1"
           },
           "passenger": {
             "mode": "report",
-            "note": "Report upon entering ship name, direction and current position relative to buoy MV or MN1",
+            "note": "Report upon entering ship name, direction and current position relative to buoy MV or MN1"
           }
         }
       },
