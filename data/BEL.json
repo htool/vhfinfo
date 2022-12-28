@@ -4,6 +4,169 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "Wandelaar Approach",
+        "type": "vts",
+        "url": "https://www.vts-scheldt.net/nautical/vhf",
+        "phone": "+31887980700",
+        "vhfdata": {
+          "generic": {
+            "channel": 60,
+            "mode": "report",
+            "note": "Reporting details behind link. Radar support VHF 4 (Radar Zeebrugge)"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "update": {
+            "time": "10 *"
+          }
+        }
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              2.385834928319828,
+              51.26250493135859
+            ],
+            [
+              2.5435397497072723,
+              51.09379926741931
+            ],
+            [
+              2.7669444444444444,
+              51.1733333
+            ],
+            [
+              2.698055555555556,
+              51.2455556
+            ],
+            [
+              2.5305555555555554,
+              51.3333333
+            ],
+            [
+              2.513888888888889,
+              51.3577778
+            ],
+            [
+              2.463888888888889,
+              51.4430556
+            ],
+            [
+              2.322222222222222,
+              51.4
+            ],
+            [
+              2.385834928319828,
+              51.26250493135859
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Traffic Centre Wandelaar",
+        "callname": "Wandelaar",
+        "type": "vts",
+        "url": "https://www.vts-scheldt.net/nautical/vhf",
+        "phone": "+31887980700",
+        "vhfdata": {
+          "generic": {
+            "channel": 65,
+            "mode": "report",
+            "note": "Reporting details behind link. Radar support VHF 4 (Radar Zeebrugge)"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "update": {
+            "time": "10 *"
+          }
+        }
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              2.9372222222222226,
+              51.4202778
+            ],
+            [
+              2.968055555555556,
+              51.3894444
+            ],
+            [
+              2.9669444444444446,
+              51.3613889
+            ],
+            [
+              2.9669444444444446,
+              51.2591667
+            ],
+            [
+              2.970360954850147,
+              51.25506927048265
+            ],
+            [
+              2.928122240881155,
+              51.240095575043426
+            ],
+            [
+              2.921003768759242,
+              51.24332617359028
+            ],
+            [
+              2.913740209747754,
+              51.240925396902
+            ],
+            [
+              2.9116721352003445,
+              51.23477424674021
+            ],
+            [
+              2.902603031854593,
+              51.22883133902971
+            ],
+            [
+              2.7669444444444444,
+              51.1733333
+            ],
+            [
+              2.698055555555556,
+              51.2455556
+            ],
+            [
+              2.5305555555555554,
+              51.3333333
+            ],
+            [
+              2.513888888888889,
+              51.3577778
+            ],
+            [
+              2.463888888888889,
+              51.4430556
+            ],
+            [
+              2.93331366265767,
+              51.487512012843645
+            ],
+            [
+              2.9372222222222226,
+              51.4202778
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "Traffic Centre Steenbank",
         "callname": "Steenbank",
         "type": "vts",
@@ -65,7 +228,7 @@
             [
               3.1438888888888887,
               51.8333333
-            ],            
+            ],
             [
               3.49861111,
               51.8325
@@ -87,7 +250,7 @@
           "generic": {
             "channel": 69,
             "mode": "report",
-            "note": "Reporting details behind link."
+            "note": "Reporting details behind link. Radar support VHF 4 (Radar Zeebrugge)"
           },
           "pleasure": {
             "mode": "listen"
