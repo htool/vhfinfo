@@ -40,7 +40,7 @@ module.exports = function (app, options) {
       },
       path: {
         type: 'string',
-        title: 'SignalK path to write .poi and .vts to.',
+        title: 'SignalK path to write object(s) within search area',
         default: 'vhfdata.nearest'
       }
     }
@@ -64,10 +64,7 @@ module.exports = function (app, options) {
 		var dataDir = path.join(userDir, '/node_modules/vhfinfo/data/')
 
 		var currentHeading = null
-		var currentHeading = 271
 		var currentCoordinates = null
-		// var currentCoordinates = [ 4.960723858780398, 52.381843141773714 ] // Oranjesluis
-		// var currentCoordinates = [4.60061358668159, 52.464134190813866]    // IJmuiden
     var lastCoordinates = null
     var currentPosition = null
 
@@ -118,6 +115,7 @@ module.exports = function (app, options) {
 		      var currentPositionBox = createPositionBox(currentPosition, size * 1852)
           var countriesToParse = countriesIntersectingBox(currentPositionBox)
           app.debug('Matching countries: %s', countriesToParse.join(', '))
+          featuresInBox = []
           parseDataFiles(countriesToParse)
           lastCoordinates = currentCoordinates
         }
@@ -137,6 +135,7 @@ module.exports = function (app, options) {
         // app.debug('bbox: %s   %s', JSON.stringify(bboxPolygon), turf.booleanIntersects(positionBox, bboxPolygon))
         if (Math.abs(turf.booleanIntersects(positionBox, bboxPolygon))) {
           countries.push(country)
+          countries.push(country + "_12Nm")
         }
       }
       return countries
@@ -163,27 +162,24 @@ module.exports = function (app, options) {
 		}
 
     function parseDataFiles(countries) {
-      featuresInBox = []
-      app.debug(countries)
       const fs = require('fs')
       const Pick = require('stream-json/filters/Pick')
       const {streamArray} = require('stream-json/streamers/StreamArray')
       const {chain} = require('stream-chain')
       var country = countries.shift()
+      app.debug("Processing %s", country)
+      featureCount = 0
       try {
         const pipeline = chain([
           fs.createReadStream(dataDir + country + '.json'),
           Pick.withParser({filter: 'features'}),
-          streamArray(),
-          data => {
-            featuresInBox.push(data.value)
-            featureCount = featureCount + 1
-          }
+          streamArray()
         ]);
-        featureCount = 0
-        pipeline.on('data', () => {
+        pipeline.on('data', data => {
+          featuresInBox.push(data.value)
+          featureCount = featureCount + 1
         })
-        pipeline.on('end', () => {
+        pipeline.on('end', end => {
           if (featureCount > 0) {
             app.debug('Read %d features from data file %s', featureCount, country + '.json')
           }
@@ -191,16 +187,17 @@ module.exports = function (app, options) {
             // Process remainder of the list
             parseDataFiles(countries)
           } else {
+          app.debug('Loaded %d features into featuresInBox', featuresInBox.length)
           }
         })
       } catch (e) {
         app.debug('Cannot open data file: %{s}.json', $country)
-      }
-      if (countries.length > 0) {
-        // Process remainder of the list
-        parseDataFiles(countries)
-      } else {
-        app.debug('Loaded %d features into featuresInBox', featuresInBox.length)
+        if (countries.length > 0) {
+          // Process remainder of the list
+          parseDataFiles(countries)
+        } else {
+          app.debug('Loaded %d features into featuresInBox', featuresInBox.length)
+        }
       }
     }
 	  
@@ -237,6 +234,9 @@ module.exports = function (app, options) {
           }
         }
       })
+      for (let nr=0; nr < features.length; nr++) {
+        values.push({path: options.path + '.' + nr, value: JSON.stringify(features[nr])})
+      }
       //app.debug('values: %s', JSON.stringify(values))
       app.handleMessage(plugin.id, {
         updates: [
@@ -332,25 +332,6 @@ module.exports = function (app, options) {
 			    return parseFloat(Math.abs(a.distance)) - parseFloat(Math.abs(b.distance));
 			});
 			
-			var vtsFound = false;
-			for (var key in nearbyFeatures) {
-			  var nearbyFeature = nearbyFeatures[key]
-			  // app.debug(nearbyFeature)
-			  if (vtsFound == false && nearbyFeature.type == 'vts') {
-			    if (nearbyFeature.distance < 0) {
-			      app.debug('Inside vts: %s [%d]', nearbyFeature.name, nearbyFeature.vhfdata.generic.channel)
-			    } else {
-			      app.debug('Near vts: %s [%d] (%dm at %d degrees)', nearbyFeature.name, nearbyFeature.vhfdata.generic.channel, nearbyFeature.distance, nearbyFeature.relativeBearing)
-			    }
-			    vtsFound = true;
-			  } else {
-			    if (nearbyFeature.distance < 0) {
-			      app.debug('Inside %s: %s [%d]', nearbyFeature.type, nearbyFeature.name, nearbyFeature.vhfdata.generic.channel)
-			    } else {
-			      app.debug('Near %s: %s [%d] (%dm at %d degrees)', nearbyFeature.type, nearbyFeature.name, nearbyFeature.vhfdata.generic.channel, nearbyFeature.distance, nearbyFeature.relativeBearing)
-			    }
-			  }
-		  }
       return nearbyFeatures
     }
 

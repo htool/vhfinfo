@@ -9,7 +9,7 @@
   "author": "hans@defect.org",
   "main": "plugin/index.js",
   "name": "vhfinfo",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/htool/vhfinfo.git"
@@ -22,6 +22,9 @@
     "@turf/nearest-point": "^6.5.0",
     "@turf/turf": "^6.5.0",
     "fs": "^0.0.1-security",
+    "https": "^1.0.0",
+    "json-format": "^1.0.1",
+    "multigeojson": "^0.0.1",
     "path": "^0.12.7",
     "stream-json": "^1.7.5",
     "turf-point": "^2.0.1"

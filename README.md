@@ -43,7 +43,7 @@ Use the following template to populate the properties part on the right in the [
       "properties": {
         "name": "",           // Full name
         "callname": "",       // Short name typically used in call
-        "type": "",           // ['lock','bridge','marina','vts']
+        "type": "",           // ['lock','bridge','marina','vts','territorial']
         "vhfdata": {
           "generic": {
             "channel": ,      // VHF channel number
@@ -52,7 +52,8 @@ Use the following template to populate the properties part on the right in the [
                               // 'announce':  Announce you are entering/leaving the area, or intend to pass bridge/lock
                               // 'report':    More than announce, as certain info is expected. See 'note' for details
             "url": "",        // URL with generic info like opening hours, approach guide etc. or in case of non-generic purpose
-            "phone": "",      // Phone number in E.164 formattingA
+            "phone": ""       // Phone number in E.164 formatting
+          }
           "pleasure": {       // AIS ship/group type as string. (https://coast.noaa.gov/data/marinecadastre/ais/VesselTypeCodes2018.pdf)
             "url":  ""        // URL aimed at pleasure ships
           },
@@ -66,11 +67,15 @@ Use the following template to populate the properties part on the right in the [
             "mode": "report",
             "note": "",         // Extra details on what to report
             "url":  ""          // URL aimed at cargo ships
+          },
+          "update": {               // Update bulletin (eg weather) in this VHF area
+            "channel": ,            // Channel used
+            "time": "5 5,11,17,23"  // weather bulletin at 5h05, 11h05, 17h05 and 23h05 (cron format)
+          },
+          "emergency": {
+            "url":                  // Information for emergencies in this area
+            "phone": ""             // Emergency phone number
           }
-        },
-        "weather": {              // Weather bulletin in this VHF area
-          "channel": ,            // Channel used
-          "time": "5 5,11,17,23"  // weather bulletin at 5h05, 11h05, 17h05 and 23h05 (cron format)
         }
       }
     }
