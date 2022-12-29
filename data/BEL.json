@@ -4,22 +4,22 @@
       {
       "type": "Feature",
       "properties": {
-        "name": "Traffic Centre Vlissingen",
-        "callname": "Vlissingen",
+        "name": "Traffic Centre Terneuzen",
+        "callname": "Terneuzen",
         "type": "vts",
         "url": "https://www.vts-scheldt.net/nautical/vhf",
         "phone": "+31887980700",
         "vhfdata": {
           "generic": {
-            "channel": 14,
+            "channel": 3,
             "mode": "report",
-            "note": "Reporting details behind link. Radar upport on VHF 21 (radar Vlissingen)"
+            "note": "Reporting details behind link. Radar upport on VHF 3 (radar Terneuzen)"
           },
           "pleasure": {
             "mode": "listen"
           },
           "update": {
-            "time": "10 *"
+            "time": "50 *"
           }
         }
       },
