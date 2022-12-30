@@ -407,18 +407,19 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "VTS Hoek van Holland",
+        "name": "Hoek van Holland",
         "callname": "Sector Maasmond",
         "type": "vts",
         "url": "https://www.portofrotterdam.com/sites/default/files/2022-07/procedure-VHF-communication-VTS-HCC-2022-English.pdf",
         "phone": "+31102522801",
         "vhfdata": {
           "generic": {
-            "channel": 3
+            "channel": 3,
+            "mode": "report"
           },
           "pleasure": {
             "mode": "report",
-            "note": "Use the corridor."
+            "note": "Report use the corridor."
           }
         }
       },
@@ -513,14 +514,15 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "VTS Hoek van Holland",
+        "name": "Hoek van Holland",
         "callname": "Sector Pilot Maas",
         "type": "vts",
         "url": "https://www.portofrotterdam.com/sites/default/files/2022-07/procedure-VHF-communication-VTS-HCC-2022-English.pdf",
         "phone": "+31102522801",
         "vhfdata": {
           "generic": {
-            "channel": 2
+            "channel": 2,
+            "mode": "report"
           }
         }
       },
@@ -570,14 +572,15 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "VTS Hoek van Holland",
+        "name": "Hoek van Holland",
         "callname": "Sector Maasmond",
         "type": "vts",
         "url": "https://www.portofrotterdam.com/sites/default/files/2021-05/aanbevolen-oversteekroute-voor-kleine-vaartuigen-haven-rotterdam.pdf",
         "phone": "+31102522801",
         "vhfdata": {
           "generic": {
-            "channel": 3
+            "channel": 3,
+            "mode": "report"
           },
           "pleasure": {
             "mode": "report",
@@ -620,14 +623,18 @@
         {
       "type": "Feature",
       "properties": {
-        "name": "VTS Hoek van Holland",
+        "name": "Hoek van Holland",
         "callname": "Sector Rozenburg",
         "type": "vts",
         "url": "https://www.binnenvaartkennis.nl/wp-content/uploads/2021/01/Rotterdam.pdf",
         "phone": "+31102522801",
         "vhfdata": {
           "generic": {
-            "channel": 65
+            "channel": 65,
+            "mode": "report"
+          },
+          "pleasure": {
+            "mode": "listen"
           }
         }
       },
@@ -962,7 +969,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "VTS Rotterdam",
+        "name": "Rotterdam",
         "callname": "Sector Maassluis",
         "type": "vts",
         "url": "https://www.binnenvaartkennis.nl/wp-content/uploads/2021/01/Rotterdam.pdf",
@@ -1440,7 +1447,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "VTS Den Helder",
+        "name": "Den Helder",
         "type": "vts",
         "url": "https://www.binnenvaartkennis.nl/wp-content/uploads/2021/03/VTS-Procedures-Den-Helder.pdf",
         "phone": "+31223657522",
@@ -1550,7 +1557,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "VTS Terschelling",
+        "name": "Terschelling",
         "type": "vts",
         "url": "",
         "phone": "+31887974599",
@@ -2230,7 +2237,6 @@
         "type": "vts",
         "url": "",
         "phone": "+31887973300",
-        "note": "Weather info every hour 15 min past the hour.",
         "vhfdata": {
           "generic": {
             "channel": 1,

@@ -4,7 +4,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "VTS Sound Traffic",
+        "name": "Sound Traffic",
         "callname": "Sector 1 North",
         "type": "vts",
         "url": "https://www.sjofartsverket.se/globalassets/sound-vts/soundvts_folder.pdf",
@@ -727,7 +727,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "VTS Sound Traffic",
+        "name": "Sound Traffic",
         "callname": "Sector 2 South",
         "type": "vts",
         "url": "https://www.sjofartsverket.se/globalassets/sound-vts/soundvts_folder.pdf",
@@ -1174,7 +1174,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "VTS Great Belt South",
+        "name": "Great Belt South",
         "callname": "Belt Traffic",
         "type": "vts",
         "url": "https://dma.dk/Media/637787223374336711/Order%20on%20the%20ship%20reporting%20system%20BELTREP%20and%20on%20navigation%20under%20the%20East%20Bridge%20and%20the%20West%20Bridge%20in%20the%20Great%20Belt.pdf",
@@ -1522,7 +1522,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "VTS Great Belt North",
+        "name": "Great Belt North",
         "callname": "Belt Traffic",
         "type": "vts",
         "url": "https://dma.dk/Media/637787223374336711/Order%20on%20the%20ship%20reporting%20system%20BELTREP%20and%20on%20navigation%20under%20the%20East%20Bridge%20and%20the%20West%20Bridge%20in%20the%20Great%20Belt.pdf",

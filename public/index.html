@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=1024, user-scalable=no">
+    <style>
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0;}
+      #map{ height: 100% }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <script src="leaflet.ajax.min.js" type="text/javascript"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js" type="text/javascript"></script>
+    <script src="cronstrue.min.js" type="text/javascript"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css" rel="stylesheet" />
+
+    <title>VHF info</title>
+    </head>
+    <body>
+    <div id="map"></div>
+<style>
+  table td, table td * {
+    vertical-align: top;
+  }
+</style>
+
+<script type="text/javascript">
+
+var m= L.map('map').setView([52, 5.2], 6);
+
+var mopt = {
+    url: 'https://api.mapbox.com/styles/v1/mapbox/streets-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaGFuc3Rvb2wiLCJhIjoiY2xjYWpxcWt5MGs2NTN3bXBiYzRqOTdiZyJ9.KG06q7lwEKOmV4_R3ovSSA',
+    options: {attribution:'© <a href="https://www.mapbox.com/map-feedback/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}
+  };
+var mq=L.tileLayer(mopt.url,mopt.options);
+
+mq.addTo(m);
+
+var popup = L.popup();
+
+
+function popUp(f,l){
+    var out = [];
+    if (f.properties){
+        for(key in f.properties){
+            out.push(key+": "+f.properties[key]);
+        }
+        l.bindPopup(out.join("<br />"));
+    }
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+var countries = ["BEL", "DEU", "DNK", "ESP", "FIN", "FRA", "GBR", "IRL", "NLD", "NOR", "POL", "SWE", "ZWE"]
+// var countries = ["ABW", "AFG", "AGO", "AIA", "ALA", "ALB", "AND", "ANT", "ARE", "ARG", "ARM", "ASM", "ATA", "ATF", "ATG", "AUS", "AUT", "AZE", "BDI", "BEL", "BEN", "BFA", "BGD", "BGR", "BHR", "BHS", "BIH", "BLM", "BLR", "BLZ", "BMU", "BOL", "BRA", "BRB", "BRN", "BTN", "BVT", "BWA", "CAF", "CAN", "CCK", "CHE", "CHL", "CHN", "CIV", "CMR", "COD", "COG", "COK", "COL", "COM", "CPV", "CRI", "CUB", "CXR", "CYM", "CYP", "CZE", "DEU", "DJI", "DMA", "DNK", "DOM", "DZA", "ECU", "EGY", "ERI", "ESH", "ESP", "EST", "ETH", "FIN", "FJI", "FLK", "FRA", "FRO", "FSM", "GAB", "GBR", "GEO", "GGY", "GHA", "GIB", "GIN", "GLP", "GMB", "GNB", "GNQ", "GRC", "GRD", "GRL", "GTM", "GUF", "GUM", "GUY", "HKG", "HMD", "HND", "HRV", "HTI", "HUN", "IDN", "IMN", "IND", "IOT", "IRL", "IRN", "IRQ", "ISL", "ISR", "ITA", "JAM", "JEY", "JOR", "JPN", "KAZ", "KEN", "KGZ", "KHM", "KIR", "KNA", "KOR", "KWT", "LAO", "LBN", "LBR", "LBY", "LCA", "LIE", "LKA", "LSO", "LTU", "LUX", "LVA", "MAC", "MAF", "MAR", "MCO", "MDA", "MDG", "MDV", "MEX", "MHL", "MKD", "MLI", "MLT", "MMR", "MNE", "MNG", "MNP", "MOZ", "MRT", "MSR", "MTQ", "MUS", "MWI", "MYS", "MYT", "NAM", "NCL", "NER", "NFK", "NGA", "NIC", "NIU", "NLD", "NOR", "NPL", "NRU", "NZL", "OMN", "PAK", "PAN", "PCN", "PER", "PHL", "PLW", "PNG", "POL", "PRI", "PRK", "PRT", "PRY", "PSE", "PYF", "QAT", "REU", "ROU", "RUS", "RWA", "SAU", "SDN", "SEN", "SGP", "SGS", "SHN", "SJM", "SLB", "SLE", "SLV", "SMR", "SOM", "SPM", "SRB", "STP", "SUR", "SVK", "SVN", "SWE", "SWZ", "SYC", "SYR", "TCA", "TCD", "TGO", "THA", "TJK", "TKL", "TKM", "TLS", "TON", "TTO", "TUN", "TUR", "TUV", "TWN", "TZA", "UGA", "UKR", "UMI", "URY", "USA", "UZB", "VAT", "VCT", "VEN", "VGB", "VIR", "VNM", "VUT", "WLF", "WSM", "YEM", "ZAF", "ZMB", "ZWE"]
+
+countries.forEach(c => {
+  var geojsonLayer = new L.GeoJSON.AJAX("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + c + ".json", {
+     style: function(feature) {
+          p = feature.properties.name;
+          return {
+              fillOpacity: 0.2,
+              color: "red",
+              dashArray: '3',
+              weight: 1,
+              opacity: 0.7
+          }
+      },
+      onEachFeature: function(feature, layer) {
+          layer.on({
+              mouseover: function(e) {
+                  e.target.setStyle({
+                      fillOpacity: 0.4,
+                      dashArray: '',
+                      weight: 2,
+                      opacity: 0.3
+                  });
+                  if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+                      e.target.bringToFront();
+                  }
+              },
+              mouseout: function(e) {
+                  geojsonLayer.resetStyle(e.target);
+              },
+              click: function(e) {
+                  showInfo(e.target.feature.properties, geojsonLayer);
+              }
+          });
+      }
+  });
+  geojsonLayer.addTo(m);
+  // geojsonLayer = new L.GeoJSON.AJAX("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + c + "_12Nm.json");
+  // geojsonLayer.addTo(m);
+  sleep(250)
+})
+
+function showInfo(p, layer) {
+  console.log(p)
+
+  var html =  '<table><tr><td colspan="2"><b>' + '[' + p.type.toUpperCase() +'] ' + p.name + '</b></td></tr>'
+  if (typeof p.callname != 'undefined') {
+    html = html + '<tr><td>Call&nbsp;sign</td><td>' + p.callname + '</td></tr>'
+  }
+	html = html + '<tr><td>VHF</td><td>' + p.vhfdata.generic.channel + ' (' + p.vhfdata.generic.mode + ')</td></tr>'
+	if (typeof p.url != 'undefined') {
+	  html = html + '<tr><td>Info</td><td><a href="' + p.url + '">link</a></td></tr>'
+	}
+	if (typeof p.phone != 'undefined') {
+	  html = html + '<tr><td>Phone</td><td>' + p.phone + '</td></tr>'
+	}
+  if (typeof p.vhfdata.update != 'undefined') {
+    if (typeof p.vhfdata.update.time != 'undefined') {
+      html = html + '<tr><td>Update schedule</td><td>' + cronstrue.toString(p.vhfdata.update.time + " * * *") + '</td></tr>'
+    }
+  }
+
+  html = html + addHTML(p)
+  html = html + addHTML('Generic', p.vhfdata.generic)
+  html = html + addHTML('Pleasure', p.vhfdata.pleasure)
+  html = html + addHTML('Emergency', p.vhfdata.emergency)
+
+
+  html = html + '</table>'
+
+  layer.bindPopup(html).openPopup();
+  layer.addTo(m)
+}
+
+function addHTML (title, json) {
+  var h = ""
+	if (typeof json != 'undefined') {
+	  if (typeof json.note != 'undefined') {
+	    h = h + '<tr><td>Note</td><td>' + json.note + '</td></tr>'
+	  }
+	  if (typeof json.phone != 'undefined') {
+	    h = h + '<tr><td>Phone</td><td>' + json.phone + '</td></tr>'
+	  }
+	  if (typeof json.url != 'undefined') {
+	    h = h + '<tr><td>Info</td><td><a href="' + json.url + '">link</a></td></tr>'
+	  }
+    if (h.length > 0) {
+	    h = '<tr><td colspan="2"><b>' + title + '</td></b></tr>' + h
+    } 
+	  return h
+	} else {
+    return ""
+  }
+}
+
+</script>
+
+
+  </body>
+</html>
