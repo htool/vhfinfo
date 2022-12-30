@@ -29,6 +29,20 @@
 
 <script type="text/javascript">
 
+function GetURLParameter(sParam)
+{
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) 
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) 
+        {
+            return sParameterName[1];
+        }
+    }
+}
+
 var m= L.map('map').setView([52, 5.2], 6);
 
 var mopt = {
@@ -59,8 +73,9 @@ function sleep(ms) {
 var countries = ["BEL", "DEU", "DNK", "ESP", "FIN", "FRA", "GBR", "IRL", "NLD", "NOR", "POL", "SWE", "ZWE"]
 // var countries = ["ABW", "AFG", "AGO", "AIA", "ALA", "ALB", "AND", "ANT", "ARE", "ARG", "ARM", "ASM", "ATA", "ATF", "ATG", "AUS", "AUT", "AZE", "BDI", "BEL", "BEN", "BFA", "BGD", "BGR", "BHR", "BHS", "BIH", "BLM", "BLR", "BLZ", "BMU", "BOL", "BRA", "BRB", "BRN", "BTN", "BVT", "BWA", "CAF", "CAN", "CCK", "CHE", "CHL", "CHN", "CIV", "CMR", "COD", "COG", "COK", "COL", "COM", "CPV", "CRI", "CUB", "CXR", "CYM", "CYP", "CZE", "DEU", "DJI", "DMA", "DNK", "DOM", "DZA", "ECU", "EGY", "ERI", "ESH", "ESP", "EST", "ETH", "FIN", "FJI", "FLK", "FRA", "FRO", "FSM", "GAB", "GBR", "GEO", "GGY", "GHA", "GIB", "GIN", "GLP", "GMB", "GNB", "GNQ", "GRC", "GRD", "GRL", "GTM", "GUF", "GUM", "GUY", "HKG", "HMD", "HND", "HRV", "HTI", "HUN", "IDN", "IMN", "IND", "IOT", "IRL", "IRN", "IRQ", "ISL", "ISR", "ITA", "JAM", "JEY", "JOR", "JPN", "KAZ", "KEN", "KGZ", "KHM", "KIR", "KNA", "KOR", "KWT", "LAO", "LBN", "LBR", "LBY", "LCA", "LIE", "LKA", "LSO", "LTU", "LUX", "LVA", "MAC", "MAF", "MAR", "MCO", "MDA", "MDG", "MDV", "MEX", "MHL", "MKD", "MLI", "MLT", "MMR", "MNE", "MNG", "MNP", "MOZ", "MRT", "MSR", "MTQ", "MUS", "MWI", "MYS", "MYT", "NAM", "NCL", "NER", "NFK", "NGA", "NIC", "NIU", "NLD", "NOR", "NPL", "NRU", "NZL", "OMN", "PAK", "PAN", "PCN", "PER", "PHL", "PLW", "PNG", "POL", "PRI", "PRK", "PRT", "PRY", "PSE", "PYF", "QAT", "REU", "ROU", "RUS", "RWA", "SAU", "SDN", "SEN", "SGP", "SGS", "SHN", "SJM", "SLB", "SLE", "SLV", "SMR", "SOM", "SPM", "SRB", "STP", "SUR", "SVK", "SVN", "SWE", "SWZ", "SYC", "SYR", "TCA", "TCD", "TGO", "THA", "TJK", "TKL", "TKM", "TLS", "TON", "TTO", "TUN", "TUR", "TUV", "TWN", "TZA", "UGA", "UKR", "UMI", "URY", "USA", "UZB", "VAT", "VCT", "VEN", "VGB", "VIR", "VNM", "VUT", "WLF", "WSM", "YEM", "ZAF", "ZMB", "ZWE"]
 
-countries.forEach(c => {
-  var geojsonLayer = new L.GeoJSON.AJAX("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + c + ".json", {
+
+function loadUrl (url) {
+  var geojsonLayer = new L.GeoJSON.AJAX(url, {
      style: function(feature) {
           p = feature.properties.name;
           return {
@@ -94,8 +109,14 @@ countries.forEach(c => {
       }
   });
   geojsonLayer.addTo(m);
-  // geojsonLayer = new L.GeoJSON.AJAX("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + c + "_12Nm.json");
-  // geojsonLayer.addTo(m);
+}
+
+countries.forEach(c => {
+  loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + c + ".json")
+  if (GetURLParameter('12Nm') == "true") {
+    loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + c + ".json")
+    loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + c + "_12Nm.json")
+  }
   sleep(250)
 })
 
