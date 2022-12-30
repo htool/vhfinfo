@@ -407,8 +407,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "VTS Maasmond",
-        "callname": "Sector Maasmond",
+        "name": "Sector Maasmond",
         "type": "vts",
         "url": "https://www.portofrotterdam.com/sites/default/files/2022-07/procedure-VHF-communication-VTS-HCC-2022-English.pdf",
         "phone": "+31102522801",
@@ -446,8 +445,8 @@
               52.014758795614405
             ],
             [
-              3.8932350833476437,
-              51.96467484109465
+              3.8824954415970967,
+              51.964054476943346
             ],
             [
               3.9644444444444447,
@@ -513,8 +512,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "VTS Maasmond",
-        "callname": "Sector Pilot Maas",
+        "name": "Sector Pilot Maas",
         "type": "vts",
         "url": "https://www.portofrotterdam.com/sites/default/files/2022-07/procedure-VHF-communication-VTS-HCC-2022-English.pdf",
         "phone": "+31102522801",
@@ -555,8 +553,8 @@
               51.9519444
             ],
             [
-              3.89322979791583,
-              51.96467808787587
+              3.8824954415970967,
+              51.964054476943346
             ],
             [
               3.96899586175463,
@@ -570,8 +568,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "VTS Maasmond",
-        "callname": "Sector Maasmond",
+        "name": "Sector Maasmond",
         "type": "vts",
         "url": "https://www.portofrotterdam.com/sites/default/files/2021-05/aanbevolen-oversteekroute-voor-kleine-vaartuigen-haven-rotterdam.pdf",
         "phone": "+31102522801",
