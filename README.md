@@ -15,7 +15,7 @@ The information is collected as [GeoJSON](https://geojson.org/) which holds both
 To see if certain VHF information is already present, you can use only of the following country links to see the data plotted on a map.
 
 ### World map
-[Online map](https://raw.githubusercontent.com/htool/vhfinfo/main/public/index.js)
+[Online map](https://raw.githubusercontent.com/htool/vhfinfo/main/public/index.html)
 
 ### Country links
 
