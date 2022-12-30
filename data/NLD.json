@@ -976,7 +976,11 @@
         "phone": "+31102522601",
         "vhfdata": {
           "generic": {
-            "channel": 80
+            "channel": 80,
+            "mode": "report"
+          },
+          "pleasure": {
+            "mode": "listen"
           }
         }
       },
