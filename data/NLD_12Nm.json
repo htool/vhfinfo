@@ -11,9 +11,6 @@
             "channel": 16,
             "mode": "listen"
           },
-          "pleasure": {
-            "url": ""
-          },
           "emergency": {
             "url": "https://kustwacht.nl/en/when-to-call-the-emergency-number/",
             "phone": "0900-0111"

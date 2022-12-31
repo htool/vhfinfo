@@ -25,9 +25,29 @@
   table td, table td * {
     vertical-align: top;
   }
+  .leaflet-container.crosshair-cursor-enabled {
+    cursor:crosshair;
+  }
+  .leaflet-clickable {
+    cursor: crosshair !important;
+  }
+  /* Change cursor when over entire map */
+  .leaflet-container {
+    cursor: crosshair!important;
+  }
 </style>
 
 <script type="text/javascript">
+
+var vhfinfo
+var Nm12
+
+var countries = ["BEL", "DEU", "DNK", "ESP", "FIN", "FRA", "GRC", "GBR", "IRL", "ITA", "NLD", "NOR", "POL", "PRT", "SWE", "ZWE"]
+// var countries = ["ABW", "AFG", "AGO", "AIA", "ALA", "ALB", "AND", "ANT", "ARE", "ARG", "ARM", "ASM", "ATA", "ATF", "ATG", "AUS", "AUT", "AZE", "BDI", "BEL", "BEN", "BFA", "BGD", "BGR", "BHR", "BHS", "BIH", "BLM", "BLR", "BLZ", "BMU", "BOL", "BRA", "BRB", "BRN", "BTN", "BVT", "BWA", "CAF", "CAN", "CCK", "CHE", "CHL", "CHN", "CIV", "CMR", "COD", "COG", "COK", "COL", "COM", "CPV", "CRI", "CUB", "CXR", "CYM", "CYP", "CZE", "DEU", "DJI", "DMA", "DNK", "DOM", "DZA", "ECU", "EGY", "ERI", "ESH", "ESP", "EST", "ETH", "FIN", "FJI", "FLK", "FRA", "FRO", "FSM", "GAB", "GBR", "GEO", "GGY", "GHA", "GIB", "GIN", "GLP", "GMB", "GNB", "GNQ", "GRC", "GRD", "GRL", "GTM", "GUF", "GUM", "GUY", "HKG", "HMD", "HND", "HRV", "HTI", "HUN", "IDN", "IMN", "IND", "IOT", "IRL", "IRN", "IRQ", "ISL", "ISR", "ITA", "JAM", "JEY", "JOR", "JPN", "KAZ", "KEN", "KGZ", "KHM", "KIR", "KNA", "KOR", "KWT", "LAO", "LBN", "LBR", "LBY", "LCA", "LIE", "LKA", "LSO", "LTU", "LUX", "LVA", "MAC", "MAF", "MAR", "MCO", "MDA", "MDG", "MDV", "MEX", "MHL", "MKD", "MLI", "MLT", "MMR", "MNE", "MNG", "MNP", "MOZ", "MRT", "MSR", "MTQ", "MUS", "MWI", "MYS", "MYT", "NAM", "NCL", "NER", "NFK", "NGA", "NIC", "NIU", "NLD", "NOR", "NPL", "NRU", "NZL", "OMN", "PAK", "PAN", "PCN", "PER", "PHL", "PLW", "PNG", "POL", "PRI", "PRK", "PRT", "PRY", "PSE", "PYF", "QAT", "REU", "ROU", "RUS", "RWA", "SAU", "SDN", "SEN", "SGP", "SGS", "SHN", "SJM", "SLB", "SLE", "SLV", "SMR", "SOM", "SPM", "SRB", "STP", "SUR", "SVK", "SVN", "SWE", "SWZ", "SYC", "SYR", "TCA", "TCD", "TGO", "THA", "TJK", "TKL", "TKM", "TLS", "TON", "TTO", "TUN", "TUR", "TUV", "TWN", "TZA", "UGA", "UKR", "UMI", "URY", "USA", "UZB", "VAT", "VCT", "VEN", "VGB", "VIR", "VNM", "VUT", "WLF", "WSM", "YEM", "ZAF", "ZMB", "ZWE"]
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 function GetURLParameter(sParam)
 {
@@ -44,43 +64,59 @@ function GetURLParameter(sParam)
 }
 
 var m= L.map('map').setView([52, 5.2], 6);
-
 var mopt = {
     url: 'https://api.mapbox.com/styles/v1/mapbox/streets-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaGFuc3Rvb2wiLCJhIjoiY2xjYWpxcWt5MGs2NTN3bXBiYzRqOTdiZyJ9.KG06q7lwEKOmV4_R3ovSSA',
     options: {attribution:'© <a href="https://www.mapbox.com/map-feedback/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}
   };
 var mq=L.tileLayer(mopt.url,mopt.options);
-
 mq.addTo(m);
+
+var Nm12All = []
+var vhfinfoAll = []
+
+countries.forEach(c => {
+  loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + c + ".json", vhfinfoAll)
+  loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + c + "_12Nm.json", Nm12All)
+  sleep(250)
+})
+var Nm12 = new L.LayerGroup(Nm12All)
+var vhfinfo = new L.LayerGroup(vhfinfoAll)
+
+
+//link to tiles
+var osmUrl='https://tiles.openseamap.org/seamark/{z}/{x}/{y}.png'
+// var osmUrlcolor='http://{s}.tilexxxxx.com/watercolor/{z}/{x}/{y}.jpg'
+
+//create two TileLayer
+var osm=new L.TileLayer(osmUrl,{minZoom:1,maxZoom:20});
+// var osmcolor=new L.TileLayer(osmUrlcolor,{minZoom:1,maxZoom:20});
+
+//add a layer which will be display first
+m.addLayer(osm);
+//m.addLayer(osmcolor);
+m.addLayer(vhfinfo);
+//m.addLayer(Nm12);
+
+//add basemaps in an array
+baseMaps={"OSM":osm};
 
 var popup = L.popup();
 
+//add a control layer to switch on the both basemaps
+ControlLayer=L.control.layers(baseMaps).addTo(m);
+ControlLayer.addOverlay(Nm12, '12Nm')
+ControlLayer.addOverlay(vhfinfo, 'VHF info')
 
-function popUp(f,l){
-    var out = [];
-    if (f.properties){
-        for(key in f.properties){
-            out.push(key+": "+f.properties[key]);
-        }
-        l.bindPopup(out.join("<br />"));
-    }
-}
-
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-var countries = ["BEL", "DEU", "DNK", "ESP", "FIN", "FRA", "GBR", "IRL", "NLD", "NOR", "POL", "SWE", "ZWE"]
-// var countries = ["ABW", "AFG", "AGO", "AIA", "ALA", "ALB", "AND", "ANT", "ARE", "ARG", "ARM", "ASM", "ATA", "ATF", "ATG", "AUS", "AUT", "AZE", "BDI", "BEL", "BEN", "BFA", "BGD", "BGR", "BHR", "BHS", "BIH", "BLM", "BLR", "BLZ", "BMU", "BOL", "BRA", "BRB", "BRN", "BTN", "BVT", "BWA", "CAF", "CAN", "CCK", "CHE", "CHL", "CHN", "CIV", "CMR", "COD", "COG", "COK", "COL", "COM", "CPV", "CRI", "CUB", "CXR", "CYM", "CYP", "CZE", "DEU", "DJI", "DMA", "DNK", "DOM", "DZA", "ECU", "EGY", "ERI", "ESH", "ESP", "EST", "ETH", "FIN", "FJI", "FLK", "FRA", "FRO", "FSM", "GAB", "GBR", "GEO", "GGY", "GHA", "GIB", "GIN", "GLP", "GMB", "GNB", "GNQ", "GRC", "GRD", "GRL", "GTM", "GUF", "GUM", "GUY", "HKG", "HMD", "HND", "HRV", "HTI", "HUN", "IDN", "IMN", "IND", "IOT", "IRL", "IRN", "IRQ", "ISL", "ISR", "ITA", "JAM", "JEY", "JOR", "JPN", "KAZ", "KEN", "KGZ", "KHM", "KIR", "KNA", "KOR", "KWT", "LAO", "LBN", "LBR", "LBY", "LCA", "LIE", "LKA", "LSO", "LTU", "LUX", "LVA", "MAC", "MAF", "MAR", "MCO", "MDA", "MDG", "MDV", "MEX", "MHL", "MKD", "MLI", "MLT", "MMR", "MNE", "MNG", "MNP", "MOZ", "MRT", "MSR", "MTQ", "MUS", "MWI", "MYS", "MYT", "NAM", "NCL", "NER", "NFK", "NGA", "NIC", "NIU", "NLD", "NOR", "NPL", "NRU", "NZL", "OMN", "PAK", "PAN", "PCN", "PER", "PHL", "PLW", "PNG", "POL", "PRI", "PRK", "PRT", "PRY", "PSE", "PYF", "QAT", "REU", "ROU", "RUS", "RWA", "SAU", "SDN", "SEN", "SGP", "SGS", "SHN", "SJM", "SLB", "SLE", "SLV", "SMR", "SOM", "SPM", "SRB", "STP", "SUR", "SVK", "SVN", "SWE", "SWZ", "SYC", "SYR", "TCA", "TCD", "TGO", "THA", "TJK", "TKL", "TKM", "TLS", "TON", "TTO", "TUN", "TUR", "TUV", "TWN", "TZA", "UGA", "UKR", "UMI", "URY", "USA", "UZB", "VAT", "VCT", "VEN", "VGB", "VIR", "VNM", "VUT", "WLF", "WSM", "YEM", "ZAF", "ZMB", "ZWE"]
+L.DomUtil.addClass(m._container,'crosshair-cursor-enabled');
 
 
-function loadUrl (url) {
-  var geojsonLayer = new L.GeoJSON.AJAX(url, {
+function loadUrl (url, targetArray) {
+  var l = new L.GeoJSON.AJAX(url, {
      style: function(feature) {
           p = feature.properties.name;
           return {
               fillOpacity: 0.2,
-              color: "red",
+              color: "grey",
               dashArray: '3',
               weight: 1,
               opacity: 0.7
@@ -100,39 +136,33 @@ function loadUrl (url) {
                   }
               },
               mouseout: function(e) {
-                  geojsonLayer.resetStyle(e.target);
+                  l.resetStyle(e.target);
               },
               click: function(e) {
-                  showInfo(e.target.feature.properties, geojsonLayer);
+                  showInfo(e.target.feature, l);
               }
           });
       }
   });
-  geojsonLayer.addTo(m);
+  targetArray.push(l)
 }
 
-countries.forEach(c => {
-  loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + c + ".json")
-  if (GetURLParameter('12Nm') == "true") {
-    loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + c + ".json")
-    loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + c + "_12Nm.json")
-  }
-  sleep(250)
-})
 
-function showInfo(p, layer) {
-  console.log(p)
+function showInfo(f, layer) {
+  console.log(f)
 
+  let p = f.properties
+  
   var html =  '<table><tr><td colspan="2"><b>' + '[' + p.type.toUpperCase() +'] ' + p.name + '</b></td></tr>'
   if (typeof p.callname != 'undefined') {
     html = html + '<tr><td>Call&nbsp;sign</td><td>' + p.callname + '</td></tr>'
   }
 	html = html + '<tr><td>VHF</td><td>' + p.vhfdata.generic.channel + ' (' + p.vhfdata.generic.mode + ')</td></tr>'
 	if (typeof p.url != 'undefined') {
-	  html = html + '<tr><td>Info</td><td><a href="' + p.url + '">link</a></td></tr>'
+	  html = html + '<tr><td>Info</td><td><a href="' + p.url + '" target="_blank">link</a></td></tr>'
 	}
 	if (typeof p.phone != 'undefined') {
-	  html = html + '<tr><td>Phone</td><td>' + p.phone + '</td></tr>'
+	  html = html + '<tr><td>Phone</td><td><a href="tel:' + p.phone + '">' + p.phone + '</a></td></tr>'
 	}
   if (typeof p.vhfdata.update != 'undefined') {
     if (typeof p.vhfdata.update.time != 'undefined') {
@@ -148,6 +178,10 @@ function showInfo(p, layer) {
 
   html = html + '</table>'
 
+  let featureCollection = JSON.stringify({"type": "FeatureCollection", "features": [f] })
+  // console.log(featureCollection)
+  html = html + '<a href="http://geojson.io/#data=data:application/json,' + encodeURIComponent(featureCollection) + '" target="_blank">Open feature in GeoJSON.io</a>'
+
   layer.bindPopup(html).openPopup();
   layer.addTo(m)
 }
@@ -159,10 +193,10 @@ function addHTML (title, json) {
 	    h = h + '<tr><td>Note</td><td>' + json.note + '</td></tr>'
 	  }
 	  if (typeof json.phone != 'undefined') {
-	    h = h + '<tr><td>Phone</td><td>' + json.phone + '</td></tr>'
+	    h = h + '<tr><td>Phone</td><td><a href="tel:' + json.phone + '">' + json.phone + '</a></td></tr>'
 	  }
 	  if (typeof json.url != 'undefined') {
-	    h = h + '<tr><td>Info</td><td><a href="' + json.url + '">link</a></td></tr>'
+	    h = h + '<tr><td>Info</td><td><a href="' + json.url + '" target="_blank">link</a></td></tr>'
 	  }
     if (h.length > 0) {
 	    h = '<tr><td colspan="2"><b>' + title + '</td></b></tr>' + h
