@@ -63,7 +63,7 @@ function GetURLParameter(sParam)
     }
 }
 
-var m= L.map('map').setView([52, 5.2], 6);
+var m= L.map('map').setView([0,0], 8);
 var mopt = {
     url: 'https://api.mapbox.com/styles/v1/mapbox/streets-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaGFuc3Rvb2wiLCJhIjoiY2xjYWpxcWt5MGs2NTN3bXBiYzRqOTdiZyJ9.KG06q7lwEKOmV4_R3ovSSA',
     options: {attribution:'© <a href="https://www.mapbox.com/map-feedback/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}
@@ -205,6 +205,15 @@ function addHTML (title, json) {
 	} else {
     return ""
   }
+}
+
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(function(position) {
+    latit = position.coords.latitude;
+    longit = position.coords.longitude;
+    // move the map to have the location in its center
+    m.panTo(new L.LatLng(latit, longit));
+  })
 }
 
 </script>
