@@ -8,6 +8,9 @@
       html { height: 100% }
       body { height: 100%; margin: 0; padding: 0;}
       #map{ height: 100% }
+      .leaflet-popup-pane {
+        width: 20%;
+      }
     </style>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
 
@@ -16,6 +19,7 @@
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js" type="text/javascript"></script>
     <script src="cronstrue.min.js" type="text/javascript"></script>
     <link href="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <title>VHF info</title>
     </head>
@@ -175,12 +179,10 @@ function showInfo(f, layer) {
   html = html + addHTML('Pleasure', p.vhfdata.pleasure)
   html = html + addHTML('Emergency', p.vhfdata.emergency)
 
-
-  html = html + '</table>'
-
   let featureCollection = JSON.stringify({"type": "FeatureCollection", "features": [f] })
   // console.log(featureCollection)
-  html = html + '<a href="http://geojson.io/#data=data:application/json,' + encodeURIComponent(featureCollection) + '" target="_blank">Open feature in GeoJSON.io</a>'
+  html = html + '<td></td><td style="text-align: right;"><a href="http://geojson.io/#data=data:application/json,' + encodeURIComponent(featureCollection) + '" target="_blank" style="text-decoration: none;">Edit</a></td>'
+  html = html + '</table>'
 
   layer.bindPopup(html).openPopup();
   layer.addTo(m)
