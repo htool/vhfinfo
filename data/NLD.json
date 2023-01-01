@@ -3190,7 +3190,7 @@
         ],
         "type": "Polygon"
       }
-    }    ,
+    },
     {
         "type": "Feature",
         "properties": {
@@ -3235,6 +3235,5 @@
             "type":"Polygon"
         }
     }
-}
   ]
 }
