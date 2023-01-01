@@ -3196,14 +3196,13 @@
       "properties": {
         "name": "Gemeentehaven Enkhuizen",
         "callname": "Havendienst Enkhuizen",
-          "type": "marina", 
-          "vhfdata": {
-            "generic": {
-              "channel": 11,
-              "mode": "announce",
-              "url": "https://www.enkhuizen.nl/direct-regelen/ontspanning-en-vrije-tijd/havens/havens-2/", 
-              "phone": "+31623700390" 
-            }
+        "type": "marina", 
+        "vhfdata": {
+          "generic": {
+            "channel": 11,
+            "mode": "announce",
+            "url": "https://www.enkhuizen.nl/direct-regelen/ontspanning-en-vrije-tijd/havens/havens-2/", 
+            "phone": "+31623700390" 
           }
         }
       },
