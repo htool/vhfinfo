@@ -18,6 +18,9 @@
     <script src="leaflet.ajax.min.js" type="text/javascript"></script>
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js" type="text/javascript"></script>
     <script src="cronstrue.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js" integrity="sha512-ozq8xQKq6urvuU6jNgkfqAmT7jKN2XumbrX1JiB3TnF7tI48DPI4Gy1GXKD/V3EExgAs1V+pRO7vwtS1LHg0Gw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" integrity="sha512-gc3xjCmIy673V6MyOAZhIW93xhM9ei1I+gLbmFjUHIjocENRsLX/QUE1htk5q1XV2D/iie/VQ8DXI6Vu8bexvQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link href="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -38,6 +41,20 @@
   /* Change cursor when over entire map */
   .leaflet-container {
     cursor: crosshair!important;
+  }
+  .leaflet-div-icon {
+    width: 5px;
+    height: 5px;
+    background: green;
+    border: 1px solid grey;
+  }
+  .leaflet-editing-icon {
+    width: 5px !important;
+    height: 5px !important;
+    margin-left: -5px !important;
+    margin-top: -5px !important;
+    background: green;
+    border: 1px solid grey;
   }
 </style>
 
@@ -65,6 +82,18 @@ function GetURLParameter(sParam)
             return sParameterName[1];
         }
     }
+}
+
+var editMode = false
+if (GetURLParameter('edit') != undefined) {
+  editMode = true
+  countries = []
+  countries.push(GetURLParameter('edit'))
+}
+
+console.log('editMode: %s', editMode)
+if (editMode) {
+  console.log('editMode for country %s', countries[0])
 }
 
 var m= L.map('map').setView([0,0], 8);
@@ -115,12 +144,20 @@ m.addLayer(vhfinfo);
 //add basemaps in an array
 baseMaps={"OpenSeaMap":osm, "Sattelite":googleSat, "Terrain":googleTerrain};
 
+if (editMode) {
+  var drawnItems = new L.FeatureGroup();
+  m.addLayer(drawnItems);
+}
+
 var popup = L.popup();
 
 //add a control layer to switch on the both basemaps
 ControlLayer=L.control.layers(baseMaps).addTo(m);
 ControlLayer.addOverlay(Nm12, '12Nm')
 ControlLayer.addOverlay(vhfinfo, 'VHF info')
+if (editMode) {
+  ControlLayer.addOverlay(drawnItems, 'Edits')
+}
 
 L.DomUtil.addClass(m._container,'crosshair-cursor-enabled');
 
@@ -227,6 +264,73 @@ if (navigator.geolocation) {
     // move the map to have the location in its center
     m.panTo(new L.LatLng(latit, longit));
   })
+}
+
+
+if (editMode) {
+	m.addControl(new L.Control.Draw({
+	  draw: {
+	    polygon: {
+	      icon: new L.DivIcon({
+	        iconSize: 5,
+	        className: 'leaflet-div-icon leaflet-editing-icon'
+	      }),
+	    },
+	    polyline: false,
+	    rectangle: false,
+	    marker: false,
+	    circle: true,
+	    circlemarker: false
+	  },
+	  edit: {
+	    featureGroup: drawnItems
+	  }
+	}));
+	
+	m.on(L.Draw.Event.CREATED, function(e) {
+	  var type = e.layerType
+	  , layer = e.layer
+	
+	  setEditPopup(layer)
+	  drawnItems.addLayer(layer);
+	
+	  layer.on("edit", function(e) {
+	    console.log("Editted");
+	    setEditPopup(layer)
+	  });
+  });
+}
+
+function setEditPopup (layer) {
+  var feature = layer.feature = layer.feature || {}; // Initialize feature
+  feature.type = feature.type || "Feature"; // Initialize feature.type
+  var p = feature.properties = feature.properties || {}; // Initialize feature.properties
+  if (typeof p["name"] == 'undefined') {
+    console.log('A new item!')
+    p["name"] = "New item"
+    p["callsign"] = "Commenly used call sign",
+    p["type"] = "marina,lock,vts",
+    p["url"] = "http://",
+    p["phone"] = "+",
+    p["note"] = "Some note",
+    p["vhfdata"] = {
+      "generic": {
+        "channel": 0,
+        "mode": "report,announce,listen",
+        "note": ""
+      },
+      "pleasure": {
+        "mode": "report,announce,listen"
+      }
+    }
+  }
+
+  // Adding info to popup
+  var json = layer.toGeoJSON()
+  var content = '<b>Title</b><br/>' + JSON.stringify(json);
+  layer.bindPopup(content);
+
+  console.log(JSON.stringify(json))
 }
 
 </script>

@@ -9,6 +9,11 @@ const rl = readline.createInterface({
 
 rl.on('line', (line) => {
   let converted;
+  line = line.replace('′·', '.')
+  line = line.replace('′·', '.')
+  line = line.replace('/([0-9])N/i', '$1 N')
+  line = line.replace('/([0-9])E/i', '$1 E')
+  console.log(line)
   try {
     converted = convert(line);
     console.log('           [')
