@@ -97,12 +97,23 @@ var osm=new L.TileLayer(osmUrl,{minZoom:1,maxZoom:20});
 
 //add a layer which will be display first
 m.addLayer(osm);
+
+var googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
+    maxZoom: 20,
+    subdomains:['mt0','mt1','mt2','mt3']
+});
+
+var googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',{
+    maxZoom: 20,
+    subdomains:['mt0','mt1','mt2','mt3']
+});
+
 //m.addLayer(osmcolor);
 m.addLayer(vhfinfo);
 //m.addLayer(Nm12);
 
 //add basemaps in an array
-baseMaps={"OSM":osm};
+baseMaps={"OpenSeaMap":osm, "Sattelite":googleSat, "Terrain":googleTerrain};
 
 var popup = L.popup();
 
