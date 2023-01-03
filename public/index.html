@@ -11,9 +11,15 @@
       .leaflet-popup-pane {
         width: 20%;
       }
+      input[type=text] {
+        border: 2px solid #ccc;
+      }
+      input[type=text]:focus {
+        border: 2px solid #555;
+      }
     </style>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
-
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <script src="leaflet.ajax.min.js" type="text/javascript"></script>
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js" type="text/javascript"></script>
@@ -191,7 +197,11 @@ function loadUrl (url, targetArray) {
                   l.resetStyle(e.target);
               },
               click: function(e) {
-                  showInfo(e.target.feature, l);
+                  if (editMode) {
+                    setEditPopup(l, e.target.feature)
+                  } else {
+                    showInfo(e.target.feature, l);
+                  }
               }
           });
       }
@@ -209,17 +219,16 @@ function showInfo(f, layer) {
   if (typeof p.callname != 'undefined') {
     html = html + '<tr><td>Call&nbsp;sign</td><td>' + p.callname + '</td></tr>'
   }
-	html = html + '<tr><td>VHF</td><td>' + p.vhfdata.generic.channel + ' (' + p.vhfdata.generic.mode + ')</td></tr>'
+	html = html + '<tr><td>VHF</td><td>' + p.channel + ' (' + p.vhfdata.generic.mode + ')</td></tr>'
+
 	if (typeof p.url != 'undefined') {
 	  html = html + '<tr><td>Info</td><td><a href="' + p.url + '" target="_blank">link</a></td></tr>'
 	}
 	if (typeof p.phone != 'undefined') {
 	  html = html + '<tr><td>Phone</td><td><a href="tel:' + p.phone + '">' + p.phone + '</a></td></tr>'
 	}
-  if (typeof p.vhfdata.update != 'undefined') {
-    if (typeof p.vhfdata.update.time != 'undefined') {
-      html = html + '<tr><td>Update schedule</td><td>' + cronstrue.toString(p.vhfdata.update.time + " * * *") + '</td></tr>'
-    }
+  if (typeof p.update != 'undefined') {
+    html = html + '<tr><td>Update schedule</td><td>' + cronstrue.toString(p.update + " * * *") + '</td></tr>'
   }
 
   html = html + addHTML(p)
@@ -286,6 +295,7 @@ if (editMode) {
 	    featureGroup: drawnItems
 	  }
 	}));
+
 	
 	m.on(L.Draw.Event.CREATED, function(e) {
 	  var type = e.layerType
@@ -301,18 +311,24 @@ if (editMode) {
   });
 }
 
-function setEditPopup (layer) {
-  var feature = layer.feature = layer.feature || {}; // Initialize feature
+
+function setEditPopup (layer, f) {
+  if (typeof f != 'undefined') {
+    var feature = f 
+  } else {
+    var feature = layer.feature = layer.feature || {}; // Initialize feature
+  }
+  console.log(feature)
   feature.type = feature.type || "Feature"; // Initialize feature.type
   var p = feature.properties = feature.properties || {}; // Initialize feature.properties
   if (typeof p["name"] == 'undefined') {
     console.log('A new item!')
     p["name"] = "New item"
-    p["callsign"] = "Commenly used call sign",
-    p["type"] = "marina,lock,vts",
-    p["url"] = "http://",
-    p["phone"] = "+",
-    p["note"] = "Some note",
+    p["callname"] = "Commenly used call sign"
+    p["type"] = "marina,lock,vts"
+    p["url"] = "http://"
+    p["phone"] = "+"
+    p["note"] = "Some note"
     p["vhfdata"] = {
       "generic": {
         "channel": 0,
@@ -320,18 +336,106 @@ function setEditPopup (layer) {
         "note": ""
       },
       "pleasure": {
-        "mode": "report,announce,listen"
+        "mode": "report,announce,listen",
+        "url": "",
+        "note": ""
       }
     }
   }
 
+  console.log(p)
+  var contentHTML = '<form id="form" onsubmit="return false"><table>'+
+    '<tr><td><label>Name<label></td><td><input id="name" type="text"></td></tr>'+
+    '<tr><td><label>Call name:<label></td><td><input id="callname" type="text"></td></tr>'+
+    '<tr><td><label>Type:<label></td><td><input id="type" type="text"></td></tr>'+
+    '<tr><td><label>Channel:<label></td><td><input id="channel" type="text"></td></tr>'+
+    '<tr><td><label>Mode:<label></td><td><input id="gmode" type="text"></td></tr>'+
+    '<tr><td><label>Note:<label></td><td><input id="gnote" type="text"></td></tr>'+
+    '<tr><td><label>URL:<label></td><td><input id="url" type="text"></td></tr>'+
+    '<tr><td><label>Phone:<label></td><td><input id="phone" type="text"></td></tr>'+
+    '<tr><td><label>Update:<label></td><td><input id="update" type="text"></td></tr>'+
+    '<tr><td colspan="2"><b>Pleasure overwrite</b></td></tr>'+
+    '<tr><td><label>Mode:<label></td><td><input id="pmode" type="text"></td></tr>'+
+    '<tr><td><label>Note:<label></td><td><input id="pnote" type="text"></td></tr>'+
+    '<tr><td><label>URL:<label></td><td><input id="purl" type="url"></td></tr>'+
+    '<tr><td colspan="2"><b>Cargo overwrite</b></td></tr>'+
+    '<tr><td><label>Mode:<label></td><td><input id="cmode" type="text"></td></tr>'+
+    '<tr><td><label>Note:<label></td><td><input id="cnote" type="text"></td></tr>'+
+    '<tr><td><label>URL:<label></td><td><input id="curl" type="url"></td></tr>'+
+    '</table></form>'
+
+  var buttonSaveHTML = '<div class="save" id="save"><button>Save</button></div>'
+  var buttonCancelHTML = '<div class="cancel" id="cancel"><button id="cancel">Cancel</button></div>'
+
   // Adding info to popup
   var json = layer.toGeoJSON()
-  var content = '<b>Title</b><br/>' + JSON.stringify(json);
-  layer.bindPopup(content);
 
-  console.log(JSON.stringify(json))
+  let btnDiv = document.createElement('div')
+
+  var content = L.DomUtil.create('div', 'content');
+  content.innerHTML = contentHTML
+  btnDiv.append(content)
+  
+  var buttonSave = L.DomUtil.create('div', 'buttonSave');
+  buttonSave.innerHTML = buttonSaveHTML
+  btnDiv.append(buttonSave)
+  
+  var buttonCancel = L.DomUtil.create('div', 'buttonCancel');
+  buttonCancel.innerHTML = buttonCancelHTML
+  btnDiv.append(buttonCancel)
+
+  layer.bindPopup(btnDiv).openPopup();
+
+  sleep (200)
+  setValue(p.name, 'name')
+  setValue(p.callname, 'callname')
+  setValue(p.type, 'type')
+  setValue(p.channel, 'channel')
+  setValue(p.url, 'url')
+  setValue(p.phone, 'phone')
+  setValue(p.update, 'update')
+  // Generic
+  setValue(p.vhfdata.generic.mode, 'gmode')
+  setValue(p.vhfdata.generic.note, 'gnote')
+  // Pleasure
+  if (typeof p.vhfdata.pleasure != 'undefined') {
+    setValue(p.vhfdata.pleasure.note, 'pnote')
+    setValue(p.vhfdata.pleasure.mode, 'pmode')
+    setValue(p.vhfdata.pleasure.url, 'purl')
+  }
+  // Cargo
+  if (typeof p.vhfdata.cargo != 'undefined') {
+    setValue(p.vhfdata.cargo.url, 'curl')
+    setValue(p.vhfdata.cargo.mode, 'cmode')
+    setValue(p.vhfdata.cargo.note, 'cnote')
+  }
+  // layer.bindPopup(myPopup);
+
+  L.DomEvent.addListener(buttonSave, 'click', function(event){
+    var feature = layer._popup._source.feature
+    feature.properties.name = document.getElementById('name').value
+  });
+
+  L.DomEvent.addListener(buttonCancel, 'click', function(event){
+    console.log('Cancelled - close popup')
+    $(".leaflet-popup-close-button")[0].click();
+  });
+
+  //layer.bindPopup(content);
+  //console.log(JSON.stringify(json))
+
 }
+
+function setValue (value, element) {
+  // console.log('Value ' + value + ':' + typeof value + ' element ' + element)
+  if (typeof value != 'undefined') {
+    console.log('Not undefined')
+    document.getElementById(element).value = value
+  } else {
+    document.getElementById(element).value = null
+  }
+}
+
 
 </script>
 

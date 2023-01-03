@@ -7,19 +7,17 @@
         "name": "Traffic Centre Terneuzen",
         "callname": "Terneuzen",
         "type": "vts",
+        "channel": 3,
         "url": "https://www.vts-scheldt.net/nautical/vhf",
         "phone": "+31887980700",
+        "update": "50 *",
         "vhfdata": {
           "generic": {
-            "channel": 3,
             "mode": "report",
             "note": "Reporting details behind link. Radar upport on VHF 3 (radar Terneuzen)"
           },
           "pleasure": {
             "mode": "listen"
-          },
-          "update": {
-            "time": "50 *"
           }
         }
       },
@@ -165,19 +163,17 @@
         "name": "Traffic Centre Vlissingen",
         "callname": "Vlissingen",
         "type": "vts",
+        "channel": 14,
         "url": "https://www.vts-scheldt.net/nautical/vhf",
         "phone": "+31887980700",
+        "update": "50 *",
         "vhfdata": {
           "generic": {
-            "channel": 14,
             "mode": "report",
             "note": "Reporting details behind link. Radar upport on VHF 21 (radar Vlissingen)"
           },
           "pleasure": {
             "mode": "listen"
-          },
-          "update": {
-            "time": "50 *"
           }
         }
       },
@@ -310,19 +306,17 @@
       "properties": {
         "name": "Wandelaar Approach",
         "type": "vts",
+        "channel": 60,
         "url": "https://www.vts-scheldt.net/nautical/vhf",
         "phone": "+31887980700",
+        "update": "10 *",
         "vhfdata": {
           "generic": {
-            "channel": 60,
             "mode": "report",
             "note": "Reporting details behind link. Radar support VHF 4 (Radar Zeebrugge)"
           },
           "pleasure": {
             "mode": "listen"
-          },
-          "update": {
-            "time": "10 *"
           }
         }
       },
@@ -376,19 +370,17 @@
         "name": "Traffic Centre Wandelaar",
         "callname": "Wandelaar",
         "type": "vts",
+        "channel": 65,
         "url": "https://www.vts-scheldt.net/nautical/vhf",
         "phone": "+31887980700",
+        "update": "10 *",
         "vhfdata": {
           "generic": {
-            "channel": 65,
             "mode": "report",
             "note": "Reporting details behind link. Radar support VHF 4 (Radar Zeebrugge)"
           },
           "pleasure": {
             "mode": "listen"
-          },
-          "update": {
-            "time": "10 *"
           }
         }
       },
@@ -474,19 +466,17 @@
         "name": "Traffic Centre Steenbank",
         "callname": "Steenbank",
         "type": "vts",
+        "channel": 64,
         "url": "https://www.vts-scheldt.net/nautical/vhf",
         "phone": "+31887980700",
+        "update": "10 *",
         "vhfdata": {
           "generic": {
-            "channel": 64,
             "mode": "report",
             "note": "Reporting details behind link."
           },
           "pleasure": {
             "mode": "listen"
-          },
-          "update": {
-            "time": "10 *"
           }
         }
       },
@@ -548,19 +538,17 @@
         "name": "Traffic Centre Zeebrugge",
         "callname": "Zeebrugge",
         "type": "vts",
+        "channel": 69,
         "url": "https://www.vts-scheldt.net/nautical/vhf",
         "phone": "+31887980700",
+        "update": "10 *",
         "vhfdata": {
           "generic": {
-            "channel": 69,
             "mode": "report",
             "note": "Reporting details behind link. Radar support VHF 4 (Radar Zeebrugge)"
           },
           "pleasure": {
             "mode": "listen"
-          },
-          "update": {
-            "time": "10 *"
           }
         }
       },

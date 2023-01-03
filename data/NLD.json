@@ -5,14 +5,14 @@
       "type": "Feature",
       "properties": {
         "type": "marina",
+        "channel": 31,
         "name": "Jachtclub Scheveningen",
         "url": "https://www.jachtclubscheveningen.com/",
         "phone": "+31653293137",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Guests dock inguest berth, bow facing north. In the harbour office there is a sign post. Red on top of white: no entering. White on top of red: no exit.",
-            "channel": 31
+            "note": "Guests dock inguest berth, bow facing north. In the harbour office there is a sign post. Red on top of white: no entering. White on top of red: no exit."
           }
         }
       },
@@ -57,13 +57,13 @@
       "properties": {
         "name": "Verkeerscentrale Scheveningen",
         "type": "vts",
+        "channel": 21,
         "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-6-6",
         "phone": "+31703527721",
         "vhfdata": {
           "generic": {
             "mode": "report",
-            "note": "Request entrance. In the 'voorhaven' there is a sign post. Red on top of white: no entering. White on top of red: no exit.",
-            "channel": 21
+            "note": "Request entrance. In the 'voorhaven' there is a sign post. Red on top of white: no entering. White on top of red: no exit."
           }
         }
       },
@@ -217,12 +217,12 @@
         "name": "Naviduct Krabbersgat",
         "callname": "Naviduct",
         "type": "lock",
+        "channel": 22,
         "url": "https://waterkaart.net/gids/sluis.php?naam=Naviduct-Krabbersgat",
         "phone": "+31887973915",
         "vhfdata": {
           "generic": {
-            "mode": "report",
-            "channel": 22
+            "mode": "report"
           }
         }
       },
@@ -259,12 +259,12 @@
       "properties": {
         "name": "Stevinsluis",
         "type": "lock",
+        "channel": 20,
         "url": "https://waterkaart.net/gids/sluis.php?naam=Stevinsluis",
         "phone": "+31887974540",
         "vhfdata": {
           "generic": {
-            "mode": "report",
-            "channel": 20
+            "mode": "report"
           }
         }
       },
@@ -302,13 +302,13 @@
         "name": "Gemeentehaven Oudeschild",
         "callname": "Oudeschild",
         "type": "marina",
+        "channel": 12,
         "url": "https://www.havenoudeschild.nl/",
         "phone": "+31222312710",
         "vhfdata": {
           "generic": {
             "mode": "report",
-            "note": "Listen when approaching. On Mon and Fri announce due to fishing boats.",
-            "channel": 12
+            "note": "Listen when approaching. On Mon and Fri announce due to fishing boats."
           }
         }
       },
@@ -410,11 +410,11 @@
         "name": "Hoek van Holland",
         "callname": "Sector Maasmond",
         "type": "vts",
+        "channel": 3,
         "url": "https://www.portofrotterdam.com/sites/default/files/2022-07/procedure-VHF-communication-VTS-HCC-2022-English.pdf",
         "phone": "+31102522801",
         "vhfdata": {
           "generic": {
-            "channel": 3,
             "mode": "report"
           },
           "pleasure": {
@@ -517,11 +517,11 @@
         "name": "Hoek van Holland",
         "callname": "Sector Pilot Maas",
         "type": "vts",
+        "channel": 2,
         "url": "https://www.portofrotterdam.com/sites/default/files/2022-07/procedure-VHF-communication-VTS-HCC-2022-English.pdf",
         "phone": "+31102522801",
         "vhfdata": {
           "generic": {
-            "channel": 2,
             "mode": "report"
           }
         }
@@ -575,11 +575,11 @@
         "name": "Hoek van Holland",
         "callname": "Sector Maasmond",
         "type": "vts",
+        "channel": 3,
         "url": "https://www.portofrotterdam.com/sites/default/files/2021-05/aanbevolen-oversteekroute-voor-kleine-vaartuigen-haven-rotterdam.pdf",
         "phone": "+31102522801",
         "vhfdata": {
           "generic": {
-            "channel": 3,
             "mode": "report"
           },
           "pleasure": {
@@ -626,11 +626,11 @@
         "name": "Hoek van Holland",
         "callname": "Sector Rozenburg",
         "type": "vts",
+        "channel": 65,
         "url": "https://www.binnenvaartkennis.nl/wp-content/uploads/2021/01/Rotterdam.pdf",
         "phone": "+31102522801",
         "vhfdata": {
           "generic": {
-            "channel": 65,
             "mode": "report"
           },
           "pleasure": {
@@ -972,11 +972,11 @@
         "name": "Rotterdam",
         "callname": "Sector Maassluis",
         "type": "vts",
+        "channel": 80,
         "url": "https://www.binnenvaartkennis.nl/wp-content/uploads/2021/01/Rotterdam.pdf",
         "phone": "+31102522601",
         "vhfdata": {
           "generic": {
-            "channel": 80,
             "mode": "report"
           },
           "pleasure": {
@@ -1193,12 +1193,12 @@
       "properties": {
         "name": "Waddenhaven Vlieland",
         "type": "marina",
+        "channel": 12,
         "url": "http://www.waddenhavenvlieland.nl/",
         "phone": "+31562451729",
         "vhfdata": {
           "generic": {
-            "mode": "Listen",
-            "channel": 12
+            "mode": "Listen"
           },
           "passenger": {
             "mode": "announce"
@@ -1271,12 +1271,12 @@
         "name": "Passantenhaven Terschelling",
         "callname": "Terschelling",
         "type": "marina",
+        "channel": 31,
         "url": "https://www.jachthaventerschelling.nl/",
         "phone": "+31562443337",
         "vhfdata": {
           "generic": {
-            "mode": "Listen",
-            "channel": 31
+            "mode": "Listen"
           },
           "passenger": {
             "mode": "announce"
@@ -1341,12 +1341,12 @@
         "name": "Waddenhaven Ameland",
         "callname": "Ameland",
         "type": "marina",
+        "channel": 31,
         "url": "https://waddenhavenameland.nl/",
         "phone": "+31519542159",
         "vhfdata": {
           "generic": {
-            "mode": "Listen",
-            "channel": 31
+            "mode": "Listen"
           }
         }
       },
@@ -1391,12 +1391,12 @@
       "properties": {
         "name": "Waddenhaven Texel",
         "type": "marina",
+        "channel": 31,
         "url": "https://www.waddenhaventexel.nl/",
         "phone": "+31222321227",
         "vhfdata": {
           "generic": {
-            "mode": "Listen",
-            "channel": 31
+            "mode": "Listen"
           }
         }
       },
@@ -1453,20 +1453,17 @@
       "properties": {
         "name": "Den Helder",
         "type": "vts",
+        "channel": 62,
         "url": "https://www.binnenvaartkennis.nl/wp-content/uploads/2021/03/VTS-Procedures-Den-Helder.pdf",
         "phone": "+31223657522",
-        "note": "Weather, current water level and other info every hour 5 min past the hour.",
+        "update": "5 *",
         "vhfdata": {
           "generic": {
-            "channel": 62,
             "mode": "report",
             "note": "Report 2h before entering, when entering, anchoring, passing Moermanbrug and 1h before leaving."
           },
           "pleasure": {
             "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-6-8"
-          },
-          "update": {
-            "time": "5 *"
           }
         }
       },
@@ -1563,11 +1560,11 @@
       "properties": {
         "name": "Terschelling",
         "type": "vts",
+        "channel": 2,
         "url": "",
         "phone": "+31887974599",
         "vhfdata": {
           "generic": {
-            "channel": 2,
             "mode": "listen"
           },
           "passenger": {
@@ -1645,11 +1642,11 @@
       "properties": {
         "name": "Centrale meldpost Waddenzee",
         "type": "vts",
+        "channel": 4,
         "url": "",
         "phone": "+31887974599",
         "vhfdata": {
           "generic": {
-            "channel": 4,
             "mode": "listen",
             "note": "Ship to ship on VHF 10"
           },
@@ -1888,11 +1885,11 @@
       "properties": {
         "name": "Prinses Margrietsluis ",
         "type": "lock",
+        "channel": 20,
         "url": "https://waterkaart.net/gids/sluis.php?naam=Prinses%20Margrietsluis",
         "phone": "+31887975555",
         "vhfdata": {
           "generic": {
-            "channel": 20,
             "mode": "report"
           },
           "pleasure": {
@@ -1933,9 +1930,9 @@
       "properties": {
         "name": "Lemstersluis",
         "type": "lock",
+        "channel": 22,
         "vhfdata": {
           "generic": {
-            "channel": 22,
             "mode": "report"
           },
           "pleasure": {
@@ -1976,11 +1973,11 @@
       "properties": {
         "name": "Houtribsluis",
         "type": "lock",
+        "channel": 20,
         "url": "https://waterkaart.net/gids/sluis.php?naam=Houtribsluizen",
         "phone": "+31887973302",
         "vhfdata": {
           "generic": {
-            "channel": 20,
             "mode": "report"
           },
           "pleasure": {
@@ -2021,11 +2018,11 @@
       "properties": {
         "name": "Oranjesluizen",
         "type": "lock",
+        "channel": 18,
         "url": "https://waterkaart.net/gids/sluis.php?naam=Oranjesluizen",
         "phone": "+31887973464",
         "vhfdata": {
           "generic": {
-            "channel": 18,
             "mode": "report"
           },
           "pleasure": {
@@ -2111,11 +2108,11 @@
         "name": "Sector Schellingwoude",
         "callname": "Schellingwoude",
         "type": "vts",
+        "channel": 60,
         "url": "https://www.binnenvaartkennis.nl/wp-content/uploads/2021/02/VTS-Amsterdam.pdf",
         "phone": "+31206221515",
         "vhfdata": {
           "generic": {
-            "channel": 60,
             "mode": "listen"
           },
           "cargo": {
@@ -2213,11 +2210,11 @@
       "properties": {
         "name": "Amsterdam Port Control",
         "type": "vts",
+        "channel": 4,
         "url": "https://www.binnenvaartkennis.nl/wp-content/uploads/2021/02/VTS-Amsterdam.pdf",
         "phone": "+31206221515",
         "vhfdata": {
           "generic": {
-            "channel": 4,
             "mode": "listen"
           },
           "cargo": {
@@ -2303,20 +2300,18 @@
       "properties": {
         "name": "Centrale meldpost IJsselmeer",
         "type": "vts",
+        "channel": 1,
         "url": "",
         "phone": "+31887973300",
+        "update": "15 *",
         "vhfdata": {
           "generic": {
-            "channel": 1,
             "mode": "listen",
             "note": "Ship to ship on VHF 10"
           },
           "cargo": {
             "mode": "report",
             "note": "Report destination."
-          },
-          "update": {
-            "time": "15 *"
           }
         }
       },
@@ -2754,11 +2749,11 @@
         "name": "IJmuiden Port Control",
         "callname": "Haven IJmuiden",
         "type": "vts",
+        "channel": 61,
         "url": "https://www.binnenvaartkennis.nl/wp-content/uploads/2021/02/VTS-Amsterdam.pdf",
         "phone": "",
         "vhfdata": {
           "generic": {
-            "channel": 61,
             "mode": "listen"
           },
           "cargo": {
@@ -2888,11 +2883,11 @@
       "properties": {
         "name": "Seaport IJmuiden",
         "type": "marina",
+        "channel": 74,
         "url": "https://www.marinaseaport.nl/",
         "phone": "+31255560300",
         "vhfdata": {
           "generic": {
-            "channel": 74,
             "mode": "listen"
           }
         }
@@ -2931,11 +2926,11 @@
         "name": "Traffic Control Noordzeekanaal",
         "callname": "Verkeersdienst Noordzeekanaal",
         "type": "vts",
+        "channel": 3,
         "url": "https://www.binnenvaartkennis.nl/wp-content/uploads/2021/02/VTS-Amsterdam.pdf",
         "phone": "+31206221515",
         "vhfdata": {
           "generic": {
-            "channel": 3,
             "mode": "listen"
           },
           "cargo": {
@@ -3001,11 +2996,11 @@
       "properties": {
         "name": "Zeesluis IJmuiden",
         "type": "lock",
+        "channel": 22,
         "url": "",
         "phone": "+31255514457",
         "vhfdata": {
           "generic": {
-            "channel": 22,
             "mode": "announce"
           }
         }
@@ -3107,12 +3102,12 @@
       "properties": {
         "name": "Lorentzsluizen",
         "type": "lock",
+        "channel": 18,
         "url": "https://waterkaart.net/gids/sluis.php?naam=Lorentzsluizen",
         "phone": "+31887974589",
         "vhfdata": {
           "generic": {
-            "mode": "report",
-            "channel": 18
+            "mode": "report"
           },
           "pleasure": {
             "note": "During peak traffic (7-9h and 16-18h), only operation for commericial vessel. Pleasure crafts can join."
@@ -3197,12 +3192,12 @@
         "name": "Gemeentehaven Enkhuizen",
         "callname": "Havendienst Enkhuizen",
         "type": "marina", 
+        "channel": 11,
+        "url": "https://www.enkhuizen.nl/direct-regelen/ontspanning-en-vrije-tijd/havens/havens-2/", 
+        "phone": "+31623700390",
         "vhfdata": {
           "generic": {
-            "channel": 11,
-            "mode": "announce",
-            "url": "https://www.enkhuizen.nl/direct-regelen/ontspanning-en-vrije-tijd/havens/havens-2/", 
-            "phone": "+31623700390" 
+            "mode": "announce"
           }
         }
       },
