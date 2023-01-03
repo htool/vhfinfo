@@ -7,11 +7,11 @@
         "name": "Sound Traffic",
         "callname": "Sector 1 North",
         "type": "vts",
+        "channel": 73,
         "url": "https://www.sjofartsverket.se/globalassets/sound-vts/soundvts_folder.pdf",
         "phone": "",
         "vhfdata": {
           "generic": {
-            "channel": 73,
             "mode": "report",
             "note": "See link for reporting details."
           },
@@ -730,11 +730,11 @@
         "name": "Sound Traffic",
         "callname": "Sector 2 South",
         "type": "vts",
+        "channel": 71,
         "url": "https://www.sjofartsverket.se/globalassets/sound-vts/soundvts_folder.pdf",
         "phone": "",
         "vhfdata": {
           "generic": {
-            "channel": 71,
             "mode": "report",
             "note": "See link for reporting details."
           },
@@ -1177,11 +1177,11 @@
         "name": "Great Belt South",
         "callname": "Belt Traffic",
         "type": "vts",
+        "channel": 16,
         "url": "https://dma.dk/Media/637787223374336711/Order%20on%20the%20ship%20reporting%20system%20BELTREP%20and%20on%20navigation%20under%20the%20East%20Bridge%20and%20the%20West%20Bridge%20in%20the%20Great%20Belt.pdf",
         "phone": "+4558376868",
         "vhfdata": {
           "generic": {
-            "channel": 16,
             "mode": "report",
             "note": "Report on VHF 11. See link for reporting details. Pleasure craft with a length less than 15 m or with a gross tonnage less than 50 are exempted from participation. "
           }
@@ -1525,11 +1525,11 @@
         "name": "Great Belt North",
         "callname": "Belt Traffic",
         "type": "vts",
+        "channel": 16,
         "url": "https://dma.dk/Media/637787223374336711/Order%20on%20the%20ship%20reporting%20system%20BELTREP%20and%20on%20navigation%20under%20the%20East%20Bridge%20and%20the%20West%20Bridge%20in%20the%20Great%20Belt.pdf",
         "phone": "+4558376868",
         "vhfdata": {
           "generic": {
-            "channel": 16,
             "mode": "report",
             "note": "Report on VHF 74. See link for reporting details. Pleasure craft with a length less than 15 m or with a gross tonnage less than 50 are exempted from participation. "
           }
