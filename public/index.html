@@ -94,12 +94,13 @@ var editMode = false
 if (GetURLParameter('edit') != undefined) {
   editMode = true
   countries = []
-  countries.push(GetURLParameter('edit'))
+  var country = GetURLParameter('edit')
+  countries.push(country)
 }
 
 console.log('editMode: %s', editMode)
 if (editMode) {
-  console.log('editMode for country %s', countries[0])
+  console.log('editMode for country %s', country)
 }
 
 var m= L.map('map').setView([0,0], 8);
@@ -181,29 +182,29 @@ function loadUrl (url, targetArray) {
           }
       },
       onEachFeature: function(feature, layer) {
-          layer.on({
-              mouseover: function(e) {
-                  e.target.setStyle({
-                      fillOpacity: 0.4,
-                      dashArray: '',
-                      weight: 2,
-                      opacity: 0.3
-                  });
-                  if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-                      e.target.bringToFront();
-                  }
-              },
-              mouseout: function(e) {
-                  l.resetStyle(e.target);
-              },
-              click: function(e) {
-                  if (editMode) {
-                    setEditPopup(l, e.target.feature)
-                  } else {
-                    showInfo(e.target.feature, l);
-                  }
-              }
-          });
+        layer.on({
+          mouseover: function(e) {
+            e.target.setStyle({
+              fillOpacity: 0.4,
+              dashArray: '',
+              weight: 2,
+              opacity: 0.3
+            });
+            if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+              e.target.bringToFront();
+            }
+          },
+          mouseout: function(e) {
+            l.resetStyle(e.target);
+          },
+          click: function(e) {
+            if (editMode) {
+              editPopup(l, e.target.feature)
+            } else {
+              showInfo(e.target.feature, l);
+            }
+          }
+        });
       }
   });
   targetArray.push(l)
@@ -301,24 +302,22 @@ if (editMode) {
 	  var type = e.layerType
 	  , layer = e.layer
 	
-	  setEditPopup(layer)
 	  drawnItems.addLayer(layer);
+    layer.on('click', editPopup(layer)); //"mouseover", "click"
 	
 	  layer.on("edit", function(e) {
 	    console.log("Editted");
-	    setEditPopup(layer)
 	  });
   });
 }
 
 
-function setEditPopup (layer, f) {
+function editPopup (layer, f) {
   if (typeof f != 'undefined') {
     var feature = f 
   } else {
     var feature = layer.feature = layer.feature || {}; // Initialize feature
   }
-  console.log(feature)
   feature.type = feature.type || "Feature"; // Initialize feature.type
   var p = feature.properties = feature.properties || {}; // Initialize feature.properties
   if (typeof p["name"] == 'undefined') {
@@ -344,14 +343,15 @@ function setEditPopup (layer, f) {
   }
 
   console.log(p)
+
   var contentHTML = '<form id="form" onsubmit="return false"><table>'+
     '<tr><td><label>Name<label></td><td><input id="name" type="text"></td></tr>'+
     '<tr><td><label>Call name:<label></td><td><input id="callname" type="text"></td></tr>'+
     '<tr><td><label>Type:<label></td><td><input id="type" type="text"></td></tr>'+
-    '<tr><td><label>Channel:<label></td><td><input id="channel" type="text"></td></tr>'+
+    '<tr><td><label>Channel:<label></td><td><input id="channel" type="number"></td></tr>'+
     '<tr><td><label>Mode:<label></td><td><input id="gmode" type="text"></td></tr>'+
     '<tr><td><label>Note:<label></td><td><input id="gnote" type="text"></td></tr>'+
-    '<tr><td><label>URL:<label></td><td><input id="url" type="text"></td></tr>'+
+    '<tr><td><label>URL:<label></td><td><input id="url" type="url"></td></tr>'+
     '<tr><td><label>Phone:<label></td><td><input id="phone" type="text"></td></tr>'+
     '<tr><td><label>Update:<label></td><td><input id="update" type="text"></td></tr>'+
     '<tr><td colspan="2"><b>Pleasure overwrite</b></td></tr>'+
@@ -411,9 +411,13 @@ function setEditPopup (layer, f) {
   }
   // layer.bindPopup(myPopup);
 
+
+
+  // Save
   L.DomEvent.addListener(buttonSave, 'click', function(event){
-    var feature = layer._popup._source.feature
-    feature.properties.name = document.getElementById('name').value
+    var properties = layer._popup._source.feature.properties
+    saveProperties (properties)
+    $(".leaflet-popup-close-button")[0].click();
   });
 
   L.DomEvent.addListener(buttonCancel, 'click', function(event){
@@ -426,10 +430,39 @@ function setEditPopup (layer, f) {
 
 }
 
+function saveProperties (properties) {
+  properties.name = getPropertyValue('name')
+  properties.callname = getPropertyValue('callname')
+  properties.type = getPropertyValue('type')
+  properties.channel = getPropertyValue('channel')
+  properties.url = getPropertyValue('url')
+  properties.phone = getPropertyValue('phone')
+  properties.update = getPropertyValue('update')
+  properties.vhfdata = {}
+  properties.vhfdata.generic = {}
+  properties.vhfdata.generic.mode = getPropertyValue('gmode')
+  properties.vhfdata.generic.note = getPropertyValue('gnote')
+  properties.vhfdata.pleasure = {}
+  properties.vhfdata.pleasure.mode = getPropertyValue('pmode')
+  properties.vhfdata.pleasure.note = getPropertyValue('pnote')
+  properties.vhfdata.pleasure.url = getPropertyValue('purl')
+  properties.vhfdata.cargo = {}
+  properties.vhfdata.cargo.mode = getPropertyValue('cmode')
+  properties.vhfdata.cargo.note = getPropertyValue('cnote')
+  properties.vhfdata.cargo.url = getPropertyValue('curl')
+}
+
+function getPropertyValue (element) {
+  // console.log(document.getElementById(element).value + ' : ' + typeof document.getElementById(element).value)
+  if (document.getElementById(element).value != 'undefined') {
+    return document.getElementById(element).value
+  }
+}  
+
 function setValue (value, element) {
   // console.log('Value ' + value + ':' + typeof value + ' element ' + element)
   if (typeof value != 'undefined') {
-    console.log('Not undefined')
+    // console.log('Not undefined')
     document.getElementById(element).value = value
   } else {
     document.getElementById(element).value = null
