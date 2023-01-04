@@ -114,6 +114,7 @@ mq.addTo(m);
 var Nm12All = []
 var vhfinfoAll = []
 
+var drawnItems = new L.FeatureGroup();
 countries.forEach(c => {
   loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + c + ".json", vhfinfoAll)
   loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + c + "_12Nm.json", Nm12All)
@@ -152,7 +153,6 @@ m.addLayer(vhfinfo);
 baseMaps={"OpenSeaMap":osm, "Sattelite":googleSat, "Terrain":googleTerrain};
 
 if (editMode) {
-  var drawnItems = new L.FeatureGroup();
   m.addLayer(drawnItems);
 }
 
@@ -163,8 +163,48 @@ ControlLayer=L.control.layers(baseMaps).addTo(m);
 ControlLayer.addOverlay(Nm12, '12Nm')
 ControlLayer.addOverlay(vhfinfo, 'VHF info')
 if (editMode) {
-  ControlLayer.addOverlay(drawnItems, 'Edits')
+  ControlLayer.addOverlay(drawnItems, 'Newly created')
 }
+
+drawnItems.on('add',(e)=>{
+  console.log('drawnItems now selected')
+  if (m.hasLayer(vhfinfo)) {
+    console.log('vhfinfo is active')
+    m.addLayer(vhfinfo)
+  } else {
+    console.log('vhfinfo is in active')
+    m.addLayer(vhfinfo)
+    m.removeLayer(vhfinfo)
+  }
+  if (m.hasLayer(Nm12)) {
+    console.log('Nm12 is active')
+    m.addLayer(Nm12)
+  } else {
+    console.log('Nm12 is in active')
+    m.addLayer(Nm12)
+    m.removeLayer(Nm12)
+  }
+});
+
+drawnItems.on('remove',(e)=>{
+  console.log('drawnItems now deselected')
+  if (m.hasLayer(vhfinfo)) {
+    console.log('vhfinfo is active')
+    m.removeLayer(vhfinfo)
+    m.addLayer(vhfinfo)
+  } else {
+    console.log('vhfinfo is in active')
+    m.removeLayer(vhfinfo)
+  }
+  if (m.hasLayer(Nm12)) {
+    console.log('Nm12 is active')
+    m.removeLayer(Nm12)
+    m.addLayer(Nm12)
+  } else {
+    console.log('Nm12 is in active')
+    m.removeLayer(Nm12)
+  }
+});
 
 L.DomUtil.addClass(m._container,'crosshair-cursor-enabled');
 
@@ -172,7 +212,6 @@ L.DomUtil.addClass(m._container,'crosshair-cursor-enabled');
 function loadUrl (url, targetArray) {
   var l = new L.GeoJSON.AJAX(url, {
      style: function(feature) {
-          p = feature.properties.name;
           return {
               fillOpacity: 0.2,
               color: "grey",
@@ -182,6 +221,7 @@ function loadUrl (url, targetArray) {
           }
       },
       onEachFeature: function(feature, layer) {
+
         layer.on({
           mouseover: function(e) {
             e.target.setStyle({
@@ -205,6 +245,7 @@ function loadUrl (url, targetArray) {
             }
           }
         });
+        drawnItems.addLayer(layer);
       }
   });
   targetArray.push(l)
@@ -301,7 +342,8 @@ if (editMode) {
 	m.on(L.Draw.Event.CREATED, function(e) {
 	  var type = e.layerType
 	  , layer = e.layer
-	
+
+    console.log(layer)
 	  drawnItems.addLayer(layer);
     layer.on('click', editPopup(layer)); //"mouseover", "click"
 	
