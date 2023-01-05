@@ -68,7 +68,6 @@
 
 var vhfinfo
 var Nm12
-
 var countries = ["BEL", "DEU", "DNK", "ESP", "FIN", "FRA", "GRC", "GBR", "IRL", "ITA", "NLD", "NOR", "POL", "PRT", "SWE", "ZWE"]
 // var countries = ["ABW", "AFG", "AGO", "AIA", "ALA", "ALB", "AND", "ANT", "ARE", "ARG", "ARM", "ASM", "ATA", "ATF", "ATG", "AUS", "AUT", "AZE", "BDI", "BEL", "BEN", "BFA", "BGD", "BGR", "BHR", "BHS", "BIH", "BLM", "BLR", "BLZ", "BMU", "BOL", "BRA", "BRB", "BRN", "BTN", "BVT", "BWA", "CAF", "CAN", "CCK", "CHE", "CHL", "CHN", "CIV", "CMR", "COD", "COG", "COK", "COL", "COM", "CPV", "CRI", "CUB", "CXR", "CYM", "CYP", "CZE", "DEU", "DJI", "DMA", "DNK", "DOM", "DZA", "ECU", "EGY", "ERI", "ESH", "ESP", "EST", "ETH", "FIN", "FJI", "FLK", "FRA", "FRO", "FSM", "GAB", "GBR", "GEO", "GGY", "GHA", "GIB", "GIN", "GLP", "GMB", "GNB", "GNQ", "GRC", "GRD", "GRL", "GTM", "GUF", "GUM", "GUY", "HKG", "HMD", "HND", "HRV", "HTI", "HUN", "IDN", "IMN", "IND", "IOT", "IRL", "IRN", "IRQ", "ISL", "ISR", "ITA", "JAM", "JEY", "JOR", "JPN", "KAZ", "KEN", "KGZ", "KHM", "KIR", "KNA", "KOR", "KWT", "LAO", "LBN", "LBR", "LBY", "LCA", "LIE", "LKA", "LSO", "LTU", "LUX", "LVA", "MAC", "MAF", "MAR", "MCO", "MDA", "MDG", "MDV", "MEX", "MHL", "MKD", "MLI", "MLT", "MMR", "MNE", "MNG", "MNP", "MOZ", "MRT", "MSR", "MTQ", "MUS", "MWI", "MYS", "MYT", "NAM", "NCL", "NER", "NFK", "NGA", "NIC", "NIU", "NLD", "NOR", "NPL", "NRU", "NZL", "OMN", "PAK", "PAN", "PCN", "PER", "PHL", "PLW", "PNG", "POL", "PRI", "PRK", "PRT", "PRY", "PSE", "PYF", "QAT", "REU", "ROU", "RUS", "RWA", "SAU", "SDN", "SEN", "SGP", "SGS", "SHN", "SJM", "SLB", "SLE", "SLV", "SMR", "SOM", "SPM", "SRB", "STP", "SUR", "SVK", "SVN", "SWE", "SWZ", "SYC", "SYR", "TCA", "TCD", "TGO", "THA", "TJK", "TKL", "TKM", "TLS", "TON", "TTO", "TUN", "TUR", "TUV", "TWN", "TZA", "UGA", "UKR", "UMI", "URY", "USA", "UZB", "VAT", "VCT", "VEN", "VGB", "VIR", "VNM", "VUT", "WLF", "WSM", "YEM", "ZAF", "ZMB", "ZWE"]
 
@@ -101,6 +100,7 @@ if (GetURLParameter('edit') != undefined) {
 console.log('editMode: %s', editMode)
 if (editMode) {
   console.log('editMode for country %s', country)
+  var newItems = []
 }
 
 var m= L.map('map').setView([0,0], 8);
@@ -116,8 +116,8 @@ var vhfinfoAll = []
 
 var drawnItems = new L.FeatureGroup();
 countries.forEach(c => {
-  loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + c + ".json", vhfinfoAll)
-  loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + c + "_12Nm.json", Nm12All)
+  loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + c + ".json", vhfinfoAll, c)
+  loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + c + "_12Nm.json", Nm12All, c)
   sleep(250)
 })
 var Nm12 = new L.LayerGroup(Nm12All)
@@ -154,6 +154,7 @@ baseMaps={"OpenSeaMap":osm, "Sattelite":googleSat, "Terrain":googleTerrain};
 
 if (editMode) {
   m.addLayer(drawnItems);
+  setTimeout(remove12Nm, 500)
 }
 
 var popup = L.popup();
@@ -172,7 +173,7 @@ drawnItems.on('add',(e)=>{
     console.log('vhfinfo is active')
     m.addLayer(vhfinfo)
   } else {
-    console.log('vhfinfo is in active')
+    console.log('vhfinfo is inactive')
     m.addLayer(vhfinfo)
     m.removeLayer(vhfinfo)
   }
@@ -180,7 +181,7 @@ drawnItems.on('add',(e)=>{
     console.log('Nm12 is active')
     m.addLayer(Nm12)
   } else {
-    console.log('Nm12 is in active')
+    console.log('Nm12 is inactive')
     m.addLayer(Nm12)
     m.removeLayer(Nm12)
   }
@@ -193,7 +194,7 @@ drawnItems.on('remove',(e)=>{
     m.removeLayer(vhfinfo)
     m.addLayer(vhfinfo)
   } else {
-    console.log('vhfinfo is in active')
+    console.log('vhfinfo is inactive')
     m.removeLayer(vhfinfo)
   }
   if (m.hasLayer(Nm12)) {
@@ -201,7 +202,7 @@ drawnItems.on('remove',(e)=>{
     m.removeLayer(Nm12)
     m.addLayer(Nm12)
   } else {
-    console.log('Nm12 is in active')
+    console.log('Nm12 is inactive')
     m.removeLayer(Nm12)
   }
 });
@@ -209,7 +210,7 @@ drawnItems.on('remove',(e)=>{
 L.DomUtil.addClass(m._container,'crosshair-cursor-enabled');
 
 
-function loadUrl (url, targetArray) {
+function loadUrl (url, targetArray, country) {
   var l = new L.GeoJSON.AJAX(url, {
      style: function(feature) {
           return {
@@ -241,9 +242,17 @@ function loadUrl (url, targetArray) {
             if (editMode) {
               editPopup(l, e.target.feature)
             } else {
-              showInfo(e.target.feature, l);
+              showInfo(e.target.feature, l, country);
+            }
+          },
+          contextmenu: function(e) {
+            if (editMode) {
+              l.bringToBack()
+            } else {
+              //showInfo(e.target.feature, l);
             }
           }
+
         });
         drawnItems.addLayer(layer);
       }
@@ -252,7 +261,7 @@ function loadUrl (url, targetArray) {
 }
 
 
-function showInfo(f, layer) {
+function showInfo(f, layer, country) {
   console.log(f)
 
   let p = f.properties
@@ -277,10 +286,7 @@ function showInfo(f, layer) {
   html = html + addHTML('Generic', p.vhfdata.generic)
   html = html + addHTML('Pleasure', p.vhfdata.pleasure)
   html = html + addHTML('Emergency', p.vhfdata.emergency)
-
-  let featureCollection = JSON.stringify({"type": "FeatureCollection", "features": [f] })
-  // console.log(featureCollection)
-  html = html + '<td></td><td style="text-align: right;"><a href="http://geojson.io/#data=data:application/json,' + encodeURIComponent(featureCollection) + '" target="_blank" style="text-decoration: none;">Edit</a></td>'
+  html = html + '<td></td><td style="text-align: right;"><a href="https://htool.github.io/vhfinfo/public/index.html?edit=' + country + '" target="_blank" style="text-decoration: none;">Edit</a></td>'
   html = html + '</table>'
 
   layer.bindPopup(html).openPopup();
@@ -343,7 +349,6 @@ if (editMode) {
 	  var type = e.layerType
 	  , layer = e.layer
 
-    console.log(layer)
 	  drawnItems.addLayer(layer);
     layer.on('click', editPopup(layer)); //"mouseover", "click"
 	
@@ -363,20 +368,25 @@ function editPopup (layer, f) {
   feature.type = feature.type || "Feature"; // Initialize feature.type
   var p = feature.properties = feature.properties || {}; // Initialize feature.properties
   if (typeof p["name"] == 'undefined') {
-    console.log('A new item!')
-    p["name"] = "New item"
+    newItems.push(layer._leaflet_id)
+    p["name"] = "New feature"
     p["callname"] = "Commenly used call sign"
     p["type"] = "marina,lock,vts"
+    p["channel"] = Number(0),
     p["url"] = "http://"
     p["phone"] = "+"
-    p["note"] = "Some note"
+    p["note"] = ""
     p["vhfdata"] = {
       "generic": {
-        "channel": 0,
         "mode": "report,announce,listen",
         "note": ""
       },
       "pleasure": {
+        "mode": "report,announce,listen",
+        "url": "",
+        "note": ""
+      },
+      "cargo": {
         "mode": "report,announce,listen",
         "url": "",
         "note": ""
@@ -408,6 +418,7 @@ function editPopup (layer, f) {
 
   var buttonSaveHTML = '<div class="save" id="save"><button>Save</button></div>'
   var buttonCancelHTML = '<div class="cancel" id="cancel"><button id="cancel">Cancel</button></div>'
+  var buttonExportHTML = '<div class="export" id="export"><button id="export">Commit to GitHub</button></div>'
 
   // Adding info to popup
   var json = layer.toGeoJSON()
@@ -425,6 +436,10 @@ function editPopup (layer, f) {
   var buttonCancel = L.DomUtil.create('div', 'buttonCancel');
   buttonCancel.innerHTML = buttonCancelHTML
   btnDiv.append(buttonCancel)
+  
+  var buttonExport = L.DomUtil.create('div', 'buttonExport');
+  buttonExport.innerHTML = buttonExportHTML
+  btnDiv.append(buttonExport)
 
   layer.bindPopup(btnDiv).openPopup();
 
@@ -467,16 +482,78 @@ function editPopup (layer, f) {
     $(".leaflet-popup-close-button")[0].click();
   });
 
-  //layer.bindPopup(content);
-  //console.log(JSON.stringify(json))
+  L.DomEvent.addListener(buttonExport, 'click', function(event){
 
+    var countryGeoJson = {"type": "FeatureCollection", "features": [ ]}
+    vhfinfo.eachLayer(function(layer) {
+      for (const [key, l] of Object.entries(layer._layers)) {
+        countryGeoJson.features.push(l.feature)
+      }
+    })
+
+    newItems.forEach(id => {
+      countryGeoJson.features.push(drawnItems._layers[id].toGeoJSON())
+    })
+
+    var territorialGeoJson = {"type": "FeatureCollection", "features": [ { } ]}
+    Nm12.eachLayer(function(layer) {
+      for (const [key, l] of Object.entries(layer._layers)) {
+        territorialGeoJson.features.push(l.feature)
+      }
+    })
+
+    // console.log(JSON.stringify(countryGeoJson, null, 2))
+    // console.log(countryGeoJson)
+    console.log("Length: %d", countryGeoJson.features.length)
+    console.log("Length: %d", territorialGeoJson.features.length)
+
+    commitGitHub(country, countryGeoJson)
+
+    $(".leaflet-popup-close-button")[0].click();
+  });
+
+}
+
+
+function commitGitHub (country, json) {
+  $.get('https://api.github.com/repos/htool/vhfinfo/contents/data/' + country + '.json', function(data){
+    console.log(data)
+    var fileJson = atob(data.content);
+  });
+
+  let content = JSON.stringify(json, null, 2)
+  copyStringToClipboard(content)
+  var url = "https://github.com/htool/vhfinfo/edit/main/data/" + country + ".json"
+  
+  if (confirm("The GeoJSON has been copied to your clipboard. Press OK to go to GitHub's edit page where you should remove all (CTRL-A, <delete>) and then paste your clipboard (CTRL-V) and press Submit.")) {
+    open(url, "_blank")
+  } else {
+  } 
+
+}
+
+function copyStringToClipboard (str) {
+   // Create new element
+   var el = document.createElement('textarea');
+   // Set value (string to be copied)
+   el.value = str;
+   // Set non-editable to avoid focus and move outside of view
+   el.setAttribute('readonly', '');
+   el.style = {position: 'absolute', left: '-9999px'};
+   document.body.appendChild(el);
+   // Select text inside element
+   el.select();
+   // Copy text to clipboard
+   document.execCommand('copy');
+   // Remove temporary element
+   document.body.removeChild(el);
 }
 
 function saveProperties (properties) {
   properties.name = getPropertyValue('name')
   properties.callname = getPropertyValue('callname')
   properties.type = getPropertyValue('type')
-  properties.channel = getPropertyValue('channel')
+  properties.channel = Number(getPropertyValue('channel'))
   properties.url = getPropertyValue('url')
   properties.phone = getPropertyValue('phone')
   properties.update = getPropertyValue('update')
@@ -511,6 +588,12 @@ function setValue (value, element) {
   }
 }
 
+function remove12Nm () {
+  if (editMode) {
+    m.addLayer(Nm12)
+    m.removeLayer(Nm12)
+  }
+}
 
 </script>
 
