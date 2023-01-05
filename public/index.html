@@ -25,6 +25,7 @@
     <script src="leaflet.ajax.min.js" type="text/javascript"></script>
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js" type="text/javascript"></script>
     <script src="cronstrue.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.EasyButton/2.4.0/easy-button.min.js" integrity="sha512-Tndo4y/YJooD/mGXS9D6F1YyBcSyrWnnSWQ5Z9IcKt6bljicjyka9qcP99qMFbQ5+omfOtwwIapv1DjBCZcTJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js" integrity="sha512-ozq8xQKq6urvuU6jNgkfqAmT7jKN2XumbrX1JiB3TnF7tI48DPI4Gy1GXKD/V3EExgAs1V+pRO7vwtS1LHg0Gw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" integrity="sha512-gc3xjCmIy673V6MyOAZhIW93xhM9ei1I+gLbmFjUHIjocENRsLX/QUE1htk5q1XV2D/iie/VQ8DXI6Vu8bexvQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -201,6 +202,16 @@ drawnItems.on('remove',(e)=>{
 });
 
 L.DomUtil.addClass(m._container,'crosshair-cursor-enabled');
+
+if (!editMode) {
+  L.easyButton( '<div id="pencil">&#9998;</div>', function(){
+  let country = getCountryAtCenter()
+    if (confirm("Do you want to start editting for country " + country + "?")) {
+      open("https://htool.github.io/vhfinfo/public/index.html?edit=" + country, "_blank")
+    }
+  }).addTo(m);
+}
+
 
 function loadUrl (url, layerGroup, country) {
   // console.log('Loading ' + country)
@@ -651,6 +662,16 @@ function loadCountriesBbox () {
   });
 }
 
+function getCountryAtCenter () {
+  let center = m.getCenter()
+  let lat = center.lat
+  let lon = center.lng
+  for (const [country, latlon] of Object.entries(countriesGeoObj)) {
+    if (lat < latlon.ne.lat && lat > latlon.sw.lat && lon < latlon.ne.lon && lon > latlon.sw.lon) {
+      return country
+    }
+  }
+}
 
 function loadCountryOnCoordiate (coor) {
   let lat = coor[0]
