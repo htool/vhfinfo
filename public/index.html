@@ -626,10 +626,12 @@ function remove12Nm () {
 
 m.on('zoomend', function() {
     var zoomlevel = m.getZoom()
-    if (zoomlevel >= 9) {
-      center = m.getCenter()
-      center = [center.lat, center.lng]
-      loadCountryOnCoordiate(center)
+    if (!editMode) {
+      if (zoomlevel >= 9) {
+        center = m.getCenter()
+        center = [center.lat, center.lng]
+        loadCountryOnCoordiate(center)
+      }
     }
 });
 
