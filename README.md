@@ -12,7 +12,7 @@ By collection the VHF channel info together with coordinate information it's eas
 The information is collected as [GeoJSON](https://geojson.org/) which holds both coordinates and properties.
 
 ## Viewing information
-see if certain VHF information is already present, you can look at the [Online map of most of Europe](https://htool.github.io/vhfinfo/public/index.html))
+see if certain VHF information is already present, you can look at the [online map](https://htool.github.io/vhfinfo/public/index.html)
 
 ## Adding information
 To add information you'll have to open the country specific file and make your changes there.

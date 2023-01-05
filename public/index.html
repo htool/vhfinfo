@@ -67,6 +67,7 @@
 
 <script type="text/javascript">
 
+var countriesGeoObj
 var vhfinfo
 var Nm12
 var countries = ["BEL", "DEU", "DNK", "ESP", "FIN", "FRA", "GRC", "GBR", "IRL", "ITA", "NLD", "NOR", "POL", "PRT", "SWE", "ZWE"]
@@ -98,6 +99,8 @@ if (GetURLParameter('edit') != undefined) {
   countries.push(country)
 }
 
+loadCountriesBbox()
+
 console.log('editMode: %s', editMode)
 if (editMode) {
   console.log('editMode for country %s', country)
@@ -116,13 +119,8 @@ var Nm12All = []
 var vhfinfoAll = []
 
 var drawnItems = new L.FeatureGroup();
-countries.forEach(c => {
-  loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + c + ".json", vhfinfoAll, c)
-  loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + c + "_12Nm.json", Nm12All, c)
-  sleep(250)
-})
-var Nm12 = new L.LayerGroup(Nm12All)
-var vhfinfo = new L.LayerGroup(vhfinfoAll)
+var Nm12 = new L.LayerGroup()
+var vhfinfo = new L.LayerGroup()
 
 
 //link to tiles
@@ -210,8 +208,8 @@ drawnItems.on('remove',(e)=>{
 
 L.DomUtil.addClass(m._container,'crosshair-cursor-enabled');
 
-
-function loadUrl (url, targetArray, country) {
+function loadUrl (url, layerGroup, country) {
+  // console.log('Loading ' + country)
   var l = new L.GeoJSON.AJAX(url, {
      style: function(feature) {
           return {
@@ -223,7 +221,6 @@ function loadUrl (url, targetArray, country) {
           }
       },
       onEachFeature: function(feature, layer) {
-
         layer.on({
           mouseover: function(e) {
             e.target.setStyle({
@@ -253,12 +250,11 @@ function loadUrl (url, targetArray, country) {
               //showInfo(e.target.feature, l);
             }
           }
-
         });
-        drawnItems.addLayer(layer);
+        drawnItems.addLayer(layer)
+        layerGroup.addLayer(layer)
       }
   });
-  targetArray.push(l)
 }
 
 
@@ -321,6 +317,7 @@ if (editMode == false) {
       latit = position.coords.latitude;
       longit = position.coords.longitude;
       // move the map to have the location in its center
+      loadCountryOnCoordiate([latit,longit])
       m.panTo(new L.LatLng(latit, longit));
     })
   }
@@ -328,8 +325,8 @@ if (editMode == false) {
   jQuery.ajax({
     url: 'https://raw.githubusercontent.com/htool/vhfinfo/main/data/countries_bbox.json',
     success: function (data) {
-      countriesGeoJSON = JSON.parse(data)
-      let coor = countriesGeoJSON[country]
+      countriesGeoObj = JSON.parse(data)
+      let coor = countriesGeoObj[country]
       let lon = coor.ne.lon - ((coor.ne.lon - coor.sw.lon)/2)
       let lat = coor.ne.lat - ((coor.ne.lat - coor.sw.lat)/2)
       m.panTo(new L.LatLng(lat, lon));
@@ -632,6 +629,38 @@ function remove12Nm () {
   }
 }
 
+
+m.on('zoomend', function() {
+    var zoomlevel = m.getZoom()
+    if (zoomlevel >= 9) {
+      center = m.getCenter()
+      center = [center.lat, center.lng]
+      loadCountryOnCoordiate(center)
+    }
+});
+
+function loadCountriesBbox () {
+  jQuery.ajax({
+    url: 'https://raw.githubusercontent.com/htool/vhfinfo/main/data/countries_bbox.json',
+    success: function (data) {
+      countriesGeoObj = JSON.parse(data)
+    },
+    async: false
+  });
+}
+
+
+function loadCountryOnCoordiate (coor) {
+  let lat = coor[0]
+  let lon = coor[1]
+  for (const [country, latlon] of Object.entries(countriesGeoObj)) {
+    if (lat < latlon.ne.lat && lat > latlon.sw.lat && lon < latlon.ne.lon && lon > latlon.sw.lon) {
+      loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + country + ".json", vhfinfo, country)
+      loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + country + "_12Nm.json", Nm12, country)
+    }
+  }
+}
+  
 </script>
 
 
