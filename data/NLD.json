@@ -415,13 +415,21 @@
         "phone": "+31102522801",
         "vhfdata": {
           "generic": {
-            "mode": "report"
+            "mode": "report",
+            "note": ""
           },
           "pleasure": {
             "mode": "report",
-            "note": "Report use the corridor."
+            "note": "Report using the corridor.",
+            "url": ""
+          },
+          "cargo": {
+            "mode": "",
+            "note": "",
+            "url": ""
           }
-        }
+        },
+        "update": ""
       },
       "geometry": {
         "type": "Polygon",
