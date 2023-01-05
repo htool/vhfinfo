@@ -315,13 +315,38 @@ function addHTML (title, json) {
   }
 }
 
-if (navigator.geolocation) {
-  navigator.geolocation.getCurrentPosition(function(position) {
-    latit = position.coords.latitude;
-    longit = position.coords.longitude;
-    // move the map to have the location in its center
-    m.panTo(new L.LatLng(latit, longit));
-  })
+if (editMode == false) {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      latit = position.coords.latitude;
+      longit = position.coords.longitude;
+      // move the map to have the location in its center
+      m.panTo(new L.LatLng(latit, longit));
+    })
+  }
+} else {
+  jQuery.ajax({
+    url: 'https://raw.githubusercontent.com/htool/vhfinfo/main/data/countries_bbox.json',
+    success: function (data) {
+      countriesGeoJSON = JSON.parse(data)
+      let coor = countriesGeoJSON[country]
+      let lon = coor.ne.lon - ((coor.ne.lon - coor.sw.lon)/2)
+      let lat = coor.ne.lat - ((coor.ne.lat - coor.sw.lat)/2)
+      m.panTo(new L.LatLng(lat, lon));
+
+      let coordinates = [[coor.ne.lon,coor.ne.lat], [coor.sw.lon, coor.sw.lat]]
+      let polygon = L.polygon(coordinates);
+      let bounds = polygon.getBounds();
+      let southWest = bounds.getSouthWest();
+      let northEast = bounds.getNorthEast();
+      let cSouthWest = L.latLng(southWest.lng, southWest.lat);
+      let cNortEast = L.latLng(northEast.lng, northEast.lat);
+      let newBounds = L.latLngBounds(cSouthWest, cNortEast);
+
+      m.fitBounds(newBounds);
+    },
+    async: false
+  });
 }
 
 
