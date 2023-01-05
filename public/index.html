@@ -19,6 +19,7 @@
       }
     </style>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <script src="leaflet.ajax.min.js" type="text/javascript"></script>
@@ -483,7 +484,6 @@ function editPopup (layer, f) {
   });
 
   L.DomEvent.addListener(buttonExport, 'click', function(event){
-
     var countryGeoJson = {"type": "FeatureCollection", "features": [ ]}
     vhfinfo.eachLayer(function(layer) {
       for (const [key, l] of Object.entries(layer._layers)) {
@@ -495,19 +495,24 @@ function editPopup (layer, f) {
       countryGeoJson.features.push(drawnItems._layers[id].toGeoJSON())
     })
 
-    var territorialGeoJson = {"type": "FeatureCollection", "features": [ { } ]}
+    var territorialGeoJson = {"type": "FeatureCollection", "features": [ ]}
     Nm12.eachLayer(function(layer) {
       for (const [key, l] of Object.entries(layer._layers)) {
         territorialGeoJson.features.push(l.feature)
       }
     })
 
-    // console.log(JSON.stringify(countryGeoJson, null, 2))
-    // console.log(countryGeoJson)
-    console.log("Length: %d", countryGeoJson.features.length)
-    console.log("Length: %d", territorialGeoJson.features.length)
+    console.log(layer.urls[0])
+    if (layer.urls[0].endsWith('_12Nm.json')) {
+      console.log('Committing a territorial country file')
+      var file = country + '_12Nm.json'
+      commitGitHub(file, territorialGeoJson)
+    } else {
+      console.log('Committing a country file')
+      var file = country + '.json'
+      commitGitHub(file, countryGeoJson)
+    }
 
-    commitGitHub(country, countryGeoJson)
 
     $(".leaflet-popup-close-button")[0].click();
   });
@@ -515,21 +520,28 @@ function editPopup (layer, f) {
 }
 
 
-function commitGitHub (country, json) {
-  $.get('https://api.github.com/repos/htool/vhfinfo/contents/data/' + country + '.json', function(data){
-    console.log(data)
-    var fileJson = atob(data.content);
+function commitGitHub (file, json) {
+  var fileJson
+  jQuery.ajax({
+    url: 'https://api.github.com/repos/htool/vhfinfo/contents/data/' + file,
+    success: function (data) {
+      fileJson = JSON.stringify(JSON.parse(atob(data.content)), null, 2)
+    },
+    async: false
   });
 
   let content = JSON.stringify(json, null, 2)
-  copyStringToClipboard(content)
-  var url = "https://github.com/htool/vhfinfo/edit/main/data/" + country + ".json"
-  
-  if (confirm("The GeoJSON has been copied to your clipboard. Press OK to go to GitHub's edit page where you should remove all (CTRL-A, <delete>) and then paste your clipboard (CTRL-V) and press Submit.")) {
-    open(url, "_blank")
-  } else {
-  } 
 
+  if (_.isEqual(content, fileJson)) {
+    confirm("There are no changes made")
+  } else {
+    copyStringToClipboard(content)
+    var url = "https://github.com/htool/vhfinfo/edit/main/data/" + file
+  
+    if (confirm("The GeoJSON has been copied to your clipboard. Press OK to go to GitHub's edit page where you should remove all (CTRL-A, <delete>) and then paste your clipboard (CTRL-V) and press Submit.")) {
+      open(url, "_blank")
+    }
+  }
 }
 
 function copyStringToClipboard (str) {
