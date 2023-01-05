@@ -509,35 +509,28 @@ function editPopup (layer, f) {
   });
 
   L.DomEvent.addListener(buttonExport, 'click', function(event){
-    var countryGeoJson = {"type": "FeatureCollection", "features": [ ]}
-    vhfinfo.eachLayer(function(layer) {
-      for (const [key, l] of Object.entries(layer._layers)) {
-        countryGeoJson.features.push(l.feature)
-      }
-    })
+    var countryGeoJson = vhfinfo.toGeoJSON(12)
 
     newItems.forEach(id => {
-      countryGeoJson.features.push(drawnItems._layers[id].toGeoJSON())
+      countryGeoJson.features.push(drawnItems._layers[id].toGeoJSON(12))
     })
 
-    var territorialGeoJson = {"type": "FeatureCollection", "features": [ ]}
-    Nm12.eachLayer(function(layer) {
-      for (const [key, l] of Object.entries(layer._layers)) {
-        territorialGeoJson.features.push(l.feature)
+
+    var territorialGeoJson = Nm12.toGeoJSON(12)
+
+    console.log(territorialGeoJson)
+
+    if (typeof layer.urls != 'undefined') {
+      if (layer.urls[0].endsWith('_12Nm.json')) {
+        console.log('Committing a territorial country file')
+        var file = country + '_12Nm.json'
+        commitGitHub(file, territorialGeoJson)
+      } else {
+        console.log('Committing a country file')
+        var file = country + '.json'
+        commitGitHub(file, countryGeoJson)
       }
-    })
-
-    console.log(layer.urls[0])
-    if (layer.urls[0].endsWith('_12Nm.json')) {
-      console.log('Committing a territorial country file')
-      var file = country + '_12Nm.json'
-      commitGitHub(file, territorialGeoJson)
-    } else {
-      console.log('Committing a country file')
-      var file = country + '.json'
-      commitGitHub(file, countryGeoJson)
     }
-
 
     $(".leaflet-popup-close-button")[0].click();
   });
