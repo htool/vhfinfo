@@ -68,10 +68,9 @@
 <script type="text/javascript">
 
 var countriesGeoObj
+var countriesLoaded = []
 var vhfinfo
 var Nm12
-var countries = ["BEL", "DEU", "DNK", "ESP", "FIN", "FRA", "GRC", "GBR", "IRL", "ITA", "NLD", "NOR", "POL", "PRT", "SWE", "ZWE"]
-// var countries = ["ABW", "AFG", "AGO", "AIA", "ALA", "ALB", "AND", "ANT", "ARE", "ARG", "ARM", "ASM", "ATA", "ATF", "ATG", "AUS", "AUT", "AZE", "BDI", "BEL", "BEN", "BFA", "BGD", "BGR", "BHR", "BHS", "BIH", "BLM", "BLR", "BLZ", "BMU", "BOL", "BRA", "BRB", "BRN", "BTN", "BVT", "BWA", "CAF", "CAN", "CCK", "CHE", "CHL", "CHN", "CIV", "CMR", "COD", "COG", "COK", "COL", "COM", "CPV", "CRI", "CUB", "CXR", "CYM", "CYP", "CZE", "DEU", "DJI", "DMA", "DNK", "DOM", "DZA", "ECU", "EGY", "ERI", "ESH", "ESP", "EST", "ETH", "FIN", "FJI", "FLK", "FRA", "FRO", "FSM", "GAB", "GBR", "GEO", "GGY", "GHA", "GIB", "GIN", "GLP", "GMB", "GNB", "GNQ", "GRC", "GRD", "GRL", "GTM", "GUF", "GUM", "GUY", "HKG", "HMD", "HND", "HRV", "HTI", "HUN", "IDN", "IMN", "IND", "IOT", "IRL", "IRN", "IRQ", "ISL", "ISR", "ITA", "JAM", "JEY", "JOR", "JPN", "KAZ", "KEN", "KGZ", "KHM", "KIR", "KNA", "KOR", "KWT", "LAO", "LBN", "LBR", "LBY", "LCA", "LIE", "LKA", "LSO", "LTU", "LUX", "LVA", "MAC", "MAF", "MAR", "MCO", "MDA", "MDG", "MDV", "MEX", "MHL", "MKD", "MLI", "MLT", "MMR", "MNE", "MNG", "MNP", "MOZ", "MRT", "MSR", "MTQ", "MUS", "MWI", "MYS", "MYT", "NAM", "NCL", "NER", "NFK", "NGA", "NIC", "NIU", "NLD", "NOR", "NPL", "NRU", "NZL", "OMN", "PAK", "PAN", "PCN", "PER", "PHL", "PLW", "PNG", "POL", "PRI", "PRK", "PRT", "PRY", "PSE", "PYF", "QAT", "REU", "ROU", "RUS", "RWA", "SAU", "SDN", "SEN", "SGP", "SGS", "SHN", "SJM", "SLB", "SLE", "SLV", "SMR", "SOM", "SPM", "SRB", "STP", "SUR", "SVK", "SVN", "SWE", "SWZ", "SYC", "SYR", "TCA", "TCD", "TGO", "THA", "TJK", "TKL", "TKM", "TLS", "TON", "TTO", "TUN", "TUR", "TUV", "TWN", "TZA", "UGA", "UKR", "UMI", "URY", "USA", "UZB", "VAT", "VCT", "VEN", "VGB", "VIR", "VNM", "VUT", "WLF", "WSM", "YEM", "ZAF", "ZMB", "ZWE"]
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -94,9 +93,7 @@ function GetURLParameter(sParam)
 var editMode = false
 if (GetURLParameter('edit') != undefined) {
   editMode = true
-  countries = []
   var country = GetURLParameter('edit')
-  countries.push(country)
 }
 
 loadCountriesBbox()
@@ -114,9 +111,6 @@ var mopt = {
   };
 var mq=L.tileLayer(mopt.url,mopt.options);
 mq.addTo(m);
-
-var Nm12All = []
-var vhfinfoAll = []
 
 var drawnItems = new L.FeatureGroup();
 var Nm12 = new L.LayerGroup()
@@ -253,6 +247,7 @@ function loadUrl (url, layerGroup, country) {
         });
         drawnItems.addLayer(layer)
         layerGroup.addLayer(layer)
+        countriesLoaded.push(country)
       }
   });
 }
@@ -377,6 +372,8 @@ if (editMode) {
 
 
 function editPopup (layer, f) {
+  layer.addTo(m)
+  // console.log(layer)
   if (typeof f != 'undefined') {
     var feature = f 
   } else {
@@ -411,7 +408,7 @@ function editPopup (layer, f) {
     }
   }
 
-  console.log(p)
+  // console.log(p)
 
   var contentHTML = '<form id="form" onsubmit="return false"><table>'+
     '<tr><td><label>Name<label></td><td><input id="name" type="text"></td></tr>'+
@@ -460,7 +457,8 @@ function editPopup (layer, f) {
 
   layer.bindPopup(btnDiv).openPopup();
 
-  sleep (200)
+
+  sleep (600)
   setValue(p.name, 'name')
   setValue(p.callname, 'callname')
   setValue(p.type, 'type')
@@ -625,15 +623,23 @@ function remove12Nm () {
 
 
 m.on('zoomend', function() {
-    var zoomlevel = m.getZoom()
-    if (!editMode) {
-      if (zoomlevel >= 9) {
-        center = m.getCenter()
-        center = [center.lat, center.lng]
-        loadCountryOnCoordiate(center)
-      }
-    }
+  checkIfLoaded()
 });
+
+m.on('moveend', function() {
+  checkIfLoaded()
+});
+
+function checkIfLoaded () {
+  if (!editMode) {
+    var zoomlevel = m.getZoom()
+    if (zoomlevel >= 8) {
+      center = m.getCenter()
+      center = [center.lat, center.lng]
+      loadCountryOnCoordiate(center)
+    }
+  }
+}
 
 function loadCountriesBbox () {
   jQuery.ajax({
@@ -651,8 +657,10 @@ function loadCountryOnCoordiate (coor) {
   let lon = coor[1]
   for (const [country, latlon] of Object.entries(countriesGeoObj)) {
     if (lat < latlon.ne.lat && lat > latlon.sw.lat && lon < latlon.ne.lon && lon > latlon.sw.lon) {
-      loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + country + ".json", vhfinfo, country)
-      loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + country + "_12Nm.json", Nm12, country)
+      if (!countriesLoaded.includes(country)) {
+        loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + country + ".json", vhfinfo, country)
+        loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + country + "_12Nm.json", Nm12, country)
+      }
     }
   }
 }
