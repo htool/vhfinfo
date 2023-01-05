@@ -322,28 +322,22 @@ if (editMode == false) {
     })
   }
 } else {
-  jQuery.ajax({
-    url: 'https://raw.githubusercontent.com/htool/vhfinfo/main/data/countries_bbox.json',
-    success: function (data) {
-      countriesGeoObj = JSON.parse(data)
-      let coor = countriesGeoObj[country]
-      let lon = coor.ne.lon - ((coor.ne.lon - coor.sw.lon)/2)
-      let lat = coor.ne.lat - ((coor.ne.lat - coor.sw.lat)/2)
-      m.panTo(new L.LatLng(lat, lon));
+  let coor = countriesGeoObj[country]
+  let lon = coor.ne.lon - ((coor.ne.lon - coor.sw.lon)/2)
+  let lat = coor.ne.lat - ((coor.ne.lat - coor.sw.lat)/2)
+  m.panTo(new L.LatLng(lat, lon));
 
-      let coordinates = [[coor.ne.lon,coor.ne.lat], [coor.sw.lon, coor.sw.lat]]
-      let polygon = L.polygon(coordinates);
-      let bounds = polygon.getBounds();
-      let southWest = bounds.getSouthWest();
-      let northEast = bounds.getNorthEast();
-      let cSouthWest = L.latLng(southWest.lng, southWest.lat);
-      let cNortEast = L.latLng(northEast.lng, northEast.lat);
-      let newBounds = L.latLngBounds(cSouthWest, cNortEast);
-
-      m.fitBounds(newBounds);
-    },
-    async: false
-  });
+  let coordinates = [[coor.ne.lon,coor.ne.lat], [coor.sw.lon, coor.sw.lat]]
+  let polygon = L.polygon(coordinates);
+  let bounds = polygon.getBounds();
+  let southWest = bounds.getSouthWest();
+  let northEast = bounds.getNorthEast();
+  let cSouthWest = L.latLng(southWest.lng, southWest.lat);
+  let cNortEast = L.latLng(northEast.lng, northEast.lat);
+  let newBounds = L.latLngBounds(cSouthWest, cNortEast);
+  loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + country + ".json", vhfinfo, country)
+  loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + country + "_12Nm.json", Nm12, country)
+  m.fitBounds(newBounds);
 }
 
 
