@@ -415,21 +415,13 @@
         "phone": "+31102522801",
         "vhfdata": {
           "generic": {
-            "mode": "report",
-            "note": ""
+            "mode": "report"
           },
           "pleasure": {
             "mode": "report",
-            "note": "Report using the corridor.",
-            "url": ""
-          },
-          "cargo": {
-            "mode": "",
-            "note": "",
-            "url": ""
+            "note": "Report using the corridor."
           }
-        },
-        "update": ""
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1566,7 +1558,6 @@
         "name": "Terschelling",
         "type": "vts",
         "channel": 2,
-        "url": "",
         "phone": "+31887974599",
         "vhfdata": {
           "generic": {
@@ -1648,7 +1639,6 @@
         "name": "Centrale meldpost Waddenzee",
         "type": "vts",
         "channel": 4,
-        "url": "",
         "phone": "+31887974599",
         "vhfdata": {
           "generic": {
@@ -2306,7 +2296,6 @@
         "name": "Centrale meldpost IJsselmeer",
         "type": "vts",
         "channel": 1,
-        "url": "",
         "phone": "+31887973300",
         "update": "15 *",
         "vhfdata": {
@@ -2756,7 +2745,6 @@
         "type": "vts",
         "channel": 61,
         "url": "https://www.binnenvaartkennis.nl/wp-content/uploads/2021/02/VTS-Amsterdam.pdf",
-        "phone": "",
         "vhfdata": {
           "generic": {
             "mode": "listen"
@@ -3002,7 +2990,6 @@
         "name": "Zeesluis IJmuiden",
         "type": "lock",
         "channel": 22,
-        "url": "",
         "phone": "+31255514457",
         "vhfdata": {
           "generic": {
