@@ -64,6 +64,9 @@
     background: green;
     border: 1px solid grey;
   }
+  .buttons {
+    display: inline-block;
+  }
 </style>
 
 <script type="text/javascript">
@@ -362,7 +365,10 @@ if (editMode) {
 	    circle: true,
 	    circlemarker: false
 	  },
-	  edit: {
+	  controls: {
+      trash: false
+    },
+    edit: {
 	    featureGroup: drawnItems
 	  }
 	}));
@@ -384,7 +390,7 @@ if (editMode) {
 
 function editPopup (layer, f) {
   layer.addTo(m)
-  // console.log(layer)
+  console.log(layer)
   if (typeof f != 'undefined') {
     var feature = f 
   } else {
@@ -441,13 +447,12 @@ function editPopup (layer, f) {
     '<tr><td><label>URL:<label></td><td><input id="curl" type="url"></td></tr>'+
     '</table></form>'
 
-  var buttonSaveHTML = '<div class="save" id="save"><button>Save</button></div>'
+  var buttonSaveHTML = '<div id=buttons><div class="save" id="save"><button>Save</button></div>'
   var buttonCancelHTML = '<div class="cancel" id="cancel"><button id="cancel">Cancel</button></div>'
   var buttonExportHTML = '<div class="export" id="export"><button id="export">Commit to GitHub</button></div>'
+  var buttonDeleteHTML = '<div class="delete" id="delete"><button id="delete">Delete</button></div></div>'
 
   // Adding info to popup
-  var json = layer.toGeoJSON()
-
   let btnDiv = document.createElement('div')
 
   var content = L.DomUtil.create('div', 'content');
@@ -465,8 +470,18 @@ function editPopup (layer, f) {
   var buttonExport = L.DomUtil.create('div', 'buttonExport');
   buttonExport.innerHTML = buttonExportHTML
   btnDiv.append(buttonExport)
+  
+  var buttonDelete = L.DomUtil.create('div', 'buttonDelete');
+  buttonDelete.innerHTML = buttonDeleteHTML
+  btnDiv.append(buttonDelete)
 
-  layer.bindPopup(btnDiv).openPopup();
+  layer
+    .unbindPopup()
+    .bindPopup(btnDiv)
+    .openPopup();
+  
+  console.log('isOpen()')
+  console.log(popup.isOpen())
 
 
   sleep (600)
@@ -508,6 +523,27 @@ function editPopup (layer, f) {
     $(".leaflet-popup-close-button")[0].click();
   });
 
+  L.DomEvent.addListener(buttonDelete, 'click', function(event){
+    console.log('Delete popup')
+    console.log(layer)
+    console.log(layer._popup._source.feature.properties.name)
+    let popupId = layer._popup._leaflet_id
+    let id = layer._popup._source._leaflet_id
+    let name = layer._popup._source.feature.properties.name
+    if (confirm("Sure you want to delete '" + name + "'?")) {
+      console.log('Delete feature')
+      $(".leaflet-popup-close-button")[0].click();
+      removeLayerFromGroup(popupId, vhfinfo)
+      removeLayerFromGroup(id, vhfinfo)
+      removeLayerFromGroup(popupId, drawnItems)
+      removeLayerFromGroup(id, drawnItems)
+
+    } else {
+      console.log('Do not delete feature')
+      $(".leaflet-popup-close-button")[0].click();
+    }
+  });
+
   L.DomEvent.addListener(buttonExport, 'click', function(event){
     var countryGeoJson = vhfinfo.toGeoJSON(12)
 
@@ -536,6 +572,19 @@ function editPopup (layer, f) {
     $(".leaflet-popup-close-button")[0].click();
   });
 
+}
+
+function removeLayerFromGroup (id, layerGroup) {
+	layerGroup.eachLayer(function (layer) {
+		if (layer._leaflet_id === id){
+      console.log('Found! Removing!')
+			layerGroup.removeLayer(layer)
+      console.log('Remaining: ')
+      m.removeLayer(layerGroup)
+      m.addLayer(layerGroup)
+      console.log(layerGroup)
+		}
+	});
 }
 
 
