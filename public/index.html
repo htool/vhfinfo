@@ -515,21 +515,18 @@ function editPopup (layer, f) {
       countryGeoJson.features.push(drawnItems._layers[id].toGeoJSON(12))
     })
 
-
     var territorialGeoJson = Nm12.toGeoJSON(12)
-
-    console.log(territorialGeoJson)
 
     if (typeof layer.urls != 'undefined') {
       if (layer.urls[0].endsWith('_12Nm.json')) {
         console.log('Committing a territorial country file')
         var file = country + '_12Nm.json'
         commitGitHub(file, territorialGeoJson)
-      } else {
-        console.log('Committing a country file')
-        var file = country + '.json'
-        commitGitHub(file, countryGeoJson)
       }
+    } else {
+      console.log('Committing a country file')
+      var file = country + '.json'
+      commitGitHub(file, countryGeoJson)
     }
 
     $(".leaflet-popup-close-button")[0].click();
