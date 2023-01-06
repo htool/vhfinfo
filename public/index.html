@@ -570,6 +570,28 @@ function removeLayerFromGroup (id, layerGroup) {
 	});
 }
 
+function isEmpty(obj) {
+  if (obj === '' || obj === null || JSON.stringify(obj) === '{}' || JSON.stringify(obj) === '[]' || (obj) === undefined || (obj) === {}) {
+    return true
+  } else {
+    return false
+  }
+}
+
+function removeEmpty(obj) {
+  Object.keys(obj).forEach((key) => {
+    if (obj[key] && typeof obj[key] === 'object') {
+      const childObject = removeEmpty(obj[key]);
+      if (childObject === undefined) {
+        delete obj[key];
+      }
+    } else if (obj[key] === '' || obj[key] === null || obj[key] === undefined || JSON.stringify(obj[key]) === "{}") {
+      delete obj[key];
+    }
+  });
+  return Object.keys(obj).length > 0 || obj instanceof Array ? obj : undefined;
+}
+
 
 function commitGitHub (file, json) {
   var fileJson
@@ -580,6 +602,9 @@ function commitGitHub (file, json) {
     },
     async: false
   });
+
+  // Clean up object
+  json = removeEmpty(json)
 
   let content = JSON.stringify(json, null, 2)
 
