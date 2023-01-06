@@ -1850,7 +1850,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "New feature",
+        "name": "Bla",
         "callname": "Commenly used call sign",
         "type": "marina,lock,vts",
         "channel": 0,
@@ -1894,6 +1894,58 @@
             [
               9.01876434771,
               55.92458580483
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bla",
+        "callname": "Commenly used call sign",
+        "type": "marina,lock,vts",
+        "channel": 0,
+        "url": "http://",
+        "phone": "+",
+        "note": "",
+        "vhfdata": {
+          "generic": {
+            "mode": "report,announce,listen",
+            "note": ""
+          },
+          "pleasure": {
+            "mode": "report,announce,listen",
+            "note": "",
+            "url": ""
+          },
+          "cargo": {
+            "mode": "report,announce,listen",
+            "note": "",
+            "url": ""
+          }
+        },
+        "update": ""
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10.08544921875,
+              56.674338416159
+            ],
+            [
+              10.272216796875,
+              56.133306912376
+            ],
+            [
+              10.12939453125,
+              56.072035471801
+            ],
+            [
+              10.08544921875,
+              56.674338416159
             ]
           ]
         ]
