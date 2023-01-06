@@ -167,18 +167,18 @@ if (editMode) {
 drawnItems.on('add',(e)=>{
   console.log('drawnItems now selected')
   if (m.hasLayer(vhfinfo)) {
-    console.log('vhfinfo is active')
+    //console.log('vhfinfo is active')
     m.addLayer(vhfinfo)
   } else {
-    console.log('vhfinfo is inactive')
+    //console.log('vhfinfo is inactive')
     m.addLayer(vhfinfo)
     m.removeLayer(vhfinfo)
   }
   if (m.hasLayer(Nm12)) {
-    console.log('Nm12 is active')
+    //console.log('Nm12 is active')
     m.addLayer(Nm12)
   } else {
-    console.log('Nm12 is inactive')
+    //console.log('Nm12 is inactive')
     m.addLayer(Nm12)
     m.removeLayer(Nm12)
   }
@@ -363,11 +363,9 @@ if (editMode) {
 	    rectangle: false,
 	    marker: false,
 	    circle: true,
-	    circlemarker: false
-	  },
-	  controls: {
+	    circlemarker: false,
       trash: false
-    },
+	  },
     edit: {
 	    featureGroup: drawnItems
 	  }
@@ -390,7 +388,6 @@ if (editMode) {
 
 function editPopup (layer, f) {
   layer.addTo(m)
-  console.log(layer)
   if (typeof f != 'undefined') {
     var feature = f 
   } else {
@@ -480,11 +477,7 @@ function editPopup (layer, f) {
     .bindPopup(btnDiv)
     .openPopup();
   
-  console.log('isOpen()')
-  console.log(popup.isOpen())
-
-
-  sleep (600)
+  sleep (200)
   setValue(p.name, 'name')
   setValue(p.callname, 'callname')
   setValue(p.type, 'type')
@@ -524,20 +517,13 @@ function editPopup (layer, f) {
   });
 
   L.DomEvent.addListener(buttonDelete, 'click', function(event){
-    console.log('Delete popup')
-    console.log(layer)
-    console.log(layer._popup._source.feature.properties.name)
     let popupId = layer._popup._leaflet_id
     let id = layer._popup._source._leaflet_id
     let name = layer._popup._source.feature.properties.name
     if (confirm("Sure you want to delete '" + name + "'?")) {
-      console.log('Delete feature')
-      $(".leaflet-popup-close-button")[0].click();
-      removeLayerFromGroup(popupId, vhfinfo)
       removeLayerFromGroup(id, vhfinfo)
-      removeLayerFromGroup(popupId, drawnItems)
       removeLayerFromGroup(id, drawnItems)
-
+      $(".leaflet-popup-close-button")[0].click();
     } else {
       console.log('Do not delete feature')
       $(".leaflet-popup-close-button")[0].click();
@@ -577,12 +563,9 @@ function editPopup (layer, f) {
 function removeLayerFromGroup (id, layerGroup) {
 	layerGroup.eachLayer(function (layer) {
 		if (layer._leaflet_id === id){
-      console.log('Found! Removing!')
 			layerGroup.removeLayer(layer)
-      console.log('Remaining: ')
       m.removeLayer(layerGroup)
       m.addLayer(layerGroup)
-      console.log(layerGroup)
 		}
 	});
 }
