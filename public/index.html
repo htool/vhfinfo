@@ -522,9 +522,13 @@ function editPopup (layer, f) {
         console.log('Committing a territorial country file')
         var file = country + '_12Nm.json'
         commitGitHub(file, territorialGeoJson)
+      } else {
+        console.log('Committing a country file')
+        var file = country + '.json'
+        commitGitHub(file, countryGeoJson)
       }
     } else {
-      console.log('Committing a country file')
+      console.log('Committing new items (country)')
       var file = country + '.json'
       commitGitHub(file, countryGeoJson)
     }
