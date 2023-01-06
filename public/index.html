@@ -4,20 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=1024, user-scalable=no">
-    <style>
-      html { height: 100% }
-      body { height: 100%; margin: 0; padding: 0;}
-      #map{ height: 100% }
-      .leaflet-popup-pane {
-        width: 20%;
-      }
-      input[type=text] {
-        border: 2px solid #ccc;
-      }
-      input[type=text]:focus {
-        border: 2px solid #555;
-      }
-    </style>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
@@ -31,6 +17,24 @@
 
     <link href="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <style>
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0;}
+      #map{ height: 100% }
+      .leaflet-popup-content {
+        margin: 20px 10px 10px 10px;
+      }
+      .leaflet-popup-pane {
+        width: 20%;
+      }
+      input[type=text] {
+        border: 2px solid #ccc;
+      }
+      input[type=text]:focus {
+        border: 2px solid #555;
+      }
+    </style>
 
     <title>VHF info</title>
     </head>
@@ -66,6 +70,7 @@
   }
   .buttons {
     display: inline-block;
+    margin: 2px;
   }
 </style>
 
@@ -385,8 +390,13 @@ if (editMode) {
   });
 }
 
+function isPopupOpen () {
+  return document.getElementsByClassName('leaflet-popup-content').length
+}
 
 function editPopup (layer, f) {
+  if (!isPopupOpen()) {
+
   layer.addTo(m)
   if (typeof f != 'undefined') {
     var feature = f 
@@ -422,8 +432,6 @@ function editPopup (layer, f) {
     }
   }
 
-  // console.log(p)
-
   var contentHTML = '<form id="form" onsubmit="return false"><table>'+
     '<tr><td><label>Name<label></td><td><input id="name" type="text"></td></tr>'+
     '<tr><td><label>Call name:<label></td><td><input id="callname" type="text"></td></tr>'+
@@ -444,31 +452,31 @@ function editPopup (layer, f) {
     '<tr><td><label>URL:<label></td><td><input id="curl" type="url"></td></tr>'+
     '</table></form>'
 
-  var buttonSaveHTML = '<div id=buttons><div class="save" id="save"><button>Save</button></div>'
-  var buttonCancelHTML = '<div class="cancel" id="cancel"><button id="cancel">Cancel</button></div>'
-  var buttonExportHTML = '<div class="export" id="export"><button id="export">Commit to GitHub</button></div>'
-  var buttonDeleteHTML = '<div class="delete" id="delete"><button id="delete">Delete</button></div></div>'
+  var buttonSaveHTML   = '<div class="buttons" id="save"  ><button>Save</button></div>'
+  var buttonCancelHTML = '<div class="buttons" id="cancel"><button>Cancel</button></div>'
+  var buttonExportHTML = '<div class="buttons" id="export"><button>Commit</button></div>'
+  var buttonDeleteHTML = '<div class="buttons" id="delete"><button>Delete</button></div></div>'
 
   // Adding info to popup
-  let btnDiv = document.createElement('div')
+  let btnDiv = document.createElement('div', 'buttons')
 
-  var content = L.DomUtil.create('div', 'content');
+  var content = L.DomUtil.create('div', 'content')
   content.innerHTML = contentHTML
   btnDiv.append(content)
   
-  var buttonSave = L.DomUtil.create('div', 'buttonSave');
+  var buttonSave = L.DomUtil.create('div', 'buttons')
   buttonSave.innerHTML = buttonSaveHTML
   btnDiv.append(buttonSave)
   
-  var buttonCancel = L.DomUtil.create('div', 'buttonCancel');
+  var buttonCancel = L.DomUtil.create('div', 'buttons')
   buttonCancel.innerHTML = buttonCancelHTML
   btnDiv.append(buttonCancel)
   
-  var buttonExport = L.DomUtil.create('div', 'buttonExport');
+  var buttonExport = L.DomUtil.create('div', 'buttons')
   buttonExport.innerHTML = buttonExportHTML
   btnDiv.append(buttonExport)
   
-  var buttonDelete = L.DomUtil.create('div', 'buttonDelete');
+  var buttonDelete = L.DomUtil.create('div', 'buttons')
   buttonDelete.innerHTML = buttonDeleteHTML
   btnDiv.append(buttonDelete)
 
@@ -476,7 +484,7 @@ function editPopup (layer, f) {
     .unbindPopup()
     .bindPopup(btnDiv)
     .openPopup();
-  
+   
   sleep (200)
   setValue(p.name, 'name')
   setValue(p.callname, 'callname')
@@ -500,22 +508,19 @@ function editPopup (layer, f) {
     setValue(p.vhfdata.cargo.mode, 'cmode')
     setValue(p.vhfdata.cargo.note, 'cnote')
   }
-  // layer.bindPopup(myPopup);
-
-
-
+ 
   // Save
   L.DomEvent.addListener(buttonSave, 'click', function(event){
     var properties = layer._popup._source.feature.properties
     saveProperties (properties)
     $(".leaflet-popup-close-button")[0].click();
   });
-
+ 
   L.DomEvent.addListener(buttonCancel, 'click', function(event){
     console.log('Cancelled - close popup')
     $(".leaflet-popup-close-button")[0].click();
   });
-
+ 
   L.DomEvent.addListener(buttonDelete, 'click', function(event){
     let popupId = layer._popup._leaflet_id
     let id = layer._popup._source._leaflet_id
@@ -532,13 +537,13 @@ function editPopup (layer, f) {
 
   L.DomEvent.addListener(buttonExport, 'click', function(event){
     var countryGeoJson = vhfinfo.toGeoJSON(12)
-
+ 
     newItems.forEach(id => {
       countryGeoJson.features.push(drawnItems._layers[id].toGeoJSON(12))
     })
-
+ 
     var territorialGeoJson = Nm12.toGeoJSON(12)
-
+ 
     if (typeof layer.urls != 'undefined') {
       if (layer.urls[0].endsWith('_12Nm.json')) {
         console.log('Committing a territorial country file')
@@ -554,10 +559,12 @@ function editPopup (layer, f) {
       var file = country + '.json'
       commitGitHub(file, countryGeoJson)
     }
-
     $(".leaflet-popup-close-button")[0].click();
   });
-
+}
+else {
+    $(".leaflet-popup-close-button")[0].click();
+}
 }
 
 function removeLayerFromGroup (id, layerGroup) {
