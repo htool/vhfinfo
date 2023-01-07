@@ -325,15 +325,26 @@ function addHTML (title, json) {
   }
 }
 
+function geolocationSuccess (position) {
+  latit = position.coords.latitude;
+  longit = position.coords.longitude;
+  // move the map to have the location in its center
+  loadCountryOnCoordiate([latit,longit])
+  m.panTo(new L.LatLng(latit, longit));
+}
+
+function geolocationError () {
+  m.setView([45.0, 10.0], 5);
+}
+
 if (editMode == false) {
+  var geoOptions = {
+    enableHighAccuracy: true,
+    timeout: 5000,
+    maximumAge: 0
+  };
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      latit = position.coords.latitude;
-      longit = position.coords.longitude;
-      // move the map to have the location in its center
-      loadCountryOnCoordiate([latit,longit])
-      m.panTo(new L.LatLng(latit, longit));
-    })
+    navigator.geolocation.getCurrentPosition(geolocationSuccess, geolocationError, geoOptions)
   }
 } else {
   let coor = countriesGeoObj[country]
@@ -537,6 +548,9 @@ function editPopup (layer, f) {
 
   L.DomEvent.addListener(buttonExport, 'click', function(event){
     var countryGeoJson = vhfinfo.toGeoJSON(12)
+    
+    // In case someone edits and forgets to save
+    saveProperties (properties)
  
     newItems.forEach(id => {
       countryGeoJson.features.push(drawnItems._layers[id].toGeoJSON(12))
