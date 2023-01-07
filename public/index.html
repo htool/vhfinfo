@@ -550,6 +550,7 @@ function editPopup (layer, f) {
     var countryGeoJson = vhfinfo.toGeoJSON(12)
     
     // In case someone edits and forgets to save
+    var properties = layer._popup._source.feature.properties
     saveProperties (properties)
  
     newItems.forEach(id => {
