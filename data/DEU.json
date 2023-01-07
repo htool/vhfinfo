@@ -4,59 +4,60 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Brunsbuttel",
+        "name": "Brunsbüttel lock",
         "type": "lock",
-        "channel": 0,
-        "url": "http://",
+        "channel": 13,
+        "url": "https://www.gdws.wsv.bund.de/DE/schifffahrt/01_seeschifffahrt/nord-ostsee-kanal/Sportboot-NOK/Flyer/PDF_Merkbl_Spobo_eng.pdf?__blob=publicationFile&v=4",
         "phone": "+",
         "vhfdata": {
           "generic": {
-            "mode": "report"
+            "mode": "announce, listen"
           },
           "pleasure": {
-            "mode": "report",
-            "note": "Wait in the waiting area east of the entrance."
+            "mode": "announce, listen",
+            "note": "Elbe waiting area east of the entrance."
           },
           "cargo": {
             "mode": "report"
           }
-        }
+        },
+        "callname": "Kiel Kanal 1"
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
             [
-              9.143371582031,
-              53.895741072534
+              9.146890640259,
+              53.898724966739
             ],
             [
-              9.131097793579,
+              9.128866195679,
+              53.888255112096
+            ],
+            [
+              9.139080047607,
+              53.883955136711
+            ],
+            [
+              9.150152206421,
+              53.884056317684
+            ],
+            [
+              9.156332015991,
+              53.889266806729
+            ],
+            [
+              9.146976470947,
               53.88896330091
             ],
             [
-              9.139337539673,
-              53.885725768379
+              9.156675338745,
+              53.895285883501
             ],
             [
-              9.145174026489,
-              53.885321059181
-            ],
-            [
-              9.146633148193,
-              53.888204526721
-            ],
-            [
-              9.145002365112,
-              53.88896330091
-            ],
-            [
-              9.151782989502,
-              53.893465077783
-            ],
-            [
-              9.143371582031,
-              53.895741072534
+              9.146890640259,
+              53.898724966739
             ]
           ]
         ]
