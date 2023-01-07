@@ -11,7 +11,6 @@
     <script src="leaflet.ajax.min.js" type="text/javascript"></script>
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js" type="text/javascript"></script>
     <script src="cronstrue.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.EasyButton/2.4.0/easy-button.min.js" integrity="sha512-Tndo4y/YJooD/mGXS9D6F1YyBcSyrWnnSWQ5Z9IcKt6bljicjyka9qcP99qMFbQ5+omfOtwwIapv1DjBCZcTJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js" integrity="sha512-ozq8xQKq6urvuU6jNgkfqAmT7jKN2XumbrX1JiB3TnF7tI48DPI4Gy1GXKD/V3EExgAs1V+pRO7vwtS1LHg0Gw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" integrity="sha512-gc3xjCmIy673V6MyOAZhIW93xhM9ei1I+gLbmFjUHIjocENRsLX/QUE1htk5q1XV2D/iie/VQ8DXI6Vu8bexvQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -27,6 +26,14 @@
       }
       .leaflet-popup-pane {
         width: 20%;
+      }
+      .pencil {
+        position: fixed;
+        left: 1.5%;
+        top: 11%;
+        z-index: 999;
+        color: black;
+        
       }
       input[type=text] {
         border: 2px solid #ccc;
@@ -212,12 +219,13 @@ drawnItems.on('remove',(e)=>{
 L.DomUtil.addClass(m._container,'crosshair-cursor-enabled');
 
 if (!editMode) {
-  L.easyButton( '<div id="pencil">&#9998;</div>', function(){
-  let country = getCountryAtCenter()
+  $('body').append('<div class="pencil" id="pencil"><button>&#9998;</button></div>')
+  document.getElementById('pencil').onclick = function (e) {
+    let country = getCountryAtCenter()
     if (confirm("Do you want to start editting for country " + country + "?")) {
       open("https://htool.github.io/vhfinfo/public/index.html?edit=" + country, "_blank")
     }
-  }).addTo(m);
+  }
 }
 
 
@@ -552,7 +560,7 @@ function editPopup (layer, f) {
     // In case someone edits and forgets to save
     var properties = layer._popup._source.feature.properties
     saveProperties (properties)
- 
+
     newItems.forEach(id => {
       countryGeoJson.features.push(drawnItems._layers[id].toGeoJSON(12))
     })
