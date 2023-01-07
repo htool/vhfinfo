@@ -62,6 +62,55 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Holtenau lock",
+        "callname": "Kiel Kanal IV",
+        "type": "lock",
+        "channel": 12,
+        "url": "https://www.gdws.wsv.bund.de/DE/schifffahrt/01_seeschifffahrt/nord-ostsee-kanal/Sportboot-NOK/Flyer/PDF_Merkbl_Spobo_eng.pdf?__blob=publicationFile&v=4",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce,listen"
+          },
+          "pleasure": {
+            "mode": "announce,listen"
+          },
+          "cargo": {
+            "mode": "report,announce,listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10.138342380524,
+              54.367158480336
+            ],
+            [
+              10.137741565704,
+              54.365795848469
+            ],
+            [
+              10.147590637207,
+              54.364295651011
+            ],
+            [
+              10.148105621338,
+              54.36569583701
+            ],
+            [
+              10.138342380524,
+              54.367158480336
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
