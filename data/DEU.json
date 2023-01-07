@@ -6,16 +6,17 @@
       "properties": {
         "name": "Brunsbuttel",
         "callname": "Commenly used call sign",
-        "type": "marina,lock,vts",
+        "type": "lock",
         "channel": 0,
         "url": "http://",
         "phone": "+",
         "vhfdata": {
           "generic": {
-            "mode": "report,announce,listen"
+            "mode": "report"
           },
           "pleasure": {
-            "mode": "report,announce,listen"
+            "mode": "report",
+            "note": "Wait in the waiting area east of the entrance"
           },
           "cargo": {
             "mode": "report,announce,listen"
