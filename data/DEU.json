@@ -18,7 +18,7 @@
             "note": "Wait in the waiting area east of the entrance."
           },
           "cargo": {
-            "mode": "report,announce,listen"
+            "mode": "report"
           }
         }
       },
