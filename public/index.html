@@ -645,7 +645,7 @@ function commitGitHub (file, json, country, type) {
 
     if (confirm("You are about to publish changes to " + file + ".")) {
       console.log(content)
-      let postURL = "http://mdam.defect.org:6644/api?country=" + country + "&type=" + type
+      let postURL = "https://mdam.defect.org:6644/api?country=" + country + "&type=" + type
       console.log(postURL)
       let url = "http://mdam.defect.org:6644/api?country=" + country + "&type=" + type
       $.ajax({
