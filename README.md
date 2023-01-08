@@ -38,9 +38,10 @@ Here it is important to cover the documented coordinates of the VTS as close as 
         "name": "",           // Full name
         "callname": "",       // Short name typically used in call
         "type": "",           // ['lock','bridge','marina','vts','territorial']
+        "channel": ,          // VHF channel number
+        "update": "5 *",      // Update bulletin (eg weather) in this VHF area in 'cron format'
         "vhfdata": {
           "generic": {
-            "channel": ,      // VHF channel number
             "mode": "listen"  // Radio engagement level for this AIS ship/group type
                               // 'listen':    Listen out the channel for any calls or information
                               // 'announce':  Announce you are entering/leaving the area, or intend to pass bridge/lock
@@ -61,10 +62,6 @@ Here it is important to cover the documented coordinates of the VTS as close as 
             "mode": "report",
             "note": "",         // Extra details on what to report
             "url":  ""          // URL aimed at cargo ships
-          },
-          "update": {               // Update bulletin (eg weather) in this VHF area
-            "channel": ,            // Channel used
-            "time": "5 5,11,17,23"  // weather bulletin at 5h05, 11h05, 17h05 and 23h05 (cron format)
           },
           "emergency": {
             "url":                  // Information for emergencies in this area
