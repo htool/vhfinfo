@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=1024, user-scalable=no">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-base64@2.5.2/base64.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <script src="leaflet.ajax.min.js" type="text/javascript"></script>
@@ -473,7 +474,7 @@ function editPopup (layer, f) {
 
   var buttonSaveHTML   = '<div class="buttons" id="save"  ><button>Save</button></div>'
   var buttonCancelHTML = '<div class="buttons" id="cancel"><button>Cancel</button></div>'
-  var buttonExportHTML = '<div class="buttons" id="export"><button>Commit</button></div>'
+  var buttonExportHTML = '<div class="buttons" id="export"><button>Publish</button></div>'
   var buttonDeleteHTML = '<div class="buttons" id="delete"><button>Delete</button></div></div>'
 
   // Adding info to popup
@@ -571,16 +572,16 @@ function editPopup (layer, f) {
       if (layer.urls[0].endsWith('_12Nm.json')) {
         console.log('Committing a territorial country file')
         var file = country + '_12Nm.json'
-        commitGitHub(file, territorialGeoJson)
+        commitGitHub(file, territorialGeoJson, country, 'territorial')
       } else {
         console.log('Committing a country file')
         var file = country + '.json'
-        commitGitHub(file, countryGeoJson)
+        commitGitHub(file, countryGeoJson, country, 'country')
       }
     } else {
       console.log('Committing new items (country)')
       var file = country + '.json'
-      commitGitHub(file, countryGeoJson)
+      commitGitHub(file, countryGeoJson, country, 'country')
     }
     $(".leaflet-popup-close-button")[0].click();
   });
@@ -623,31 +624,50 @@ function removeEmpty(obj) {
 }
 
 
-function commitGitHub (file, json) {
+function commitGitHub (file, json, country, type) {
   var fileJson
   jQuery.ajax({
     url: 'https://api.github.com/repos/htool/vhfinfo/contents/data/' + file,
     success: function (data) {
       fileJson = JSON.stringify(JSON.parse(atob(data.content)), null, 2)
     },
-    async: false
+    async: true
   });
 
   // Clean up object
   json = removeEmpty(json)
 
-  let content = JSON.stringify(json, null, 2)
+  let content = JSON.stringify(json)
 
   if (_.isEqual(content, fileJson)) {
     confirm("No changes have been made.")
   } else {
-    copyStringToClipboard(content)
-    var url = "https://github.com/htool/vhfinfo/edit/main/data/" + file
-  
-    if (confirm("The GeoJSON has been copied to your clipboard.\nYou need to take the following steps on the next page:\n1. Signup if needed, close and [commit] again.\n2. Remove all text in the editor: (CTRL-A, <delete>)\n3. Paste your clipboard: (CTRL-V)\n4. Click [Commit changes]\n5. Click [Compare & pull request] on top.\nPress OK to go to GitHub's edit page.")) {
-      open(url, "_blank")
+
+    if (confirm("You are about to publish changes to " + file + ".")) {
+      console.log(content)
+      let postURL = "http://mdam.defect.org:6644/api?country=" + country + "&type=" + type
+      console.log(postURL)
+      let url = "http://mdam.defect.org:6644/api?country=" + country + "&type=" + type
+      $.ajax({
+        type: "POST",
+        contentType: 'application/json',
+        url: postURL,
+        cache: false,
+        data: content,
+        success: function(result) {
+          alert(result)
+        },
+        error: function(result) {
+          alert(result)
+        }
+      });
     }
   }
+}
+
+function jsonToBase64(jsonObj) {
+    const jsonString = JSON.stringify(jsonObj)
+    return Base64.encode(jsonString)
 }
 
 function copyStringToClipboard (str) {
