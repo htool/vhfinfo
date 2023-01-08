@@ -4,7 +4,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "New feature",
+        "name": "Testing",
         "callname": "Commenly used call sign",
         "type": "marina,lock,vts",
         "channel": 0,
@@ -18,7 +18,7 @@
             "mode": "report,announce,listen"
           },
           "cargo": {
-            "mode": "report,announce,listen"
+            "mode": "report"
           }
         }
       },
