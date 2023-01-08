@@ -644,7 +644,7 @@ function commitGitHub (file, json) {
     copyStringToClipboard(content)
     var url = "https://github.com/htool/vhfinfo/edit/main/data/" + file
   
-    if (confirm("The GeoJSON has been copied to your clipboard.\nYou need to take the following steps on the next page:\n1. Remove all text in the editor:\n    (CTRL-A, <delete>)\n2. Paste your clipboard:\n    (CTRL-V)\n3. Press [Commit changes]\nPress OK to go to GitHub's edit page.")) {
+    if (confirm("The GeoJSON has been copied to your clipboard.\nYou need to take the following steps on the next page:\n1. Signup if needed, close and [commit] again.\n2. Remove all text in the editor: (CTRL-A, <delete>)\n3. Paste your clipboard: (CTRL-V)\n4. Click [Commit changes]\n5. Click [Compare & pull request] on top.\nPress OK to go to GitHub's edit page.")) {
       open(url, "_blank")
     }
   }
