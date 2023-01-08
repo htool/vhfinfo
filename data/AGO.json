@@ -15,7 +15,8 @@
             "mode": "report,announce,listen"
           },
           "pleasure": {
-            "mode": "report,announce,listen"
+            "mode": "report,announce,listen",
+            "note": "test"
           },
           "cargo": {
             "mode": "bla",
