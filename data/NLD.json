@@ -3909,20 +3909,14 @@
       "properties": {
         "name": "Stadsbediening Dordrecht",
         "callname": "Verkeerspost Dordrecht",
-        "type": "city center berth application",
+        "type": "berth",
         "channel": 74,
-        "url": "http://",
+        "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
         "phone": "+887970800",
         "vhfdata": {
           "generic": {
-            "mode": "communication",
+            "mode": "announce",
             "note": "berths only"
-          },
-          "pleasure": {
-            "mode": "report,announce,listen"
-          },
-          "cargo": {
-            "mode": "report,announce,listen"
           }
         }
       },
