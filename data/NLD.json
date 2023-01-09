@@ -3903,6 +3903,36 @@
           51.856171615074
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Stadsbediening Dordrecht",
+        "callname": "Verkeerspost Dordrecht",
+        "type": "city center berth application",
+        "channel": 74,
+        "url": "http://",
+        "phone": "+887970800",
+        "vhfdata": {
+          "generic": {
+            "mode": "communication",
+            "note": "berths only"
+          },
+          "pleasure": {
+            "mode": "report,announce,listen"
+          },
+          "cargo": {
+            "mode": "report,announce,listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.666013717651,
+          51.811482906682
+        ]
+      }
     }
   ]
 }
