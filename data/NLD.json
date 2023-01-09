@@ -3873,6 +3873,36 @@
           51.811202212098
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Alblasserdamse Brug",
+        "callname": "Brug Alblasserdam",
+        "type": "Bridge",
+        "channel": 22,
+        "url": "http://",
+        "phone": "+88-7985132",
+        "vhfdata": {
+          "generic": {
+            "mode": "request open bridge",
+            "note": "Hefbrug, closed 11,94 m (bij NAP 1,00m)"
+          },
+          "pleasure": {
+            "mode": "report,announce,listen"
+          },
+          "cargo": {
+            "mode": "report,announce,listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.654726982117,
+          51.856171615074
+        ]
+      }
     }
   ]
 }
