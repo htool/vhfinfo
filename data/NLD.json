@@ -3783,6 +3783,35 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Van Brienenoordbrug",
+        "callname": "Van Brienenoordbrug",
+        "type": "bridge",
+        "channel": 20,
+        "url": "http://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen, communication"
+          },
+          "pleasure": {
+            "mode": "report,announce,listen"
+          },
+          "cargo": {
+            "mode": "report,announce,listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.542760848999,
+          51.903790552535
+        ]
+      }
     }
   ]
 }
