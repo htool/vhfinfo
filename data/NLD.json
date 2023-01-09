@@ -4178,13 +4178,13 @@
         "name": "Volkeraksluizen",
         "callname": "Volkeraksluizen Zuid",
         "type": "lock",
-        "channel": 25,
+        "channel": 78,
         "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
         "phone": "+887970800",
         "vhfdata": {
           "generic": {
             "mode": "announce",
-            "note": "Marifoon Blokgebied VHF25"
+            "note": "Marifoon Blokgebied VHF78"
           }
         },
         "id": "000065ea-8aae-45f5-94a2-c355e843af27"
