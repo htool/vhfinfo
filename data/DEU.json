@@ -111,6 +111,51 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "New feature",
+        "callname": "Commenly used call sign",
+        "type": "marina,lock,vts",
+        "channel": 0,
+        "url": "http://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "report,announce,listen"
+          },
+          "pleasure": {
+            "mode": "report,announce,listen"
+          },
+          "cargo": {
+            "mode": "report,announce,listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              9.291644509847,
+              51.91716758909
+            ],
+            [
+              10.345853881178,
+              51.740636164098
+            ],
+            [
+              8.918278690834,
+              51.549751017014
+            ],
+            [
+              9.291644509847,
+              51.91716758909
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
