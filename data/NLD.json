@@ -14,7 +14,8 @@
             "mode": "listen",
             "note": "Guests dock inguest berth, bow facing north. In the harbour office there is a sign post. Red on top of white: no entering. White on top of red: no exit."
           }
-        }
+        },
+        "id": "549b42cd-e7ed-40e8-b38a-6adf49f629c8"
       },
       "geometry": {
         "type": "Polygon",
@@ -65,7 +66,8 @@
             "mode": "report",
             "note": "Request entrance. In the 'voorhaven' there is a sign post. Red on top of white: no entering. White on top of red: no exit."
           }
-        }
+        },
+        "id": "562c71a2-84d3-4ab7-a52b-d2ebcc19570b"
       },
       "geometry": {
         "type": "Polygon",
@@ -224,7 +226,8 @@
           "generic": {
             "mode": "report"
           }
-        }
+        },
+        "id": "bcc9bdfd-98a0-463f-a62b-4a87ead45df9"
       },
       "geometry": {
         "type": "Polygon",
@@ -266,7 +269,8 @@
           "generic": {
             "mode": "report"
           }
-        }
+        },
+        "id": "7fcb108a-06c3-4eea-a11a-c8051f428f24"
       },
       "geometry": {
         "type": "Polygon",
@@ -310,7 +314,8 @@
             "mode": "report",
             "note": "Listen when approaching. On Mon and Fri announce due to fishing boats."
           }
-        }
+        },
+        "id": "8cbad1ca-df70-4bfd-ba85-0f63b2364a1b"
       },
       "geometry": {
         "type": "Polygon",
@@ -421,7 +426,8 @@
             "mode": "report",
             "note": "Report using the corridor."
           }
-        }
+        },
+        "id": "a2381757-1f66-4cf5-9ba6-b9c237d3dadb"
       },
       "geometry": {
         "type": "Polygon",
@@ -524,7 +530,8 @@
           "generic": {
             "mode": "report"
           }
-        }
+        },
+        "id": "7de8ab82-63d9-44bc-9e7c-3b0ad29034e3"
       },
       "geometry": {
         "type": "Polygon",
@@ -587,7 +594,8 @@
             "mode": "report",
             "note": "Report upon entering ship name, direction and current position relative to buoy MV or MN1"
           }
-        }
+        },
+        "id": "4a440732-6be5-473e-bcc0-546ab2a7c359"
       },
       "geometry": {
         "type": "Polygon",
@@ -633,7 +641,8 @@
           "pleasure": {
             "mode": "listen"
           }
-        }
+        },
+        "id": "7d6e8c82-8499-4b1c-a957-1b7558449d2a"
       },
       "geometry": {
         "type": "Polygon",
@@ -979,7 +988,8 @@
           "pleasure": {
             "mode": "listen"
           }
-        }
+        },
+        "id": "7ef00147-93f4-42eb-a15e-10c8867f882d"
       },
       "geometry": {
         "type": "Polygon",
@@ -1200,7 +1210,8 @@
           "passenger": {
             "mode": "announce"
           }
-        }
+        },
+        "id": "1ff71ffa-5679-44e0-91f7-0d2f18fea31b"
       },
       "geometry": {
         "type": "Polygon",
@@ -1278,7 +1289,8 @@
           "passenger": {
             "mode": "announce"
           }
-        }
+        },
+        "id": "e1208e2a-2ee8-466d-ab44-2611715483b6"
       },
       "geometry": {
         "type": "Polygon",
@@ -1345,7 +1357,8 @@
           "generic": {
             "mode": "Listen"
           }
-        }
+        },
+        "id": "b47696ef-1f42-4258-b29c-bc207a40c001"
       },
       "geometry": {
         "type": "Polygon",
@@ -1395,7 +1408,8 @@
           "generic": {
             "mode": "Listen"
           }
-        }
+        },
+        "id": "0eaf9819-bdb0-4a73-81a1-a0bfbb153aa6"
       },
       "geometry": {
         "type": "Polygon",
@@ -1462,7 +1476,8 @@
           "pleasure": {
             "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-6-8"
           }
-        }
+        },
+        "id": "17f9620c-fe2b-48fb-b26b-d80e20ae0c9a"
       },
       "geometry": {
         "type": "Polygon",
@@ -1563,7 +1578,8 @@
           "generic": {
             "mode": "listen"
           }
-        }
+        },
+        "id": "1b83d0d6-877f-4ea5-9b0e-4e5a69df354d"
       },
       "geometry": {
         "type": "Polygon",
@@ -1673,7 +1689,8 @@
             "mode": "report",
             "note": "Ships with dangerous cargo and special transports have a reporting obligation"
           }
-        }
+        },
+        "id": "448f605c-a23b-40f8-aa64-05c0289b138b"
       },
       "geometry": {
         "type": "Polygon",
@@ -1982,7 +1999,8 @@
           "pleasure": {
             "mode": "listen"
           }
-        }
+        },
+        "id": "a12b27ed-cb9e-49b6-adcd-f39dd51abed5"
       },
       "geometry": {
         "type": "Polygon",
@@ -2025,7 +2043,8 @@
           "pleasure": {
             "mode": "listen"
           }
-        }
+        },
+        "id": "aa998be0-d52c-4597-bda5-c87ac8ea7e6c"
       },
       "geometry": {
         "type": "Polygon",
@@ -2070,7 +2089,8 @@
           "pleasure": {
             "mode": "listen"
           }
-        }
+        },
+        "id": "0cb36df6-6ca0-49e7-be87-47cd386db023"
       },
       "geometry": {
         "type": "Polygon",
@@ -2115,7 +2135,8 @@
           "pleasure": {
             "mode": "listen"
           }
-        }
+        },
+        "id": "f7f0b436-d945-4a4e-8f74-1504d1dc3799"
       },
       "geometry": {
         "type": "Polygon",
@@ -2206,7 +2227,8 @@
             "mode": "report",
             "note": "Report destination."
           }
-        }
+        },
+        "id": "3093daaa-2f81-4136-a287-92d57de9fce9"
       },
       "geometry": {
         "type": "Polygon",
@@ -2308,7 +2330,8 @@
             "mode": "report",
             "note": "Report destination."
           }
-        }
+        },
+        "id": "93f9fd5b-7af8-49a0-9d20-dd9745da4e4d"
       },
       "geometry": {
         "type": "Polygon",
@@ -2399,7 +2422,8 @@
             "mode": "report",
             "note": "Report destination."
           }
-        }
+        },
+        "id": "f89857e6-c925-433d-97ec-ce0ef5fbad7f"
       },
       "geometry": {
         "type": "Polygon",
@@ -2845,7 +2869,8 @@
             "mode": "report",
             "note": "Report destination."
           }
-        }
+        },
+        "id": "aa3f5a23-9e2d-4e85-81b6-6a0708ead5d1"
       },
       "geometry": {
         "type": "Polygon",
@@ -2975,7 +3000,8 @@
           "generic": {
             "mode": "listen"
           }
-        }
+        },
+        "id": "9ad9d4c9-1c10-47fc-bb93-894f9dca2eea"
       },
       "geometry": {
         "type": "Polygon",
@@ -3022,7 +3048,8 @@
             "mode": "report",
             "note": "Report destination."
           }
-        }
+        },
+        "id": "beb3b92b-6cc6-4ad3-ab89-89bfe7af6ad2"
       },
       "geometry": {
         "type": "Polygon",
@@ -3087,7 +3114,8 @@
           "generic": {
             "mode": "announce"
           }
-        }
+        },
+        "id": "848005f4-34de-46ab-8ae9-27a930e704c5"
       },
       "geometry": {
         "type": "Polygon",
@@ -3196,7 +3224,8 @@
           "pleasure": {
             "note": "During peak traffic (7-9h and 16-18h), only operation for commericial vessel. Pleasure crafts can join."
           }
-        }
+        },
+        "id": "7256fffc-5692-4eda-a5c4-0e80c1f2fc9c"
       },
       "geometry": {
         "type": "Polygon",
@@ -3283,7 +3312,8 @@
           "generic": {
             "mode": "announce"
           }
-        }
+        },
+        "id": "142e265a-db40-4eb8-8d14-f418e12a40ed"
       },
       "geometry": {
         "type": "Polygon",
@@ -3400,7 +3430,8 @@
           "cargo": {
             "mode": "report,announce,listen"
           }
-        }
+        },
+        "id": "0de76e6e-c67d-4428-a132-762ecd8e369f"
       },
       "geometry": {
         "type": "Polygon",
@@ -3518,7 +3549,8 @@
           "cargo": {
             "mode": "report,announce,listen"
           }
-        }
+        },
+        "id": "58d4a595-1239-4df1-9666-5c9cec1a592d"
       },
       "geometry": {
         "type": "Polygon",
@@ -3804,7 +3836,8 @@
           "cargo": {
             "mode": "report,announce,listen"
           }
-        }
+        },
+        "id": "6d478235-b025-4a06-8eb6-e86ec5e3f2ea"
       },
       "geometry": {
         "type": "Point",
@@ -3834,7 +3867,8 @@
           "cargo": {
             "mode": "report,announce,listen"
           }
-        }
+        },
+        "id": "9dd4592f-6242-4e10-b2a8-6ab90f647507"
       },
       "geometry": {
         "type": "Point",
@@ -3864,7 +3898,8 @@
           "cargo": {
             "mode": "report,announce,listen"
           }
-        }
+        },
+        "id": "a7e09d3d-7ade-4909-b5df-3a9023c15983"
       },
       "geometry": {
         "type": "Point",
@@ -3894,7 +3929,8 @@
           "cargo": {
             "mode": "report,announce,listen"
           }
-        }
+        },
+        "id": "6c2a1088-c5f5-4699-9981-b2b37b2f6608"
       },
       "geometry": {
         "type": "Point",
@@ -3918,7 +3954,8 @@
             "mode": "announce",
             "note": "berths only"
           }
-        }
+        },
+        "id": "f68c5e4d-0427-40c0-921d-351640ce9259"
       },
       "geometry": {
         "type": "Point",
@@ -3947,7 +3984,8 @@
           "cargo": {
             "mode": "report,announce,listen"
           }
-        }
+        },
+        "id": "23e3ff8f-ce4a-4513-9d2a-939acb86b04f"
       },
       "geometry": {
         "type": "Polygon",
@@ -4043,7 +4081,8 @@
             "mode": "announce",
             "note": "Marifoon Blokgebied VHF7"
           }
-        }
+        },
+        "id": "30fb1f3b-2f5e-4299-98fd-dc5d0977829d"
       },
       "geometry": {
         "type": "Polygon",
@@ -4122,7 +4161,8 @@
           "generic": {
             "mode": "announce"
           }
-        }
+        },
+        "id": "f0ee235a-bb81-4dbf-a2f4-e852bb481471"
       },
       "geometry": {
         "type": "Point",
@@ -4144,9 +4184,10 @@
         "vhfdata": {
           "generic": {
             "mode": "announce",
-            "note": "Marifoon Blokgebied VHF7"
+            "note": "Marifoon Blokgebied VHF25"
           }
-        }
+        },
+        "id": "000065ea-8aae-45f5-94a2-c355e843af27"
       },
       "geometry": {
         "type": "Polygon",
