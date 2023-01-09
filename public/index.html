@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-base64@2.5.2/base64.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Turf.js/3.7.0/turf.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <script src="leaflet.ajax.min.js" type="text/javascript"></script>
@@ -83,6 +84,7 @@
 </style>
 
 <script type="text/javascript">
+
 
 var countriesGeoObj
 var countriesLoaded = []
@@ -243,6 +245,10 @@ function loadUrl (url, layerGroup, country) {
           }
       },
       onEachFeature: function(feature, layer) {
+        if (typeof feature.properties.id == 'undefined') {
+          feature.properties.id = generateUUID()
+        }
+        // console.log(feature)
         layer.on({
           mouseover: function(e) {
             e.target.setStyle({
@@ -437,14 +443,15 @@ function editPopup (layer, f) {
   var p = feature.properties = feature.properties || {}; // Initialize feature.properties
   if (typeof p["name"] == 'undefined') {
     newItems.push(layer._leaflet_id)
-    p["name"] = "New feature"
-    p["callname"] = "Commenly used call sign"
-    p["type"] = ""
-    p["channel"] = Number(0),
-    p["url"] = "http://"
-    p["phone"] = "+"
-    p["note"] = ""
-    p["vhfdata"] = {
+    p.id = generateUUID()
+    p.name = "New feature"
+    p.callname = "Commenly used call sign"
+    p.type = ""
+    p.channel = Number(0),
+    p.url = "http://"
+    p.phone = "+"
+    p.note = ""
+    p.vhfdata = {
       "generic": {
         "mode": "report,announce,listen",
         "note": ""
@@ -797,7 +804,23 @@ function loadCountryOnCoordiate (coor) {
     }
   }
 }
-  
+
+function generateUUID() { // Public Domain/MIT
+    var d = new Date().getTime();//Timestamp
+    var d2 = ((typeof performance !== 'undefined') && performance.now && (performance.now()*1000)) || 0;//Time in microseconds since page-load or 0 if unsupported
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random() * 16;//random number between 0 and 16
+        if(d > 0){//Use timestamp until depleted
+            r = (d + r)%16 | 0;
+            d = Math.floor(d/16);
+        } else {//Use microseconds since page-load if supported
+            r = (d2 + r)%16 | 0;
+            d2 = Math.floor(d2/16);
+        }
+        return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+    });
+}
+
 </script>
 
 
