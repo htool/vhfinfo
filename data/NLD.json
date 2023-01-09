@@ -3881,37 +3881,6 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Alblasserdamse Brug",
-        "callname": "Brug Alblasserdam",
-        "type": "Bridge",
-        "channel": 22,
-        "url": "http://",
-        "phone": "+88-7985132",
-        "vhfdata": {
-          "generic": {
-            "mode": "request open bridge",
-            "note": "Hefbrug, closed 11,94 m (bij NAP 1,00m)"
-          },
-          "pleasure": {
-            "mode": "report,announce,listen"
-          },
-          "cargo": {
-            "mode": "report,announce,listen"
-          }
-        },
-        "id": "6c2a1088-c5f5-4699-9981-b2b37b2f6608"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          4.654726982117,
-          51.856171615074
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "Stadsbediening Dordrecht",
         "callname": "Verkeerspost Dordrecht",
         "type": "berth",
@@ -4257,6 +4226,51 @@
             [
               4.541537761688,
               51.905108799998
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "7b2fa4f2-5b6c-4f42-b4f9-943f7495550d",
+        "name": "Alblasserdamse Brug",
+        "callname": "Brug Alblasserdam",
+        "type": "bridge",
+        "channel": 22,
+        "url": "http://",
+        "phone": "+31887985132",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "Hefbrug, closed 11,94 m (bij NAP 1,00m)"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.655322432518,
+              51.856721981862
+            ],
+            [
+              4.655950069427,
+              51.856874390003
+            ],
+            [
+              4.656073451042,
+              51.856735234764
+            ],
+            [
+              4.655424356461,
+              51.856569573204
+            ],
+            [
+              4.655322432518,
+              51.856721981862
             ]
           ]
         ]
