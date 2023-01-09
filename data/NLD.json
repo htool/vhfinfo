@@ -1562,10 +1562,6 @@
         "vhfdata": {
           "generic": {
             "mode": "listen"
-          },
-          "passenger": {
-            "mode": "report",
-            "note": "Report number of head onboard and destination"
           }
         }
       },
