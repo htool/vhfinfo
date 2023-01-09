@@ -3813,6 +3813,36 @@
           51.903790552535
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Verkeerspost Dordrecht",
+        "callname": "Overnachtingshaven Dordtsche Kil",
+        "type": "marina",
+        "channel": 71,
+        "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
+        "phone": "+887970800",
+        "vhfdata": {
+          "generic": {
+            "mode": "report,announce,listen",
+            "note": "only request berth."
+          },
+          "pleasure": {
+            "mode": "report,announce,listen"
+          },
+          "cargo": {
+            "mode": "report,announce,listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.62468624115,
+          51.759125519694
+        ]
+      }
     }
   ]
 }
