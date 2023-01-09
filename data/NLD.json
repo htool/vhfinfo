@@ -1449,14 +1449,14 @@
       "type": "Feature",
       "properties": {
         "name": "Den Helder",
-        "type": "vts",
+        "type": "function toLowerCase() { [native code] }",
         "channel": 62,
         "url": "https://www.binnenvaartkennis.nl/wp-content/uploads/2021/03/VTS-Procedures-Den-Helder.pdf",
         "phone": "+31223657522",
         "update": "5 *",
         "vhfdata": {
           "generic": {
-            "mode": "report",
+            "mode": "function toLowerCase() { [native code] }",
             "note": "Report 2h before entering, when entering, anchoring, passing Moermanbrug and 1h before leaving."
           },
           "pleasure": {
