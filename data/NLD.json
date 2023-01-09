@@ -3819,37 +3819,6 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Van Brienenoordbrug",
-        "callname": "Van Brienenoordbrug",
-        "type": "bridge",
-        "channel": 20,
-        "url": "http://",
-        "phone": "+88-7985132",
-        "vhfdata": {
-          "generic": {
-            "mode": "listen, communication",
-            "note": "High 22,50m (NAP) closed"
-          },
-          "pleasure": {
-            "mode": "report,announce,listen"
-          },
-          "cargo": {
-            "mode": "report,announce,listen"
-          }
-        },
-        "id": "6d478235-b025-4a06-8eb6-e86ec5e3f2ea"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          4.542760848999,
-          51.903790552535
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "Verkeerspost Dordrecht",
         "callname": "Overnachtingshaven Dordtsche Kil",
         "type": "marina",
@@ -4244,6 +4213,50 @@
             [
               4.393029212952,
               51.677718001118
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "5e0d6c2e-d349-4d60-a88c-c693a8b6608d",
+        "name": "Van Brienenoordbrug",
+        "type": "bridge",
+        "channel": 20,
+        "url": "http://",
+        "phone": "+31887985132",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "High 22,50m (NAP) closed"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.541537761688,
+              51.905108799998
+            ],
+            [
+              4.541902542114,
+              51.904499818071
+            ],
+            [
+              4.542825222015,
+              51.904724877571
+            ],
+            [
+              4.542481899261,
+              51.905307379276
+            ],
+            [
+              4.541537761688,
+              51.905108799998
             ]
           ]
         ]
