@@ -4114,6 +4114,70 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Volkeraksluizen",
+        "callname": "Volkeraksluizen Zuid",
+        "type": "lock",
+        "channel": 25,
+        "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
+        "phone": "+887970800",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "Marifoon Blokgebied VHF 25"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.406032562256,
+              51.689585597952
+            ],
+            [
+              4.386806488037,
+              51.683942039875
+            ],
+            [
+              4.373073577881,
+              51.683622572153
+            ],
+            [
+              4.366722106934,
+              51.680001780424
+            ],
+            [
+              4.372215270996,
+              51.670522454625
+            ],
+            [
+              4.361228942871,
+              51.663171948978
+            ],
+            [
+              4.369812011719,
+              51.657844750358
+            ],
+            [
+              4.393501281738,
+              51.67935635643
+            ],
+            [
+              4.408092498779,
+              51.688407921895
+            ],
+            [
+              4.406032562256,
+              51.689585597952
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
