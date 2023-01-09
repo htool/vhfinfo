@@ -11,10 +11,10 @@
         "phone": "+",
         "vhfdata": {
           "generic": {
-            "mode": "announce, listen"
+            "mode": "listen"
           },
           "pleasure": {
-            "mode": "announce, listen",
+            "mode": "listen",
             "note": "Elbe waiting area east of the entrance."
           },
           "cargo": {
@@ -107,6 +107,51 @@
             [
               10.138342380524,
               54.367158480336
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "New feature",
+        "callname": "Commenly used call sign",
+        "type": "marina,lock,vts",
+        "channel": 0,
+        "url": "http://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "report,announce,listen"
+          },
+          "pleasure": {
+            "mode": "report,announce,listen"
+          },
+          "cargo": {
+            "mode": "report,announce,listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.390098215664,
+              51.835777520452
+            ],
+            [
+              9.554121063175,
+              51.234407351635
+            ],
+            [
+              8.324210129955,
+              51.124212757827
+            ],
+            [
+              8.390098215664,
+              51.835777520452
             ]
           ]
         ]
