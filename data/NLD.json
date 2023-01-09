@@ -3819,31 +3819,6 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Stadsbediening Dordrecht",
-        "callname": "Verkeerspost Dordrecht",
-        "type": "berth",
-        "channel": 74,
-        "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
-        "phone": "+887970800",
-        "vhfdata": {
-          "generic": {
-            "mode": "announce",
-            "note": "berths only"
-          }
-        },
-        "id": "f68c5e4d-0427-40c0-921d-351640ce9259"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          4.666013717651,
-          51.811482906682
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "Verkeerspost Dordrecht",
         "callname": "Sector Dordrecht",
         "type": "vts",
@@ -4415,6 +4390,69 @@
             [
               4.648724198341,
               51.811798736088
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "b627a71d-8447-44f4-94da-abe311cd2484",
+        "name": "Stadsbediening Dordrecht",
+        "callname": "Verkeerspost Dordrecht",
+        "type": "berth",
+        "channel": 74,
+        "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
+        "phone": "+31887970800",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce",
+            "note": "Berths only"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.654233455658,
+              51.811851800584
+            ],
+            [
+              4.65708732605,
+              51.813496768973
+            ],
+            [
+              4.657688140869,
+              51.813284518361
+            ],
+            [
+              4.657623767853,
+              51.812209984299
+            ],
+            [
+              4.656872749329,
+              51.812156920224
+            ],
+            [
+              4.655177593231,
+              51.811268087691
+            ],
+            [
+              4.654512405396,
+              51.811639542225
+            ],
+            [
+              4.654233455658,
+              51.811851800584
             ]
           ]
         ]
