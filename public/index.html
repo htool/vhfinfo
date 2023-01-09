@@ -273,11 +273,7 @@ function loadUrl (url, layerGroup, country) {
             }
           },
           contextmenu: function(e) {
-            if (editMode) {
-              l.bringToBack()
-            } else {
-              //showInfo(e.target.feature, l);
-            }
+            l.bringToBack()
           }
         });
         drawnItems.addLayer(layer)
