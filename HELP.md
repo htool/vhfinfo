@@ -4,8 +4,10 @@
 You can bring a layer to back by pressing the right mouse button.
 
 ## Adding information
-To add information you open the [online map](https://htool.github.io/vhfinfo/public/index.html) and locate the area you want to edit.
+To add information you locate the area you want to edit.
 Press the pencil icon in the top left corner to go to the edit page for that country info.
+
+## Editing info
 
 ### Drawing the coordinates on the map
 Draw the VHF channel area as a polygon.
@@ -25,3 +27,14 @@ Here it is important to cover the documented coordinates of the VTS as close as 
 
 #### Area
 Draw where it applies.
+
+### Adding details
+Click a feature to edit the details.
+
+#### Types
+- VTS - Vessel Traffic Service
+- Lock
+- Bridge
+- Marina
+- Berth - non marina area where berth request by VHF is required or possible
+- Area - non VTS larger area
