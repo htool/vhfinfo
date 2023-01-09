@@ -3792,10 +3792,11 @@
         "type": "bridge",
         "channel": 20,
         "url": "http://",
-        "phone": "+",
+        "phone": "+88-7985132",
         "vhfdata": {
           "generic": {
-            "mode": "listen, communication"
+            "mode": "listen, communication",
+            "note": "High 22,50m (NAP) closed"
           },
           "pleasure": {
             "mode": "report,announce,listen"
