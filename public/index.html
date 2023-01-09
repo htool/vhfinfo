@@ -450,16 +450,16 @@ function editPopup (layer, f) {
     p.note = ""
     p.vhfdata = {
       "generic": {
-        "mode": "report,announce,listen",
+        "mode": "listen",
         "note": ""
       },
       "pleasure": {
-        "mode": "report,announce,listen",
+        "mode": "listen",
         "url": "",
         "note": ""
       },
       "cargo": {
-        "mode": "report,announce,listen",
+        "mode": "listen",
         "url": "",
         "note": ""
       }
@@ -471,17 +471,17 @@ function editPopup (layer, f) {
     '<tr><td><label>Call name:<label></td><td><input id="callname" type="text"></td></tr>'
   contentHTML = contentHTML + addPullDown('Type', 'type', ['VTS','Lock','Bridge','Area','Berth'])
   contentHTML = contentHTML + '<tr><td><label>Channel:<label></td><td><input id="channel" type="number"></td></tr>'
-  contentHTML = contentHTML + addPullDown('Mode', 'gmode', ['listen','announce','report'])
+  contentHTML = contentHTML + addPullDown('Mode', 'gmode', ['Listen','Announce','Report'])
   contentHTML = contentHTML + '<tr><td><label>Note:<label></td><td><input id="gnote" type="text"></td></tr>'+
     '<tr><td><label>URL:<label></td><td><input id="url" type="url"></td></tr>'+
     '<tr><td><label>Phone:<label></td><td><input id="phone" type="text"></td></tr>'+
     '<tr><td><label>Update:<label></td><td><input id="update" type="text"></td></tr>'+
     '<tr><td colspan="2"><b>Pleasure overwrite</b></td></tr>'
-  contentHTML = contentHTML + addPullDown('Mode', 'pmode', ['', 'listen','announce','report'])
+  contentHTML = contentHTML + addPullDown('Mode', 'pmode', ['', 'Listen','Announce','Report'])
   contentHTML = contentHTML + '<tr><td><label>Note:<label></td><td><input id="pnote" type="text"></td></tr>'+
     '<tr><td><label>URL:<label></td><td><input id="purl" type="url"></td></tr>'+
     '<tr><td colspan="2"><b>Cargo overwrite</b></td></tr>'
-  contentHTML = contentHTML + addPullDown('Mode', 'cmode', ['', 'listen','announce','report'])
+  contentHTML = contentHTML + addPullDown('Mode', 'cmode', ['', 'Listen','Announce','Report'])
   contentHTML = contentHTML + '<tr><td><label>Note:<label></td><td><input id="cnote" type="text"></td></tr>'+
     '<tr><td><label>URL:<label></td><td><input id="curl" type="url"></td></tr>'+
     '</table></form>'
