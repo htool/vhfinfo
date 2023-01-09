@@ -4027,12 +4027,12 @@
         "coordinates": [
           [
             [
-              4.406976699829,
-              51.690043737543
+              4.41002368927,
+              51.692657683386
             ],
             [
-              4.425687789917,
-              51.700477037201
+              4.423563480377,
+              51.699746653414
             ],
             [
               4.437618255615,
@@ -4063,50 +4063,34 @@
               51.69750705831
             ],
             [
-              4.426760673523,
-              51.697240915136
+              4.43128824234,
+              51.69659465938
             ],
             [
-              4.413113594055,
-              51.691065954081
+              4.427211284637,
+              51.697312854549
             ],
             [
-              4.410924911499,
-              51.690372729919
+              4.425473213196,
+              51.697046857667
             ],
             [
-              4.408049583435,
-              51.688671477434
+              4.420645236969,
+              51.694506508683
             ],
             [
-              4.406976699829,
-              51.690043737543
+              4.419958591461,
+              51.694666115959
+            ],
+            [
+              4.412813186646,
+              51.690822084281
+            ],
+            [
+              4.41002368927,
+              51.692657683386
             ]
           ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Volkeraksluizen",
-        "callname": "Volkeraksluizen Jachtensluis",
-        "type": "lock",
-        "channel": 18,
-        "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
-        "phone": "+887970800",
-        "vhfdata": {
-          "generic": {
-            "mode": "announce"
-          }
-        },
-        "id": "f0ee235a-bb81-4dbf-a2f4-e852bb481471"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          4.400968551636,
-          51.693966222818
         ]
       }
     },
@@ -4271,6 +4255,94 @@
             [
               4.655322432518,
               51.856721981862
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "5443803c-8e86-43a8-a6bd-86962b2e3aeb",
+        "name": "Volkeraksluizen",
+        "callname": "Commenly used call sign",
+        "type": "lock",
+        "channel": 64,
+        "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
+        "phone": "+31887970800",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.410463571548,
+              51.692158886647
+            ],
+            [
+              4.412105083466,
+              51.690941799535
+            ],
+            [
+              4.408231973648,
+              51.688833434578
+            ],
+            [
+              4.406504631042,
+              51.690170295675
+            ],
+            [
+              4.410463571548,
+              51.692158886647
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "d90881b9-139c-4571-b925-3f497ebd1004",
+        "name": "Volkeraksluizen",
+        "callname": "Volkeraksluizen Jachtensluis",
+        "type": "lock",
+        "channel": 18,
+        "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
+        "phone": "+31887970800",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.402121901512,
+              51.694484895154
+            ],
+            [
+              4.401928782463,
+              51.694612913596
+            ],
+            [
+              4.400126338005,
+              51.693668561252
+            ],
+            [
+              4.400324821472,
+              51.693525576609
+            ],
+            [
+              4.402121901512,
+              51.694484895154
             ]
           ]
         ]
