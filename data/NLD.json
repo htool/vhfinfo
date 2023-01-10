@@ -3817,18 +3817,7 @@
         "type": "vts",
         "channel": 79,
         "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
-        "phone": "+887970800",
-        "vhfdata": {
-          "generic": {
-            "mode": "report,announce,listen"
-          },
-          "pleasure": {
-            "mode": "report,announce,listen"
-          },
-          "cargo": {
-            "mode": "report,announce,listen"
-          }
-        },
+        "phone": "+31887970800",
         "id": "23e3ff8f-ce4a-4513-9d2a-939acb86b04f"
       },
       "geometry": {
