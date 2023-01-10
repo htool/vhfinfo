@@ -1677,7 +1677,7 @@
       "type": "Feature",
       "properties": {
         "name": "Centrale meldpost Waddenzee",
-        "type": "vts",
+        "type": "area",
         "channel": 4,
         "phone": "+31887974599",
         "vhfdata": {
@@ -2409,7 +2409,7 @@
       "type": "Feature",
       "properties": {
         "name": "Centrale meldpost IJsselmeer",
-        "type": "vts",
+        "type": "area",
         "channel": 1,
         "phone": "+31887973300",
         "update": "15 *",
