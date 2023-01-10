@@ -429,7 +429,6 @@ function addPullDown (text, id, options) {
 
 function editPopup (layer, f) {
   if (!isPopupOpen()) {
-
   layer.addTo(m)
   if (typeof f != 'undefined') {
     var feature = f 
@@ -518,6 +517,7 @@ function editPopup (layer, f) {
     .unbindPopup()
     .bindPopup(btnDiv)
     .openPopup();
+
    
   sleep (200)
   setValue(p.name, 'name')
@@ -608,10 +608,6 @@ else {
 }
 
 
-
-
-
-
 function removeLayerFromGroup (id, layerGroup) {
 	layerGroup.eachLayer(function (layer) {
 		if (layer._leaflet_id === id){
@@ -664,11 +660,9 @@ function commitGitHub (file, json, country, type) {
     confirm("No changes have been made.")
   } else {
 
-    if (confirm("You are about to publish changes to " + file + ".")) {
-      console.log(content)
-      let postURL = "https://mdam.defect.org:6644/api?country=" + country + "&type=" + type
-      console.log(postURL)
-      let url = "http://mdam.defect.org:6644/api?country=" + country + "&type=" + type
+    var reason = prompt("You are about to publish changes to " + file + ". Please add a reason for change." , "");
+    if (reason != null && reason != "") {
+      let postURL = "https://mdam.defect.org:6644/api?country=" + country + "&type=" + type + "&reason=" + reason
       $.ajax({
         type: "POST",
         contentType: 'application/json',
