@@ -3532,7 +3532,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Marifoon Blokgebied",
+        "name": "Verkeerspost Dordrecht",
         "callname": "Sector Heerjansdam",
         "type": "vts",
         "channel": 4,
@@ -3540,8 +3540,7 @@
         "phone": "+31887970800",
         "vhfdata": {
           "generic": {
-            "mode": "listen",
-            "note": "Verkeerspost Dordrecht"
+            "mode": "listen"
           }
         },
         "id": "58d4a595-1239-4df1-9666-5c9cec1a592d"
