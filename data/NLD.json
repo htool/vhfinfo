@@ -3920,14 +3920,13 @@
       "properties": {
         "name": "Volkeraksluizen",
         "callname": "Volkeraksluizen Noord",
-        "type": "lock",
+        "type": "vts",
         "channel": 7,
-        "url": "http://",
-        "phone": "+887970800",
+        "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
+        "phone": "+31887970800",
         "vhfdata": {
           "generic": {
-            "mode": "announce",
-            "note": "Marifoon Blokgebied VHF7"
+            "mode": "announce"
           }
         },
         "id": "30fb1f3b-2f5e-4299-98fd-dc5d0977829d"
@@ -4009,14 +4008,13 @@
       "properties": {
         "name": "Volkeraksluizen",
         "callname": "Volkeraksluizen Zuid",
-        "type": "lock",
+        "type": "vts",
         "channel": 78,
         "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
-        "phone": "+887970800",
+        "phone": "+31887970800",
         "vhfdata": {
           "generic": {
-            "mode": "announce",
-            "note": "Marifoon Blokgebied VHF78"
+            "mode": "announce"
           }
         },
         "id": "000065ea-8aae-45f5-94a2-c355e843af27"
