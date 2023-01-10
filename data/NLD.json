@@ -3537,17 +3537,11 @@
         "type": "vts",
         "channel": 4,
         "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
-        "phone": "+887970800",
+        "phone": "+31887970800",
         "vhfdata": {
           "generic": {
-            "mode": "report,announce,listen",
+            "mode": "listen",
             "note": "Verkeerspost Dordrecht"
-          },
-          "pleasure": {
-            "mode": "report,announce,listen"
-          },
-          "cargo": {
-            "mode": "report,announce,listen"
           }
         },
         "id": "58d4a595-1239-4df1-9666-5c9cec1a592d"
