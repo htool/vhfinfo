@@ -321,11 +321,30 @@ var Position = L.Control.extend({
 const position = new Position();
 m.addControl(position);
 
-m.addEventListener('mousemove', (event) => {
-  var lat = Math.round(event.latlng.lat * 100000) / 100000
-  var lng = Math.round(event.latlng.lng * 100000) / 100000
-  updateMousePosition(lat, lng)
-});
+if (editMode) {
+  m.addEventListener('mousemove', (event) => {
+    var lat = Math.round(event.latlng.lat * 100000) / 100000
+    var lng = Math.round(event.latlng.lng * 100000) / 100000
+    updateMousePosition(lat, lng)
+  });
+} else {
+  var crosshairIcon = L.icon({
+    iconUrl: './/crosshair.png',
+    iconSize:     [20, 20], // size of the icon
+    iconAnchor:   [10, 10], // point of the icon which will correspond to marker's location
+  });
+  crosshair = new L.marker(m.getCenter(), {icon: crosshairIcon, clickable:false});
+  crosshair.addTo(m);
+
+  m.on('move', function() {
+    var center = m.getCenter()
+    var lat = center.lat
+    var lng = center.lng
+    crosshair.setLatLng(m.getCenter());
+    updateMousePosition(lat, lng)
+  });
+}
+
 var mouseposition = document.getElementsByClassName('mouseposition')[0]
 L.DomEvent.addListener(mouseposition, 'click', event => {
   dms = !dms
