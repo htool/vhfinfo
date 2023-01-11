@@ -141,7 +141,11 @@ mq.addTo(m);
 var drawnItems = new L.FeatureGroup();
 var Nm12 = new L.LayerGroup()
 var vhfinfo = new L.LayerGroup()
-
+var bridgeLayer = new L.LayerGroup()
+var lockLayer = new L.LayerGroup()
+var vtsLayer = new L.LayerGroup()
+var areaLayer = new L.LayerGroup()
+var marinaLayer = new L.LayerGroup()
 
 //link to tiles
 var osmUrl='https://tiles.openseamap.org/seamark/{z}/{x}/{y}.png'
@@ -165,7 +169,13 @@ var googleTerrain = L.tileLayer('https://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z=
 });
 
 //m.addLayer(osmcolor);
-m.addLayer(vhfinfo);
+// m.addLayer(vhfinfo);
+m.addLayer(bridgeLayer);
+m.addLayer(lockLayer);
+m.addLayer(vtsLayer);
+m.addLayer(marinaLayer);
+m.addLayer(areaLayer);
+
 //m.addLayer(Nm12);
 
 //add basemaps in an array
@@ -181,49 +191,34 @@ var popup = L.popup();
 //add a control layer to switch on the both basemaps
 ControlLayer=L.control.layers(baseMaps).addTo(m);
 ControlLayer.addOverlay(Nm12, '12Nm')
-ControlLayer.addOverlay(vhfinfo, 'VHF info')
+//ControlLayer.addOverlay(vhfinfo, 'VHF info')
+ControlLayer.addOverlay(vtsLayer, 'VTSes')
+ControlLayer.addOverlay(lockLayer, 'Locks')
+ControlLayer.addOverlay(bridgeLayer, 'Bridges')
+ControlLayer.addOverlay(marinaLayer, 'Marinas')
+ControlLayer.addOverlay(areaLayer, 'Areas')
 if (editMode) {
   ControlLayer.addOverlay(drawnItems, 'Newly created')
 }
 
-drawnItems.on('add',(e)=>{
+drawnItems.on('add',(e)=> {
   console.log('drawnItems now selected')
-  if (m.hasLayer(vhfinfo)) {
-    //console.log('vhfinfo is active')
-    m.addLayer(vhfinfo)
-  } else {
-    //console.log('vhfinfo is inactive')
-    m.addLayer(vhfinfo)
-    m.removeLayer(vhfinfo)
-  }
-  if (m.hasLayer(Nm12)) {
-    //console.log('Nm12 is active')
-    m.addLayer(Nm12)
-  } else {
-    //console.log('Nm12 is inactive')
-    m.addLayer(Nm12)
-    m.removeLayer(Nm12)
-  }
+  checkLayer('add', vtsLayer)
+  checkLayer('add', areaLayer)
+  checkLayer('add', lockLayer)
+  checkLayer('add', bridgeLayer)
+  checkLayer('add', marinaLayer)
+  checkLayer('add', Nm12)
 });
 
 drawnItems.on('remove',(e)=>{
   console.log('drawnItems now deselected')
-  if (m.hasLayer(vhfinfo)) {
-    console.log('vhfinfo is active')
-    m.removeLayer(vhfinfo)
-    m.addLayer(vhfinfo)
-  } else {
-    console.log('vhfinfo is inactive')
-    m.removeLayer(vhfinfo)
-  }
-  if (m.hasLayer(Nm12)) {
-    console.log('Nm12 is active')
-    m.removeLayer(Nm12)
-    m.addLayer(Nm12)
-  } else {
-    console.log('Nm12 is inactive')
-    m.removeLayer(Nm12)
-  }
+  checkLayer('remove', vtsLayer)
+  checkLayer('remove', areaLayer)
+  checkLayer('remove', lockLayer)
+  checkLayer('remove', bridgeLayer)
+  checkLayer('remove', marinaLayer)
+  checkLayer('remove', Nm12)
 });
 
 L.DomUtil.addClass(m._container,'crosshair-cursor-enabled');
@@ -248,8 +243,8 @@ function loadUrl (url, layerGroup, country) {
   var l = new L.GeoJSON.AJAX(url, {
      style: function(feature) {
           return {
-              fillOpacity: 0.2,
-              color: "grey",
+              fillOpacity: 0.15,
+              color: "red",
               dashArray: '3',
               weight: 1,
               opacity: 0.7
@@ -259,6 +254,24 @@ function loadUrl (url, layerGroup, country) {
         if (typeof feature.properties.id == 'undefined') {
           feature.properties.id = generateUUID()
         }
+        var specific
+        switch (feature.properties.type) {
+          case 'vts':
+            specific = vtsLayer
+            break
+          case 'lock':
+            specific = lockLayer
+            break
+          case 'bridge':
+            specific = bridgeLayer
+            break
+          case 'marina':
+            specific = marinaLayer
+            break
+          case 'area':
+            specific = areaLayer
+            break
+        } 
         // console.log(feature)
         layer.on({
           mouseover: function(e) {
@@ -266,7 +279,7 @@ function loadUrl (url, layerGroup, country) {
               fillOpacity: 0.4,
               dashArray: '',
               weight: 2,
-              opacity: 0.3
+              opacity: 0.2
             });
             if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
               e.target.bringToFront();
@@ -285,9 +298,11 @@ function loadUrl (url, layerGroup, country) {
           contextmenu: function(e) {
             l.bringToBack()
           }
+
         });
         drawnItems.addLayer(layer)
         layerGroup.addLayer(layer)
+        specific.addLayer(layer)
         countriesLoaded.push(country)
       }
   });
@@ -359,6 +374,7 @@ function convertToDm(dd, isLng) {
 
 function showInfo(f, layer, country) {
   console.log(f)
+  console.log(layer)
 
   let p = f.properties
   
@@ -407,6 +423,31 @@ function addHTML (title, json) {
 	  return h
 	} else {
     return ""
+  }
+}
+
+function checkLayer (addRemove, l) {
+  switch (addRemove) {
+  case 'add':
+    if (m.hasLayer(l)) {
+      console.log(l + ' is active')
+      m.addLayer(l)
+    } else {
+      console.log(l + ' is inactive')
+      m.addLayer(l)
+      m.removeLayer(l)
+    }
+    break
+  case 'remove':
+    if (m.hasLayer(l)) {
+      console.log(l + ' is active')
+      m.removeLayer(l)
+      m.addLayer(l)
+    } else {
+      console.log(l + ' is inactive')
+      m.removeLayer(l)
+    }
+    break
   }
 }
 
@@ -541,7 +582,7 @@ function editPopup (layer, f) {
   var contentHTML = '<form id="form" onsubmit="return false"><table>'+
     '<tr><td><label>Name<label></td><td><input id="name" type="text"></td></tr>'+
     '<tr><td><label>Call name:<label></td><td><input id="callname" type="text"></td></tr>'
-  contentHTML = contentHTML + addPullDown('Type', 'type', ['VTS','Lock','Bridge','Area','Berth'])
+  contentHTML = contentHTML + addPullDown('Type', 'type', ['VTS','Lock','Bridge','Area','Marina'])
   contentHTML = contentHTML + '<tr><td><label>Channel:<label></td><td><input id="channel" type="number"></td></tr>'
   contentHTML = contentHTML + addPullDown('Mode', 'gmode', ['Listen','Announce','Report'])
   contentHTML = contentHTML + '<tr><td><label>Note:<label></td><td><input id="gnote" type="text"></td></tr>'+
@@ -633,7 +674,7 @@ function editPopup (layer, f) {
     let id = layer._popup._source._leaflet_id
     let name = layer._popup._source.feature.properties.name
     if (confirm("Sure you want to delete '" + name + "'?")) {
-      removeLayerFromGroup(id, vhfinfo)
+      // removeLayerFromGroup(id, vhfinfo)
       removeLayerFromGroup(id, drawnItems)
       $(".leaflet-popup-close-button")[0].click();
     } else {
@@ -728,6 +769,7 @@ function commitGitHub (file, json, country, type) {
   json = removeEmpty(json)
 
   let content = JSON.stringify(json)
+  console.log(content)
 
   if (_.isEqual(content, fileJson)) {
     confirm("No changes have been made.")
