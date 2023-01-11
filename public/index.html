@@ -254,7 +254,7 @@ if (!editMode) {
     if (confirm("Do you want to start editting for country " + country + "?")) {
       open("https://htool.github.io/vhfinfo/public/index.html?edit=" + country, "_blank")
     }
-  }, 'Edit the country in the center of the map')
+  }, 'Edit the country in the center of the map').addTo(m);
   L.easyButton( '<span class="crosshair"><img src="crosshair.png" width="25" height="25"></img></span>', function(){
     crosshairMode = !crosshairMode
     console.log("crosshairMode: " + crosshairMode)
@@ -499,7 +499,7 @@ function geolocationError () {
   m.setView([45.0, 10.0], 5);
 }
 
-if (editMode == false) {
+if (!editMode) {
   var geoOptions = {
     enableHighAccuracy: true,
     timeout: 5000,
