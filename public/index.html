@@ -51,9 +51,9 @@
     </style>
 
     <title>VHF info</title>
-    </head>
-    <body>
-    <div id="map"></div>
+  </head>
+<body>
+  <div id="map"></div>
 <style>
   table td, table td * {
     vertical-align: top;
@@ -91,6 +91,12 @@
     margin-left: -3px;
     margin-top: 2px;
   }
+  .follow {
+    left: 20px;
+    margin-top: 4px;
+    margin-left: -1px;
+    display: block;
+  }
 </style>
 
 <script type="text/javascript">
@@ -102,6 +108,8 @@ var vhfinfo
 var Nm12
 var dms = false
 var crosshairMode = false
+var followMode = false
+var followTimer
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -255,10 +263,11 @@ if (!editMode) {
       open("https://htool.github.io/vhfinfo/public/index.html?edit=" + country, "_blank")
     }
   }, 'Edit the country in the center of the map').addTo(m);
-  L.easyButton( '<span class="crosshair"><img src="crosshair.png" width="25" height="25"></img></span>', function(){
+  L.easyButton( '<span class="crosshair"><img src="crosshair.png" width="25" height="25"></img></span>', function(btn, m){
     crosshairMode = !crosshairMode
     console.log("crosshairMode: " + crosshairMode)
     if (crosshairMode) {
+      btn.button.style.backgroundColor = 'lightgrey';
       crosshair.addTo(m);
       m.addControl(position);
       updateMousePosition(m.getCenter(m))
@@ -268,17 +277,39 @@ if (!editMode) {
         updateMousePosition(m.getCenter(m))
       })
     } else {
+      btn.button.style.backgroundColor = 'white';
       crosshair.remove();
       m.removeControl(position);
     }
-  }, 'Enable the crosshair and coordinates display').addTo(m);
+  }, 'Toggle the crosshair and coordinates display').addTo(m);
+  L.easyButton( '<span class="follow"><img src="arrow.png" width="20" height="20"></img></span>', function(btn, m){
+    followMode = !followMode
+    console.log('followMode: ' + followMode)
+    if (followMode) {
+      btn.button.style.backgroundColor = 'lightgrey';
+      m.setZoom(13)
+      followUpdate()
+    } else {
+      btn.button.style.backgroundColor = 'white';
+      clearTimeout(followTimer)
+    }
+  }, 'Toggle the location follow mode').addTo(m);
+} else {
+  m.addControl(position);
 }
+
 
 L.easyButton( '<span class="help">&#63;</span>', function() {
   open("https://github.com/htool/vhfinfo/blob/main/HELP.md", "_blank")
 }, 'Help page with instructions on how to add features').addTo(m);
 
 
+function followUpdate () {
+  if (followMode) {
+    followTimer = setTimeout(followUpdate, 5000)
+  }
+  navigator.geolocation.getCurrentPosition(geolocationSuccess, geolocationError, geoOptions)
+}
 
 function loadUrl (url, layerGroup, country) {
   // console.log('Loading ' + country)
