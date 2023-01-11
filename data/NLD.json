@@ -12,7 +12,7 @@
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Guests dock inguest berth, bow facing north. In the harbour office there is a sign post. Red on top of white: no entering. White on top of red: no exit."
+            "note": "Guests dock in guest berth, bow facing north. In the harbour office there is a sign post. Red on top of white: no entering. White on top of red: no exit."
           }
         },
         "id": "549b42cd-e7ed-40e8-b38a-6adf49f629c8"
@@ -4251,13 +4251,13 @@
         "id": "84189961-98be-4c1a-a6e5-7b98800420d8",
         "name": "Verkeerspost Dordrecht",
         "callname": "Overnachtingshaven Dordtsche Kil",
-        "type": "berth",
+        "type": "marina",
         "channel": 71,
         "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
         "phone": "+31887970800",
         "vhfdata": {
           "generic": {
-            "mode": "listen",
+            "mode": "announce",
             "note": "Only for berth request"
           },
           "pleasure": {
@@ -4381,7 +4381,7 @@
         "id": "b627a71d-8447-44f4-94da-abe311cd2484",
         "name": "Stadsbediening Dordrecht",
         "callname": "Verkeerspost Dordrecht",
-        "type": "berth",
+        "type": "marina",
         "channel": 74,
         "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
         "phone": "+31887970800",
