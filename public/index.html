@@ -86,6 +86,11 @@
     display: inline-block;
     margin: 2px;
   }
+  .crosshair {
+    left: 20px;
+    margin-left: -3px;
+    margin-top: 2px;
+  }
 </style>
 
 <script type="text/javascript">
@@ -96,6 +101,7 @@ var countriesLoaded = []
 var vhfinfo
 var Nm12
 var dms = false
+var crosshairMode = false
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -168,6 +174,25 @@ var googleTerrain = L.tileLayer('https://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z=
     subdomains:['mt0','mt1','mt2','mt3']
 });
 
+var Position = L.Control.extend({
+  options: {
+    position: 'bottomleft'
+  },
+  onAdd: function (map) {
+    var latlng = L.DomUtil.create('div', 'mouseposition');
+    latlng.tooltip = "Click to change coordinate format"
+    return latlng;
+  }
+});
+const position = new Position();
+
+var crosshairIcon = L.icon({
+  iconUrl: './/crosshair.png',
+  iconSize:     [20, 20], // size of the icon
+  iconAnchor:   [10, 10], // point of the icon which will correspond to marker's location
+});
+const crosshair = new L.marker(m.getCenter(), {icon: crosshairIcon, clickable:false});
+
 //m.addLayer(osmcolor);
 // m.addLayer(vhfinfo);
 m.addLayer(bridgeLayer);
@@ -229,12 +254,29 @@ if (!editMode) {
     if (confirm("Do you want to start editting for country " + country + "?")) {
       open("https://htool.github.io/vhfinfo/public/index.html?edit=" + country, "_blank")
     }
-  }).addTo(m);
+  }, 'Edit the country in the center of the map')
+  L.easyButton( '<span class="crosshair"><img src="crosshair.png" width="25" height="25"></img></span>', function(){
+    crosshairMode = !crosshairMode
+    console.log("crosshairMode: " + crosshairMode)
+    if (crosshairMode) {
+      crosshair.addTo(m);
+      m.addControl(position);
+      updateMousePosition(m.getCenter(m))
+      var mouseposition = document.getElementsByClassName('mouseposition')[0]
+      L.DomEvent.addListener(mouseposition, 'click', event => {
+        dms = !dms
+        updateMousePosition(m.getCenter(m))
+      })
+    } else {
+      crosshair.remove();
+      m.removeControl(position);
+    }
+  }, 'Enable the crosshair and coordinates display').addTo(m);
 }
 
 L.easyButton( '<span class="help">&#63;</span>', function() {
   open("https://github.com/htool/vhfinfo/blob/main/HELP.md", "_blank")
-}).addTo(m);
+}, 'Help page with instructions on how to add features').addTo(m);
 
 
 
@@ -308,55 +350,30 @@ function loadUrl (url, layerGroup, country) {
   });
 }
 
-var Position = L.Control.extend({
-  options: {
-    position: 'bottomleft'
-  },
-  onAdd: function (map) {
-    var latlng = L.DomUtil.create('div', 'mouseposition');
-    return latlng;
-  }
-});
-
-const position = new Position();
-m.addControl(position);
 
 if (editMode) {
   m.addEventListener('mousemove', (event) => {
     var lat = Math.round(event.latlng.lat * 100000) / 100000
     var lng = Math.round(event.latlng.lng * 100000) / 100000
-    updateMousePosition(lat, lng)
+    updateMousePosition({"lat": lat, "lng": lng})
   });
 } else {
-  var crosshairIcon = L.icon({
-    iconUrl: './/crosshair.png',
-    iconSize:     [20, 20], // size of the icon
-    iconAnchor:   [10, 10], // point of the icon which will correspond to marker's location
-  });
-  crosshair = new L.marker(m.getCenter(), {icon: crosshairIcon, clickable:false});
-  crosshair.addTo(m);
-
   m.on('move', function() {
-    var center = m.getCenter()
-    var lat = center.lat
-    var lng = center.lng
-    crosshair.setLatLng(m.getCenter());
-    updateMousePosition(lat, lng)
+    if (crosshairMode) {
+      let center = m.getCenter()
+      crosshair.setLatLng(center);
+      updateMousePosition(center)
+    }
   });
 }
 
-var mouseposition = document.getElementsByClassName('mouseposition')[0]
-L.DomEvent.addListener(mouseposition, 'click', event => {
-  dms = !dms
-})
-
-function updateMousePosition (lat, lng) {
+function updateMousePosition (latlng) {
   if (dms) {
-    lat = convertToDm(lat, false)
-    lng = convertToDm(lng, true)
+    lat = convertToDm(latlng.lat, false)
+    lng = convertToDm(latlng.lng, true)
   } else {
-    lat = convertToDms(lat, false)
-    lng = convertToDms(lng, true)
+    lat = convertToDms(latlng.lat, false)
+    lng = convertToDms(latlng.lng, true)
   }
   var coor = `${lat} ${lng}`
   document.getElementsByClassName('mouseposition')[0].innerHTML = `${coor}`
