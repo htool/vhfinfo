@@ -42,10 +42,11 @@
         z-index: 999;
         color: black;
       }
-      input[type=text] {
+      input[type=text], select, input[type=url] {
         border: 2px solid #ccc;
+        background-color: white;
       }
-      input[type=text]:focus {
+      input[type=text]:focus, select:focus, input[type=url]:focus {
         border: 2px solid #555;
       }
     </style>
@@ -624,7 +625,7 @@ function editPopup (layer, f) {
     p.name = "New feature"
     p.callname = "Commenly used call sign"
     p.type = ""
-    p.channel = Number(0),
+    p.channel = "",
     p.url = "http://"
     p.phone = "+"
     p.note = ""
@@ -650,7 +651,7 @@ function editPopup (layer, f) {
     '<tr><td><label>Name<label></td><td><input id="name" type="text"></td></tr>'+
     '<tr><td><label>Call name:<label></td><td><input id="callname" type="text"></td></tr>'
   contentHTML = contentHTML + addPullDown('Type', 'type', ['VTS','Lock','Bridge','Area','Marina'])
-  contentHTML = contentHTML + '<tr><td><label>Channel:<label></td><td><input id="channel" type="number"></td></tr>'
+  contentHTML = contentHTML + '<tr><td><label>Channel:<label></td><td><input id="channel" type="text"></td></tr>'
   contentHTML = contentHTML + addPullDown('Mode', 'gmode', ['Listen','Announce','Report'])
   contentHTML = contentHTML + '<tr><td><label>Note:<label></td><td><input id="gnote" type="text"></td></tr>'+
     '<tr><td><label>URL:<label></td><td><input id="url" type="url"></td></tr>'+
@@ -888,7 +889,7 @@ function saveProperties (properties) {
   properties.name = getPropertyValue('name')
   properties.callname = getPropertyValue('callname')
   properties.type = getPropertyValue('type')
-  properties.channel = Number(getPropertyValue('channel'))
+  properties.channel = getPropertyValue('channel')
   properties.url = getPropertyValue('url')
   properties.phone = getPropertyValue('phone')
   properties.update = getPropertyValue('update')
