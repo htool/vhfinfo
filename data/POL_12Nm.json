@@ -5,17 +5,13 @@
       "type": "Feature",
       "properties": {
         "name": "POL",
-        "callname": "",
-        "type": "territorial",
         "vhfdata": {
           "generic": {
-            "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "ee67571a-60ad-4dfe-9065-204b465fe738",
+        "channel": "16"
       },
       "geometry": {
         "type": "Polygon",
