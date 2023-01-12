@@ -7,9 +7,8 @@
         "name": "Sound Traffic",
         "callname": "Sector 1 North",
         "type": "vts",
-        "channel": 73,
+        "channel": "73",
         "url": "https://www.sjofartsverket.se/globalassets/sound-vts/soundvts_folder.pdf",
-        "phone": "",
         "vhfdata": {
           "generic": {
             "mode": "report",
@@ -18,7 +17,8 @@
           "pleasure": {
             "mode": "listen"
           }
-        }
+        },
+        "id": "4d1a226e-f5dc-45d3-8a84-7131a7903530"
       },
       "geometry": {
         "type": "Polygon",
@@ -732,7 +732,6 @@
         "type": "vts",
         "channel": 71,
         "url": "https://www.sjofartsverket.se/globalassets/sound-vts/soundvts_folder.pdf",
-        "phone": "",
         "vhfdata": {
           "generic": {
             "mode": "report",
@@ -741,7 +740,8 @@
           "pleasure": {
             "mode": "listen"
           }
-        }
+        },
+        "id": "07bd0373-2615-408f-8cc1-5f90f1f1e824"
       },
       "geometry": {
         "type": "Polygon",
@@ -1185,7 +1185,8 @@
             "mode": "report",
             "note": "Report on VHF 11. See link for reporting details. Pleasure craft with a length less than 15 m or with a gross tonnage less than 50 are exempted from participation. "
           }
-        }
+        },
+        "id": "124bc54e-c022-4356-988c-d4fcc8834735"
       },
       "geometry": {
         "type": "Polygon",
@@ -1533,7 +1534,8 @@
             "mode": "report",
             "note": "Report on VHF 74. See link for reporting details. Pleasure craft with a length less than 15 m or with a gross tonnage less than 50 are exempted from participation. "
           }
-        }
+        },
+        "id": "aa60e628-8b48-4bca-9cfa-37f9e70ad6ec"
       },
       "geometry": {
         "type": "Polygon",
