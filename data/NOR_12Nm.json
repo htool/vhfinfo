@@ -5,17 +5,13 @@
       "type": "Feature",
       "properties": {
         "name": "NOR",
-        "callname": "",
-        "type": "territorial",
         "vhfdata": {
           "generic": {
-            "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "20db6ac3-ae81-4946-ba68-1be22513a13f",
+        "channel": "16"
       },
       "geometry": {
         "type": "Polygon",
@@ -597,17 +593,14 @@
       "type": "Feature",
       "properties": {
         "name": "NOR",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "78dec2cc-3c8b-45ff-8904-b7557e724730"
       },
       "geometry": {
         "type": "Polygon",
