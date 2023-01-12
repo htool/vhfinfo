@@ -1,1 +1,4 @@
-{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"id":"396ae406-a145-4402-b336-ce660a2594ba","name":"New feature","callname":"Commenly used call sign","url":"http://","phone":"+","vhfdata":{"generic":{"mode":"listen"},"pleasure":{"mode":"listen"},"cargo":{"mode":"listen"}},"type":"vts","channel":"2"},"geometry":{"type":"Polygon","coordinates":[[[6.505719154537,67.033162790151],[10.943219537671,67.11874849518],[15.109676895491,64.263683740177],[8.389092153256,65.127637956521],[6.505719154537,67.033162790151]]]}},{"type":"Feature","properties":{"id":"28a08686-9083-4e54-8538-7c331dd94347","name":"Test9","callname":"Testing","url":"http://","phone":"+","vhfdata":{"generic":{"mode":"announce"},"pleasure":{"mode":"listen"},"cargo":{"mode":"listen"}}},"geometry":{"type":"Polygon","coordinates":[[[9.267281210252,69.099939674251],[11.727103076691,68.720440569898],[12.385983933773,69.702868048511],[9.267281210252,69.099939674251]]]}}]}
+{
+  "type": "FeatureCollection",
+  "features": []
+}
