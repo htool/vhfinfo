@@ -5,6 +5,8 @@
       "type": "Feature",
       "properties": {
         "name": "DEU",
+        "type": "territorial",
+        "type": "territorial",
         "vhfdata": {
           "generic": {
             "mode": "listen"
@@ -341,6 +343,7 @@
       "type": "Feature",
       "properties": {
         "name": "DEU",
+        "type": "territorial",
         "vhfdata": {
           "generic": {
             "mode": "listen"
