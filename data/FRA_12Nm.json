@@ -5,17 +5,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "0a917ef0-779a-4e29-a6aa-1dfc55eac62a"
       },
       "geometry": {
         "type": "Polygon",
@@ -181,17 +178,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "2383c061-a615-4677-b12b-a228c087bdee"
       },
       "geometry": {
         "type": "Polygon",
@@ -221,17 +215,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "0f475498-a86a-48f1-945d-1bc3c3f9cb37"
       },
       "geometry": {
         "type": "Polygon",
@@ -261,17 +252,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "2e5f243d-7cbf-4d38-8d84-99cff7b9e797"
       },
       "geometry": {
         "type": "Polygon",
@@ -301,17 +289,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "79e587c2-e15d-4677-8cf1-5c7ea8001eea"
       },
       "geometry": {
         "type": "Polygon",
@@ -657,17 +642,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "a021cd14-9b1c-4db6-85a4-ba4e774cf546"
       },
       "geometry": {
         "type": "Polygon",
@@ -697,17 +679,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "546f89ce-c072-40c1-8725-2aa2ae5b2009"
       },
       "geometry": {
         "type": "Polygon",
@@ -737,17 +716,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "881c03e9-e8f1-427e-9d8b-1a80c65427f9"
       },
       "geometry": {
         "type": "Polygon",
@@ -777,17 +753,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "74ed2b80-ccfa-4bdf-9c29-55e2e5dfa255"
       },
       "geometry": {
         "type": "Polygon",
@@ -817,17 +790,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "ed010588-5658-4eda-b38b-8748448233af"
       },
       "geometry": {
         "type": "Polygon",
@@ -857,17 +827,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "f9e36147-be82-4b62-a036-767141557fe7"
       },
       "geometry": {
         "type": "Polygon",
@@ -909,17 +876,13 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
-        "type": "territorial",
         "vhfdata": {
           "generic": {
-            "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "ae3d043e-050f-4df8-adc4-d96b69492cdb",
+        "channel": "16"
       },
       "geometry": {
         "type": "Polygon",
@@ -1865,17 +1828,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "e996b0fd-3858-4edc-afb0-d27301693a55"
       },
       "geometry": {
         "type": "Polygon",
@@ -1905,17 +1865,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "14567907-77ae-466d-9c97-64bfa0aad1b9"
       },
       "geometry": {
         "type": "Polygon",
@@ -1945,17 +1902,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "0711fd6f-0c50-43b8-8931-d049e1615dea"
       },
       "geometry": {
         "type": "Polygon",
@@ -1985,17 +1939,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "2b7dd543-b878-4ec7-9d5b-df2333b0b061"
       },
       "geometry": {
         "type": "Polygon",
@@ -2025,17 +1976,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "8c69a0e8-258a-4c8d-96ab-6998beed6b0e"
       },
       "geometry": {
         "type": "Polygon",
@@ -2065,17 +2013,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "176d5d90-0b0c-4a1f-8e85-1126780ba8eb"
       },
       "geometry": {
         "type": "Polygon",
@@ -2105,17 +2050,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "e89a7043-b010-404a-ab65-4e732e8d6d12"
       },
       "geometry": {
         "type": "Polygon",
@@ -2145,17 +2087,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "2e85bf6f-2b84-479e-81ef-771ffbfdf633"
       },
       "geometry": {
         "type": "Polygon",
@@ -2185,17 +2124,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "b27fa44e-0c8c-4e54-97d9-e81ab868a43d"
       },
       "geometry": {
         "type": "Polygon",
@@ -2225,17 +2161,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "9e788d5b-39b2-46d3-bf50-1dc4ec160430"
       },
       "geometry": {
         "type": "Polygon",
@@ -2265,17 +2198,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "e614cdf2-de2a-4335-9c48-96916ac6a672"
       },
       "geometry": {
         "type": "Polygon",
@@ -2305,17 +2235,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "14d2f52a-3bf9-4f96-8cf0-d282e1ceb04c"
       },
       "geometry": {
         "type": "Polygon",
@@ -2345,17 +2272,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "a3a6d0c1-c0b2-4173-a132-b3cb9f3effa2"
       },
       "geometry": {
         "type": "Polygon",
@@ -2385,17 +2309,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "2cf7aa5c-1740-4cee-ae1b-3acdb2e44478"
       },
       "geometry": {
         "type": "Polygon",
@@ -2425,17 +2346,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "183401e4-88c1-4acc-841f-1221ca2ea8a4"
       },
       "geometry": {
         "type": "Polygon",
@@ -2465,17 +2383,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "343ac042-413e-4b57-8065-4a203cff43f7"
       },
       "geometry": {
         "type": "Polygon",
@@ -2505,17 +2420,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "c617b85b-d7a5-4069-a751-2b4c5dfd03a0"
       },
       "geometry": {
         "type": "Polygon",
@@ -2545,17 +2457,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "154f5d43-ef1e-49a5-ba88-a600e700f758"
       },
       "geometry": {
         "type": "Polygon",
@@ -2585,17 +2494,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "df23e71e-ba9d-4cde-a49f-55146d4983fe"
       },
       "geometry": {
         "type": "Polygon",
@@ -2625,17 +2531,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "86e0b162-12d2-4f11-9b11-5e42a1d1f852"
       },
       "geometry": {
         "type": "Polygon",
@@ -2665,17 +2568,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "ce9a4114-d8f4-49c4-a065-9b8d66da6bd9"
       },
       "geometry": {
         "type": "Polygon",
@@ -2705,17 +2605,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "6746b212-b136-4ddc-ac57-5934086ae680"
       },
       "geometry": {
         "type": "Polygon",
@@ -2745,17 +2642,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "abdc8b0e-36b3-4ee4-8868-33658cfd4af2"
       },
       "geometry": {
         "type": "Polygon",
@@ -2785,17 +2679,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "a757c2d9-d91c-42b4-bbbe-5976414fbc78"
       },
       "geometry": {
         "type": "Polygon",
@@ -2825,17 +2716,14 @@
       "type": "Feature",
       "properties": {
         "name": "FRA",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "f5165ea2-2c2e-4af7-b05a-7f3a83abf8e8"
       },
       "geometry": {
         "type": "Polygon",
