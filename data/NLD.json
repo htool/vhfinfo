@@ -1678,7 +1678,7 @@
       "properties": {
         "name": "Centrale meldpost Waddenzee",
         "type": "area",
-        "channel": 4,
+        "channel": "4",
         "phone": "+31887974599",
         "vhfdata": {
           "generic": {
