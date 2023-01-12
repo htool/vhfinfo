@@ -49,6 +49,51 @@
     {
       "type": "Feature",
       "properties": {
+        "id": "cb49c73e-d030-408f-b81d-bd941f4d9aff",
+        "name": "New feature",
+        "callname": "Commenly used call sign",
+        "type": "vts",
+        "url": "http://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              14.27941755657,
+              -7.231698708367
+            ],
+            [
+              12.457021863687,
+              -11.652236404115
+            ],
+            [
+              17.157038644205,
+              -11.953349393643
+            ],
+            [
+              14.27941755657,
+              -7.231698708367
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "id": "900d52ce-8125-491d-b31b-170a3b01d03d",
         "name": "New feature",
         "callname": "Commenly used call sign",
