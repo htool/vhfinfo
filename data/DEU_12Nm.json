@@ -5,19 +5,16 @@
       "type": "Feature",
       "properties": {
         "name": "DEU",
-        "callname": "",
-        "type": "territorial",
         "vhfdata": {
           "generic": {
-            "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "43d89361-6bcc-4a75-a1bc-0c4b84b17b7f",
+        "channel": "16"
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -149,11 +146,11 @@
               54.00635934
             ],
             [
-              10.917879899854164,
-              53.96122073885945
+              10.917879899854,
+              53.961220738859
             ],
             [
-              10.881587765578901,
+              10.881587765579,
               53.96000373
             ],
             [
@@ -337,27 +334,23 @@
               54.88276367
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
         "name": "DEU",
-        "callname": "",
-        "type": "territorial",
         "vhfdata": {
           "generic": {
-            "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "a33cd080-af1b-4c31-bf40-61b5cce30b56",
+        "channel": "16"
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -553,8 +546,7 @@
               53.59803462
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     }
   ]
