@@ -5,17 +5,13 @@
       "type": "Feature",
       "properties": {
         "name": "GBR",
-        "callname": "",
-        "type": "territorial",
         "vhfdata": {
           "generic": {
-            "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "17fc519e-1779-4d8c-9380-9ddb67902c42",
+        "channel": "16"
       },
       "geometry": {
         "type": "Polygon",
