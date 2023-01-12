@@ -3,7 +3,20 @@
   "features": [
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name": "DNK",
+        "callname": "",
+        "type": "territorial",
+        "vhfdata": {
+          "generic": {
+            "channel": 16,
+            "mode": "listen"
+          },
+          "emergency": {
+            "url": ""
+          }
+        }
+      },
       "geometry": {
         "coordinates": [
           [
