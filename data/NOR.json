@@ -1,50 +1,5 @@
 {
   "type": "FeatureCollection",
   "features": [
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "8624dd89-870b-48fc-b021-d2379a56615b",
-        "name": "New feature",
-        "callname": "Commenly used call sign",
-        "type": "vts",
-        "url": "http://",
-        "phone": "+",
-        "vhfdata": {
-          "generic": {
-            "mode": "listen"
-          },
-          "pleasure": {
-            "mode": "listen"
-          },
-          "cargo": {
-            "mode": "listen"
-          }
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              8.037689029479,
-              70.859087197171
-            ],
-            [
-              9.047973010338,
-              70.451508434393
-            ],
-            [
-              6.632076534371,
-              70.170200685492
-            ],
-            [
-              8.037689029479,
-              70.859087197171
-            ]
-          ]
-        ]
-      }
-    }
   ]
 }
