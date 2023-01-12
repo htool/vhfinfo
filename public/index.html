@@ -345,6 +345,9 @@ function loadUrl (url, layerGroup, country) {
           case 'area':
             specific = areaLayer
             break
+          case 'territorial':
+            specific = Nm12
+            break
         } 
         // console.log(feature)
         layer.on({
@@ -375,8 +378,10 @@ function loadUrl (url, layerGroup, country) {
 
         });
         drawnItems.addLayer(layer)
-        layerGroup.addLayer(layer)
         specific.addLayer(layer)
+        if (feature.properties.type != 'territorial') {
+          vhfinfo.addLayer(layer)
+        }
         countriesLoaded.push(country)
       }
   });
@@ -498,21 +503,21 @@ function checkLayer (addRemove, l) {
   switch (addRemove) {
   case 'add':
     if (m.hasLayer(l)) {
-      console.log(l + ' is active')
+      // console.log(l + ' is active')
       m.addLayer(l)
     } else {
-      console.log(l + ' is inactive')
+      // console.log(l + ' is inactive')
       m.addLayer(l)
       m.removeLayer(l)
     }
     break
   case 'remove':
     if (m.hasLayer(l)) {
-      console.log(l + ' is active')
+      // console.log(l + ' is active')
       m.removeLayer(l)
       m.addLayer(l)
     } else {
-      console.log(l + ' is inactive')
+      // console.log(l + ' is inactive')
       m.removeLayer(l)
     }
     break
@@ -610,6 +615,7 @@ function addPullDown (text, id, options) {
 }
 
 function editPopup (layer, f) {
+  // console.log(layer)
   if (!isPopupOpen()) {
   layer.addTo(m)
   if (typeof f != 'undefined') {
@@ -624,7 +630,7 @@ function editPopup (layer, f) {
     p.id = generateUUID()
     p.name = "New feature"
     p.callname = "Commenly used call sign"
-    p.type = ""
+    p.type = "vts"
     p.channel = "",
     p.url = "http://"
     p.phone = "+"
@@ -741,13 +747,15 @@ function editPopup (layer, f) {
     let popupId = layer._popup._leaflet_id
     let id = layer._popup._source._leaflet_id
     let name = layer._popup._source.feature.properties.name
+    let type = layer._popup._source.feature.properties.type
     if (confirm("Sure you want to delete '" + name + "'?")) {
-      // removeLayerFromGroup(id, vhfinfo)
+      $(".leaflet-popup-close-button")[0].click();
       removeLayerFromGroup(id, drawnItems)
-      $(".leaflet-popup-close-button")[0].click();
+      removeLayerFromGroup(id, vhfinfo)     // Until diff
+      removeIdFromLayer(id, type)
     } else {
-      console.log('Do not delete feature')
       $(".leaflet-popup-close-button")[0].click();
+      console.log('Do not delete feature')
     }
   });
 
@@ -787,6 +795,26 @@ function editPopup (layer, f) {
 else {
     $(".leaflet-popup-close-button")[0].click();
 }
+}
+
+function removeIdFromLayer(id, type) {
+  switch (type) {
+    case 'vts':
+      removeLayerFromGroup(id, vtsLayer)
+      break
+    case 'lock':
+      removeLayerFromGroup(id, lockLayer)
+      break
+    case 'bridge':
+      removeLayerFromGroup(id, bridgeLayer)
+      break
+    case 'marina':
+      removeLayerFromGroup(id, marinaLayer)
+      break
+    case 'area':
+      removeLayerFromGroup(id, areaLayer)
+      break
+  }
 }
 
 
