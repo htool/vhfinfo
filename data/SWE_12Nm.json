@@ -5,17 +5,14 @@
       "type": "Feature",
       "properties": {
         "name": "SWE",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "b46536da-cc75-4dc8-9d98-3fd66d5122f2"
       },
       "geometry": {
         "type": "Polygon",
@@ -217,17 +214,14 @@
       "type": "Feature",
       "properties": {
         "name": "SWE",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "880266e9-fd98-4ac1-b4ee-468c9d1bc25d"
       },
       "geometry": {
         "type": "Polygon",
@@ -265,17 +259,14 @@
       "type": "Feature",
       "properties": {
         "name": "SWE",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "ec80a252-c5e2-47e2-85db-96bb0e09ae47"
       },
       "geometry": {
         "type": "Polygon",
@@ -369,17 +360,14 @@
       "type": "Feature",
       "properties": {
         "name": "SWE",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "3c27e0b2-6a4e-4569-9f58-2725917413ab"
       },
       "geometry": {
         "type": "Polygon",
@@ -413,17 +401,13 @@
       "type": "Feature",
       "properties": {
         "name": "SWE",
-        "callname": "",
-        "type": "territorial",
         "vhfdata": {
           "generic": {
-            "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "d2893da7-7fd0-4a26-8478-7c1e995f145a",
+        "channel": "16"
       },
       "geometry": {
         "type": "Polygon",
@@ -1405,17 +1389,14 @@
       "type": "Feature",
       "properties": {
         "name": "SWE",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "8af5e1dc-f076-489c-8695-fe535cbcb1ed"
       },
       "geometry": {
         "type": "Polygon",
@@ -1445,17 +1426,14 @@
       "type": "Feature",
       "properties": {
         "name": "SWE",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "92dcb3b4-a500-4526-abbb-e4995fc5cb19"
       },
       "geometry": {
         "type": "Polygon",
@@ -1485,17 +1463,14 @@
       "type": "Feature",
       "properties": {
         "name": "SWE",
-        "callname": "",
         "type": "territorial",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "id": "d4d82e41-807e-477e-b79c-02a56c40ca5b"
       },
       "geometry": {
         "type": "Polygon",
