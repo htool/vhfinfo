@@ -6,7 +6,7 @@
       "properties": {
         "name": "Brunsbüttel lock",
         "type": "lock",
-        "channel": 13,
+        "channel": "13",
         "url": "https://www.gdws.wsv.bund.de/DE/schifffahrt/01_seeschifffahrt/nord-ostsee-kanal/Sportboot-NOK/Flyer/PDF_Merkbl_Spobo_eng.pdf?__blob=publicationFile&v=4",
         "phone": "+",
         "vhfdata": {
