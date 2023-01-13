@@ -16,6 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js" integrity="sha512-ozq8xQKq6urvuU6jNgkfqAmT7jKN2XumbrX1JiB3TnF7tI48DPI4Gy1GXKD/V3EExgAs1V+pRO7vwtS1LHg0Gw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/geo-coordinates-parser/bundle/geocoordsparser.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fast-json-patch/dist/fast-json-patch.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" integrity="sha512-gc3xjCmIy673V6MyOAZhIW93xhM9ei1I+gLbmFjUHIjocENRsLX/QUE1htk5q1XV2D/iie/VQ8DXI6Vu8bexvQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.EasyButton/2.4.0/easy-button.css">
     <link href="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css" rel="stylesheet" />
@@ -98,6 +99,12 @@
     margin-left: -1px;
     display: block;
   }
+  .upload {
+    left: 20px;
+    margin-top: 3px;
+    margin-left: -1px;
+    display: block;
+  }
 </style>
 
 <script type="text/javascript">
@@ -111,6 +118,8 @@ var dms = false
 var crosshairMode = false
 var followMode = false
 var followTimer
+
+var changedIds = {}
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -155,12 +164,13 @@ mq.addTo(m);
 
 var drawnItems = new L.FeatureGroup();
 var Nm12 = new L.LayerGroup()
-var vhfinfo = new L.LayerGroup()
+// var vhfinfo = new L.LayerGroup()
 var bridgeLayer = new L.LayerGroup()
 var lockLayer = new L.LayerGroup()
 var vtsLayer = new L.LayerGroup()
 var areaLayer = new L.LayerGroup()
 var marinaLayer = new L.LayerGroup()
+var changedLayer = new L.LayerGroup()
 
 //link to tiles
 var osmUrl='https://tiles.openseamap.org/seamark/{z}/{x}/{y}.png'
@@ -257,6 +267,7 @@ drawnItems.on('remove',(e)=>{
 
 L.DomUtil.addClass(m._container,'crosshair-cursor-enabled');
 
+async function setupButtons () {
 if (!editMode) {
   L.easyButton( '<span class="edit">&#9998;</span>', function(){
     let country = getCountryAtCenter()
@@ -283,6 +294,7 @@ if (!editMode) {
       m.removeControl(position);
     }
   }, 'Toggle the crosshair and coordinates display').addTo(m);
+
   L.easyButton( '<span class="follow"><img src="arrow.png" width="20" height="20"></img></span>', function(btn, m){
     followMode = !followMode
     console.log('followMode: ' + followMode)
@@ -295,10 +307,42 @@ if (!editMode) {
       clearTimeout(followTimer)
     }
   }, 'Toggle the location follow mode').addTo(m);
+
 } else {
+  L.easyButton( '<span class="upload"><img src="upload.png" width="20" height="16"></img></span>', function(btn, m){
+    if (Object.keys(changedIds).length == 0) {
+      alert('No changes were made')
+      return
+    }
+    var uploadList = "Press [Ok] to upload the following changes:\n"
+    for (const [id, info] of Object.entries(changedIds)) {
+      uploadList = uploadList + " - " + info.name + " ["+ info.action + "]\n"
+    }
+    if (confirm(uploadList) == true) {
+      console.log(changedIds)
+      for (const [uuid, info] of Object.entries(changedIds)) {
+        console.log(info)
+        if (info.action != 'Delete') {
+          id = info.leaflet_id
+          layer = m._layers[id]
+          changedLayer.addLayer(layer)
+          changedIds[uuid].feature = changedLayer.toGeoJSON(12).features[0]
+          changedLayer.removeLayer(layer)
+        }
+      }
+      console.log(changedIds)
+      var reason = prompt("You are about to publish changes to " + country + ". Please add a reason for change." , "");
+      let commitResult = commitGitHub(country, changedIds, reason)
+      location.reload()
+    } else {
+    }
+  }, 'Upload your changed to VHFinfo').addTo(m);
+
   m.addControl(position);
 }
+}
 
+setupButtons()
 
 L.easyButton( '<span class="help">&#63;</span>', function() {
   open("https://github.com/htool/vhfinfo/blob/main/HELP.md", "_blank")
@@ -367,7 +411,7 @@ function loadUrl (url, layerGroup, country) {
           },
           click: function(e) {
             if (editMode) {
-              editPopup(l, e.target.feature)
+              editPopup(l, e.target.feature, this._leaflet_id)
             } else {
               showInfo(e.target.feature, l, country);
             }
@@ -379,10 +423,14 @@ function loadUrl (url, layerGroup, country) {
         });
         drawnItems.addLayer(layer)
         specific.addLayer(layer)
+        /*
         if (feature.properties.type != 'territorial') {
           vhfinfo.addLayer(layer)
         }
-        countriesLoaded.push(country)
+        */
+        if (!countriesLoaded.includes(country)) {
+          countriesLoaded.push(country)
+        }
       }
   });
 }
@@ -614,8 +662,8 @@ function addPullDown (text, id, options) {
   return html
 }
 
-function editPopup (layer, f) {
-  // console.log(layer)
+function editPopup (layer, f, l_id) {
+  console.log('Leaflet_id: ' + l_id)
   if (!isPopupOpen()) {
   layer.addTo(m)
   if (typeof f != 'undefined') {
@@ -651,12 +699,13 @@ function editPopup (layer, f) {
         "note": ""
       }
     }
+    changedIds[p.id] = {"name": p.name, "action": "Add", "leaflet_id": l_id}
   }
 
   var contentHTML = '<form id="form" onsubmit="return false"><table>'+
     '<tr><td><label>Name<label></td><td><input id="name" type="text"></td></tr>'+
     '<tr><td><label>Call name:<label></td><td><input id="callname" type="text"></td></tr>'
-  contentHTML = contentHTML + addPullDown('Type', 'type', ['VTS','Lock','Bridge','Area','Marina'])
+  contentHTML = contentHTML + addPullDown('Type', 'type', ['VTS','Lock','Bridge','Area','Marina','Territorial'])
   contentHTML = contentHTML + '<tr><td><label>Channel:<label></td><td><input id="channel" type="text"></td></tr>'
   contentHTML = contentHTML + addPullDown('Mode', 'gmode', ['Listen','Announce','Report'])
   contentHTML = contentHTML + '<tr><td><label>Note:<label></td><td><input id="gnote" type="text"></td></tr>'+
@@ -675,7 +724,6 @@ function editPopup (layer, f) {
 
   var buttonSaveHTML   = '<div class="buttons" id="save"  ><button>Save</button></div>'
   var buttonCancelHTML = '<div class="buttons" id="cancel"><button>Cancel</button></div>'
-  var buttonExportHTML = '<div class="buttons" id="export"><button>Publish</button></div>'
   var buttonDeleteHTML = '<div class="buttons" id="delete"><button>Delete</button></div></div>'
 
   // Adding info to popup
@@ -692,10 +740,6 @@ function editPopup (layer, f) {
   var buttonCancel = L.DomUtil.create('div', 'buttons')
   buttonCancel.innerHTML = buttonCancelHTML
   btnDiv.append(buttonCancel)
-  
-  var buttonExport = L.DomUtil.create('div', 'buttons')
-  buttonExport.innerHTML = buttonExportHTML
-  btnDiv.append(buttonExport)
   
   var buttonDelete = L.DomUtil.create('div', 'buttons')
   buttonDelete.innerHTML = buttonDeleteHTML
@@ -733,68 +777,40 @@ function editPopup (layer, f) {
  
   // Save
   L.DomEvent.addListener(buttonSave, 'click', function(event){
+    console.log('Adding properties: ' + JSON.stringify(layer._popup._source.feature.properties))
     var properties = layer._popup._source.feature.properties
-    saveProperties (properties)
-    $(".leaflet-popup-close-button")[0].click();
+    saveProperties (properties, layer._popup._source._leaflet_id)
+    // console.log('layer._popup._source: ' + layer._popup._source)
+    $(".leaflet-popup-close-button")[0].click()
   });
  
   L.DomEvent.addListener(buttonCancel, 'click', function(event){
     console.log('Cancelled - close popup')
     $(".leaflet-popup-close-button")[0].click();
   });
- 
+
+
   L.DomEvent.addListener(buttonDelete, 'click', function(event){
     let popupId = layer._popup._leaflet_id
     let id = layer._popup._source._leaflet_id
+    let uuid = layer._popup._source.feature.properties.id
     let name = layer._popup._source.feature.properties.name
     let type = layer._popup._source.feature.properties.type
     if (confirm("Sure you want to delete '" + name + "'?")) {
       $(".leaflet-popup-close-button")[0].click();
+      changedIds[uuid] = {"name": name, "action": "Delete"}
+      changedIds[uuid].type = type
       removeLayerFromGroup(id, drawnItems)
-      removeLayerFromGroup(id, vhfinfo)     // Until diff
+      // removeLayerFromGroup(id, vhfinfo)     // Until diff
       removeIdFromLayer(id, type)
     } else {
       $(".leaflet-popup-close-button")[0].click();
       console.log('Do not delete feature')
     }
   });
-
-  L.DomEvent.addListener(buttonExport, 'click', function(event){
-    var countryGeoJson = vhfinfo.toGeoJSON(12)
-    
-    // In case someone edits and forgets to save
-    var properties = layer._popup._source.feature.properties
-    saveProperties (properties)
-
-    if (typeof newItems != 'undefined') {
-      newItems.forEach(id => {
-        countryGeoJson.features.push(drawnItems._layers[id].toGeoJSON(12))
-      })
-    }
- 
-    var territorialGeoJson = Nm12.toGeoJSON(12)
- 
-    if (typeof layer.urls != 'undefined') {
-      if (layer.urls[0].endsWith('_12Nm.json')) {
-        console.log('Committing a territorial country file')
-        var file = country + '_12Nm.json'
-        commitGitHub(file, territorialGeoJson, country, 'territorial')
-      } else {
-        console.log('Committing a country file')
-        var file = country + '.json'
-        commitGitHub(file, countryGeoJson, country, 'country')
-      }
-    } else {
-      console.log('Committing new items (country)')
-      var file = country + '.json'
-      commitGitHub(file, countryGeoJson, country, 'country')
-    }
-    $(".leaflet-popup-close-button")[0].click();
-  });
+  console.log(layer)
 }
-else {
-    $(".leaflet-popup-close-button")[0].click();
-}
+
 }
 
 function removeIdFromLayer(id, type) {
@@ -850,44 +866,25 @@ function removeEmpty(obj) {
   return Object.keys(obj).length > 0 || obj instanceof Array ? obj : undefined;
 }
 
-
-function commitGitHub (file, json, country, type) {
-  var fileJson
-  jQuery.ajax({
-    url: 'https://api.github.com/repos/htool/vhfinfo/contents/data/' + file,
-    success: function (data) {
-      fileJson = JSON.stringify(JSON.parse(atob(data.content)), null, 2)
-    },
-    async: true
-  });
-
-  // Clean up object
-  json = removeEmpty(json)
-
-  let content = JSON.stringify(json)
-  console.log(content)
-
-  if (_.isEqual(content, fileJson)) {
-    confirm("No changes have been made.")
-  } else {
-
-    var reason = prompt("You are about to publish changes to " + file + ". Please add a reason for change." , "");
-    if (reason != null && reason != "") {
-      let postURL = "https://mdam.defect.org:6644/api?country=" + country + "&type=" + type + "&reason=" + reason
-      $.ajax({
-        type: "POST",
-        contentType: 'application/json',
-        url: postURL,
-        cache: false,
-        data: content,
-        success: function(result) {
-          alert(result)
-        },
-        error: function(result) {
-          alert(result)
-        }
-      });
-    }
+function commitGitHub(country, changesObj, reason) {
+  if (reason != "" && reason != null) {
+    let postURL = "https://mdam.defect.org:6644/apiv2?country=" + country + "&reason=" + reason
+    $.ajax({
+      type: "POST",
+      contentType: 'application/json',
+      url: postURL,
+      cache: false,
+      async: false,
+      data: JSON.stringify(changesObj),
+      success: function(result) {
+        alert(result)
+        return result
+      },
+      error: function(result) {
+        alert (result)
+        return result
+      }
+    });
   }
 }
 
@@ -896,24 +893,7 @@ function jsonToBase64(jsonObj) {
     return Base64.encode(jsonString)
 }
 
-function copyStringToClipboard (str) {
-   // Create new element
-   var el = document.createElement('textarea');
-   // Set value (string to be copied)
-   el.value = str;
-   // Set non-editable to avoid focus and move outside of view
-   el.setAttribute('readonly', '');
-   el.style = {position: 'absolute', left: '-9999px'};
-   document.body.appendChild(el);
-   // Select text inside element
-   el.select();
-   // Copy text to clipboard
-   document.execCommand('copy');
-   // Remove temporary element
-   document.body.removeChild(el);
-}
-
-function saveProperties (properties) {
+function saveProperties (properties, leaflet_id) {
   properties.name = getPropertyValue('name')
   properties.callname = getPropertyValue('callname')
   properties.type = getPropertyValue('type')
@@ -933,6 +913,18 @@ function saveProperties (properties) {
   properties.vhfdata.cargo.mode = getPropertyValue('cmode')
   properties.vhfdata.cargo.note = getPropertyValue('cnote')
   properties.vhfdata.cargo.url = getPropertyValue('curl')
+  if (typeof changedIds[properties.id] != 'undefined') {
+    if (changedIds[properties.id].action == 'Add') {
+      changedIds[properties.id] = {"name": properties.name, "type": properties.type, "action": "Add", "leaflet_id": leaflet_id}
+      console.log('New item')
+    } else {
+      changedIds[properties.id] = {"name": properties.name, "action": "Change", "type": properties.type, "leaflet_id": leaflet_id}
+      console.log('Changed existing item again')
+    }
+  } else {
+    changedIds[properties.id] = {"name": properties.name, "action": "Change", "type": properties.type, "leaflet_id": leaflet_id}
+    console.log('Changed existing item first time')
+  }
 }
 
 function getPropertyValue (element) {
@@ -986,6 +978,20 @@ function loadCountriesBbox () {
     },
     async: false
   });
+}
+
+function url2Obj(url) {
+  jQuery.ajax({
+    url: url,
+    success: function (data) {
+      Obj = JSON.parse(data)
+    },
+    error: function () {
+      Obj = {}
+    },
+    async: false
+  });
+  return Obj
 }
 
 function getCountryAtCenter () {
