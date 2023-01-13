@@ -8,26 +8,11 @@
         "type": "territorial",
         "vhfdata": {
           "generic": {
-            "mode": "listen",
-            "note": ""
-          },
-          "pleasure": {
-            "mode": "",
-            "note": "",
-            "url": ""
-          },
-          "cargo": {
-            "mode": "",
-            "note": "",
-            "url": ""
+            "mode": "listen"
           }
         },
         "id": "b46536da-cc75-4dc8-9d98-3fd66d5122f2",
-        "callname": "",
-        "channel": "16",
-        "url": "",
-        "phone": "",
-        "update": ""
+        "channel": "16"
       },
       "geometry": {
         "type": "Polygon",
