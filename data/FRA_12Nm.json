@@ -4,15 +4,15 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "FRA",
+        "name": "French waters",
         "type": "territorial",
         "vhfdata": {
           "generic": {
-            "channel": 16,
             "mode": "listen"
           }
         },
-        "id": "0a917ef0-779a-4e29-a6aa-1dfc55eac62a"
+        "id": "0a917ef0-779a-4e29-a6aa-1dfc55eac62a",
+        "channel": "16"
       },
       "geometry": {
         "type": "Polygon",
@@ -288,15 +288,15 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "FRA",
+        "name": "French waters",
         "type": "territorial",
         "vhfdata": {
           "generic": {
-            "channel": 16,
             "mode": "listen"
           }
         },
-        "id": "79e587c2-e15d-4677-8cf1-5c7ea8001eea"
+        "id": "79e587c2-e15d-4677-8cf1-5c7ea8001eea",
+        "channel": "16"
       },
       "geometry": {
         "type": "Polygon",
