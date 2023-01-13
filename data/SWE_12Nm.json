@@ -4,15 +4,30 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "SWE",
+        "name": "Swedish waters",
         "type": "territorial",
         "vhfdata": {
           "generic": {
-            "channel": 16,
-            "mode": "listen"
+            "mode": "listen",
+            "note": ""
+          },
+          "pleasure": {
+            "mode": "",
+            "note": "",
+            "url": ""
+          },
+          "cargo": {
+            "mode": "",
+            "note": "",
+            "url": ""
           }
         },
-        "id": "b46536da-cc75-4dc8-9d98-3fd66d5122f2"
+        "id": "b46536da-cc75-4dc8-9d98-3fd66d5122f2",
+        "callname": "",
+        "channel": "16",
+        "url": "",
+        "phone": "",
+        "update": ""
       },
       "geometry": {
         "type": "Polygon",
