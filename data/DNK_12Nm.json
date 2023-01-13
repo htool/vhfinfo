@@ -4,15 +4,30 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "DNK",
+        "name": "Danish Waters",
         "type": "territorial",
         "vhfdata": {
           "generic": {
-            "channel": 16,
-            "mode": "listen"
+            "mode": "listen",
+            "note": ""
+          },
+          "pleasure": {
+            "mode": "",
+            "note": "",
+            "url": ""
+          },
+          "cargo": {
+            "mode": "",
+            "note": "",
+            "url": ""
           }
         },
-        "id": "40528089-2693-4948-a533-b59b6c91c408"
+        "id": "40528089-2693-4948-a533-b59b6c91c408",
+        "callname": "",
+        "channel": "16",
+        "url": "",
+        "phone": "",
+        "update": ""
       },
       "geometry": {
         "type": "Polygon",
@@ -117,11 +132,26 @@
         "type": "territorial",
         "vhfdata": {
           "generic": {
-            "channel": 16,
-            "mode": "listen"
+            "mode": "listen",
+            "note": ""
+          },
+          "pleasure": {
+            "mode": "",
+            "note": "",
+            "url": ""
+          },
+          "cargo": {
+            "mode": "",
+            "note": "",
+            "url": ""
           }
         },
-        "id": "f88f39d6-afcf-4396-a726-d21bbd3ff565"
+        "id": "f88f39d6-afcf-4396-a726-d21bbd3ff565",
+        "callname": "",
+        "channel": "",
+        "url": "",
+        "phone": "",
+        "update": ""
       },
       "geometry": {
         "type": "Polygon",
