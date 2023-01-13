@@ -252,7 +252,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "DNK",
+        "name": "Danish waters",
+        "type": "territorial",
         "vhfdata": {
           "generic": {
             "mode": "listen"
