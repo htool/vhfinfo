@@ -5,6 +5,7 @@
       "type": "Feature",
       "properties": {
         "name": "NOR",
+        "type": "territorial",
         "vhfdata": {
           "generic": {
             "mode": "listen"
