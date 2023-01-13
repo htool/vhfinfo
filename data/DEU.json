@@ -121,112 +121,6 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "56b80e19-f255-4df2-82d0-4400682bb0eb",
-        "name": "New feature",
-        "callname": "Commenly used call sign",
-        "type": "vts",
-        "channel": "",
-        "url": "http://",
-        "phone": "+",
-        "note": "",
-        "vhfdata": {
-          "generic": {
-            "mode": "listen",
-            "note": ""
-          },
-          "pleasure": {
-            "mode": "listen",
-            "note": "",
-            "url": ""
-          },
-          "cargo": {
-            "mode": "listen",
-            "note": "",
-            "url": ""
-          }
-        },
-        "update": ""
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              9.425236076054,
-              52.509534770327
-            ],
-            [
-              9.661335049842,
-              52.559655679587
-            ],
-            [
-              9.655844376033,
-              52.46605036189
-            ],
-            [
-              9.425236076054,
-              52.509534770327
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "efa28f10-fa1c-4bfb-8263-b060dc06438d",
-        "name": "New feature",
-        "callname": "Commenly used call sign",
-        "type": "vts",
-        "channel": "",
-        "url": "http://",
-        "phone": "+",
-        "note": "",
-        "vhfdata": {
-          "generic": {
-            "mode": "listen",
-            "note": ""
-          },
-          "pleasure": {
-            "mode": "listen",
-            "note": "",
-            "url": ""
-          },
-          "cargo": {
-            "mode": "listen",
-            "note": "",
-            "url": ""
-          }
-        },
-        "update": ""
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              9.255025187974,
-              52.606383589696
-            ],
-            [
-              9.496614835571,
-              52.709675332199
-            ],
-            [
-              9.128739690367,
-              52.786153488787
-            ],
-            [
-              9.255025187974,
-              52.606383589696
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "id": "1b95be44-f921-497c-a634-37c26651aa9e",
         "name": "New feature",
         "callname": "Commenly used call sign",
@@ -272,6 +166,59 @@
             [
               9.738204483168,
               52.639730175324
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "a36dce07-51b4-4856-b30a-81383c19eeda",
+        "name": "New feature",
+        "callname": "Commenly used call sign",
+        "type": "vts",
+        "channel": "",
+        "url": "http://",
+        "phone": "+",
+        "note": "",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": ""
+          },
+          "pleasure": {
+            "mode": "listen",
+            "note": "",
+            "url": ""
+          },
+          "cargo": {
+            "mode": "listen",
+            "note": "",
+            "url": ""
+          }
+        },
+        "update": ""
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.788325384969,
+              52.526248097001
+            ],
+            [
+              9.128747161128,
+              52.529589999433
+            ],
+            [
+              9.018933684947,
+              52.348763181988
+            ],
+            [
+              8.788325384969,
+              52.526248097001
             ]
           ]
         ]
