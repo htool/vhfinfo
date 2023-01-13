@@ -646,7 +646,18 @@ if (editMode) {
 	    console.log("Editted");
 	  });
   });
+
+  m.on('draw:edited', function(e) {
+    const layers = e.layers;
+    layers.eachLayer(function (layer) {
+      const p = layer.feature.properties
+      if (typeof changedIds[p.id] == 'undefined') {
+        changedIds[p.id] = {"name": p.name, "action": "Change", "type": p.type, "leaflet_id": Object.keys(e.layers._layers)[0]}
+      }
+    });
+  });
 }
+
 
 function isPopupOpen () {
   return document.getElementsByClassName('leaflet-popup-content').length
