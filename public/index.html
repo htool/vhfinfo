@@ -357,7 +357,8 @@ function followUpdate () {
 }
 
 function loadUrl (url, layerGroup, country) {
-  // console.log('Loading ' + country)
+  console.log('Loading ' + country)
+  try{
   var l = new L.GeoJSON.AJAX(url, {
      style: function(feature) {
           return {
@@ -433,6 +434,9 @@ function loadUrl (url, layerGroup, country) {
         }
       }
   });
+  } catch (e) {
+    console.log('Loading did not work')
+  }
 }
 
 
