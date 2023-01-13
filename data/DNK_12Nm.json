@@ -128,7 +128,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "DNK",
+        "name": "Danish waters",
         "type": "territorial",
         "vhfdata": {
           "generic": {
@@ -148,7 +148,7 @@
         },
         "id": "f88f39d6-afcf-4396-a726-d21bbd3ff565",
         "callname": "",
-        "channel": "",
+        "channel": "16",
         "url": "",
         "phone": "",
         "update": ""
