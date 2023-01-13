@@ -6,7 +6,6 @@
       "properties": {
         "name": "DEU",
         "type": "territorial",
-        "type": "territorial",
         "vhfdata": {
           "generic": {
             "mode": "listen"
