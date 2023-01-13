@@ -878,6 +878,7 @@ function removeEmpty(obj) {
 }
 
 function commitGitHub(country, changesObj, reason) {
+  changesObj = removeEmpty(changesObj)
   if (reason != "" && reason != null) {
     let postURL = "https://mdam.defect.org:6644/apiv2?country=" + country + "&reason=" + reason
     $.ajax({
