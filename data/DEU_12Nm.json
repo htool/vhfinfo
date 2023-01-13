@@ -4,15 +4,30 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "DEU",
+        "name": "German waters",
         "type": "territorial",
         "vhfdata": {
           "generic": {
-            "mode": "listen"
+            "mode": "listen",
+            "note": ""
+          },
+          "pleasure": {
+            "mode": "",
+            "note": "",
+            "url": ""
+          },
+          "cargo": {
+            "mode": "",
+            "note": "",
+            "url": ""
           }
         },
         "id": "43d89361-6bcc-4a75-a1bc-0c4b84b17b7f",
-        "channel": "16"
+        "channel": "16",
+        "callname": "",
+        "url": "",
+        "phone": "",
+        "update": ""
       },
       "geometry": {
         "type": "Polygon",
