@@ -4437,6 +4437,56 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "562442bc-2de8-42de-b1aa-d736e4a0673c",
+        "name": "Roompotsluis",
+        "type": "lock",
+        "channel": "18",
+        "url": "https://waterkaart.net/gids/sluis.php?naam=Roompotsluis",
+        "phone": "+31887974790",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "Pay attention to bridge height"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.683842420578,
+              51.618702683078
+            ],
+            [
+              3.685483932495,
+              51.618596099789
+            ],
+            [
+              3.685483932495,
+              51.618469531808
+            ],
+            [
+              3.683778047562,
+              51.618536146579
+            ],
+            [
+              3.683842420578,
+              51.618702683078
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
