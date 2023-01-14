@@ -647,6 +647,7 @@
       "type": "Feature",
       "properties": {
         "name": "French waters",
+        "type": "territorial",
         "vhfdata": {
           "generic": {
             "mode": "listen"
@@ -1426,43 +1427,7 @@
         ],
         "type": "Polygon"
       }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "French waters",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          }
-        },
-        "id": "a757c2d9-d91c-42b4-bbbe-5976414fbc78"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -1.54367876,
-              49.03431726
-            ],
-            [
-              -1.55249071,
-              49.0328145
-            ],
-            [
-              -1.55104685,
-              49.03015554
-            ],
-            [
-              -1.54367876,
-              49.03431726
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
     }
   ]
 }
+
