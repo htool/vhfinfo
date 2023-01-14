@@ -4,19 +4,15 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "NOR",
-        "callname": "",
+        "name": "Norwegian waters",
         "type": "territorial",
         "id": "bd088b87-da78-4c98-9a66-f74d4b5ae7aa",
         "vhfdata": {
           "generic": {
-            "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "channel": "16"
       },
       "geometry": {
         "type": "Polygon",
