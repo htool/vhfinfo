@@ -4,19 +4,15 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "FIN",
-        "callname": "",
+        "name": "Finnish waters",
         "type": "territorial",
         "id": "098c84b2-a90f-4a4d-96ea-869dd4f1ec31",
         "vhfdata": {
           "generic": {
-            "channel": 16,
             "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
           }
-        }
+        },
+        "channel": "16"
       },
       "geometry": {
         "type": "Polygon",
