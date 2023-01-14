@@ -5,14 +5,18 @@
       "type": "Feature",
       "properties": {
         "name": "ESP",
+        "callname": "",
         "type": "territorial",
+        "id": "76a1b6fd-d7cc-45b5-af64-e96230eb16f7",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
+          },
+          "emergency": {
+            "url": ""
           }
-        },
-        "id": "df88ad8c-19b5-46a7-92c3-b2894ca4d9cf"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -94,51 +98,18 @@
       "type": "Feature",
       "properties": {
         "name": "ESP",
+        "callname": "",
         "type": "territorial",
+        "id": "a4fa3da9-f003-4cc8-a856-c36ce0e5351e",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
+          },
+          "emergency": {
+            "url": ""
           }
-        },
-        "id": "24e2631a-7ab9-44fc-a543-10c7d008616a"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -3.03554905,
-              35.93724644
-            ],
-            [
-              -3.03038454,
-              35.94148815
-            ],
-            [
-              -3.03731811,
-              35.93981445
-            ],
-            [
-              -3.03554905,
-              35.93724644
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "ESP",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          }
-        },
-        "id": "092817b1-09e6-4156-97dd-67faf805ba96"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -348,199 +319,18 @@
       "type": "Feature",
       "properties": {
         "name": "ESP",
+        "callname": "",
         "type": "territorial",
+        "id": "1ca73fe4-28d8-4716-a3f4-7b32090473cc",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
+          },
+          "emergency": {
+            "url": ""
           }
-        },
-        "id": "4b8c046e-5c15-467a-9662-c55a4c9dffdd"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -6.84539306,
-              37.12347627
-            ],
-            [
-              -6.84526694,
-              37.12449586
-            ],
-            [
-              -6.85361195,
-              37.1293056
-            ],
-            [
-              -6.84539306,
-              37.12347627
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "ESP",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          }
-        },
-        "id": "bbd69674-c7d2-4a3d-af22-dac5ef3717e6"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -6.83806765,
-              37.11621106
-            ],
-            [
-              -6.83764708,
-              37.11736643
-            ],
-            [
-              -6.8429023,
-              37.12243366
-            ],
-            [
-              -6.83806765,
-              37.11621106
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "ESP",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          }
-        },
-        "id": "432000fa-a45a-4552-aa2e-0bd9ea952e5c"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -6.83275235,
-              37.10836935
-            ],
-            [
-              -6.83354688,
-              37.11117733
-            ],
-            [
-              -6.83694684,
-              37.11562502
-            ],
-            [
-              -6.83275235,
-              37.10836935
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "ESP",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          }
-        },
-        "id": "2b2367d5-82e8-4a15-a2cc-7036d6a77bc5"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -6.31731045,
-              36.52691185
-            ],
-            [
-              -6.31411207,
-              36.52706015
-            ],
-            [
-              -6.31775784,
-              36.52897644
-            ],
-            [
-              -6.31731045,
-              36.52691185
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "ESP",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          }
-        },
-        "id": "25454514-a186-4fdc-a045-23f268ac2f40"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -6.22080863,
-              36.37702537
-            ],
-            [
-              -6.21937716,
-              36.38046586
-            ],
-            [
-              -6.22169375,
-              36.38041115
-            ],
-            [
-              -6.22080863,
-              36.37702537
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "ESP",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          }
-        },
-        "id": "6cb9d596-d662-41ca-928a-7a4d3d282aa4"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -630,34 +420,74 @@
       "type": "Feature",
       "properties": {
         "name": "ESP",
+        "callname": "",
         "type": "territorial",
+        "id": "2486fbc2-d5e7-449f-a7e9-e7443c94d42f",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
+          },
+          "emergency": {
+            "url": ""
           }
-        },
-        "id": "c24f36c5-8469-4b5a-b6bc-98db04cae838"
+        }
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
             [
-              1.43119001,
-              39.09110868
+              1.53334272,
+              39.11850965
             ],
             [
-              1.43216646,
-              39.09072256
+              1.38845062,
+              39.07941031
             ],
             [
-              1.43273592,
-              39.09337068
+              1.37660015,
+              39.06313145
             ],
             [
-              1.43119001,
-              39.09110868
+              1.36230385,
+              39.07446015
+            ],
+            [
+              1.16204252,
+              38.98008388
+            ],
+            [
+              1.18666667,
+              38.8625
+            ],
+            [
+              1.385,
+              38.64
+            ],
+            [
+              1.56916667,
+              38.64833333
+            ],
+            [
+              1.58168238,
+              38.66011283
+            ],
+            [
+              1.6525,
+              39.03166667
+            ],
+            [
+              1.59314644,
+              39.09810281
+            ],
+            [
+              1.56238174,
+              39.09323025
+            ],
+            [
+              1.53334272,
+              39.11850965
             ]
           ]
         ]
@@ -667,14 +497,18 @@
       "type": "Feature",
       "properties": {
         "name": "ESP",
+        "callname": "",
         "type": "territorial",
+        "id": "e8d19a19-bccd-46e5-a99e-03d067285141",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
+          },
+          "emergency": {
+            "url": ""
           }
-        },
-        "id": "0dd37288-9847-4e93-83e8-df4eca33dce6"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -756,124 +590,18 @@
       "type": "Feature",
       "properties": {
         "name": "ESP",
+        "callname": "",
         "type": "territorial",
+        "id": "7df45855-4d5e-4c0e-aa26-624211b290b5",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
+          },
+          "emergency": {
+            "url": ""
           }
-        },
-        "id": "c066aad6-cf45-454e-b1c8-eb9795be389c"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              0.68486631,
-              39.89301705
-            ],
-            [
-              0.68782854,
-              39.89925945
-            ],
-            [
-              0.68253314,
-              39.89601314
-            ],
-            [
-              0.68486631,
-              39.89301705
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "ESP",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          }
-        },
-        "id": "29b784ad-f836-4617-be4e-80e28dfd532b"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              0.66883171,
-              39.88969326
-            ],
-            [
-              0.67004275,
-              39.88975656
-            ],
-            [
-              0.66739428,
-              39.89264667
-            ],
-            [
-              0.66883171,
-              39.88969326
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "ESP",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          }
-        },
-        "id": "771764df-d118-430b-98ec-f6ae4e245d61"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              0.67016435,
-              39.8737421
-            ],
-            [
-              0.67211366,
-              39.87434745
-            ],
-            [
-              0.67010355,
-              39.87586534
-            ],
-            [
-              0.67016435,
-              39.8737421
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "ESP",
-        "vhfdata": {
-          "generic": {
-            "mode": "listen"
-          }
-        },
-        "id": "af22110c-8927-4d0d-b0fb-30ada95d649d",
-        "channel": "16"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1023,14 +751,204 @@
       "type": "Feature",
       "properties": {
         "name": "ESP",
+        "callname": "",
         "type": "territorial",
+        "id": "d78ef3b0-596e-4648-9522-54f3c902e521",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
+          },
+          "emergency": {
+            "url": ""
           }
-        },
-        "id": "e5f84fd0-59e3-48e9-b3c0-1a190abe32e5"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.07391847,
+              40.09182551
+            ],
+            [
+              3.8305873,
+              40.05256808
+            ],
+            [
+              3.79089737,
+              40.01501477
+            ],
+            [
+              3.821,
+              39.92166667
+            ],
+            [
+              4.29508674,
+              39.79880893
+            ],
+            [
+              4.32833333,
+              39.875
+            ],
+            [
+              4.27,
+              39.995
+            ],
+            [
+              4.17253748,
+              40.05942438
+            ],
+            [
+              4.07391847,
+              40.09182551
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "ESP",
+        "callname": "",
+        "type": "territorial",
+        "id": "e9ecfec4-1eb6-4e01-98b6-94fd8735cae4",
+        "vhfdata": {
+          "generic": {
+            "channel": 16,
+            "mode": "listen"
+          },
+          "emergency": {
+            "url": ""
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.21412158,
+              39.96154106
+            ],
+            [
+              3.1640625,
+              39.95926344
+            ],
+            [
+              3.07941902,
+              39.92420304
+            ],
+            [
+              3.03093123,
+              39.93052816
+            ],
+            [
+              2.98646343,
+              39.90931904
+            ],
+            [
+              2.94993091,
+              39.91925156
+            ],
+            [
+              2.84406686,
+              39.86176145
+            ],
+            [
+              2.77823925,
+              39.85586715
+            ],
+            [
+              2.76530445,
+              39.83514702
+            ],
+            [
+              2.66814125,
+              39.79191792
+            ],
+            [
+              2.58488953,
+              39.71663904
+            ],
+            [
+              2.52690434,
+              39.70143795
+            ],
+            [
+              2.46227574,
+              39.65207493
+            ],
+            [
+              2.30637205,
+              39.57736385
+            ],
+            [
+              2.91866667,
+              39.12583333
+            ],
+            [
+              2.96033025,
+              39.12499177
+            ],
+            [
+              3.2352705,
+              39.36621296
+            ],
+            [
+              3.40303695,
+              39.58326757
+            ],
+            [
+              3.41804291,
+              39.63385507
+            ],
+            [
+              3.45471203,
+              39.65489733
+            ],
+            [
+              3.45599377,
+              39.70309925
+            ],
+            [
+              3.47713578,
+              39.71272564
+            ],
+            [
+              3.45395565,
+              39.72101498
+            ],
+            [
+              3.46005805,
+              39.74625921
+            ],
+            [
+              3.21412158,
+              39.96154106
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "ESP",
+        "callname": "",
+        "type": "territorial",
+        "id": "522ed166-a733-4c05-8b69-1fb3ef5c3715",
+        "vhfdata": {
+          "generic": {
+            "channel": 16,
+            "mode": "listen"
+          },
+          "emergency": {
+            "url": ""
+          }
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1476,88 +1394,18 @@
       "type": "Feature",
       "properties": {
         "name": "ESP",
+        "callname": "",
         "type": "territorial",
+        "id": "000e579c-6997-4dfc-bff2-cca959a44496",
         "vhfdata": {
           "generic": {
             "channel": 16,
             "mode": "listen"
+          },
+          "emergency": {
+            "url": ""
           }
-        },
-        "id": "4a93c4ee-b8d5-4189-be52-32ab2e98b6cc"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              3.18469036,
-              41.86254203
-            ],
-            [
-              3.18818033,
-              41.86205804
-            ],
-            [
-              3.18720794,
-              41.86309481
-            ],
-            [
-              3.18469036,
-              41.86254203
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "ESP",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          }
-        },
-        "id": "76860780-d295-4958-bcc8-e896c5243eeb"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -0.45979714,
-              38.16116238
-            ],
-            [
-              -0.45564485,
-              38.16076756
-            ],
-            [
-              -0.45781148,
-              38.16186595
-            ],
-            [
-              -0.45979714,
-              38.16116238
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "ESP",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          }
-        },
-        "id": "854474d8-76f7-4f32-8223-6c08a786b9ff"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1866,80 +1714,6 @@
             [
               -6.94860024,
               43.79201384
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "ESP",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          }
-        },
-        "id": "f9292254-08aa-4467-ab78-81a552b261d8"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -9.07890332,
-              42.51634002
-            ],
-            [
-              -9.0779891,
-              42.51781285
-            ],
-            [
-              -9.08028245,
-              42.51940596
-            ],
-            [
-              -9.07890332,
-              42.51634002
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "ESP",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          }
-        },
-        "id": "0c22ade7-abaa-4986-8e27-df9dac45871b"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -8.81408024,
-              41.90841055
-            ],
-            [
-              -8.81626356,
-              41.90701234
-            ],
-            [
-              -8.81078064,
-              41.90643084
-            ],
-            [
-              -8.81408024,
-              41.90841055
             ]
           ]
         ]

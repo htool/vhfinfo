@@ -93,7 +93,7 @@ function handleJson(json) {
 					      }
 					    }
 					  }
-            if (simplified.geometry.coordinates[0].length > 30) {
+            if (simplified.geometry.coordinates[0].length > 8) {
               features.push(simplified)
             }
           })
