@@ -5,14 +5,18 @@
       "type": "Feature",
       "properties": {
         "name": "NOR",
+        "callname": "",
         "type": "territorial",
+        "id": "bd088b87-da78-4c98-9a66-f74d4b5ae7aa",
         "vhfdata": {
           "generic": {
+            "channel": 16,
             "mode": "listen"
+          },
+          "emergency": {
+            "url": ""
           }
-        },
-        "id": "20db6ac3-ae81-4946-ba68-1be22513a13f",
-        "channel": "16"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -585,43 +589,6 @@
             [
               31.43870439,
               70.09752266
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "NOR",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          }
-        },
-        "id": "78dec2cc-3c8b-45ff-8904-b7557e724730"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              10.46934617,
-              64.85906684
-            ],
-            [
-              10.47112513,
-              64.85926974
-            ],
-            [
-              10.46947503,
-              64.859676
-            ],
-            [
-              10.46934617,
-              64.85906684
             ]
           ]
         ]
