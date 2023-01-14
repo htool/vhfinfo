@@ -4,9 +4,10 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "4a417598-4051-408e-a880-fbf205701c54",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -18,6 +19,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -117,16 +119,16 @@
               54.88166599
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "1b5a5320-dc41-43f5-99ca-1427faadf231",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -138,6 +140,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -221,16 +224,16 @@
               54.85468137
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "03f9e874-3f15-4ca3-8e67-5bea9a34883e",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -242,6 +245,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -353,16 +357,16 @@
               55.19493306
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "3f11a3f7-22ce-46b6-8e96-9a5eb98fd78e",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -374,6 +378,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -557,8 +562,16 @@
               60.28907764
             ],
             [
+              28.91066682,
+              60.26215684
+            ],
+            [
               28.93589127,
               60.26947331
+            ],
+            [
+              28.97519624,
+              60.23213851
             ],
             [
               28.99600863,
@@ -582,23 +595,31 @@
             ],
             [
               29.57139444,
-              60.20476642598077
+              60.19727921
             ],
             [
-              29.755346115013396,
-              60.18455167582869
+              29.87008512,
+              60.16149366
             ],
             [
-              29.928985130607515,
-              60.149411896418165
+              29.93362105,
+              60.13614225
             ],
             [
               29.94631362,
               60.10232103
             ],
             [
+              29.92178094,
+              60.09068537
+            ],
+            [
               29.95094252,
               60.07623446
+            ],
+            [
+              29.93776858,
+              60.06997383
             ],
             [
               29.95783424,
@@ -625,6 +646,18 @@
               59.98551238
             ],
             [
+              30.15823865,
+              60.01337683
+            ],
+            [
+              30.12740946,
+              60.02214885
+            ],
+            [
+              30.18451846,
+              60.00515485
+            ],
+            [
               30.19084597,
               59.98193967
             ],
@@ -637,16 +670,40 @@
               59.95724905
             ],
             [
-              30.23490537774967,
-              59.87910074904738
+              30.16978383,
+              59.88834846
             ],
             [
-              30.221449637492864,
-              59.867077822786115
+              30.22495413,
+              59.89716053
+            ],
+            [
+              30.23505437,
+              59.88119602
+            ],
+            [
+              30.18433595,
+              59.88501537
+            ],
+            [
+              30.22992313,
+              59.86536014
+            ],
+            [
+              30.16800082,
+              59.88711834
+            ],
+            [
+              30.1611588,
+              59.87441528
             ],
             [
               30.17565668,
               59.87081313
+            ],
+            [
+              30.15459037,
+              59.87157547
             ],
             [
               30.1609745,
@@ -671,6 +728,14 @@
             [
               29.68181765,
               59.93118
+            ],
+            [
+              29.68914533,
+              59.97971892
+            ],
+            [
+              29.67242646,
+              59.94125605
             ],
             [
               29.63689828,
@@ -905,56 +970,132 @@
               60.22833333
             ],
             [
-              27.72854562199125,
-              60.39247021214628
+              27.51194444,
+              60.25972222
             ],
             [
-              27.691722670001035,
-              60.43479379134216
+              27.77784198,
+              60.27560543
             ],
             [
-              27.748722283001804,
-              60.44981684828633
+              27.8311993,
+              60.32095325
             ],
             [
-              27.75012860399632,
-              60.46892230220404
+              27.82080683,
+              60.37990329
             ],
             [
-              27.76337153200087,
-              60.47437802097867
+              27.67989431,
+              60.4286651
             ],
             [
-              27.777176591999744,
-              60.53368813656328
+              27.77792525,
+              60.46775675
             ],
             [
-              27.81459179600045,
-              60.554075014655155
+              27.75804877,
+              60.47058904
+            ],
+            [
+              27.77776801,
+              60.51972047
+            ],
+            [
+              27.75521827,
+              60.54093306
+            ],
+            [
+              27.81045187,
+              60.5389533
+            ],
+            [
+              27.7868818,
+              60.52864075
+            ],
+            [
+              27.82173765,
+              60.50258446
+            ],
+            [
+              27.77588296,
+              60.50468898
+            ],
+            [
+              27.8101474,
+              60.47271502
+            ],
+            [
+              27.84156835,
+              60.48488212
+            ],
+            [
+              27.84858346,
+              60.49943125
+            ],
+            [
+              27.82699025,
+              60.52612352
             ],
             [
               27.85193777,
               60.55185831
             ],
             [
-              27.878212674678277,
-              60.518404778252844
+              27.86445737,
+              60.51605535
             ],
             [
-              27.95958243064531,
-              60.52158347031656
+              27.89619291,
+              60.50225615
             ],
             [
-              28.021236610178025,
-              60.52781736032744
+              27.92415643,
+              60.51996064
+            ],
+            [
+              27.93216014,
+              60.50682533
+            ],
+            [
+              27.95932865,
+              60.51784313
+            ],
+            [
+              27.99124885,
+              60.49841166
+            ],
+            [
+              28.01066196,
+              60.51123202
+            ],
+            [
+              27.99858212,
+              60.51567793
+            ],
+            [
+              28.00501144,
+              60.53368342
+            ],
+            [
+              28.06740451,
+              60.49992752
+            ],
+            [
+              28.0751276,
+              60.50730824
+            ],
+            [
+              28.06095684,
+              60.51291943
             ],
             [
               28.07999122,
               60.52698624
             ],
             [
-              28.112744614797524,
-              60.526123759048524
+              28.15242314,
+              60.51338911
             ],
             [
               28.13976514,
@@ -973,12 +1114,16 @@
               60.56250834
             ],
             [
-              28.24995507739791,
-              60.577087912778595
+              28.26979434,
+              60.56649315
             ],
             [
-              28.278384397112035,
-              60.598302059916854
+              28.29046047,
+              60.59745514
+            ],
+            [
+              28.34426951,
+              60.59951794
             ],
             [
               28.29924583,
@@ -1093,16 +1238,16 @@
               60.80909336
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "b1c27f5d-79bb-4229-af10-5da47fbf889e",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -1114,6 +1259,271 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              28.58460605,
+              60.62831902
+            ],
+            [
+              28.57373846,
+              60.63765681
+            ],
+            [
+              28.55922914,
+              60.62446833
+            ],
+            [
+              28.57069278,
+              60.60670197
+            ],
+            [
+              28.54646707,
+              60.59780407
+            ],
+            [
+              28.57443845,
+              60.58163416
+            ],
+            [
+              28.5632863,
+              60.57723594
+            ],
+            [
+              28.60307014,
+              60.55877376
+            ],
+            [
+              28.63625336,
+              60.56563938
+            ],
+            [
+              28.60336196,
+              60.59767044
+            ],
+            [
+              28.62685907,
+              60.57804418
+            ],
+            [
+              28.64488781,
+              60.59257758
+            ],
+            [
+              28.58460605,
+              60.62831902
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Russian waters",
+        "callname": "",
+        "type": "territorial",
+        "id": "9cf75366-7b36-4c20-8b17-c589ffeaf19c",
+        "vhfdata": {
+          "generic": {
+            "channel": 16,
+            "mode": "listen"
+          },
+          "emergency": {
+            "url": ""
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              28.43823826,
+              60.46419382
+            ],
+            [
+              28.43316376,
+              60.44965756
+            ],
+            [
+              28.52641392,
+              60.35039306
+            ],
+            [
+              28.50138056,
+              60.38205063
+            ],
+            [
+              28.52752018,
+              60.37166417
+            ],
+            [
+              28.52313113,
+              60.38855684
+            ],
+            [
+              28.49123204,
+              60.42423773
+            ],
+            [
+              28.5108124,
+              60.41394305
+            ],
+            [
+              28.43823826,
+              60.46419382
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Russian waters",
+        "callname": "",
+        "type": "territorial",
+        "id": "4477655b-6fdc-4bc2-a731-5db0b469303f",
+        "vhfdata": {
+          "generic": {
+            "channel": 16,
+            "mode": "listen"
+          },
+          "emergency": {
+            "url": ""
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              29.76593244,
+              60.02162504
+            ],
+            [
+              29.63477385,
+              60.03164446
+            ],
+            [
+              29.67743945,
+              60.02173364
+            ],
+            [
+              29.70151472,
+              59.98826981
+            ],
+            [
+              29.71349657,
+              60.00555205
+            ],
+            [
+              29.79341745,
+              59.97333515
+            ],
+            [
+              29.80446136,
+              59.98372614
+            ],
+            [
+              29.76419926,
+              60.00831521
+            ],
+            [
+              29.77809226,
+              60.02152908
+            ],
+            [
+              29.76593244,
+              60.02162504
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Russian waters",
+        "callname": "",
+        "type": "territorial",
+        "id": "91292471-3a4a-4b5a-9e9c-fda59ae1fe3b",
+        "vhfdata": {
+          "generic": {
+            "channel": 16,
+            "mode": "listen"
+          },
+          "emergency": {
+            "url": ""
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              27.89355886,
+              59.99308968
+            ],
+            [
+              27.88833022,
+              60.01178157
+            ],
+            [
+              27.86848128,
+              60.00547576
+            ],
+            [
+              27.82870436,
+              60.02237701
+            ],
+            [
+              27.83055115,
+              60.03476405
+            ],
+            [
+              27.79674017,
+              60.00066924
+            ],
+            [
+              27.82611704,
+              59.98164535
+            ],
+            [
+              27.87344623,
+              60.00279021
+            ],
+            [
+              27.89355886,
+              59.99308968
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Russian waters",
+        "callname": "",
+        "type": "territorial",
+        "id": "704d2c49-7484-4d9e-91a6-4b6280aef85d",
+        "vhfdata": {
+          "generic": {
+            "channel": 16,
+            "mode": "listen"
+          },
+          "emergency": {
+            "url": ""
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -1229,16 +1639,16 @@
               55.37397432
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "54a7916d-6f05-4b9b-a8c9-8e036ecfdf3e",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -1250,6 +1660,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -1389,16 +1800,16 @@
               55.33861256
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "f1366777-5dfe-4484-b43c-3520aa28211d",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -1410,6 +1821,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -1481,16 +1893,16 @@
               56.40996986
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "d91ecf09-12f1-480c-8586-1da3e0d39ff7",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -1502,6 +1914,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -3505,16 +3918,16 @@
               46.07596923
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "25da8c3e-c9b5-40fe-87a1-c79101dd4aef",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -3526,6 +3939,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -3621,16 +4035,16 @@
               46.03302765
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "0750c30b-4ab9-4cbf-8039-8231af1d0964",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -3642,6 +4056,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -3685,16 +4100,16 @@
               45.31179404
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "5ab9ac30-ef20-41ed-ab17-4cfcf89872f0",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -3706,114 +4121,7 @@
         }
       },
       "geometry": {
-        "coordinates": [
-          [
-            [
-              47.75427544,
-              45.28192866
-            ],
-            [
-              47.76589775,
-              45.28294802
-            ],
-            [
-              47.78628945,
-              45.39423215
-            ],
-            [
-              47.72229862,
-              45.19846845
-            ],
-            [
-              47.75473464,
-              45.25878382
-            ],
-            [
-              47.74617291,
-              45.26750195
-            ],
-            [
-              47.76534176,
-              45.27860665
-            ],
-            [
-              47.75427544,
-              45.28192866
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "RUS",
-        "callname": "",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
-          }
-        }
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              48.03360975,
-              45.23588765
-            ],
-            [
-              47.99220455,
-              45.23194134
-            ],
-            [
-              47.98744881,
-              45.21806848
-            ],
-            [
-              48.01812315,
-              45.17193675
-            ],
-            [
-              48.06976533,
-              45.20141184
-            ],
-            [
-              48.06166911,
-              45.22518015
-            ],
-            [
-              48.03360975,
-              45.23588765
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "RUS",
-        "callname": "",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
-          }
-        }
-      },
-      "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -3889,16 +4197,16 @@
               43.95045412
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "16654081-f309-4196-90de-f5de3b30be65",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -3910,6 +4218,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -4973,16 +5282,16 @@
               47.37304676
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "38bd6b12-03e7-4b54-a097-96bc98868a29",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -4994,6 +5303,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -5037,16 +5347,16 @@
               47.14022255
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "8641af9e-063e-42c1-beaa-8e7dcb2f58c8",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -5058,62 +5368,7 @@
         }
       },
       "geometry": {
-        "coordinates": [
-          [
-            [
-              39.24600422,
-              47.14022481
-            ],
-            [
-              39.33848786,
-              47.17390454
-            ],
-            [
-              39.27968085,
-              47.20566571
-            ],
-            [
-              39.23513234,
-              47.19212317
-            ],
-            [
-              39.22744214,
-              47.18371761
-            ],
-            [
-              39.24609411,
-              47.16334546
-            ],
-            [
-              39.23417926,
-              47.14164758
-            ],
-            [
-              39.24600422,
-              47.14022481
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "RUS",
-        "callname": "",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
-          }
-        }
-      },
-      "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -5345,16 +5600,16 @@
               48.30140083
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "9b162c75-0b4a-4e44-9b1f-8865c054f1ef",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -5366,58 +5621,7 @@
         }
       },
       "geometry": {
-        "coordinates": [
-          [
-            [
-              153.19483018,
-              48.1236335
-            ],
-            [
-              153.1569705,
-              48.10222316
-            ],
-            [
-              153.16750002,
-              48.0688889
-            ],
-            [
-              153.23222208,
-              48.03750002
-            ],
-            [
-              153.27860665,
-              48.04044497
-            ],
-            [
-              153.26625121,
-              48.08350384
-            ],
-            [
-              153.19483018,
-              48.1236335
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "RUS",
-        "callname": "",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
-          }
-        }
-      },
-      "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -5457,16 +5661,16 @@
               47.3480885
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "09a40758-5e27-4da6-a890-090f67f8f534",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -5478,6 +5682,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -5553,16 +5758,16 @@
               47.109375
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "c04a6aef-dd74-46fc-8a91-caf7c7d972f4",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -5574,6 +5779,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -5805,16 +6011,16 @@
               49.83938511
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "ab3f6433-64a1-4a92-ad4c-f8260553b407",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -5826,6 +6032,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -5897,16 +6104,16 @@
               49.59249985
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "8e11bf02-f303-4b6f-87dd-6d0c10b448da",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -5918,6 +6125,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -5957,16 +6165,16 @@
               49.13805544
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "9c6f72b4-d368-4494-93e7-256420b0b50a",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -5978,6 +6186,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -6025,16 +6234,16 @@
               48.90394175
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "94ec1f88-2a65-4368-ba7e-a5d16862626b",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -6046,6 +6255,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -6209,16 +6419,16 @@
               46.74285243
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "bd9f0ae4-7f0d-4074-bd77-88f25d78d32a",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -6230,58 +6440,7 @@
         }
       },
       "geometry": {
-        "coordinates": [
-          [
-            [
-              150.83895111,
-              46.50021601
-            ],
-            [
-              150.90334392,
-              46.51227605
-            ],
-            [
-              150.89181101,
-              46.53242993
-            ],
-            [
-              150.91099298,
-              46.53645468
-            ],
-            [
-              150.86072183,
-              46.53922427
-            ],
-            [
-              150.82957137,
-              46.50778675
-            ],
-            [
-              150.83895111,
-              46.50021601
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "RUS",
-        "callname": "",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
-          }
-        }
-      },
-      "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -6389,16 +6548,16 @@
               46.22789001
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "926039a2-44d2-4d96-bc44-4bec38834aeb",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -6410,6 +6569,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -6481,16 +6641,16 @@
               46.28929166
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "ab2f3081-903a-4989-88a6-8dabd7db6a9d",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -6502,6 +6662,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -8545,16 +8706,16 @@
               65.20838057
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "0cdbcd15-f745-4348-a64b-fa270614159d",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -8566,58 +8727,7 @@
         }
       },
       "geometry": {
-        "coordinates": [
-          [
-            [
-              -177.67723346,
-              68.24821544
-            ],
-            [
-              -177.73503757,
-              68.24462748
-            ],
-            [
-              -177.72701335,
-              68.23233914
-            ],
-            [
-              -177.74425745,
-              68.22490454
-            ],
-            [
-              -177.68742287,
-              68.20264196
-            ],
-            [
-              -177.66017306,
-              68.22678375
-            ],
-            [
-              -177.67723346,
-              68.24821544
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "RUS",
-        "callname": "",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
-          }
-        }
-      },
-      "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -8709,16 +8819,16 @@
               68.21519053
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "aa0d8ebb-61c5-4bdf-a90c-b5b2809c2582",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -8730,58 +8840,7 @@
         }
       },
       "geometry": {
-        "coordinates": [
-          [
-            [
-              -177.52576244,
-              68.19074547
-            ],
-            [
-              -177.57216442,
-              68.16280615
-            ],
-            [
-              -177.51959634,
-              68.15544105
-            ],
-            [
-              -177.51142645,
-              68.16534793
-            ],
-            [
-              -177.53184426,
-              68.16221857
-            ],
-            [
-              -177.51151085,
-              68.18427181
-            ],
-            [
-              -177.52576244,
-              68.19074547
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "RUS",
-        "callname": "",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
-          }
-        }
-      },
-      "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -8829,16 +8888,16 @@
               68.12999725
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "e9be011a-6e6c-4347-aa75-083a97412a82",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -8850,6 +8909,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -8913,16 +8973,16 @@
               68.34742606
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "f59bba4f-3e7a-4e83-96af-00d87851db71",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -8934,6 +8994,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -9381,16 +9442,16 @@
               71.79501098
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "a38d3084-9abc-41b1-beb3-3e35f675de4a",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -9402,58 +9463,7 @@
         }
       },
       "geometry": {
-        "coordinates": [
-          [
-            [
-              -178.17596495,
-              71.50949466
-            ],
-            [
-              -177.94996047,
-              71.43138886
-            ],
-            [
-              -177.86004221,
-              71.3747406
-            ],
-            [
-              -177.92575765,
-              71.42314911
-            ],
-            [
-              -178.01571262,
-              71.45988464
-            ],
-            [
-              -178.20786524,
-              71.51464462
-            ],
-            [
-              -178.17596495,
-              71.50949466
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "RUS",
-        "callname": "",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
-          }
-        }
-      },
-      "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -15773,16 +15783,16 @@
               57.76841521
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "ab04b2e9-6f9d-4ab4-9328-b4a5538f917b",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -15794,6 +15804,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -17881,16 +17892,16 @@
               53.47615027
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "0751e158-4ba5-4e23-883a-5f67c00d1509",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -17902,118 +17913,7 @@
         }
       },
       "geometry": {
-        "coordinates": [
-          [
-            [
-              141.41801846,
-              53.33536291
-            ],
-            [
-              141.37242305,
-              53.35109746
-            ],
-            [
-              141.3156569,
-              53.34378803
-            ],
-            [
-              141.34878755,
-              53.32709694
-            ],
-            [
-              141.36728585,
-              53.34087551
-            ],
-            [
-              141.38341153,
-              53.32218456
-            ],
-            [
-              141.48358524,
-              53.29608846
-            ],
-            [
-              141.41801846,
-              53.33536291
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "RUS",
-        "callname": "",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
-          }
-        }
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              155.50927305,
-              50.91859365
-            ],
-            [
-              155.47451174,
-              50.91403055
-            ],
-            [
-              155.46398735,
-              50.86901855
-            ],
-            [
-              155.52575684,
-              50.80910921
-            ],
-            [
-              155.62369192,
-              50.80360103
-            ],
-            [
-              155.67193115,
-              50.8160274
-            ],
-            [
-              155.65846455,
-              50.89917862
-            ],
-            [
-              155.50927305,
-              50.91859365
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "RUS",
-        "callname": "",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
-          }
-        }
-      },
-      "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -18077,16 +17977,16 @@
               50.86277378
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "d161b313-bc8d-424f-bbfb-2d04dda93688",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -18098,6 +17998,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -18261,16 +18162,16 @@
               50.63145471
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "aa439cd4-1e7b-4d75-a52f-166ea06e4518",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -18282,62 +18183,7 @@
         }
       },
       "geometry": {
-        "coordinates": [
-          [
-            [
-              178.4641788,
-              63.99557304
-            ],
-            [
-              178.37243533,
-              63.98791838
-            ],
-            [
-              178.31583953,
-              63.95014751
-            ],
-            [
-              178.27525926,
-              63.94626486
-            ],
-            [
-              178.36476564,
-              63.94657254
-            ],
-            [
-              178.39870131,
-              63.97695887
-            ],
-            [
-              178.47199762,
-              63.97569823
-            ],
-            [
-              178.4641788,
-              63.99557304
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "RUS",
-        "callname": "",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
-          }
-        }
-      },
-      "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -18565,16 +18411,16 @@
               76.14985774
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "53983086-c21c-47da-9cef-6ecc7b3887a7",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -18586,6 +18432,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -18669,16 +18516,16 @@
               75.97337723
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "bd79bb0b-ab90-41f8-bc50-a6adada59588",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -18690,6 +18537,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -18757,16 +18605,16 @@
               75.90700865
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "80dca315-aca4-4f45-ba4a-caa5c2a20161",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -18778,6 +18626,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -19073,16 +18922,16 @@
               75.46620357
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "265f0b0b-f5e8-4337-96d4-c1812170b9cf",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -19094,6 +18943,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -19137,16 +18987,16 @@
               75.20347595
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "2a8570fe-90d4-4846-a2b7-7d054ffccea5",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -19158,6 +19008,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -19301,16 +19152,16 @@
               76.18708812
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "fd5e3789-5104-4dae-8e95-0f54f89ae4ab",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -19322,6 +19173,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -19369,16 +19221,16 @@
               76.17988574
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "91721210-aac2-48a0-a473-88a14934c246",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -19390,6 +19242,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -19477,16 +19330,16 @@
               73.92850666
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "adfa67b8-394c-45a6-937d-53f2c5af6c95",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -19498,6 +19351,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -19609,16 +19463,16 @@
               74.24788959
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "08cb9c73-a4cb-42d1-844d-03bc59e29df8",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -19630,6 +19484,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -19729,16 +19584,16 @@
               74.22648966
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "acc35619-dfde-42b4-9546-27755e05c1a3",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -19750,6 +19605,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -19837,16 +19693,16 @@
               74.37028735
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "f309b52e-b19c-494f-a11c-b3a6b365d9ef",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -19858,6 +19714,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -19909,16 +19766,16 @@
               74.27520227
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "fcdc32d1-4878-4fbd-b3de-1262b039d869",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -19930,6 +19787,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -20021,16 +19879,16 @@
               74.64503041
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "c953a7cc-37e1-413b-a055-5e7f2acbd860",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -20042,6 +19900,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -20109,16 +19968,16 @@
               74.62576425
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "51887892-5f86-405f-a8c4-6dc53db696e2",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -20130,6 +19989,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -20221,16 +20081,16 @@
               77.53340579
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "a386b805-dbb9-4127-9316-2e378d17a370",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -20242,6 +20102,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -20285,16 +20146,16 @@
               77.4810791
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "f02c726b-c8ae-4b02-a2a9-714a1bfdfa9c",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -20306,6 +20167,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -20345,16 +20207,16 @@
               77.52485275
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "4e025f5b-376e-484c-838e-6d3bcac443d9",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -20366,6 +20228,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -20453,16 +20316,16 @@
               78.22853317
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "23f496db-f66d-4b42-afe8-e47353368751",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -20474,62 +20337,7 @@
         }
       },
       "geometry": {
-        "coordinates": [
-          [
-            [
-              93.72850728,
-              78.14980745
-            ],
-            [
-              93.80311131,
-              78.15254331
-            ],
-            [
-              93.77641094,
-              78.1668663
-            ],
-            [
-              93.79290235,
-              78.20307612
-            ],
-            [
-              93.73478985,
-              78.18939686
-            ],
-            [
-              93.68531561,
-              78.21047902
-            ],
-            [
-              93.62406182,
-              78.18038464
-            ],
-            [
-              93.72850728,
-              78.14980745
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "RUS",
-        "callname": "",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
-          }
-        }
-      },
-      "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -20745,16 +20553,16 @@
               77.65738231
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "a95a9a69-0532-417f-85de-8a39c71ea831",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -20766,6 +20574,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -20809,16 +20618,16 @@
               77.30512607
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "0ec109b1-8560-47df-b614-1940cd11b1a1",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -20830,6 +20639,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -20937,16 +20747,16 @@
               77.2685194
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "2b7749e2-5179-4017-9682-e5ea254b38b8",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -20958,6 +20768,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -21041,16 +20852,16 @@
               76.97673786
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "bf3b6bd7-1a9c-48de-92a7-2bbe0d5fb698",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -21062,6 +20873,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -21113,16 +20925,16 @@
               77.12709177
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "1d9118cc-15fb-41a6-9c59-5c1defb6a9cc",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -21134,6 +20946,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -21229,16 +21042,16 @@
               76.75847601
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "b5e73f82-1d59-4519-a526-89a7aa507f08",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -21250,6 +21063,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -21301,16 +21115,16 @@
               76.75059545
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "72f652bd-7d16-4123-8db1-bfdc948402e3",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -21322,6 +21136,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -21409,16 +21224,16 @@
               76.79232091
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "28acdef0-4aa9-474f-b0c1-55b359619ddf",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -21430,6 +21245,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -21521,16 +21337,16 @@
               77.11732022
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "ffa5281b-7008-43c2-9c3e-aa56e38b8ad9",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -21542,58 +21358,7 @@
         }
       },
       "geometry": {
-        "coordinates": [
-          [
-            [
-              156.45613265,
-              77.08046424
-            ],
-            [
-              156.63166225,
-              77.08690155
-            ],
-            [
-              156.62111127,
-              77.10943222
-            ],
-            [
-              156.55013216,
-              77.11608398
-            ],
-            [
-              156.48298955,
-              77.10835934
-            ],
-            [
-              156.47915292,
-              77.08947647
-            ],
-            [
-              156.45613265,
-              77.08046424
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "RUS",
-        "callname": "",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
-          }
-        }
-      },
-      "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -21681,16 +21446,16 @@
               80.16332254
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "25b955a1-a034-48d3-a68c-b87594d25c82",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -21702,6 +21467,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -21789,16 +21555,16 @@
               80.9080681
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "aef02da3-0c7f-4d69-ab9c-3f61b9354d68",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -21810,6 +21576,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -21869,16 +21636,16 @@
               80.88100433
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "fe08e908-2d15-4d2e-9a2a-13d7b06fb88d",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -21890,6 +21657,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -21985,16 +21753,16 @@
               79.67849162
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "bd24ce6d-ff9e-45c9-9a98-127137768fc3",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -22006,6 +21774,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -22117,16 +21886,16 @@
               79.53189611
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "5715435b-e399-47f5-8063-88428c2be881",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -22138,6 +21907,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -22789,16 +22559,16 @@
               82.05500299
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "cb7b329f-a267-4982-a724-13f48d2c5dd4",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -22810,6 +22580,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -22885,16 +22656,16 @@
               81.85913086
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "f19243e8-8fc1-40d9-93c7-b9c6e79d19e7",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -22906,6 +22677,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -22977,16 +22749,16 @@
               81.70731783
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "c8f6bc33-44da-4257-a8b3-f088510db7c5",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -22998,6 +22770,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -23041,16 +22814,16 @@
               81.57136202
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "0badfc02-f7d9-46f9-bc14-bd06f330e519",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -23062,6 +22835,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -23101,16 +22875,16 @@
               81.58790992
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "9637900f-3ea4-4c32-8fa4-056314a58039",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -23122,6 +22896,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -23233,16 +23008,16 @@
               81.50276184
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "8801c90f-b80c-40d6-8341-51c96410434b",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -23254,6 +23029,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -23313,16 +23089,16 @@
               81.37187004
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "7be10dac-50d1-44cf-842b-89ca1f8485ec",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -23334,62 +23110,7 @@
         }
       },
       "geometry": {
-        "coordinates": [
-          [
-            [
-              59.83611941,
-              81.29455256
-            ],
-            [
-              59.82520807,
-              81.28888786
-            ],
-            [
-              60.38261485,
-              81.2433815
-            ],
-            [
-              60.60122192,
-              81.26226425
-            ],
-            [
-              60.53779185,
-              81.29058826
-            ],
-            [
-              60.24329543,
-              81.30689621
-            ],
-            [
-              60.03035188,
-              81.31101596
-            ],
-            [
-              59.83611941,
-              81.29455256
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "RUS",
-        "callname": "",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
-          }
-        }
-      },
-      "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -23573,16 +23294,16 @@
               81.24441135
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "f62d30c8-6c57-4267-a998-9476723bb5f4",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -23594,6 +23315,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -23657,16 +23379,16 @@
               81.21711731
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "02207eca-76bb-4bb8-945f-5dbd3b22e356",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -23678,58 +23400,7 @@
         }
       },
       "geometry": {
-        "coordinates": [
-          [
-            [
-              58.99914384,
-              81.19737625
-            ],
-            [
-              59.71029341,
-              81.16064072
-            ],
-            [
-              59.76534295,
-              81.16991043
-            ],
-            [
-              59.74849105,
-              81.19050968
-            ],
-            [
-              59.52267575,
-              81.20819092
-            ],
-            [
-              59.16541576,
-              81.21471405
-            ],
-            [
-              58.99914384,
-              81.19737625
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "RUS",
-        "callname": "",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
-          }
-        }
-      },
-      "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -23901,16 +23572,16 @@
               81.15250826
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "c53d748e-a015-4c40-9903-0bd409450697",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -23922,6 +23593,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -24153,16 +23825,16 @@
               80.62781453
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "7f988870-f685-4379-9e4e-6fc3c5edb738",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -24174,6 +23846,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -24281,16 +23954,16 @@
               80.32872665
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "f51bdd12-6e79-42c9-a77f-bea27febe3b2",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -24302,58 +23975,7 @@
         }
       },
       "geometry": {
-        "coordinates": [
-          [
-            [
-              60.02964008,
-              80.18942344
-            ],
-            [
-              59.9117527,
-              80.18251407
-            ],
-            [
-              59.92533994,
-              80.16654956
-            ],
-            [
-              60.05778277,
-              80.14176595
-            ],
-            [
-              60.24352646,
-              80.14341831
-            ],
-            [
-              60.13895965,
-              80.18118381
-            ],
-            [
-              60.02964008,
-              80.18942344
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "RUS",
-        "callname": "",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
-          }
-        }
-      },
-      "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -24417,16 +24039,16 @@
               80.0868988
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "820c276c-db38-41dd-b990-b5e58c96c143",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -24438,6 +24060,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -24489,16 +24112,16 @@
               79.89601135
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "596c0003-e1a5-4318-9b13-605c7d45b75f",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -24510,6 +24133,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -24613,16 +24237,16 @@
               80.01600265
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "0e53d246-3ed6-46b5-8b20-3d96e593ebc1",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -24634,62 +24258,7 @@
         }
       },
       "geometry": {
-        "coordinates": [
-          [
-            [
-              49.37783074,
-              80.01171112
-            ],
-            [
-              49.65704966,
-              80.02407074
-            ],
-            [
-              49.69182777,
-              80.04930484
-            ],
-            [
-              49.44241881,
-              80.08775711
-            ],
-            [
-              49.38279915,
-              80.0815773
-            ],
-            [
-              49.37783074,
-              80.06475437
-            ],
-            [
-              49.30926812,
-              80.04724503
-            ],
-            [
-              49.37783074,
-              80.01171112
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "RUS",
-        "callname": "",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
-          }
-        }
-      },
-      "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -24909,16 +24478,16 @@
               80.07166667
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "f53a84f2-f7a8-4368-9bdd-f89a24fd45f5",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -24930,6 +24499,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -25165,16 +24735,16 @@
               80.48858643
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "4afb856c-8c0a-4eb9-b375-13471a1d50d4",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -25186,6 +24756,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -25281,16 +24852,16 @@
               80.78075397
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "1f617e64-7aef-4c03-9046-011d20c43a8f",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -25302,6 +24873,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -25469,16 +25041,16 @@
               80.87345123
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "4f4e5020-45b5-446a-917e-f7e519058a7c",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -25490,6 +25062,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -25601,16 +25174,16 @@
               81.08116138
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "f7ecd84d-1d66-4ee7-a364-84203b6af0cf",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -25622,6 +25195,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -25661,16 +25235,16 @@
               81.09337175
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "0107ae6a-4f7c-4dbb-887e-c9b30ce4d95d",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -25682,6 +25256,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -25753,16 +25328,16 @@
               81.05082035
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "6ba06338-018f-42b6-9663-e33a018c2257",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -25774,6 +25349,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -25813,16 +25389,16 @@
               81.1166954
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "fbb930f3-f1e7-4ca0-a536-cd825595a2c4",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -25834,6 +25410,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -25889,16 +25466,16 @@
               80.92855453
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "3daedd4f-7e69-411a-82e7-8d8c44d339da",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -25910,6 +25487,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -25981,16 +25559,16 @@
               80.87310791
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "d918e536-376f-4fec-9e69-c738f15c4f05",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -26002,6 +25580,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -26081,16 +25660,16 @@
               80.72650897
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "32bcb260-51cc-48df-9ce9-3b8cbeedb02b",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -26102,6 +25681,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -26157,16 +25737,16 @@
               80.62351215
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "6f6e0b76-0324-4c4e-aefb-432a4052d65b",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -26178,62 +25758,7 @@
         }
       },
       "geometry": {
-        "coordinates": [
-          [
-            [
-              58.59731305,
-              80.56703556
-            ],
-            [
-              58.79697001,
-              80.55192935
-            ],
-            [
-              58.80642736,
-              80.5629158
-            ],
-            [
-              58.78961432,
-              80.58059692
-            ],
-            [
-              58.8789345,
-              80.60617435
-            ],
-            [
-              58.62988865,
-              80.59347153
-            ],
-            [
-              58.52585685,
-              80.57355881
-            ],
-            [
-              58.59731305,
-              80.56703556
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "RUS",
-        "callname": "",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
-          }
-        }
-      },
-      "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -26277,16 +25802,16 @@
               80.51828384
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "5b8ce678-3bdf-4b25-aca1-668db539a21e",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -26298,6 +25823,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -26345,16 +25871,16 @@
               80.43657303
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "e579cd26-ef5a-48d7-a8d2-271673959dbe",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -26366,6 +25892,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -26413,16 +25940,16 @@
               80.38970935
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "fb9d09e4-32a1-407e-b180-71a1cbbc1da0",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -26434,62 +25961,7 @@
         }
       },
       "geometry": {
-        "coordinates": [
-          [
-            [
-              55.92188346,
-              80.37726402
-            ],
-            [
-              56.18618858,
-              80.35224426
-            ],
-            [
-              56.29584706,
-              80.36192167
-            ],
-            [
-              56.29584706,
-              80.38670528
-            ],
-            [
-              56.27475905,
-              80.39071786
-            ],
-            [
-              55.91766584,
-              80.42258263
-            ],
-            [
-              55.75458395,
-              80.39260626
-            ],
-            [
-              55.92188346,
-              80.37726402
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "RUS",
-        "callname": "",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
-          }
-        }
-      },
-      "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -26609,16 +26081,16 @@
               80.34917593
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "f12f7cdf-fd06-4a32-839c-acdbc83e9a36",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -26630,6 +26102,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -26717,16 +26190,16 @@
               80.12871981
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "b72edc7c-8acc-41eb-a6fb-2a74cf85a35a",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -26738,6 +26211,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -26865,16 +26339,16 @@
               80.18592584
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "67fffef1-711a-4a10-b4d6-23e40259b775",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -26886,6 +26360,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -26945,16 +26420,16 @@
               80.31572342
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "c1ea4b48-cf17-4d63-9571-d8b2bf857afc",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -26966,6 +26441,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -27029,16 +26505,16 @@
               80.2340126
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "526b1588-b520-4208-9edc-f44cd517ebd6",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -27050,6 +26526,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -27145,16 +26622,16 @@
               80.47622681
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "2152ec98-9e4f-4264-a338-5f44454fa9c0",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -27166,6 +26643,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -27233,16 +26711,16 @@
               80.59802055
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "57238303-5943-4b44-b480-3f3f79beee76",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -27254,6 +26732,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -27297,16 +26776,16 @@
               81.31959915
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "759edaca-4e59-4ad0-9a3e-cf8236a34d9e",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -27318,58 +26797,7 @@
         }
       },
       "geometry": {
-        "coordinates": [
-          [
-            [
-              58.68210745,
-              81.61854744
-            ],
-            [
-              58.64983654,
-              81.63152933
-            ],
-            [
-              58.42760766,
-              81.62283886
-            ],
-            [
-              58.27064574,
-              81.59140337
-            ],
-            [
-              58.53468835,
-              81.57767045
-            ],
-            [
-              58.70997775,
-              81.60567284
-            ],
-            [
-              58.68210745,
-              81.61854744
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "RUS",
-        "callname": "",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
-          }
-        }
-      },
-      "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -27457,16 +26885,16 @@
               81.05326653
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "89993c52-245f-4ff8-af6a-69bc03a341ae",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -27478,6 +26906,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -41341,16 +40770,16 @@
               69.42747761
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "839cadbe-0a48-48f0-a350-e7ffa707af21",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -41362,6 +40791,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -41405,16 +40835,16 @@
               69.86371386
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "8746b7df-e488-4bf5-ac3c-91cb92f23def",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -41426,6 +40856,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -41465,16 +40896,16 @@
               70.77748322
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "df17785b-af52-4dac-a469-dafbe7c0d2b3",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -41486,6 +40917,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -41541,16 +40973,16 @@
               70.79606914
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "5c6ac22d-1c3c-48ca-b5bc-aab6cb92037c",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -41562,6 +40994,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -41601,16 +41034,16 @@
               70.91277921
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "5dd2584b-c847-44a8-bf72-73dd3031aaad",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -41622,6 +41055,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -41869,16 +41303,16 @@
               75.10298431
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "46f2038e-1e25-4487-bfac-ab0c2f07192b",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -41890,6 +41324,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -42037,16 +41472,16 @@
               75.67361736
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "dce52174-0a92-4a29-916a-a7875dc2dfb6",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -42058,6 +41493,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -42121,16 +41557,16 @@
               81.05850208
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "8815a993-c89a-4d85-a0d6-6db36e476398",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -42142,58 +41578,7 @@
         }
       },
       "geometry": {
-        "coordinates": [
-          [
-            [
-              59.30095422,
-              69.18193805
-            ],
-            [
-              59.28310955,
-              69.17987824
-            ],
-            [
-              59.27201676,
-              69.13146973
-            ],
-            [
-              59.33278525,
-              69.10726535
-            ],
-            [
-              59.29564905,
-              69.13524616
-            ],
-            [
-              59.30915296,
-              69.16528702
-            ],
-            [
-              59.30095422,
-              69.18193805
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "RUS",
-        "callname": "",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
-          }
-        }
-      },
-      "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -42261,16 +41646,16 @@
               69.11344516
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "2f5da1f9-5ecc-4ca1-a239-bfebd8f1078b",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -42282,6 +41667,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -42337,16 +41723,16 @@
               70.69392395
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "e324e2e7-d577-42da-904a-f8f1209f8ceb",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -42358,6 +41744,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -42405,16 +41792,16 @@
               69.70131731
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "96aad447-09ef-43a2-a2b0-c181e4ba6f5b",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -42426,166 +41813,7 @@
         }
       },
       "geometry": {
-        "coordinates": [
-          [
-            [
-              134.4593296,
-              69.09778142
-            ],
-            [
-              134.43925607,
-              69.10167885
-            ],
-            [
-              134.44189072,
-              69.0844053
-            ],
-            [
-              134.52439678,
-              69.08900535
-            ],
-            [
-              134.47794425,
-              69.11385095
-            ],
-            [
-              134.44744766,
-              69.1099112
-            ],
-            [
-              134.4593296,
-              69.09778142
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "RUS",
-        "callname": "",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
-          }
-        }
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              134.68180704,
-              68.51642334
-            ],
-            [
-              134.74390245,
-              68.50708556
-            ],
-            [
-              134.71599662,
-              68.51885045
-            ],
-            [
-              134.69943857,
-              68.51001418
-            ],
-            [
-              134.72110867,
-              68.5097481
-            ],
-            [
-              134.7014178,
-              68.50864947
-            ],
-            [
-              134.70671594,
-              68.52204227
-            ],
-            [
-              134.68180704,
-              68.51642334
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "RUS",
-        "callname": "",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
-          }
-        }
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              166.65619791,
-              69.47274923
-            ],
-            [
-              166.59359515,
-              69.49575067
-            ],
-            [
-              166.58254111,
-              69.49358118
-            ],
-            [
-              166.60320091,
-              69.48569775
-            ],
-            [
-              166.59387541,
-              69.47352004
-            ],
-            [
-              166.57177818,
-              69.47143805
-            ],
-            [
-              166.65619791,
-              69.47274923
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "RUS",
-        "callname": "",
-        "type": "territorial",
-        "vhfdata": {
-          "generic": {
-            "channel": 16,
-            "mode": "listen"
-          },
-          "emergency": {
-            "url": ""
-          }
-        }
-      },
-      "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -42697,16 +41925,16 @@
               69.50460812
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "758ec8cc-8493-4ff5-ad58-d15894c7ff69",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -42718,6 +41946,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -42929,16 +42158,16 @@
               69.49700355
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "RUS",
+        "name": "Russian waters",
         "callname": "",
         "type": "territorial",
+        "id": "0a50e52e-95fd-47e1-9efb-bc592b4f1f87",
         "vhfdata": {
           "generic": {
             "channel": 16,
@@ -42950,6 +42179,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -43293,8 +42523,7 @@
               71.53760444
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     }
   ]
