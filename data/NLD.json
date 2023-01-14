@@ -3417,18 +3417,12 @@
         "name": "Port of Harlingen",
         "callname": "Havendienst Harlingen",
         "type": "marina",
-        "channel": 11,
-        "url": "http://",
-        "phone": "+",
+        "channel": "11",
+        "url": "https://www.portofharlingen.nl/en/",
+        "phone": "+31517412 512 ",
         "vhfdata": {
           "generic": {
-            "mode": "report,announce,listen"
-          },
-          "pleasure": {
-            "mode": "report,announce,listen"
-          },
-          "cargo": {
-            "mode": "report,announce,listen"
+            "mode": "listen"
           }
         },
         "id": "0de76e6e-c67d-4428-a132-762ecd8e369f"
