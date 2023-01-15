@@ -401,8 +401,8 @@
               59.86834411307
             ],
             [
-              23.464050292969,
-              59.933000423746
+              23.548164367676,
+              59.945382755671
             ],
             [
               22.997131347656,
@@ -411,6 +411,204 @@
             [
               22.883342653513,
               59.916673699153
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "dae233e1-cb78-4775-b64e-921e21b2b6d0",
+        "name": "Helsinki VTS Sector 1",
+        "type": "vts",
+        "channel": "71",
+        "url": "https://www.fintraffic.fi/sites/default/files/2022-10/Helsinki%20VTS%20Sector%201%20EN.pdf",
+        "phone": "+358204485385",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "Vessels of 24 metres in length overall or more are obliged to participate in the vessel traffic services. "
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              24.724999666214,
+              60.144995190019
+            ],
+            [
+              24.72501039505,
+              59.925011796678
+            ],
+            [
+              25.333346128464,
+              59.970010058403
+            ],
+            [
+              25.333335399628,
+              60.171670109588
+            ],
+            [
+              25.416698455811,
+              60.258338605611
+            ],
+            [
+              25.371551513672,
+              60.276259776501
+            ],
+            [
+              25.191650390625,
+              60.257529580201
+            ],
+            [
+              24.980163574219,
+              60.226175099456
+            ],
+            [
+              24.790649414063,
+              60.209804323672
+            ],
+            [
+              24.724999666214,
+              60.144995190019
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "263746e3-c9ac-412b-b05b-08aa94167ba4",
+        "name": "Helsinki VTS Sector 2",
+        "callname": "Commenly used call sign",
+        "type": "vts",
+        "url": "https://www.fintraffic.fi/sites/default/files/2022-10/Helsinki%20VTS%20Sector%202%20EN.pdf",
+        "phone": "+358204485389",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "Vessels of 24 metres in length overall or more are obliged to participate in the vessel traffic services. "
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.550009727478,
+              59.868337380877
+            ],
+            [
+              23.550009727478,
+              59.70000131743
+            ],
+            [
+              24.724999666214,
+              59.925011796678
+            ],
+            [
+              24.725031852722,
+              60.145008542235
+            ],
+            [
+              24.724988937378,
+              60.150049951569
+            ],
+            [
+              24.569892883301,
+              60.177208986558
+            ],
+            [
+              24.352569580078,
+              60.097033802162
+            ],
+            [
+              23.823852539063,
+              60.025069160624
+            ],
+            [
+              23.547821044922,
+              59.945382755671
+            ],
+            [
+              23.550009727478,
+              59.868337380877
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "108b0299-3721-4a66-acf7-84d9df583605",
+        "name": "Helsinki VTS Sector 2",
+        "type": "vts",
+        "channel": "9",
+        "url": "https://www.fintraffic.fi/sites/default/files/2022-10/Helsinki%20VTS%20Sector%202%20EN.pdf",
+        "phone": "+358204485389",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "Vessels of 24 metres in length overall or more are obliged to participate in the vessel traffic services. "
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              25.650329589844,
+              60.246967835798
+            ],
+            [
+              25.416676998138,
+              60.25834392808
+            ],
+            [
+              25.333338081837,
+              60.171671443727
+            ],
+            [
+              25.333335399628,
+              59.970010058403
+            ],
+            [
+              25.741664171219,
+              59.99167875238
+            ],
+            [
+              25.686700344086,
+              60.208343772803
+            ],
+            [
+              25.650329589844,
+              60.246967835798
             ]
           ]
         ]
