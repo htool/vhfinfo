@@ -387,6 +387,7 @@ if (!editMode) {
 }
 
 setupButtons()
+var donationHtml = '<form action="https://www.paypal.com/donate" method="post" target="_top"><input type="hidden" name="business" value="KPB9WNEF8XFBG" /><input type="hidden" name="no_recurring" value="0" /><input type="hidden" name="item_name" value="Thank you for your support of VHFinfo.org." /><input type="hidden" name="currency_code" value="EUR" /><input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" /><img alt="" border="0" src="https://www.paypal.com/en_NL/i/scr/pixel.gif" width="1" height="1" /></form>'
 
 button = L.easyButton( '<span class="help">&#63;</span>', function() {
   var helpContent = document.getElementById("help-content")
@@ -394,7 +395,7 @@ button = L.easyButton( '<span class="help">&#63;</span>', function() {
     url: 'https://raw.githubusercontent.com/htool/vhfinfo/main/HELP.md',
     success: function (data) {
       console.log('Got the data')
-      helpContent.innerHTML = markdownParser(data)
+      helpContent.innerHTML = markdownParser(data) + donationHtml
     },
     error: function (e) {
       console.log(e)
