@@ -150,7 +150,8 @@ if (GetURLParameter('edit') != undefined) {
   editMode = true
   var country = GetURLParameter('edit')
 }
-var mapPos 
+
+var mapPos = false
 if (GetURLParameter('mapPosition') != undefined) {
   mapPos = true
   var mapPosition = GetURLParameter('mapPosition')
@@ -322,7 +323,7 @@ if (!editMode) {
   // Copy link
   L.easyButton( '<span class="share"><img src="share.png" width="20" height="20"></img></span>', function(btn, m){
     let center = m.getCenter()
-    url = "http://www.vhfinfo.org/?mapPosition=" + center.lat.toFixed(6) + "/" + center.lng.toFixed(6) + "/" + m.getZoom() 
+    url = "https://vhfinfo.org/?mapPosition=" + center.lat.toFixed(6) + "/" + center.lng.toFixed(6) + "/" + m.getZoom() 
     copyToClipboard(url)
     alert ('The url "' + url + '" has been copied to the clipboard for sharing')
   }, 'Copy map location to clipboard').addTo(m);
@@ -620,8 +621,8 @@ if (!editMode) {
     m.panTo(new L.LatLng(lat, lon))
     m.setZoom(zoom)
     loadCountryOnCoordiate([lat, lon])
-
   } else if (navigator.geolocation) {
+    console.log('Checking browser location')
     navigator.geolocation.getCurrentPosition(geolocationSuccess, geolocationError, geoOptions)
   }
 } else {
@@ -911,7 +912,7 @@ function removeEmpty(obj) {
 function commitGitHub(country, changesObj, reason) {
   changesObj = removeEmpty(changesObj)
   if (reason != "" && reason != null) {
-    let postURL = "https://mdam.defect.org:6644/apiv2?country=" + country + "&reason=" + reason
+    let postURL = "https://commit.vhfinfo.org:6644/apiv2?country=" + country + "&reason=" + reason
     $.ajax({
       type: "POST",
       contentType: 'application/json',
