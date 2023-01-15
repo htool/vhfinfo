@@ -43,6 +43,26 @@
         z-index: 999;
         color: black;
       }
+      .helpPopup {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 999; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      }
+      .help-content {
+        background-color: #fefefe;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+      }
+
       input[type=text], select, input[type=url] {
         border: 2px solid #ccc;
         background-color: white;
@@ -364,7 +384,31 @@ if (!editMode) {
 setupButtons()
 
 L.easyButton( '<span class="help">&#63;</span>', function() {
-  open("https://github.com/htool/vhfinfo/blob/main/HELP.md", "_blank")
+  var helpContent = document.getElementById("help-content")
+  jQuery.ajax({
+    url: 'https://raw.githubusercontent.com/htool/vhfinfo/main/HELP.md',
+    success: function (data) {
+      console.log('Got the data')
+      helpContent.innerHTML = markdownParser(data)
+    },
+    error: function (e) {
+      console.log(e)
+    },
+    async: false
+  });
+  var helpPopup = document.getElementById("helpPopup")
+  helpPopup.style.display = "block"
+  var span = document.getElementsByClassName("close")[0];
+  span.onclick = function() {
+    helpPopup.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == helpPopup) {
+      helpPopup.style.display = "none";
+    }
+  }
 }, 'Help page with instructions on how to add features').addTo(m);
 
 
@@ -1108,8 +1152,24 @@ function copyToClipboard(text) {
     }
 }
 
-</script>
+const markdownParser = (text) => {
+	const toHTML = text
+		.replace(/^#### (.*$)/gim, '<h3>$1</h4>') // h4 tag
+		.replace(/^### (.*$)/gim, '<h3>$1</h3>') // h3 tag
+		.replace(/^## (.*$)/gim, '<h2>$1</h2>') // h2 tag
+		.replace(/^# (.*$)/gim, '<h1>$1</h1>') // h1 tag
+		.replace(/\*\*(.*)\*\*/gim, '<b>$1</b>') // bold text
+		.replace(/\*(.*)\*/gim, '<i>$1</i>'); // italic text
+	return toHTML.trim(); // using trim method to remove whitespace
+}
 
+</script>
+<div id="helpPopup" class="helpPopup">
+  <div class="help-content">
+    <div style="text-align: right;" class="close">&times;</div>
+    <div id="help-content"></div>
+  </div>
+</div>
 
   </body>
 </html>
