@@ -44,7 +44,7 @@ Click a feature to edit the details.
 
 ## Other work based on the data seen here
 The VHFinfo project was started to be able to 'see' nearby VHF VTS areas, bridge and lock information using [SignalK](https://www.signalk.org/).
-For example like this: ![](documetation/pictures/vhfinfo.png)
+For example like this: ![](documentation/pictures/vhfinfo.png)
 Underlaying data can be found [here on GitHub](https://github.com/htool/vhfinfo).
 
 ## Feedback
