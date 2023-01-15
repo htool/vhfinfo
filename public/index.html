@@ -99,6 +99,12 @@
     margin-left: -1px;
     display: block;
   }
+  .share {
+    left: 20px;
+    margin-top: 3px;
+    margin-left: -1px;
+    display: block;
+  }
   .upload {
     left: 20px;
     margin-top: 3px;
@@ -143,6 +149,11 @@ var editMode = false
 if (GetURLParameter('edit') != undefined) {
   editMode = true
   var country = GetURLParameter('edit')
+}
+var mapPos 
+if (GetURLParameter('mapPosition') != undefined) {
+  mapPos = true
+  var mapPosition = GetURLParameter('mapPosition')
 }
 
 loadCountriesBbox()
@@ -307,6 +318,14 @@ if (!editMode) {
       clearTimeout(followTimer)
     }
   }, 'Toggle the location follow mode').addTo(m);
+
+  // Copy link
+  L.easyButton( '<span class="share"><img src="share.png" width="20" height="20"></img></span>', function(btn, m){
+    let center = m.getCenter()
+    url = "http://www.vhfinfo.org/?mapPosition=" + center.lat.toFixed(6) + "/" + center.lng.toFixed(6) + "/" + m.getZoom() 
+    copyToClipboard(url)
+    alert ('The url "' + url + '" has been copied to the clipboard for sharing')
+  }, 'Copy map location to clipboard').addTo(m);
 
 } else {
   L.easyButton( '<span class="upload"><img src="upload.png" width="20" height="16"></img></span>', function(btn, m){
@@ -594,7 +613,15 @@ if (!editMode) {
     timeout: 5000,
     maximumAge: 0
   };
-  if (navigator.geolocation) {
+  if (mapPos) {
+    console.log(mapPosition)
+    const [lat, lon, zoom] = mapPosition.split('/')
+    console.log('lat: ' + lat + '  lon: ' + lon + '  zoom: ' + zoom)
+    m.panTo(new L.LatLng(lat, lon))
+    m.setZoom(zoom)
+    loadCountryOnCoordiate([lat, lon])
+
+  } else if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(geolocationSuccess, geolocationError, geoOptions)
   }
 } else {
@@ -1050,6 +1077,30 @@ function generateUUID() { // Public Domain/MIT
     });
 }
 
+function copyToClipboard(text) {
+    if (window.clipboardData && window.clipboardData.setData) {
+        // Internet Explorer-specific code path to prevent textarea being shown while dialog is visible.
+        return window.clipboardData.setData("Text", text);
+
+    }
+    else if (document.queryCommandSupported && document.queryCommandSupported("copy")) {
+        var textarea = document.createElement("textarea");
+        textarea.textContent = text;
+        textarea.style.position = "fixed";  // Prevent scrolling to bottom of page in Microsoft Edge.
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+            return document.execCommand("copy");  // Security exception may be thrown by some browsers.
+        }
+        catch (ex) {
+            console.warn("Copy to clipboard failed.", ex);
+            return prompt("Copy to clipboard: Ctrl+C, Enter", text);
+        }
+        finally {
+            document.body.removeChild(textarea);
+        }
+    }
+}
 
 </script>
 
