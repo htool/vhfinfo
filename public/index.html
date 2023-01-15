@@ -418,6 +418,13 @@ button = L.easyButton( '<span class="help">&#63;</span>', function() {
 }, 'Help page with instructions on how to add features').addTo(m);
 _fixEasyButtonSize(button);
 
+if (editMode) {
+  var mouseposition = document.getElementsByClassName('mouseposition')[0]
+  L.DomEvent.addListener(mouseposition, 'click', event => {
+    dms = !dms
+    updateMousePosition(m.getCenter(m))
+  })
+}
 
 function followUpdate () {
   if (followMode) {
