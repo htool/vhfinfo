@@ -39,7 +39,7 @@
         width: 20%;
       }
       .edit, .help {
-        font-size: 1.25rem;
+        font-size: 1.45rem;
         z-index: 999;
         color: black;
       }
@@ -110,8 +110,6 @@
   }
   .crosshair {
     left: 20px;
-    margin-left: -3px;
-    margin-top: 2px;
   }
   .follow {
     left: 20px;
@@ -144,6 +142,7 @@ var dms = false
 var crosshairMode = false
 var followMode = false
 var followTimer
+var button
 
 var changedIds = {}
 
@@ -300,13 +299,15 @@ L.DomUtil.addClass(m._container,'crosshair-cursor-enabled');
 
 async function setupButtons () {
 if (!editMode) {
-  L.easyButton( '<span class="edit">&#9998;</span>', function(){
+  button = L.easyButton( '<span class="edit">&#9998;</span>', function(){
     let country = getCountryAtCenter()
     if (confirm("Do you want to start editting for country " + country + "?")) {
       open("https://htool.github.io/vhfinfo/public/index.html?edit=" + country, "_blank")
     }
   }, 'Edit the country in the center of the map').addTo(m);
-  L.easyButton( '<span class="crosshair"><img src="crosshair.png" width="25" height="25"></img></span>', function(btn, m){
+  _fixEasyButtonSize(button);
+
+  button = L.easyButton( '<span class="crosshair"><img src="crosshair.png" width="25" height="25"></img></span>', function(btn, m){
     crosshairMode = !crosshairMode
     console.log("crosshairMode: " + crosshairMode)
     if (crosshairMode) {
@@ -325,8 +326,9 @@ if (!editMode) {
       m.removeControl(position);
     }
   }, 'Toggle the crosshair and coordinates display').addTo(m);
+  _fixEasyButtonSize(button);
 
-  L.easyButton( '<span class="follow"><img src="arrow.png" width="20" height="20"></img></span>', function(btn, m){
+  button = L.easyButton( '<span class="follow"><img src="arrow.png" width="20" height="20"></img></span>', function(btn, m){
     followMode = !followMode
     console.log('followMode: ' + followMode)
     if (followMode) {
@@ -338,17 +340,19 @@ if (!editMode) {
       clearTimeout(followTimer)
     }
   }, 'Toggle the location follow mode').addTo(m);
+  _fixEasyButtonSize(button);
 
   // Copy link
-  L.easyButton( '<span class="share"><img src="share.png" width="20" height="20"></img></span>', function(btn, m){
+  button = L.easyButton( '<span class="share"><img src="share.png" width="20" height="20"></img></span>', function(btn, m){
     let center = m.getCenter()
     url = "https://vhfinfo.org/?mapPosition=" + center.lat.toFixed(6) + "/" + center.lng.toFixed(6) + "/" + m.getZoom() 
     copyToClipboard(url)
     alert ('The url "' + url + '" has been copied to the clipboard for sharing')
   }, 'Copy map location to clipboard').addTo(m);
+  _fixEasyButtonSize(button);
 
 } else {
-  L.easyButton( '<span class="upload"><img src="upload.png" width="20" height="16"></img></span>', function(btn, m){
+  button = L.easyButton( '<span class="upload"><img src="upload.png" width="20" height="16"></img></span>', function(btn, m){
     if (Object.keys(changedIds).length == 0) {
       alert('No changes were made')
       return
@@ -376,6 +380,7 @@ if (!editMode) {
     } else {
     }
   }, 'Upload your changed to VHFinfo').addTo(m);
+  _fixEasyButtonSize(button);
 
   m.addControl(position);
 }
@@ -383,7 +388,7 @@ if (!editMode) {
 
 setupButtons()
 
-L.easyButton( '<span class="help">&#63;</span>', function() {
+button = L.easyButton( '<span class="help">&#63;</span>', function() {
   var helpContent = document.getElementById("help-content")
   jQuery.ajax({
     url: 'https://raw.githubusercontent.com/htool/vhfinfo/main/HELP.md',
@@ -410,6 +415,7 @@ L.easyButton( '<span class="help">&#63;</span>', function() {
     }
   }
 }, 'Help page with instructions on how to add features').addTo(m);
+_fixEasyButtonSize(button);
 
 
 function followUpdate () {
@@ -1163,10 +1169,19 @@ const markdownParser = (text) => {
 	return toHTML.trim(); // using trim method to remove whitespace
 }
 
+function _fixEasyButtonSize(button) {
+    var buttonElement = button.button;
+    buttonElement.style.padding = '0px';
+    buttonElement.style.width = "26px";
+    buttonElement.style.height = "26px";
+    buttonElement.style.minWidth = "26px";
+    buttonElement.style.minHeight = "26px";
+}
+
 </script>
 <div id="helpPopup" class="helpPopup">
   <div class="help-content">
-    <div style="text-align: right;" class="close">&times;</div>
+    <div style="text-align: right;" class="close"><h1>&times;</h1></div>
     <div id="help-content"></div>
   </div>
 </div>
