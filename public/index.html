@@ -247,7 +247,6 @@ var popup = L.popup();
 //add a control layer to switch on the both basemaps
 ControlLayer=L.control.layers(baseMaps).addTo(m);
 ControlLayer.addOverlay(Nm12, '12Nm')
-//ControlLayer.addOverlay(vhfinfo, 'VHF info')
 ControlLayer.addOverlay(vtsLayer, 'VTSes')
 ControlLayer.addOverlay(lockLayer, 'Locks')
 ControlLayer.addOverlay(bridgeLayer, 'Bridges')
@@ -377,7 +376,12 @@ function followUpdate () {
 }
 
 function loadUrl (url, layerGroup, country) {
+  if (countriesLoaded.includes(url)) {
+    console.log(country + ' already loadded')
+    return
+  }
   console.log('Loading ' + country)
+  countriesLoaded.push(url)
   try{
   var l = new L.GeoJSON.AJAX(url, {
      style: function(feature) {
@@ -440,18 +444,11 @@ function loadUrl (url, layerGroup, country) {
           contextmenu: function(e) {
             l.bringToBack()
           }
-
         });
-        drawnItems.addLayer(layer)
+        if (editMode) {
+          drawnItems.addLayer(layer)
+        }
         specific.addLayer(layer)
-        /*
-        if (feature.properties.type != 'territorial') {
-          vhfinfo.addLayer(layer)
-        }
-        */
-        if (!countriesLoaded.includes(country)) {
-          countriesLoaded.push(country)
-        }
       }
   });
   } catch (e) {
@@ -1010,6 +1007,14 @@ function checkIfLoaded () {
       center = m.getCenter()
       center = [center.lat, center.lng]
       loadCountryOnCoordiate(center)
+      let east = m.getBounds().getEast()
+      let west = m.getBounds().getWest()
+      let north = m.getBounds().getNorth()
+      let south = m.getBounds().getSouth()
+      loadCountryOnCoordiate([north, east])
+      loadCountryOnCoordiate([north, west])
+      loadCountryOnCoordiate([south, east])
+      loadCountryOnCoordiate([south, west])
     }
   }
 }
