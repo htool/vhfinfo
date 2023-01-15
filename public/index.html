@@ -302,7 +302,7 @@ if (!editMode) {
   button = L.easyButton( '<span class="edit">&#9998;</span>', function(){
     let country = getCountryAtCenter()
     if (confirm("Do you want to start editting for country " + country + "?")) {
-      open("https://htool.github.io/vhfinfo/public/index.html?edit=" + country, "_blank")
+      open("https://vhfinfo.org/?edit=" + country, "_blank")
     }
   }, 'Edit the country in the center of the map').addTo(m);
   _fixEasyButtonSize(button);
@@ -598,7 +598,7 @@ function showInfo(f, layer, country) {
   html = html + addHTML('Generic', p.vhfdata.generic)
   html = html + addHTML('Pleasure', p.vhfdata.pleasure)
   html = html + addHTML('Emergency', p.vhfdata.emergency)
-  html = html + '<td></td><td style="text-align: right;"><a href="https://htool.github.io/vhfinfo/public/index.html?edit=' + country + '" target="_blank" style="text-decoration: none;">Edit</a></td>'
+  html = html + '<td></td><td style="text-align: right;"><a href="https://vhfinfo.org/?edit=' + country + '" target="_blank" style="text-decoration: none;">Edit</a></td>'
   html = html + '</table>'
 
   layer.bindPopup(html).openPopup();
