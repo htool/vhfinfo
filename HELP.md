@@ -41,3 +41,7 @@ Click a feature to edit the details.
 - Marina
 - Berth - non marina area where berth request by VHF is required or possible
 - Area - non VTS larger area
+
+## Feedback
+
+If you have comments/feedback, you can contact me at contact@vhfinfo.org.
