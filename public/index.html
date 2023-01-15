@@ -1174,7 +1174,7 @@ const markdownParser = (text) => {
 		.replace(/^# (.*$)/gim, '<h1>$1</h1>') // h1 tag
 		.replace(/\*\*(.*)\*\*/gim, '<b>$1</b>') // bold text
 		.replace(/\*(.*)\*/gim, '<i>$1</i>') // italic text
-		.replace(/\!\[\]\((.*)\)/gim, '<img src="$1"></img>') // image
+		.replace(/\!\[\]\((.*)\)/gim, '<img src="$1"></img><br>') // image
 		.replace(/\[(.*)\]\((.*)\)/gim, '<a href="$2">$1</a>'); // link
 	return toHTML.trim(); // using trim method to remove whitespace
 }

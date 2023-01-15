@@ -42,8 +42,8 @@ Click a feature to edit the details.
 - Berth - non marina area where berth request by VHF is required or possible
 - Area - non VTS larger area
 
-## Other work based on the data seen here
-The VHFinfo project was started to be able to 'see' nearby VHF VTS areas, bridge and lock information using [SignalK](https://www.signalk.org/).
+## Related work
+The VHFinfo project was started to be able to 'see' nearby VHF VTS areas, bridge and lock information using [SignalK](https://signalk.org/).
 
 For example like this:
 ![](documentation/pictures/vhfinfo.png)
