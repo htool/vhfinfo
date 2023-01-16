@@ -685,7 +685,8 @@
         "phone": "+",
         "vhfdata": {
           "generic": {
-            "mode": "report"
+            "mode": "report",
+            "note": "Radar support also on 65"
           },
           "pleasure": {
             "mode": "listen"
