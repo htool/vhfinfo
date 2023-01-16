@@ -764,7 +764,7 @@
       "type": "Feature",
       "properties": {
         "id": "119988b7-7b10-4b20-aa5f-761e79ecf471",
-        "name": "Centrale Zandvleit",
+        "name": "Centrale Zandvliet",
         "callname": "Centrale Zandvliet",
         "type": "vts",
         "channel": "12",
@@ -772,7 +772,8 @@
         "phone": "+",
         "vhfdata": {
           "generic": {
-            "mode": "report"
+            "mode": "report",
+            "note": "Radar support split in 4 area's."
           },
           "pleasure": {
             "mode": "listen"
