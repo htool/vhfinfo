@@ -782,7 +782,7 @@
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Contact by phone"
+            "note": "Contact by phone. Only berth at Schwimmbrücke 1."
           },
           "pleasure": {
             "mode": "listen"
