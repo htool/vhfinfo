@@ -839,6 +839,62 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "12cf37fd-eaef-4088-b118-85f8f7d648cc",
+        "name": "Borkum Yachthafen",
+        "type": "marina",
+        "url": "https://borkum-yachthafen.de/yachthafen/",
+        "phone": "+49 (0) 49 22 / 77 73",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.7409491539,
+              53.556908232179
+            ],
+            [
+              6.743674278259,
+              53.557417805114
+            ],
+            [
+              6.743524074554,
+              53.557583414997
+            ],
+            [
+              6.744103431702,
+              53.560029270081
+            ],
+            [
+              6.741614341736,
+              53.560194869741
+            ],
+            [
+              6.74135684967,
+              53.558933748308
+            ],
+            [
+              6.7409491539,
+              53.556908232179
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
