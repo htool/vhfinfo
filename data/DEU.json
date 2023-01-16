@@ -895,6 +895,60 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "98cb7ac9-7f2d-444e-958b-67aa281e3e5b",
+        "name": "Segelclub Juist",
+        "callname": "Commenly used call sign",
+        "type": "marina",
+        "url": "http://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "Contact VHF73 Frisia-Fahren before entry."
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.997690200806,
+              53.671824723477
+            ],
+            [
+              6.997776031494,
+              53.673971775306
+            ],
+            [
+              6.999750137329,
+              53.673946367049
+            ],
+            [
+              6.999707221985,
+              53.672383729755
+            ],
+            [
+              6.999170780182,
+              53.671926361534
+            ],
+            [
+              6.997690200806,
+              53.671824723477
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
