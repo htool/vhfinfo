@@ -4986,6 +4986,260 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "60c6e229-f0cb-4021-8651-fa0d8623bdaa",
+        "name": "Zeesluis Vlissingen",
+        "callname": "Zeesluis Vlissingen",
+        "type": "lock",
+        "channel": "18",
+        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.596504330635,
+              51.442296389009
+            ],
+            [
+              3.594106435776,
+              51.442897913694
+            ],
+            [
+              3.594304919243,
+              51.443165255455
+            ],
+            [
+              3.596675992012,
+              51.442540341642
+            ],
+            [
+              3.596504330635,
+              51.442296389009
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ea7daea9-7bbb-4776-8fae-f890886c725f",
+        "name": "Sloebrug",
+        "callname": "Sloebrug",
+        "type": "bridge",
+        "channel": "22",
+        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "Let op:  blauwe golf."
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.590952157974,
+              51.457664404228
+            ],
+            [
+              3.590018749237,
+              51.457858164483
+            ],
+            [
+              3.590115308762,
+              51.458038561223
+            ],
+            [
+              3.591016530991,
+              51.457858164483
+            ],
+            [
+              3.590952157974,
+              51.457664404228
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "9b009680-659d-40d9-807b-6ab64a99d5d6",
+        "name": "Brug Souburg",
+        "callname": "Brug Souburg",
+        "type": "bridge",
+        "channel": "22",
+        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "Let op:  blauwe golf."
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.594385385513,
+              51.464746536163
+            ],
+            [
+              3.59406888485,
+              51.464803319235
+            ],
+            [
+              3.594127893448,
+              51.464923565507
+            ],
+            [
+              3.594444394112,
+              51.464863442411
+            ],
+            [
+              3.594385385513,
+              51.464746536163
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "375fcef8-8949-468a-bb66-ab53d8223ad1",
+        "name": "Schroebrug",
+        "callname": "Schroebrug",
+        "type": "bridge",
+        "channel": "22",
+        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "Let op: blauwe golf."
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.613010644913,
+              51.494370296966
+            ],
+            [
+              3.613579273224,
+              51.493889620421
+            ],
+            [
+              3.613815307617,
+              51.494006451992
+            ],
+            [
+              3.613257408142,
+              51.49449714132
+            ],
+            [
+              3.613010644913,
+              51.494370296966
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "f3b46c57-60c9-48ea-99cd-7de2f3008a0e",
+        "name": "Stationsbrug",
+        "callname": "Stationsbrug Vlissingen",
+        "type": "bridge",
+        "channel": "22",
+        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "Let op: blauwe golf."
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.617361187935,
+              51.496039837998
+            ],
+            [
+              3.617543578148,
+              51.496119947328
+            ],
+            [
+              3.618058562279,
+              51.495592558315
+            ],
+            [
+              3.617843985558,
+              51.495519123918
+            ],
+            [
+              3.617361187935,
+              51.496039837998
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
