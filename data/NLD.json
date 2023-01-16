@@ -3820,7 +3820,12 @@
         "channel": 79,
         "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
         "phone": "+31887970800",
-        "id": "23e3ff8f-ce4a-4513-9d2a-939acb86b04f"
+        "id": "23e3ff8f-ce4a-4513-9d2a-939acb86b04f",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          }
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4164,7 +4169,7 @@
       "properties": {
         "id": "5443803c-8e86-43a8-a6bd-86962b2e3aeb",
         "name": "Volkeraksluizen",
-        "callname": "Commenly used call sign",
+        "callname": "",
         "type": "lock",
         "channel": 64,
         "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
@@ -4658,7 +4663,7 @@
         "name": "De Oude Veerdam (Schiermonnickoog)",
         "callname": "Marina Schiermonnickoog",
         "type": "marina",
-        "channel": "31 6 300 10 883",
+        "channel": "+31630010883",
         "url": "https://waddenhavenschiermonnickoog.nl/",
         "phone": "+",
         "vhfdata": {
@@ -4706,11 +4711,11 @@
       "properties": {
         "id": "4db4f45a-81cf-4f02-8e76-b761e2b56487",
         "name": "Roompot Marina",
-        "callname": "Commenly used call sign",
+        "callname": "",
         "type": "marina",
         "channel": "31",
         "url": "https://www.roompotmarina.com/nl/contact/",
-        "phone": "+31 (0)113 40 51 10",
+        "phone": "+31113405110",
         "vhfdata": {
           "generic": {
             "mode": "listen"
