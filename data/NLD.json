@@ -4820,6 +4820,172 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "dfa89f07-c430-4b84-ad2f-e3eefa8fdbbd",
+        "name": "Sluizen Veere",
+        "callname": "Sluis Veere",
+        "type": "lock",
+        "channel": "18",
+        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.667116165161,
+              51.541998404176
+            ],
+            [
+              3.667405843735,
+              51.541998404176
+            ],
+            [
+              3.667459487915,
+              51.542125115955
+            ],
+            [
+              3.667953014374,
+              51.54209843982
+            ],
+            [
+              3.667749166489,
+              51.540584543557
+            ],
+            [
+              3.667277097702,
+              51.540631228335
+            ],
+            [
+              3.667341470718,
+              51.541338163411
+            ],
+            [
+              3.667019605637,
+              51.541344832557
+            ],
+            [
+              3.667116165161,
+              51.541998404176
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "8f8a4885-1b12-4359-a26b-02d40e10383d",
+        "name": "Binnenkeer- en schutsluis Vlissingen",
+        "callname": "Keersluis Vlissingen",
+        "type": "lock",
+        "channel": "22",
+        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.586810827255,
+              51.450397749269
+            ],
+            [
+              3.586338758469,
+              51.450491303696
+            ],
+            [
+              3.586435317993,
+              51.450658364696
+            ],
+            [
+              3.58690738678,
+              51.450571493053
+            ],
+            [
+              3.586810827255,
+              51.450397749269
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "c747c83b-3233-4c95-ad3d-dff49f90d7ef",
+        "name": "Keersluisbrug Vlissingen",
+        "callname": "Keersluisbrug Vlissingen",
+        "type": "bridge",
+        "channel": "22",
+        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.5861992836,
+              51.44933942031
+            ],
+            [
+              3.585802316666,
+              51.44941292908
+            ],
+            [
+              3.585909605026,
+              51.449569970147
+            ],
+            [
+              3.586301207542,
+              51.449479755132
+            ],
+            [
+              3.5861992836,
+              51.44933942031
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
