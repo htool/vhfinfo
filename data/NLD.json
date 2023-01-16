@@ -4770,6 +4770,56 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "6d385c38-cef5-4a47-abb1-946fd6907bf5",
+        "name": "Zeelandbrug Oosterschelde",
+        "callname": "Zeelandbrug",
+        "type": "bridge",
+        "channel": "18",
+        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.911138176918,
+              51.62697265802
+            ],
+            [
+              3.911288380623,
+              51.626899435473
+            ],
+            [
+              3.910880684853,
+              51.62660321578
+            ],
+            [
+              3.910714387894,
+              51.626669782171
+            ],
+            [
+              3.911138176918,
+              51.62697265802
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
