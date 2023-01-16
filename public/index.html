@@ -38,11 +38,17 @@
       .leaflet-popup-pane {
         width: 20%;
       }
-      .edit, .help {
+      .edit {
+        font-size: 1.55rem;
+        z-index: 999;
+        color: black;
+      }
+      .help {
         font-size: 1.45rem;
         z-index: 999;
         color: black;
       }
+
       .helpPopup {
         display: none; /* Hidden by default */
         position: fixed; /* Stay in place */
@@ -392,7 +398,7 @@ var donationHtml = '<form action="https://www.paypal.com/donate" method="post" t
 button = L.easyButton( '<span class="help">&#63;</span>', function() {
   var helpContent = document.getElementById("help-content")
   jQuery.ajax({
-    url: 'https://raw.githubusercontent.com/htool/vhfinfo/main/HELP.md',
+    url: 'HELP.md',
     success: function (data) {
       console.log('Got the data')
       helpContent.innerHTML = markdownParser(data) + donationHtml
@@ -1168,13 +1174,15 @@ function copyToClipboard(text) {
 
 const markdownParser = (text) => {
 	const toHTML = text
+		.replace(/^$/gim, '<br>') // new line
+		.replace(/^- (.*$)/gim, '<li>$1</li>') // list tag
 		.replace(/^#### (.*$)/gim, '<h3>$1</h4>') // h4 tag
 		.replace(/^### (.*$)/gim, '<h3>$1</h3>') // h3 tag
 		.replace(/^## (.*$)/gim, '<h2>$1</h2>') // h2 tag
 		.replace(/^# (.*$)/gim, '<h1>$1</h1>') // h1 tag
 		.replace(/\*\*(.*)\*\*/gim, '<b>$1</b>') // bold text
 		.replace(/\*(.*)\*/gim, '<i>$1</i>') // italic text
-		.replace(/\!\[\]\((.*)\)/gim, '<img src="$1"></img><br>') // image
+		.replace(/\!\[(.*)\]\((.*)\)/gim, '<img src="$2" width="$1"></img><br>') // image
 		.replace(/\[(.*)\]\((.*)\)/gim, '<a href="$2">$1</a>'); // link
 	return toHTML.trim(); // using trim method to remove whitespace
 }
