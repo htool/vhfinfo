@@ -4899,7 +4899,8 @@
         "phone": "+",
         "vhfdata": {
           "generic": {
-            "mode": "listen"
+            "mode": "listen",
+            "note": "Let op: blauwe golf."
           },
           "pleasure": {
             "mode": "listen"
@@ -4949,7 +4950,8 @@
         "phone": "+",
         "vhfdata": {
           "generic": {
-            "mode": "listen"
+            "mode": "listen",
+            "note": "Let op: blauwe golf."
           },
           "pleasure": {
             "mode": "listen"
@@ -5236,6 +5238,155 @@
             [
               3.617361187935,
               51.496039837998
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "329c1a45-36d5-408a-90e1-da85f6843202",
+        "name": "Arneverkeersbrug",
+        "callname": "Arne bruggen",
+        "type": "bridge",
+        "channel": "22",
+        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.649005889893,
+              51.500351841924
+            ],
+            [
+              3.648844957352,
+              51.500485344765
+            ],
+            [
+              3.649274110794,
+              51.500632197439
+            ],
+            [
+              3.649402856827,
+              51.500482007199
+            ],
+            [
+              3.649005889893,
+              51.500351841924
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "461e7e6e-e77a-4a8e-a540-139cef63a481",
+        "name": "Arnespoorbrug",
+        "callname": "Arne bruggen",
+        "type": "bridge",
+        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.649896383286,
+              51.499834969246
+            ],
+            [
+              3.65029335022,
+              51.499865007761
+            ],
+            [
+              3.650309443474,
+              51.499774892159
+            ],
+            [
+              3.649933934212,
+              51.499741515965
+            ],
+            [
+              3.649896383286,
+              51.499834969246
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "928cb1ae-9c92-4feb-be63-6d69902f89cf",
+        "name": "Dokbrug Vlissingen",
+        "callname": "Dokbrug",
+        "type": "bridge",
+        "channel": "22",
+        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.580641746521,
+              51.444327058455
+            ],
+            [
+              3.58078122139,
+              51.444861723679
+            ],
+            [
+              3.581017255783,
+              51.444814940722
+            ],
+            [
+              3.580856323242,
+              51.444260224862
+            ],
+            [
+              3.580641746521,
+              51.444327058455
             ]
           ]
         ]
