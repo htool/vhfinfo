@@ -5963,6 +5963,105 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "487e1dc3-249f-4cad-9b12-38ff8396eb63",
+        "name": "Grevelingensluis",
+        "type": "lock",
+        "channel": "20",
+        "url": "https://www.vaarweginformatie.nl/frp/main/#/geo/detail/LOCK/7069661",
+        "phone": "+31 (0)88-7970123",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.093598127365,
+              51.667384573067
+            ],
+            [
+              4.095947742462,
+              51.666094326886
+            ],
+            [
+              4.096215963364,
+              51.666327105975
+            ],
+            [
+              4.093898534775,
+              51.667584092391
+            ],
+            [
+              4.093598127365,
+              51.667384573067
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "fd351cc9-78f3-4ef3-835c-38cfd0fdb2b2",
+        "name": "Krammersluis",
+        "callname": "Krammersluizen",
+        "type": "lock",
+        "channel": "22",
+        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-2-3-b",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.15996670723,
+              51.665085807022
+            ],
+            [
+              4.161865711212,
+              51.665152316936
+            ],
+            [
+              4.161908626556,
+              51.664872974642
+            ],
+            [
+              4.159934520721,
+              51.664846370524
+            ],
+            [
+              4.15996670723,
+              51.665085807022
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
