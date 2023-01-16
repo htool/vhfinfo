@@ -1949,8 +1949,16 @@
               53.415461128891
             ],
             [
-              6.201946603606,
-              53.407871996272
+              6.191611289978,
+              53.412448039979
+            ],
+            [
+              6.212854385376,
+              53.412115502451
+            ],
+            [
+              6.216630935669,
+              53.410503937599
             ],
             [
               6.250688337703,
@@ -4587,7 +4595,6 @@
       "properties": {
         "id": "e1a0f252-ac53-4cfd-b9b6-8b89e915a46a",
         "name": "Vissershaven",
-        "callname": "Commenly used call sign",
         "type": "marina",
         "channel": "11",
         "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-5-6",
