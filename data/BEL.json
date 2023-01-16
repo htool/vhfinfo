@@ -1149,6 +1149,109 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "deb38665-8df8-494e-9b2f-0729b91a1652",
+        "name": "Antwerpen Marina",
+        "callname": "Jachthaven ANtwerpen",
+        "type": "marina",
+        "channel": "9",
+        "url": "https://www.jachthavenantwerpen.be/aanbod/jachthaven-antwerpen-linkeroever/",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.39240694046,
+              51.232468487388
+            ],
+            [
+              4.394166469574,
+              51.232414772839
+            ],
+            [
+              4.394037723541,
+              51.229916977048
+            ],
+            [
+              4.393694400787,
+              51.22943351704
+            ],
+            [
+              4.3922996521,
+              51.229540953036
+            ],
+            [
+              4.39240694046,
+              51.232468487388
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "d539246f-4b00-47eb-a61e-89ce2a6143c5",
+        "name": "Antwerp Marina (Willemdok)",
+        "callname": "Commenly used call sign",
+        "type": "vts",
+        "url": "https://jachthavenantwerpen.be/wp-content/Documents/Jachthaven-Antwerpen-Willemdok-BV_Telefoonnummers-en-VHF-Haven-Antwerpen.pdf",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.405496120453,
+              51.229684017948
+            ],
+            [
+              4.41113948822,
+              51.229872029753
+            ],
+            [
+              4.411268234253,
+              51.228314194468
+            ],
+            [
+              4.405646324158,
+              51.228233615346
+            ],
+            [
+              4.405496120453,
+              51.229684017948
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
