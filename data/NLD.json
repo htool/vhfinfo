@@ -4531,6 +4531,56 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ca8d3cfb-6ae5-4745-86ea-ebf52780323b",
+        "name": "Robbengatsluis",
+        "callname": "Sluis Robbengat",
+        "type": "lock",
+        "channel": "84",
+        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-5-6",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.196053028107,
+              53.40802618352
+            ],
+            [
+              6.196868419647,
+              53.408748483918
+            ],
+            [
+              6.197147369385,
+              53.408665388036
+            ],
+            [
+              6.196278333664,
+              53.407943086227
+            ],
+            [
+              6.196053028107,
+              53.40802618352
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
