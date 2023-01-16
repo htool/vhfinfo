@@ -5312,7 +5312,8 @@
           "cargo": {
             "mode": "listen"
           }
-        }
+        },
+        "channel": "22"
       },
       "geometry": {
         "type": "Polygon",
