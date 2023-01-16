@@ -6287,7 +6287,7 @@
         "name": "Jachthaven Bruinisse",
         "type": "marina",
         "url": "https://www.port-adhoc.com/nl/onze-havens/jachthaven-bruinisse/",
-        "phone": "+31 (0)111 481 485",
+        "phone": "+31111481485",
         "vhfdata": {
           "generic": {
             "mode": "listen"
@@ -6298,7 +6298,8 @@
           "cargo": {
             "mode": "listen"
           }
-        }
+        },
+        "channel": "0"
       },
       "geometry": {
         "type": "Polygon",
