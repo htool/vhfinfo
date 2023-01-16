@@ -4481,6 +4481,56 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "0fc9b727-254b-47dd-933c-e7daa11a0084",
+        "name": "Sluis Hansweert",
+        "callname": "Lock Hansweert",
+        "type": "lock",
+        "channel": "22",
+        "url": "http://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.008893966675,
+              51.456996568985
+            ],
+            [
+              4.010310173035,
+              51.457170287656
+            ],
+            [
+              4.011340141296,
+              51.454484255831
+            ],
+            [
+              4.009923934937,
+              51.454297163149
+            ],
+            [
+              4.008893966675,
+              51.456996568985
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
