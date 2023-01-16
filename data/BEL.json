@@ -1120,6 +1120,7 @@
         "type": "marina",
         "url": "https://jachthavenantwerpen.be/wp-content/Documents/Jachthaven-Antwerpen-Willemdok-BV_Telefoonnummers-en-VHF-Haven-Antwerpen.pdf",
         "phone": "+",
+        "channel": "0",
         "vhfdata": {
           "generic": {
             "mode": "listen"
