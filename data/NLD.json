@@ -4581,6 +4581,68 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "e1a0f252-ac53-4cfd-b9b6-8b89e915a46a",
+        "name": "Vissershaven",
+        "callname": "Commenly used call sign",
+        "type": "marina",
+        "channel": "11",
+        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-5-6",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "report"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.199808120728,
+              53.409378769911
+            ],
+            [
+              6.202597618103,
+              53.409429905
+            ],
+            [
+              6.21148109436,
+              53.411296293672
+            ],
+            [
+              6.212425231934,
+              53.409557742453
+            ],
+            [
+              6.203198432922,
+              53.407883041369
+            ],
+            [
+              6.201074123383,
+              53.407895825596
+            ],
+            [
+              6.201095581055,
+              53.408637304216
+            ],
+            [
+              6.199808120728,
+              53.409378769911
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
