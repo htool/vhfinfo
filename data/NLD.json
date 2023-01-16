@@ -5445,6 +5445,253 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "b9e81023-caeb-4f0e-9baf-8825b647789c",
+        "name": "Zandkreeksluis en bruggen",
+        "callname": "Zandkreeksluis",
+        "type": "lock",
+        "channel": "18",
+        "url": "http://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.862359523773,
+              51.543670494722
+            ],
+            [
+              3.865224123001,
+              51.543943914915
+            ],
+            [
+              3.865149021149,
+              51.544190658556
+            ],
+            [
+              3.862284421921,
+              51.543897233535
+            ],
+            [
+              3.862359523773,
+              51.543670494722
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "f9a7a36e-7204-4143-86f1-ee03a0f3dc75",
+        "name": "Goesche Sas",
+        "callname": "Goesche Sas",
+        "type": "lock",
+        "channel": "18",
+        "url": "https://www.goes.nl/contactgegevens-sluis-en-bruggen",
+        "phone": "+31 (0)113 216744",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.92452776432,
+              51.537341306945
+            ],
+            [
+              3.926078081131,
+              51.5374013345
+            ],
+            [
+              3.926040530205,
+              51.537571412143
+            ],
+            [
+              3.924484848976,
+              51.53751805452
+            ],
+            [
+              3.92452776432,
+              51.537341306945
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "7434b9cc-5c09-42a7-8e3f-06f72fe4ddaa",
+        "name": "Wilhelminabrug",
+        "callname": "Wilhelminabrug",
+        "type": "bridge",
+        "url": "https://www.goes.nl/contactgegevens-sluis-en-bruggen",
+        "phone": "+31 (0)113 216744",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.899245262146,
+              51.529749164819
+            ],
+            [
+              3.899309635162,
+              51.529835885725
+            ],
+            [
+              3.899728059769,
+              51.529705804305
+            ],
+            [
+              3.89964222908,
+              51.529615747719
+            ],
+            [
+              3.899245262146,
+              51.529749164819
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "5fd53ed8-f524-4347-9bce-c9b19e929f9b",
+        "name": "Ringbrug",
+        "callname": "N.A.",
+        "type": "bridge",
+        "channel": "N.A.",
+        "url": "https://www.goes.nl/openingstijden-ringbrug-en-st-maartensbrug",
+        "phone": "N.A.",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.890887498856,
+              51.509515238
+            ],
+            [
+              3.890892863274,
+              51.509635366416
+            ],
+            [
+              3.891316652298,
+              51.50962201883
+            ],
+            [
+              3.89128446579,
+              51.509491879661
+            ],
+            [
+              3.890887498856,
+              51.509515238
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "1296c91f-9f5a-4b6d-a49c-4a9448fa82b0",
+        "name": "Sint Maartenbrug",
+        "type": "bridge",
+        "url": "https://www.goes.nl/openingstijden-ringbrug-en-st-maartensbrug",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.89090359211,
+              51.50666365247
+            ],
+            [
+              3.891048431396,
+              51.506593573029
+            ],
+            [
+              3.891150355339,
+              51.506650304014
+            ],
+            [
+              3.890973329544,
+              51.506743743128
+            ],
+            [
+              3.89090359211,
+              51.50666365247
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
