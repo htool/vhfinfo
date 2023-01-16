@@ -311,7 +311,8 @@ if (!editMode) {
   button = L.easyButton( '<span class="edit">&#9998;</span>', function(){
     let country = getCountryAtCenter()
     if (confirm("Do you want to start editting for country " + country + "?")) {
-      open("https://vhfinfo.org/?edit=" + country, "_blank")
+      let center = m.getCenter()
+      open("https://vhfinfo.org/?edit=" + country + "&mapPosition=" +  center.lat.toFixed(6) + "/" + center.lng.toFixed(6) + "/" + m.getZoom(), "_blank")
     }
   }, 'Edit the country in the center of the map').addTo(m);
   _fixEasyButtonSize(button);
@@ -607,7 +608,9 @@ function showInfo(f, layer, country) {
   html = html + addHTML('Generic', p.vhfdata.generic)
   html = html + addHTML('Pleasure', p.vhfdata.pleasure)
   html = html + addHTML('Emergency', p.vhfdata.emergency)
-  html = html + '<td></td><td style="text-align: right;"><a href="https://vhfinfo.org/?edit=' + country + '" target="_blank" style="text-decoration: none;">Edit</a></td>'
+  let center = m.getCenter()
+  let editUrl = "https://vhfinfo.org/?edit=" + country + "&mapPosition=" +  center.lat.toFixed(6) + "/" + center.lng.toFixed(6) + "/" + m.getZoom()
+  html = html + '<td></td><td style="text-align: right;"><a href="' + editUrl + '" target="_blank" style="text-decoration: none;">Edit</a></td>'
   html = html + '</table>'
 
   layer.bindPopup(html).openPopup();
@@ -672,40 +675,43 @@ function geolocationError () {
   m.setView([45.0, 10.0], 5);
 }
 
+if (mapPos) {
+  console.log(mapPosition)
+  const [lat, lon, zoom] = mapPosition.split('/')
+  console.log('lat: ' + lat + '  lon: ' + lon + '  zoom: ' + zoom)
+  m.panTo(new L.LatLng(lat, lon))
+  m.setZoom(zoom)
+  loadCountryOnCoordiate([lat, lon])
+}
+
 if (!editMode) {
   var geoOptions = {
     enableHighAccuracy: true,
     timeout: 5000,
     maximumAge: 0
   };
-  if (mapPos) {
-    console.log(mapPosition)
-    const [lat, lon, zoom] = mapPosition.split('/')
-    console.log('lat: ' + lat + '  lon: ' + lon + '  zoom: ' + zoom)
-    m.panTo(new L.LatLng(lat, lon))
-    m.setZoom(zoom)
-    loadCountryOnCoordiate([lat, lon])
-  } else if (navigator.geolocation) {
+  if (!mapPos && navigator.geolocation) {
     console.log('Checking browser location')
     navigator.geolocation.getCurrentPosition(geolocationSuccess, geolocationError, geoOptions)
   }
 } else {
-  let coor = countriesGeoObj[country]
-  let lon = coor.ne.lon - ((coor.ne.lon - coor.sw.lon)/2)
-  let lat = coor.ne.lat - ((coor.ne.lat - coor.sw.lat)/2)
-  m.panTo(new L.LatLng(lat, lon));
-
-  let coordinates = [[coor.ne.lon,coor.ne.lat], [coor.sw.lon, coor.sw.lat]]
-  let polygon = L.polygon(coordinates);
-  let bounds = polygon.getBounds();
-  let southWest = bounds.getSouthWest();
-  let northEast = bounds.getNorthEast();
-  let cSouthWest = L.latLng(southWest.lng, southWest.lat);
-  let cNortEast = L.latLng(northEast.lng, northEast.lat);
-  let newBounds = L.latLngBounds(cSouthWest, cNortEast);
+  if (!mapPos) {
+    let coor = countriesGeoObj[country]
+    let lon = coor.ne.lon - ((coor.ne.lon - coor.sw.lon)/2)
+    let lat = coor.ne.lat - ((coor.ne.lat - coor.sw.lat)/2)
+    m.panTo(new L.LatLng(lat, lon));
+    let coordinates = [[coor.ne.lon,coor.ne.lat], [coor.sw.lon, coor.sw.lat]]
+    let polygon = L.polygon(coordinates);
+    let bounds = polygon.getBounds();
+    let southWest = bounds.getSouthWest();
+    let northEast = bounds.getNorthEast();
+    let cSouthWest = L.latLng(southWest.lng, southWest.lat);
+    let cNortEast = L.latLng(northEast.lng, northEast.lat);
+    let newBounds = L.latLngBounds(cSouthWest, cNortEast);
+    m.fitBounds(newBounds);
+  }
   loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + country + ".json", vhfinfo, country)
   loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + country + "_12Nm.json", Nm12, country)
-  m.fitBounds(newBounds);
 }
 
 
@@ -784,10 +790,10 @@ function editPopup (layer, f, l_id) {
     newItems.push(layer._leaflet_id)
     p.id = generateUUID()
     p.name = "New feature"
-    p.callname = "Commenly used call sign"
+    p.callname = ""
     p.type = "vts"
     p.channel = "",
-    p.url = "http://"
+    p.url = "https://"
     p.phone = "+"
     p.note = ""
     p.vhfdata = {
