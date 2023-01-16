@@ -778,7 +778,7 @@
         "name": "Burkana Hafen",
         "type": "marina",
         "url": "https://www.burkana-hafen.de/",
-        "phone": "+49 (0)4922-9249547",
+        "phone": "+4949229249547",
         "vhfdata": {
           "generic": {
             "mode": "listen",
@@ -847,7 +847,7 @@
         "name": "Borkum Yachthafen",
         "type": "marina",
         "url": "https://borkum-yachthafen.de/yachthafen/",
-        "phone": "+49 (0) 49 22 / 77 73",
+        "phone": "+4949227773",
         "vhfdata": {
           "generic": {
             "mode": "listen"
