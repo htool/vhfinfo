@@ -1116,11 +1116,10 @@
       "properties": {
         "id": "d539246f-4b00-47eb-a61e-89ce2a6143c5",
         "name": "Antwerp Marina (Willemdok)",
-        "callname": "",
         "type": "marina",
         "url": "https://jachthavenantwerpen.be/wp-content/Documents/Jachthaven-Antwerpen-Willemdok-BV_Telefoonnummers-en-VHF-Haven-Antwerpen.pdf",
-        "phone": "+",
-        "channel": "0",
+        "phone": "+3232315066",
+        "channel": "23",
         "vhfdata": {
           "generic": {
             "mode": "listen"
