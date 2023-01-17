@@ -961,14 +961,15 @@
       "type": "Feature",
       "properties": {
         "id": "1b9c42c4-29c0-4be2-bb68-cc09410b3710",
-        "name": "Radar Saeftinge",
-        "type": "area",
-        "channel": "21",
+        "name": "Traffic center Zandvliet",
+        "type": "vts",
+        "channel": "12",
         "url": "https://www.vts-scheldt.net/nautisch/marifoon",
-        "phone": "+",
+        "phone": "+3232028200",
         "vhfdata": {
           "generic": {
-            "mode": "listen"
+            "mode": "listen",
+            "note": "Radar support vHF 21"
           },
           "pleasure": {
             "mode": "listen"
@@ -1154,15 +1155,16 @@
       "type": "Feature",
       "properties": {
         "id": "a8d0835e-8d55-49a1-95b8-ceab871bd72a",
-        "name": "Radar Zandvliet",
+        "name": "Traffic center Zandvliet",
         "callname": "Radar Zandvliet",
-        "type": "area",
-        "channel": "04",
+        "type": "vts",
+        "channel": "12",
         "url": "https://www.vts-scheldt.net/nautisch/marifoon",
-        "phone": "+",
+        "phone": "+323208200",
         "vhfdata": {
           "generic": {
-            "mode": "listen"
+            "mode": "listen",
+            "note": "Radar support VHF 4"
           },
           "pleasure": {
             "mode": "listen"
