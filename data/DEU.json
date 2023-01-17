@@ -949,6 +949,76 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "1c70859a-3b98-4eeb-af48-9b1b5773c946",
+        "name": "Borkum Radar",
+        "type": "vts",
+        "channel": "18",
+        "url": "https://www.seame.com/en/poi/12259/revierfunk-ems",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "h+50 Weather at the approach, tidal stage, nautical warnings, tidal times"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.367263793945,
+              53.596789566444
+            ],
+            [
+              6.367263793945,
+              53.631190409342
+            ],
+            [
+              6.562271118164,
+              53.629969557513
+            ],
+            [
+              6.69548034668,
+              53.565825217233
+            ],
+            [
+              6.908941268921,
+              53.468379907455
+            ],
+            [
+              6.873171329498,
+              53.445650290213
+            ],
+            [
+              6.866111755371,
+              53.449654098058
+            ],
+            [
+              6.601753234863,
+              53.560934035884
+            ],
+            [
+              6.490516662598,
+              53.568881918368
+            ],
+            [
+              6.367263793945,
+              53.596789566444
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
