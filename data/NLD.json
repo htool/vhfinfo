@@ -6989,7 +6989,9 @@
             "mode": "listen"
           },
           "cargo": {
-            "mode": "listen"
+            "mode": "listen",
+            "note": "Area defined by law, see URL below:",
+            "url": "https://wetten.overheid.nl/BWBV0005343/1978-07-01"
           }
         }
       },
