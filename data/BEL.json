@@ -969,7 +969,7 @@
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Radar support vHF 21"
+            "note": "Radar support VHF 21  Saeftinge"
           },
           "pleasure": {
             "mode": "listen"
@@ -1258,15 +1258,15 @@
       "type": "Feature",
       "properties": {
         "id": "88df2055-b193-4d91-890f-b85bbcf0b605",
-        "name": "Radar Kruisschans",
-        "callname": "Radar Kruisschans",
-        "type": "area",
-        "channel": "66",
+        "name": "Traffic center Zandvliet",
+        "type": "vts",
+        "channel": "12",
         "url": "https://www.vts-scheldt.net/nautisch/marifoon",
-        "phone": "+",
+        "phone": "+3232028200",
         "vhfdata": {
           "generic": {
-            "mode": "listen"
+            "mode": "listen",
+            "note": "Radar support VHF 66 Kruisschans"
           },
           "pleasure": {
             "mode": "listen"
