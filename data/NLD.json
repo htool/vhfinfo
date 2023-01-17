@@ -6978,11 +6978,12 @@
         "name": "Ems traffic control",
         "type": "vts",
         "channel": "74",
-        "url": "https://",
-        "phone": "+",
+        "url": "https://www.groningen-seaports.com/wp-content/uploads/InfoKaart-Eems-1.pdf",
+        "phone": "+49 4927- 18770",
         "vhfdata": {
           "generic": {
-            "mode": "listen"
+            "mode": "listen",
+            "note": "Announcements:  Borkum Radar – VHF 18 Knock Radar – VHF 20 Wybelsum Radar – VHF 21 Ems Rivier Radar – VHF 15"
           },
           "pleasure": {
             "mode": "listen"
