@@ -7854,6 +7854,55 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "8b42f93e-22ad-4fa9-8fbb-723936a38e8a",
+        "name": "Bergsediepsluis",
+        "type": "lock",
+        "channel": "18",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.173345565796,
+              51.51037175827
+            ],
+            [
+              4.174305796623,
+              51.510111341366
+            ],
+            [
+              4.174278974533,
+              51.510017858011
+            ],
+            [
+              4.173291921616,
+              51.510251566038
+            ],
+            [
+              4.173345565796,
+              51.51037175827
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
