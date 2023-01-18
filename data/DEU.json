@@ -954,8 +954,8 @@
       "type": "Feature",
       "properties": {
         "id": "1c70859a-3b98-4eeb-af48-9b1b5773c946",
-        "name": "Borkum Radar",
-        "type": "area",
+        "name": "Borkum",
+        "type": "vts radar support",
         "channel": "18",
         "url": "https://www.seame.com/en/poi/12259/revierfunk-ems",
         "phone": "+",
@@ -1024,8 +1024,8 @@
       "type": "Feature",
       "properties": {
         "id": "4b0ce5d0-c3c5-4940-addd-91c7e93e6ff0",
-        "name": "Knock Radar",
-        "type": "area",
+        "name": "Knock",
+        "type": "vts radar support",
         "channel": "20",
         "url": "https://www.seame.com/en/poi/12259/revierfunk-ems",
         "phone": "+",
@@ -1134,8 +1134,8 @@
       "type": "Feature",
       "properties": {
         "id": "2c20b6e8-2692-458e-9003-f3f6e5cf944a",
-        "name": "Wybelsum Radar",
-        "type": "area",
+        "name": "Wybelsum",
+        "type": "vts radar support",
         "channel": "21",
         "url": "https://www.seame.com/en/poi/12259/revierfunk-ems",
         "phone": "+",
