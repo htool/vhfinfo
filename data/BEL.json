@@ -961,15 +961,14 @@
       "type": "Feature",
       "properties": {
         "id": "1b9c42c4-29c0-4be2-bb68-cc09410b3710",
-        "name": "Traffic center Zandvliet",
-        "type": "vts",
-        "channel": "12",
+        "name": "Saeftinge",
+        "type": "vts radar support",
+        "channel": "21",
         "url": "https://www.vts-scheldt.net/nautisch/marifoon",
         "phone": "+3232028200",
         "vhfdata": {
           "generic": {
-            "mode": "listen",
-            "note": "Radar support VHF 21  Saeftinge"
+            "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
@@ -1155,16 +1154,14 @@
       "type": "Feature",
       "properties": {
         "id": "a8d0835e-8d55-49a1-95b8-ceab871bd72a",
-        "name": "Traffic center Zandvliet",
-        "callname": "Radar Zandvliet",
-        "type": "vts",
-        "channel": "12",
+        "name": "Zandvliet",
+        "type": "vts radar support",
+        "channel": "4",
         "url": "https://www.vts-scheldt.net/nautisch/marifoon",
         "phone": "+323208200",
         "vhfdata": {
           "generic": {
-            "mode": "listen",
-            "note": "Radar support VHF 4"
+            "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
@@ -1258,15 +1255,14 @@
       "type": "Feature",
       "properties": {
         "id": "88df2055-b193-4d91-890f-b85bbcf0b605",
-        "name": "Traffic center Zandvliet",
-        "type": "vts",
-        "channel": "12",
+        "name": "Kruisschans",
+        "type": "vts radar support",
+        "channel": "66",
         "url": "https://www.vts-scheldt.net/nautisch/marifoon",
         "phone": "+3232028200",
         "vhfdata": {
           "generic": {
-            "mode": "listen",
-            "note": "Radar support VHF 66 Kruisschans"
+            "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
