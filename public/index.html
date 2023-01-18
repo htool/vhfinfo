@@ -481,7 +481,7 @@ function loadUrl (url, layerGroup, country) {
           case 'bridge':
             specific = bridgeLayer
             break
-          case 'radar':
+          case 'vts radar support':
             specific = radarLayer
             break
           case 'marina':
@@ -945,7 +945,7 @@ function removeIdFromLayer(id, type) {
     case 'bridge':
       removeLayerFromGroup(id, bridgeLayer)
       break
-    case 'radar':
+    case 'vts radar support':
       removeLayerFromGroup(id, radarLayer)
       break
     case 'marina':
