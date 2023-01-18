@@ -28,7 +28,7 @@ Only draw the full locks chambers (typically rectangles). It's OK to cross over 
 Only draw under the bridge, fully from side to side (typically rectangles)
 #### Marina
 Free figure polygon that covers only the (land and water if that's simpler) marina
-#### VTS
+#### VTS / VTS Radar support
 Here it is important to cover the documented coordinates of the VTS as close as possible, so likely a polygon. In case of half circles on sea towards a port, it's ok to make it less detailed to reduce points)
 
 
@@ -37,7 +37,7 @@ Here it is important to cover the documented coordinates of the VTS as close as 
       "properties": {
         "name": "",           // Full name
         "callname": "",       // Short name typically used in call
-        "type": "",           // ['lock','bridge','marina','vts','territorial']
+        "type": "",           // ['Lock','Bridge','Marina','VTS','VTS Radar support', 'Territorial']
         "channel": ,          // VHF channel number
         "update": "5 *",      // Update bulletin (eg weather) in this VHF area in 'cron format'
         "vhfdata": {

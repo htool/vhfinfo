@@ -210,6 +210,7 @@ var lockLayer = new L.LayerGroup()
 var vtsLayer = new L.LayerGroup()
 var areaLayer = new L.LayerGroup()
 var marinaLayer = new L.LayerGroup()
+var radarLayer = new L.LayerGroup()
 var changedLayer = new L.LayerGroup()
 
 //link to tiles
@@ -258,6 +259,7 @@ m.addLayer(bridgeLayer);
 m.addLayer(lockLayer);
 m.addLayer(vtsLayer);
 m.addLayer(marinaLayer);
+m.addLayer(radarLayer);
 m.addLayer(areaLayer);
 
 //m.addLayer(Nm12);
@@ -275,7 +277,8 @@ var popup = L.popup();
 //add a control layer to switch on the both basemaps
 ControlLayer=L.control.layers(baseMaps).addTo(m);
 ControlLayer.addOverlay(Nm12, '12Nm')
-ControlLayer.addOverlay(vtsLayer, 'VTSes')
+ControlLayer.addOverlay(vtsLayer, 'VTS')
+ControlLayer.addOverlay(radarLayer, 'VTS Radar')
 ControlLayer.addOverlay(lockLayer, 'Locks')
 ControlLayer.addOverlay(bridgeLayer, 'Bridges')
 ControlLayer.addOverlay(marinaLayer, 'Marinas')
@@ -287,6 +290,7 @@ if (editMode) {
 drawnItems.on('add',(e)=> {
   console.log('drawnItems now selected')
   checkLayer('add', vtsLayer)
+  checkLayer('add', radarLayer)
   checkLayer('add', areaLayer)
   checkLayer('add', lockLayer)
   checkLayer('add', bridgeLayer)
@@ -297,6 +301,7 @@ drawnItems.on('add',(e)=> {
 drawnItems.on('remove',(e)=>{
   console.log('drawnItems now deselected')
   checkLayer('remove', vtsLayer)
+  checkLayer('remove', radarLayer)
   checkLayer('remove', areaLayer)
   checkLayer('remove', lockLayer)
   checkLayer('remove', bridgeLayer)
@@ -475,6 +480,9 @@ function loadUrl (url, layerGroup, country) {
             break
           case 'bridge':
             specific = bridgeLayer
+            break
+          case 'radar':
+            specific = radarLayer
             break
           case 'marina':
             specific = marinaLayer
@@ -818,7 +826,7 @@ function editPopup (layer, f, l_id) {
   var contentHTML = '<form id="form" onsubmit="return false"><table>'+
     '<tr><td><label>Name<label></td><td><input id="name" type="text"></td></tr>'+
     '<tr><td><label>Call name:<label></td><td><input id="callname" type="text"></td></tr>'
-  contentHTML = contentHTML + addPullDown('Type', 'type', ['VTS','Lock','Bridge','Area','Marina','Territorial'])
+  contentHTML = contentHTML + addPullDown('Type', 'type', ['VTS','VTS Radar support', 'Lock','Bridge','Area','Marina','Territorial'])
   contentHTML = contentHTML + '<tr><td><label>Channel:<label></td><td><input id="channel" type="text"></td></tr>'
   contentHTML = contentHTML + addPullDown('Mode', 'gmode', ['Listen','Announce','Report'])
   contentHTML = contentHTML + '<tr><td><label>Note:<label></td><td><input id="gnote" type="text"></td></tr>'+
@@ -936,6 +944,9 @@ function removeIdFromLayer(id, type) {
       break
     case 'bridge':
       removeLayerFromGroup(id, bridgeLayer)
+      break
+    case 'radar':
+      removeLayerFromGroup(id, radarLayer)
       break
     case 'marina':
       removeLayerFromGroup(id, marinaLayer)
