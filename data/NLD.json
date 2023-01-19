@@ -5803,7 +5803,7 @@
         "type": "marina",
         "channel": "31",
         "url": "https://www.vdrest.nl/jachthaven-wemeldinge/",
-        "phone": "+31 (0)113622022",
+        "phone": "+31113622022",
         "vhfdata": {
           "generic": {
             "mode": "listen"
