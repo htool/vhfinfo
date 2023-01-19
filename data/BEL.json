@@ -1433,11 +1433,10 @@
       "properties": {
         "id": "119988b7-7b10-4b20-aa5f-761e79ecf471",
         "name": "Centrale Zandvliet",
-        "callname": "",
         "type": "vts",
         "channel": "12",
         "url": "https://vts-scheldt.net/",
-        "phone": "+",
+        "phone": "+3232028200",
         "vhfdata": {
           "generic": {
             "mode": "report"
