@@ -689,7 +689,9 @@ if (mapPos) {
   console.log('lat: ' + lat + '  lon: ' + lon + '  zoom: ' + zoom)
   m.panTo(new L.LatLng(lat, lon))
   m.setZoom(zoom)
-  loadCountryOnCoordiate([lat, lon])
+  if (!editMode) {
+    loadCountryOnCoordiate([lat, lon])
+  }
 }
 
 if (!editMode) {
