@@ -11353,6 +11353,55 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "b017f3bc-cbef-4ff4-8d3a-7070c3c0e7a0",
+        "name": "Goereese Sluis",
+        "type": "lock",
+        "channel": "20",
+        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-6-4",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.038076400757,
+              51.824343433939
+            ],
+            [
+              4.038307070732,
+              51.824482689332
+            ],
+            [
+              4.040527939796,
+              51.82336200277
+            ],
+            [
+              4.040307998657,
+              51.823206165448
+            ],
+            [
+              4.038076400757,
+              51.824343433939
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
