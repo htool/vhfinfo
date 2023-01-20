@@ -376,8 +376,10 @@ if (!editMode) {
       return
     }
     var uploadList = "Press [Ok] to upload the following changes:\n"
+    var uploadListDetails
     for (const [id, info] of Object.entries(changedIds)) {
       uploadList = uploadList + " - " + info.name + " ["+ info.action + "]\n"
+      uploadListDetails = uploadListDetails + " - " + info.name + " ["+ info.action + "]: " + id + "\n"
     }
     if (confirm(uploadList) == true) {
       console.log(changedIds)
@@ -393,7 +395,7 @@ if (!editMode) {
       }
       console.log(changedIds)
       var reason = prompt("You are about to publish changes to " + country + ". Please add a reason for change." , "");
-      let commitResult = commitGitHub(country, changedIds, reason)
+      let commitResult = commitGitHub(country, changedIds, reason + "\n\n" + uploadListDetails)
       location.reload()
     } else {
     }
