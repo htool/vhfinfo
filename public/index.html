@@ -376,7 +376,7 @@ if (!editMode) {
       return
     }
     var uploadList = "Press [Ok] to upload the following changes:\n"
-    var uploadListDetails
+    var uploadListDetails = ""
     for (const [id, info] of Object.entries(changedIds)) {
       uploadList = uploadList + " - " + info.name + " ["+ info.action + "]\n"
       uploadListDetails = uploadListDetails + " - " + info.name + " ["+ info.action + "]: " + id + "\n"
@@ -794,7 +794,9 @@ function addPullDown (text, id, options) {
 
 function editPopup (layer, f, l_id) {
   console.log('Leaflet_id: ' + l_id)
-  if (!isPopupOpen()) {
+  if (isPopupOpen()) {
+    layer.unbindPopup()
+  } else {
   layer.addTo(m)
   if (typeof f != 'undefined') {
     var feature = f 
