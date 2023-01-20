@@ -770,6 +770,8 @@ if (editMode) {
       const p = layer.feature.properties
       if (typeof changedIds[p.id] == 'undefined') {
         changedIds[p.id] = {"name": p.name, "action": "Change", "type": p.type, "leaflet_id": Object.keys(e.layers._layers)[0]}
+        console.log(JSON.stringify(changedIds[p.id], null, 2))
+        console.log(JSON.stringify(changedIds, null, 2))
       }
     });
   });
@@ -926,8 +928,7 @@ function editPopup (layer, f, l_id) {
     let type = layer._popup._source.feature.properties.type
     if (confirm("Sure you want to delete '" + name + "'?")) {
       $(".leaflet-popup-close-button")[0].click();
-      changedIds[uuid] = {"name": name, "action": "Delete"}
-      changedIds[uuid].type = type
+      changedIds[uuid] = {"name": name, "action": "Delete", "type": type}
       removeLayerFromGroup(id, drawnItems)
       // removeLayerFromGroup(id, vhfinfo)     // Until diff
       removeIdFromLayer(id, type)
@@ -1052,10 +1053,12 @@ function saveProperties (properties, leaflet_id) {
     } else {
       changedIds[properties.id] = {"name": properties.name, "action": "Change", "type": properties.type, "leaflet_id": leaflet_id}
       console.log('Changed existing item again')
+      console.log(JSON.stringify(changedIds[properties.id], null, 2))
     }
   } else {
     changedIds[properties.id] = {"name": properties.name, "action": "Change", "type": properties.type, "leaflet_id": leaflet_id}
     console.log('Changed existing item first time')
+    console.log(JSON.stringify(changedIds[properties.id], null, 2))
   }
 }
 
