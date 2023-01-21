@@ -77,7 +77,12 @@
         "channel": "12",
         "url": "https://www.gdws.wsv.bund.de/DE/schifffahrt/01_seeschifffahrt/nord-ostsee-kanal/Sportboot-NOK/Flyer/PDF_Merkbl_Spobo_eng.pdf?__blob=publicationFile&v=4",
         "phone": "+",
-        "id": "3c2e74fe-fd05-4942-aabc-4d25006ebbc6"
+        "id": "3c2e74fe-fd05-4942-aabc-4d25006ebbc6",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          }
+        }
       },
       "geometry": {
         "type": "Polygon",
