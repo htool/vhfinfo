@@ -11806,8 +11806,8 @@
       "type": "Feature",
       "properties": {
         "id": "2382ed0e-5282-4d63-b017-66ce3e16bcf8",
-        "name": "Ouddorp",
-        "callname": "Verkeerspost Ouddorp",
+        "name": "Verkeerspost Ouddorp",
+        "callname": "-",
         "type": "area",
         "channel": "71",
         "url": "https://varendoejesamen.nl/kenniscentrum/artikel/verkeerspost-ouddorp-vaste-rots-de-branding",
