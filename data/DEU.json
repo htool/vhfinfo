@@ -1641,9 +1641,15 @@
         "id": "86552f4a-2e31-4c87-9922-76df2981b874",
         "vhfdata": {
           "generic": {
-            "mode": "listen"
+            "mode": "listen",
+            "note": "Announcements:  Borkum Radar – VHF 18 Knock Radar – VHF 20 Wybelsum Radar – VHF 21 Ems Rivier Radar – VHF 15"
+          },
+          "cargo": {
+            "note": "Area defined by law, see URL below:",
+            "url": "https://wetten.overheid.nl/BWBV0005343/1978-07-01"
           }
-        }
+        },
+        "url": "https://www.groningen-seaports.com/wp-content/uploads/InfoKaart-Eems-1.pdf"
       },
       "geometry": {
         "type": "Polygon",
