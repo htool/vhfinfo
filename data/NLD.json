@@ -4092,8 +4092,8 @@
         "id": "5e0d6c2e-d349-4d60-a88c-c693a8b6608d",
         "name": "Van Brienenoordbrug",
         "type": "bridge",
-        "channel": 20,
-        "url": "http://",
+        "channel": "20",
+        "url": "https://beterbediend.rws.nl",
         "phone": "+31887985132",
         "vhfdata": {
           "generic": {
@@ -12443,6 +12443,154 @@
             [
               3.681621551514,
               51.712458797114
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "f9ea0e2b-43fd-4bce-ab7f-20cce9d1930a",
+        "name": "Erasmusbrug",
+        "type": "bridge",
+        "channel": "20",
+        "url": "http://veerhavenrotterdam.nl/bruggen-en-sluizen/",
+        "phone": "+31 (0)10 – 4857900",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.488403201103,
+              51.908269415958
+            ],
+            [
+              4.489057660103,
+              51.908003006129
+            ],
+            [
+              4.489454627037,
+              51.908188334873
+            ],
+            [
+              4.488810896873,
+              51.908453088896
+            ],
+            [
+              4.488403201103,
+              51.908269415958
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "c6c5ea87-2abe-44f7-be64-f5a5a7254ed9",
+        "name": "Koninginnebrug",
+        "type": "bridge",
+        "channel": "20",
+        "url": "http://veerhavenrotterdam.nl/bruggen-en-sluizen/",
+        "phone": "+31 (0)10-4857900",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.497412741184,
+              51.912885832226
+            ],
+            [
+              4.498000144958,
+              51.912482121567
+            ],
+            [
+              4.498440027237,
+              51.912745195728
+            ],
+            [
+              4.497868716717,
+              51.913130704136
+            ],
+            [
+              4.497412741184,
+              51.912885832226
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "d198aeae-5c23-4077-bc2b-6ff804613bef",
+        "name": "De Hef",
+        "type": "bridge",
+        "channel": "20",
+        "url": "http://veerhavenrotterdam.nl/bruggen-en-sluizen/",
+        "phone": "+31 (0)10-4857900",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce",
+            "note": "See link for details"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.498547315598,
+              51.913458300954
+            ],
+            [
+              4.499118626118,
+              51.913110849707
+            ],
+            [
+              4.49922055006,
+              51.913190267372
+            ],
+            [
+              4.498654603958,
+              51.913529445402
+            ],
+            [
+              4.498547315598,
+              51.913458300954
             ]
           ]
         ]
