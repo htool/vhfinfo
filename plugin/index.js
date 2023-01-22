@@ -234,8 +234,12 @@ module.exports = function (app, options) {
           }
         }
       })
-      for (let nr=0; nr < features.length; nr++) {
-        values.push({path: options.path + '.' + nr, value: JSON.stringify(features[nr])})
+      for (let nr=0; nr < 20; nr++) {
+        if (nr < features.length) {
+          values.push({path: options.path + '.' + nr, value: JSON.stringify(features[nr])})
+        } else {
+          values.push({path: options.path + '.' + nr, value: JSON.stringify({name: "-", channel: "", type: ""})})
+        }
       }
       //app.debug('values: %s', JSON.stringify(values))
       app.handleMessage(plugin.id, {
