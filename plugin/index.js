@@ -42,6 +42,40 @@ module.exports = function (app, options) {
         type: 'string',
         title: 'SignalK path to write object(s) within search area',
         default: 'vhfdata.nearest'
+      },
+      types: {
+        type: 'object',
+        title: 'Select VHF types to propogate to <above path>.[1-20]:',
+        properties: {
+          territorial: {
+            title: "12 Nm Zone",
+            type: 'boolean'
+          },
+          vts: {
+            title: "VTSes",
+            type: 'boolean'
+          },
+          vtsradar: {
+            title: "VTS Radar support",
+            type: 'boolean'
+          },
+          lock: {
+            title: "Locks",
+            type: 'boolean'
+          },
+          bridge: {
+            title: "Bridges",
+            type: 'boolean'
+          },
+          marina: {
+            title: "Marinas",
+            type: 'boolean'
+          },
+          area: {
+            title: "Areas",
+            type: 'boolean'
+          }
+        }
       }
     }
   }
@@ -76,7 +110,7 @@ module.exports = function (app, options) {
       currentHeading = rad2deg(heading)
     })
 
-    app.debug('options: %s', options)
+    app.debug('options: %s', JSON.stringify(options))
 
     plugin.registerWithRouter = function(router) {
 	    app.debug("registerWithRouter")
@@ -220,23 +254,41 @@ module.exports = function (app, options) {
     function sendUpdates (features) {
       var values = []
       var vts = null
-      var poi = null
+      var vtsradar = null
+      var marina = null
+      var lock = null
+      var bridge = null
+      var area = null
+      var territorial = null
       features.forEach(feature => {
         if (feature.type == 'vts') {
           if (vts == null) {
             vts = {path: options.path + '.vts', value: JSON.stringify(feature)}
             values.push(vts)
-          }
-        } else {
-          if (poi == null) {
-            poi = {path: options.path + '.poi', value: JSON.stringify(feature)}
-            values.push(poi)
+          } else if (vtsradar == null) {
+            vtsradar = {path: options.path + '.vtsradar', value: JSON.stringify(feature)}
+            values.push(vtsradar)
+          } else if (lock == null) {
+            lock = {path: options.path + '.lock', value: JSON.stringify(feature)}
+            values.push(lock)
+          } else if (bridge == null) {
+            bridge = {path: options.path + '.bridge', value: JSON.stringify(feature)}
+            values.push(bridge)
+          } else if (marina == null) {
+            marina = {path: options.path + '.marina', value: JSON.stringify(feature)}
+            values.push(marina)
+          } else if (area == null) {
+            area = {path: options.path + '.area', value: JSON.stringify(feature)}
+            values.push(area)
           }
         }
       })
       for (let nr=0; nr < 20; nr++) {
         if (nr < features.length) {
-          values.push({path: options.path + '.' + nr, value: JSON.stringify(features[nr])})
+          if (options.types[features.type] == true) {
+            // Only selected types
+            values.push({path: options.path + '.' + nr, value: JSON.stringify(features[nr])})
+          }
         } else {
           values.push({path: options.path + '.' + nr, value: JSON.stringify({name: "-", channel: "", type: ""})})
         }
