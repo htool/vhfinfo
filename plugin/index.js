@@ -283,15 +283,17 @@ module.exports = function (app, options) {
           }
         }
       })
-      for (let nr=0; nr < 20; nr++) {
-        if (nr < features.length) {
-          if (options.types[features[nr].type] == true) {
-            // Only selected types
-            values.push({path: options.path + '.' + nr, value: JSON.stringify(features[nr])})
-          }
-        } else {
-          values.push({path: options.path + '.' + nr, value: JSON.stringify({name: "-", channel: "", type: ""})})
+      var pathnr = 0
+      for (let nr = 0; nr < features.length; nr++) {
+        if (options.types[features[nr].type] == true) {
+          // Only selected types
+          values.push({path: options.path + '.' + pathnr, value: JSON.stringify(features[nr])})
+          pathnr = pathnr + 1
         }
+      }
+      // Fill rest with -
+      for (let nr = pathnr; nr < 20; nr++) {
+        values.push({path: options.path + '.' + nr, value: JSON.stringify({name: "-", channel: "", type: ""})})
       }
       //app.debug('values: %s', JSON.stringify(values))
       app.handleMessage(plugin.id, {
