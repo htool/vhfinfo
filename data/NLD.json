@@ -12595,6 +12595,539 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "699bb759-b7c5-418d-b6f6-cc982e818a54",
+        "name": "Princes Maxima Sluizen",
+        "callname": "Princes Maxima sluis",
+        "type": "lock",
+        "channel": "22",
+        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-4-10",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce",
+            "note": "South lock has a fixed bridge."
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.4524320364,
+              51.808929843773
+            ],
+            [
+              5.452550053596,
+              51.808246589316
+            ],
+            [
+              5.454545617104,
+              51.808429012636
+            ],
+            [
+              5.454465150833,
+              51.808754055995
+            ],
+            [
+              5.45567214489,
+              51.808880092585
+            ],
+            [
+              5.455591678619,
+              51.809191865794
+            ],
+            [
+              5.4524320364,
+              51.808929843773
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "a7d89760-f4b5-4baf-9607-d0fd01ccc75f",
+        "name": "Sluis Grave",
+        "callname": "Sluis Grave",
+        "type": "lock",
+        "channel": "20",
+        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-4-9",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "Fixed bridge"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.735914707184,
+              51.770190221078
+            ],
+            [
+              5.736370682716,
+              51.770336282979
+            ],
+            [
+              5.737813711166,
+              51.769449945541
+            ],
+            [
+              5.738253593445,
+              51.769609288386
+            ],
+            [
+              5.739637613297,
+              51.768434121681
+            ],
+            [
+              5.739235281944,
+              51.768301332559
+            ],
+            [
+              5.737416744232,
+              51.769347036322
+            ],
+            [
+              5.736944675446,
+              51.769197651553
+            ],
+            [
+              5.735914707184,
+              51.770190221078
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "fe401775-2509-44e3-a583-fb5423112025",
+        "name": "Sluis Sambeek",
+        "type": "lock",
+        "channel": "22",
+        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-4-7",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.981143712997,
+              51.641898574855
+            ],
+            [
+              5.980596542358,
+              51.641306005215
+            ],
+            [
+              5.981304645538,
+              51.64101970475
+            ],
+            [
+              5.980778932571,
+              51.640360540992
+            ],
+            [
+              5.982656478882,
+              51.639694709287
+            ],
+            [
+              5.983225107193,
+              51.640287299983
+            ],
+            [
+              5.984115600586,
+              51.640020968044
+            ],
+            [
+              5.984619855881,
+              51.640613554477
+            ],
+            [
+              5.981143712997,
+              51.641898574855
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "9f682d04-1752-4709-adf0-dc043d284fbf",
+        "name": "Sluis Belfeld",
+        "callname": "Sluis Belfeld",
+        "type": "lock",
+        "channel": "18",
+        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-4-6",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.114138364792,
+              51.322150849072
+            ],
+            [
+              6.113269329071,
+              51.322405634122
+            ],
+            [
+              6.112636327744,
+              51.321976521643
+            ],
+            [
+              6.111713647842,
+              51.322251422287
+            ],
+            [
+              6.110683679581,
+              51.32110487456
+            ],
+            [
+              6.111617088318,
+              51.320816556879
+            ],
+            [
+              6.111531257629,
+              51.320273441907
+            ],
+            [
+              6.111949682236,
+              51.320146043637
+            ],
+            [
+              6.114138364792,
+              51.322150849072
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "fb8219a4-1c46-40ad-9ab7-6b23126f9d12",
+        "name": "Sluis Roermond",
+        "callname": "Sluis Roermond",
+        "type": "lock",
+        "channel": "20",
+        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-4-5",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.980451703072,
+              51.213342519599
+            ],
+            [
+              5.980880856514,
+              51.213396285826
+            ],
+            [
+              5.981631875038,
+              51.210909532146
+            ],
+            [
+              5.98129928112,
+              51.210869205304
+            ],
+            [
+              5.980451703072,
+              51.213342519599
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "a2d61c41-ee69-4dca-ace8-fb601de3f826",
+        "name": "Sluis Heel",
+        "callname": "Sluis Heel",
+        "type": "lock",
+        "channel": "18",
+        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-4-4-b",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce",
+            "note": "Fixed bridge."
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.919077396393,
+              51.176154866552
+            ],
+            [
+              5.919823050499,
+              51.175956442965
+            ],
+            [
+              5.918433666229,
+              51.173810723199
+            ],
+            [
+              5.918068885803,
+              51.173931800954
+            ],
+            [
+              5.91854095459,
+              51.174691892929
+            ],
+            [
+              5.918176174164,
+              51.174796152356
+            ],
+            [
+              5.919077396393,
+              51.176154866552
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "a9e68992-2540-40b9-becd-f3c604d1216c",
+        "name": "Sluis Linne",
+        "callname": "Sluis Linne",
+        "type": "lock",
+        "channel": "22",
+        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-4-4-b",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "Fixed bridge"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.924972891808,
+              51.177476547636
+            ],
+            [
+              5.925332307816,
+              51.177395835373
+            ],
+            [
+              5.923755168915,
+              51.174957585841
+            ],
+            [
+              5.923379659653,
+              51.175058481483
+            ],
+            [
+              5.924972891808,
+              51.177476547636
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "4bf517b9-d039-4331-99ed-17ceef9c1575",
+        "name": "Sluis Panheel",
+        "callname": "Sluis Panheel",
+        "type": "lock",
+        "channel": "81",
+        "url": "https://www.binnenvaartinbeeld.com/nl/kanaal_wessem_nederweert/sluis_panheel",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.859972238541,
+              51.17451700562
+            ],
+            [
+              5.860170722008,
+              51.174735614653
+            ],
+            [
+              5.860508680344,
+              51.174934043493
+            ],
+            [
+              5.860642790794,
+              51.175102202859
+            ],
+            [
+              5.862842202187,
+              51.174409382331
+            ],
+            [
+              5.862386226654,
+              51.173770363877
+            ],
+            [
+              5.859972238541,
+              51.17451700562
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "9b6af8d5-ff1a-4cc9-afcc-a7ea3ceb833f",
+        "name": "Sluis Maasbracht",
+        "callname": "Sluis Maasbracht",
+        "type": "lock",
+        "channel": "85",
+        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-4-3",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.876575112343,
+              51.141323498667
+            ],
+            [
+              5.877519249916,
+              51.140970104646
+            ],
+            [
+              5.876864790916,
+              51.140266674209
+            ],
+            [
+              5.87718129158,
+              51.140162336725
+            ],
+            [
+              5.87900519371,
+              51.142090859226
+            ],
+            [
+              5.877760648727,
+              51.142541845884
+            ],
+            [
+              5.876575112343,
+              51.141323498667
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
