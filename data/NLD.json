@@ -13128,6 +13128,114 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "e9d2f7b2-314b-45a8-aa94-9c60f8fa8057",
+        "name": "Manders sluis",
+        "type": "lock",
+        "channel": "20",
+        "url": "https://www.vaarweginformatie.nl/frp/main/#/geo/detail/LOCK/32698",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce",
+            "note": "In general the lock is open."
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.377678930759,
+              51.652844739462
+            ],
+            [
+              4.377858638763,
+              51.652941257666
+            ],
+            [
+              4.379140734673,
+              51.652125838788
+            ],
+            [
+              4.378998577595,
+              51.652029318848
+            ],
+            [
+              4.377678930759,
+              51.652844739462
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ffea92a1-cb47-45b9-be3a-0637aa339c0a",
+        "name": "Beneden Sas",
+        "type": "lock",
+        "channel": "N.A.",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "In general the lock is open"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.25493568182,
+              51.62574828243
+            ],
+            [
+              4.254868626595,
+              51.625591762443
+            ],
+            [
+              4.255394339561,
+              51.625057259268
+            ],
+            [
+              4.25567060709,
+              51.62509722234
+            ],
+            [
+              4.255812764168,
+              51.625170487881
+            ],
+            [
+              4.25515294075,
+              51.625799900605
+            ],
+            [
+              4.25493568182,
+              51.62574828243
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
