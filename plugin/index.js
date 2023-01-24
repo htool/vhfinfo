@@ -285,7 +285,7 @@ module.exports = function (app, options) {
       })
       for (let nr=0; nr < 20; nr++) {
         if (nr < features.length) {
-          if (options.types[features.type] == true) {
+          if (options.types[features[nr].type] == true) {
             // Only selected types
             values.push({path: options.path + '.' + nr, value: JSON.stringify(features[nr])})
           }
