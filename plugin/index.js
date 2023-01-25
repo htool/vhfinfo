@@ -261,26 +261,43 @@ module.exports = function (app, options) {
       var area = null
       var territorial = null
       features.forEach(feature => {
-        if (feature.type == 'vts') {
-          if (vts == null) {
-            vts = {path: options.path + '.vts', value: JSON.stringify(feature)}
-            values.push(vts)
-          } else if (vtsradar == null) {
-            vtsradar = {path: options.path + '.vtsradar', value: JSON.stringify(feature)}
-            values.push(vtsradar)
-          } else if (lock == null) {
-            lock = {path: options.path + '.lock', value: JSON.stringify(feature)}
-            values.push(lock)
-          } else if (bridge == null) {
-            bridge = {path: options.path + '.bridge', value: JSON.stringify(feature)}
-            values.push(bridge)
-          } else if (marina == null) {
-            marina = {path: options.path + '.marina', value: JSON.stringify(feature)}
-            values.push(marina)
-          } else if (area == null) {
-            area = {path: options.path + '.area', value: JSON.stringify(feature)}
-            values.push(area)
-          }
+        switch (feature.type) {
+          case 'vts':
+            if (vts == null) {
+              vts = {path: options.path + '.vts', value: JSON.stringify(feature)}
+              values.push(vts)
+            }
+            break
+          case 'vtsradar':
+            if (vtsradar == null) {
+              vtsradar = {path: options.path + '.vtsradar', value: JSON.stringify(feature)}
+              values.push(vtsradar)
+            }
+            break
+          case 'lock':
+            if (lock == null) {
+              lock = {path: options.path + '.lock', value: JSON.stringify(feature)}
+              values.push(lock)
+            }
+            break
+          case 'bridge':
+            if (bridge == null) {
+              bridge = {path: options.path + '.bridge', value: JSON.stringify(feature)}
+              values.push(bridge)
+            }
+            break
+          case 'marina':
+            if (marina == null) {
+              marina = {path: options.path + '.marina', value: JSON.stringify(feature)}
+              values.push(marina)
+            }
+            break
+          case 'area':
+            if (area == null) {
+              area = {path: options.path + '.area', value: JSON.stringify(feature)}
+              values.push(area)
+            }
+            break
         }
       })
       var pathnr = 0
