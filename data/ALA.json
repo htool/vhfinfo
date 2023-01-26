@@ -881,6 +881,56 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "08aa47d9-22a7-4861-a285-4373edac0089",
+        "name": "Spandau Locks",
+        "callname": "Schleuse Spandau",
+        "type": "lock",
+        "channel": "23",
+        "url": "https://www.wsa-spree-havel.wsv.de/Webs/WSA/Spree-Havel/DE/01_Wasserstrassen/01_BauwerkeAnlagen/02_Schleusen/HOW/Schleuse_Spandau/schleusen_text.html",
+        "phone": "+4930 33080520",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.208935260773,
+              52.539614181069
+            ],
+            [
+              13.20981502533,
+              52.53969248598
+            ],
+            [
+              13.209149837494,
+              52.541402108371
+            ],
+            [
+              13.208377361298,
+              52.541271605192
+            ],
+            [
+              13.208935260773,
+              52.539614181069
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
