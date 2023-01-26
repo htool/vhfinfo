@@ -13236,6 +13236,1275 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "2fec1184-5267-463f-877b-9de68de10794",
+        "name": "Prinsenlandsebrug",
+        "type": "bridge",
+        "channel": "22",
+        "url": "https://www.binnenvaartkennis.nl/2018/10/marifoonkanalen-nederland/",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.391229450703,
+              51.645001116434
+            ],
+            [
+              4.391360878944,
+              51.645125946014
+            ],
+            [
+              4.391468167305,
+              51.645084336192
+            ],
+            [
+              4.391315281391,
+              51.644964499692
+            ],
+            [
+              4.391229450703,
+              51.645001116434
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "f0616a6c-0326-4215-be0b-a2c8e5a003bf",
+        "name": "Vlietbrug",
+        "type": "bridge",
+        "channel": "N.A.",
+        "url": "https://",
+        "phone": "+31  (0)165 579800",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.450557231903,
+              51.54113220775
+            ],
+            [
+              4.450734257698,
+              51.541153894436
+            ],
+            [
+              4.450683295727,
+              51.541297359943
+            ],
+            [
+              4.450519680977,
+              51.541282346132
+            ],
+            [
+              4.450557231903,
+              51.54113220775
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "8ad04892-10c2-4e7b-8a6d-0575edc51f73",
+        "name": "Markspoorbrug Zevenbergen",
+        "type": "bridge",
+        "channel": "N.A.",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Markspoorbrug-Zevenbergen",
+        "phone": "+31 (0)88 2318022",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.593175649643,
+              51.624216361466
+            ],
+            [
+              4.593409001827,
+              51.624471130169
+            ],
+            [
+              4.593317806721,
+              51.62450609831
+            ],
+            [
+              4.593065679073,
+              51.624259655595
+            ],
+            [
+              4.593175649643,
+              51.624216361466
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "1c98740f-6ebe-4dbc-b1d3-63ec4f5b720a",
+        "name": "Marksluis",
+        "type": "bridge",
+        "channel": "78",
+        "url": "https://",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "Alternative phone: +31 (0)13-5811881"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.830966889858,
+              51.647907059925
+            ],
+            [
+              4.830910563469,
+              51.648135067083
+            ],
+            [
+              4.832924902439,
+              51.648314809144
+            ],
+            [
+              4.832986593246,
+              51.648106774286
+            ],
+            [
+              4.830966889858,
+              51.647907059925
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cf5bc187-0668-45ea-89d5-c0c3152038e1",
+        "name": "Sluis I",
+        "type": "lock",
+        "channel": "18",
+        "url": "https://waterkaart.net/gids/sluis.php?naam=sluis-I",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.839649200439,
+              51.644320373077
+            ],
+            [
+              4.839944243431,
+              51.64429873559
+            ],
+            [
+              4.839721620083,
+              51.643080361968
+            ],
+            [
+              4.839437305927,
+              51.64310033557
+            ],
+            [
+              4.839649200439,
+              51.644320373077
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "390f2f40-13d2-4be4-8e36-2ab2d3236e02",
+        "name": "Brug over benedenhoofd Sluis I",
+        "type": "bridge",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Sluis-I,-brug-over-benedenhoofd",
+        "phone": "+31 (0)162 490791",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.839678704739,
+              51.644495137017
+            ],
+            [
+              4.839981794357,
+              51.644468506365
+            ],
+            [
+              4.839954972267,
+              51.644310386546
+            ],
+            [
+              4.83964651823,
+              51.644333688449
+            ],
+            [
+              4.839678704739,
+              51.644495137017
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "0a5d285b-55a9-4bd5-a771-265485a60035",
+        "name": "Sluis II",
+        "type": "lock",
+        "channel": "18",
+        "url": "https://waterkaart.net/gids/sluis.php?naam=sluis-II",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.991210103035,
+              51.596817883344
+            ],
+            [
+              4.991373717785,
+              51.596986165689
+            ],
+            [
+              4.992401003838,
+              51.596582953483
+            ],
+            [
+              4.992242753506,
+              51.596418002004
+            ],
+            [
+              4.991210103035,
+              51.596817883344
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "717065ca-f79a-4aba-98c9-bb685761cded",
+        "name": "Sluis III",
+        "type": "lock",
+        "url": "https://waterkaart.net/gids/sluis.php?naam=Sluis-III%2C-Tilburg",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.03312766552,
+              51.582301601555
+            ],
+            [
+              5.033092796803,
+              51.582134931509
+            ],
+            [
+              5.035297572613,
+              51.581889925431
+            ],
+            [
+              5.035335123539,
+              51.582066596613
+            ],
+            [
+              5.03312766552,
+              51.582301601555
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "862c5a27-bf77-4eee-98b7-390baff897db",
+        "name": "Brug Dr. Deelenlaan",
+        "type": "bridge",
+        "channel": "20",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Dr.-Deelenlaan",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.064048171043,
+              51.578809736339
+            ],
+            [
+              5.064174234867,
+              51.578793068081
+            ],
+            [
+              5.064201056957,
+              51.578938081719
+            ],
+            [
+              5.06408572197,
+              51.578948082643
+            ],
+            [
+              5.064048171043,
+              51.578809736339
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "22ddd863-99a4-4ddc-be23-3d48fe1348bb",
+        "name": "Brug Waalstraat",
+        "type": "bridge",
+        "channel": "20",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Waalstraat",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.076684057713,
+              51.578059658685
+            ],
+            [
+              5.076651871204,
+              51.578154669206
+            ],
+            [
+              5.076732337475,
+              51.578159669754
+            ],
+            [
+              5.076761841774,
+              51.578066326096
+            ],
+            [
+              5.076684057713,
+              51.578059658685
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "123d7665-8752-4782-b648-e08632206de9",
+        "name": "Brug Lijnsheike",
+        "type": "bridge",
+        "channel": "20",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Lijnsheike",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.084516108036,
+              51.578901411648
+            ],
+            [
+              5.084494650364,
+              51.579011421774
+            ],
+            [
+              5.084703862667,
+              51.579018089046
+            ],
+            [
+              5.084701180458,
+              51.578911412579
+            ],
+            [
+              5.084516108036,
+              51.578901411648
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bb3b71a3-b2da-46e1-a8e2-a942721fcba0",
+        "name": "Brug Heikantsebaan",
+        "type": "bridge",
+        "channel": "20",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Heikantsebaan",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.09648680687,
+              51.574195729221
+            ],
+            [
+              5.096599459648,
+              51.57424907302
+            ],
+            [
+              5.096645057201,
+              51.574205731188
+            ],
+            [
+              5.096524357796,
+              51.574150720342
+            ],
+            [
+              5.09648680687,
+              51.574195729221
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cf6d2772-e476-4fcf-bb09-e06f412a3684",
+        "name": "Brug Enschotsestraat",
+        "type": "bridge",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Enschotsestraat",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.104310810566,
+              51.567717326215
+            ],
+            [
+              5.104418098927,
+              51.567770677617
+            ],
+            [
+              5.104471743107,
+              51.567722327912
+            ],
+            [
+              5.104361772537,
+              51.567667309219
+            ],
+            [
+              5.104310810566,
+              51.567717326215
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "9cbe44b6-1186-4035-825f-2f6d8963fe07",
+        "name": "Brug Boscjheweg",
+        "type": "bridge",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Bosscheweg",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.108229517937,
+              51.563335628665
+            ],
+            [
+              5.108422636986,
+              51.563405659115
+            ],
+            [
+              5.108505785465,
+              51.563277269874
+            ],
+            [
+              5.108304619789,
+              51.563205571828
+            ],
+            [
+              5.108229517937,
+              51.563335628665
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "a610839a-817e-4279-9887-04171ea8258d",
+        "name": "Brug Oisterwijksebaan",
+        "type": "bridge",
+        "channel": "20",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Oisterwijksebaan",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.110976099968,
+              51.558533283393
+            ],
+            [
+              5.111348927021,
+              51.5586199969
+            ],
+            [
+              5.111394524574,
+              51.558544956374
+            ],
+            [
+              5.111008286476,
+              51.558466580582
+            ],
+            [
+              5.110976099968,
+              51.558533283393
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "f837ea48-a0e7-49db-84d1-e52893538f2e",
+        "name": "Trapistenbrug",
+        "type": "bridge",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Trappistenbrug",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.118448734283,
+              51.546041476124
+            ],
+            [
+              5.11862039566,
+              51.54608317678
+            ],
+            [
+              5.118663311005,
+              51.546004779514
+            ],
+            [
+              5.118480920792,
+              51.545973086964
+            ],
+            [
+              5.118448734283,
+              51.546041476124
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "7e687758-35c3-4376-8f71-c7aa33aaa920",
+        "name": "Prinsenhoeven",
+        "type": "bridge",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Prinsenhoeven",
+        "phone": "+31 (0)13 5429372",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce",
+            "note": "Samen met Den Ophef."
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.103629529476,
+              51.554212406763
+            ],
+            [
+              5.103763639927,
+              51.554252432205
+            ],
+            [
+              5.103962123394,
+              51.554047301444
+            ],
+            [
+              5.103830695152,
+              51.554000604882
+            ],
+            [
+              5.103629529476,
+              51.554212406763
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "6e4a614f-e45c-44f9-8736-8a9f549b51c4",
+        "name": "Den Ophef",
+        "type": "bridge",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Den-Ophef",
+        "phone": "+31 (0)13 5429372",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce",
+            "note": "Samen met Prinsenhoeven"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.099962949753,
+              51.552743115134
+            ],
+            [
+              5.100166797638,
+              51.552804823001
+            ],
+            [
+              5.100080966949,
+              51.552919899612
+            ],
+            [
+              5.099879801273,
+              51.552851520792
+            ],
+            [
+              5.099962949753,
+              51.552743115134
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "81a84096-e621-4f4f-88c4-b9d722c30f1a",
+        "name": "Brug Biesthoutakker",
+        "type": "bridge",
+        "channel": "20",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Holenakker",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.149393379688,
+              51.518293730263
+            ],
+            [
+              5.149511396885,
+              51.518365499101
+            ],
+            [
+              5.149618685246,
+              51.518297068351
+            ],
+            [
+              5.149503350258,
+              51.518226968451
+            ],
+            [
+              5.149393379688,
+              51.518293730263
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "fe4915ea-eb75-4c06-aca7-5b68c095355a",
+        "name": "Brug Holenakker",
+        "type": "bridge",
+        "channel": "20",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Holenakker",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.16240477562,
+              51.511289882915
+            ],
+            [
+              5.16248524189,
+              51.511383363659
+            ],
+            [
+              5.162576436996,
+              51.511346639104
+            ],
+            [
+              5.162501335144,
+              51.51125816619
+            ],
+            [
+              5.16240477562,
+              51.511289882915
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "01be74fc-6eac-434f-a15a-cb3e2dce3f00",
+        "name": "Brug over benedenhoofd Sluis IV",
+        "type": "bridge",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Sluis-IV,-brug-over-benedenhoofd",
+        "phone": "+31 (0)13 5811881",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.206417143345,
+              51.498422765643
+            ],
+            [
+              5.206422507763,
+              51.498335937408
+            ],
+            [
+              5.206516385078,
+              51.498340946734
+            ],
+            [
+              5.206508338451,
+              51.498424435415
+            ],
+            [
+              5.206417143345,
+              51.498422765643
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "2b889cb6-c065-4938-83cb-7f7c563f8576",
+        "name": "Sluis IV",
+        "type": "lock",
+        "channel": "20",
+        "url": "https://waterkaart.net/gids/sluis.php?naam=Sluis-IV",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.206516385078,
+              51.498421095871
+            ],
+            [
+              5.20762950182,
+              51.498447812218
+            ],
+            [
+              5.207648277283,
+              51.498284174343
+            ],
+            [
+              5.206516385078,
+              51.498264137012
+            ],
+            [
+              5.206516385078,
+              51.498421095871
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "7f234d01-f31d-4678-a484-3615d07a9f1d",
+        "name": "Brug Groenewoud",
+        "type": "bridge",
+        "channel": "20",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Groenewoud",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.270682871342,
+              51.498928703797
+            ],
+            [
+              5.270674824715,
+              51.499027219154
+            ],
+            [
+              5.270766019821,
+              51.499025549404
+            ],
+            [
+              5.270763337612,
+              51.498927034044
+            ],
+            [
+              5.270682871342,
+              51.498928703797
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "110370a3-e4aa-49b6-8772-7352cbc31ed0",
+        "name": "Brug Heuvel",
+        "type": "bridge",
+        "channel": "20",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Heuvel",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.295973420143,
+              51.499892141452
+            ],
+            [
+              5.295957326889,
+              51.499975627292
+            ],
+            [
+              5.296029746532,
+              51.499977297007
+            ],
+            [
+              5.296037793159,
+              51.49989381117
+            ],
+            [
+              5.295973420143,
+              51.499892141452
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ef7bd000-a452-4a5c-b741-f877072fecee",
+        "name": "Brug Houtens",
+        "type": "bridge",
+        "channel": "22",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Houtens",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.471907556057,
+              51.504590486612
+            ],
+            [
+              5.47189950943,
+              51.504680642017
+            ],
+            [
+              5.471958518028,
+              51.504680642017
+            ],
+            [
+              5.471966564655,
+              51.504593825705
+            ],
+            [
+              5.471907556057,
+              51.504590486612
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "5ccc8810-75bf-4e53-8e01-61e7c7ec85a7",
+        "name": "Hefbrug Son",
+        "type": "bridge",
+        "channel": "22",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Hefbrug-Son",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.492171645164,
+              51.505148111626
+            ],
+            [
+              5.492112636566,
+              51.505391861735
+            ],
+            [
+              5.492501556873,
+              51.505410226416
+            ],
+            [
+              5.4925391078,
+              51.505168145931
+            ],
+            [
+              5.492171645164,
+              51.505148111626
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
