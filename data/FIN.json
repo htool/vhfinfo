@@ -6,7 +6,6 @@
       "properties": {
         "id": "7cdd66b0-7810-4872-9494-db9b5340a121",
         "name": "Archipelago VTS",
-        "callname": "Commenly used call sign",
         "type": "vts",
         "channel": "71",
         "url": "https://www.fintraffic.fi/sites/default/files/2022-10/Archipelago%20VTS_EN.pdf",
@@ -491,7 +490,6 @@
       "properties": {
         "id": "263746e3-c9ac-412b-b05b-08aa94167ba4",
         "name": "Helsinki VTS Sector 2",
-        "callname": "Commenly used call sign",
         "type": "vts",
         "url": "https://www.fintraffic.fi/sites/default/files/2022-10/Helsinki%20VTS%20Sector%202%20EN.pdf",
         "phone": "+358204485389",
