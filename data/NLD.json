@@ -12278,7 +12278,7 @@
             "mode": "listen"
           }
         },
-        "update": "* 30"
+        "update": "30 *"
       },
       "geometry": {
         "type": "Polygon",
