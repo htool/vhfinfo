@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=1024, user-scalable=no">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
     <meta property="og:title" content="VHF info - Maritime VHF channel information projected on a map. VTSes, locks, bridges and some marinas instantly visible."/>
     <meta name="og:description" content="Always struggled with finding where one sector ends and the next one starts? Or having to write down information on paper to have available when you need it? Struggling to find the link to the source document for more information? VH info is here to help. On a map, but also in the form of a SignalK plugin." />
     <meta property="og:image" content=https://vhfinfo.org/documentation/pictures/vhfinfo_promotion.png" />
@@ -638,33 +639,27 @@ function updateNearby () {
       featureType = "VTS RADAR"
     }
     let mode = ''
-    if (typeof feature.vhfdata.pleasure != 'undefined') {
-      if (typeof feature.vhfdata.pleasure.mode != 'undefined') {
-        mode = feature.vhfdata.pleasure.mode
-      }
-    } else if (typeof feature.vhfdata.generic != 'undefined') {
-      if (typeof feature.vhfdata.generic.mode != 'undefined') {
-        mode = feature.vhfdata.generic.mode
-      }
+    if (typeof feature.vhfdata.pleasure != 'undefined' && typeof feature.vhfdata.pleasure.mode != 'undefined') {
+      mode = feature.vhfdata.pleasure.mode
+    } else if (typeof feature.vhfdata.generic != 'undefined' && typeof feature.vhfdata.generic.mode != 'undefined') {
+      mode = feature.vhfdata.generic.mode
     } 
 
     featureType = featureType + " &#9656; " + mode.toUpperCase() + " &#9656; " + Distance
     document.getElementById('type_' + key).innerHTML = featureType
 
-    if (typeof feature.vhfdata.pleasure != 'undefined') {
-      if (typeof feature.vhfdata.pleasure.note != 'undefined') {
-        document.getElementById('note_' + key).innerHTML = feature.vhfdata.pleasure.note
-      }
+    if (typeof feature.vhfdata.pleasure != 'undefined' && typeof feature.vhfdata.pleasure.note != 'undefined') {
+      document.getElementById('note_' + key).innerHTML = feature.vhfdata.pleasure.note
+    } else if (typeof feature.vhfdata.generic != 'undefined' && typeof feature.vhfdata.generic.note != 'undefined') {
+      document.getElementById('note_' + key).innerHTML = feature.vhfdata.generic.note
     } else if (typeof feature.note != 'undefined') {
       document.getElementById('note_' + key).innerHTML = feature.note
     } else {
       document.getElementById('note_' + key).innerHTML = ''
     }
 
-    if (typeof feature.vhfdata.pleasure != 'undefined') {
-      if (typeof feature.vhfdata.pleasure.phone != 'undefined') {
-        document.getElementById('phone_' + key).innerHTML = '<a href="tel:' + feature.vhfdata.pleasure.phone + '" style="text-decoration:none; color: white">&#9990;</a>'
-      }
+    if (typeof feature.vhfdata.pleasure != 'undefined' && typeof feature.vhfdata.pleasure.phone != 'undefined') {
+      document.getElementById('phone_' + key).innerHTML = '<a href="tel:' + feature.vhfdata.pleasure.phone + '" style="text-decoration:none; color: white">&#9990;</a>'
     } else if (typeof feature.phone != 'undefined') {
       document.getElementById('phone_' + key).innerHTML = '<a href="tel:' + feature.phone + '" style="text-decoration:none; color: white">&#9990;</a>'
     } else {
