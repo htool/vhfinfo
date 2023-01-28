@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-base64@2.5.2/base64.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Turf.js/3.7.0/turf.min.js"></script>
+    <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <script src="leaflet.ajax.min.js" type="text/javascript"></script>
@@ -26,9 +26,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <style>
+
       html { height: 100% }
       body { height: 100%; margin: 0; padding: 0;}
-      #map{ height: 100% }
+
+      
+      #map {
+        resize: vertical;
+        height: 70%;
+      }
+      #panel {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        overflow: auto;
+        color: white;
+        background: black;
+        font-family: Helvetica, Sans-Serif;
+        width: 100%;
+        height: 30%;
+      }
+
       .leaflet-popup-content {
         margin: 20px 10px 10px 10px;
       }
@@ -79,12 +97,98 @@
       input[type=text]:focus, select:focus, input[type=url]:focus {
         border: 2px solid #555;
       }
+      .nearby {
+        position: relative;
+        min-width: 400px;
+        max-width: 800px;
+        width: inherit;
+        border-bottom:1px solid #404040;
+      }
+      #nearby_0 {
+      }
+
+      #nearby_1 {
+      }
+      .name {
+        display: inline;
+        position: absolute;
+        top: 25px;
+        left: 125px;
+        font-size: 1.6em;
+      }
+      .channel {
+        position: absolute;
+        display: inline;
+        width: 110px;
+        text-align: right;
+        top: 0px;
+        left: 0px;
+        font-size: 6em;
+        font-weight: 700;
+        line-height: 0.8;
+      }
+      .type {
+        position: absolute;
+        display: inline;
+        top: 7px;
+        left: 125px;
+        font-size: 1em;
+      }
+      .note {
+        position: absolute;
+        display: inline;
+        bottom: 0px;
+        left: 125px;
+        font-size: 0.9em;
+      }
+      .phone {
+        position: absolute;
+        display: inline;
+        top: -2px;
+        right: 40px;
+        font-size: 1.8em;
+      }
+      .url {
+        position: absolute;
+        display: inline;
+        top: 3px;
+        right: 5px;
+        font-size: 1.2em;
+      }
+      .compass {
+        position: absolute;
+        left: 50%;
+        top: 35%;
+        z-index: 0;
+        opacity: 0;
+      }
+      
     </style>
 
     <title>VHF info</title>
   </head>
 <body>
-  <div id="map"></div>
+  <div id="map">
+  </div>
+  <div class="compass" id="compass"><img src="./magicBlueDot.png" width="100px" height="100px"></div>
+  <div id="panel">
+    <div class="nearby" id="nearby_0">
+      <div class="channel" id="channel_0"></div>
+      <div class="type" id="type_0"></div>
+      <div class="name" id="name_0"></div>
+      <div class="note" id="note_0"></div>
+      <div class="phone" id="phone_0"></div>
+      <div class="url" id="url_0"></div>
+    </div>
+    <div class="nearby" id="nearby_1">
+      <div class="name" id="name_1"></div>
+      <div class="channel" id="channel_1"></div>
+      <div class="type" id="type_1"></div>
+      <div class="note" id="note_1"></div>
+      <div class="phone" id="phone_1"></div>
+      <div class="url" id="url_1"></div>
+    </div>
+  </div>
 <style>
   table td, table td * {
     vertical-align: top;
@@ -152,6 +256,14 @@ var crosshairMode = false
 var followMode = false
 var followTimer
 var button
+
+var heading = 0 
+var searchDistance = 5000
+var angle = 80
+var lastUpdate = 0
+var lastCenter = {lat: 0, lng: 0}
+var lastHeading = 0
+var compassMode = false
 
 var changedIds = {}
 
@@ -250,11 +362,13 @@ var Position = L.Control.extend({
 const position = new Position();
 
 var crosshairIcon = L.icon({
-  iconUrl: './/crosshair.png',
+  iconUrl: './crosshair.png',
   iconSize:     [20, 20], // size of the icon
   iconAnchor:   [10, 10], // point of the icon which will correspond to marker's location
 });
 const crosshair = new L.marker(m.getCenter(), {icon: crosshairIcon, clickable:false});
+
+var compass = null
 
 //m.addLayer(osmcolor);
 // m.addLayer(vhfinfo);
@@ -313,6 +427,7 @@ drawnItems.on('remove',(e)=>{
 });
 
 L.DomUtil.addClass(m._container,'crosshair-cursor-enabled');
+    
 
 async function setupButtons () {
 if (!editMode) {
@@ -329,6 +444,9 @@ if (!editMode) {
     crosshairMode = !crosshairMode
     console.log("crosshairMode: " + crosshairMode)
     if (crosshairMode) {
+      if (heading == 0) {
+        startCompass()
+      }
       btn.button.style.backgroundColor = 'lightgrey';
       crosshair.addTo(m);
       m.addControl(position);
@@ -338,11 +456,14 @@ if (!editMode) {
         dms = !dms
         updateMousePosition(m.getCenter(m))
       })
+      document.getElementById('compass').style.opacity = '1'
     } else {
       btn.button.style.backgroundColor = 'white';
       crosshair.remove();
       m.removeControl(position);
+      document.getElementById('compass').style.opacity = '0'
     }
+    setOrientation()
   }, 'Toggle the crosshair and coordinates display').addTo(m);
   _fixEasyButtonSize(button);
 
@@ -438,6 +559,49 @@ button = L.easyButton( '<span class="help">&#63;</span>', function() {
 }, 'Help page with instructions on how to add features').addTo(m);
 _fixEasyButtonSize(button);
 
+
+function startCompass() {
+  if (navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/)) {
+    DeviceOrientationEvent.requestPermission()
+      .then((response) => {
+        if (response === "granted") {
+          window.addEventListener("deviceorientation", compassHandler, true);
+        } else {
+          alert("has to be allowed!");
+        }
+      })
+      .catch(() => alert("not supported"));
+  } else {
+    window.addEventListener("deviceorientationabsolute", compassHandler, true);
+  }
+}
+
+function compassHandler(e) {
+  heading = e.webkitCompassHeading || Math.abs(e.alpha - 360);
+  console.log(heading)
+  if (heading != 360) {
+    compassMode = true
+  }
+  center = m.getCenter(m)
+  if (crosshairMode) {
+    updateMousePosition(center)
+    updateCenterGraphic()
+    // Don't refresh nearby at every change
+    let pointCenter = turf.point([center.lat, center.lng])
+    let pointLastCenter = turf.point([lastCenter.lat, lastCenter.lng])
+    moveDistance = turf.distance(pointLastCenter, pointCenter, 'meters')
+    if (Date.now() - lastUpdate > 1000) {
+      lastUpdate = Date.now()
+      if ((compassMode && Math.abs(lastHeading - heading) > 5) || moveDistance > 50) {
+        lastCenter = center
+        lastHeading = heading
+        updateNearby()
+      }
+    }
+  }
+}
+
+
 if (editMode) {
   var mouseposition = document.getElementsByClassName('mouseposition')[0]
   L.DomEvent.addListener(mouseposition, 'click', event => {
@@ -451,11 +615,107 @@ function followUpdate () {
     followTimer = setTimeout(followUpdate, 5000)
   }
   navigator.geolocation.getCurrentPosition(geolocationSuccess, geolocationError, geoOptions)
+  updateNearby()
 }
+
+function updateNearby () {
+  let center = m.getCenter()
+  var searchPolygon = createSearchPolygon (center.lng, center.lat, heading, searchDistance, angle)
+  var closest = nearbyFeatures (center.lng, center.lat, heading, searchPolygon)
+  // console.log('Closest: ' + JSON.stringify(closest))
+  let lastKey = -1
+  for (const [key, feature] of Object.entries(closest)) {
+    if (typeof feature.callname != 'undefined') {
+      document.getElementById('name_' + key).innerHTML = feature.callname
+    } else {
+      document.getElementById('name_' + key).innerHTML = feature.name
+    }
+    document.getElementById('channel_' + key).innerHTML = feature.channel.toString().replace(/[\/,]/g, " ")
+    document.getElementById('channel_' + key).style.fontSize = (8-(feature.channel.length * 0.7)) + 'em'
+
+    let Distance = feature.distance
+    if (Distance < 0) {
+      Distance = 'INSIDE'
+    } else {
+      Distance = Distance + 'm'
+    }
+    let featureType = feature.type.toUpperCase()
+    if (featureType == "VTS RADAR SUPPORT") {
+      featureType = "VTS RADAR"
+    }
+    let mode = ''
+    if (typeof feature.vhfdata.pleasure != 'undefined') {
+      if (typeof feature.vhfdata.pleasure.mode != 'undefined') {
+        mode = feature.vhfdata.pleasure.mode
+      }
+    } else if (typeof feature.vhfdata.generic != 'undefined') {
+      if (typeof feature.vhfdata.generic.mode != 'undefined') {
+        mode = feature.vhfdata.generic.mode
+      }
+    } 
+
+    featureType = featureType + " &#9656; " + mode.toUpperCase() + " &#9656; " + Distance
+    document.getElementById('type_' + key).innerHTML = featureType
+
+    if (typeof feature.vhfdata.pleasure != 'undefined') {
+      if (typeof feature.vhfdata.pleasure.note != 'undefined') {
+        document.getElementById('note_' + key).innerHTML = feature.vhfdata.pleasure.note
+      }
+    } else if (typeof feature.note != 'undefined') {
+      document.getElementById('note_' + key).innerHTML = feature.note
+    } else {
+      document.getElementById('note_' + key).innerHTML = ''
+    }
+
+    if (typeof feature.vhfdata.pleasure != 'undefined') {
+      if (typeof feature.vhfdata.pleasure.phone != 'undefined') {
+        document.getElementById('phone_' + key).innerHTML = '<a href="tel:' + feature.vhfdata.pleasure.phone + '" style="text-decoration:none; color: white">&#9990;</a>'
+      }
+    } else if (typeof feature.phone != 'undefined') {
+      document.getElementById('phone_' + key).innerHTML = '<a href="tel:' + feature.phone + '" style="text-decoration:none; color: white">&#9990;</a>'
+    } else {
+      document.getElementById('phone_' + key).innerHTML = ''
+    }
+
+    if (typeof feature.vhfdata.pleasure != 'undefined') {
+      if (typeof feature.vhfdata.pleasure.url != 'undefined') {
+        document.getElementById('url_' + key).innerHTML = '<a href="' + feature.vhfdata.pleasure.url + '" style="text-decoration:none; color: white" target="_blank" >&#128279;</a>'
+      }
+    } else if (typeof feature.url != 'undefined') {
+      document.getElementById('url_' + key).innerHTML = '<a href="' + feature.url + '" style="text-decoration:none; color: white" target="_blank">&#128279;</a>'
+    } else {
+      document.getElementById('url_' + key).innerHTML = ''
+    }
+
+    lastKey = Number(key)
+    if (key == 1) { break }
+  }
+  for (key = lastKey + 1; key <= 1; key++) {
+    document.getElementById('name_' + key).innerHTML = '-'
+    document.getElementById('channel_' + key).innerHTML = ''
+    document.getElementById('type_' + key).innerHTML = ''
+    document.getElementById('note_' + key).innerHTML = ''
+    document.getElementById('phone_' + key).innerHTML = ''
+    document.getElementById('url_' + key).innerHTML = ''
+  }
+}
+
+function nearbyFeatures (lng, lat, heading, searchPolygon) {
+  var point = {
+    type: "Feature",
+    geometry: {
+      type: "Point",
+      coordinates: [lng, lat]
+    }
+  };
+  var closest = findNearbyFeatures ([lng, lat], heading, searchPolygon)
+  return closest;
+}
+
 
 function loadUrl (url, layerGroup, country) {
   if (countriesLoaded.includes(url)) {
-    console.log(country + ' already loadded')
+    // console.log(country + ' already loadded')
     return
   }
   console.log('Loading ' + country)
@@ -548,10 +808,31 @@ if (editMode) {
   m.on('move', function() {
     if (crosshairMode) {
       let center = m.getCenter()
-      crosshair.setLatLng(center);
       updateMousePosition(center)
+      updateCenterGraphic()
     }
   });
+  m.on('moveend', function() {
+    if (crosshairMode) {
+      updateNearby()
+    }
+  });
+}
+
+function updateCenterGraphic () {
+  if (compassMode) {
+    // Rotate compass
+    let center = (m.latLngToContainerPoint(m.getCenter()))
+    document.getElementById('compass').style.left = (center.x-50) + 'px'
+    document.getElementById('compass').style.top = (center.y-55) + 'px'
+    document.getElementById('compass').style.transform = 'rotate(' + heading + 'deg)'
+    document.getElementById('compass').style.opacity = '1'
+    document.getElementById('compass').style.zIndex = '1000'
+  } else {
+    document.getElementById('compass').style.opacity = '0'
+    document.getElementById('compass').style.zIndex = '-100'
+    crosshair.setLatLng(m.getCenter());
+  }
 }
 
 function updateMousePosition (latlng) {
@@ -562,7 +843,7 @@ function updateMousePosition (latlng) {
     lat = convertToDms(latlng.lat, false)
     lng = convertToDms(latlng.lng, true)
   }
-  var coor = `${lat} ${lng}`
+  var coor = `${lat} ${lng} ` + heading.toFixed(0) + '&#176;'
   document.getElementsByClassName('mouseposition')[0].innerHTML = `${coor}`
 }
 
@@ -596,8 +877,8 @@ function convertToDm(dd, isLng) {
 }
 
 function showInfo(f, layer, country) {
-  console.log(f)
-  console.log(layer)
+  // console.log(f)
+  // console.log(layer)
 
   let p = f.properties
   
@@ -614,7 +895,13 @@ function showInfo(f, layer, country) {
 	  html = html + '<tr><td>Phone</td><td><a href="tel:' + p.phone + '">' + p.phone + '</a></td></tr>'
 	}
   if (typeof p.update != 'undefined' && p.update != "") {
-    html = html + '<tr><td>Update schedule</td><td>' + cronstrue.toString(p.update + " * * *") + '</td></tr>'
+    var update
+    try {
+      update = cronstrue.toString(p.update + " * * *")
+    } catch {
+      update = p.update
+    }
+    html = html + '<tr><td>Update schedule</td><td>' + update + '</td></tr>'
   }
 
   html = html + addHTML(p)
@@ -662,6 +949,7 @@ function checkLayer (addRemove, l) {
       m.addLayer(l)
       m.removeLayer(l)
     }
+    updateNearby()
     break
   case 'remove':
     if (m.hasLayer(l)) {
@@ -672,6 +960,7 @@ function checkLayer (addRemove, l) {
       // console.log(l + ' is inactive')
       m.removeLayer(l)
     }
+    updateNearby()
     break
   }
 }
@@ -689,9 +978,9 @@ function geolocationError () {
 }
 
 if (mapPos) {
-  console.log(mapPosition)
+  // console.log(mapPosition)
   const [lat, lon, zoom] = mapPosition.split('/')
-  console.log('lat: ' + lat + '  lon: ' + lon + '  zoom: ' + zoom)
+  // console.log('lat: ' + lat + '  lon: ' + lon + '  zoom: ' + zoom)
   m.panTo(new L.LatLng(lat, lon))
   m.setZoom(zoom)
   if (!editMode) {
@@ -770,8 +1059,8 @@ if (editMode) {
       const p = layer.feature.properties
       if (typeof changedIds[p.id] == 'undefined') {
         changedIds[p.id] = {"name": p.name, "action": "Change", "type": p.type, "leaflet_id": Object.keys(e.layers._layers)[0]}
-        console.log(JSON.stringify(changedIds[p.id], null, 2))
-        console.log(JSON.stringify(changedIds, null, 2))
+        // console.log(JSON.stringify(changedIds[p.id], null, 2))
+        // console.log(JSON.stringify(changedIds, null, 2))
       }
     });
   });
@@ -939,7 +1228,7 @@ function editPopup (layer, f, l_id) {
       console.log('Do not delete feature')
     }
   });
-  console.log(layer)
+  // console.log(layer)
 }
 
 }
@@ -1227,6 +1516,149 @@ function _fixEasyButtonSize(button) {
     buttonElement.style.minWidth = "26px";
     buttonElement.style.minHeight = "26px";
 }
+
+function findNearbyFeatures (currentCoordinates, heading, searchPolygon) {
+  var nearbyFeatures = []
+  currentPosition = turf.point(currentCoordinates, { })
+  let layers = [vtsLayer, radarLayer, lockLayer, bridgeLayer, marinaLayer, areaLayer, Nm12]
+  layers.forEach (l => {
+    if (m.hasLayer(l)) {
+      l.toGeoJSON(12).features.forEach (feature => {
+        try {
+          intersect = turf.intersect(feature, searchPolygon) 
+          if (intersect != null) {
+            var distance = Math.round(distanceToPolygon(currentPosition, feature))
+            feature.properties.distance = distance
+            var nearestPoint = turf.nearestPointOnLine(turf.polygonToLine(feature), currentPosition)
+            var relativeBearing = Math.round(turf.rhumbBearing(currentPosition, nearestPoint.geometry.coordinates) - heading)
+            if (relativeBearing < -180) {
+              relativeBearing = relativeBearing + 360
+            }
+            feature.properties.relativeBearing = relativeBearing
+            // console.log('Intersects with %s (%dm at %d)', feature.properties.name, distance, relativeBearing)
+            if (distance < searchDistance) {
+              nearbyFeatures.push(feature.properties)
+            }
+          }
+        } catch (e) {
+          console.log('error with feature: ' + feature.properties.name)
+          console.log(e)
+        }
+      })
+    }
+  })
+  nearbyFeatures.sort(function(a, b) {
+    return parseFloat(Math.abs(a.distance)) - parseFloat(Math.abs(b.distance));
+  });
+  // console.log(nearbyFeatures)
+  return nearbyFeatures
+}
+
+function rad2deg(radians) {
+  return radians * (180/Math.PI);
+}
+
+function distanceToPolygon(point, polygon) {
+  if (polygon.type === "Feature") { polygon = polygon.geometry }
+  let distance;
+  if (polygon.type === "MultiPolygon") {
+    distance = polygon.coordinates
+    .map(coords => distanceToPolygon({ point, polygon: turf.polygon(coords).geometry }))
+    .reduce((smallest, current) => (current < smallest ? current : smallest));
+  } else {
+    if (polygon.coordinates.length > 1) {
+      if (exteriorDistance < 0) {
+        // point is inside the exterior polygon shape
+        const smallestInteriorDistance = interiorDistances.reduce(
+          (smallest, current) => (current < smallest ? current : smallest)
+        );
+        if (smallestInteriorDistance < 0) {
+          // point is inside one of the holes (therefore not actually inside this shape)
+          distance = smallestInteriorDistance * -1;
+        } else {
+          // find which is closer, the distance to the hole or the distance to the edge of the exterior, and set that as the inner distance.
+          distance = smallestInteriorDistance < exteriorDistance * -1
+          ? smallestInteriorDistance * -1
+          : exteriorDistance;
+        }
+      } else {
+        distance = exteriorDistance;
+      }
+    } else {
+      // The actual distance operation - on a normal, hole-less polygon (converted to meters)
+      distance = turf.pointToLineDistance(point, turf.polygonToLineString(polygon)) * 1000;
+      if (turf.booleanPointInPolygon(point, polygon)) {
+        distance = distance * -1;
+      }
+    }
+  }
+  return distance
+}
+
+function createSearchPolygon (lng, lat, heading, distance, angle) {
+  var currentPosition = turf.point([lng,lat], { })
+  var options = {units: 'meters'}
+  var searchPolygon
+  if (compassMode) {
+    var bearing = heading - (angle/2)
+    if (bearing > 180) { bearing = bearing - 360 }
+    // console.log('pointA: ' + bearing + ' distance: ' + distance)
+    var pointA = turf.destination(currentPosition, distance, bearing, options.units);
+    var bearing = heading + (angle/2);
+    if (bearing > 180) { bearing = bearing - 360 }
+    console.log('pointB: ' + bearing + ' distance: ' + distance)
+    var pointB = turf.destination(currentPosition, distance, bearing, options.units);
+    searchPolygon = turf.polygon([[
+      [lng,lat],
+      pointA.geometry.coordinates,
+      pointB.geometry.coordinates,
+      [lng,lat]
+    ]], {name: 'searchPolygon' });
+    console.log(JSON.stringify(searchPolygon))
+  } else {
+    var pointA = turf.destination(currentPosition, distance/2, 45, options.units);
+    var pointB = turf.destination(currentPosition, distance/2, 225, options.units);
+    searchPolygon = turf.bboxPolygon(turf.bbox(turf.lineString([pointA.geometry.coordinates, pointB.geometry.coordinates])))
+  }
+  return searchPolygon
+}
+
+function setOrientation () {
+  const windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+  if (crosshairMode) {
+    if (windowWidth / windowHeight > 1.1) {
+      console.log('landscape')
+      document.getElementById('map').style.height = '85%'
+      document.getElementById('panel').style.height = '15%'
+      Array.from(document.getElementsByClassName('nearby')).forEach(
+        function(element, index, array) {
+         element.style.width = '50%'
+        }
+      );
+    } else {
+      console.log('portrait')
+      document.getElementById('map').style.height = '70%'
+      document.getElementById('panel').style.height = '30%'
+      Array.from(document.getElementsByClassName('nearby')).forEach(
+        function(element, index, array) {
+          element.style.width = '100%'
+        }
+      );
+    }
+  } else {
+      document.getElementById('map').style.height = '100%'
+      document.getElementById('panel').style.height = '0%'
+  }
+}
+
+
+window.addEventListener("resize", (event) => {
+  setOrientation()
+});
+
+document.getElementsByClassName('crosshair')[0].click()
+
 
 </script>
 <div id="helpPopup" class="helpPopup">
