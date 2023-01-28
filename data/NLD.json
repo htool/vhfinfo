@@ -12266,7 +12266,7 @@
         "type": "area",
         "channel": "25",
         "url": "https://varendoejesamen.nl/kenniscentrum/artikel/verkeerspost-ouddorp-vaste-rots-de-branding",
-        "phone": "+31887970956",
+        "phone": "+31 (0)88 7970956",
         "vhfdata": {
           "generic": {
             "mode": "listen"
@@ -12278,7 +12278,7 @@
             "mode": "listen"
           }
         },
-        "update": "H+30"
+        "update": "* 30"
       },
       "geometry": {
         "type": "Polygon",
