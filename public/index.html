@@ -1588,15 +1588,15 @@ function createSearchPolygon (lng, lat, heading, distance, angle) {
   var currentPosition = turf.point([lng,lat], { })
   var options = {units: 'meters'}
   var searchPolygon
-  if (compassMode) {
+  if (true || compassMode) {
     var bearing = heading - (angle/2)
     if (bearing > 180) { bearing = bearing - 360 }
-    // console.log('pointA: ' + bearing + ' distance: ' + distance)
-    var pointA = turf.destination(currentPosition, distance, bearing, options.units);
+    console.log('pointA: ' + bearing + ' distance: ' + distance)
+    var pointA = turf.rhumbDestination(currentPosition, distance, bearing, options);
     var bearing = heading + (angle/2);
     if (bearing > 180) { bearing = bearing - 360 }
     console.log('pointB: ' + bearing + ' distance: ' + distance)
-    var pointB = turf.destination(currentPosition, distance, bearing, options.units);
+    var pointB = turf.rhumbDestination(currentPosition, distance, bearing, options);
     searchPolygon = turf.polygon([[
       [lng,lat],
       pointA.geometry.coordinates,
