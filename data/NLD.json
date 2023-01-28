@@ -5516,7 +5516,7 @@
         "type": "lock",
         "channel": "18",
         "url": "https://www.goes.nl/contactgegevens-sluis-en-bruggen",
-        "phone": "+31 (0)113 216744",
+        "phone": "+31113216744",
         "vhfdata": {
           "generic": {
             "mode": "listen"
