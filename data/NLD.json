@@ -14505,6 +14505,493 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "b3c13e04-1e8b-4353-9df3-35203063d139",
+        "name": "Brug Hooijdonk",
+        "type": "bridge",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Hooijdonk",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.509796440601,
+              51.506643982148
+            ],
+            [
+              5.509876906872,
+              51.506653998973
+            ],
+            [
+              5.509839355946,
+              51.506735802958
+            ],
+            [
+              5.509769618511,
+              51.506722447215
+            ],
+            [
+              5.509796440601,
+              51.506643982148
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "b0a49985-5315-4de5-bb6d-6b99c84a7f81",
+        "name": "Brug Stad van Gerwen",
+        "type": "bridge",
+        "channel": "22",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Stad-van-Gerwen",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.538450479507,
+              51.509353452931
+            ],
+            [
+              5.538501441479,
+              51.50936346916
+            ],
+            [
+              5.538479983807,
+              51.509446937649
+            ],
+            [
+              5.538431704044,
+              51.509440260176
+            ],
+            [
+              5.538450479507,
+              51.509353452931
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "3ab9c2b4-6d8f-4a91-a786-43acf7a57cc4",
+        "name": "Sluis V",
+        "type": "lock",
+        "channel": "22",
+        "url": "https://",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.564797818661,
+              51.511794008942
+            ],
+            [
+              5.564749538898,
+              51.511982637445
+            ],
+            [
+              5.566018223763,
+              51.512107832923
+            ],
+            [
+              5.566058456898,
+              51.51191753566
+            ],
+            [
+              5.564797818661,
+              51.511794008942
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ef57910c-d87b-4e88-b0d8-99d28b4d6b19",
+        "name": "New feature",
+        "type": "bridge",
+        "channel": "22",
+        "url": "https://www.binnenvaartinbeeld.com/nl/wilhelminakanaal/brug_sluis_v",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.566074550152,
+              51.511964275413
+            ],
+            [
+              5.566138923168,
+              51.511970952516
+            ],
+            [
+              5.566112101078,
+              51.512061093318
+            ],
+            [
+              5.56605309248,
+              51.512057754773
+            ],
+            [
+              5.566074550152,
+              51.511964275413
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "f0fd897c-36c1-4669-a488-8187a59a35d9",
+        "name": "Brug Oranjelaan",
+        "type": "bridge",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Oranjelaan",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.640229582787,
+              51.51857746687
+            ],
+            [
+              5.640401244164,
+              51.518605840434
+            ],
+            [
+              5.640310049057,
+              51.518801116833
+            ],
+            [
+              5.640114247799,
+              51.518764398258
+            ],
+            [
+              5.640229582787,
+              51.51857746687
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "e9debc6f-6a7f-4a75-ae45-d6dbda4703c8",
+        "name": "Sluis 13",
+        "type": "lock",
+        "channel": "18",
+        "url": "https://www.binnenvaartinbeeld.com/nl/zuid_willemsvaart/sluis_13_someren",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.746691823006,
+              51.329733450947
+            ],
+            [
+              5.746879577637,
+              51.329751886338
+            ],
+            [
+              5.746689140797,
+              51.330772525051
+            ],
+            [
+              5.746520161629,
+              51.330760793701
+            ],
+            [
+              5.746691823006,
+              51.329733450947
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "e9c06ff6-dd0e-4502-880c-b66bb7dc14d6",
+        "name": "Sluis 12",
+        "type": "lock",
+        "channel": "18",
+        "url": "https://www.binnenvaartinbeeld.com/nl/zuid_willemsvaart/sluis_12",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.743180811405,
+              51.350548988694
+            ],
+            [
+              5.743352472782,
+              51.350562390165
+            ],
+            [
+              5.743499994278,
+              51.349677884707
+            ],
+            [
+              5.743322968483,
+              51.349666158195
+            ],
+            [
+              5.743180811405,
+              51.350548988694
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "122c6e89-6ff8-4b88-8327-72ec7aeffa7e",
+        "name": "Sluis 11",
+        "type": "lock",
+        "channel": "18",
+        "url": "https://www.binnenvaartinbeeld.com/nl/zuid_willemsvaart/sluis_11",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.726484060287,
+              51.39600933921
+            ],
+            [
+              5.726604759693,
+              51.39608966817
+            ],
+            [
+              5.727637410164,
+              51.395455400248
+            ],
+            [
+              5.727492570877,
+              51.395370049539
+            ],
+            [
+              5.726484060287,
+              51.39600933921
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "0d5854a8-4d36-48d6-af26-0f7d48019558",
+        "name": "Sluis 10",
+        "type": "lock",
+        "url": "https://www.binnenvaartinbeeld.com/nl/zuid_willemsvaart/sluis_10",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.701067447662,
+              51.416734552989
+            ],
+            [
+              5.701244473457,
+              51.416769681002
+            ],
+            [
+              5.701550245285,
+              51.415888126992
+            ],
+            [
+              5.701370537281,
+              51.415861362278
+            ],
+            [
+              5.701067447662,
+              51.416734552989
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "5c23656f-8625-4d2e-be82-152d40225408",
+        "name": "Sluis Helmond",
+        "type": "lock",
+        "channel": "18",
+        "url": "https://waterkaart.net/gids/sluis.php?naam=sluis-Helmond",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.693463385105,
+              51.467028592298
+            ],
+            [
+              5.693710148335,
+              51.467055327043
+            ],
+            [
+              5.694064199924,
+              51.465900705973
+            ],
+            [
+              5.693822801113,
+              51.46587731248
+            ],
+            [
+              5.693463385105,
+              51.467028592298
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
