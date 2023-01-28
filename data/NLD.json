@@ -5565,7 +5565,7 @@
         "callname": "Wilhelminabrug",
         "type": "bridge",
         "url": "https://www.goes.nl/contactgegevens-sluis-en-bruggen",
-        "phone": "+31 (0)113 216744",
+        "phone": "+31113216744",
         "vhfdata": {
           "generic": {
             "mode": "listen"
@@ -5576,7 +5576,8 @@
           "cargo": {
             "mode": "listen"
           }
-        }
+        },
+        "channel": "18"
       },
       "geometry": {
         "type": "Polygon",
