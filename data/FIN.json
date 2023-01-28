@@ -506,7 +506,8 @@
           "cargo": {
             "mode": "listen"
           }
-        }
+        },
+        "channel": "9"
       },
       "geometry": {
         "type": "Polygon",
