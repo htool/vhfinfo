@@ -620,8 +620,12 @@ function updateNearby () {
     } else {
       document.getElementById('name_' + key).innerHTML = feature.name
     }
-    document.getElementById('channel_' + key).innerHTML = feature.channel.toString().replace(/[\/,]/g, " ")
-    document.getElementById('channel_' + key).style.fontSize = (8-(feature.channel.length * 0.7)) + 'em'
+    if (typeof feature.channel != 'undefined') {
+      document.getElementById('channel_' + key).innerHTML = feature.channel.toString().replace(/[\/,]/g, " ")
+      document.getElementById('channel_' + key).style.fontSize = (8-(feature.channel.length * 0.7)) + 'em'
+    } else {
+      document.getElementById('channel_' + key).innerHTML = '-'
+    }
 
     let Distance = feature.distance
     if (Distance < 0) {
@@ -1616,38 +1620,46 @@ function createSearchPolygon (lng, lat, heading, distance, angle) {
 function setOrientation () {
   const windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
   const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-  if (crosshairMode) {
-    if (windowWidth / windowHeight > 1.1) {
-      console.log('landscape')
-      document.getElementById('map').style.height = '85%'
-      document.getElementById('panel').style.height = '15%'
-      Array.from(document.getElementsByClassName('nearby')).forEach(
-        function(element, index, array) {
-         element.style.width = '50%'
-        }
-      );
+  if (!editMode) {
+    if (crosshairMode) {
+      if (windowWidth / windowHeight > 1.1) {
+        console.log('landscape')
+        document.getElementById('map').style.height = '85%'
+        document.getElementById('panel').style.height = '15%'
+        Array.from(document.getElementsByClassName('nearby')).forEach(
+          function(element, index, array) {
+            element.style.width = '50%'
+          }
+        );
+      } else {
+        console.log('portrait')
+        document.getElementById('map').style.height = '70%'
+        document.getElementById('panel').style.height = '30%'
+        Array.from(document.getElementsByClassName('nearby')).forEach(
+          function(element, index, array) {
+            element.style.width = '100%'
+          }
+        );
+      }
     } else {
-      console.log('portrait')
-      document.getElementById('map').style.height = '70%'
-      document.getElementById('panel').style.height = '30%'
-      Array.from(document.getElementsByClassName('nearby')).forEach(
-        function(element, index, array) {
-          element.style.width = '100%'
-        }
-      );
-    }
-  } else {
       document.getElementById('map').style.height = '100%'
       document.getElementById('panel').style.height = '0%'
+    }
+  } else {
+    document.getElementById('map').style.height = '100%'
+    document.getElementById('panel').style.height = '0%'
   }
 }
-
 
 window.addEventListener("resize", (event) => {
   setOrientation()
 });
 
-document.getElementsByClassName('crosshair')[0].click()
+if (editMode) {
+  setOrientation()
+} else {
+  document.getElementsByClassName('crosshair')[0].click()
+}
 
 
 </script>
