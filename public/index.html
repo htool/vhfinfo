@@ -1659,6 +1659,7 @@ function setOrientation () {
     document.getElementById('map').style.height = '100%'
     document.getElementById('panel').style.height = '0%'
   }
+  m.invalidateSize(true);
 }
 
 window.addEventListener("resize", (event) => {
