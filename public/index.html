@@ -637,7 +637,7 @@ function updateNearby () {
     }
     if (typeof feature.channel != 'undefined') {
       document.getElementById('channel_' + key).innerHTML = feature.channel.toString().replace(/[\/,]/g, " ")
-      document.getElementById('channel_' + key).style.fontSize = (8-(feature.channel.length * 0.7)) + 'em'
+      document.getElementById('channel_' + key).style.fontSize = (7-(feature.channel.length * 0.7)) + 'em'
     } else {
       document.getElementById('channel_' + key).innerHTML = '-'
     }
