@@ -381,18 +381,10 @@
             "note": "Reporting details behind link. Radar support VHF 4 (Radar Zeebrugge)"
           },
           "pleasure": {
-            "mode": "listen",
-            "note": "",
-            "url": ""
-          },
-          "cargo": {
-            "mode": "",
-            "note": "",
-            "url": ""
+            "mode": "listen"
           }
         },
-        "id": "1bf64557-e66f-43f2-9127-3219f9c81d9e",
-        "callname": ""
+        "id": "1bf64557-e66f-43f2-9127-3219f9c81d9e"
       },
       "geometry": {
         "type": "Polygon",
