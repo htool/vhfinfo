@@ -3314,8 +3314,8 @@
         "name": "Verkehrszentrale Warnemünde",
         "callname": "Wolgast Traffic",
         "type": "vts",
-        "phone": "+49 381 20671844",
-        "channel": "09",
+        "phone": "+4938120671844",
+        "channel": "9",
         "id": "101363c3-bd13-4188-addd-ae80d2afdb9c",
         "vhfdata": {
           "generic": {
@@ -3324,6 +3324,7 @@
         }
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -3455,8 +3456,7 @@
               53.886130473658
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
