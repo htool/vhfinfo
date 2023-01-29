@@ -615,6 +615,20 @@ function updateNearby () {
   var closest = nearbyFeatures (center.lng, center.lat, heading, searchPolygon)
   // console.log('Closest: ' + JSON.stringify(closest))
   let lastKey = -1
+
+  // Order VTS, VTS radar in case of both INSIDE
+  if (closest.length > 1) {
+    if (closest[0].distance < 0 && closest[1].distance < 0) {
+      // both INSIDE
+      if (closest[0].type == 'vts radar support' && closest[1].type == 'vts') {
+        // The case we'd like to switch [0] and [1]
+        // console.log('Swapping [0] and [1]')
+        closest[0] = closest.splice(1, 1, closest[0])[0];
+      }
+    }
+  }
+      
+
   for (const [key, feature] of Object.entries(closest)) {
     if (typeof feature.callname != 'undefined') {
       document.getElementById('name_' + key).innerHTML = feature.callname
@@ -627,6 +641,7 @@ function updateNearby () {
     } else {
       document.getElementById('channel_' + key).innerHTML = '-'
     }
+
 
     let Distance = feature.distance
     if (Distance < 0) {
