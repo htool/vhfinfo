@@ -221,6 +221,12 @@
     margin-left: -1px;
     display: block;
   }
+  .compassNeedle {
+    left: 20px;
+    margin-top: 2px;
+    margin-left: 0px;
+    display: block;
+  }
   .share {
     left: 20px;
     margin-top: 3px;
@@ -255,6 +261,7 @@ var lastUpdate = 0
 var lastCenter = {lat: 0, lng: 0}
 var lastHeading = 0
 var compassMode = false
+var compassOn = false
 
 var changedIds = {}
 
@@ -458,6 +465,22 @@ if (!editMode) {
   }, 'Toggle the crosshair and coordinates display').addTo(m);
   _fixEasyButtonSize(button);
 
+  button = L.easyButton( '<span class="compassNeedle"><img src="compass.png" width="20" height="20"></img></span>', function(btn, m){
+    compassMode = !compassMode
+    console.log('compassMode: ' + compassMode)
+    if (compassMode) {
+      btn.button.style.backgroundColor = 'lightgrey';
+      if (compassOn == false) {
+        startCompass()
+      }
+    } else {
+      btn.button.style.backgroundColor = 'white';
+    }
+    updateCenterGraphic()
+    updateMousePosition(m.getCenter(m))
+  }, 'Toggle compass mode').addTo(m);
+  _fixEasyButtonSize(button);
+
   button = L.easyButton( '<span class="follow"><img src="arrow.png" width="20" height="20"></img></span>', function(btn, m){
     followMode = !followMode
     console.log('followMode: ' + followMode)
@@ -557,11 +580,12 @@ function startCompass() {
       .then((response) => {
         if (response === "granted") {
           window.addEventListener("deviceorientation", compassHandler, true);
+          compassOn = true
         } else {
-          alert("has to be allowed!");
+          alert("Compass has to be allowed in OS");
         }
       })
-      .catch(() => alert("not supported"));
+      .catch(() => alert("Compass mode not supported. Pressing crosshair may help."));
   } else {
     window.addEventListener("deviceorientationabsolute", compassHandler, true);
   }
@@ -570,9 +594,6 @@ function startCompass() {
 function compassHandler(e) {
   heading = e.webkitCompassHeading || Math.abs(e.alpha - 360);
   console.log(heading)
-  if (heading != 360) {
-    compassMode = true
-  }
   center = m.getCenter(m)
   if (crosshairMode) {
     updateMousePosition(center)
@@ -583,7 +604,7 @@ function compassHandler(e) {
     moveDistance = turf.distance(pointLastCenter, pointCenter, 'meters')
     if (Date.now() - lastUpdate > 1000) {
       lastUpdate = Date.now()
-      if ((compassMode && Math.abs(lastHeading - heading) > 5) || moveDistance > 50) {
+      if ((compassOn && Math.abs(lastHeading - heading) > 5) || moveDistance > 50) {
         lastCenter = center
         lastHeading = heading
         updateNearby()
@@ -847,7 +868,10 @@ function updateMousePosition (latlng) {
     lat = convertToDms(latlng.lat, false)
     lng = convertToDms(latlng.lng, true)
   }
-  var coor = `${lat} ${lng} ` + heading.toFixed(0) + '&#176;'
+  var coor = `${lat} ${lng} ` 
+  if (compassMode) {
+    coor = coor + heading.toFixed(0) + '&#176;'
+  }
   document.getElementsByClassName('mouseposition')[0].innerHTML = `${coor}`
 }
 
@@ -1603,7 +1627,7 @@ function createSearchPolygon (lng, lat, heading, distance, angle) {
   var currentPosition = turf.point([lng,lat], { })
   var options = {units: 'meters'}
   var searchPolygon
-  if (true || compassMode) {
+  if (compassMode) {
     var bearing = heading - (angle/2)
     if (bearing > 180) { bearing = bearing - 360 }
     console.log('pointA: ' + bearing + ' distance: ' + distance)
