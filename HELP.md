@@ -6,8 +6,12 @@
 You can enable/disable different layer types using the ![26px](documentation/pictures/layers.png) button.
 You can bring an overlapping layer to back by pressing the right mouse button on the underlaying shape.
 
-### Crosshair mode
-You can disable/enable a center crosshair (including map coordinates) using the ![26px](public/crosshair.png) button.
+### Splitview mode
+You can disable/enable splitview mode (including map coordinates) using the ![26px](public/splitview.png) button.
+
+### Compass mode
+Compass mode will check your device to get the device heading and use that to 'look ahead' instead of 'around'.
+Press the ![26px](public/compass.png) button to enable/disable compass mode.
 
 ### Follow mode
 Follow mode will check your location every 5 seconds and center the map around your location.
