@@ -14992,6 +14992,497 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "87f0c47d-16fd-4362-9d98-fc0d10dc1e44",
+        "name": "Beeksebrug",
+        "type": "bridge",
+        "channel": "20",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Beeksebrug",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.642198324203,
+              51.529256361117
+            ],
+            [
+              5.642115175724,
+              51.52937149729
+            ],
+            [
+              5.642265379429,
+              51.529408207313
+            ],
+            [
+              5.642335116863,
+              51.529303083078
+            ],
+            [
+              5.642198324203,
+              51.529256361117
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "8a8199d0-1d2d-4cf4-9f42-70504386e0d9",
+        "name": "Sluis 6",
+        "type": "lock",
+        "channel": "20",
+        "url": "https://www.binnenvaartinbeeld.com/nl/zuid_willemsvaart/sluis_6",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.634081959724,
+              51.536919790134
+            ],
+            [
+              5.634275078773,
+              51.537023228424
+            ],
+            [
+              5.633143186569,
+              51.537950825808
+            ],
+            [
+              5.632982254028,
+              51.537880756162
+            ],
+            [
+              5.634081959724,
+              51.536919790134
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "b5a83af4-fb3a-4ebe-84b5-8e792cb99e8f",
+        "name": "Donksebrug",
+        "type": "bridge",
+        "channel": "20",
+        "url": "https://www.binnenvaartinbeeld.com/nl/zuid_willemsvaart/donksebrug",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.630753338337,
+              51.53977093048
+            ],
+            [
+              5.630930364132,
+              51.539851006741
+            ],
+            [
+              5.630857944489,
+              51.539919405102
+            ],
+            [
+              5.630680918694,
+              51.539837660707
+            ],
+            [
+              5.630753338337,
+              51.53977093048
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "86df0d61-6003-4ce9-b7d2-b8a2b483be81",
+        "name": "Sluis 5",
+        "type": "lock",
+        "channel": "20",
+        "url": "https://waterkaart.net/gids/sluis.php?naam=Sluis-5",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.587323009968,
+              51.576466119293
+            ],
+            [
+              5.587489306927,
+              51.576549464789
+            ],
+            [
+              5.586341321468,
+              51.577519595108
+            ],
+            [
+              5.586142838001,
+              51.577436251392
+            ],
+            [
+              5.587323009968,
+              51.576466119293
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "2df444f5-c342-461f-a1be-ba2fb892de3a",
+        "name": "Erpse brug",
+        "type": "bridge",
+        "channel": "20",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Erpsebrug",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.575035810471,
+              51.585281558796
+            ],
+            [
+              5.575207471848,
+              51.585406552731
+            ],
+            [
+              5.575148463249,
+              51.585431551477
+            ],
+            [
+              5.574976801872,
+              51.585318223719
+            ],
+            [
+              5.575035810471,
+              51.585281558796
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "a97d1f7b-56c4-4a96-9d91-098f28f68614",
+        "name": "Sluis 4",
+        "type": "lock",
+        "channel": "20",
+        "url": "https://waterkaart.net/gids/sluis.php?naam=sluis-4",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.532200932503,
+              51.608231344758
+            ],
+            [
+              5.532340407372,
+              51.608337952388
+            ],
+            [
+              5.53087323904,
+              51.609110850218
+            ],
+            [
+              5.530736446381,
+              51.609015904426
+            ],
+            [
+              5.532200932503,
+              51.608231344758
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "3ade3f65-fd4c-4885-beeb-248b16346a1e",
+        "name": "Sluis Schijndel",
+        "type": "lock",
+        "channel": "20",
+        "url": "https://waterkaart.net/gids/sluis.php?naam=Sluis-Schijndel",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.445029139519,
+              51.648279859354
+            ],
+            [
+              5.445123016834,
+              51.648424651163
+            ],
+            [
+              5.443347394466,
+              51.6488706736
+            ],
+            [
+              5.443258881569,
+              51.648732540255
+            ],
+            [
+              5.445029139519,
+              51.648279859354
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "73f49053-f970-4460-addd-ee9a01c2e866",
+        "name": "Sluis Hintham",
+        "type": "lock",
+        "channel": "81",
+        "url": "https://www.vaarweginformatie.nl/frp/main/#/geo/detail/LOCK/12785011",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.35887658596,
+              51.698287054779
+            ],
+            [
+              5.359104573727,
+              51.698351889886
+            ],
+            [
+              5.358375012875,
+              51.699492307609
+            ],
+            [
+              5.358160436153,
+              51.69943911092
+            ],
+            [
+              5.35887658596,
+              51.698287054779
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "d05970e0-975c-4b37-8dc4-de04fb250357",
+        "name": "Sluis Empel",
+        "type": "lock",
+        "channel": "81",
+        "url": "https://",
+        "phone": "+31 (0)88 7974825",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.333983004093,
+              51.738787562841
+            ],
+            [
+              5.334229767323,
+              51.738858983701
+            ],
+            [
+              5.333274900913,
+              51.740181079701
+            ],
+            [
+              5.333041548729,
+              51.740111321833
+            ],
+            [
+              5.333983004093,
+              51.738787562841
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "fbdf4290-cc70-43a3-b4f7-4ad3d638f104",
+        "name": "Henriettesluis",
+        "type": "lock",
+        "channel": "18",
+        "url": "https://waterkaart.net/gids/sluis.php?naam=Henriettesluis-(Schutsluis-Engelen)",
+        "phone": "+31 (0)73 6311492",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce",
+            "note": "Incl. bridge."
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.259554386139,
+              51.729345727983
+            ],
+            [
+              5.259728729725,
+              51.729505212365
+            ],
+            [
+              5.258331298828,
+              51.73015809569
+            ],
+            [
+              5.258119404316,
+              51.730005258709
+            ],
+            [
+              5.259554386139,
+              51.729345727983
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
