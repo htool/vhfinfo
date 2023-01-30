@@ -47,7 +47,6 @@
         width: 100%;
         height: 0%;
       }
-
       .leaflet-popup-content {
         margin: 20px 10px 10px 10px;
       }
@@ -171,7 +170,7 @@
 <body>
   <div id="map">
   </div>
-  <div class="compass" id="compass"><img src="./magicBlueDot.png" width="100px" height="100px"></div>
+  <div class="compass" id="compass"></div>
   <div id="panel">
     <div class="nearby" id="nearby_0">
       <div class="channel" id="channel_0"></div>
@@ -212,7 +211,7 @@
     display: inline-block;
     margin: 2px;
   }
-  .crosshair {
+  .splitview {
     left: 20px;
   }
   .follow {
@@ -249,7 +248,7 @@ var countriesLoaded = []
 var vhfinfo
 var Nm12
 var dms = false
-var crosshairMode = false
+var splitviewMode = false
 var followMode = false
 var followTimer
 var button
@@ -425,7 +424,6 @@ drawnItems.on('remove',(e)=>{
 });
 
 L.DomUtil.addClass(m._container,'crosshair-cursor-enabled');
-    
 
 async function setupButtons () {
 if (!editMode) {
@@ -438,11 +436,11 @@ if (!editMode) {
   }, 'Edit the country in the center of the map').addTo(m);
   _fixEasyButtonSize(button);
 
-  button = L.easyButton( '<span class="crosshair"><img src="crosshair.png" width="25" height="25"></img></span>', function(btn, m){
-    crosshairMode = !crosshairMode
-    console.log("crosshairMode: " + crosshairMode)
-    if (crosshairMode) {
-      if (heading == 0) {
+  button = L.easyButton( '<span class="splitview"><img src="splitview.png" width="25" height="25"></img></span>', function(btn, m){
+    splitviewMode = !splitviewMode
+    console.log("splitviewMode: " + splitviewMode)
+    if (splitviewMode) {
+      if (compassOn == false) {
         startCompass()
       }
       btn.button.style.backgroundColor = 'lightgrey';
@@ -459,10 +457,13 @@ if (!editMode) {
       btn.button.style.backgroundColor = 'white';
       crosshair.remove();
       m.removeControl(position);
-      document.getElementById('compass').style.opacity = '0'
+      if (compassMode) {
+        document.getElementById('compass').style.opacity = '0'
+        document.getElementsByClassName('compassNeedle')[0].click()
+      }
     }
     setOrientation()
-  }, 'Toggle the crosshair and coordinates display').addTo(m);
+  }, 'Toggle the splitview and coordinates display').addTo(m);
   _fixEasyButtonSize(button);
 
   button = L.easyButton( '<span class="compassNeedle"><img src="compass.png" width="20" height="20"></img></span>', function(btn, m){
@@ -473,11 +474,15 @@ if (!editMode) {
       if (compassOn == false) {
         startCompass()
       }
+      crosshair.remove()
     } else {
+      crosshair.addTo(m);
       btn.button.style.backgroundColor = 'white';
     }
     updateCenterGraphic()
-    updateMousePosition(m.getCenter(m))
+    if (splitviewMode) {
+      updateMousePosition(m.getCenter(m))
+    }
   }, 'Toggle compass mode').addTo(m);
   _fixEasyButtonSize(button);
 
@@ -585,7 +590,7 @@ function startCompass() {
           alert("Compass has to be allowed in OS");
         }
       })
-      .catch(() => alert("Compass mode not supported. Pressing crosshair may help."));
+      .catch(() => alert("Compass mode not supported. Pressing splitview may help."));
   } else {
     window.addEventListener("deviceorientationabsolute", compassHandler, true);
   }
@@ -595,7 +600,7 @@ function compassHandler(e) {
   heading = e.webkitCompassHeading || Math.abs(e.alpha - 360);
   console.log(heading)
   center = m.getCenter(m)
-  if (crosshairMode) {
+  if (splitviewMode) {
     updateMousePosition(center)
     updateCenterGraphic()
     // Don't refresh nearby at every change
@@ -831,14 +836,14 @@ if (editMode) {
   });
 } else {
   m.on('move', function() {
-    if (crosshairMode) {
+    if (splitviewMode) {
       let center = m.getCenter()
       updateMousePosition(center)
       updateCenterGraphic()
     }
   });
   m.on('moveend', function() {
-    if (crosshairMode) {
+    if (splitviewMode) {
       updateNearby()
     }
   });
@@ -1655,7 +1660,7 @@ function setOrientation () {
   const windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
   const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
   if (!editMode) {
-    if (crosshairMode) {
+    if (splitviewMode) {
       if (windowWidth / windowHeight > 1.1) {
         console.log('landscape')
         document.getElementById('map').style.height = '85%'
@@ -1692,8 +1697,11 @@ window.addEventListener("resize", (event) => {
 
 if (editMode) {
   setOrientation()
+  $('.leaflet-container').css('cursor','crosshair');
 } else {
-  document.getElementsByClassName('crosshair')[0].click()
+  document.getElementsByClassName('splitview')[0].click()
+  document.getElementById('compass').innerHTML = '<img src="./magicBlueDot.png" width="100px" height="100px">'
+  $('.leaflet-container').css('cursor','');
 }
 
 
