@@ -1475,14 +1475,14 @@
       "properties": {
         "name": "Den Helder",
         "type": "vts",
-        "channel": 62,
+        "channel": "62",
         "url": "https://www.binnenvaartkennis.nl/wp-content/uploads/2021/03/VTS-Procedures-Den-Helder.pdf",
         "phone": "+31223657522",
         "update": "5 *",
         "vhfdata": {
           "generic": {
             "mode": "announce",
-            "note": "Report 2h before entering, when entering, anchoring, passing Moermanbrug and 1h before leaving."
+            "note": "Report 2h before entering, when entering, anchoring, passing Moormanbrug and 1h before leaving."
           },
           "pleasure": {
             "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-6-8"
