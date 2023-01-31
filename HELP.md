@@ -51,10 +51,10 @@ Click a feature to edit the details.
 
 #### Types
 - VTS - Vessel Traffic Service
+- VTS Radar Support - Specific channel for radar support in a VTS
 - Lock
 - Bridge
 - Marina
-- Berth - non marina area where berth request by VHF is required or possible
 - Area - non VTS larger area
 
 ## Related work
