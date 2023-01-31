@@ -72,4 +72,3 @@ If you have comments/feedback, you can contact me at contact@vhfinfo.org.
 ## Donation
 
 If you find the website and/or plugin useful, you can help adding data and/or keeping it up to date. Or show your appreciation with a donation.
-
