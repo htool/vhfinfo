@@ -11808,15 +11808,14 @@
       "properties": {
         "id": "2382ed0e-5282-4d63-b017-66ce3e16bcf8",
         "name": "Verkeerspost Ouddorp",
-        "callname": "-",
         "type": "area",
         "channel": "71",
         "url": "https://varendoejesamen.nl/kenniscentrum/artikel/verkeerspost-ouddorp-vaste-rots-de-branding",
-        "phone": "+31 (0)88 7970956",
+        "phone": "+31887970956",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Only broadcast (at H+30)"
+            "note": "Broadcast only"
           },
           "pleasure": {
             "mode": "listen"
@@ -11824,7 +11823,8 @@
           "cargo": {
             "mode": "listen"
           }
-        }
+        },
+        "update": "* 30"
       },
       "geometry": {
         "type": "Polygon",
