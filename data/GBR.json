@@ -766,6 +766,170 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "e2fb950f-ea54-489a-9e7c-6b6773ed91ca",
+        "name": "Ramsgate Port Control",
+        "type": "vts",
+        "channel": "14",
+        "url": "https://ramsgateroyalharbour.co.uk/mariners-information/ramsgate-harbour-approach/",
+        "phone": "+441843572100",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen",
+            "note": "All leisure craft in the port approaches or intending to enter the port should listen on VHF Channel 14 until clear inside the Royal Harbour. Small craft should use the Recommended Yacht Track that lies parallel to the S side of the channel."
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.424639225006,
+              51.326079745368
+            ],
+            [
+              1.422514915466,
+              51.327366955593
+            ],
+            [
+              1.421763896942,
+              51.32770216066
+            ],
+            [
+              1.420133113861,
+              51.327393772089
+            ],
+            [
+              1.419038772583,
+              51.327849650113
+            ],
+            [
+              1.41850233078,
+              51.32854686656
+            ],
+            [
+              1.414532661438,
+              51.327487629699
+            ],
+            [
+              1.414082050323,
+              51.325248402896
+            ],
+            [
+              1.415348052979,
+              51.323894086919
+            ],
+            [
+              1.422235965729,
+              51.323759994052
+            ],
+            [
+              1.423480510712,
+              51.324336590597
+            ],
+            [
+              1.424639225006,
+              51.326079745368
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "f30bc6f8-e625-4949-87b0-6e2adadf2e6b",
+        "name": "Ramsgate Marina",
+        "callname": "Ramsgate Marina",
+        "type": "marina",
+        "channel": "80",
+        "url": "https://ramsgateroyalharbour.co.uk/visitor-berthing/",
+        "phone": "+441843572100",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.420884132385,
+              51.33220707899
+            ],
+            [
+              1.423287391663,
+              51.331831686033
+            ],
+            [
+              1.425068378448,
+              51.329552448533
+            ],
+            [
+              1.424918174744,
+              51.32908317969
+            ],
+            [
+              1.424510478973,
+              51.328707761157
+            ],
+            [
+              1.423223018646,
+              51.328158035618
+            ],
+            [
+              1.422638297081,
+              51.327360251467
+            ],
+            [
+              1.421694159508,
+              51.327745737138
+            ],
+            [
+              1.420154571533,
+              51.327444052975
+            ],
+            [
+              1.419092416763,
+              51.327863058221
+            ],
+            [
+              1.418030261993,
+              51.329143514525
+            ],
+            [
+              1.416699886322,
+              51.329753562282
+            ],
+            [
+              1.418341398239,
+              51.331570249837
+            ],
+            [
+              1.420884132385,
+              51.33220707899
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
