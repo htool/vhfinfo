@@ -20,7 +20,8 @@
           "cargo": {
             "mode": "listen"
           }
-        }
+        },
+        "callname": "Estuary Sector"
       },
       "geometry": {
         "type": "Polygon",
@@ -227,8 +228,8 @@
               51.617170524234
             ],
             [
-              0.678502321243,
-              51.536239093589
+              0.677890777588,
+              51.561491454664
             ],
             [
               0.678502321243,
@@ -237,6 +238,114 @@
             [
               0.877178907394,
               51.484516451991
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "f4cc1410-a9f1-4ae3-9dbe-c86a5bb1712e",
+        "name": "London VTS",
+        "callname": "River Sector",
+        "type": "vts",
+        "channel": "68",
+        "url": "https://pla.co.uk/Safety/Vessel-Traffic-Services-VTS-/About-London-VTS",
+        "phone": "+441474560311",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.214233398438,
+              51.526688248188
+            ],
+            [
+              0.677633285522,
+              51.561491454664
+            ],
+            [
+              0.678475499153,
+              51.475512745585
+            ],
+            [
+              0.455932617188,
+              51.430039447169
+            ],
+            [
+              0.212860107422,
+              51.446304454404
+            ],
+            [
+              0.214233398438,
+              51.526688248188
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "b94f2721-a379-4c52-9798-953cc30c740f",
+        "name": "VTS London",
+        "callname": "Barrier Sector",
+        "type": "vts",
+        "channel": "14",
+        "url": "https://pla.co.uk/Safety/Vessel-Traffic-Services-VTS-/About-London-VTS",
+        "phone": "+441474560311",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -0.350875854492,
+              51.493782232608
+            ],
+            [
+              -0.348472595215,
+              51.427470758666
+            ],
+            [
+              0.212856084108,
+              51.446305290244
+            ],
+            [
+              0.214169025421,
+              51.526688248188
+            ],
+            [
+              0.17578125,
+              51.55060496921
+            ],
+            [
+              -0.350875854492,
+              51.493782232608
             ]
           ]
         ]
