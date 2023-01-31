@@ -730,14 +730,14 @@ function updateNearby () {
       document.getElementById('phone_' + key).innerHTML = ''
     }
 
-    if (typeof feature.vhfdata.pleasure != 'undefined') {
-      if (typeof feature.vhfdata.pleasure.url != 'undefined') {
+    if (typeof feature.vhfdata.pleasure != 'undefined' && typeof feature.vhfdata.pleasure.url != 'undefined') {
         document.getElementById('url_' + key).innerHTML = '<a href="' + feature.vhfdata.pleasure.url + '" style="text-decoration:none; color: white" target="_blank" >&#128279;</a>'
-      }
-    } else if (typeof feature.url != 'undefined') {
-      document.getElementById('url_' + key).innerHTML = '<a href="' + feature.url + '" style="text-decoration:none; color: white" target="_blank">&#128279;</a>'
     } else {
-      document.getElementById('url_' + key).innerHTML = ''
+      if (typeof feature.url != 'undefined') {
+        document.getElementById('url_' + key).innerHTML = '<a href="' + feature.url + '" style="text-decoration:none; color: white" target="_blank">&#128279;</a>'
+      } else {
+        document.getElementById('url_' + key).innerHTML = ''
+      }
     }
 
     lastKey = Number(key)
