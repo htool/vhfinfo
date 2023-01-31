@@ -69,7 +69,12 @@
         z-index: 999;
         color: black;
       }
-
+      .donate {
+        font-size: 1.6rem;
+        z-index: 999;
+        color: black;
+        background-color: gold;
+      }
       .helpPopup {
         display: none; /* Hidden by default */
         position: fixed; /* Stay in place */
@@ -83,6 +88,7 @@
         background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
       }
       .help-content {
+        font-family: Helvetica, Sans-Serif;
         background-color: #fefefe;
         margin: 15% auto; /* 15% from the top and centered */
         padding: 20px;
@@ -162,7 +168,16 @@
         z-index: 0;
         opacity: 0;
       }
-      .donate {
+      .donateButton {
+        border-radius: 6px;
+        background-color: gold;
+        color: black;
+        font-size: 100%;
+        font-family: Helvetica, Sans-Serif;
+        border: yellow;
+        box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+      }
+      .steunactie {
         border-radius: 6px;
         background-color: green;
         color: white;
@@ -371,6 +386,8 @@ var crosshairIcon = L.icon({
 });
 const crosshair = new L.marker(m.getCenter(), {icon: crosshairIcon, clickable:false});
 
+var donationHtml = `<h1>Donations</h1>VHFinfo.org is an effort to make VHF data easily available for everyone. If you appreciate the effort and want to contribute with a donatation, you can do so using one of the following options:<br><br><form action="https://www.paypal.com/donate" method="post" target="_top"><input type="hidden" name="business" value="KPB9WNEF8XFBG" /><input type="hidden" name="no_recurring" value="0" /><input type="hidden" name="item_name" value="Thank you for your support of VHFinfo.org." /><input type="hidden" name="currency_code" value="EUR" /><input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" /><img alt="" border="0" src="https://www.paypal.com/en_NL/i/scr/pixel.gif" width="1" height="1" /></form><button class="steunactie" onclick="window.open('https://steunactie.nl/actie/vhfinfo-org-donatie/-16519', '_blank');">Steunactie</button><br><b>`
+
 var compass = null
 
 //m.addLayer(osmcolor);
@@ -512,6 +529,26 @@ if (!editMode) {
   }, 'Copy map location to clipboard').addTo(m);
   _fixEasyButtonSize(button);
 
+  // Donate button
+  button = L.easyButton( '<span class="donate">D</span>', function(btn, m) {
+    var helpContent = document.getElementById("help-content")
+    helpContent.innerHTML = donationHtml
+    var helpPopup = document.getElementById("helpPopup")
+    helpPopup.style.display = "block"
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function() {
+      helpPopup.style.display = "none";
+    }
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == helpPopup) {
+        helpPopup.style.display = "none";
+      }
+    }
+  }, 'Make a donation').addTo(m);
+  _fixEasyButtonSize(button);
+  button.button.style.backgroundColor = 'gold';
+
 } else {
   button = L.easyButton( '<span class="upload"><img src="upload.png" width="20" height="16"></img></span>', function(btn, m){
     if (Object.keys(changedIds).length == 0) {
@@ -550,9 +587,7 @@ if (!editMode) {
 }
 
 setupButtons()
-var donationHtml = '<form action="https://www.paypal.com/donate" method="post" target="_top"><input type="hidden" name="business" value="KPB9WNEF8XFBG" /><input type="hidden" name="no_recurring" value="0" /><input type="hidden" name="item_name" value="Thank you for your support of VHFinfo.org." /><input type="hidden" name="currency_code" value="EUR" /><input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" /><img alt="" border="0" src="https://www.paypal.com/en_NL/i/scr/pixel.gif" width="1" height="1" /></form>'
 
-var steunactieHtml = `<button class="donate" onclick="window.open('https://steunactie.nl/actie/vhfinfo-org-donatie/-16519', '_blank');">Steunactie</button><br><b>`
 
 button = L.easyButton( '<span class="help">&#63;</span>', function() {
   var helpContent = document.getElementById("help-content")
@@ -560,7 +595,7 @@ button = L.easyButton( '<span class="help">&#63;</span>', function() {
     url: 'HELP.md',
     success: function (data) {
       console.log('Got the data')
-      helpContent.innerHTML = markdownParser(data) + donationHtml + steunactieHtml
+      helpContent.innerHTML = markdownParser(data)
     },
     error: function (e) {
       console.log(e)
@@ -573,7 +608,6 @@ button = L.easyButton( '<span class="help">&#63;</span>', function() {
   span.onclick = function() {
     helpPopup.style.display = "none";
   }
-
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
     if (event.target == helpPopup) {
