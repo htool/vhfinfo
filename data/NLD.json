@@ -6388,7 +6388,7 @@
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Area not well defined."
+            "note": "Area not well defined. Has depths and tonnage info."
           },
           "pleasure": {
             "mode": "listen"
@@ -6396,7 +6396,8 @@
           "cargo": {
             "mode": "listen"
           }
-        }
+        },
+        "update": "0,2,4,6,8,10,12,14,16,18,20,22 30"
       },
       "geometry": {
         "type": "Polygon",
