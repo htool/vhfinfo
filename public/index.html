@@ -440,9 +440,6 @@ if (!editMode) {
     splitviewMode = !splitviewMode
     console.log("splitviewMode: " + splitviewMode)
     if (splitviewMode) {
-      if (compassOn == false) {
-        startCompass()
-      }
       btn.button.style.backgroundColor = 'lightgrey';
       crosshair.addTo(m);
       m.addControl(position);
@@ -580,21 +577,39 @@ _fixEasyButtonSize(button);
 
 
 function startCompass() {
-  if (navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/)) {
+  var orientationFailed = false
+  // Try DeviceOrientationEvent first
+  if (typeof DeviceOrientationEvent.requestPermission === 'function') {
     DeviceOrientationEvent.requestPermission()
-      .then((response) => {
-        if (response === "granted") {
-          window.addEventListener("deviceorientation", compassHandler, true);
-          compassOn = true
-        } else {
-          alert("Compass has to be allowed in OS");
-        }
-      })
-      .catch(() => alert("Compass mode not supported. Pressing splitview may help."));
-  } else {
-    window.addEventListener("deviceorientationabsolute", compassHandler, true);
+    .then((response) => {
+      if (response === "granted") {
+        // console.log('DeviceOrientationEvent.requestPermission granted')
+        window.addEventListener("deviceorientation", compassHandler, true);
+        // ondeviceorientation = (event) => { compassHandler() }
+        compassOn = true
+      } else {
+        alert("Compass has to be allowed in OS");
+      }
+    })
+    .catch(() => orientationFailed = true)
   }
-}
+
+  // Try alternative
+  if (orientationFailed && typeof DeviceMotionEvent.requestPermission === 'function') {
+    // Handle iOS 13+ devices.
+    DeviceMotionEvent.requestPermission()
+    .then((state) => {
+      if (state === 'granted') {
+        console.log('DeviceMotionEvent.requestPermission granted')
+        window.addEventListener('devicemotion', compassHandler());
+        compassOn = true
+      } else {
+        console.error('Request to access the orientation was rejected');
+      }
+    })
+    .catch(console.error);
+  }
+} 
 
 function compassHandler(e) {
   heading = e.webkitCompassHeading || Math.abs(e.alpha - 360);
