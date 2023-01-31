@@ -468,6 +468,59 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "f9b9bc7d-836c-4a81-aed0-99cb53ee8037",
+        "name": "Royal Norfolk & Suffolk Yacht Club",
+        "type": "marina",
+        "channel": "80",
+        "url": "https://rnsyc.net/",
+        "phone": "+441502566726",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.750522255898,
+              52.472576417467
+            ],
+            [
+              1.752756536007,
+              52.472463682107
+            ],
+            [
+              1.752659976482,
+              52.471646750579
+            ],
+            [
+              1.750699281693,
+              52.471748050912
+            ],
+            [
+              1.750345230103,
+              52.472197364095
+            ],
+            [
+              1.750522255898,
+              52.472576417467
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
