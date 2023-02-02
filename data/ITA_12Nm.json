@@ -549,6 +549,7 @@
       "type": "Feature",
       "properties": {
         "name": "Italian waters",
+        "type": "territorial",
         "vhfdata": {
           "generic": {
             "mode": "listen"
