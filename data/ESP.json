@@ -1,5 +1,111 @@
 {
   "type": "FeatureCollection",
   "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "118b654e-eb2d-4f5b-8f7d-1736fa8adc68",
+        "name": "Marina Alicante",
+        "type": "marina",
+        "channel": "9",
+        "url": "https://www.marinaalicante.com/?lang=en",
+        "phone": "+34965213600",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -0.481864213943,
+              38.338963374635
+            ],
+            [
+              -0.48456788063,
+              38.342236818594
+            ],
+            [
+              -0.480480194092,
+              38.343844033849
+            ],
+            [
+              -0.47980427742,
+              38.342320966874
+            ],
+            [
+              -0.47975063324,
+              38.34056224749
+            ],
+            [
+              -0.481864213943,
+              38.338963374635
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "f18c0297-82fe-465d-be51-ddc24d077516",
+        "name": "Real Club Regatas Alicante",
+        "type": "marina",
+        "channel": "9",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -0.482604503632,
+              38.3387109178
+            ],
+            [
+              -0.484857559204,
+              38.342177914739
+            ],
+            [
+              -0.485479831696,
+              38.341925469107
+            ],
+            [
+              -0.487539768219,
+              38.339283152029
+            ],
+            [
+              -0.4856300354,
+              38.337600097278
+            ],
+            [
+              -0.482604503632,
+              38.3387109178
+            ]
+          ]
+        ]
+      }
+    }
   ]
 }
