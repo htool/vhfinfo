@@ -1,0 +1,36 @@
+{
+  "type": "FeatureCollection",
+  "features": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            12.4,
+            43.96
+          ],
+          [
+            12.51,
+            43.99
+          ],
+          [
+            12.49,
+            43.9
+          ],
+          [
+            12.41,
+            43.9
+          ],
+          [
+            12.4,
+            43.96
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "A3": "SMR"
+    }
+  }
+}

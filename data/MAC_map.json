@@ -1,0 +1,40 @@
+{
+  "type": "FeatureCollection",
+  "features": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            113.53,
+            22.18
+          ],
+          [
+            113.53,
+            22.21
+          ],
+          [
+            113.61,
+            22.2
+          ],
+          [
+            113.61,
+            22.08
+          ],
+          [
+            113.57,
+            22.08
+          ],
+          [
+            113.53,
+            22.18
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "A3": "MAC"
+    }
+  }
+}

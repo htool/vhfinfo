@@ -1,0 +1,36 @@
+{
+  "type": "FeatureCollection",
+  "features": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            7.53,
+            43.54
+          ],
+          [
+            7.5,
+            43.52
+          ],
+          [
+            7.41,
+            43.73
+          ],
+          [
+            7.44,
+            43.75
+          ],
+          [
+            7.53,
+            43.54
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "A3": "MCO"
+    }
+  }
+}

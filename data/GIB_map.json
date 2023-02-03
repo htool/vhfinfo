@@ -1,0 +1,36 @@
+{
+  "type": "FeatureCollection",
+  "features": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -5.35,
+            36.15
+          ],
+          [
+            -5.28,
+            36.15
+          ],
+          [
+            -5.34,
+            36.06
+          ],
+          [
+            -5.4,
+            36.15
+          ],
+          [
+            -5.35,
+            36.15
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "A3": "GIB"
+    }
+  }
+}
