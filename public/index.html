@@ -265,7 +265,9 @@
 
 
 var countriesGeoObj
+var countriesGeoJSON = {"type": "FeatureCollection", "features": [] }
 var countriesLoaded = []
+var activeCountry = ''
 var vhfinfo
 var Nm12
 var dms = false
@@ -451,7 +453,8 @@ L.DomUtil.addClass(m._container,'crosshair-cursor-enabled');
 async function setupButtons () {
 if (!editMode) {
   button = L.easyButton( '<span class="edit">&#9998;</span>', function(){
-    let country = getCountryAtCenter()
+    let country = getCountryAtCoor()
+    activeCountry = country
     if (confirm("Do you want to start editting for country " + country + "?")) {
       let center = m.getCenter()
       open("https://vhfinfo.org/?edit=" + country + "&mapPosition=" +  center.lat.toFixed(6) + "/" + center.lng.toFixed(6) + "/" + m.getZoom(), "_blank")
@@ -901,6 +904,9 @@ if (editMode) {
   });
   m.on('moveend', function() {
     if (splitviewMode) {
+      let center = m.getCenter()
+      activeCountry = getCountryAtCoor(center)
+      updateMousePosition(center)
       updateNearby()
     }
   });
@@ -934,7 +940,13 @@ function updateMousePosition (latlng) {
   if (compassMode) {
     coor = coor + heading.toFixed(0) + '&#176;'
   }
-  document.getElementsByClassName('mouseposition')[0].innerHTML = `${coor}`
+  if (splitviewMode) {
+    country = activeCountry
+    if (country == null) {
+      country = 'INTL'
+    }
+  }
+  document.getElementsByClassName('mouseposition')[0].innerHTML = `${country} ${coor}`
 }
 
 
@@ -1478,7 +1490,7 @@ m.on('moveend', function() {
 function checkIfLoaded () {
   if (!editMode) {
     var zoomlevel = m.getZoom()
-    if (zoomlevel >= 8) {
+    if (zoomlevel >= 6) {
       center = m.getCenter()
       center = [center.lat, center.lng]
       loadCountryOnCoordiate(center)
@@ -1504,6 +1516,17 @@ function loadCountriesBbox () {
   });
 }
 
+function loadCountry (country) {
+  jQuery.ajax({
+    url: 'https://raw.githubusercontent.com/htool/vhfinfo/main/data/' + country + '_map.json',
+    success: function (data) {
+      countriesGeoJSON.features.push(JSON.parse(data).features)
+      console.log('Added ' + country)
+    },
+    async: false
+  });
+}
+
 function url2Obj(url) {
   jQuery.ajax({
     url: url,
@@ -1518,28 +1541,47 @@ function url2Obj(url) {
   return Obj
 }
 
-function getCountryAtCenter () {
-  let center = m.getCenter()
-  let lat = center.lat
-  let lon = center.lng
+function getCountriesAtCoor(coor) {
+  countries = []
+  if (typeof coor == 'undefined') {
+    coor = m.getCenter()
+  }
+  let lat = coor.lat
+  let lon = coor.lng
   for (const [country, latlon] of Object.entries(countriesGeoObj)) {
     if (lat < latlon.ne.lat && lat > latlon.sw.lat && lon < latlon.ne.lon && lon > latlon.sw.lon) {
-      return country
+      countries.push(country)
     }
   }
+  return countries
+}
+
+function getCountryAtCoor(coor) {
+  if (typeof coor == 'undefined') {
+    coor = m.getCenter()
+  }
+  var point = turf.point( [ coor.lng, coor.lat ] )
+  var country = null
+  countriesGeoJSON.features.forEach (feature => {
+    if (turf.inside(point, feature) == true) {
+      country = feature.properties.A3
+    }
+  })
+  return country
 }
 
 function loadCountryOnCoordiate (coor) {
   let lat = coor[0]
   let lon = coor[1]
-  for (const [country, latlon] of Object.entries(countriesGeoObj)) {
-    if (lat < latlon.ne.lat && lat > latlon.sw.lat && lon < latlon.ne.lon && lon > latlon.sw.lon) {
-      if (!countriesLoaded.includes(country)) {
-        loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + country + ".json", vhfinfo, country)
-        loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + country + "_12Nm.json", Nm12, country)
-      }
+  var countries = getCountriesAtCoor({'lat': lat, 'lng': lon})
+  countries.forEach(country => {
+    if (!countriesLoaded.includes(country)) {
+      loadCountry(country)
+      loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + country + ".json", vhfinfo, country)
+      loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + country + "_12Nm.json", Nm12, country)
+      countriesLoaded.push(country)
     }
-  }
+  })
 }
 
 function generateUUID() { // Public Domain/MIT
