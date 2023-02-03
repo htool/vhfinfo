@@ -7124,9 +7124,10 @@
         },
         "distance": 34523,
         "relativeBearing": -105,
-        "name": "VTS ",
+        "name": "Brevik VTS",
         "url": "https://",
-        "phone": "+"
+        "phone": "+",
+        "channel": "80"
       },
       "geometry": {
         "type": "Polygon",
