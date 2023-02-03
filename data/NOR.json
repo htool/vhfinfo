@@ -7109,7 +7109,7 @@
     {
       "type": "Feature",
       "properties": {
-        "type": "vts radar support",
+        "type": "vts",
         "id": "00929b1f-8649-426b-a445-55a4be08a690",
         "vhfdata": {
           "generic": {
