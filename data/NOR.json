@@ -5,7 +5,7 @@
       "type": "Feature",
       "properties": {
         "type": "vts radar support",
-        "id": "3ad1190a-f3b7-47f4-9815-6adbcf5cff07",
+        "id": "3a92190a-f3b7-47f4-9815-6adbcf5cff07",
         "vhfdata": {
           "generic": {
             "mode": "listen"
