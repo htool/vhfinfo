@@ -4,34 +4,6 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "f20bf59e-65ef-438b-9aab-140e9da40acc",
-        "name": "New feature",
-        "type": "vts",
-        "url": "https://",
-        "phone": "+",
-        "vhfdata": {
-          "generic": {
-            "mode": "listen"
-          },
-          "pleasure": {
-            "mode": "listen"
-          },
-          "cargo": {
-            "mode": "listen"
-          }
-        }
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.505494356155,
-          49.505927548552
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "id": "bccd2beb-a567-47b7-bae3-adf3033d98d0",
         "name": "Guernsey VTS",
         "type": "vts",
