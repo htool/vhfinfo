@@ -1998,34 +1998,6 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "3d297a93-9da3-4a47-af1a-9c1e45c37dc1",
-        "name": "New feature",
-        "type": "vts",
-        "url": "https://",
-        "phone": "+",
-        "vhfdata": {
-          "generic": {
-            "mode": "listen"
-          },
-          "pleasure": {
-            "mode": "listen"
-          },
-          "cargo": {
-            "mode": "listen"
-          }
-        }
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.340782642365,
-          50.7879369355
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "id": "eb5d7c83-7f74-4175-83a4-a31fca4af98a",
         "name": "Southampton VTS",
         "callname": "Southampton VTS Harbour",
