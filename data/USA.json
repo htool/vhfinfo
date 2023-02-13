@@ -1,5 +1,175 @@
 {
   "type": "FeatureCollection",
   "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "52d85cca-11f3-4d19-8e56-de88c6bf5d83",
+        "name": "Shilshole Bay Marina",
+        "callname": "Shilshole Bay Marina",
+        "type": "marina",
+        "channel": "17",
+        "url": "https://",
+        "phone": "+1206-601-4089",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.406663894653,
+              47.67636885973
+            ],
+            [
+              -122.401728630066,
+              47.686336907619
+            ],
+            [
+              -122.402930259705,
+              47.688185843306
+            ],
+            [
+              -122.404732704163,
+              47.688214732406
+            ],
+            [
+              -122.408766746521,
+              47.681107531587
+            ],
+            [
+              -122.411942481995,
+              47.679460602971
+            ],
+            [
+              -122.412457466125,
+              47.678362621677
+            ],
+            [
+              -122.412028312683,
+              47.677177931734
+            ],
+            [
+              -122.410182952881,
+              47.675964319024
+            ],
+            [
+              -122.406663894653,
+              47.67636885973
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "71e4fa59-180a-4ee0-aa1e-c6dfbbfd54bb",
+        "name": "Salmon Bay Bridge",
+        "callname": "Bridge 4",
+        "type": "bridge",
+        "channel": "13",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.402275800705,
+              47.667735569362
+            ],
+            [
+              -122.401943206787,
+              47.667713894033
+            ],
+            [
+              -122.401857376099,
+              47.666073767987
+            ],
+            [
+              -122.402340173721,
+              47.666203823916
+            ],
+            [
+              -122.402275800705,
+              47.667735569362
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "9f4de983-38d8-4bc4-bb6c-d810e73aa79b",
+        "name": "Ballard Locks",
+        "callname": "Government Locks",
+        "type": "lock",
+        "channel": "13",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.398252487183,
+              47.666160471976
+            ],
+            [
+              -122.395130395889,
+              47.665376518175
+            ],
+            [
+              -122.395484447479,
+              47.664921313791
+            ],
+            [
+              -122.398644089699,
+              47.665730563285
+            ],
+            [
+              -122.398252487183,
+              47.666160471976
+            ]
+          ]
+        ]
+      }
+    }
   ]
 }
