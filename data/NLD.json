@@ -1687,9 +1687,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Havendienst Texel",
-        "type": "marina",
-        "channel": "9",
+        "name": "Centrale meldpost waddenzee",
+        "type": "vts",
+        "channel": "4",
         "phone": "+31887974599",
         "vhfdata": {
           "generic": {
@@ -1702,7 +1702,7 @@
           }
         },
         "id": "448f605c-a23b-40f8-aa64-05c0289b138b",
-        "callname": "Hevendienst texel"
+        "callname": "Centrale meldpost waddenzee"
       },
       "geometry": {
         "type": "Polygon",
