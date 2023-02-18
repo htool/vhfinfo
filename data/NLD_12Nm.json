@@ -600,6 +600,56 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "8d4d957a-7356-4772-9c71-6ca0de28982f",
+        "name": "Havendienst Enkhuizen",
+        "callname": "Havendienst Enkhuizen",
+        "type": "territorial",
+        "channel": "12",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "report"
+          },
+          "pleasure": {
+            "mode": "report"
+          },
+          "cargo": {
+            "mode": "report"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.275454521179,
+              52.689507335113
+            ],
+            [
+              5.275926589966,
+              52.689091133895
+            ],
+            [
+              5.274274349213,
+              52.688375778784
+            ],
+            [
+              5.273995399475,
+              52.688739961032
+            ],
+            [
+              5.275454521179,
+              52.689507335113
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
