@@ -1687,8 +1687,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Centrale meldpost Waddenzee",
-        "type": "vts",
+        "name": "Centrale meldpost waddenzee",
+        "type": "vts radar support",
         "channel": "4",
         "phone": "+31887974599",
         "vhfdata": {
