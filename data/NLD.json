@@ -4872,56 +4872,6 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "9ce6e5f9-a568-4d5b-90a0-aad762766b7c",
-        "name": "De Oude Veerdam (Schiermonnickoog)",
-        "callname": "Marina Schiermonnickoog",
-        "type": "marina",
-        "channel": "+31630010883",
-        "url": "https://waddenhavenschiermonnickoog.nl/",
-        "phone": "+",
-        "vhfdata": {
-          "generic": {
-            "mode": "report"
-          },
-          "pleasure": {
-            "mode": "listen"
-          },
-          "cargo": {
-            "mode": "listen"
-          }
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              6.166677474976,
-              53.467921767082
-            ],
-            [
-              6.166377067566,
-              53.470200468886
-            ],
-            [
-              6.167567968369,
-              53.470245148091
-            ],
-            [
-              6.167825460434,
-              53.467972831768
-            ],
-            [
-              6.166677474976,
-              53.467921767082
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "id": "4db4f45a-81cf-4f02-8e76-b761e2b56487",
         "name": "Roompot Marina",
         "callname": "",
