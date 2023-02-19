@@ -2644,8 +2644,7 @@
             "note": "Voluntary Report destination."
           }
         },
-        "id": "f89857e6-c925-433d-97ec-ce0ef5fbad7f",
-        "callname": "CMIJ"
+        "id": "f89857e6-c925-433d-97ec-ce0ef5fbad7f"
       },
       "geometry": {
         "type": "Polygon",
