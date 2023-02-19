@@ -260,6 +260,12 @@
     display: block;
   }
 </style>
+<div id="helpPopup" class="helpPopup">
+  <div class="help-content">
+    <div style="text-align: right;" class="close"><h1>&times;</h1></div>
+    <div id="help-content"></div>
+  </div>
+</div>
 
 <script type="text/javascript">
 
@@ -577,7 +583,7 @@ if (!editMode) {
         }
       }
       console.log(changedIds)
-      var reason = prompt("You are about to publish changes to " + country + ". Please add a reason for change." , "");
+      var reason = prompt("You are about to publish changes to " + country + ". Please add email (in case of questions) and a reason for change." , "your@emailaddress.com - Reason");
       let commitResult = commitGitHub(country, changedIds, reason + "\n\n" + uploadListDetails)
       location.reload()
     } else {
@@ -619,6 +625,34 @@ button = L.easyButton( '<span class="help">&#63;</span>', function() {
   }
 }, 'Help page with instructions on how to add features').addTo(m);
 _fixEasyButtonSize(button);
+
+function showEditPopup () {
+  var helpContent = document.getElementById("help-content")
+  jQuery.ajax({
+    url: 'EDIT.md',
+    success: function (data) {
+      console.log('Got the data')
+      helpContent.innerHTML = markdownParser(data)
+    },
+    error: function (e) {
+      console.log(e)
+    },
+    async: false
+  });
+
+  var helpPopup = document.getElementById("helpPopup")
+  helpPopup.style.display = "block"
+  var span = document.getElementsByClassName("close")[0];
+  span.onclick = function() {
+    helpPopup.style.display = "none";
+  }
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == helpPopup) {
+      helpPopup.style.display = "none";
+    }
+  }
+}
 
 
 function startCompass() {
@@ -1797,6 +1831,7 @@ window.addEventListener("resize", (event) => {
 if (editMode) {
   setOrientation()
   $('.leaflet-container').css('cursor','crosshair');
+  showEditPopup()
 } else {
   document.getElementsByClassName('splitview')[0].click()
   document.getElementById('compass').innerHTML = '<img src="./magicBlueDot.png" width="100px" height="100px">'
@@ -1805,12 +1840,6 @@ if (editMode) {
 
 
 </script>
-<div id="helpPopup" class="helpPopup">
-  <div class="help-content">
-    <div style="text-align: right;" class="close"><h1>&times;</h1></div>
-    <div id="help-content"></div>
-  </div>
-</div>
 
   </body>
 </html>
