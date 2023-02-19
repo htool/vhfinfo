@@ -1823,7 +1823,7 @@
       "type": "Feature",
       "properties": {
         "name": "Centrale meldpost waddenzee",
-        "type": "vts radar support",
+        "type": "area",
         "channel": "4",
         "phone": "+31887974599",
         "vhfdata": {
