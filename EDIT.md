@@ -2,7 +2,9 @@
 
 This map is not intended to make VHF areas easy to 'click'.
 
-Areas (features) should *ONLY* cover their reposonsible area. Nothing more.
+The map should only contain areas (features) that have a VHF channel.
+
+Features should *ONLY* cover their reposonsible area. Nothing more.
 
 Think of when you leave a lock/marina or just passed a bridge. 
 
