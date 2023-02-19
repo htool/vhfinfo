@@ -1822,7 +1822,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Centrale meldpost waddenzee",
+        "name": "Centrale meldpost Waddenzee",
         "type": "area",
         "channel": "4",
         "phone": "+31887974599",
@@ -1837,7 +1837,7 @@
           }
         },
         "id": "448f605c-a23b-40f8-aa64-05c0289b138b",
-        "callname": "Centrale meldpost waddenzee"
+        "callname": "Centrale meldpost Waddenzee"
       },
       "geometry": {
         "type": "Polygon",
