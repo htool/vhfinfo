@@ -405,16 +405,15 @@ m.addLayer(lockLayer);
 m.addLayer(vtsLayer);
 m.addLayer(marinaLayer);
 m.addLayer(radarLayer);
-m.addLayer(areaLayer);
-
-//m.addLayer(Nm12);
+// m.addLayer(areaLayer);
+// m.addLayer(Nm12);
 
 //add basemaps in an array
 baseMaps={"OpenSeaMap":osm, "Sattelite":googleSat, "Terrain":googleTerrain};
 
 if (editMode) {
   m.addLayer(drawnItems);
-  setTimeout(remove12Nm, 500)
+  setTimeout(removeUnwanted, 500)
 }
 
 var popup = L.popup();
@@ -1505,10 +1504,12 @@ function setValue (value, element) {
   }
 }
 
-function remove12Nm () {
+function removeUnwanted () {
   if (editMode) {
     m.addLayer(Nm12)
+    m.addLayer(areaLayer)
     m.removeLayer(Nm12)
+    m.removeLayer(areaLayer)
   }
 }
 
