@@ -1334,6 +1334,69 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "Waddenhaven Texel",
+        "type": "marina",
+        "channel": 31,
+        "url": "https://www.waddenhaventexel.nl/",
+        "phone": "+31222321227",
+        "vhfdata": {
+          "generic": {
+            "mode": "Listen"
+          }
+        },
+        "id": "0eaf9819-bdb0-4a73-81a1-a0bfbb153aa6"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.858450721849,
+              53.043988051107
+            ],
+            [
+              4.859727590248,
+              53.044616870672
+            ],
+            [
+              4.86039319186,
+              53.04656043675
+            ],
+            [
+              4.86054261263,
+              53.046731923709
+            ],
+            [
+              4.859972096962,
+              53.047034065652
+            ],
+            [
+              4.856549002955,
+              53.044682202022
+            ],
+            [
+              4.856847844495,
+              53.044224880325
+            ],
+            [
+              4.857798703942,
+              53.04430654528
+            ],
+            [
+              4.857975292125,
+              53.044102382619
+            ],
+            [
+              4.858450721849,
+              53.043988051107
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "Passantenhaven Terschelling",
         "callname": "Terschelling",
         "type": "marina",
