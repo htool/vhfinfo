@@ -19,7 +19,8 @@
           "cargo": {
             "mode": "listen"
           }
-        }
+        },
+        "channel": "10"
       },
       "geometry": {
         "type": "Polygon",
