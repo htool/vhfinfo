@@ -16799,6 +16799,56 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "377f50a3-990f-4772-bd87-8a22a1ef7d77",
+        "name": "Urkersluis",
+        "callname": "Urkersluis",
+        "type": "lock",
+        "channel": "22",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "announce"
+          },
+          "cargo": {
+            "mode": "announce"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.602962970734,
+              52.657936321128
+            ],
+            [
+              5.605902671814,
+              52.657858227289
+            ],
+            [
+              5.605849027634,
+              52.657474263888
+            ],
+            [
+              5.602930784225,
+              52.657845211636
+            ],
+            [
+              5.602962970734,
+              52.657936321128
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
