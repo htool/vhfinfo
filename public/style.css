@@ -1,0 +1,100 @@
+@font-face {
+  font-family: Handset;
+  font-style: normal;
+  font-weight: 300;
+  src: url(HandsetCond.ttf);
+}
+
+body {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  background-color: black;
+  color: white;
+  font-family: Handset;
+  font-size: 6vw;
+  margin-left: 2px;
+  margin-right: 2px;
+  overflow-anchor: none;
+}
+
+br {
+  width: 90%;
+  border-top: 1px solid darkgrey;
+}
+
+.header {
+  display: block;
+  text-align: center;
+}
+
+.entry {
+  display: block;
+  background-color: #222222;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.channel {
+  font-size: 20vw;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  left: 0%;
+  width: 30%;
+  top: 0%;
+}
+
+.nameblock {
+  font-size: 7vw;
+  text-align: left;
+  display: inline;
+  position: absolute;
+}
+
+.typeblock {
+  font-size: 7vw;
+  text-align: left;
+  display: block;
+  position: relative;
+}
+
+.name {
+  display: inline-block;
+  position: relative;
+  left: 0%;
+}
+
+.callname {
+  display: inline-block;
+  position: relative;
+  left: 0%;
+  width: 70%;
+  top: 30%;
+}
+
+.type {
+  display: inline-block;
+  position: relative;
+  font-size: 6vw;
+  text-align: left;
+}
+
+.url {
+  display: inline-block;
+  position: absolute;
+  font-size: 5vw;
+  text-align: left;
+  left: 80%;
+}
+
+.phone {
+  display: inline-block;
+  position: absolute;
+  font-size: 8vw;
+  text-align: left;
+  left: 90%;
+}

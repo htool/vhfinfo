@@ -310,7 +310,7 @@ module.exports = function (app, options) {
       }
       // Fill rest with -
       for (let nr = pathnr; nr < 20; nr++) {
-        values.push({path: options.path + '.' + nr, value: JSON.stringify({name: "-", channel: "", type: ""})})
+        values.push({path: options.path + '.' + nr, value: JSON.stringify({name: "", channel: "", type: ""})})
       }
       //app.debug('values: %s', JSON.stringify(values))
       app.handleMessage(plugin.id, {
