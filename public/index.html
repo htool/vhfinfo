@@ -12,7 +12,9 @@
   <script>document.write('<link rel="stylesheet" href="style.css?ver=' + Math.floor(Math.random() * 1000) + '">');</script>
 </head>
 <body>
-
+<div class="list" id="list"></div>
+</body>
+</html>
 <script>
 
 // Set day or night mode
@@ -88,15 +90,36 @@ function handleData (data) {
 
 function updateNearest (id) {
   console.log(nearest[id])
-  var fields = ['name', 'callname', 'channel']
+  // Check if dom should exist
+  if (nearest[id].name == "") {
+    // Remove dom if exists
+    console.log('Empty data entry')
+    console.log('Remove? ' + document.getElementById("entry_" + id))
+    if (document.getElementById("entry_" + id) != null) {
+      document.getElementById("entry_" + id).remove()
+    }
+  } else {
+    // Add dom if doesn't exist
+    console.log('Create? ' + document.getElementById("entry_" + id))
+    if (document.getElementById("entry_" + id) == null) {
+      createEntry(id)
+    }
+    updateEntry(id)
+  }
+}
+
+function updateEntry(id) {
+  var fields = ['name', 'callname', 'channel', 'note']
   var sub_types = ['generic', 'pleasure', 'cargo']
-  var sub_fields = ['note', 'mode']
+  var note = false
   
   fields.forEach(field => {
+    console.log (`nearest[${id}][${field}]: ` + nearest[id][field])
     if (typeof nearest[id][field] != 'undefined') {
       document.getElementById(field + "_" + id).innerHTML = nearest[id][field]
-    } else {
-      document.getElementById(field + "_" + id).innerHTML = ''
+      if (field == 'note') {
+        note = true
+      }
     }
   })
   var mode
@@ -110,34 +133,87 @@ function updateNearest (id) {
   document.getElementById("url_" + id).innerHTML = '<a href="' + nearest[id].url + '" style="text-decoration:none; color: white">&#128279;</a>'
   document.getElementById("phone_" + id).innerHTML = '<a href="tel:' + nearest[id].phone + '" style="text-decoration:none; color: white">&#9990;</a>'
   sub_types.forEach(sub_type => {
-	  sub_fields.forEach(field => {
-	    if (typeof nearest[id].vhfdata != 'undefined' && typeof nearest[id].vhfdata[sub_type] != 'undefined' && typeof nearest[id].vhfdata[sub_type][field] != 'undefined') {
-	      document.getElementById(sub_type + "_" + field + "_" + id).innerHTML = nearest[id].vhfdata[sub_type][field]
-	    } else {
-	      document.getElementById(sub_type + "_" + field + "_" + id).innerHTML = ''
-	    }
-	  })
+	  if (typeof nearest[id].vhfdata != 'undefined' && typeof nearest[id].vhfdata[sub_type] != 'undefined' && typeof nearest[id].vhfdata[sub_type]['note'] != 'undefined') {
+	    document.getElementById(sub_type + "_" + 'note' + "_" + id).innerHTML = sub_type.toUpperCase() + ": " + nearest[id].vhfdata[sub_type]['note']
+      note = true
+	  }
   })
-
+  if (note == false) {
+    document.getElementById('notes_' + id).remove()
+  }
 }
 
-document.write('<div class="header"></div>')
-for (x=0; x<= 20; x++) {
-  document.write('<div class="entry">')
-  document.write('<div class="channel" id="channel_' + x + '"></div>')
-  document.write('<div class="nameblock"><div class="name" id="name_' + x + '"></div>')
-  document.write('<div class="callname" id="callname_' + x + '"></div></div>')
-  document.write('<div class="typeblock">')
-  document.write('<div class="type" id="type_' + x + '"></div>')
-  document.write('<div class="phone" id="phone_' + x + '"></div>')
-  document.write('<div class="url" id="url_' + x + '"></div></div>')
-  document.write('<div class="note" id="note_' + x + '"></div>')
-  document.write('<div class="note" id="generic_note_' + x + '"></div>')
-  document.write('<div class="note" id="pleasure_note_' + x + '"></div>')
-  document.write('<div class="note" id="cargo_note_' + x + '"></div>')
-  document.write('</div>')
+
+function createEntry(id) {
+  console.log('Creating entry for ' + id)
+  const entry = document.createElement("entry_" + id)
+  entry.classList.add("entry")
+  entry.id = "entry_" + id
+
+  const channelblock = document.createElement("channelblock_" + id)
+  channelblock.classList.add("channelblock")
+
+  const channel = document.createElement("channel_" + id)
+  channel.classList.add("channel")
+  channel.id = "channel_" + id
+  channelblock.appendChild(channel)
+
+  const typeblock = document.createElement("typeblock")
+  typeblock.classList.add("typeblock")
+  const type = document.createElement("type_" + id)
+  type.classList.add("type")
+  type.id = "type_" + id
+  typeblock.appendChild(type)
+  const phone = document.createElement("phone_" + id)
+  phone.classList.add("phone")
+  phone.id = "phone_" + id
+  typeblock.appendChild(phone)
+  const url = document.createElement("url_" + id)
+  url.classList.add("url")
+  url.id = "url_" + id
+  typeblock.appendChild(url)
+  channelblock.appendChild(typeblock)
+  entry.appendChild(channelblock)
+
+  const name = document.createElement("name_" + id)
+  name.classList.add("name")
+  name.id = "name_" + id
+  entry.appendChild(name)
+
+  const callname = document.createElement("callname_" + id)
+  callname.classList.add("name")
+  callname.id = "callname_" + id
+  entry.appendChild(callname)
+
+
+
+
+  const notes = document.createElement("notes_" + id)
+  notes.classList.add("notes")
+  notes.id = "notes_" + id
+  entry.appendChild(notes)
+
+  const note = document.createElement("note_" + id)
+  note.classList.add("note")
+  note.id = "note_" + id
+  notes.appendChild(note)
+
+  const generic_note = document.createElement("generic_note_" + id)
+  generic_note.classList.add("note")
+  generic_note.id = "generic_note_" + id
+  notes.appendChild(generic_note)
+
+  const pleasure_note = document.createElement("pleasure_note_" + id)
+  pleasure_note.classList.add("note")
+  pleasure_note.id = "pleasure_note_" + id
+  notes.appendChild(pleasure_note)
+
+  const cargo_note = document.createElement("cargo_note_" + id)
+  cargo_note.classList.add("note")
+  cargo_note.id = "cargo_note_" + id
+  notes.appendChild(cargo_note)
+
+  document.getElementById('list').appendChild(entry)
 }
 
 </script>
-</body>
-</html>

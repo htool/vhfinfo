@@ -13,7 +13,7 @@ body {
   background-color: black;
   color: white;
   font-family: Handset;
-  font-size: 6vw;
+  font-size: 2rem;
   margin-left: 2px;
   margin-right: 2px;
   overflow-anchor: none;
@@ -32,40 +32,40 @@ br {
 .entry {
   display: block;
   background-color: #222222;
+  padding-top: 6px;
   padding-left: 3px;
   padding-right: 3px;
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
 
+.channelblock {
+  display: grid;
+  position: relative;
+}
+
 .channel {
-  font-size: 20vw;
+  font-size: 5rem;
   text-align: center;
-  display: inline-block;
+  display: grid;
   position: relative;
   left: 0%;
-  width: 30%;
   top: 0%;
 }
 
 .nameblock {
-  font-size: 7vw;
+  font-size: 1.7rem;
   text-align: left;
-  display: inline;
+  display: grid;
+  grid-column-start: none;
   position: absolute;
-}
-
-.typeblock {
-  font-size: 7vw;
-  text-align: left;
-  display: block;
-  position: relative;
 }
 
 .name {
   display: inline-block;
   position: relative;
-  left: 0%;
+  left: 2%;
+  width: 95%;
 }
 
 .callname {
@@ -76,25 +76,53 @@ br {
   top: 30%;
 }
 
+.typeblock {
+  font-size: 2rem;
+  text-align: left;
+  display: grid;
+  grid-column-start: none;
+  position: relative;
+  padding-bottom: 8px;
+  left: 2%;
+  width: 96%;
+}
+
 .type {
   display: inline-block;
   position: relative;
-  font-size: 6vw;
+  font-size: 1.5rem;
   text-align: left;
 }
 
 .url {
   display: inline-block;
-  position: absolute;
-  font-size: 5vw;
+  position: relative;
+  font-size: 1.5rem;
   text-align: left;
-  left: 80%;
 }
 
 .phone {
   display: inline-block;
-  position: absolute;
-  font-size: 8vw;
+  position: relative;
+  font-size: 2rem;
   text-align: left;
-  left: 90%;
+  bottom: 5%;
+}
+
+.notes {
+  display: inline-block;
+  position: relative;
+  font-size: 1.5rem;
+  text-align: left;
+  width: 96%;
+  border-radius: 5px;
+  background-color: dimgrey;
+  padding: 2px;
+  left: 1%;
+}
+
+.note {
+  display: block;
+  position: relative;
+  text-align: left;
 }
