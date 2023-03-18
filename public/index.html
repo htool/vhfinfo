@@ -109,16 +109,27 @@ function updateNearest (id) {
 }
 
 function updateEntry(id) {
-  var fields = ['name', 'callname', 'channel', 'note']
+  var fields = ['name', 'callname', 'channel', 'note', 'mode', 'distance', 'type']
   var sub_types = ['generic', 'pleasure', 'cargo']
   var note = false
   
   fields.forEach(field => {
     console.log (`nearest[${id}][${field}]: ` + nearest[id][field])
     if (typeof nearest[id][field] != 'undefined') {
-      document.getElementById(field + "_" + id).innerHTML = nearest[id][field]
-      if (field == 'note') {
-        note = true
+      switch (field) {
+        case 'note':
+          note = true
+          document.getElementById(field + "_" + id).innerHTML = nearest[id][field]
+          break
+        case 'name':
+          document.getElementById(field + "_" + id).innerHTML = "Name: " + nearest[id][field]
+          break
+        case 'callname':
+          document.getElementById(field + "_" + id).innerHTML = "Callsign: " + nearest[id][field]
+          break
+        default:
+          document.getElementById(field + "_" + id).innerHTML = nearest[id][field]
+          break
       }
     }
   })
@@ -129,7 +140,9 @@ function updateEntry(id) {
   if (typeof nearest[id].vhfdata != 'undefined' && typeof nearest[id].vhfdata.pleasure != 'undefined' && typeof nearest[id].vhfdata.pleasure.mode != 'undefined') {
     mode = nearest[id].vhfdata.pleasure.mode
   }
-  document.getElementById("type_" + id).innerHTML = mode.toUpperCase() + " &#8227; " + nearest[id].type.toUpperCase() + " &#8227; " + nearest[id].distance + "m"
+  document.getElementById("mode_" + id).innerHTML = mode.toUpperCase()
+  document.getElementById("type_" + id).innerHTML = nearest[id].type.toUpperCase()
+  document.getElementById("distance_" + id).innerHTML = nearest[id].distance + "m"
   document.getElementById("url_" + id).innerHTML = '<a href="' + nearest[id].url + '" style="text-decoration:none; color: white">&#128279;</a>'
   document.getElementById("phone_" + id).innerHTML = '<a href="tel:' + nearest[id].phone + '" style="text-decoration:none; color: white">&#9990;</a>'
   sub_types.forEach(sub_type => {
@@ -164,6 +177,14 @@ function createEntry(id) {
   type.classList.add("type")
   type.id = "type_" + id
   typeblock.appendChild(type)
+  const mode = document.createElement("mode_" + id)
+  mode.classList.add("mode")
+  mode.id = "mode_" + id
+  typeblock.appendChild(mode)
+  const distance = document.createElement("distance_" + id)
+  distance.classList.add("distance")
+  distance.id = "distance_" + id
+  typeblock.appendChild(distance)
   const phone = document.createElement("phone_" + id)
   phone.classList.add("phone")
   phone.id = "phone_" + id

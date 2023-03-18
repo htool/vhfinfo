@@ -45,7 +45,7 @@ br {
 }
 
 .channel {
-  font-size: 5rem;
+  font-size: 6rem;
   text-align: center;
   display: grid;
   position: relative;
@@ -54,7 +54,6 @@ br {
 }
 
 .nameblock {
-  font-size: 1.7rem;
   text-align: left;
   display: grid;
   grid-column-start: none;
@@ -63,6 +62,7 @@ br {
 
 .name {
   display: inline-block;
+  font-size: 1.5rem;
   position: relative;
   left: 2%;
   width: 95%;
@@ -70,6 +70,7 @@ br {
 
 .callname {
   display: inline-block;
+  font-size: 1.5rem;
   position: relative;
   left: 0%;
   width: 70%;
@@ -77,7 +78,7 @@ br {
 }
 
 .typeblock {
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: left;
   display: grid;
   grid-column-start: none;
@@ -90,23 +91,34 @@ br {
 .type {
   display: inline-block;
   position: relative;
-  font-size: 1.5rem;
-  text-align: left;
 }
 
-.url {
+.mode {
   display: inline-block;
   position: relative;
-  font-size: 1.5rem;
-  text-align: left;
+}
+
+.distance {
+  display: inline-block;
+  position: relative;
 }
 
 .phone {
   display: inline-block;
-  position: relative;
+  position: absolute;
   font-size: 2rem;
-  text-align: left;
-  bottom: 5%;
+  text-align: right;
+  top: 50%;
+  right: 5%;
+}
+
+.url {
+  display: inline-block;
+  position: absolute;
+  font-size: 1.5rem;
+  text-align: right;
+  right: 5%;
+  top: 10%;
 }
 
 .notes {
