@@ -18366,6 +18366,58 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "1638a8d5-4c82-4717-944c-47191ac66b04",
+        "name": "Platvoetbrug",
+        "callname": "Platvoetbrug",
+        "type": "bridge",
+        "channel": "78",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "report",
+            "note": "Kruisend verkeer v Starkeborg kanaal. MELDEN!"
+          },
+          "pleasure": {
+            "mode": "report",
+            "note": "Report for crossing carco traffic"
+          },
+          "cargo": {
+            "mode": "report"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.507977843285,
+              53.258419950882
+            ],
+            [
+              6.508232653141,
+              53.258431182491
+            ],
+            [
+              6.508259475231,
+              53.258200131653
+            ],
+            [
+              6.508001983166,
+              53.258187295459
+            ],
+            [
+              6.507977843285,
+              53.258419950882
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
