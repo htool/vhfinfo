@@ -18418,6 +18418,73 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "0ccde8cf-2b25-4b27-aed3-2af3c13677b5",
+        "name": "Dorkwerdersluis",
+        "callname": "Dorkwerdersluis",
+        "type": "lock",
+        "channel": "78",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "report",
+            "note": "No mooring northside, busy cargo traffic"
+          },
+          "pleasure": {
+            "mode": "report"
+          },
+          "cargo": {
+            "mode": "report"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.510879993439,
+              53.254880242583
+            ],
+            [
+              6.510279178619,
+              53.254822475195
+            ],
+            [
+              6.5096783638,
+              53.255611956076
+            ],
+            [
+              6.50891661644,
+              53.256491279416
+            ],
+            [
+              6.508133411407,
+              53.256940561737
+            ],
+            [
+              6.509302854538,
+              53.256626064608
+            ],
+            [
+              6.509184837341,
+              53.256523371167
+            ],
+            [
+              6.510118246078,
+              53.255605537591
+            ],
+            [
+              6.510879993439,
+              53.254880242583
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
