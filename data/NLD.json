@@ -18278,7 +18278,8 @@
         "phone": "+",
         "vhfdata": {
           "generic": {
-            "mode": "announce"
+            "mode": "announce",
+            "note": "Alleen brug, sluis staat open"
           },
           "pleasure": {
             "mode": "announce"
