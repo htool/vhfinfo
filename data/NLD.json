@@ -17915,6 +17915,56 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "6677b8ac-9d75-4c9d-aa4b-36365e88953f",
+        "name": "Brug Wergea",
+        "callname": "Brug Wergea",
+        "type": "bridge",
+        "channel": "80",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.835129618645,
+              53.150965618423
+            ],
+            [
+              5.835698246956,
+              53.150955967158
+            ],
+            [
+              5.835585594177,
+              53.150618171522
+            ],
+            [
+              5.83497941494,
+              53.15060208595
+            ],
+            [
+              5.835129618645,
+              53.150965618423
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
