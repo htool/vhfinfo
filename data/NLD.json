@@ -17715,6 +17715,56 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "d8bbda2b-b3b8-4f78-8325-3cdfe970914f",
+        "name": "Koningsbrug",
+        "callname": "Koningsbrug",
+        "type": "bridge",
+        "channel": "18",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "report"
+          },
+          "pleasure": {
+            "mode": "report"
+          },
+          "cargo": {
+            "mode": "report"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.442491769791,
+              53.1775948448
+            ],
+            [
+              5.44303894043,
+              53.178006374661
+            ],
+            [
+              5.444819927216,
+              53.177247613409
+            ],
+            [
+              5.444272756577,
+              53.176906809497
+            ],
+            [
+              5.442491769791,
+              53.1775948448
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
