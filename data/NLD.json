@@ -17587,6 +17587,56 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "5882d3b8-db50-4524-b922-097dd2839da7",
+        "name": "Brug Ritsumasyl",
+        "callname": "Brug Ritsumasyl",
+        "type": "bridge",
+        "channel": "80",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "report"
+          },
+          "pleasure": {
+            "mode": "report"
+          },
+          "cargo": {
+            "mode": "report"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.740839242935,
+              53.196186909141
+            ],
+            [
+              5.74093580246,
+              53.195794836089
+            ],
+            [
+              5.741525888443,
+              53.195859110605
+            ],
+            [
+              5.741364955902,
+              53.196276892615
+            ],
+            [
+              5.740839242935,
+              53.196186909141
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
