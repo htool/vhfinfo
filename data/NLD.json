@@ -18568,6 +18568,57 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "703924b1-2017-4547-891a-a21180e15cf4",
+        "name": "Zernike brug",
+        "callname": "Zernike brug",
+        "type": "bridge",
+        "channel": "9",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce",
+            "note": "City of Groningen CH-9"
+          },
+          "pleasure": {
+            "mode": "announce"
+          },
+          "cargo": {
+            "mode": "report"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.52293920517,
+              53.243777843289
+            ],
+            [
+              6.523454189301,
+              53.243906248298
+            ],
+            [
+              6.524521708488,
+              53.242907889207
+            ],
+            [
+              6.524060368538,
+              53.242766640381
+            ],
+            [
+              6.52293920517,
+              53.243777843289
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
