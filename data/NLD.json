@@ -17965,6 +17965,56 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "afc0dcad-89c8-42e7-8608-e14a1801f893",
+        "name": "Tutse Brêge",
+        "callname": "Tutse Brêge",
+        "type": "bridge",
+        "channel": "80",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "announce"
+          },
+          "cargo": {
+            "mode": "announce"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.836843550205,
+              53.116364774975
+            ],
+            [
+              5.837302207947,
+              53.116424339008
+            ],
+            [
+              5.837398767471,
+              53.116112029377
+            ],
+            [
+              5.836953520775,
+              53.116079832378
+            ],
+            [
+              5.836843550205,
+              53.116364774975
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
