@@ -17531,6 +17531,56 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "1aea55dc-872b-40dc-aac3-614a7c00b6be",
+        "name": "Haringsma Brug",
+        "callname": "Haringsma Brug",
+        "type": "bridge",
+        "channel": "18",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Harinxmabrug-/-van-Harinxmabrug,-Van-Harinxmakanaal",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "report"
+          },
+          "pleasure": {
+            "mode": "report"
+          },
+          "cargo": {
+            "mode": "report"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.796312689781,
+              53.183529494917
+            ],
+            [
+              5.796296596527,
+              53.183069797839
+            ],
+            [
+              5.797353386879,
+              53.183066583157
+            ],
+            [
+              5.797364115715,
+              53.183497348429
+            ],
+            [
+              5.796312689781,
+              53.183529494917
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
