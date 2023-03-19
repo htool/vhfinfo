@@ -18065,6 +18065,56 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cfd39198-20d4-4cee-a43d-c404c2137e17",
+        "name": "Reitdiep Brug",
+        "callname": "Reitdiep Brug",
+        "type": "bridge",
+        "channel": "78",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "report"
+          },
+          "pleasure": {
+            "mode": "announce"
+          },
+          "cargo": {
+            "mode": "report"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.296791434288,
+              53.337545545496
+            ],
+            [
+              6.296625137329,
+              53.337420624726
+            ],
+            [
+              6.29754781723,
+              53.336975391314
+            ],
+            [
+              6.297655105591,
+              53.33707148525
+            ],
+            [
+              6.296791434288,
+              53.337545545496
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
