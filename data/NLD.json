@@ -17865,6 +17865,56 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "016d22b1-e387-4bb0-93bf-77600217ee34",
+        "name": "Frisiabrêge",
+        "callname": "Frisiabrug",
+        "type": "bridge",
+        "channel": "80",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Frisiabrug-/-Frisiabr%C3%AAge%2C-Van-Harinxmakanaal",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "report"
+          },
+          "pleasure": {
+            "mode": "report"
+          },
+          "cargo": {
+            "mode": "report"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.525506138802,
+              53.180554235322
+            ],
+            [
+              5.525152087212,
+              53.180055927476
+            ],
+            [
+              5.525801181793,
+              53.179877499711
+            ],
+            [
+              5.5262196064,
+              53.180366164976
+            ],
+            [
+              5.525506138802,
+              53.180554235322
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
