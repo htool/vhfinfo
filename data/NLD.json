@@ -18215,6 +18215,56 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "da87c90e-85ac-4dbe-a938-adc696e0863f",
+        "name": "Brug Garnwerd",
+        "callname": "Brug Garnwerd",
+        "type": "bridge",
+        "channel": "78",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "announce"
+          },
+          "cargo": {
+            "mode": "report"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.494542658329,
+              53.305302252064
+            ],
+            [
+              6.494706273079,
+              53.305345526468
+            ],
+            [
+              6.494888663292,
+              53.305174031349
+            ],
+            [
+              6.494733095169,
+              53.305113126374
+            ],
+            [
+              6.494542658329,
+              53.305302252064
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
