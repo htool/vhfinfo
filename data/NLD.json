@@ -18265,6 +18265,56 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "9803d3bb-63cd-40c2-98e3-1b9e6c565fea",
+        "name": "Wetsinger sluis",
+        "callname": "Wetsinger sluis",
+        "type": "bridge",
+        "channel": "78",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "announce"
+          },
+          "cargo": {
+            "mode": "report"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.50363266468,
+              53.292279472557
+            ],
+            [
+              6.503815054893,
+              53.292257027116
+            ],
+            [
+              6.503705084324,
+              53.292029365554
+            ],
+            [
+              6.503570973873,
+              53.292047001352
+            ],
+            [
+              6.50363266468,
+              53.292279472557
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
