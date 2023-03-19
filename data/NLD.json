@@ -18115,6 +18115,56 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ad746889-86b1-40fd-a470-dfc5438e421c",
+        "name": "Lammersburen Schutsluis",
+        "callname": "Sluis Electra",
+        "type": "bridge",
+        "channel": "78",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "announce"
+          },
+          "cargo": {
+            "mode": "announce"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.355376243591,
+              53.314743046929
+            ],
+            [
+              6.357500553131,
+              53.314672541177
+            ],
+            [
+              6.357554197311,
+              53.314428974954
+            ],
+            [
+              6.355290412903,
+              53.314582806414
+            ],
+            [
+              6.355376243591,
+              53.314743046929
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
