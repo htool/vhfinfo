@@ -18316,6 +18316,56 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "0bb40c0a-bb9f-4826-a022-9acbd3948074",
+        "name": "Wierummerschouw",
+        "callname": "Wierummerschouw",
+        "type": "bridge",
+        "channel": "78",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "announce"
+          },
+          "cargo": {
+            "mode": "report"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.506679654121,
+              53.270173018411
+            ],
+            [
+              6.506931781769,
+              53.270065545261
+            ],
+            [
+              6.506870090961,
+              53.269847389975
+            ],
+            [
+              6.506676971912,
+              53.2698441818
+            ],
+            [
+              6.506679654121,
+              53.270173018411
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
