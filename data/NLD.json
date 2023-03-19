@@ -18015,6 +18015,56 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "9064dcbc-c120-4429-bc54-890670c01350",
+        "name": "Galle Brêge",
+        "callname": "Galle Brêge",
+        "type": "bridge",
+        "channel": "80",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "announce"
+          },
+          "cargo": {
+            "mode": "announce"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.842006802559,
+              53.102778800347
+            ],
+            [
+              5.841580331326,
+              53.102798124525
+            ],
+            [
+              5.841644704342,
+              53.103063831089
+            ],
+            [
+              5.842038989067,
+              53.103050948384
+            ],
+            [
+              5.842006802559,
+              53.102778800347
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
