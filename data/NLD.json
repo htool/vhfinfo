@@ -17436,13 +17436,16 @@
         "phone": "+",
         "vhfdata": {
           "generic": {
-            "mode": "report"
+            "mode": "report",
+            "note": "Long waiting possible, report early"
           },
           "pleasure": {
-            "mode": "report"
+            "mode": "report",
+            "note": "Long waiting possible, report early"
           },
           "cargo": {
-            "mode": "report"
+            "mode": "report",
+            "note": "Long waiting possible, report early"
           }
         }
       },
