@@ -17835,7 +17835,8 @@
           "cargo": {
             "mode": "report"
           }
-        }
+        },
+        "channel": "80"
       },
       "geometry": {
         "type": "Polygon",
