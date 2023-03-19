@@ -17135,6 +17135,86 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "7e11842c-6b6d-4a08-a006-f6711b0c30ae",
+        "name": "Havendienst Makkum",
+        "callname": "Havendienst Makkum",
+        "type": "marina",
+        "channel": "84",
+        "url": "https://dehavengids.nl/wordpress/havens/makkum-gemeentehaven/",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce",
+            "note": "Buitenhaven"
+          },
+          "pleasure": {
+            "mode": "listen",
+            "url": "https://dehavengids.nl/wordpress/havens/makkum-gemeentehaven/"
+          },
+          "cargo": {
+            "mode": "report"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.402011871338,
+              53.052770983747
+            ],
+            [
+              5.40314912796,
+              53.05297734742
+            ],
+            [
+              5.402140617371,
+              53.054550837931
+            ],
+            [
+              5.40091753006,
+              53.054924855912
+            ],
+            [
+              5.399029254913,
+              53.056859379852
+            ],
+            [
+              5.39767742157,
+              53.056485378663
+            ],
+            [
+              5.398428440094,
+              53.054834576007
+            ],
+            [
+              5.399587154388,
+              53.054782987405
+            ],
+            [
+              5.400252342224,
+              53.054370276365
+            ],
+            [
+              5.401067733765,
+              53.053776997319
+            ],
+            [
+              5.401754379272,
+              53.053067631216
+            ],
+            [
+              5.402011871338,
+              53.052770983747
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
