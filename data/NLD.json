@@ -17920,21 +17920,21 @@
       "type": "Feature",
       "properties": {
         "id": "6677b8ac-9d75-4c9d-aa4b-36365e88953f",
-        "name": "Brug Wergea",
-        "callname": "Brug Wergea",
+        "name": "Palma Brêge",
+        "callname": "Palma Brêge",
         "type": "bridge",
         "channel": "80",
         "url": "https://",
         "phone": "+",
         "vhfdata": {
           "generic": {
-            "mode": "listen"
+            "mode": "announce"
           },
           "pleasure": {
-            "mode": "listen"
+            "mode": "announce"
           },
           "cargo": {
-            "mode": "listen"
+            "mode": "announce"
           }
         }
       },
