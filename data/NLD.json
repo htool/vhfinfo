@@ -18165,6 +18165,56 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "8f253fdb-e7ec-4a25-9794-c80cc4ba3eeb",
+        "name": "Roodehaansterbrug",
+        "callname": "Brug Rode Haan",
+        "type": "bridge",
+        "channel": "78",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "announce"
+          },
+          "cargo": {
+            "mode": "report"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.425041258335,
+              53.32743859299
+            ],
+            [
+              6.42516463995,
+              53.3271758764
+            ],
+            [
+              6.425650119781,
+              53.327280002071
+            ],
+            [
+              6.425505280495,
+              53.327545921864
+            ],
+            [
+              6.425041258335,
+              53.32743859299
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
