@@ -17423,6 +17423,64 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "2c7d5b5c-f0a6-438a-a832-60a3b9eecec0",
+        "name": "Spoorbrug HRMK",
+        "callname": "Spoorbrug HRMK",
+        "type": "bridge",
+        "channel": "20",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Spoorbrug-HRMK",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "report"
+          },
+          "pleasure": {
+            "mode": "report"
+          },
+          "cargo": {
+            "mode": "report"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.771759748459,
+              53.185233224331
+            ],
+            [
+              5.771952867508,
+              53.185824691923
+            ],
+            [
+              5.77262878418,
+              53.185644680911
+            ],
+            [
+              5.774635076523,
+              53.18545181113
+            ],
+            [
+              5.776351690292,
+              53.185246082409
+            ],
+            [
+              5.776201486588,
+              53.184821763804
+            ],
+            [
+              5.771759748459,
+              53.185233224331
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
