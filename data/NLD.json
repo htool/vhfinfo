@@ -18619,6 +18619,57 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "428acbb7-ecfe-4d74-a0cc-650d0a409297",
+        "name": "Berlage brug",
+        "callname": "Berlage brug",
+        "type": "bridge",
+        "channel": "9",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce",
+            "note": "City of Groningen CH-9"
+          },
+          "pleasure": {
+            "mode": "announce"
+          },
+          "cargo": {
+            "mode": "report"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.590206325054,
+              53.22011906844
+            ],
+            [
+              6.59038066864,
+              53.219889416654
+            ],
+            [
+              6.590777635574,
+              53.220011469505
+            ],
+            [
+              6.590611338615,
+              53.220239514688
+            ],
+            [
+              6.590206325054,
+              53.22011906844
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
