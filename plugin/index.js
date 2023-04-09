@@ -101,6 +101,7 @@ module.exports = function (app, options) {
 		var currentCoordinates = null
     var lastCoordinates = null
     var currentPosition = null
+    var headingTrue = false
 
     app.streambundle.getSelfStream('navigation.position').forEach(position => {
       currentCoordinates = [position.longitude, position.latitude]
@@ -108,6 +109,16 @@ module.exports = function (app, options) {
 
     app.streambundle.getSelfStream('navigation.headingTrue').forEach(heading => {
       currentHeading = rad2deg(heading)
+      if (headingTrue == false) {
+        app.debug('Got navigation.headingTrue, using that over navigation.headingMagnetic')
+        headingTrue = true
+      }
+    })
+
+    app.streambundle.getSelfStream('navigation.headingMagnetic').forEach(heading => {
+      if (headingTrue == false) {
+        currentHeading = rad2deg(heading)
+      }
     })
 
     app.debug('options: %s', JSON.stringify(options))
@@ -340,6 +351,12 @@ module.exports = function (app, options) {
 		    app.debug(JSON.stringify(searchPolygon))
 		    return searchPolygon
       } else {
+        if (currentCoordinates != null) {
+          app.debug('createSearchPolygon: coordinates info is missing (navigation.position)')
+        }
+        if (currentHeading != null) {
+          app.debug('createSearchPolygon: heading info is missing (navigation.headingMagnetic or navigation.headingTrue)')
+        }
         return null
       }
 		}
