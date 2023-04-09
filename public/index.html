@@ -36,26 +36,21 @@
 
 			/* Add a black background color to the top navigation */
 			.logo {
-        display: inline-block;
-			  background-color: #000;
+        display: block;
+			  background-color: #fff;
 			  overflow: hidden;
-        position: relative;
-			  text-align: left;
-        left: 0%;
-        width: 25%;
-			  padding: 14px 10px;
-        font-family: Roboto;
-			  font-size: 0.9rem;
-			  color: #f2f2f2;
+        position: absolute;
+        right: 8%;
+        top: 8%;
+        width: 13%;
       }
         
 			.topnav {
-        display: inline-block;
+        display: block;
 			  background-color: #000;
 			  overflow: hidden;
-        position: absolute;
-        width: 73%;
-        font-family: Roboto;
+        width: 100%;
+        font-family: "Roboto", "Helvetica Neue", "sans-serif";
 			}
 			
 			/* Style the links inside the navigation bar */
@@ -63,9 +58,9 @@
 			  float: left;
 			  color: #f2f2f2;
 			  text-align: center;
-			  padding: 14px 16px;
+			  padding: 12px 14px;
 			  text-decoration: none;
-			  font-size: 0.9rem;
+			  font-size: 0.8rem;
 			}
 			
 			/* Change the color of links on hover */
@@ -84,7 +79,7 @@
         display: block;
         position: relative;
 			  color: black;
-        font-family: Roboto;
+        font-family: "Roboto", "Helvetica Neue", "sans-serif";
         width: 90%;
         align: center;
         margin-left: auto;
@@ -97,7 +92,6 @@
   </head>
 <body>
 
-<a class="logo">VHFinfo.org</a>
 <div class="topnav">
   <a class="active" href="#home">Home</a>
   <a href="./map.html">Map</a>
@@ -108,6 +102,7 @@
 <div class="main">
 <a id="home"></a>
 
+<h1>VHFinfo.org</h1>
 <p>Ever had to lookup the VHF channel to tune into for a bridge, a lock or a VTS?<br>
 
 Did you also feel the information is not easily found, especially when crossing borders? VHFinfo.org is here to help.<p>
@@ -119,9 +114,9 @@ Different frontends can be made/used to make use of the data.
 
 <h2>Viewing</h2>
 <h3>Mobile website</h3>
-One way to access the vhfinfo.org information is by using the mobile friendly online map.<br>
+One way to access the vhfinfo.org information is by using the <a href="./map.html">mobile friendly online map</a>.<br>
 Using your phone's GPS coordinates, this will allow you to see which channels are nearby or even in front of you if the phone's compass can be used.<br>
-<img src="mobile_map.png" width="300" class="center">
+<a href="./map.html"><img src="mobile_map.png" width="300" class="center"></a>
 
 <h3>SignalK plugin webapp</h3>
 Using the <a href="https://signalk.org/">SignalK</a> VHFinfo plugin you can access the same information without the need for an internet connection.<br>
@@ -130,7 +125,7 @@ The plugin allows you to configure the search beam length and angle.<br>
 <img src="mobile_signalk_webapp.png" class="center">
 
 <h3>SignalK plugin in combination with custom display</h3>
-Another way to show the information is using another SignalK plugin that allows you to setup an instrument panel on any (browser) display.<br>
+Another way to show the information is using <a href="https://www.npmjs.com/package/signalk-instrument-display-plugin">another SignalK plugin</a> that allows you to setup an instrument panel on any (browser) display.<br><br>
 <img src="mobile_signalk_display.png" max-width="100%">
 
 
