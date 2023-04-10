@@ -12,6 +12,9 @@
   <script>document.write('<link rel="stylesheet" href="style.css?ver=' + Math.floor(Math.random() * 1000) + '">');</script>
 </head>
 <body>
+<div class="header">
+VHFinfo.org
+</div>
 <div class="list" id="list"></div>
 </body>
 </html>
@@ -24,6 +27,7 @@ var ws;
 var wsNr = 0;
 var nearest = {}
 var numeric = /[0-9]+/
+
 
 
 function connect () {

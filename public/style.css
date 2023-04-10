@@ -27,6 +27,8 @@ br {
 .header {
   display: block;
   text-align: center;
+  font-size: 1rem;
+  padding-bottom: 4px;
 }
 
 .entry {
