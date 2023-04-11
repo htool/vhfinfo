@@ -336,28 +336,44 @@ module.exports = function (app, options) {
 
 		function createSearchPolygon () {
       if (currentCoordinates != null && currentHeading != null) {
+        pluginStatus = 'Started'
 		    currentPosition = turf.point(currentCoordinates, { })
-		    var options = {units: 'meters'};
-		    var bearing = currentHeading - (angle/2);
-		    var pointA = turf.rhumbDestination(currentPosition, distance, bearing, options);
-		    var bearing = currentHeading + (angle/2);
-		    var pointB = turf.rhumbDestination(currentPosition, distance, bearing, options);
+		    var options = {units: 'meters'}
+		    var bearing = currentHeading - (angle/2)
+		    var pointA = turf.rhumbDestination(currentPosition, distance, bearing, options)
+		    var bearing = currentHeading + (angle/2)
+		    var pointB = turf.rhumbDestination(currentPosition, distance, bearing, options)
 		    var searchPolygon = turf.polygon([[
 		      currentCoordinates,
 		      pointA.geometry.coordinates,
 		      pointB.geometry.coordinates,
 		      currentCoordinates
-		    ]], {name: 'searchPolygon' });
+		    ]], {name: 'searchPolygon' })
 		    app.debug(JSON.stringify(searchPolygon))
 		    return searchPolygon
       } else {
-        if (currentCoordinates != null) {
+        if (currentCoordinates == null) {
           app.debug('createSearchPolygon: coordinates info is missing (navigation.position)')
+          pluginStatus = 'Starting... waiting for navigation.position'
+          return null
         }
-        if (currentHeading != null) {
+        if (currentCoordinates != null && currentHeading == null) {
           app.debug('createSearchPolygon: heading info is missing (navigation.headingMagnetic or navigation.headingTrue)')
+          pluginStatus = 'Started. Still missing heading. Using bbox for now.'
+		      currentPosition = turf.point(currentCoordinates, { })
+		      var options = {units: 'meters'}
+	        var pointA = turf.rhumbDestination(currentPosition, distance/2, 45, options)
+	        var pointB = turf.rhumbDestination(currentPosition, distance/2, 135, options)
+	        var pointC = turf.rhumbDestination(currentPosition, distance/2, 225, options)
+	        var pointD = turf.rhumbDestination(currentPosition, distance/2, 315, options)
+	        searchPolygon = turf.polygon([[
+	          pointA.geometry.coordinates,
+	          pointB.geometry.coordinates,
+	          pointC.geometry.coordinates,
+	          pointD.geometry.coordinates,
+	          pointA.geometry.coordinates]])
+	        return searchPolygon
         }
-        return null
       }
 		}
 		
