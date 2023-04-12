@@ -174,50 +174,6 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "7dc43560-a5f5-4371-bb67-ed4af01f0b2c",
-        "callname": "Fort Pierce Nort Bridge",
-        "type": "bridge",
-        "url": "https://",
-        "phone": "+",
-        "vhfdata": {
-          "generic": {
-            "mode": "listen"
-          },
-          "pleasure": {
-            "mode": "listen"
-          },
-          "cargo": {
-            "mode": "listen"
-          }
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -80.325508117676,
-              27.470962848601
-            ],
-            [
-              -80.322589874268,
-              27.472638198039
-            ],
-            [
-              -80.321388244629,
-              27.47172437423
-            ],
-            [
-              -80.325508117676,
-              27.470962848601
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "id": "90378ca2-f551-4e14-9c3e-0a87ab2d40e0",
         "callname": "Fort Pierce Nort Bridge",
         "type": "bridge",
