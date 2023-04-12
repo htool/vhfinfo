@@ -1044,7 +1044,7 @@ function showInfo(f, layer, country) {
   html = html + addHTML('Pleasure', p.vhfdata.pleasure)
   html = html + addHTML('Emergency', p.vhfdata.emergency)
   let center = m.getCenter()
-  let editUrl = "https://vhfinfo.org/?edit=" + country + "&mapPosition=" +  center.lat.toFixed(6) + "/" + center.lng.toFixed(6) + "/" + m.getZoom()
+  let editUrl = "https://vhfinfo.org/map.html?edit=" + country + "&mapPosition=" +  center.lat.toFixed(6) + "/" + center.lng.toFixed(6) + "/" + m.getZoom()
   html = html + '<td></td><td style="text-align: right;"><a href="' + editUrl + '" target="_blank" style="text-decoration: none;">Edit</a></td>'
   html = html + '</table>'
 
