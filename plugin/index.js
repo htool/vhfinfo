@@ -125,7 +125,7 @@ module.exports = function (app, options) {
     })
 
     app.streambundle.getSelfStream('navigation.courseOverGroundTrue').forEach(heading => {
-      if (headingMagnetic == false) {
+      if (headingTrue == false && headingMagnetic == false) {
         currentHeading = rad2deg(heading)
         pluginStatus = 'Started - using COG'
       }
@@ -346,7 +346,6 @@ module.exports = function (app, options) {
 
 		function createSearchPolygon () {
       if (currentCoordinates != null && currentHeading != null) {
-        pluginStatus = 'Started'
 		    currentPosition = turf.point(currentCoordinates, { })
 		    var options = {units: 'meters'}
 		    var bearing = currentHeading - (angle/2)
