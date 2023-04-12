@@ -27,8 +27,11 @@ var ws;
 var wsNr = 0;
 var nearest = {}
 var numeric = /[0-9]+/
+var options = {}
 
-
+$.getJSON("/plugins/vhfinfo/options", function(json) {
+  options = json
+})
 
 function connect () {
   if (connected || wsNr >= 1) {
@@ -39,7 +42,7 @@ function connect () {
     wsNr++;
 	  connected = true;
 
-    var paths = [{ "path": "resources.vhfdata.*" }]
+    var paths = [{ "path": options.path + ".*" }]
     var subscriptionObject = {
       "context": "vessels.self",
       "subscribe": paths
