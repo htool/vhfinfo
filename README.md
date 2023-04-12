@@ -81,7 +81,7 @@ The plugin flow is as follows:
  2. Draw a boundry box around the location with 100Nm (configurable) ribs
  3. Use countries_bbox.json to create bboxes and check if they intersect with the locationBox from step 2
  4. Read features from intersecting to see which intersect with locationBox from 2 and keep them in memory (featuresInBox)
- 5. Use heading and location to crete a searchPolygon 'beam' using the plugin config parameters
+ 5. Use headingTrue, headingMagnetic, COG or bbox and location to create a searchPolygon 'beam' (or bbox) using the plugin config parameters
  6. Go through the features in featuresInBox and check if they intersect with searchPolygon
  7. Use result of 6 to calculate distance to each feature and sort by distance (negative distance means your located inside the feature)
  8. /plugin/vhfinfo/nearby can be called to pull the whole result set of 7.

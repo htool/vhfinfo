@@ -102,6 +102,7 @@ module.exports = function (app, options) {
     var lastCoordinates = null
     var currentPosition = null
     var headingTrue = false
+    var headingMagnetic = false
 
     app.streambundle.getSelfStream('navigation.position').forEach(position => {
       currentCoordinates = [position.longitude, position.latitude]
@@ -110,14 +111,23 @@ module.exports = function (app, options) {
     app.streambundle.getSelfStream('navigation.headingTrue').forEach(heading => {
       currentHeading = rad2deg(heading)
       if (headingTrue == false) {
-        app.debug('Got navigation.headingTrue, using that over navigation.headingMagnetic')
         headingTrue = true
+        pluginStatus = 'Started - using headingTrue'
       }
     })
 
     app.streambundle.getSelfStream('navigation.headingMagnetic').forEach(heading => {
       if (headingTrue == false) {
         currentHeading = rad2deg(heading)
+        headingMagnetic = true
+        pluginStatus = 'Started - using headingMagnetic'
+      }
+    })
+
+    app.streambundle.getSelfStream('navigation.courseOverGroundTrue').forEach(heading => {
+      if (headingMagnetic == false) {
+        currentHeading = rad2deg(heading)
+        pluginStatus = 'Started - using COG'
       }
     })
 
@@ -358,8 +368,8 @@ module.exports = function (app, options) {
           return null
         }
         if (currentCoordinates != null && currentHeading == null) {
-          app.debug('createSearchPolygon: heading info is missing (navigation.headingMagnetic or navigation.headingTrue)')
-          pluginStatus = 'Started. Still missing heading. Using bbox for now.'
+          pluginStatus = 'Started. Still missing heading or COG. Using bbox for now.'
+          app.debug('createSearchPolygon: heading/COG info is missing')
 		      currentPosition = turf.point(currentCoordinates, { })
 		      var options = {units: 'meters'}
 	        var pointA = turf.rhumbDestination(currentPosition, distance/2, 45, options)
