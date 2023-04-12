@@ -214,6 +214,56 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "90378ca2-f551-4e14-9c3e-0a87ab2d40e0",
+        "callname": "Fort Pierce Nort Bridge",
+        "type": "bridge",
+        "url": "https://marinas.com/view/bridge/qgujr_North_Fort_Pierce_Bridge_Fort_Pierce_FL_United_States",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        },
+        "name": "Fort Pierce Nort Bridge",
+        "channel": "9"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.324365496635,
+              27.47198614745
+            ],
+            [
+              -80.324640423059,
+              27.471894526894
+            ],
+            [
+              -80.324686020613,
+              27.472001615848
+            ],
+            [
+              -80.324416458607,
+              27.472094426191
+            ],
+            [
+              -80.324365496635,
+              27.47198614745
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
