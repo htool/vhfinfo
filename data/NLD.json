@@ -17342,13 +17342,13 @@
         "name": "Stationsbrug Franeker",
         "callname": "Stationsbrug Franeker",
         "type": "bridge",
-        "channel": "20",
+        "channel": "80",
         "url": "https://",
         "phone": "+",
         "vhfdata": {
           "generic": {
             "mode": "announce",
-            "note": "Report early for corner!"
+            "note": "Report early for corner! yachts must wait for the traffic lights"
           },
           "pleasure": {
             "mode": "listen",
