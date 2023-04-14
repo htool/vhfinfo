@@ -86,12 +86,16 @@ connect();
 
 
 function handleData (data) {
-  var path = data.updates[0].values[0].path.replace('resources.vhfdata.nearest.', '')
-  var value = data.updates[0].values[0].value
-  nearest[path] = JSON.parse(value)
-  if (path.match(numeric)) {
-    console.log(path)
-    updateNearest (path)
+  if (typeof data.updates[0].values[0].path != 'undefined') {
+    var path = data.updates[0].values[0].path.replace('resources.vhfdata.nearest.', '')
+    var value = data.updates[0].values[0].value
+    if (typeof value == 'string' && value.startsWith('{')) {
+      nearest[path] = JSON.parse(value)
+      if (path.match(numeric)) {
+        console.log(path)
+        updateNearest (path)
+      }
+    }
   }
 }
 
@@ -159,7 +163,9 @@ function updateEntry(id) {
 	  }
   })
   if (note == false) {
-    document.getElementById('notes_' + id).remove()
+    if (document.getElementById('notes_' + id) != []) {
+      document.getElementById('notes_' + id).remove()
+    }
   }
 }
 

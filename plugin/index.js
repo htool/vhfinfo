@@ -19,6 +19,7 @@ module.exports = function (app, options) {
   plugin.description = 'Plugin that reads VHFinfo data and returns nearby info through an API'
 
   var pluginStatus = 'Starting'
+  let emptyFeature = {"name":"","callname":"","type":"","channel":"","phone":"","update":"", "vhfdata":{"generic":{"mode":"","note":""},"pleasure":{"mode":"","note":""},"cargo":{"mode":"","note":""}},"id":"","distance": "","relativeBearing": ""}
 
   var schema = {
     type: 'object',
@@ -125,7 +126,7 @@ module.exports = function (app, options) {
     })
 
     app.streambundle.getSelfStream('navigation.courseOverGroundTrue').forEach(heading => {
-      if (headingTrue == false && headingMagnetic == false) {
+      if (headingMagnetic == false) {
         currentHeading = rad2deg(heading)
         pluginStatus = 'Started - using COG'
       }
@@ -274,49 +275,49 @@ module.exports = function (app, options) {
 
     function sendUpdates (features) {
       var values = []
-      var vts = null
-      var vtsradar = null
-      var marina = null
-      var lock = null
-      var bridge = null
-      var area = null
-      var territorial = null
+      var vts = false
+      var vtsradar = false
+      var marina = false
+      var lock = false
+      var bridge = false
+      var area = false
+      var territorial = false
       features.forEach(feature => {
         switch (feature.type) {
           case 'vts':
-            if (vts == null) {
-              vts = {path: options.path + '.vts', value: JSON.stringify(feature)}
-              values.push(vts)
+            if (vts == false) {
+              values = values.concat(objectToPath(options.path + '.' + 'vts', feature))
+              vts = true
             }
             break
           case 'vtsradar':
-            if (vtsradar == null) {
-              vtsradar = {path: options.path + '.vtsradar', value: JSON.stringify(feature)}
-              values.push(vtsradar)
+            if (vtsradar == false) {
+              values = values.concat(objectToPath(options.path + '.' + 'vtsradar', feature))
+              vtsradar = true
             }
             break
           case 'lock':
-            if (lock == null) {
-              lock = {path: options.path + '.lock', value: JSON.stringify(feature)}
-              values.push(lock)
+            if (lock == false) {
+              values = values.concat(objectToPath(options.path + '.' + 'lock', feature))
+              lock = true
             }
             break
           case 'bridge':
-            if (bridge == null) {
-              bridge = {path: options.path + '.bridge', value: JSON.stringify(feature)}
-              values.push(bridge)
+            if (bridge == false) {
+              values = values.concat(objectToPath(options.path + '.' + 'bridge', feature))
+              bridge = true
             }
             break
           case 'marina':
-            if (marina == null) {
-              marina = {path: options.path + '.marina', value: JSON.stringify(feature)}
-              values.push(marina)
+            if (marina == false) {
+              values = values.concat(objectToPath(options.path + '.' + 'marina', feature))
+              marina = true
             }
             break
           case 'area':
-            if (area == null) {
-              area = {path: options.path + '.area', value: JSON.stringify(feature)}
-              values.push(area)
+            if (area == false) {
+              values = values.concat(objectToPath(options.path + '.' + 'area', feature))
+              area = true
             }
             break
         }
@@ -325,13 +326,14 @@ module.exports = function (app, options) {
       for (let nr = 0; nr < features.length; nr++) {
         if (options.types[features[nr].type] == true) {
           // Only selected types
-          values.push({path: options.path + '.' + pathnr, value: JSON.stringify(features[nr])})
+          values = values.concat(objectToPath(options.path + '.' + pathnr, features[nr]))
           pathnr = pathnr + 1
         }
       }
       // Fill rest with -
+
       for (let nr = pathnr; nr < 20; nr++) {
-        values.push({path: options.path + '.' + nr, value: JSON.stringify({name: "", channel: "", type: ""})})
+        values = values.concat(objectToPath(options.path + '.' + nr, emptyFeature))
       }
       //app.debug('values: %s', JSON.stringify(values))
       app.handleMessage(plugin.id, {
@@ -344,6 +346,25 @@ module.exports = function (app, options) {
       return
     }
 
+    function objectToPath (path, object) {
+      // Add object
+      var values = []
+      if (typeof object.id != 'undefined') {      // Main object
+        values = [{path: path, value: JSON.stringify(object)}]
+      } 
+      // Add single paths
+      for (const [key, value] of Object.entries(object)) {
+        var newPath = path + '.' + key
+        if (typeof value == 'object') {
+          values = values.concat(objectToPath(newPath, value))
+        } else {
+          values.push({path: newPath, value: value})
+        }
+      }
+      app.debug('objectToPath: ', JSON.stringify(values))
+      return values
+    }
+              
 		function createSearchPolygon () {
       if (currentCoordinates != null && currentHeading != null) {
 		    currentPosition = turf.point(currentCoordinates, { })
