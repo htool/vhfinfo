@@ -346,6 +346,10 @@ module.exports = function (app, options) {
       return
     }
 
+    function deg2rad(angle) {
+      return Number(((angle * Math.PI) / 180).toFixed(3))
+    }
+
     function objectToPath (path, object) {
       // Add object
       var values = []
@@ -359,6 +363,9 @@ module.exports = function (app, options) {
           values = values.concat(objectToPath(newPath, value))
         } else {
           values.push({path: newPath, value: value})
+          if (key == 'relativeBearing') {
+            values.push({path: newPath + 'Rad', value: deg2rad(value)})
+          }
         }
       }
       app.debug('objectToPath: ', JSON.stringify(values))
