@@ -4864,6 +4864,131 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "b012a39b-2b90-442c-a6f7-a9a596120331",
+        "name": "Charlottenburg locks",
+        "callname": "Schleuse Charlottenburg",
+        "type": "lock",
+        "channel": "82",
+        "url": "https://www.elwis.de/DE/dynamisch/mvc/main.php?modul=schleuseninfo&choice=1&show_ft=1&show_contacts=1&specialsi=449&schleusenid=449",
+        "phone": "+49 30 34357120",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.28515291214,
+              52.530949094499
+            ],
+            [
+              13.285209238529,
+              52.530810331944
+            ],
+            [
+              13.287271857262,
+              52.531149579635
+            ],
+            [
+              13.28918159008,
+              52.530780635208
+            ],
+            [
+              13.289664387703,
+              52.530584734252
+            ],
+            [
+              13.290629982948,
+              52.53101245021
+            ],
+            [
+              13.290367126465,
+              52.531240999014
+            ],
+            [
+              13.289197683334,
+              52.53079369524
+            ],
+            [
+              13.287261128426,
+              52.531172434498
+            ],
+            [
+              13.287186026573,
+              52.531289973603
+            ],
+            [
+              13.28515291214,
+              52.530949094499
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "6edd24df-26d8-45e4-904c-68289344dd8c",
+        "name": "Plötzensee locks",
+        "callname": "Schleuse Plötzensee",
+        "type": "lock",
+        "channel": "22",
+        "url": "https://www.elwis.de/DE/dynamisch/mvc/main.php?modul=schleuseninfo&choice=1&show_ft=1&show_contacts=1&specialsi=148&schleusenid=148",
+        "phone": "+49 30 3435710",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "remotely operated"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.322942554951,
+              52.543590424856
+            ],
+            [
+              13.323393166065,
+              52.543820540215
+            ],
+            [
+              13.324192464352,
+              52.543200368408
+            ],
+            [
+              13.323704302311,
+              52.542973513901
+            ],
+            [
+              13.322942554951,
+              52.543590424856
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
