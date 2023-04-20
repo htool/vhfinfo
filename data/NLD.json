@@ -18747,52 +18747,6 @@
           ]
         ]
       }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "206c6d24-3cd1-415a-acdf-79b881e56d06",
-        "name": "Test",
-        "callname": "test",
-        "type": "vts",
-        "channel": "1",
-        "url": "https://",
-        "phone": "+",
-        "vhfdata": {
-          "generic": {
-            "mode": "listen"
-          },
-          "pleasure": {
-            "mode": "listen"
-          },
-          "cargo": {
-            "mode": "listen"
-          }
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              5.5810546875,
-              52.583025861416
-            ],
-            [
-              5.916137695313,
-              52.492815085405
-            ],
-            [
-              5.762329101563,
-              52.308478623663
-            ],
-            [
-              5.5810546875,
-              52.583025861416
-            ]
-          ]
-        ]
-      }
     }
   ]
 }
