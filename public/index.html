@@ -29,9 +29,17 @@ var nearest = {}
 var numeric = /[0-9]+/
 var options = {}
 
-$.getJSON("/plugins/vhfinfo/options", function(json) {
-  options = json
-})
+function readOptions () {
+  $.getJSON("/plugins/vhfinfo/options", function(json) {
+    options = json
+  })
+  if (typeof options.path != 'undefined') {
+    connect()
+  } else {
+    console.log("Can't read options yet. Retry in 1 sec.")
+    setTimeout(readOptions, 1000)
+  }
+}
 
 function connect () {
   if (connected || wsNr >= 1) {
@@ -82,7 +90,7 @@ function connect () {
   }
 }
 
-connect();
+readOptions()
 
 
 function handleData (data) {
@@ -163,7 +171,7 @@ function updateEntry(id) {
 	  }
   })
   if (note == false) {
-    if (document.getElementById('notes_' + id) != []) {
+    if (document.getElementById('notes_' + id) != null) {
       document.getElementById('notes_' + id).remove()
     }
   }
