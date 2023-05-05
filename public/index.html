@@ -34,9 +34,11 @@ function readOptions () {
     options = json
   })
   if (typeof options.path != 'undefined') {
-    connect()
+    document.getElementById('list').innerHTML = "Got options, now connecting..."
+    setTimeout(connect, 500)
   } else {
-    console.log("Can't read options yet. Retry in 1 sec.")
+    // console.log("Can't read options yet. Retry in 1 sec.")
+    document.getElementById('list').innerHTML = "Waiting for SigalK options..."
     setTimeout(readOptions, 1000)
   }
 }
@@ -47,6 +49,7 @@ function connect () {
   };
   ws = new WebSocket((window.location.protocol === 'https:' ? 'wss' : 'ws') + "://" + window.location.host + "/signalk/v1/stream?subscribe=none");
 	ws.onopen = function() {
+    document.getElementById('list').innerHTML = ""
     wsNr++;
 	  connected = true;
 
