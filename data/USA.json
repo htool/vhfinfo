@@ -220,6 +220,60 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "650e835b-a7ca-478c-ae54-86b6bff3f006",
+        "name": "Fort Pierce City Marina",
+        "callname": "Fort Pierce City Marina",
+        "type": "marina",
+        "channel": "16",
+        "url": "https://www.cityoffortpierce.com/1015/City-Marina",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.323190689087,
+              27.451313668303
+            ],
+            [
+              -80.320701599121,
+              27.451999163772
+            ],
+            [
+              -80.319843292236,
+              27.449714162306
+            ],
+            [
+              -80.3227186203,
+              27.448000380141
+            ],
+            [
+              -80.323061943054,
+              27.449104820587
+            ],
+            [
+              -80.323190689087,
+              27.451313668303
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
