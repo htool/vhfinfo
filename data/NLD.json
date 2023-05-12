@@ -3615,8 +3615,8 @@
         "name": "Gemeentehaven Enkhuizen",
         "callname": "Havendienst Enkhuizen",
         "type": "marina",
-        "channel": 12,
-        "url": "https://www.enkhuizen.nl/direct-regelen/ontspanning-en-vrije-tijd/havens/havens-2/",
+        "channel": "12",
+        "url": "https://www.enkhuizen.nl/direct-regelen/ontspanning-en-vrije-tijd/havens-en-varen/havens/",
         "phone": "+31623700390",
         "vhfdata": {
           "generic": {
