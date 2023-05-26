@@ -30,6 +30,36 @@
           43.807422673793
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "d0ecd876-4dfe-4877-b021-3b2f7c715d47",
+        "name": "Harbourmaster Mangalia",
+        "callname": "Harbourmaster Mangalia",
+        "type": "territorial",
+        "channel": "67",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.580910092681,
+          43.807422673793
+        ]
+      }
     }
   ]
 }
