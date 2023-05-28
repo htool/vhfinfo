@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="header">
-VHFinfo.org
+<a href="https://vhfinfo.org/" style="color:#ffffff;text-decoration: none">VHFinfo.org</a>
 </div>
 <div class="list" id="list"></div>
 </body>
@@ -34,11 +34,10 @@ function readOptions () {
     options = json
   })
   if (typeof options.path != 'undefined') {
-    document.getElementById('list').innerHTML = "Got options, now connecting..."
+    document.getElementById('list').innerHTML = "Loaded SignalK plugin config options, now connecting..."
     setTimeout(connect, 500)
   } else {
-    // console.log("Can't read options yet. Retry in 1 sec.")
-    document.getElementById('list').innerHTML = "Waiting for SigalK options..."
+    document.getElementById('list').innerHTML = "Reading SigalK plugin options..."
     setTimeout(readOptions, 1000)
   }
 }
