@@ -18,6 +18,10 @@
     "url": "https://github.com/htool/vhfinfo/issues"
   },
   "homepage": "https://github.com/htool/vhfinfo#readme",
+  "signalk": {
+    "appIcon": "./signalk-logo.png",
+    "displayName": "VHFinfo"
+  },
   "dependencies": {
     "@turf/nearest-point": "^6.5.0",
     "@turf/turf": "^6.5.0",
