@@ -274,6 +274,130 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "3b886e9d-6b90-42a2-b026-1f07f896f2fd",
+        "name": "Charlestown Marina",
+        "callname": "Charlestown Marina",
+        "type": "marina",
+        "channel": "71",
+        "url": "https://charlestownmamarina.com/",
+        "phone": "+1617.242.2020",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.049978733063,
+              42.376046500333
+            ],
+            [
+              -71.049356460571,
+              42.377171952442
+            ],
+            [
+              -71.047425270081,
+              42.376220867473
+            ],
+            [
+              -71.047661304474,
+              42.374873472444
+            ],
+            [
+              -71.049592494965,
+              42.371924954244
+            ],
+            [
+              -71.051180362701,
+              42.373304117085
+            ],
+            [
+              -71.050794124603,
+              42.373510196288
+            ],
+            [
+              -71.049978733063,
+              42.376046500333
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cc1a8c1e-6783-4f00-8c4b-3241dae1ed00",
+        "name": "Boston Waterboat Marina",
+        "callname": "Boston Waterboat Marina",
+        "type": "marina",
+        "channel": "9",
+        "url": "https://www.waterboatmarina.com/",
+        "phone": "+16175231027",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.049436926842,
+              42.360823175781
+            ],
+            [
+              -71.047940254211,
+              42.361104608895
+            ],
+            [
+              -71.047795414925,
+              42.361267126035
+            ],
+            [
+              -71.046561598778,
+              42.361477208544
+            ],
+            [
+              -71.046277284622,
+              42.360074002614
+            ],
+            [
+              -71.047736406326,
+              42.360636874294
+            ],
+            [
+              -71.049249172211,
+              42.360410933451
+            ],
+            [
+              -71.049436926842,
+              42.360823175781
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
