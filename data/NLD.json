@@ -18762,7 +18762,8 @@
         "phone": "+31299320262",
         "vhfdata": {
           "generic": {
-            "mode": "listen"
+            "mode": "listen",
+            "note": "Test"
           },
           "pleasure": {
             "mode": "listen"
