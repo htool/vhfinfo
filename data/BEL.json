@@ -2707,6 +2707,60 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "400b2ef0-f0af-4921-a14d-e0dd4ff7e3d8",
+        "name": "Zeebrugge port",
+        "callname": "Portcontrol",
+        "type": "vts",
+        "channel": "71",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "report"
+          },
+          "pleasure": {
+            "mode": "announce"
+          },
+          "cargo": {
+            "mode": "report"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.188199895376,
+              51.362395359735
+            ],
+            [
+              3.173313470325,
+              51.351508705327
+            ],
+            [
+              3.186279064394,
+              51.333630116
+            ],
+            [
+              3.225381653756,
+              51.341048215074
+            ],
+            [
+              3.218864556402,
+              51.360123948664
+            ],
+            [
+              3.188199895376,
+              51.362395359735
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
