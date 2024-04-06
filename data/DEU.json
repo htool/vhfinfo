@@ -4516,11 +4516,11 @@
       "type": "Feature",
       "properties": {
         "id": "20a72c09-84e5-451b-8a4e-d13f6ddc88e3",
-        "name": "Warnemünde Trafic",
+        "name": "Warnemünde Traffic",
         "type": "vts",
         "channel": "73",
-        "url": "https://",
-        "phone": "+",
+        "url": "https://www.wsa-ostsee.wsv.de/Webs/WSA/Ostsee/DE/6_Ueber_uns/AnfahrtAdressen/anfahrtadressen_text.html",
+        "phone": "+49 381 20671841",
         "vhfdata": {
           "generic": {
             "mode": "listen"
@@ -4531,9 +4531,11 @@
           "cargo": {
             "mode": "listen"
           }
-        }
+        },
+        "callname": "Warnemünde Traffic"
       },
       "geometry": {
+        "type": "Polygon",
         "coordinates": [
           [
             [
@@ -4621,8 +4623,7 @@
               54.295690662032
             ]
           ]
-        ],
-        "type": "Polygon"
+        ]
       }
     },
     {
