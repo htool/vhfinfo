@@ -203,12 +203,12 @@ module.exports = function (app, options) {
     }
 
 		function createPositionBox (currentPosition, size) {
-		  var options = {units: 'meters'};
+		  var boxoptions = {units: 'meters'};
       size = size / 2
-		  var pointA = turf.rhumbDestination(currentPosition, size, 0, options);
-		  var pointB = turf.rhumbDestination(currentPosition, size, 90, options);
-		  var pointC = turf.rhumbDestination(currentPosition, size, 180, options);
-		  var pointD = turf.rhumbDestination(currentPosition, size, 270, options);
+		  var pointA = turf.rhumbDestination(currentPosition, size, 0, boxoptions);
+		  var pointB = turf.rhumbDestination(currentPosition, size, 90, boxoptions);
+		  var pointC = turf.rhumbDestination(currentPosition, size, 180, boxoptions);
+		  var pointD = turf.rhumbDestination(currentPosition, size, 270, boxoptions);
 		  var bbox = turf.bbox(turf.lineString(
         [
 		    pointA.geometry.coordinates,
@@ -328,7 +328,9 @@ module.exports = function (app, options) {
         }
       })
       var pathnr = 0
-      for (let nr = 0; nr < features.length; nr++) {
+      var maxPathNr = options.pathNr || 5;
+      app.debug('maxPathNr: %d', maxPathNr)
+      for (let nr = 0; (nr < features.length && nr < maxPathNr); nr++) {
         if (options.types[features[nr].type] == true) {
           // Only selected types
           values = values.concat(objectToPath(options.path + '.' + pathnr, features[nr]))
@@ -337,7 +339,7 @@ module.exports = function (app, options) {
       }
       // Fill rest with -
 
-      for (let nr = pathnr; nr < options.pathNr; nr++) {
+      for (let nr = pathnr; nr < maxPathNr; nr++) {
         values = values.concat(objectToPath(options.path + '.' + nr, emptyFeature))
       }
       //app.debug('values: %s', JSON.stringify(values))
