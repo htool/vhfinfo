@@ -1641,7 +1641,7 @@
         "id": "86552f4a-2e31-4c87-9922-76df2981b874",
         "vhfdata": {
           "generic": {
-            "mode": "listen",
+            "mode": "announce",
             "note": "Announcements:  Borkum Radar – VHF 18 Knock Radar – VHF 20 Wybelsum Radar – VHF 21 Ems Rivier Radar – VHF 15"
           },
           "cargo": {
