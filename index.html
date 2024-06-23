@@ -1,25 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      name="viewport"
+    />
     <meta name="viewport" content="width=device-width" />
-    <meta property="og:title" content="VHF info - Maritime VHF channel information projected on a map. VTSes, locks, bridges and some marinas instantly visible."/>
-    <meta name="og:description" content="Always struggled with finding where one sector ends and the next one starts? Or having to write down information on paper to have available when you need it? Struggling to find the link to the source document for more information? VH info is here to help. On a map, but also in the form of a SignalK plugin." />
-    <meta property="og:image" content=https://vhfinfo.org/documentation/pictures/vhfinfo_promotion.png" />
-    <meta name="keywords" content="VHF, marine, icom, B&G, raymarine, marifoon, marine radio, SignalK, open source, GeoJSON">
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta
+      property="og:title"
+      content="VHF info - Maritime VHF channel information projected on a map. VTSes, locks, bridges and some marinas instantly visible."
+    />
+    <meta
+      name="og:description"
+      content="Always struggled with finding where one sector ends and the next one starts? Or having to write down information on paper to have available when you need it? Struggling to find the link to the source document for more information? VH info is here to help. On a map, but also in the form of a SignalK plugin."
+    />
+    <meta
+      property="og:image"
+      content="https://vhfinfo.org/documentation/pictures/vhfinfo_promotion.png"
+    />
+    <meta
+      name="keywords"
+      content="VHF, marine, icom, B&G, raymarine, marifoon, marine radio, SignalK, open source, GeoJSON"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
     <style>
-
-      html { height: 100% }
-      body { 
-        height: 100%; 
-        margin: 0; 
+      html {
+        height: 100%;
+      }
+      body {
+        height: 100%;
+        margin: 0;
         padding: 0;
-			  background-color: ghostwhite;
+        background-color: ghostwhite;
       }
 
       img {
@@ -34,129 +57,178 @@
         max-width: 300px;
       }
 
-			/* Add a black background color to the top navigation */
-			.logo {
+      /* Add a black background color to the top navigation */
+      .logo {
         display: block;
-			  background-color: #fff;
-			  overflow: hidden;
+        background-color: #fff;
+        overflow: hidden;
         position: absolute;
         right: 8%;
         top: 8%;
         width: 13%;
       }
-        
-			.topnav {
+
+      .topnav {
         display: block;
-			  background-color: #000;
-			  overflow: hidden;
+        background-color: #000;
+        overflow: hidden;
         width: 100%;
         font-family: "Roboto", "Helvetica Neue", "sans-serif";
-			}
-			
-			/* Style the links inside the navigation bar */
-			.topnav a {
-			  float: left;
-			  color: #f2f2f2;
-			  text-align: center;
-			  padding: 12px 14px;
-			  text-decoration: none;
-			  font-size: 0.8rem;
-			}
-			
-			/* Change the color of links on hover */
-			.topnav a:hover {
-			  background-color: #ddd;
-			  color: black;
-			}
-			
-			/* Add a color to the active/current link */
-			.topnav a.active {
-			  background-color: #555;
+      }
+
+      /* Style the links inside the navigation bar */
+      .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 12px 14px;
+        text-decoration: none;
+        font-size: 0.8rem;
+      }
+
+      /* Change the color of links on hover */
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      /* Add a color to the active/current link */
+      .topnav a.active {
+        background-color: #555;
         color: white;
       }
-      
+
       .main {
         display: block;
         position: relative;
-			  color: black;
+        color: black;
         font-family: "Roboto", "Helvetica Neue", "sans-serif";
         width: 90%;
         align: center;
         margin-left: auto;
         margin-right: auto;
       }
-
     </style>
 
     <title>VHFinfo.org</title>
   </head>
-<body>
+  <body>
+    <div class="topnav">
+      <a class="active" href="#home">Home</a>
+      <a href="./map.html">Map</a>
+      <a href="#contact">Contact</a>
+      <a href="#donate">Donate</a>
+    </div>
 
-<div class="topnav">
-  <a class="active" href="#home">Home</a>
-  <a href="./map.html">Map</a>
-  <a href="#contact">Contact</a>
-  <a href="#donate">Donate</a>
-</div>
+    <div class="main">
+      <a id="home"></a>
 
-<div class="main">
-<a id="home"></a>
+      <h1>VHFinfo.org</h1>
+      <p>
+        Ever had to lookup the VHF channel to tune into for a bridge, a lock or
+        a VTS?<br />
 
-<h1>VHFinfo.org</h1>
-<p>Ever had to lookup the VHF channel to tune into for a bridge, a lock or a VTS?<br>
+        Did you also feel the information is not easily found, especially when
+        crossing borders? VHFinfo.org is here to help.
+      </p>
 
-Did you also feel the information is not easily found, especially when crossing borders? VHFinfo.org is here to help.<p>
+      <p>
+        The goal of this initiative is to make the VHF information readily
+        available to you in a form that suits your need.<br />
 
-The goal of this initiative is to make the VHF information readily available to you in a form that suits your need.<br>
+        By storing the data behind
+        <a href="https://github.com/htool/vhfinfo">vhfinfo.org in GitHub</a>,
+        the information is open to anyone who wants to use it.<br />
+        Different frontends can be made/used to make use of the data.
+      </p>
 
-By storing the data behind <a href="https://github.com/htool/vhfinfo">vhfinfo.org in GitHub</a>, the information is open to anyone who wants to use it.<br>
-Different frontends can be made/used to make use of the data.
+      <h2>Viewing</h2>
+      <h3>Mobile website</h3>
+      One way to access the vhfinfo.org information is by using the
+      <a href="./map.html">mobile friendly online map</a>.<br />
+      Using your phone's GPS coordinates, this will allow you to see which
+      channels are nearby or even in front of you if the phone's compass can be
+      used.<br />
+      <a href="./map.html"
+        ><img src="mobile_map.png" width="300" class="center"
+      /></a>
 
-<h2>Viewing</h2>
-<h3>Mobile website</h3>
-One way to access the vhfinfo.org information is by using the <a href="./map.html">mobile friendly online map</a>.<br>
-Using your phone's GPS coordinates, this will allow you to see which channels are nearby or even in front of you if the phone's compass can be used.<br>
-<a href="./map.html"><img src="mobile_map.png" width="300" class="center"></a>
+      <h3>SignalK plugin webapp</h3>
+      Using the <a href="https://signalk.org/">SignalK</a> VHFinfo plugin you
+      can access the same information without the need for an internet
+      connection.<br />
+      Through the plugin's webapp you can use your phone to show the information
+      gatherd by the plugin, using your boat's GPS coordinates and heading.<br />
+      The plugin allows you to configure the search beam length and angle.<br />
+      <img src="mobile_signalk_webapp.png" class="center" />
 
-<h3>SignalK plugin webapp</h3>
-Using the <a href="https://signalk.org/">SignalK</a> VHFinfo plugin you can access the same information without the need for an internet connection.<br>
-Through the plugin's webapp you can use your phone to show the information gatherd by the plugin, using your boat's GPS coordinates and heading.<br>
-The plugin allows you to configure the search beam length and angle.<br>
-<img src="mobile_signalk_webapp.png" class="center">
+      <h3>SignalK plugin in combination with custom display</h3>
+      Another way to show the information is using
+      <a href="https://www.npmjs.com/package/signalk-instrument-display-plugin"
+        >another SignalK plugin</a
+      >
+      that allows you to setup an instrument panel on any (browser) display.<br /><br />
+      <img src="mobile_signalk_display.png" max-width="100%" />
 
-<h3>SignalK plugin in combination with custom display</h3>
-Another way to show the information is using <a href="https://www.npmjs.com/package/signalk-instrument-display-plugin">another SignalK plugin</a> that allows you to setup an instrument panel on any (browser) display.<br><br>
-<img src="mobile_signalk_display.png" max-width="100%">
+      <h2>Adding or editting information</h2>
 
+      To add new information to the map or edit existing information you can go
+      to the <a href="#map">map</a>.<br />
+      Lookup the area you want to contribute to and press the pencil button.<br />
 
-<h2>Adding or editting information</h2>
+      <br />
+      <a id="contact"><h2>Contact</h2></a>
+      If you have questions or comments, you can reach me at
+      contact@vhfinfo.org.
+      <br />
 
-To add new information to the map or edit existing information you can go to the <a href="#map">map</a>.<br>
-Lookup the area you want to contribute to and press the pencil button.<br>
+      <a id="donate"><h2>Donate</h2></a>
 
-<br>
-<a id="contact"><h2>Contact</h2></a>
-If you have questions or comments, you can reach me at contact@vhfinfo.org.
-<br>
+      VHFinfo.org is an privately run effort to make VHF data easily available
+      for everyone. If you appreciate the effort and want to contribute with a
+      donatation, you can do so using one of the following options:<br /><br />
+      <form action="https://www.paypal.com/donate" method="post" target="_top">
+        <input type="hidden" name="business" value="KPB9WNEF8XFBG" /><input
+          type="hidden"
+          name="no_recurring"
+          value="0"
+        /><input
+          type="hidden"
+          name="item_name"
+          value="Thank you for your support of VHFinfo.org."
+        /><input type="hidden" name="currency_code" value="EUR" /><input
+          type="image"
+          src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif"
+          border="0"
+          name="submit"
+          title="PayPal - The safer, easier way to pay online!"
+          alt="Donate with PayPal button"
+        /><img
+          alt=""
+          border="0"
+          src="https://www.paypal.com/en_NL/i/scr/pixel.gif"
+          width="1"
+          height="1"
+        />
+      </form>
+      <button
+        class="steunactie"
+        onclick="window.open('https://steunactie.nl/actie/vhfinfo-org-donatie/-16519', '_blank');"
+      >
+        Steunactie
+      </button>
 
-<a id="donate"><h2>Donate</h2></a>
+      <br />
+      <br />
+    </div>
 
-VHFinfo.org is an privately run effort to make VHF data easily available for everyone. If you appreciate the effort and want to contribute with a donatation, you can do so using one of the following options:<br><br><form action="https://www.paypal.com/donate" method="post" target="_top"><input type="hidden" name="business" value="KPB9WNEF8XFBG" /><input type="hidden" name="no_recurring" value="0" /><input type="hidden" name="item_name" value="Thank you for your support of VHFinfo.org." /><input type="hidden" name="currency_code" value="EUR" /><input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" /><img alt="" border="0" src="https://www.paypal.com/en_NL/i/scr/pixel.gif" width="1" height="1" /></form><button class="steunactie" onclick="window.open('https://steunactie.nl/actie/vhfinfo-org-donatie/-16519', '_blank');">Steunactie</button>
+    <style>
+      table td,
+      table td * {
+        vertical-align: top;
+      }
+    </style>
 
-
-<br>
-<br>
-
-</div>
-
-<style>
-  table td, table td * {
-    vertical-align: top;
-  }
-</style>
-
-<script type="text/javascript">
-
-</script>
-</body>
+    <script type="text/javascript"></script>
+  </body>
 </html>
