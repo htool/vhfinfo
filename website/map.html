@@ -1,37 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      name="viewport"
+    />
     <meta name="viewport" content="width=device-width" />
-    <meta property="og:title" content="VHF info - Maritime VHF channel information projected on a map. VTSes, locks, bridges and some marinas instantly visible."/>
-    <meta name="og:description" content="Always struggled with finding where one sector ends and the next one starts? Or having to write down information on paper to have available when you need it? Struggling to find the link to the source document for more information? VH info is here to help. On a map, but also in the form of a SignalK plugin." />
-    <meta property="og:image" content=https://vhfinfo.org/documentation/pictures/vhfinfo_promotion.png" />
-    <meta name="keywords" content="VHF, marine, icom, B&G, raymarine, marifoon, marine radio, SignalK, open source, GeoJSON">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9140576115803931" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta
+      property="og:title"
+      content="VHF info - Maritime VHF channel information projected on a map. VTSes, locks, bridges and some marinas instantly visible."
+    />
+    <meta
+      name="og:description"
+      content="Always struggled with finding where one sector ends and the next one starts? Or having to write down information on paper to have available when you need it? Struggling to find the link to the source document for more information? VH info is here to help. On a map, but also in the form of a SignalK plugin."
+    />
+    <meta
+      property="og:image"
+      content="https://vhfinfo.org/documentation/pictures/vhfinfo_promotion.png"
+    />
+    <meta
+      name="keywords"
+      content="VHF, marine, icom, B&G, raymarine, marifoon, marine radio, SignalK, open source, GeoJSON"
+    />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9140576115803931"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+      integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/js-base64@2.5.2/base64.min.js"></script>
     <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
     <script src="leaflet.ajax.min.js" type="text/javascript"></script>
     <script src="cronstrue.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js" integrity="sha512-ozq8xQKq6urvuU6jNgkfqAmT7jKN2XumbrX1JiB3TnF7tI48DPI4Gy1GXKD/V3EExgAs1V+pRO7vwtS1LHg0Gw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"
+      integrity="sha512-ozq8xQKq6urvuU6jNgkfqAmT7jKN2XumbrX1JiB3TnF7tI48DPI4Gy1GXKD/V3EExgAs1V+pRO7vwtS1LHg0Gw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/geo-coordinates-parser/bundle/geocoordsparser.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fast-json-patch/dist/fast-json-patch.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" integrity="sha512-gc3xjCmIy673V6MyOAZhIW93xhM9ei1I+gLbmFjUHIjocENRsLX/QUE1htk5q1XV2D/iie/VQ8DXI6Vu8bexvQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.EasyButton/2.4.0/easy-button.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css"
+      integrity="sha512-gc3xjCmIy673V6MyOAZhIW93xhM9ei1I+gLbmFjUHIjocENRsLX/QUE1htk5q1XV2D/iie/VQ8DXI6Vu8bexvQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.EasyButton/2.4.0/easy-button.css"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
     <style>
+      html {
+        height: 100%;
+      }
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
 
-      html { height: 100% }
-      body { height: 100%; margin: 0; padding: 0;}
-
-      
       #map {
         resize: vertical;
         height: 100%;
@@ -50,7 +108,7 @@
       .leaflet-popup-content {
         margin: 20px 10px 10px 10px;
       }
-      .mouseposition{
+      .mouseposition {
         background-color: white;
         opacity: 0.7;
         font-size: 1.7em;
@@ -84,8 +142,8 @@
         width: 100%; /* Full width */
         height: 100%; /* Full height */
         overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
       }
       .help-content {
         font-family: Helvetica, Sans-Serif;
@@ -96,11 +154,15 @@
         width: 80%; /* Could be more or less, depending on screen size */
       }
 
-      input[type=text], select, input[type=url] {
+      input[type="text"],
+      select,
+      input[type="url"] {
         border: 2px solid #ccc;
         background-color: white;
       }
-      input[type=text]:focus, select:focus, input[type=url]:focus {
+      input[type="text"]:focus,
+      select:focus,
+      input[type="url"]:focus {
         border: 2px solid #555;
       }
       .nearby {
@@ -108,7 +170,7 @@
         min-width: 400px;
         max-width: 800px;
         width: inherit;
-        border-bottom:1px solid #404040;
+        border-bottom: 1px solid #404040;
       }
       #nearby_0 {
       }
@@ -175,7 +237,9 @@
         font-size: 100%;
         font-family: Helvetica, Sans-Serif;
         border: yellow;
-        box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+        box-shadow:
+          0 6px 8px 0 rgba(0, 0, 0, 0.24),
+          0 17px 50px 0 rgba(0, 0, 0, 0.19);
       }
       .steunactie {
         border-radius: 6px;
@@ -183,1664 +247,2068 @@
         color: white;
         font-size: 110%;
       }
-      
     </style>
 
     <title>VHF info</title>
   </head>
-<body>
-  <div id="map">
-  </div>
-  <div class="compass" id="compass"></div>
-  <div id="panel">
-    <div class="nearby" id="nearby_0">
-      <div class="channel" id="channel_0"></div>
-      <div class="type" id="type_0"></div>
-      <div class="name" id="name_0"></div>
-      <div class="note" id="note_0"></div>
-      <div class="phone" id="phone_0"></div>
-      <div class="url" id="url_0"></div>
+  <body>
+    <div id="map"></div>
+    <div class="compass" id="compass"></div>
+    <div id="panel">
+      <div class="nearby" id="nearby_0">
+        <div class="channel" id="channel_0"></div>
+        <div class="type" id="type_0"></div>
+        <div class="name" id="name_0"></div>
+        <div class="note" id="note_0"></div>
+        <div class="phone" id="phone_0"></div>
+        <div class="url" id="url_0"></div>
+      </div>
+      <div class="nearby" id="nearby_1">
+        <div class="name" id="name_1"></div>
+        <div class="channel" id="channel_1"></div>
+        <div class="type" id="type_1"></div>
+        <div class="note" id="note_1"></div>
+        <div class="phone" id="phone_1"></div>
+        <div class="url" id="url_1"></div>
+      </div>
     </div>
-    <div class="nearby" id="nearby_1">
-      <div class="name" id="name_1"></div>
-      <div class="channel" id="channel_1"></div>
-      <div class="type" id="type_1"></div>
-      <div class="note" id="note_1"></div>
-      <div class="phone" id="phone_1"></div>
-      <div class="url" id="url_1"></div>
+    <style>
+      table td,
+      table td * {
+        vertical-align: top;
+      }
+      .leaflet-div-icon {
+        width: 5px;
+        height: 5px;
+        background: green;
+        border: 1px solid grey;
+      }
+      .leaflet-editing-icon {
+        width: 5px !important;
+        height: 5px !important;
+        margin-left: -5px !important;
+        margin-top: -5px !important;
+        background: green;
+        border: 1px solid grey;
+      }
+      .buttons {
+        display: inline-block;
+        margin: 2px;
+      }
+      .splitview {
+        left: 20px;
+      }
+      .follow {
+        left: 20px;
+        margin-top: 4px;
+        margin-left: -1px;
+        display: block;
+      }
+      .compassNeedle {
+        left: 20px;
+        margin-top: 2px;
+        margin-left: 0px;
+        display: block;
+      }
+      .share {
+        left: 20px;
+        margin-top: 3px;
+        margin-left: -1px;
+        display: block;
+      }
+      .upload {
+        left: 20px;
+        margin-top: 3px;
+        margin-left: -1px;
+        display: block;
+      }
+    </style>
+    <div id="helpPopup" class="helpPopup">
+      <div class="help-content">
+        <div style="text-align: right" class="close"><h1>&times;</h1></div>
+        <div id="help-content"></div>
+      </div>
     </div>
-  </div>
-<style>
-  table td, table td * {
-    vertical-align: top;
-  }
-  .leaflet-div-icon {
-    width: 5px;
-    height: 5px;
-    background: green;
-    border: 1px solid grey;
-  }
-  .leaflet-editing-icon {
-    width: 5px !important;
-    height: 5px !important;
-    margin-left: -5px !important;
-    margin-top: -5px !important;
-    background: green;
-    border: 1px solid grey;
-  }
-  .buttons {
-    display: inline-block;
-    margin: 2px;
-  }
-  .splitview {
-    left: 20px;
-  }
-  .follow {
-    left: 20px;
-    margin-top: 4px;
-    margin-left: -1px;
-    display: block;
-  }
-  .compassNeedle {
-    left: 20px;
-    margin-top: 2px;
-    margin-left: 0px;
-    display: block;
-  }
-  .share {
-    left: 20px;
-    margin-top: 3px;
-    margin-left: -1px;
-    display: block;
-  }
-  .upload {
-    left: 20px;
-    margin-top: 3px;
-    margin-left: -1px;
-    display: block;
-  }
-</style>
-<div id="helpPopup" class="helpPopup">
-  <div class="help-content">
-    <div style="text-align: right;" class="close"><h1>&times;</h1></div>
-    <div id="help-content"></div>
-  </div>
-</div>
 
-<script type="text/javascript">
+    <script type="text/javascript">
+      var countriesGeoObj;
+      var countriesGeoJSON = { type: "FeatureCollection", features: [] };
+      var countriesLoaded = [];
+      var activeCountry = "";
+      var vhfinfo;
+      var Nm12;
+      var dms = false;
+      var splitviewMode = false;
+      var followMode = false;
+      var followTimer;
+      var button;
 
+      var heading = 0;
+      var searchDistance = 5000;
+      var angle = 80;
+      var lastUpdate = 0;
+      var lastCenter = { lat: 0, lng: 0 };
+      var lastHeading = 0;
+      var compassMode = false;
+      var compassOn = false;
 
-var countriesGeoObj
-var countriesGeoJSON = {"type": "FeatureCollection", "features": [] }
-var countriesLoaded = []
-var activeCountry = ''
-var vhfinfo
-var Nm12
-var dms = false
-var splitviewMode = false
-var followMode = false
-var followTimer
-var button
+      var changedIds = {};
 
-var heading = 0 
-var searchDistance = 5000
-var angle = 80
-var lastUpdate = 0
-var lastCenter = {lat: 0, lng: 0}
-var lastHeading = 0
-var compassMode = false
-var compassOn = false
+      function sleep(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+      }
 
-var changedIds = {}
-
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-function GetURLParameter(sParam)
-{
-    var sPageURL = window.location.search.substring(1);
-    var sURLVariables = sPageURL.split('&');
-    for (var i = 0; i < sURLVariables.length; i++) 
-    {
-        var sParameterName = sURLVariables[i].split('=');
-        if (sParameterName[0] == sParam) 
-        {
+      function GetURLParameter(sParam) {
+        var sPageURL = window.location.search.substring(1);
+        var sURLVariables = sPageURL.split("&");
+        for (var i = 0; i < sURLVariables.length; i++) {
+          var sParameterName = sURLVariables[i].split("=");
+          if (sParameterName[0] == sParam) {
             return sParameterName[1];
-        }
-    }
-}
-
-var editMode = false
-if (GetURLParameter('edit') != undefined) {
-  editMode = true
-  var country = GetURLParameter('edit')
-}
-
-var mapPos = false
-if (GetURLParameter('mapPosition') != undefined) {
-  mapPos = true
-  var mapPosition = GetURLParameter('mapPosition')
-}
-
-loadCountriesBbox()
-
-console.log('editMode: %s', editMode)
-if (editMode) {
-  console.log('editMode for country %s', country)
-  var newItems = []
-}
-
-var m= L.map('map').setView([0,0], 8);
-
-var mopt = {
-    url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-    options: {
-      maxZoom: 19,
-      attribution:'<a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }
-  };
-var mq=L.tileLayer(mopt.url,mopt.options);
-mq.addTo(m);
-
-var drawnItems = new L.FeatureGroup();
-var Nm12 = new L.LayerGroup()
-// var vhfinfo = new L.LayerGroup()
-var bridgeLayer = new L.LayerGroup()
-var lockLayer = new L.LayerGroup()
-var vtsLayer = new L.LayerGroup()
-var areaLayer = new L.LayerGroup()
-var marinaLayer = new L.LayerGroup()
-var radarLayer = new L.LayerGroup()
-var changedLayer = new L.LayerGroup()
-
-//link to tiles
-var osmUrl='https://tiles.openseamap.org/seamark/{z}/{x}/{y}.png'
-// var osmUrlcolor='http://{s}.tilexxxxx.com/watercolor/{z}/{x}/{y}.jpg'
-
-//create two TileLayer
-var osm=new L.TileLayer(osmUrl,{minZoom:1,maxZoom:20});
-// var osmcolor=new L.TileLayer(osmUrlcolor,{minZoom:1,maxZoom:20});
-
-//add a layer which will be display first
-m.addLayer(osm);
-
-var googleSat = L.tileLayer('https://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
-    maxZoom: 20,
-    subdomains:['mt0','mt1','mt2','mt3']
-});
-
-var googleTerrain = L.tileLayer('https://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',{
-    maxZoom: 20,
-    subdomains:['mt0','mt1','mt2','mt3']
-});
-
-var Position = L.Control.extend({
-  options: {
-    position: 'bottomleft'
-  },
-  onAdd: function (map) {
-    var latlng = L.DomUtil.create('div', 'mouseposition');
-    latlng.tooltip = "Click to change coordinate format"
-    return latlng;
-  }
-});
-const position = new Position();
-
-var crosshairIcon = L.icon({
-  iconUrl: './crosshair.png',
-  iconSize:     [20, 20], // size of the icon
-  iconAnchor:   [10, 10], // point of the icon which will correspond to marker's location
-});
-const crosshair = new L.marker(m.getCenter(), {icon: crosshairIcon, clickable:false});
-
-var donationHtml = `<h1>Donations</h1>VHFinfo.org is a privately run effort to make VHF data easily available for everyone. If you appreciate the effort and want to contribute with a donatation, you can do so using one of the following options:<br><br><form action="https://www.paypal.com/donate" method="post" target="_top"><input type="hidden" name="business" value="KPB9WNEF8XFBG" /><input type="hidden" name="no_recurring" value="0" /><input type="hidden" name="item_name" value="Thank you for your support of VHFinfo.org." /><input type="hidden" name="currency_code" value="EUR" /><input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" /><img alt="" border="0" src="https://www.paypal.com/en_NL/i/scr/pixel.gif" width="1" height="1" /></form><button class="steunactie" onclick="window.open('https://steunactie.nl/actie/vhfinfo-org-donatie/-16519', '_blank');">Steunactie</button><br><b>`
-
-var compass = null
-
-//m.addLayer(osmcolor);
-// m.addLayer(vhfinfo);
-m.addLayer(bridgeLayer);
-m.addLayer(lockLayer);
-m.addLayer(vtsLayer);
-m.addLayer(marinaLayer);
-m.addLayer(radarLayer);
-// m.addLayer(areaLayer);
-// m.addLayer(Nm12);
-
-//add basemaps in an array
-baseMaps={"OpenSeaMap":osm, "Sattelite":googleSat, "Terrain":googleTerrain};
-
-if (editMode) {
-  m.addLayer(drawnItems);
-  setTimeout(removeUnwanted, 500)
-}
-
-var popup = L.popup();
-
-//add a control layer to switch on the both basemaps
-ControlLayer=L.control.layers(baseMaps).addTo(m);
-ControlLayer.addOverlay(Nm12, '12Nm')
-ControlLayer.addOverlay(vtsLayer, 'VTS')
-ControlLayer.addOverlay(radarLayer, 'VTS Radar')
-ControlLayer.addOverlay(lockLayer, 'Locks')
-ControlLayer.addOverlay(bridgeLayer, 'Bridges')
-ControlLayer.addOverlay(marinaLayer, 'Marinas')
-ControlLayer.addOverlay(areaLayer, 'Areas')
-if (editMode) {
-  ControlLayer.addOverlay(drawnItems, 'Newly created')
-}
-
-drawnItems.on('add',(e)=> {
-  console.log('drawnItems now selected')
-  checkLayer('add', vtsLayer)
-  checkLayer('add', radarLayer)
-  checkLayer('add', areaLayer)
-  checkLayer('add', lockLayer)
-  checkLayer('add', bridgeLayer)
-  checkLayer('add', marinaLayer)
-  checkLayer('add', Nm12)
-});
-
-drawnItems.on('remove',(e)=>{
-  console.log('drawnItems now deselected')
-  checkLayer('remove', vtsLayer)
-  checkLayer('remove', radarLayer)
-  checkLayer('remove', areaLayer)
-  checkLayer('remove', lockLayer)
-  checkLayer('remove', bridgeLayer)
-  checkLayer('remove', marinaLayer)
-  checkLayer('remove', Nm12)
-});
-
-L.DomUtil.addClass(m._container,'crosshair-cursor-enabled');
-
-async function setupButtons () {
-if (!editMode) {
-  button = L.easyButton( '<span class="edit">&#9998;</span>', function(){
-    let country = getCountryAtCoor()
-    activeCountry = country
-    if (confirm("Do you want to start editting for country " + country + "?")) {
-      let center = m.getCenter()
-      open("https://vhfinfo.org/map.html?edit=" + country + "&mapPosition=" +  center.lat.toFixed(6) + "/" + center.lng.toFixed(6) + "/" + m.getZoom(), "_blank")
-    }
-  }, 'Edit the country in the center of the map').addTo(m);
-  _fixEasyButtonSize(button);
-
-  button = L.easyButton( '<span class="splitview"><img src="splitview.png" width="25" height="25"></img></span>', function(btn, m){
-    splitviewMode = !splitviewMode
-    console.log("splitviewMode: " + splitviewMode)
-    if (splitviewMode) {
-      btn.button.style.backgroundColor = 'lightgrey';
-      crosshair.addTo(m);
-      m.addControl(position);
-      updateMousePosition(m.getCenter(m))
-      var mouseposition = document.getElementsByClassName('mouseposition')[0]
-      L.DomEvent.addListener(mouseposition, 'click', event => {
-        dms = !dms
-        updateMousePosition(m.getCenter(m))
-      })
-      document.getElementById('compass').style.opacity = '1'
-    } else {
-      btn.button.style.backgroundColor = 'white';
-      crosshair.remove();
-      m.removeControl(position);
-      if (compassMode) {
-        document.getElementById('compass').style.opacity = '0'
-        document.getElementsByClassName('compassNeedle')[0].click()
-      }
-    }
-    setOrientation()
-  }, 'Toggle the splitview and coordinates display').addTo(m);
-  _fixEasyButtonSize(button);
-
-  button = L.easyButton( '<span class="compassNeedle"><img src="compass.png" width="20" height="20"></img></span>', function(btn, m){
-    compassMode = !compassMode
-    console.log('compassMode: ' + compassMode)
-    if (compassMode) {
-      btn.button.style.backgroundColor = 'lightgrey';
-      if (compassOn == false) {
-        startCompass()
-      }
-      crosshair.remove()
-    } else {
-      crosshair.addTo(m);
-      btn.button.style.backgroundColor = 'white';
-    }
-    updateCenterGraphic()
-    if (splitviewMode) {
-      updateMousePosition(m.getCenter(m))
-    }
-  }, 'Toggle compass mode').addTo(m);
-  _fixEasyButtonSize(button);
-
-  button = L.easyButton( '<span class="follow"><img src="arrow.png" width="20" height="20"></img></span>', function(btn, m){
-    followMode = !followMode
-    console.log('followMode: ' + followMode)
-    if (followMode) {
-      btn.button.style.backgroundColor = 'lightgrey';
-      m.setZoom(13)
-      followUpdate()
-    } else {
-      btn.button.style.backgroundColor = 'white';
-      clearTimeout(followTimer)
-    }
-  }, 'Toggle the location follow mode').addTo(m);
-  _fixEasyButtonSize(button);
-
-  // Copy link
-  button = L.easyButton( '<span class="share"><img src="share.png" width="20" height="20"></img></span>', function(btn, m){
-    let center = m.getCenter()
-    url = "https://vhfinfo.org/?mapPosition=" + center.lat.toFixed(6) + "/" + center.lng.toFixed(6) + "/" + m.getZoom() 
-    copyToClipboard(url)
-    alert ('The url "' + url + '" has been copied to the clipboard for sharing')
-  }, 'Copy map location to clipboard').addTo(m);
-  _fixEasyButtonSize(button);
-
-  // Donate button
-  button = L.easyButton( '<span class="donate">D</span>', function(btn, m) {
-    var helpContent = document.getElementById("help-content")
-    helpContent.innerHTML = donationHtml
-    var helpPopup = document.getElementById("helpPopup")
-    helpPopup.style.display = "block"
-    var span = document.getElementsByClassName("close")[0];
-    span.onclick = function() {
-      helpPopup.style.display = "none";
-    }
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == helpPopup) {
-        helpPopup.style.display = "none";
-      }
-    }
-  }, 'Make a donation').addTo(m);
-  _fixEasyButtonSize(button);
-  button.button.style.backgroundColor = 'gold';
-
-} else {
-  button = L.easyButton( '<span class="upload"><img src="upload.png" width="20" height="16"></img></span>', function(btn, m){
-    if (Object.keys(changedIds).length == 0) {
-      alert('No changes were made')
-      return
-    }
-    var uploadList = "Press [Ok] to upload the following changes:\n"
-    var uploadListDetails = ""
-    for (const [id, info] of Object.entries(changedIds)) {
-      uploadList = uploadList + " - " + info.name + " ["+ info.action + "]\n"
-      uploadListDetails = uploadListDetails + " - " + info.name + " ["+ info.action + "]: " + id + "\n"
-    }
-    if (confirm(uploadList) == true) {
-      console.log(changedIds)
-      for (const [uuid, info] of Object.entries(changedIds)) {
-        console.log(info)
-        if (info.action != 'Delete') {
-          id = info.leaflet_id
-          layer = m._layers[id]
-          changedLayer.addLayer(layer)
-          changedIds[uuid].feature = changedLayer.toGeoJSON(12).features[0]
-          changedLayer.removeLayer(layer)
-        }
-      }
-      console.log(changedIds)
-      var reason = prompt("You are about to publish changes to " + country + ". Please add email (in case of questions) and a reason for change." , "your@emailaddress.com - Reason");
-      let commitResult = commitGitHub(country, changedIds, reason + "\n\n" + uploadListDetails)
-      location.reload()
-    } else {
-    }
-  }, 'Upload your changed to VHFinfo').addTo(m);
-  _fixEasyButtonSize(button);
-
-  m.addControl(position);
-}
-}
-
-setupButtons()
-
-
-button = L.easyButton( '<span class="help">&#63;</span>', function() {
-  var helpContent = document.getElementById("help-content")
-  jQuery.ajax({
-    url: 'HELP.md',
-    success: function (data) {
-      console.log('Got the data')
-      helpContent.innerHTML = markdownParser(data)
-    },
-    error: function (e) {
-      console.log(e)
-    },
-    async: false
-  });
-  var helpPopup = document.getElementById("helpPopup")
-  helpPopup.style.display = "block"
-  var span = document.getElementsByClassName("close")[0];
-  span.onclick = function() {
-    helpPopup.style.display = "none";
-  }
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-    if (event.target == helpPopup) {
-      helpPopup.style.display = "none";
-    }
-  }
-}, 'Help page with instructions on how to add features').addTo(m);
-_fixEasyButtonSize(button);
-
-function showEditPopup () {
-  var helpContent = document.getElementById("help-content")
-  jQuery.ajax({
-    url: 'EDIT.md',
-    success: function (data) {
-      console.log('Got the data')
-      helpContent.innerHTML = markdownParser(data)
-    },
-    error: function (e) {
-      console.log(e)
-    },
-    async: false
-  });
-
-  var helpPopup = document.getElementById("helpPopup")
-  helpPopup.style.display = "block"
-  var span = document.getElementsByClassName("close")[0];
-  span.onclick = function() {
-    helpPopup.style.display = "none";
-  }
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-    if (event.target == helpPopup) {
-      helpPopup.style.display = "none";
-    }
-  }
-}
-
-
-function startCompass() {
-  var orientationFailed = false
-  // Try DeviceOrientationEvent first
-  if (typeof DeviceOrientationEvent.requestPermission === 'function') {
-    DeviceOrientationEvent.requestPermission()
-    .then((response) => {
-      if (response === "granted") {
-        // console.log('DeviceOrientationEvent.requestPermission granted')
-        window.addEventListener("deviceorientation", compassHandler, true);
-        // ondeviceorientation = (event) => { compassHandler() }
-        compassOn = true
-      } else {
-        alert("Compass has to be allowed in OS");
-      }
-    })
-    .catch(() => orientationFailed = true)
-  }
-
-  // Try alternative
-  if (orientationFailed && typeof DeviceMotionEvent.requestPermission === 'function') {
-    // Handle iOS 13+ devices.
-    DeviceMotionEvent.requestPermission()
-    .then((state) => {
-      if (state === 'granted') {
-        console.log('DeviceMotionEvent.requestPermission granted')
-        window.addEventListener('devicemotion', compassHandler());
-        compassOn = true
-      } else {
-        console.error('Request to access the orientation was rejected');
-      }
-    })
-    .catch(console.error);
-  }
-} 
-
-function compassHandler(e) {
-  heading = e.webkitCompassHeading || Math.abs(e.alpha - 360);
-  console.log(heading)
-  center = m.getCenter(m)
-  if (splitviewMode) {
-    updateMousePosition(center)
-    updateCenterGraphic()
-    // Don't refresh nearby at every change
-    let pointCenter = turf.point([center.lat, center.lng])
-    let pointLastCenter = turf.point([lastCenter.lat, lastCenter.lng])
-    moveDistance = turf.distance(pointLastCenter, pointCenter, 'meters')
-    if (Date.now() - lastUpdate > 1000) {
-      lastUpdate = Date.now()
-      if ((compassOn && Math.abs(lastHeading - heading) > 5) || moveDistance > 50) {
-        lastCenter = center
-        lastHeading = heading
-        updateNearby()
-      }
-    }
-  }
-}
-
-
-if (editMode) {
-  var mouseposition = document.getElementsByClassName('mouseposition')[0]
-  L.DomEvent.addListener(mouseposition, 'click', event => {
-    dms = !dms
-    updateMousePosition(m.getCenter(m))
-  })
-}
-
-function followUpdate () {
-  if (followMode) {
-    followTimer = setTimeout(followUpdate, 5000)
-  }
-  navigator.geolocation.getCurrentPosition(geolocationSuccess, geolocationError, geoOptions)
-  updateNearby()
-}
-
-function updateNearby () {
-  let center = m.getCenter()
-  var searchPolygon = createSearchPolygon (center.lng, center.lat, heading, searchDistance, angle)
-  var closest = nearbyFeatures (center.lng, center.lat, heading, searchPolygon)
-  // console.log('Closest: ' + JSON.stringify(closest))
-  let lastKey = -1
-
-  // Order VTS, VTS radar in case of both INSIDE
-  if (closest.length > 1) {
-    if (closest[0].distance < 0 && closest[1].distance < 0) {
-      // both INSIDE
-      if (closest[0].type == 'vts radar support' && closest[1].type == 'vts') {
-        // The case we'd like to switch [0] and [1]
-        // console.log('Swapping [0] and [1]')
-        closest[0] = closest.splice(1, 1, closest[0])[0];
-      }
-    }
-  }
-      
-
-  for (const [key, feature] of Object.entries(closest)) {
-    if (typeof feature.callname != 'undefined') {
-      document.getElementById('name_' + key).innerHTML = feature.callname
-    } else {
-      document.getElementById('name_' + key).innerHTML = feature.name
-    }
-    if (typeof feature.channel != 'undefined') {
-      document.getElementById('channel_' + key).innerHTML = feature.channel.toString().replace(/[\/,]/g, " ")
-      document.getElementById('channel_' + key).style.fontSize = (7-(feature.channel.length * 0.7)) + 'em'
-    } else {
-      document.getElementById('channel_' + key).innerHTML = '-'
-    }
-
-
-    let Distance = feature.distance
-    if (Distance < 0) {
-      Distance = 'INSIDE'
-    } else {
-      Distance = Distance + 'm'
-    }
-    let featureType = feature.type.toUpperCase()
-    if (featureType == "VTS RADAR SUPPORT") {
-      featureType = "VTS RADAR"
-    }
-    let mode = ''
-    if (typeof feature.vhfdata.pleasure != 'undefined' && typeof feature.vhfdata.pleasure.mode != 'undefined') {
-      mode = feature.vhfdata.pleasure.mode
-    } else if (typeof feature.vhfdata.generic != 'undefined' && typeof feature.vhfdata.generic.mode != 'undefined') {
-      mode = feature.vhfdata.generic.mode
-    } 
-
-    featureType = featureType + " &#9656; " + mode.toUpperCase() + " &#9656; " + Distance
-    document.getElementById('type_' + key).innerHTML = featureType
-
-    if (typeof feature.vhfdata.pleasure != 'undefined' && typeof feature.vhfdata.pleasure.note != 'undefined') {
-      document.getElementById('note_' + key).innerHTML = feature.vhfdata.pleasure.note
-    } else if (typeof feature.vhfdata.generic != 'undefined' && typeof feature.vhfdata.generic.note != 'undefined') {
-      document.getElementById('note_' + key).innerHTML = feature.vhfdata.generic.note
-    } else if (typeof feature.note != 'undefined') {
-      document.getElementById('note_' + key).innerHTML = feature.note
-    } else {
-      document.getElementById('note_' + key).innerHTML = ''
-    }
-
-    if (typeof feature.vhfdata.pleasure != 'undefined' && typeof feature.vhfdata.pleasure.phone != 'undefined') {
-      document.getElementById('phone_' + key).innerHTML = '<a href="tel:' + feature.vhfdata.pleasure.phone + '" style="text-decoration:none; color: white">&#9990;</a>'
-    } else if (typeof feature.phone != 'undefined') {
-      document.getElementById('phone_' + key).innerHTML = '<a href="tel:' + feature.phone + '" style="text-decoration:none; color: white">&#9990;</a>'
-    } else {
-      document.getElementById('phone_' + key).innerHTML = ''
-    }
-
-    if (typeof feature.vhfdata.pleasure != 'undefined' && typeof feature.vhfdata.pleasure.url != 'undefined') {
-        document.getElementById('url_' + key).innerHTML = '<a href="' + feature.vhfdata.pleasure.url + '" style="text-decoration:none; color: white" target="_blank" >&#128279;</a>'
-    } else {
-      if (typeof feature.url != 'undefined') {
-        document.getElementById('url_' + key).innerHTML = '<a href="' + feature.url + '" style="text-decoration:none; color: white" target="_blank">&#128279;</a>'
-      } else {
-        document.getElementById('url_' + key).innerHTML = ''
-      }
-    }
-
-    lastKey = Number(key)
-    if (key == 1) { break }
-  }
-  for (key = lastKey + 1; key <= 1; key++) {
-    document.getElementById('name_' + key).innerHTML = '-'
-    document.getElementById('channel_' + key).innerHTML = ''
-    document.getElementById('type_' + key).innerHTML = ''
-    document.getElementById('note_' + key).innerHTML = ''
-    document.getElementById('phone_' + key).innerHTML = ''
-    document.getElementById('url_' + key).innerHTML = ''
-  }
-}
-
-function nearbyFeatures (lng, lat, heading, searchPolygon) {
-  var point = {
-    type: "Feature",
-    geometry: {
-      type: "Point",
-      coordinates: [lng, lat]
-    }
-  };
-  var closest = findNearbyFeatures ([lng, lat], heading, searchPolygon)
-  return closest;
-}
-
-
-function loadUrl (url, layerGroup, country) {
-  if (countriesLoaded.includes(url)) {
-    // console.log(country + ' already loadded')
-    return
-  }
-  console.log('Loading ' + country)
-  countriesLoaded.push(url)
-  try{
-  var l = new L.GeoJSON.AJAX(url, {
-     style: function(feature) {
-          return {
-              fillOpacity: 0.15,
-              color: "red",
-              dashArray: '3',
-              weight: 1,
-              opacity: 0.7
           }
-      },
-      onEachFeature: function(feature, layer) {
-        if (typeof feature.properties.id == 'undefined') {
-          feature.properties.id = generateUUID()
         }
-        var specific
-        switch (feature.properties.type) {
-          case 'vts':
-            specific = vtsLayer
-            break
-          case 'lock':
-            specific = lockLayer
-            break
-          case 'bridge':
-            specific = bridgeLayer
-            break
-          case 'vts radar support':
-            specific = radarLayer
-            break
-          case 'marina':
-            specific = marinaLayer
-            break
-          case 'area':
-            specific = areaLayer
-            break
-          case 'territorial':
-            specific = Nm12
-            break
-        } 
-        // console.log(feature)
-        layer.on({
-          mouseover: function(e) {
-            e.target.setStyle({
-              fillOpacity: 0.4,
-              dashArray: '',
-              weight: 2,
-              opacity: 0.2
-            });
-            if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-              e.target.bringToFront();
+      }
+
+      var editMode = false;
+      if (GetURLParameter("edit") != undefined) {
+        editMode = true;
+        var country = GetURLParameter("edit");
+      }
+
+      var mapPos = false;
+      if (GetURLParameter("mapPosition") != undefined) {
+        mapPos = true;
+        var mapPosition = GetURLParameter("mapPosition");
+      }
+
+      loadCountriesBbox();
+
+      console.log("editMode: %s", editMode);
+      if (editMode) {
+        console.log("editMode for country %s", country);
+        var newItems = [];
+      }
+
+      var m = L.map("map").setView([0, 0], 8);
+
+      var mopt = {
+        url: "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+        options: {
+          maxZoom: 19,
+          attribution:
+            '<a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        },
+      };
+      var mq = L.tileLayer(mopt.url, mopt.options);
+      mq.addTo(m);
+
+      var drawnItems = new L.FeatureGroup();
+      var Nm12 = new L.LayerGroup();
+      // var vhfinfo = new L.LayerGroup()
+      var bridgeLayer = new L.LayerGroup();
+      var lockLayer = new L.LayerGroup();
+      var vtsLayer = new L.LayerGroup();
+      var areaLayer = new L.LayerGroup();
+      var marinaLayer = new L.LayerGroup();
+      var radarLayer = new L.LayerGroup();
+      var changedLayer = new L.LayerGroup();
+
+      //link to tiles
+      var osmUrl = "https://tiles.openseamap.org/seamark/{z}/{x}/{y}.png";
+      // var osmUrlcolor='http://{s}.tilexxxxx.com/watercolor/{z}/{x}/{y}.jpg'
+
+      //create two TileLayer
+      var osm = new L.TileLayer(osmUrl, { minZoom: 1, maxZoom: 20 });
+      // var osmcolor=new L.TileLayer(osmUrlcolor,{minZoom:1,maxZoom:20});
+
+      //add a layer which will be display first
+      m.addLayer(osm);
+
+      var googleSat = L.tileLayer(
+        "https://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}",
+        {
+          maxZoom: 20,
+          subdomains: ["mt0", "mt1", "mt2", "mt3"],
+        },
+      );
+
+      var googleTerrain = L.tileLayer(
+        "https://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}",
+        {
+          maxZoom: 20,
+          subdomains: ["mt0", "mt1", "mt2", "mt3"],
+        },
+      );
+
+      var Position = L.Control.extend({
+        options: {
+          position: "bottomleft",
+        },
+        onAdd: function (map) {
+          var latlng = L.DomUtil.create("div", "mouseposition");
+          latlng.tooltip = "Click to change coordinate format";
+          return latlng;
+        },
+      });
+      const position = new Position();
+
+      var crosshairIcon = L.icon({
+        iconUrl: "./crosshair.png",
+        iconSize: [20, 20], // size of the icon
+        iconAnchor: [10, 10], // point of the icon which will correspond to marker's location
+      });
+      const crosshair = new L.marker(m.getCenter(), {
+        icon: crosshairIcon,
+        clickable: false,
+      });
+
+      var donationHtml = `<h1>Donations</h1>VHFinfo.org is a privately run effort to make VHF data easily available for everyone. If you appreciate the effort and want to contribute with a donatation, you can do so using one of the following options:<br><br><form action="https://www.paypal.com/donate" method="post" target="_top"><input type="hidden" name="business" value="KPB9WNEF8XFBG" /><input type="hidden" name="no_recurring" value="0" /><input type="hidden" name="item_name" value="Thank you for your support of VHFinfo.org." /><input type="hidden" name="currency_code" value="EUR" /><input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" /><img alt="" border="0" src="https://www.paypal.com/en_NL/i/scr/pixel.gif" width="1" height="1" /></form><button class="steunactie" onclick="window.open('https://steunactie.nl/actie/vhfinfo-org-donatie/-16519', '_blank');">Steunactie</button><br><b>`;
+
+      var compass = null;
+
+      //m.addLayer(osmcolor);
+      // m.addLayer(vhfinfo);
+      m.addLayer(bridgeLayer);
+      m.addLayer(lockLayer);
+      m.addLayer(vtsLayer);
+      m.addLayer(marinaLayer);
+      m.addLayer(radarLayer);
+      // m.addLayer(areaLayer);
+      // m.addLayer(Nm12);
+
+      //add basemaps in an array
+      baseMaps = {
+        OpenSeaMap: osm,
+        Sattelite: googleSat,
+        Terrain: googleTerrain,
+      };
+
+      if (editMode) {
+        m.addLayer(drawnItems);
+        setTimeout(removeUnwanted, 500);
+      }
+
+      var popup = L.popup();
+
+      //add a control layer to switch on the both basemaps
+      ControlLayer = L.control.layers(baseMaps).addTo(m);
+      ControlLayer.addOverlay(Nm12, "12Nm");
+      ControlLayer.addOverlay(vtsLayer, "VTS");
+      ControlLayer.addOverlay(radarLayer, "VTS Radar");
+      ControlLayer.addOverlay(lockLayer, "Locks");
+      ControlLayer.addOverlay(bridgeLayer, "Bridges");
+      ControlLayer.addOverlay(marinaLayer, "Marinas");
+      ControlLayer.addOverlay(areaLayer, "Areas");
+      if (editMode) {
+        ControlLayer.addOverlay(drawnItems, "Newly created");
+      }
+
+      drawnItems.on("add", (e) => {
+        console.log("drawnItems now selected");
+        checkLayer("add", vtsLayer);
+        checkLayer("add", radarLayer);
+        checkLayer("add", areaLayer);
+        checkLayer("add", lockLayer);
+        checkLayer("add", bridgeLayer);
+        checkLayer("add", marinaLayer);
+        checkLayer("add", Nm12);
+      });
+
+      drawnItems.on("remove", (e) => {
+        console.log("drawnItems now deselected");
+        checkLayer("remove", vtsLayer);
+        checkLayer("remove", radarLayer);
+        checkLayer("remove", areaLayer);
+        checkLayer("remove", lockLayer);
+        checkLayer("remove", bridgeLayer);
+        checkLayer("remove", marinaLayer);
+        checkLayer("remove", Nm12);
+      });
+
+      L.DomUtil.addClass(m._container, "crosshair-cursor-enabled");
+
+      async function setupButtons() {
+        if (!editMode) {
+          button = L.easyButton(
+            '<span class="edit">&#9998;</span>',
+            function () {
+              let country = getCountryAtCoor();
+              activeCountry = country;
+              if (
+                confirm(
+                  "Do you want to start editting for country " + country + "?",
+                )
+              ) {
+                let center = m.getCenter();
+                open(
+                  "https://vhfinfo.org/map.html?edit=" +
+                    country +
+                    "&mapPosition=" +
+                    center.lat.toFixed(6) +
+                    "/" +
+                    center.lng.toFixed(6) +
+                    "/" +
+                    m.getZoom(),
+                  "_blank",
+                );
+              }
+            },
+            "Edit the country in the center of the map",
+          ).addTo(m);
+          _fixEasyButtonSize(button);
+
+          button = L.easyButton(
+            '<span class="splitview"><img src="splitview.png" width="25" height="25"></img></span>',
+            function (btn, m) {
+              splitviewMode = !splitviewMode;
+              console.log("splitviewMode: " + splitviewMode);
+              if (splitviewMode) {
+                btn.button.style.backgroundColor = "lightgrey";
+                crosshair.addTo(m);
+                m.addControl(position);
+                updateMousePosition(m.getCenter(m));
+                var mouseposition =
+                  document.getElementsByClassName("mouseposition")[0];
+                L.DomEvent.addListener(mouseposition, "click", (event) => {
+                  dms = !dms;
+                  updateMousePosition(m.getCenter(m));
+                });
+                document.getElementById("compass").style.opacity = "1";
+              } else {
+                btn.button.style.backgroundColor = "white";
+                crosshair.remove();
+                m.removeControl(position);
+                if (compassMode) {
+                  document.getElementById("compass").style.opacity = "0";
+                  document.getElementsByClassName("compassNeedle")[0].click();
+                }
+              }
+              setOrientation();
+            },
+            "Toggle the splitview and coordinates display",
+          ).addTo(m);
+          _fixEasyButtonSize(button);
+
+          button = L.easyButton(
+            '<span class="compassNeedle"><img src="compass.png" width="20" height="20"></img></span>',
+            function (btn, m) {
+              compassMode = !compassMode;
+              console.log("compassMode: " + compassMode);
+              if (compassMode) {
+                btn.button.style.backgroundColor = "lightgrey";
+                if (compassOn == false) {
+                  startCompass();
+                }
+                crosshair.remove();
+              } else {
+                crosshair.addTo(m);
+                btn.button.style.backgroundColor = "white";
+              }
+              updateCenterGraphic();
+              if (splitviewMode) {
+                updateMousePosition(m.getCenter(m));
+              }
+            },
+            "Toggle compass mode",
+          ).addTo(m);
+          _fixEasyButtonSize(button);
+
+          button = L.easyButton(
+            '<span class="follow"><img src="arrow.png" width="20" height="20"></img></span>',
+            function (btn, m) {
+              followMode = !followMode;
+              console.log("followMode: " + followMode);
+              if (followMode) {
+                btn.button.style.backgroundColor = "lightgrey";
+                m.setZoom(13);
+                followUpdate();
+              } else {
+                btn.button.style.backgroundColor = "white";
+                clearTimeout(followTimer);
+              }
+            },
+            "Toggle the location follow mode",
+          ).addTo(m);
+          _fixEasyButtonSize(button);
+
+          // Copy link
+          button = L.easyButton(
+            '<span class="share"><img src="share.png" width="20" height="20"></img></span>',
+            function (btn, m) {
+              let center = m.getCenter();
+              url =
+                "https://vhfinfo.org/?mapPosition=" +
+                center.lat.toFixed(6) +
+                "/" +
+                center.lng.toFixed(6) +
+                "/" +
+                m.getZoom();
+              copyToClipboard(url);
+              alert(
+                'The url "' +
+                  url +
+                  '" has been copied to the clipboard for sharing',
+              );
+            },
+            "Copy map location to clipboard",
+          ).addTo(m);
+          _fixEasyButtonSize(button);
+
+          // Donate button
+          button = L.easyButton(
+            '<span class="donate">D</span>',
+            function (btn, m) {
+              var helpContent = document.getElementById("help-content");
+              helpContent.innerHTML = donationHtml;
+              var helpPopup = document.getElementById("helpPopup");
+              helpPopup.style.display = "block";
+              var span = document.getElementsByClassName("close")[0];
+              span.onclick = function () {
+                helpPopup.style.display = "none";
+              };
+              // When the user clicks anywhere outside of the modal, close it
+              window.onclick = function (event) {
+                if (event.target == helpPopup) {
+                  helpPopup.style.display = "none";
+                }
+              };
+            },
+            "Make a donation",
+          ).addTo(m);
+          _fixEasyButtonSize(button);
+          button.button.style.backgroundColor = "gold";
+        } else {
+          button = L.easyButton(
+            '<span class="upload"><img src="upload.png" width="20" height="16"></img></span>',
+            function (btn, m) {
+              if (Object.keys(changedIds).length == 0) {
+                alert("No changes were made");
+                return;
+              }
+              var uploadList = "Press [Ok] to upload the following changes:\n";
+              var uploadListDetails = "";
+              for (const [id, info] of Object.entries(changedIds)) {
+                uploadList =
+                  uploadList + " - " + info.name + " [" + info.action + "]\n";
+                uploadListDetails =
+                  uploadListDetails +
+                  " - " +
+                  info.name +
+                  " [" +
+                  info.action +
+                  "]: " +
+                  id +
+                  "\n";
+              }
+              if (confirm(uploadList) == true) {
+                console.log(changedIds);
+                for (const [uuid, info] of Object.entries(changedIds)) {
+                  console.log(info);
+                  if (info.action != "Delete") {
+                    id = info.leaflet_id;
+                    layer = m._layers[id];
+                    changedLayer.addLayer(layer);
+                    changedIds[uuid].feature =
+                      changedLayer.toGeoJSON(12).features[0];
+                    changedLayer.removeLayer(layer);
+                  }
+                }
+                console.log(changedIds);
+                var reason = prompt(
+                  "You are about to publish changes to " +
+                    country +
+                    ". Please add email (in case of questions) and a reason for change.",
+                  "your@emailaddress.com - Reason",
+                );
+                let commitResult = commitGitHub(
+                  country,
+                  changedIds,
+                  reason + "\n\n" + uploadListDetails,
+                );
+                location.reload();
+              } else {
+              }
+            },
+            "Upload your changed to VHFinfo",
+          ).addTo(m);
+          _fixEasyButtonSize(button);
+
+          m.addControl(position);
+        }
+      }
+
+      setupButtons();
+
+      button = L.easyButton(
+        '<span class="help">&#63;</span>',
+        function () {
+          var helpContent = document.getElementById("help-content");
+          jQuery.ajax({
+            url: "HELP.md",
+            success: function (data) {
+              console.log("Got the data");
+              helpContent.innerHTML = markdownParser(data);
+            },
+            error: function (e) {
+              console.log(e);
+            },
+            async: false,
+          });
+          var helpPopup = document.getElementById("helpPopup");
+          helpPopup.style.display = "block";
+          var span = document.getElementsByClassName("close")[0];
+          span.onclick = function () {
+            helpPopup.style.display = "none";
+          };
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function (event) {
+            if (event.target == helpPopup) {
+              helpPopup.style.display = "none";
             }
+          };
+        },
+        "Help page with instructions on how to add features",
+      ).addTo(m);
+      _fixEasyButtonSize(button);
+
+      function showEditPopup() {
+        var helpContent = document.getElementById("help-content");
+        jQuery.ajax({
+          url: "EDIT.md",
+          success: function (data) {
+            console.log("Got the data");
+            helpContent.innerHTML = markdownParser(data);
           },
-          mouseout: function(e) {
-            l.resetStyle(e.target);
+          error: function (e) {
+            console.log(e);
           },
-          click: function(e) {
-            if (editMode) {
-              editPopup(l, e.target.feature, this._leaflet_id)
+          async: false,
+        });
+
+        var helpPopup = document.getElementById("helpPopup");
+        helpPopup.style.display = "block";
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function () {
+          helpPopup.style.display = "none";
+        };
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+          if (event.target == helpPopup) {
+            helpPopup.style.display = "none";
+          }
+        };
+      }
+
+      function startCompass() {
+        var orientationFailed = false;
+        // Try DeviceOrientationEvent first
+        if (typeof DeviceOrientationEvent.requestPermission === "function") {
+          DeviceOrientationEvent.requestPermission()
+            .then((response) => {
+              if (response === "granted") {
+                // console.log('DeviceOrientationEvent.requestPermission granted')
+                window.addEventListener(
+                  "deviceorientation",
+                  compassHandler,
+                  true,
+                );
+                // ondeviceorientation = (event) => { compassHandler() }
+                compassOn = true;
+              } else {
+                alert("Compass has to be allowed in OS");
+              }
+            })
+            .catch(() => (orientationFailed = true));
+        }
+
+        // Try alternative
+        if (
+          orientationFailed &&
+          typeof DeviceMotionEvent.requestPermission === "function"
+        ) {
+          // Handle iOS 13+ devices.
+          DeviceMotionEvent.requestPermission()
+            .then((state) => {
+              if (state === "granted") {
+                console.log("DeviceMotionEvent.requestPermission granted");
+                window.addEventListener("devicemotion", compassHandler());
+                compassOn = true;
+              } else {
+                console.error("Request to access the orientation was rejected");
+              }
+            })
+            .catch(console.error);
+        }
+      }
+
+      function compassHandler(e) {
+        heading = e.webkitCompassHeading || Math.abs(e.alpha - 360);
+        console.log(heading);
+        center = m.getCenter(m);
+        if (splitviewMode) {
+          updateMousePosition(center);
+          updateCenterGraphic();
+          // Don't refresh nearby at every change
+          let pointCenter = turf.point([center.lat, center.lng]);
+          let pointLastCenter = turf.point([lastCenter.lat, lastCenter.lng]);
+          moveDistance = turf.distance(pointLastCenter, pointCenter, "meters");
+          if (Date.now() - lastUpdate > 1000) {
+            lastUpdate = Date.now();
+            if (
+              (compassOn && Math.abs(lastHeading - heading) > 5) ||
+              moveDistance > 50
+            ) {
+              lastCenter = center;
+              lastHeading = heading;
+              updateNearby();
+            }
+          }
+        }
+      }
+
+      if (editMode) {
+        var mouseposition = document.getElementsByClassName("mouseposition")[0];
+        L.DomEvent.addListener(mouseposition, "click", (event) => {
+          dms = !dms;
+          updateMousePosition(m.getCenter(m));
+        });
+      }
+
+      function followUpdate() {
+        if (followMode) {
+          followTimer = setTimeout(followUpdate, 5000);
+        }
+        navigator.geolocation.getCurrentPosition(
+          geolocationSuccess,
+          geolocationError,
+          geoOptions,
+        );
+        updateNearby();
+      }
+
+      function updateNearby() {
+        let center = m.getCenter();
+        var searchPolygon = createSearchPolygon(
+          center.lng,
+          center.lat,
+          heading,
+          searchDistance,
+          angle,
+        );
+        var closest = nearbyFeatures(
+          center.lng,
+          center.lat,
+          heading,
+          searchPolygon,
+        );
+        // console.log('Closest: ' + JSON.stringify(closest))
+        let lastKey = -1;
+
+        // Order VTS, VTS radar in case of both INSIDE
+        if (closest.length > 1) {
+          if (closest[0].distance < 0 && closest[1].distance < 0) {
+            // both INSIDE
+            if (
+              closest[0].type == "vts radar support" &&
+              closest[1].type == "vts"
+            ) {
+              // The case we'd like to switch [0] and [1]
+              // console.log('Swapping [0] and [1]')
+              closest[0] = closest.splice(1, 1, closest[0])[0];
+            }
+          }
+        }
+
+        for (const [key, feature] of Object.entries(closest)) {
+          if (typeof feature.callname != "undefined") {
+            document.getElementById("name_" + key).innerHTML = feature.callname;
+          } else {
+            document.getElementById("name_" + key).innerHTML = feature.name;
+          }
+          if (typeof feature.channel != "undefined") {
+            document.getElementById("channel_" + key).innerHTML =
+              feature.channel.toString().replace(/[\/,]/g, " ");
+            document.getElementById("channel_" + key).style.fontSize =
+              7 - feature.channel.length * 0.7 + "em";
+          } else {
+            document.getElementById("channel_" + key).innerHTML = "-";
+          }
+
+          let Distance = feature.distance;
+          if (Distance < 0) {
+            Distance = "INSIDE";
+          } else {
+            Distance = Distance + "m";
+          }
+          let featureType = feature.type.toUpperCase();
+          if (featureType == "VTS RADAR SUPPORT") {
+            featureType = "VTS RADAR";
+          }
+          let mode = "";
+          if (
+            typeof feature.vhfdata.pleasure != "undefined" &&
+            typeof feature.vhfdata.pleasure.mode != "undefined"
+          ) {
+            mode = feature.vhfdata.pleasure.mode;
+          } else if (
+            typeof feature.vhfdata.generic != "undefined" &&
+            typeof feature.vhfdata.generic.mode != "undefined"
+          ) {
+            mode = feature.vhfdata.generic.mode;
+          }
+
+          featureType =
+            featureType +
+            " &#9656; " +
+            mode.toUpperCase() +
+            " &#9656; " +
+            Distance;
+          document.getElementById("type_" + key).innerHTML = featureType;
+
+          if (
+            typeof feature.vhfdata.pleasure != "undefined" &&
+            typeof feature.vhfdata.pleasure.note != "undefined"
+          ) {
+            document.getElementById("note_" + key).innerHTML =
+              feature.vhfdata.pleasure.note;
+          } else if (
+            typeof feature.vhfdata.generic != "undefined" &&
+            typeof feature.vhfdata.generic.note != "undefined"
+          ) {
+            document.getElementById("note_" + key).innerHTML =
+              feature.vhfdata.generic.note;
+          } else if (typeof feature.note != "undefined") {
+            document.getElementById("note_" + key).innerHTML = feature.note;
+          } else {
+            document.getElementById("note_" + key).innerHTML = "";
+          }
+
+          if (
+            typeof feature.vhfdata.pleasure != "undefined" &&
+            typeof feature.vhfdata.pleasure.phone != "undefined"
+          ) {
+            document.getElementById("phone_" + key).innerHTML =
+              '<a href="tel:' +
+              feature.vhfdata.pleasure.phone +
+              '" style="text-decoration:none; color: white">&#9990;</a>';
+          } else if (typeof feature.phone != "undefined") {
+            document.getElementById("phone_" + key).innerHTML =
+              '<a href="tel:' +
+              feature.phone +
+              '" style="text-decoration:none; color: white">&#9990;</a>';
+          } else {
+            document.getElementById("phone_" + key).innerHTML = "";
+          }
+
+          if (
+            typeof feature.vhfdata.pleasure != "undefined" &&
+            typeof feature.vhfdata.pleasure.url != "undefined"
+          ) {
+            document.getElementById("url_" + key).innerHTML =
+              '<a href="' +
+              feature.vhfdata.pleasure.url +
+              '" style="text-decoration:none; color: white" target="_blank" >&#128279;</a>';
+          } else {
+            if (typeof feature.url != "undefined") {
+              document.getElementById("url_" + key).innerHTML =
+                '<a href="' +
+                feature.url +
+                '" style="text-decoration:none; color: white" target="_blank">&#128279;</a>';
             } else {
-              showInfo(e.target.feature, l, country);
+              document.getElementById("url_" + key).innerHTML = "";
             }
+          }
+
+          lastKey = Number(key);
+          if (key == 1) {
+            break;
+          }
+        }
+        for (key = lastKey + 1; key <= 1; key++) {
+          document.getElementById("name_" + key).innerHTML = "-";
+          document.getElementById("channel_" + key).innerHTML = "";
+          document.getElementById("type_" + key).innerHTML = "";
+          document.getElementById("note_" + key).innerHTML = "";
+          document.getElementById("phone_" + key).innerHTML = "";
+          document.getElementById("url_" + key).innerHTML = "";
+        }
+      }
+
+      function nearbyFeatures(lng, lat, heading, searchPolygon) {
+        var point = {
+          type: "Feature",
+          geometry: {
+            type: "Point",
+            coordinates: [lng, lat],
           },
-          contextmenu: function(e) {
-            l.bringToBack()
+        };
+        var closest = findNearbyFeatures([lng, lat], heading, searchPolygon);
+        return closest;
+      }
+
+      function loadUrl(url, layerGroup, country) {
+        if (countriesLoaded.includes(url)) {
+          // console.log(country + ' already loadded')
+          return;
+        }
+        console.log("Loading " + country);
+        countriesLoaded.push(url);
+        try {
+          var l = new L.GeoJSON.AJAX(url, {
+            style: function (feature) {
+              return {
+                fillOpacity: 0.15,
+                color: "red",
+                dashArray: "3",
+                weight: 1,
+                opacity: 0.7,
+              };
+            },
+            onEachFeature: function (feature, layer) {
+              if (typeof feature.properties.id == "undefined") {
+                feature.properties.id = generateUUID();
+              }
+              var specific;
+              switch (feature.properties.type) {
+                case "vts":
+                  specific = vtsLayer;
+                  break;
+                case "lock":
+                  specific = lockLayer;
+                  break;
+                case "bridge":
+                  specific = bridgeLayer;
+                  break;
+                case "vts radar support":
+                  specific = radarLayer;
+                  break;
+                case "marina":
+                  specific = marinaLayer;
+                  break;
+                case "area":
+                  specific = areaLayer;
+                  break;
+                case "territorial":
+                  specific = Nm12;
+                  break;
+              }
+              // console.log(feature)
+              layer.on({
+                mouseover: function (e) {
+                  e.target.setStyle({
+                    fillOpacity: 0.4,
+                    dashArray: "",
+                    weight: 2,
+                    opacity: 0.2,
+                  });
+                  if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+                    e.target.bringToFront();
+                  }
+                },
+                mouseout: function (e) {
+                  l.resetStyle(e.target);
+                },
+                click: function (e) {
+                  if (editMode) {
+                    editPopup(l, e.target.feature, this._leaflet_id);
+                  } else {
+                    showInfo(e.target.feature, l, country);
+                  }
+                },
+                contextmenu: function (e) {
+                  l.bringToBack();
+                },
+              });
+              if (editMode) {
+                drawnItems.addLayer(layer);
+              }
+              specific.addLayer(layer);
+            },
+          });
+        } catch (e) {
+          console.log("Loading did not work");
+        }
+      }
+
+      if (editMode) {
+        m.addEventListener("mousemove", (event) => {
+          var lat = Math.round(event.latlng.lat * 100000) / 100000;
+          var lng = Math.round(event.latlng.lng * 100000) / 100000;
+          updateMousePosition({ lat: lat, lng: lng });
+        });
+      } else {
+        m.on("move", function () {
+          if (splitviewMode) {
+            let center = m.getCenter();
+            updateMousePosition(center);
+            updateCenterGraphic();
           }
         });
+        m.on("moveend", function () {
+          if (splitviewMode) {
+            let center = m.getCenter();
+            activeCountry = getCountryAtCoor(center);
+            updateMousePosition(center);
+            updateNearby();
+          }
+        });
+      }
+
+      function updateCenterGraphic() {
+        if (compassMode) {
+          // Rotate compass
+          let center = m.latLngToContainerPoint(m.getCenter());
+          document.getElementById("compass").style.left = center.x - 50 + "px";
+          document.getElementById("compass").style.top = center.y - 55 + "px";
+          document.getElementById("compass").style.transform =
+            "rotate(" + heading + "deg)";
+          document.getElementById("compass").style.opacity = "1";
+          document.getElementById("compass").style.zIndex = "1000";
+        } else {
+          document.getElementById("compass").style.opacity = "0";
+          document.getElementById("compass").style.zIndex = "-100";
+          crosshair.setLatLng(m.getCenter());
+        }
+      }
+
+      function updateMousePosition(latlng) {
+        if (dms) {
+          lat = convertToDm(latlng.lat, false);
+          lng = convertToDm(latlng.lng, true);
+        } else {
+          lat = convertToDms(latlng.lat, false);
+          lng = convertToDms(latlng.lng, true);
+        }
+        var coor = `${lat} ${lng} `;
+        if (compassMode) {
+          coor = coor + heading.toFixed(0) + "&#176;";
+        }
+        if (splitviewMode) {
+          country = activeCountry;
+          if (country == null) {
+            country = "INTL";
+          }
+        }
+        document.getElementsByClassName("mouseposition")[0].innerHTML =
+          `${country} ${coor}`;
+      }
+
+      function convertToDms(dd, isLng) {
+        var dir = dd < 0 ? (isLng ? "W" : "S") : isLng ? "E" : "N";
+        var absDd = Math.abs(dd);
+        var deg = absDd | 0;
+        var frac = absDd - deg;
+        var min = (frac * 60) | 0;
+        var sec = (frac * 3600 - min * 60) | 0;
+        // Round it to 2 decimal points.
+        sec = (Math.round(sec * 100) / 100) | 0;
+        var dec = ((frac * 3600 - min * 60 - sec) * 100) | 0;
+        return (
+          dir +
+          " " +
+          String(deg).padStart(2, " ") +
+          "°" +
+          String(min).padStart(2, "0") +
+          "'" +
+          String(sec).padStart(2, "0") +
+          "." +
+          String(dec).padStart(2, "0") +
+          '"'
+        );
+      }
+
+      function convertToDm(dd, isLng) {
+        var dir = dd < 0 ? (isLng ? "W" : "S") : isLng ? "E" : "N";
+        var absDd = Math.abs(dd);
+        var deg = absDd | 0;
+        var frac = absDd - deg;
+        var min = (frac * 60) | 0;
+        var dec = ((frac * 60 - min) * 1000) | 0;
+
+        return (
+          dir +
+          " " +
+          String(deg).padStart(2, " ") +
+          "°" +
+          String(min).padStart(2, "0") +
+          "." +
+          String(dec).padStart(3, "0")
+        );
+      }
+
+      function showInfo(f, layer, country) {
+        // console.log(f)
+        // console.log(layer)
+
+        let p = f.properties;
+
+        var html =
+          '<table><tr><td colspan="2"><b>' +
+          "[" +
+          p.type.toUpperCase() +
+          "] " +
+          p.name +
+          "</b></td></tr>";
+        if (typeof p.callname != "undefined") {
+          html =
+            html +
+            "<tr><td>Call&nbsp;sign</td><td>" +
+            p.callname +
+            "</td></tr>";
+        }
+        html =
+          html +
+          "<tr><td>VHF</td><td>" +
+          p.channel +
+          " (" +
+          p.vhfdata.generic.mode +
+          ")</td></tr>";
+
+        if (typeof p.url != "undefined") {
+          html =
+            html +
+            '<tr><td>Info</td><td><a href="' +
+            p.url +
+            '" target="_blank">link</a></td></tr>';
+        }
+        if (typeof p.phone != "undefined") {
+          html =
+            html +
+            '<tr><td>Phone</td><td><a href="tel:' +
+            p.phone +
+            '">' +
+            p.phone +
+            "</a></td></tr>";
+        }
+        if (typeof p.update != "undefined" && p.update != "") {
+          var update;
+          try {
+            update = cronstrue.toString(p.update + " * * *");
+          } catch {
+            update = p.update;
+          }
+          html =
+            html + "<tr><td>Update schedule</td><td>" + update + "</td></tr>";
+        }
+
+        html = html + addHTML(p);
+        html = html + addHTML("Generic", p.vhfdata.generic);
+        html = html + addHTML("Pleasure", p.vhfdata.pleasure);
+        html = html + addHTML("Emergency", p.vhfdata.emergency);
+        let center = m.getCenter();
+        let editUrl =
+          "https://vhfinfo.org/map.html?edit=" +
+          country +
+          "&mapPosition=" +
+          center.lat.toFixed(6) +
+          "/" +
+          center.lng.toFixed(6) +
+          "/" +
+          m.getZoom();
+        html =
+          html +
+          '<td></td><td style="text-align: right;"><a href="' +
+          editUrl +
+          '" target="_blank" style="text-decoration: none;">Edit</a></td>';
+        html = html + "</table>";
+
+        layer.bindPopup(html).openPopup();
+        layer.addTo(m);
+      }
+
+      function addHTML(title, json) {
+        var h = "";
+        if (typeof json != "undefined") {
+          if (typeof json.note != "undefined") {
+            h = h + "<tr><td>Note</td><td>" + json.note + "</td></tr>";
+          }
+          if (typeof json.phone != "undefined") {
+            h =
+              h +
+              '<tr><td>Phone</td><td><a href="tel:' +
+              json.phone +
+              '">' +
+              json.phone +
+              "</a></td></tr>";
+          }
+          if (typeof json.url != "undefined") {
+            h =
+              h +
+              '<tr><td>Info</td><td><a href="' +
+              json.url +
+              '" target="_blank">link</a></td></tr>';
+          }
+          if (h.length > 0) {
+            h = '<tr><td colspan="2"><b>' + title + "</td></b></tr>" + h;
+          }
+          return h;
+        } else {
+          return "";
+        }
+      }
+
+      function checkLayer(addRemove, l) {
+        switch (addRemove) {
+          case "add":
+            if (m.hasLayer(l)) {
+              // console.log(l + ' is active')
+              m.addLayer(l);
+            } else {
+              // console.log(l + ' is inactive')
+              m.addLayer(l);
+              m.removeLayer(l);
+            }
+            updateNearby();
+            break;
+          case "remove":
+            if (m.hasLayer(l)) {
+              // console.log(l + ' is active')
+              m.removeLayer(l);
+              m.addLayer(l);
+            } else {
+              // console.log(l + ' is inactive')
+              m.removeLayer(l);
+            }
+            updateNearby();
+            break;
+        }
+      }
+
+      function geolocationSuccess(position) {
+        latit = position.coords.latitude;
+        longit = position.coords.longitude;
+        // move the map to have the location in its center
+        loadCountryOnCoordiate([latit, longit]);
+        m.panTo(new L.LatLng(latit, longit));
+      }
+
+      function geolocationError() {
+        m.setView([45.0, 10.0], 5);
+      }
+
+      if (mapPos) {
+        // console.log(mapPosition)
+        const [lat, lon, zoom] = mapPosition.split("/");
+        // console.log('lat: ' + lat + '  lon: ' + lon + '  zoom: ' + zoom)
+        m.panTo(new L.LatLng(lat, lon));
+        m.setZoom(zoom);
+        if (!editMode) {
+          loadCountryOnCoordiate([lat, lon]);
+        }
+      }
+
+      if (!editMode) {
+        var geoOptions = {
+          enableHighAccuracy: true,
+          timeout: 5000,
+          maximumAge: 0,
+        };
+        if (!mapPos && navigator.geolocation) {
+          console.log("Checking browser location");
+          navigator.geolocation.getCurrentPosition(
+            geolocationSuccess,
+            geolocationError,
+            geoOptions,
+          );
+        }
+      } else {
+        if (!mapPos) {
+          let coor = countriesGeoObj[country];
+          let lon = coor.ne.lon - (coor.ne.lon - coor.sw.lon) / 2;
+          let lat = coor.ne.lat - (coor.ne.lat - coor.sw.lat) / 2;
+          m.panTo(new L.LatLng(lat, lon));
+          let coordinates = [
+            [coor.ne.lon, coor.ne.lat],
+            [coor.sw.lon, coor.sw.lat],
+          ];
+          let polygon = L.polygon(coordinates);
+          let bounds = polygon.getBounds();
+          let southWest = bounds.getSouthWest();
+          let northEast = bounds.getNorthEast();
+          let cSouthWest = L.latLng(southWest.lng, southWest.lat);
+          let cNortEast = L.latLng(northEast.lng, northEast.lat);
+          let newBounds = L.latLngBounds(cSouthWest, cNortEast);
+          m.fitBounds(newBounds);
+        }
+        loadUrl(
+          "https://raw.githubusercontent.com/htool/vhfinfo/main/data/" +
+            country +
+            ".json",
+          vhfinfo,
+          country,
+        );
+        loadUrl(
+          "https://raw.githubusercontent.com/htool/vhfinfo/main/data/" +
+            country +
+            "_12Nm.json",
+          Nm12,
+          country,
+        );
+      }
+
+      if (editMode) {
+        m.addControl(
+          new L.Control.Draw({
+            draw: {
+              polygon: {
+                icon: new L.DivIcon({
+                  iconSize: 5,
+                  className: "leaflet-div-icon leaflet-editing-icon",
+                }),
+              },
+              polyline: false,
+              rectangle: false,
+              marker: false,
+              circle: true,
+              circlemarker: false,
+            },
+            edit: {
+              featureGroup: drawnItems,
+              remove: false,
+            },
+          }),
+        );
+
+        m.on(L.Draw.Event.CREATED, function (e) {
+          var type = e.layerType,
+            layer = e.layer;
+
+          drawnItems.addLayer(layer);
+          layer.on("click", editPopup(layer)); //"mouseover", "click"
+
+          layer.on("edit", function (e) {
+            console.log("Editted");
+          });
+        });
+
+        m.on("draw:edited", function (e) {
+          const layers = e.layers;
+          layers.eachLayer(function (layer) {
+            const p = layer.feature.properties;
+            if (typeof changedIds[p.id] == "undefined") {
+              changedIds[p.id] = {
+                name: p.name,
+                action: "Change",
+                type: p.type,
+                leaflet_id: Object.keys(e.layers._layers)[0],
+              };
+              // console.log(JSON.stringify(changedIds[p.id], null, 2))
+              // console.log(JSON.stringify(changedIds, null, 2))
+            }
+          });
+        });
+      }
+
+      function isPopupOpen() {
+        return document.getElementsByClassName("leaflet-popup-content").length;
+      }
+
+      function addPullDown(text, id, options) {
+        var html = `<tr><td><label>${text}:<label></td><td><select id="${id}" name="${id}">`;
+        options.forEach((value) => {
+          html =
+            html +
+            '<option value="' +
+            value.toLowerCase() +
+            '">' +
+            value +
+            "</option>";
+        });
+        html = html + "</select>";
+        return html;
+      }
+
+      function editPopup(layer, f, l_id) {
+        console.log("Leaflet_id: " + l_id);
+        if (isPopupOpen()) {
+          layer.unbindPopup();
+        } else {
+          layer.addTo(m);
+          if (typeof f != "undefined") {
+            var feature = f;
+          } else {
+            var feature = (layer.feature = layer.feature || {}); // Initialize feature
+          }
+          feature.type = feature.type || "Feature"; // Initialize feature.type
+          var p = (feature.properties = feature.properties || {}); // Initialize feature.properties
+          if (typeof p["name"] == "undefined") {
+            newItems.push(layer._leaflet_id);
+            p.id = generateUUID();
+            p.name = "New feature";
+            p.callname = "";
+            p.type = "vts";
+            (p.channel = ""), (p.url = "https://");
+            p.phone = "+";
+            p.note = "";
+            p.vhfdata = {
+              generic: {
+                mode: "listen",
+                note: "",
+              },
+              pleasure: {
+                mode: "listen",
+                url: "",
+                note: "",
+              },
+              cargo: {
+                mode: "listen",
+                url: "",
+                note: "",
+              },
+            };
+            changedIds[p.id] = {
+              name: p.name,
+              action: "Add",
+              leaflet_id: l_id,
+            };
+          }
+
+          var contentHTML =
+            '<form id="form" onsubmit="return false"><table>' +
+            '<tr><td><label>Name<label></td><td><input id="name" type="text"></td></tr>' +
+            '<tr><td><label>Call name:<label></td><td><input id="callname" type="text"></td></tr>';
+          contentHTML =
+            contentHTML +
+            addPullDown("Type", "type", [
+              "VTS",
+              "VTS Radar support",
+              "Lock",
+              "Bridge",
+              "Area",
+              "Marina",
+              "Territorial",
+            ]);
+          contentHTML =
+            contentHTML +
+            '<tr><td><label>Channel:<label></td><td><input id="channel" type="text"></td></tr>';
+          contentHTML =
+            contentHTML +
+            addPullDown("Mode", "gmode", ["Listen", "Announce", "Report"]);
+          contentHTML =
+            contentHTML +
+            '<tr><td><label>Note:<label></td><td><input id="gnote" type="text"></td></tr>' +
+            '<tr><td><label>URL:<label></td><td><input id="url" type="url"></td></tr>' +
+            '<tr><td><label>Phone:<label></td><td><input id="phone" type="text"></td></tr>' +
+            '<tr><td><label>Update:<label></td><td><input id="update" type="text"></td></tr>' +
+            '<tr><td colspan="2"><b>Pleasure overwrite</b></td></tr>';
+          contentHTML =
+            contentHTML +
+            addPullDown("Mode", "pmode", ["", "Listen", "Announce", "Report"]);
+          contentHTML =
+            contentHTML +
+            '<tr><td><label>Note:<label></td><td><input id="pnote" type="text"></td></tr>' +
+            '<tr><td><label>URL:<label></td><td><input id="purl" type="url"></td></tr>' +
+            '<tr><td colspan="2"><b>Cargo overwrite</b></td></tr>';
+          contentHTML =
+            contentHTML +
+            addPullDown("Mode", "cmode", ["", "Listen", "Announce", "Report"]);
+          contentHTML =
+            contentHTML +
+            '<tr><td><label>Note:<label></td><td><input id="cnote" type="text"></td></tr>' +
+            '<tr><td><label>URL:<label></td><td><input id="curl" type="url"></td></tr>' +
+            "</table></form>";
+
+          var buttonSaveHTML =
+            '<div class="buttons" id="save"  ><button>Save</button></div>';
+          var buttonCancelHTML =
+            '<div class="buttons" id="cancel"><button>Cancel</button></div>';
+          var buttonDeleteHTML =
+            '<div class="buttons" id="delete"><button>Delete</button></div></div>';
+
+          // Adding info to popup
+          let btnDiv = document.createElement("div", "buttons");
+
+          var content = L.DomUtil.create("div", "content");
+          content.innerHTML = contentHTML;
+          btnDiv.append(content);
+
+          var buttonSave = L.DomUtil.create("div", "buttons");
+          buttonSave.innerHTML = buttonSaveHTML;
+          btnDiv.append(buttonSave);
+
+          var buttonCancel = L.DomUtil.create("div", "buttons");
+          buttonCancel.innerHTML = buttonCancelHTML;
+          btnDiv.append(buttonCancel);
+
+          var buttonDelete = L.DomUtil.create("div", "buttons");
+          buttonDelete.innerHTML = buttonDeleteHTML;
+          btnDiv.append(buttonDelete);
+
+          layer.unbindPopup().bindPopup(btnDiv).openPopup();
+
+          sleep(200);
+          setValue(p.name, "name");
+          setValue(p.callname, "callname");
+          setValue(p.type, "type");
+          setValue(p.channel, "channel");
+          setValue(p.url, "url");
+          setValue(p.phone, "phone");
+          setValue(p.update, "update");
+          // Generic
+          setValue(p.vhfdata.generic.mode, "gmode");
+          setValue(p.vhfdata.generic.note, "gnote");
+          // Pleasure
+          if (typeof p.vhfdata.pleasure != "undefined") {
+            setValue(p.vhfdata.pleasure.note, "pnote");
+            setValue(p.vhfdata.pleasure.mode, "pmode");
+            setValue(p.vhfdata.pleasure.url, "purl");
+          }
+          // Cargo
+          if (typeof p.vhfdata.cargo != "undefined") {
+            setValue(p.vhfdata.cargo.url, "curl");
+            setValue(p.vhfdata.cargo.mode, "cmode");
+            setValue(p.vhfdata.cargo.note, "cnote");
+          }
+
+          // Save
+          L.DomEvent.addListener(buttonSave, "click", function (event) {
+            console.log(
+              "Adding properties: " +
+                JSON.stringify(layer._popup._source.feature.properties),
+            );
+            var properties = layer._popup._source.feature.properties;
+            saveProperties(properties, layer._popup._source._leaflet_id);
+            // console.log('layer._popup._source: ' + layer._popup._source)
+            $(".leaflet-popup-close-button")[0].click();
+          });
+
+          L.DomEvent.addListener(buttonCancel, "click", function (event) {
+            console.log("Cancelled - close popup");
+            $(".leaflet-popup-close-button")[0].click();
+          });
+
+          L.DomEvent.addListener(buttonDelete, "click", function (event) {
+            let popupId = layer._popup._leaflet_id;
+            let id = layer._popup._source._leaflet_id;
+            let uuid = layer._popup._source.feature.properties.id;
+            let name = layer._popup._source.feature.properties.name;
+            let type = layer._popup._source.feature.properties.type;
+            if (confirm("Sure you want to delete '" + name + "'?")) {
+              $(".leaflet-popup-close-button")[0].click();
+              changedIds[uuid] = { name: name, action: "Delete", type: type };
+              removeLayerFromGroup(id, drawnItems);
+              // removeLayerFromGroup(id, vhfinfo)     // Until diff
+              removeIdFromLayer(id, type);
+            } else {
+              $(".leaflet-popup-close-button")[0].click();
+              console.log("Do not delete feature");
+            }
+          });
+          // console.log(layer)
+        }
+      }
+
+      function removeIdFromLayer(id, type) {
+        switch (type) {
+          case "vts":
+            removeLayerFromGroup(id, vtsLayer);
+            break;
+          case "lock":
+            removeLayerFromGroup(id, lockLayer);
+            break;
+          case "bridge":
+            removeLayerFromGroup(id, bridgeLayer);
+            break;
+          case "vts radar support":
+            removeLayerFromGroup(id, radarLayer);
+            break;
+          case "marina":
+            removeLayerFromGroup(id, marinaLayer);
+            break;
+          case "area":
+            removeLayerFromGroup(id, areaLayer);
+            break;
+        }
+      }
+
+      function removeLayerFromGroup(id, layerGroup) {
+        layerGroup.eachLayer(function (layer) {
+          if (layer._leaflet_id === id) {
+            layerGroup.removeLayer(layer);
+            m.removeLayer(layerGroup);
+            m.addLayer(layerGroup);
+          }
+        });
+      }
+
+      function isEmpty(obj) {
+        if (
+          obj === "" ||
+          obj === null ||
+          JSON.stringify(obj) === "{}" ||
+          JSON.stringify(obj) === "[]" ||
+          obj === undefined ||
+          obj === {}
+        ) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      function removeEmpty(obj) {
+        Object.keys(obj).forEach((key) => {
+          if (obj[key] && typeof obj[key] === "object") {
+            const childObject = removeEmpty(obj[key]);
+            if (childObject === undefined) {
+              delete obj[key];
+            }
+          } else if (
+            obj[key] === "" ||
+            obj[key] === null ||
+            obj[key] === undefined ||
+            JSON.stringify(obj[key]) === "{}"
+          ) {
+            delete obj[key];
+          }
+        });
+        return Object.keys(obj).length > 0 || obj instanceof Array
+          ? obj
+          : undefined;
+      }
+
+      function commitGitHub(country, changesObj, reason) {
+        changesObj = removeEmpty(changesObj);
+        if (reason != "" && reason != null) {
+          let postURL =
+            "https://commit.vhfinfo.org:6644/apiv2?country=" +
+            country +
+            "&reason=" +
+            reason;
+          $.ajax({
+            type: "POST",
+            contentType: "application/json",
+            url: postURL,
+            cache: false,
+            async: false,
+            data: JSON.stringify(changesObj),
+            success: function (result) {
+              alert(result);
+              return result;
+            },
+            error: function (result) {
+              alert(result);
+              return result;
+            },
+          });
+        }
+      }
+
+      function jsonToBase64(jsonObj) {
+        const jsonString = JSON.stringify(jsonObj);
+        return Base64.encode(jsonString);
+      }
+
+      function saveProperties(properties, leaflet_id) {
+        properties.name = getPropertyValue("name");
+        properties.callname = getPropertyValue("callname");
+        properties.type = getPropertyValue("type");
+        properties.channel = getPropertyValue("channel");
+        properties.url = getPropertyValue("url");
+        properties.phone = getPropertyValue("phone");
+        properties.update = getPropertyValue("update");
+        properties.vhfdata = {};
+        properties.vhfdata.generic = {};
+        properties.vhfdata.generic.mode = getPropertyValue("gmode");
+        properties.vhfdata.generic.note = getPropertyValue("gnote");
+        properties.vhfdata.pleasure = {};
+        properties.vhfdata.pleasure.mode = getPropertyValue("pmode");
+        properties.vhfdata.pleasure.note = getPropertyValue("pnote");
+        properties.vhfdata.pleasure.url = getPropertyValue("purl");
+        properties.vhfdata.cargo = {};
+        properties.vhfdata.cargo.mode = getPropertyValue("cmode");
+        properties.vhfdata.cargo.note = getPropertyValue("cnote");
+        properties.vhfdata.cargo.url = getPropertyValue("curl");
+        if (typeof changedIds[properties.id] != "undefined") {
+          if (changedIds[properties.id].action == "Add") {
+            changedIds[properties.id] = {
+              name: properties.name,
+              type: properties.type,
+              action: "Add",
+              leaflet_id: leaflet_id,
+            };
+            console.log("New item");
+          } else {
+            changedIds[properties.id] = {
+              name: properties.name,
+              action: "Change",
+              type: properties.type,
+              leaflet_id: leaflet_id,
+            };
+            console.log("Changed existing item again");
+            console.log(JSON.stringify(changedIds[properties.id], null, 2));
+          }
+        } else {
+          changedIds[properties.id] = {
+            name: properties.name,
+            action: "Change",
+            type: properties.type,
+            leaflet_id: leaflet_id,
+          };
+          console.log("Changed existing item first time");
+          console.log(JSON.stringify(changedIds[properties.id], null, 2));
+        }
+      }
+
+      function getPropertyValue(element) {
+        // console.log(document.getElementById(element).value + ' : ' + typeof document.getElementById(element).value)
+        if (document.getElementById(element).value != "undefined") {
+          return document.getElementById(element).value;
+        }
+      }
+
+      function setValue(value, element) {
+        // console.log('Value ' + value + ':' + typeof value + ' element ' + element)
+        if (typeof value != "undefined") {
+          document.getElementById(element).value = value;
+        } else {
+          document.getElementById(element).value = null;
+        }
+      }
+
+      function removeUnwanted() {
         if (editMode) {
-          drawnItems.addLayer(layer)
+          m.addLayer(Nm12);
+          m.addLayer(areaLayer);
+          m.removeLayer(Nm12);
+          m.removeLayer(areaLayer);
         }
-        specific.addLayer(layer)
       }
-  });
-  } catch (e) {
-    console.log('Loading did not work')
-  }
-}
 
+      m.on("zoomend", function () {
+        checkIfLoaded();
+      });
 
-if (editMode) {
-  m.addEventListener('mousemove', (event) => {
-    var lat = Math.round(event.latlng.lat * 100000) / 100000
-    var lng = Math.round(event.latlng.lng * 100000) / 100000
-    updateMousePosition({"lat": lat, "lng": lng})
-  });
-} else {
-  m.on('move', function() {
-    if (splitviewMode) {
-      let center = m.getCenter()
-      updateMousePosition(center)
-      updateCenterGraphic()
-    }
-  });
-  m.on('moveend', function() {
-    if (splitviewMode) {
-      let center = m.getCenter()
-      activeCountry = getCountryAtCoor(center)
-      updateMousePosition(center)
-      updateNearby()
-    }
-  });
-}
+      m.on("moveend", function () {
+        checkIfLoaded();
+      });
 
-function updateCenterGraphic () {
-  if (compassMode) {
-    // Rotate compass
-    let center = (m.latLngToContainerPoint(m.getCenter()))
-    document.getElementById('compass').style.left = (center.x-50) + 'px'
-    document.getElementById('compass').style.top = (center.y-55) + 'px'
-    document.getElementById('compass').style.transform = 'rotate(' + heading + 'deg)'
-    document.getElementById('compass').style.opacity = '1'
-    document.getElementById('compass').style.zIndex = '1000'
-  } else {
-    document.getElementById('compass').style.opacity = '0'
-    document.getElementById('compass').style.zIndex = '-100'
-    crosshair.setLatLng(m.getCenter());
-  }
-}
-
-function updateMousePosition (latlng) {
-  if (dms) {
-    lat = convertToDm(latlng.lat, false)
-    lng = convertToDm(latlng.lng, true)
-  } else {
-    lat = convertToDms(latlng.lat, false)
-    lng = convertToDms(latlng.lng, true)
-  }
-  var coor = `${lat} ${lng} ` 
-  if (compassMode) {
-    coor = coor + heading.toFixed(0) + '&#176;'
-  }
-  if (splitviewMode) {
-    country = activeCountry
-    if (country == null) {
-      country = 'INTL'
-    }
-  }
-  document.getElementsByClassName('mouseposition')[0].innerHTML = `${country} ${coor}`
-}
-
-
-function convertToDms(dd, isLng) {
-  var dir = dd < 0
-    ? isLng ? 'W' : 'S'
-    : isLng ? 'E' : 'N';
-  var absDd = Math.abs(dd);
-  var deg = absDd | 0;
-  var frac = absDd - deg;
-  var min = (frac * 60) | 0;
-  var sec = frac * 3600 - min * 60 | 0;
-  // Round it to 2 decimal points.
-  sec = Math.round(sec * 100) / 100 | 0
-  var dec = (frac * 3600 - min * 60 - sec) * 100 | 0;
-  return dir + " " + String(deg).padStart(2, ' ') + "°" + String(min).padStart(2, '0') + "'" + String(sec).padStart(2, '0') + "." + String(dec).padStart(2, '0') + '"';
-}
-
-function convertToDm(dd, isLng) {
-  var dir = dd < 0
-    ? isLng ? 'W' : 'S'
-    : isLng ? 'E' : 'N';
-  var absDd = Math.abs(dd);
-  var deg = absDd | 0;
-  var frac = absDd - deg;
-  var min = (frac * 60) | 0
-  var dec = ((frac * 60) - min) * 1000 | 0
-
-  return dir + " " + String(deg).padStart(2, ' ') + "°" + String(min).padStart(2, '0') + "." + String(dec).padStart(3, '0')
-}
-
-function showInfo(f, layer, country) {
-  // console.log(f)
-  // console.log(layer)
-
-  let p = f.properties
-  
-  var html =  '<table><tr><td colspan="2"><b>' + '[' + p.type.toUpperCase() +'] ' + p.name + '</b></td></tr>'
-  if (typeof p.callname != 'undefined') {
-    html = html + '<tr><td>Call&nbsp;sign</td><td>' + p.callname + '</td></tr>'
-  }
-	html = html + '<tr><td>VHF</td><td>' + p.channel + ' (' + p.vhfdata.generic.mode + ')</td></tr>'
-
-	if (typeof p.url != 'undefined') {
-	  html = html + '<tr><td>Info</td><td><a href="' + p.url + '" target="_blank">link</a></td></tr>'
-	}
-	if (typeof p.phone != 'undefined') {
-	  html = html + '<tr><td>Phone</td><td><a href="tel:' + p.phone + '">' + p.phone + '</a></td></tr>'
-	}
-  if (typeof p.update != 'undefined' && p.update != "") {
-    var update
-    try {
-      update = cronstrue.toString(p.update + " * * *")
-    } catch {
-      update = p.update
-    }
-    html = html + '<tr><td>Update schedule</td><td>' + update + '</td></tr>'
-  }
-
-  html = html + addHTML(p)
-  html = html + addHTML('Generic', p.vhfdata.generic)
-  html = html + addHTML('Pleasure', p.vhfdata.pleasure)
-  html = html + addHTML('Emergency', p.vhfdata.emergency)
-  let center = m.getCenter()
-  let editUrl = "https://vhfinfo.org/map.html?edit=" + country + "&mapPosition=" +  center.lat.toFixed(6) + "/" + center.lng.toFixed(6) + "/" + m.getZoom()
-  html = html + '<td></td><td style="text-align: right;"><a href="' + editUrl + '" target="_blank" style="text-decoration: none;">Edit</a></td>'
-  html = html + '</table>'
-
-  layer.bindPopup(html).openPopup();
-  layer.addTo(m)
-}
-
-function addHTML (title, json) {
-  var h = ""
-	if (typeof json != 'undefined') {
-	  if (typeof json.note != 'undefined') {
-	    h = h + '<tr><td>Note</td><td>' + json.note + '</td></tr>'
-	  }
-	  if (typeof json.phone != 'undefined') {
-	    h = h + '<tr><td>Phone</td><td><a href="tel:' + json.phone + '">' + json.phone + '</a></td></tr>'
-	  }
-	  if (typeof json.url != 'undefined') {
-	    h = h + '<tr><td>Info</td><td><a href="' + json.url + '" target="_blank">link</a></td></tr>'
-	  }
-    if (h.length > 0) {
-	    h = '<tr><td colspan="2"><b>' + title + '</td></b></tr>' + h
-    } 
-	  return h
-	} else {
-    return ""
-  }
-}
-
-function checkLayer (addRemove, l) {
-  switch (addRemove) {
-  case 'add':
-    if (m.hasLayer(l)) {
-      // console.log(l + ' is active')
-      m.addLayer(l)
-    } else {
-      // console.log(l + ' is inactive')
-      m.addLayer(l)
-      m.removeLayer(l)
-    }
-    updateNearby()
-    break
-  case 'remove':
-    if (m.hasLayer(l)) {
-      // console.log(l + ' is active')
-      m.removeLayer(l)
-      m.addLayer(l)
-    } else {
-      // console.log(l + ' is inactive')
-      m.removeLayer(l)
-    }
-    updateNearby()
-    break
-  }
-}
-
-function geolocationSuccess (position) {
-  latit = position.coords.latitude;
-  longit = position.coords.longitude;
-  // move the map to have the location in its center
-  loadCountryOnCoordiate([latit,longit])
-  m.panTo(new L.LatLng(latit, longit));
-}
-
-function geolocationError () {
-  m.setView([45.0, 10.0], 5);
-}
-
-if (mapPos) {
-  // console.log(mapPosition)
-  const [lat, lon, zoom] = mapPosition.split('/')
-  // console.log('lat: ' + lat + '  lon: ' + lon + '  zoom: ' + zoom)
-  m.panTo(new L.LatLng(lat, lon))
-  m.setZoom(zoom)
-  if (!editMode) {
-    loadCountryOnCoordiate([lat, lon])
-  }
-}
-
-if (!editMode) {
-  var geoOptions = {
-    enableHighAccuracy: true,
-    timeout: 5000,
-    maximumAge: 0
-  };
-  if (!mapPos && navigator.geolocation) {
-    console.log('Checking browser location')
-    navigator.geolocation.getCurrentPosition(geolocationSuccess, geolocationError, geoOptions)
-  }
-} else {
-  if (!mapPos) {
-    let coor = countriesGeoObj[country]
-    let lon = coor.ne.lon - ((coor.ne.lon - coor.sw.lon)/2)
-    let lat = coor.ne.lat - ((coor.ne.lat - coor.sw.lat)/2)
-    m.panTo(new L.LatLng(lat, lon));
-    let coordinates = [[coor.ne.lon,coor.ne.lat], [coor.sw.lon, coor.sw.lat]]
-    let polygon = L.polygon(coordinates);
-    let bounds = polygon.getBounds();
-    let southWest = bounds.getSouthWest();
-    let northEast = bounds.getNorthEast();
-    let cSouthWest = L.latLng(southWest.lng, southWest.lat);
-    let cNortEast = L.latLng(northEast.lng, northEast.lat);
-    let newBounds = L.latLngBounds(cSouthWest, cNortEast);
-    m.fitBounds(newBounds);
-  }
-  loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + country + ".json", vhfinfo, country)
-  loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + country + "_12Nm.json", Nm12, country)
-}
-
-
-if (editMode) {
-	m.addControl(new L.Control.Draw({
-	  draw: {
-	    polygon: {
-	      icon: new L.DivIcon({
-	        iconSize: 5,
-	        className: 'leaflet-div-icon leaflet-editing-icon'
-	      }),
-	    },
-	    polyline: false,
-	    rectangle: false,
-	    marker: false,
-	    circle: true,
-	    circlemarker: false
-	  },
-    edit: {
-	    featureGroup: drawnItems,
-      remove: false
-	  }
-	}));
-
-	
-	m.on(L.Draw.Event.CREATED, function(e) {
-	  var type = e.layerType
-	  , layer = e.layer
-
-	  drawnItems.addLayer(layer);
-    layer.on('click', editPopup(layer)); //"mouseover", "click"
-	
-	  layer.on("edit", function(e) {
-	    console.log("Editted");
-	  });
-  });
-
-  m.on('draw:edited', function(e) {
-    const layers = e.layers;
-    layers.eachLayer(function (layer) {
-      const p = layer.feature.properties
-      if (typeof changedIds[p.id] == 'undefined') {
-        changedIds[p.id] = {"name": p.name, "action": "Change", "type": p.type, "leaflet_id": Object.keys(e.layers._layers)[0]}
-        // console.log(JSON.stringify(changedIds[p.id], null, 2))
-        // console.log(JSON.stringify(changedIds, null, 2))
-      }
-    });
-  });
-}
-
-
-function isPopupOpen () {
-  return document.getElementsByClassName('leaflet-popup-content').length
-}
-
-
-function addPullDown (text, id, options) {
-  var html = `<tr><td><label>${text}:<label></td><td><select id="${id}" name="${id}">`
-  options.forEach(value => {
-    html = html + '<option value="' + value.toLowerCase() + '">' + value + '</option>'
-  })
-  html = html + '</select>'
-  return html
-}
-
-function editPopup (layer, f, l_id) {
-  console.log('Leaflet_id: ' + l_id)
-  if (isPopupOpen()) {
-    layer.unbindPopup()
-  } else {
-  layer.addTo(m)
-  if (typeof f != 'undefined') {
-    var feature = f 
-  } else {
-    var feature = layer.feature = layer.feature || {}; // Initialize feature
-  }
-  feature.type = feature.type || "Feature"; // Initialize feature.type
-  var p = feature.properties = feature.properties || {}; // Initialize feature.properties
-  if (typeof p["name"] == 'undefined') {
-    newItems.push(layer._leaflet_id)
-    p.id = generateUUID()
-    p.name = "New feature"
-    p.callname = ""
-    p.type = "vts"
-    p.channel = "",
-    p.url = "https://"
-    p.phone = "+"
-    p.note = ""
-    p.vhfdata = {
-      "generic": {
-        "mode": "listen",
-        "note": ""
-      },
-      "pleasure": {
-        "mode": "listen",
-        "url": "",
-        "note": ""
-      },
-      "cargo": {
-        "mode": "listen",
-        "url": "",
-        "note": ""
-      }
-    }
-    changedIds[p.id] = {"name": p.name, "action": "Add", "leaflet_id": l_id}
-  }
-
-  var contentHTML = '<form id="form" onsubmit="return false"><table>'+
-    '<tr><td><label>Name<label></td><td><input id="name" type="text"></td></tr>'+
-    '<tr><td><label>Call name:<label></td><td><input id="callname" type="text"></td></tr>'
-  contentHTML = contentHTML + addPullDown('Type', 'type', ['VTS','VTS Radar support', 'Lock','Bridge','Area','Marina','Territorial'])
-  contentHTML = contentHTML + '<tr><td><label>Channel:<label></td><td><input id="channel" type="text"></td></tr>'
-  contentHTML = contentHTML + addPullDown('Mode', 'gmode', ['Listen','Announce','Report'])
-  contentHTML = contentHTML + '<tr><td><label>Note:<label></td><td><input id="gnote" type="text"></td></tr>'+
-    '<tr><td><label>URL:<label></td><td><input id="url" type="url"></td></tr>'+
-    '<tr><td><label>Phone:<label></td><td><input id="phone" type="text"></td></tr>'+
-    '<tr><td><label>Update:<label></td><td><input id="update" type="text"></td></tr>'+
-    '<tr><td colspan="2"><b>Pleasure overwrite</b></td></tr>'
-  contentHTML = contentHTML + addPullDown('Mode', 'pmode', ['', 'Listen','Announce','Report'])
-  contentHTML = contentHTML + '<tr><td><label>Note:<label></td><td><input id="pnote" type="text"></td></tr>'+
-    '<tr><td><label>URL:<label></td><td><input id="purl" type="url"></td></tr>'+
-    '<tr><td colspan="2"><b>Cargo overwrite</b></td></tr>'
-  contentHTML = contentHTML + addPullDown('Mode', 'cmode', ['', 'Listen','Announce','Report'])
-  contentHTML = contentHTML + '<tr><td><label>Note:<label></td><td><input id="cnote" type="text"></td></tr>'+
-    '<tr><td><label>URL:<label></td><td><input id="curl" type="url"></td></tr>'+
-    '</table></form>'
-
-  var buttonSaveHTML   = '<div class="buttons" id="save"  ><button>Save</button></div>'
-  var buttonCancelHTML = '<div class="buttons" id="cancel"><button>Cancel</button></div>'
-  var buttonDeleteHTML = '<div class="buttons" id="delete"><button>Delete</button></div></div>'
-
-  // Adding info to popup
-  let btnDiv = document.createElement('div', 'buttons')
-
-  var content = L.DomUtil.create('div', 'content')
-  content.innerHTML = contentHTML
-  btnDiv.append(content)
-  
-  var buttonSave = L.DomUtil.create('div', 'buttons')
-  buttonSave.innerHTML = buttonSaveHTML
-  btnDiv.append(buttonSave)
-  
-  var buttonCancel = L.DomUtil.create('div', 'buttons')
-  buttonCancel.innerHTML = buttonCancelHTML
-  btnDiv.append(buttonCancel)
-  
-  var buttonDelete = L.DomUtil.create('div', 'buttons')
-  buttonDelete.innerHTML = buttonDeleteHTML
-  btnDiv.append(buttonDelete)
-
-  layer
-    .unbindPopup()
-    .bindPopup(btnDiv)
-    .openPopup();
-
-   
-  sleep (200)
-  setValue(p.name, 'name')
-  setValue(p.callname, 'callname')
-  setValue(p.type, 'type')
-  setValue(p.channel, 'channel')
-  setValue(p.url, 'url')
-  setValue(p.phone, 'phone')
-  setValue(p.update, 'update')
-  // Generic
-  setValue(p.vhfdata.generic.mode, 'gmode')
-  setValue(p.vhfdata.generic.note, 'gnote')
-  // Pleasure
-  if (typeof p.vhfdata.pleasure != 'undefined') {
-    setValue(p.vhfdata.pleasure.note, 'pnote')
-    setValue(p.vhfdata.pleasure.mode, 'pmode')
-    setValue(p.vhfdata.pleasure.url, 'purl')
-  }
-  // Cargo
-  if (typeof p.vhfdata.cargo != 'undefined') {
-    setValue(p.vhfdata.cargo.url, 'curl')
-    setValue(p.vhfdata.cargo.mode, 'cmode')
-    setValue(p.vhfdata.cargo.note, 'cnote')
-  }
- 
-  // Save
-  L.DomEvent.addListener(buttonSave, 'click', function(event){
-    console.log('Adding properties: ' + JSON.stringify(layer._popup._source.feature.properties))
-    var properties = layer._popup._source.feature.properties
-    saveProperties (properties, layer._popup._source._leaflet_id)
-    // console.log('layer._popup._source: ' + layer._popup._source)
-    $(".leaflet-popup-close-button")[0].click()
-  });
- 
-  L.DomEvent.addListener(buttonCancel, 'click', function(event){
-    console.log('Cancelled - close popup')
-    $(".leaflet-popup-close-button")[0].click();
-  });
-
-
-  L.DomEvent.addListener(buttonDelete, 'click', function(event){
-    let popupId = layer._popup._leaflet_id
-    let id = layer._popup._source._leaflet_id
-    let uuid = layer._popup._source.feature.properties.id
-    let name = layer._popup._source.feature.properties.name
-    let type = layer._popup._source.feature.properties.type
-    if (confirm("Sure you want to delete '" + name + "'?")) {
-      $(".leaflet-popup-close-button")[0].click();
-      changedIds[uuid] = {"name": name, "action": "Delete", "type": type}
-      removeLayerFromGroup(id, drawnItems)
-      // removeLayerFromGroup(id, vhfinfo)     // Until diff
-      removeIdFromLayer(id, type)
-    } else {
-      $(".leaflet-popup-close-button")[0].click();
-      console.log('Do not delete feature')
-    }
-  });
-  // console.log(layer)
-}
-
-}
-
-function removeIdFromLayer(id, type) {
-  switch (type) {
-    case 'vts':
-      removeLayerFromGroup(id, vtsLayer)
-      break
-    case 'lock':
-      removeLayerFromGroup(id, lockLayer)
-      break
-    case 'bridge':
-      removeLayerFromGroup(id, bridgeLayer)
-      break
-    case 'vts radar support':
-      removeLayerFromGroup(id, radarLayer)
-      break
-    case 'marina':
-      removeLayerFromGroup(id, marinaLayer)
-      break
-    case 'area':
-      removeLayerFromGroup(id, areaLayer)
-      break
-  }
-}
-
-
-function removeLayerFromGroup (id, layerGroup) {
-	layerGroup.eachLayer(function (layer) {
-		if (layer._leaflet_id === id){
-			layerGroup.removeLayer(layer)
-      m.removeLayer(layerGroup)
-      m.addLayer(layerGroup)
-		}
-	});
-}
-
-function isEmpty(obj) {
-  if (obj === '' || obj === null || JSON.stringify(obj) === '{}' || JSON.stringify(obj) === '[]' || (obj) === undefined || (obj) === {}) {
-    return true
-  } else {
-    return false
-  }
-}
-
-function removeEmpty(obj) {
-  Object.keys(obj).forEach((key) => {
-    if (obj[key] && typeof obj[key] === 'object') {
-      const childObject = removeEmpty(obj[key]);
-      if (childObject === undefined) {
-        delete obj[key];
-      }
-    } else if (obj[key] === '' || obj[key] === null || obj[key] === undefined || JSON.stringify(obj[key]) === "{}") {
-      delete obj[key];
-    }
-  });
-  return Object.keys(obj).length > 0 || obj instanceof Array ? obj : undefined;
-}
-
-function commitGitHub(country, changesObj, reason) {
-  changesObj = removeEmpty(changesObj)
-  if (reason != "" && reason != null) {
-    let postURL = "https://commit.vhfinfo.org:6644/apiv2?country=" + country + "&reason=" + reason
-    $.ajax({
-      type: "POST",
-      contentType: 'application/json',
-      url: postURL,
-      cache: false,
-      async: false,
-      data: JSON.stringify(changesObj),
-      success: function(result) {
-        alert(result)
-        return result
-      },
-      error: function(result) {
-        alert (result)
-        return result
-      }
-    });
-  }
-}
-
-function jsonToBase64(jsonObj) {
-    const jsonString = JSON.stringify(jsonObj)
-    return Base64.encode(jsonString)
-}
-
-function saveProperties (properties, leaflet_id) {
-  properties.name = getPropertyValue('name')
-  properties.callname = getPropertyValue('callname')
-  properties.type = getPropertyValue('type')
-  properties.channel = getPropertyValue('channel')
-  properties.url = getPropertyValue('url')
-  properties.phone = getPropertyValue('phone')
-  properties.update = getPropertyValue('update')
-  properties.vhfdata = {}
-  properties.vhfdata.generic = {}
-  properties.vhfdata.generic.mode = getPropertyValue('gmode')
-  properties.vhfdata.generic.note = getPropertyValue('gnote')
-  properties.vhfdata.pleasure = {}
-  properties.vhfdata.pleasure.mode = getPropertyValue('pmode')
-  properties.vhfdata.pleasure.note = getPropertyValue('pnote')
-  properties.vhfdata.pleasure.url = getPropertyValue('purl')
-  properties.vhfdata.cargo = {}
-  properties.vhfdata.cargo.mode = getPropertyValue('cmode')
-  properties.vhfdata.cargo.note = getPropertyValue('cnote')
-  properties.vhfdata.cargo.url = getPropertyValue('curl')
-  if (typeof changedIds[properties.id] != 'undefined') {
-    if (changedIds[properties.id].action == 'Add') {
-      changedIds[properties.id] = {"name": properties.name, "type": properties.type, "action": "Add", "leaflet_id": leaflet_id}
-      console.log('New item')
-    } else {
-      changedIds[properties.id] = {"name": properties.name, "action": "Change", "type": properties.type, "leaflet_id": leaflet_id}
-      console.log('Changed existing item again')
-      console.log(JSON.stringify(changedIds[properties.id], null, 2))
-    }
-  } else {
-    changedIds[properties.id] = {"name": properties.name, "action": "Change", "type": properties.type, "leaflet_id": leaflet_id}
-    console.log('Changed existing item first time')
-    console.log(JSON.stringify(changedIds[properties.id], null, 2))
-  }
-}
-
-function getPropertyValue (element) {
-  // console.log(document.getElementById(element).value + ' : ' + typeof document.getElementById(element).value)
-  if (document.getElementById(element).value != 'undefined') {
-    return document.getElementById(element).value
-  }
-}  
-
-function setValue (value, element) {
-  // console.log('Value ' + value + ':' + typeof value + ' element ' + element)
-  if (typeof value != 'undefined') {
-    document.getElementById(element).value = value
-  } else {
-    document.getElementById(element).value = null
-  }
-}
-
-function removeUnwanted () {
-  if (editMode) {
-    m.addLayer(Nm12)
-    m.addLayer(areaLayer)
-    m.removeLayer(Nm12)
-    m.removeLayer(areaLayer)
-  }
-}
-
-
-m.on('zoomend', function() {
-  checkIfLoaded()
-});
-
-m.on('moveend', function() {
-  checkIfLoaded()
-});
-
-function checkIfLoaded () {
-  if (!editMode) {
-    var zoomlevel = m.getZoom()
-    if (zoomlevel >= 6) {
-      center = m.getCenter()
-      center = [center.lat, center.lng]
-      loadCountryOnCoordiate(center)
-      let east = m.getBounds().getEast()
-      let west = m.getBounds().getWest()
-      let north = m.getBounds().getNorth()
-      let south = m.getBounds().getSouth()
-      loadCountryOnCoordiate([north, east])
-      loadCountryOnCoordiate([north, west])
-      loadCountryOnCoordiate([south, east])
-      loadCountryOnCoordiate([south, west])
-    }
-  }
-}
-
-function loadCountriesBbox () {
-  jQuery.ajax({
-    url: 'https://raw.githubusercontent.com/htool/vhfinfo/main/data/countries_bbox.json',
-    success: function (data) {
-      countriesGeoObj = JSON.parse(data)
-    },
-    async: false
-  });
-}
-
-function loadCountry (country) {
-  jQuery.ajax({
-    url: 'https://raw.githubusercontent.com/htool/vhfinfo/main/data/' + country + '_map.json',
-    success: function (data) {
-      countriesGeoJSON.features.push(JSON.parse(data).features)
-      console.log('Added ' + country)
-    },
-    async: false
-  });
-}
-
-function url2Obj(url) {
-  jQuery.ajax({
-    url: url,
-    success: function (data) {
-      Obj = JSON.parse(data)
-    },
-    error: function () {
-      Obj = {}
-    },
-    async: false
-  });
-  return Obj
-}
-
-function getCountriesAtCoor(coor) {
-  countries = []
-  if (typeof coor == 'undefined') {
-    coor = m.getCenter()
-  }
-  let lat = coor.lat
-  let lon = coor.lng
-  for (const [country, latlon] of Object.entries(countriesGeoObj)) {
-    if (lat < latlon.ne.lat && lat > latlon.sw.lat && lon < latlon.ne.lon && lon > latlon.sw.lon) {
-      countries.push(country)
-    }
-  }
-  return countries
-}
-
-function getCountryAtCoor(coor) {
-  if (typeof coor == 'undefined') {
-    coor = m.getCenter()
-  }
-  var point = turf.point( [ coor.lng, coor.lat ] )
-  var country = null
-  countriesGeoJSON.features.forEach (feature => {
-    if (turf.inside(point, feature) == true) {
-      country = feature.properties.A3
-    }
-  })
-  return country
-}
-
-function loadCountryOnCoordiate (coor) {
-  let lat = coor[0]
-  let lon = coor[1]
-  var countries = getCountriesAtCoor({'lat': lat, 'lng': lon})
-  countries.forEach(country => {
-    if (!countriesLoaded.includes(country)) {
-      loadCountry(country)
-      loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + country + ".json", vhfinfo, country)
-      loadUrl("https://raw.githubusercontent.com/htool/vhfinfo/main/data/" + country + "_12Nm.json", Nm12, country)
-      countriesLoaded.push(country)
-    }
-  })
-}
-
-function generateUUID() { // Public Domain/MIT
-    var d = new Date().getTime();//Timestamp
-    var d2 = ((typeof performance !== 'undefined') && performance.now && (performance.now()*1000)) || 0;//Time in microseconds since page-load or 0 if unsupported
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-        var r = Math.random() * 16;//random number between 0 and 16
-        if(d > 0){//Use timestamp until depleted
-            r = (d + r)%16 | 0;
-            d = Math.floor(d/16);
-        } else {//Use microseconds since page-load if supported
-            r = (d2 + r)%16 | 0;
-            d2 = Math.floor(d2/16);
+      function checkIfLoaded() {
+        if (!editMode) {
+          var zoomlevel = m.getZoom();
+          if (zoomlevel >= 6) {
+            center = m.getCenter();
+            center = [center.lat, center.lng];
+            loadCountryOnCoordiate(center);
+            let east = m.getBounds().getEast();
+            let west = m.getBounds().getWest();
+            let north = m.getBounds().getNorth();
+            let south = m.getBounds().getSouth();
+            loadCountryOnCoordiate([north, east]);
+            loadCountryOnCoordiate([north, west]);
+            loadCountryOnCoordiate([south, east]);
+            loadCountryOnCoordiate([south, west]);
+          }
         }
-        return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
-    });
-}
+      }
 
-function copyToClipboard(text) {
-    if (window.clipboardData && window.clipboardData.setData) {
-        // Internet Explorer-specific code path to prevent textarea being shown while dialog is visible.
-        return window.clipboardData.setData("Text", text);
+      function loadCountriesBbox() {
+        jQuery.ajax({
+          url: "https://raw.githubusercontent.com/htool/vhfinfo/main/data/countries_bbox.json",
+          success: function (data) {
+            countriesGeoObj = JSON.parse(data);
+          },
+          async: false,
+        });
+      }
 
-    }
-    else if (document.queryCommandSupported && document.queryCommandSupported("copy")) {
-        var textarea = document.createElement("textarea");
-        textarea.textContent = text;
-        textarea.style.position = "fixed";  // Prevent scrolling to bottom of page in Microsoft Edge.
-        document.body.appendChild(textarea);
-        textarea.select();
-        try {
-            return document.execCommand("copy");  // Security exception may be thrown by some browsers.
+      function loadCountry(country) {
+        jQuery.ajax({
+          url:
+            "https://raw.githubusercontent.com/htool/vhfinfo/main/data/" +
+            country +
+            "_map.json",
+          success: function (data) {
+            countriesGeoJSON.features.push(JSON.parse(data).features);
+            console.log("Added " + country);
+          },
+          async: false,
+        });
+      }
+
+      function url2Obj(url) {
+        jQuery.ajax({
+          url: url,
+          success: function (data) {
+            Obj = JSON.parse(data);
+          },
+          error: function () {
+            Obj = {};
+          },
+          async: false,
+        });
+        return Obj;
+      }
+
+      function getCountriesAtCoor(coor) {
+        countries = [];
+        if (typeof coor == "undefined") {
+          coor = m.getCenter();
         }
-        catch (ex) {
+        let lat = coor.lat;
+        let lon = coor.lng;
+        for (const [country, latlon] of Object.entries(countriesGeoObj)) {
+          if (
+            lat < latlon.ne.lat &&
+            lat > latlon.sw.lat &&
+            lon < latlon.ne.lon &&
+            lon > latlon.sw.lon
+          ) {
+            countries.push(country);
+          }
+        }
+        return countries;
+      }
+
+      function getCountryAtCoor(coor) {
+        if (typeof coor == "undefined") {
+          coor = m.getCenter();
+        }
+        var point = turf.point([coor.lng, coor.lat]);
+        var country = null;
+        countriesGeoJSON.features.forEach((feature) => {
+          if (turf.inside(point, feature) == true) {
+            country = feature.properties.A3;
+          }
+        });
+        return country;
+      }
+
+      function loadCountryOnCoordiate(coor) {
+        let lat = coor[0];
+        let lon = coor[1];
+        var countries = getCountriesAtCoor({ lat: lat, lng: lon });
+        countries.forEach((country) => {
+          if (!countriesLoaded.includes(country)) {
+            loadCountry(country);
+            loadUrl(
+              "https://raw.githubusercontent.com/htool/vhfinfo/main/data/" +
+                country +
+                ".json",
+              vhfinfo,
+              country,
+            );
+            loadUrl(
+              "https://raw.githubusercontent.com/htool/vhfinfo/main/data/" +
+                country +
+                "_12Nm.json",
+              Nm12,
+              country,
+            );
+            countriesLoaded.push(country);
+          }
+        });
+      }
+
+      function generateUUID() {
+        // Public Domain/MIT
+        var d = new Date().getTime(); //Timestamp
+        var d2 =
+          (typeof performance !== "undefined" &&
+            performance.now &&
+            performance.now() * 1000) ||
+          0; //Time in microseconds since page-load or 0 if unsupported
+        return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(
+          /[xy]/g,
+          function (c) {
+            var r = Math.random() * 16; //random number between 0 and 16
+            if (d > 0) {
+              //Use timestamp until depleted
+              r = (d + r) % 16 | 0;
+              d = Math.floor(d / 16);
+            } else {
+              //Use microseconds since page-load if supported
+              r = (d2 + r) % 16 | 0;
+              d2 = Math.floor(d2 / 16);
+            }
+            return (c === "x" ? r : (r & 0x3) | 0x8).toString(16);
+          },
+        );
+      }
+
+      function copyToClipboard(text) {
+        if (window.clipboardData && window.clipboardData.setData) {
+          // Internet Explorer-specific code path to prevent textarea being shown while dialog is visible.
+          return window.clipboardData.setData("Text", text);
+        } else if (
+          document.queryCommandSupported &&
+          document.queryCommandSupported("copy")
+        ) {
+          var textarea = document.createElement("textarea");
+          textarea.textContent = text;
+          textarea.style.position = "fixed"; // Prevent scrolling to bottom of page in Microsoft Edge.
+          document.body.appendChild(textarea);
+          textarea.select();
+          try {
+            return document.execCommand("copy"); // Security exception may be thrown by some browsers.
+          } catch (ex) {
             console.warn("Copy to clipboard failed.", ex);
             return prompt("Copy to clipboard: Ctrl+C, Enter", text);
-        }
-        finally {
+          } finally {
             document.body.removeChild(textarea);
-        }
-    }
-}
-
-const markdownParser = (text) => {
-	const toHTML = text
-		.replace(/^$/gim, '<br>') // new line
-		.replace(/^- (.*$)/gim, '<li>$1</li>') // list tag
-		.replace(/^#### (.*$)/gim, '<h3>$1</h4>') // h4 tag
-		.replace(/^### (.*$)/gim, '<h3>$1</h3>') // h3 tag
-		.replace(/^## (.*$)/gim, '<h2>$1</h2>') // h2 tag
-		.replace(/^# (.*$)/gim, '<h1>$1</h1>') // h1 tag
-		.replace(/\*\*(.*)\*\*/gim, '<b>$1</b>') // bold text
-		.replace(/\*(.*)\*/gim, '<i>$1</i>') // italic text
-		.replace(/\!\[(.*)\]\((.*)\)/gim, '<img src="$2" width="$1"></img><br>') // image
-		.replace(/\[(.*)\]\((.*)\)/gim, '<a href="$2">$1</a>'); // link
-	return toHTML.trim(); // using trim method to remove whitespace
-}
-
-function _fixEasyButtonSize(button) {
-    var buttonElement = button.button;
-    buttonElement.style.padding = '0px';
-    buttonElement.style.width = "26px";
-    buttonElement.style.height = "26px";
-    buttonElement.style.minWidth = "26px";
-    buttonElement.style.minHeight = "26px";
-}
-
-function findNearbyFeatures (currentCoordinates, heading, searchPolygon) {
-  var nearbyFeatures = []
-  currentPosition = turf.point(currentCoordinates, { })
-  let layers = [vtsLayer, radarLayer, lockLayer, bridgeLayer, marinaLayer, areaLayer, Nm12]
-  layers.forEach (l => {
-    if (m.hasLayer(l)) {
-      l.toGeoJSON(12).features.forEach (feature => {
-        try {
-          intersect = turf.intersect(feature, searchPolygon) 
-          if (intersect != null) {
-            var distance = Math.round(distanceToPolygon(currentPosition, feature))
-            feature.properties.distance = distance
-            var nearestPoint = turf.nearestPointOnLine(turf.polygonToLine(feature), currentPosition)
-            var relativeBearing = Math.round(turf.rhumbBearing(currentPosition, nearestPoint.geometry.coordinates) - heading)
-            if (relativeBearing < -180) {
-              relativeBearing = relativeBearing + 360
-            }
-            feature.properties.relativeBearing = relativeBearing
-            // console.log('Intersects with %s (%dm at %d)', feature.properties.name, distance, relativeBearing)
-            if (distance < searchDistance) {
-              nearbyFeatures.push(feature.properties)
-            }
           }
-        } catch (e) {
-          console.log('error with feature: ' + feature.properties.name)
-          console.log(e)
         }
-      })
-    }
-  })
-  nearbyFeatures.sort(function(a, b) {
-    return parseFloat(Math.abs(a.distance)) - parseFloat(Math.abs(b.distance));
-  });
-  // console.log(nearbyFeatures)
-  return nearbyFeatures
-}
+      }
 
-function rad2deg(radians) {
-  return radians * (180/Math.PI);
-}
+      const markdownParser = (text) => {
+        const toHTML = text
+          .replace(/^$/gim, "<br>") // new line
+          .replace(/^- (.*$)/gim, "<li>$1</li>") // list tag
+          .replace(/^#### (.*$)/gim, "<h3>$1</h4>") // h4 tag
+          .replace(/^### (.*$)/gim, "<h3>$1</h3>") // h3 tag
+          .replace(/^## (.*$)/gim, "<h2>$1</h2>") // h2 tag
+          .replace(/^# (.*$)/gim, "<h1>$1</h1>") // h1 tag
+          .replace(/\*\*(.*)\*\*/gim, "<b>$1</b>") // bold text
+          .replace(/\*(.*)\*/gim, "<i>$1</i>") // italic text
+          .replace(
+            /\!\[(.*)\]\((.*)\)/gim,
+            '<img src="$2" width="$1"></img><br>',
+          ) // image
+          .replace(/\[(.*)\]\((.*)\)/gim, '<a href="$2">$1</a>'); // link
+        return toHTML.trim(); // using trim method to remove whitespace
+      };
 
-function distanceToPolygon(point, polygon) {
-  if (polygon.type === "Feature") { polygon = polygon.geometry }
-  let distance;
-  if (polygon.type === "MultiPolygon") {
-    distance = polygon.coordinates
-    .map(coords => distanceToPolygon({ point, polygon: turf.polygon(coords).geometry }))
-    .reduce((smallest, current) => (current < smallest ? current : smallest));
-  } else {
-    if (polygon.coordinates.length > 1) {
-      if (exteriorDistance < 0) {
-        // point is inside the exterior polygon shape
-        const smallestInteriorDistance = interiorDistances.reduce(
-          (smallest, current) => (current < smallest ? current : smallest)
-        );
-        if (smallestInteriorDistance < 0) {
-          // point is inside one of the holes (therefore not actually inside this shape)
-          distance = smallestInteriorDistance * -1;
+      function _fixEasyButtonSize(button) {
+        var buttonElement = button.button;
+        buttonElement.style.padding = "0px";
+        buttonElement.style.width = "26px";
+        buttonElement.style.height = "26px";
+        buttonElement.style.minWidth = "26px";
+        buttonElement.style.minHeight = "26px";
+      }
+
+      function findNearbyFeatures(currentCoordinates, heading, searchPolygon) {
+        var nearbyFeatures = [];
+        currentPosition = turf.point(currentCoordinates, {});
+        let layers = [
+          vtsLayer,
+          radarLayer,
+          lockLayer,
+          bridgeLayer,
+          marinaLayer,
+          areaLayer,
+          Nm12,
+        ];
+        layers.forEach((l) => {
+          if (m.hasLayer(l)) {
+            l.toGeoJSON(12).features.forEach((feature) => {
+              try {
+                intersect = turf.intersect(feature, searchPolygon);
+                if (intersect != null) {
+                  var distance = Math.round(
+                    distanceToPolygon(currentPosition, feature),
+                  );
+                  feature.properties.distance = distance;
+                  var nearestPoint = turf.nearestPointOnLine(
+                    turf.polygonToLine(feature),
+                    currentPosition,
+                  );
+                  var relativeBearing = Math.round(
+                    turf.rhumbBearing(
+                      currentPosition,
+                      nearestPoint.geometry.coordinates,
+                    ) - heading,
+                  );
+                  if (relativeBearing < -180) {
+                    relativeBearing = relativeBearing + 360;
+                  }
+                  feature.properties.relativeBearing = relativeBearing;
+                  // console.log('Intersects with %s (%dm at %d)', feature.properties.name, distance, relativeBearing)
+                  if (distance < searchDistance) {
+                    nearbyFeatures.push(feature.properties);
+                  }
+                }
+              } catch (e) {
+                console.log("error with feature: " + feature.properties.name);
+                console.log(e);
+              }
+            });
+          }
+        });
+        nearbyFeatures.sort(function (a, b) {
+          return (
+            parseFloat(Math.abs(a.distance)) - parseFloat(Math.abs(b.distance))
+          );
+        });
+        // console.log(nearbyFeatures)
+        return nearbyFeatures;
+      }
+
+      function rad2deg(radians) {
+        return radians * (180 / Math.PI);
+      }
+
+      function distanceToPolygon(point, polygon) {
+        if (polygon.type === "Feature") {
+          polygon = polygon.geometry;
+        }
+        let distance;
+        if (polygon.type === "MultiPolygon") {
+          distance = polygon.coordinates
+            .map((coords) =>
+              distanceToPolygon({
+                point,
+                polygon: turf.polygon(coords).geometry,
+              }),
+            )
+            .reduce((smallest, current) =>
+              current < smallest ? current : smallest,
+            );
         } else {
-          // find which is closer, the distance to the hole or the distance to the edge of the exterior, and set that as the inner distance.
-          distance = smallestInteriorDistance < exteriorDistance * -1
-          ? smallestInteriorDistance * -1
-          : exteriorDistance;
+          if (polygon.coordinates.length > 1) {
+            if (exteriorDistance < 0) {
+              // point is inside the exterior polygon shape
+              const smallestInteriorDistance = interiorDistances.reduce(
+                (smallest, current) =>
+                  current < smallest ? current : smallest,
+              );
+              if (smallestInteriorDistance < 0) {
+                // point is inside one of the holes (therefore not actually inside this shape)
+                distance = smallestInteriorDistance * -1;
+              } else {
+                // find which is closer, the distance to the hole or the distance to the edge of the exterior, and set that as the inner distance.
+                distance =
+                  smallestInteriorDistance < exteriorDistance * -1
+                    ? smallestInteriorDistance * -1
+                    : exteriorDistance;
+              }
+            } else {
+              distance = exteriorDistance;
+            }
+          } else {
+            // The actual distance operation - on a normal, hole-less polygon (converted to meters)
+            distance =
+              turf.pointToLineDistance(
+                point,
+                turf.polygonToLineString(polygon),
+              ) * 1000;
+            if (turf.booleanPointInPolygon(point, polygon)) {
+              distance = distance * -1;
+            }
+          }
         }
-      } else {
-        distance = exteriorDistance;
+        return distance;
       }
-    } else {
-      // The actual distance operation - on a normal, hole-less polygon (converted to meters)
-      distance = turf.pointToLineDistance(point, turf.polygonToLineString(polygon)) * 1000;
-      if (turf.booleanPointInPolygon(point, polygon)) {
-        distance = distance * -1;
-      }
-    }
-  }
-  return distance
-}
 
-function createSearchPolygon (lng, lat, heading, distance, angle) {
-  var currentPosition = turf.point([lng,lat], { })
-  var options = {units: 'meters'}
-  var searchPolygon
-  if (compassMode) {
-    var bearing = heading - (angle/2)
-    if (bearing > 180) { bearing = bearing - 360 }
-    console.log('pointA: ' + bearing + ' distance: ' + distance)
-    var pointA = turf.rhumbDestination(currentPosition, distance, bearing, options);
-    var bearing = heading + (angle/2);
-    if (bearing > 180) { bearing = bearing - 360 }
-    console.log('pointB: ' + bearing + ' distance: ' + distance)
-    var pointB = turf.rhumbDestination(currentPosition, distance, bearing, options);
-    searchPolygon = turf.polygon([[
-      [lng,lat],
-      pointA.geometry.coordinates,
-      pointB.geometry.coordinates,
-      [lng,lat]
-    ]], {name: 'searchPolygon' });
-    console.log(JSON.stringify(searchPolygon))
-  } else {
-    var pointA = turf.destination(currentPosition, distance/2, 45, options.units);
-    var pointB = turf.destination(currentPosition, distance/2, 225, options.units);
-    searchPolygon = turf.bboxPolygon(turf.bbox(turf.lineString([pointA.geometry.coordinates, pointB.geometry.coordinates])))
-  }
-  return searchPolygon
-}
-
-function setOrientation () {
-  const windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-  const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-  if (!editMode) {
-    if (splitviewMode) {
-      if (windowWidth / windowHeight > 1.1) {
-        console.log('landscape')
-        document.getElementById('map').style.height = '85%'
-        document.getElementById('panel').style.height = '15%'
-        Array.from(document.getElementsByClassName('nearby')).forEach(
-          function(element, index, array) {
-            element.style.width = '50%'
+      function createSearchPolygon(lng, lat, heading, distance, angle) {
+        var currentPosition = turf.point([lng, lat], {});
+        var options = { units: "meters" };
+        var searchPolygon;
+        if (compassMode) {
+          var bearing = heading - angle / 2;
+          if (bearing > 180) {
+            bearing = bearing - 360;
           }
-        );
-      } else {
-        console.log('portrait')
-        document.getElementById('map').style.height = '70%'
-        document.getElementById('panel').style.height = '30%'
-        Array.from(document.getElementsByClassName('nearby')).forEach(
-          function(element, index, array) {
-            element.style.width = '100%'
+          console.log("pointA: " + bearing + " distance: " + distance);
+          var pointA = turf.rhumbDestination(
+            currentPosition,
+            distance,
+            bearing,
+            options,
+          );
+          var bearing = heading + angle / 2;
+          if (bearing > 180) {
+            bearing = bearing - 360;
           }
-        );
+          console.log("pointB: " + bearing + " distance: " + distance);
+          var pointB = turf.rhumbDestination(
+            currentPosition,
+            distance,
+            bearing,
+            options,
+          );
+          searchPolygon = turf.polygon(
+            [
+              [
+                [lng, lat],
+                pointA.geometry.coordinates,
+                pointB.geometry.coordinates,
+                [lng, lat],
+              ],
+            ],
+            { name: "searchPolygon" },
+          );
+          console.log(JSON.stringify(searchPolygon));
+        } else {
+          var pointA = turf.destination(
+            currentPosition,
+            distance / 2,
+            45,
+            options.units,
+          );
+          var pointB = turf.destination(
+            currentPosition,
+            distance / 2,
+            225,
+            options.units,
+          );
+          searchPolygon = turf.bboxPolygon(
+            turf.bbox(
+              turf.lineString([
+                pointA.geometry.coordinates,
+                pointB.geometry.coordinates,
+              ]),
+            ),
+          );
+        }
+        return searchPolygon;
       }
-    } else {
-      document.getElementById('map').style.height = '100%'
-      document.getElementById('panel').style.height = '0%'
-    }
-  } else {
-    document.getElementById('map').style.height = '100%'
-    document.getElementById('panel').style.height = '0%'
-  }
-  m.invalidateSize(true);
-}
 
-window.addEventListener("resize", (event) => {
-  setOrientation()
-});
+      function setOrientation() {
+        const windowWidth =
+          window.innerWidth ||
+          document.documentElement.clientWidth ||
+          document.body.clientWidth;
+        const windowHeight =
+          window.innerHeight ||
+          document.documentElement.clientHeight ||
+          document.body.clientHeight;
+        if (!editMode) {
+          if (splitviewMode) {
+            if (windowWidth / windowHeight > 1.1) {
+              console.log("landscape");
+              document.getElementById("map").style.height = "85%";
+              document.getElementById("panel").style.height = "15%";
+              Array.from(document.getElementsByClassName("nearby")).forEach(
+                function (element, index, array) {
+                  element.style.width = "50%";
+                },
+              );
+            } else {
+              console.log("portrait");
+              document.getElementById("map").style.height = "70%";
+              document.getElementById("panel").style.height = "30%";
+              Array.from(document.getElementsByClassName("nearby")).forEach(
+                function (element, index, array) {
+                  element.style.width = "100%";
+                },
+              );
+            }
+          } else {
+            document.getElementById("map").style.height = "100%";
+            document.getElementById("panel").style.height = "0%";
+          }
+        } else {
+          document.getElementById("map").style.height = "100%";
+          document.getElementById("panel").style.height = "0%";
+        }
+        m.invalidateSize(true);
+      }
 
-if (editMode) {
-  setOrientation()
-  $('.leaflet-container').css('cursor','crosshair');
-  showEditPopup()
-} else {
-  document.getElementsByClassName('splitview')[0].click()
-  document.getElementById('compass').innerHTML = '<img src="./magicBlueDot.png" width="100px" height="100px">'
-  $('.leaflet-container').css('cursor','');
-}
+      window.addEventListener("resize", (event) => {
+        setOrientation();
+      });
 
-
-</script>
-
+      if (editMode) {
+        setOrientation();
+        $(".leaflet-container").css("cursor", "crosshair");
+        showEditPopup();
+      } else {
+        document.getElementsByClassName("splitview")[0].click();
+        document.getElementById("compass").innerHTML =
+          '<img src="./magicBlueDot.png" width="100px" height="100px">';
+        $(".leaflet-container").css("cursor", "");
+      }
+    </script>
   </body>
 </html>

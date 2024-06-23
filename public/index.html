@@ -1,263 +1,318 @@
 <html>
-<head>
-  <META http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <META http-equiv="Pragma" content="no-cache" />
-  <META http-equiv="Expires" content="0" />
-  <META content="IE=11.0000" http-equiv="X-UA-Compatible">
-  <META charset="utf-8">
-  <META name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <META name="navico-store" content="mfd-insight-store">
-  <title>VHFinfo</title>
-  <script type='text/javascript' src='/jquery/dist/jquery.min.js'></script>
-  <script>document.write('<link rel="stylesheet" href="style.css?ver=' + Math.floor(Math.random() * 1000) + '">');</script>
-</head>
-<body>
-<div class="header">
-<a href="https://vhfinfo.org/" style="color:#ffffff;text-decoration: none">VHFinfo.org</a>
-</div>
-<div class="list" id="list"></div>
-</body>
+  <head>
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta content="IE=11.0000" http-equiv="X-UA-Compatible" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <meta name="navico-store" content="mfd-insight-store" />
+    <title>VHFinfo</title>
+    <script type="text/javascript" src="/jquery/dist/jquery.min.js"></script>
+    <script>
+      document.write(
+        '<link rel="stylesheet" href="style.css?ver=' +
+          Math.floor(Math.random() * 1000) +
+          '">',
+      );
+    </script>
+  </head>
+  <body>
+    <div class="header">
+      <a
+        href="https://vhfinfo.org/"
+        style="color: #ffffff; text-decoration: none"
+        >VHFinfo.org</a
+      >
+    </div>
+    <div class="list" id="list"></div>
+  </body>
 </html>
 <script>
+  // Set day or night mode
 
-// Set day or night mode
+  var connected = false;
+  var ws;
+  var wsNr = 0;
+  var nearest = {};
+  var numeric = /[0-9]+/;
+  var options = {};
 
-var connected=false;
-var ws;
-var wsNr = 0;
-var nearest = {}
-var numeric = /[0-9]+/
-var options = {}
-
-function readOptions () {
-  $.getJSON("/plugins/vhfinfo/options", function(json) {
-    options = json
-  })
-  if (typeof options.path != 'undefined') {
-    document.getElementById('list').innerHTML = "Loaded SignalK plugin config options, now connecting..."
-    setTimeout(connect, 500)
-  } else {
-    document.getElementById('list').innerHTML = "Reading SigalK plugin options..."
-    setTimeout(readOptions, 1000)
+  function readOptions() {
+    $.getJSON("/plugins/vhfinfo/options", function (json) {
+      options = json;
+    });
+    if (typeof options.path != "undefined") {
+      document.getElementById("list").innerHTML =
+        "Loaded SignalK plugin config options, now connecting...";
+      setTimeout(connect, 500);
+    } else {
+      document.getElementById("list").innerHTML =
+        "Reading SigalK plugin options...";
+      setTimeout(readOptions, 1000);
+    }
   }
-}
 
-function connect () {
-  if (connected || wsNr >= 1) {
-    return
-  };
-  ws = new WebSocket((window.location.protocol === 'https:' ? 'wss' : 'ws') + "://" + window.location.host + "/signalk/v1/stream?subscribe=none");
-	ws.onopen = function() {
-    document.getElementById('list').innerHTML = ""
-    wsNr++;
-	  connected = true;
-
-    var paths = [{ "path": options.path + ".*" }]
-    var subscriptionObject = {
-      "context": "vessels.self",
-      "subscribe": paths
+  function connect() {
+    if (connected || wsNr >= 1) {
+      return;
     }
-    var subscriptionMessage = JSON.stringify(subscriptionObject);
-    console.log("subscriptionMessage: " + subscriptionMessage);
-    ws.send(subscriptionMessage);
+    ws = new WebSocket(
+      (window.location.protocol === "https:" ? "wss" : "ws") +
+        "://" +
+        window.location.host +
+        "/signalk/v1/stream?subscribe=none",
+    );
+    ws.onopen = function () {
+      document.getElementById("list").innerHTML = "";
+      wsNr++;
+      connected = true;
 
-    ws.onmessage = function(event) {
-      if (event.data.includes('signalk-server')) {
-        welcomeMessage = event.data;
-        console.log("Skipping welcome message: " + welcomeMessage)
-      } else {
-        handleData(JSON.parse(event.data));
-      }
-    }
+      var paths = [{ path: options.path + ".*" }];
+      var subscriptionObject = {
+        context: "vessels.self",
+        subscribe: paths,
+      };
+      var subscriptionMessage = JSON.stringify(subscriptionObject);
+      console.log("subscriptionMessage: " + subscriptionMessage);
+      ws.send(subscriptionMessage);
 
-	  ws.onclose = function() {
-	    connected = false;
-      wsNr--;
-	    console.log("WebSocket closed - wsNr: " + wsNr);
-      if (instantReconnect) {
-        instantReconnect = false;
-        connect();
-      } else {
-        setInterval(function() {
+      ws.onmessage = function (event) {
+        if (event.data.includes("signalk-server")) {
+          welcomeMessage = event.data;
+          console.log("Skipping welcome message: " + welcomeMessage);
+        } else {
+          handleData(JSON.parse(event.data));
+        }
+      };
+
+      ws.onclose = function () {
+        connected = false;
+        wsNr--;
+        console.log("WebSocket closed - wsNr: " + wsNr);
+        if (instantReconnect) {
+          instantReconnect = false;
           connect();
-        }, 1000);
-      }
-	  }
+        } else {
+          setInterval(function () {
+            connect();
+          }, 1000);
+        }
+      };
 
-	  ws.onerror = function(err) {
-	    console.log("WebSocket connection error: " + err.message + " - closing connection");
-      ws.close();
-	  }
-    
+      ws.onerror = function (err) {
+        console.log(
+          "WebSocket connection error: " +
+            err.message +
+            " - closing connection",
+        );
+        ws.close();
+      };
+    };
   }
-}
 
-readOptions()
+  readOptions();
 
-
-function handleData (data) {
-  if (typeof data.updates[0].values[0].path != 'undefined') {
-    var path = data.updates[0].values[0].path.replace('resources.vhfdata.nearest.', '')
-    var value = data.updates[0].values[0].value
-    if (typeof value == 'string' && value.startsWith('{')) {
-      nearest[path] = JSON.parse(value)
-      if (path.match(numeric)) {
-        console.log(path)
-        updateNearest (path)
-      }
-    }
-  }
-}
-
-function updateNearest (id) {
-  console.log(nearest[id])
-  // Check if dom should exist
-  if (nearest[id].name == "") {
-    // Remove dom if exists
-    console.log('Empty data entry')
-    console.log('Remove? ' + document.getElementById("entry_" + id))
-    if (document.getElementById("entry_" + id) != null) {
-      document.getElementById("entry_" + id).remove()
-    }
-  } else {
-    // Add dom if doesn't exist
-    console.log('Create? ' + document.getElementById("entry_" + id))
-    if (document.getElementById("entry_" + id) == null) {
-      createEntry(id)
-    }
-    updateEntry(id)
-  }
-}
-
-function updateEntry(id) {
-  var fields = ['name', 'callname', 'channel', 'note', 'mode', 'distance', 'type']
-  var sub_types = ['generic', 'pleasure', 'cargo']
-  var note = false
-  
-  fields.forEach(field => {
-    console.log (`nearest[${id}][${field}]: ` + nearest[id][field])
-    if (typeof nearest[id][field] != 'undefined') {
-      switch (field) {
-        case 'note':
-          note = true
-          document.getElementById(field + "_" + id).innerHTML = nearest[id][field]
-          break
-        case 'name':
-          document.getElementById(field + "_" + id).innerHTML = "Name: " + nearest[id][field]
-          break
-        case 'callname':
-          document.getElementById(field + "_" + id).innerHTML = "Callsign: " + nearest[id][field]
-          break
-        default:
-          document.getElementById(field + "_" + id).innerHTML = nearest[id][field]
-          break
+  function handleData(data) {
+    if (typeof data.updates[0].values[0].path != "undefined") {
+      var path = data.updates[0].values[0].path.replace(
+        "resources.vhfdata.nearest.",
+        "",
+      );
+      var value = data.updates[0].values[0].value;
+      if (typeof value == "string" && value.startsWith("{")) {
+        nearest[path] = JSON.parse(value);
+        if (path.match(numeric)) {
+          console.log(path);
+          updateNearest(path);
+        }
       }
     }
-  })
-  var mode
-  if (typeof nearest[id].vhfdata != 'undefined' && typeof nearest[id].vhfdata.generic != 'undefined' && typeof nearest[id].vhfdata.generic.mode != 'undefined') {
-    mode = nearest[id].vhfdata.generic.mode
   }
-  if (typeof nearest[id].vhfdata != 'undefined' && typeof nearest[id].vhfdata.pleasure != 'undefined' && typeof nearest[id].vhfdata.pleasure.mode != 'undefined') {
-    mode = nearest[id].vhfdata.pleasure.mode
-  }
-  document.getElementById("mode_" + id).innerHTML = mode.toUpperCase()
-  document.getElementById("type_" + id).innerHTML = nearest[id].type.toUpperCase()
-  document.getElementById("distance_" + id).innerHTML = nearest[id].distance + "m"
-  document.getElementById("url_" + id).innerHTML = '<a href="' + nearest[id].url + '" style="text-decoration:none; color: white">&#128279;</a>'
-  document.getElementById("phone_" + id).innerHTML = '<a href="tel:' + nearest[id].phone + '" style="text-decoration:none; color: white">&#9990;</a>'
-  sub_types.forEach(sub_type => {
-	  if (typeof nearest[id].vhfdata != 'undefined' && typeof nearest[id].vhfdata[sub_type] != 'undefined' && typeof nearest[id].vhfdata[sub_type]['note'] != 'undefined') {
-	    document.getElementById(sub_type + "_" + 'note' + "_" + id).innerHTML = sub_type.toUpperCase() + ": " + nearest[id].vhfdata[sub_type]['note']
-      note = true
-	  }
-  })
-  if (note == false) {
-    if (document.getElementById('notes_' + id) != null) {
-      document.getElementById('notes_' + id).remove()
+
+  function updateNearest(id) {
+    console.log(nearest[id]);
+    // Check if dom should exist
+    if (nearest[id].name == "") {
+      // Remove dom if exists
+      console.log("Empty data entry");
+      console.log("Remove? " + document.getElementById("entry_" + id));
+      if (document.getElementById("entry_" + id) != null) {
+        document.getElementById("entry_" + id).remove();
+      }
+    } else {
+      // Add dom if doesn't exist
+      console.log("Create? " + document.getElementById("entry_" + id));
+      if (document.getElementById("entry_" + id) == null) {
+        createEntry(id);
+      }
+      updateEntry(id);
     }
   }
-}
 
+  function updateEntry(id) {
+    var fields = [
+      "name",
+      "callname",
+      "channel",
+      "note",
+      "mode",
+      "distance",
+      "type",
+    ];
+    var sub_types = ["generic", "pleasure", "cargo"];
+    var note = false;
 
-function createEntry(id) {
-  console.log('Creating entry for ' + id)
-  const entry = document.createElement("entry_" + id)
-  entry.classList.add("entry")
-  entry.id = "entry_" + id
+    fields.forEach((field) => {
+      console.log(`nearest[${id}][${field}]: ` + nearest[id][field]);
+      if (typeof nearest[id][field] != "undefined") {
+        switch (field) {
+          case "note":
+            note = true;
+            document.getElementById(field + "_" + id).innerHTML =
+              nearest[id][field];
+            break;
+          case "name":
+            document.getElementById(field + "_" + id).innerHTML =
+              "Name: " + nearest[id][field];
+            break;
+          case "callname":
+            document.getElementById(field + "_" + id).innerHTML =
+              "Callsign: " + nearest[id][field];
+            break;
+          default:
+            document.getElementById(field + "_" + id).innerHTML =
+              nearest[id][field];
+            break;
+        }
+      }
+    });
+    var mode;
+    if (
+      typeof nearest[id].vhfdata != "undefined" &&
+      typeof nearest[id].vhfdata.generic != "undefined" &&
+      typeof nearest[id].vhfdata.generic.mode != "undefined"
+    ) {
+      mode = nearest[id].vhfdata.generic.mode;
+    }
+    if (
+      typeof nearest[id].vhfdata != "undefined" &&
+      typeof nearest[id].vhfdata.pleasure != "undefined" &&
+      typeof nearest[id].vhfdata.pleasure.mode != "undefined"
+    ) {
+      mode = nearest[id].vhfdata.pleasure.mode;
+    }
+    document.getElementById("mode_" + id).innerHTML = mode.toUpperCase();
+    document.getElementById("type_" + id).innerHTML =
+      nearest[id].type.toUpperCase();
+    document.getElementById("distance_" + id).innerHTML =
+      nearest[id].distance + "m";
+    document.getElementById("url_" + id).innerHTML =
+      '<a href="' +
+      nearest[id].url +
+      '" style="text-decoration:none; color: white">&#128279;</a>';
+    document.getElementById("phone_" + id).innerHTML =
+      '<a href="tel:' +
+      nearest[id].phone +
+      '" style="text-decoration:none; color: white">&#9990;</a>';
+    sub_types.forEach((sub_type) => {
+      if (
+        typeof nearest[id].vhfdata != "undefined" &&
+        typeof nearest[id].vhfdata[sub_type] != "undefined" &&
+        typeof nearest[id].vhfdata[sub_type]["note"] != "undefined"
+      ) {
+        document.getElementById(sub_type + "_" + "note" + "_" + id).innerHTML =
+          sub_type.toUpperCase() + ": " + nearest[id].vhfdata[sub_type]["note"];
+        note = true;
+      }
+    });
+    if (note == false) {
+      if (document.getElementById("notes_" + id) != null) {
+        document.getElementById("notes_" + id).remove();
+      }
+    }
+  }
 
-  const channelblock = document.createElement("channelblock_" + id)
-  channelblock.classList.add("channelblock")
+  function createEntry(id) {
+    console.log("Creating entry for " + id);
+    const entry = document.createElement("entry_" + id);
+    entry.classList.add("entry");
+    entry.id = "entry_" + id;
 
-  const channel = document.createElement("channel_" + id)
-  channel.classList.add("channel")
-  channel.id = "channel_" + id
-  channelblock.appendChild(channel)
+    const channelblock = document.createElement("channelblock_" + id);
+    channelblock.classList.add("channelblock");
 
-  const typeblock = document.createElement("typeblock")
-  typeblock.classList.add("typeblock")
-  const type = document.createElement("type_" + id)
-  type.classList.add("type")
-  type.id = "type_" + id
-  typeblock.appendChild(type)
-  const mode = document.createElement("mode_" + id)
-  mode.classList.add("mode")
-  mode.id = "mode_" + id
-  typeblock.appendChild(mode)
-  const distance = document.createElement("distance_" + id)
-  distance.classList.add("distance")
-  distance.id = "distance_" + id
-  typeblock.appendChild(distance)
-  const phone = document.createElement("phone_" + id)
-  phone.classList.add("phone")
-  phone.id = "phone_" + id
-  typeblock.appendChild(phone)
-  const url = document.createElement("url_" + id)
-  url.classList.add("url")
-  url.id = "url_" + id
-  typeblock.appendChild(url)
-  channelblock.appendChild(typeblock)
-  entry.appendChild(channelblock)
+    const channel = document.createElement("channel_" + id);
+    channel.classList.add("channel");
+    channel.id = "channel_" + id;
+    channelblock.appendChild(channel);
 
-  const name = document.createElement("name_" + id)
-  name.classList.add("name")
-  name.id = "name_" + id
-  entry.appendChild(name)
+    const typeblock = document.createElement("typeblock");
+    typeblock.classList.add("typeblock");
+    const type = document.createElement("type_" + id);
+    type.classList.add("type");
+    type.id = "type_" + id;
+    typeblock.appendChild(type);
+    const mode = document.createElement("mode_" + id);
+    mode.classList.add("mode");
+    mode.id = "mode_" + id;
+    typeblock.appendChild(mode);
+    const distance = document.createElement("distance_" + id);
+    distance.classList.add("distance");
+    distance.id = "distance_" + id;
+    typeblock.appendChild(distance);
+    const phone = document.createElement("phone_" + id);
+    phone.classList.add("phone");
+    phone.id = "phone_" + id;
+    typeblock.appendChild(phone);
+    const url = document.createElement("url_" + id);
+    url.classList.add("url");
+    url.id = "url_" + id;
+    typeblock.appendChild(url);
+    channelblock.appendChild(typeblock);
+    entry.appendChild(channelblock);
 
-  const callname = document.createElement("callname_" + id)
-  callname.classList.add("name")
-  callname.id = "callname_" + id
-  entry.appendChild(callname)
+    const name = document.createElement("name_" + id);
+    name.classList.add("name");
+    name.id = "name_" + id;
+    entry.appendChild(name);
 
+    const callname = document.createElement("callname_" + id);
+    callname.classList.add("name");
+    callname.id = "callname_" + id;
+    entry.appendChild(callname);
 
+    const notes = document.createElement("notes_" + id);
+    notes.classList.add("notes");
+    notes.id = "notes_" + id;
+    entry.appendChild(notes);
 
+    const note = document.createElement("note_" + id);
+    note.classList.add("note");
+    note.id = "note_" + id;
+    notes.appendChild(note);
 
-  const notes = document.createElement("notes_" + id)
-  notes.classList.add("notes")
-  notes.id = "notes_" + id
-  entry.appendChild(notes)
+    const generic_note = document.createElement("generic_note_" + id);
+    generic_note.classList.add("note");
+    generic_note.id = "generic_note_" + id;
+    notes.appendChild(generic_note);
 
-  const note = document.createElement("note_" + id)
-  note.classList.add("note")
-  note.id = "note_" + id
-  notes.appendChild(note)
+    const pleasure_note = document.createElement("pleasure_note_" + id);
+    pleasure_note.classList.add("note");
+    pleasure_note.id = "pleasure_note_" + id;
+    notes.appendChild(pleasure_note);
 
-  const generic_note = document.createElement("generic_note_" + id)
-  generic_note.classList.add("note")
-  generic_note.id = "generic_note_" + id
-  notes.appendChild(generic_note)
+    const cargo_note = document.createElement("cargo_note_" + id);
+    cargo_note.classList.add("note");
+    cargo_note.id = "cargo_note_" + id;
+    notes.appendChild(cargo_note);
 
-  const pleasure_note = document.createElement("pleasure_note_" + id)
-  pleasure_note.classList.add("note")
-  pleasure_note.id = "pleasure_note_" + id
-  notes.appendChild(pleasure_note)
-
-  const cargo_note = document.createElement("cargo_note_" + id)
-  cargo_note.classList.add("note")
-  cargo_note.id = "cargo_note_" + id
-  notes.appendChild(cargo_note)
-
-  document.getElementById('list').appendChild(entry)
-}
-
+    document.getElementById("list").appendChild(entry);
+  }
 </script>
