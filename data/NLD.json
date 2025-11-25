@@ -25323,6 +25323,76 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "a219a9d1-09be-4a75-9015-42345e46d6a7",
+        "name": "Off Texel VTS",
+        "callname": "Off Texel",
+        "type": "vts",
+        "channel": "63",
+        "url": "https://www.rijkswaterstaat.nl/nieuws/archief/2025/10/nieuw-vts-gebied-off-texel-vanaf-3-november-operationeel",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen",
+            "note": "Pleasure craft: No need to announce"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.372290372849,
+              52.976736196216
+            ],
+            [
+              4.588497877121,
+              53.182577948657
+            ],
+            [
+              4.732006788254,
+              53.380922160933
+            ],
+            [
+              4.959999918938,
+              53.439998052317
+            ],
+            [
+              5.024979114532,
+              53.528306647425
+            ],
+            [
+              5.115450024605,
+              53.61814025397
+            ],
+            [
+              4.61932182312,
+              53.591460473069
+            ],
+            [
+              4.458984732628,
+              53.305073057264
+            ],
+            [
+              4.36531662941,
+              53.182565089779
+            ],
+            [
+              4.372290372849,
+              52.976736196216
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
