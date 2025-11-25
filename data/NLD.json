@@ -19052,16 +19052,16 @@
         "phone": "+31 88 797 41 70",
         "name": "Post Nijmegen",
         "vhfdata": {
-            "generic": {
-              "mode": "listen"
-            },
-            "pleasure": {
-              "mode": "listen"
-            },
-            "cargo": {
-              "mode": "listen"
-            }
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -20159,15 +20159,15 @@
         "phone": "+31 343-595111",
         "name": "Post Wijk bij Duurstede",
         "vhfdata": {
-            "generic": {
-              "mode": "listen"
-            },
-            "pleasure": {
-              "mode": "listen"
-            },
-            "cargo": {
-              "mode": "listen"
-            }
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
         }
       },
       "geometry": {
@@ -20618,15 +20618,15 @@
         "phone": "+31 343-595111",
         "name": "Post Wijk bij Duurstede",
         "vhfdata": {
-            "generic": {
-              "mode": "listen"
-            },
-            "pleasure": {
-              "mode": "listen"
-            },
-            "cargo": {
-              "mode": "listen"
-            }
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
         }
       },
       "geometry": {
@@ -20881,15 +20881,15 @@
         "phone": "+31 88 797 36 90",
         "name": "Post Tiel",
         "vhfdata": {
-            "generic": {
-              "mode": "listen"
-            },
-            "pleasure": {
-              "mode": "listen"
-            },
-            "cargo": {
-              "mode": "listen"
-            }
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
         }
       },
       "geometry": {
@@ -21716,15 +21716,15 @@
         "phone": "+31 10-2521000",
         "name": "Traffic Centre Hoek van Holland",
         "vhfdata": {
-            "generic": {
-              "mode": "listen"
-            },
-            "pleasure": {
-              "mode": "listen"
-            },
-            "cargo": {
-              "mode": "listen"
-            }
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
         }
       },
       "geometry": {
@@ -22359,15 +22359,15 @@
         "phone": "+31 88 797 36 90",
         "name": "Post Tiel",
         "vhfdata": {
-            "generic": {
-              "mode": "listen"
-            },
-            "pleasure": {
-              "mode": "listen"
-            },
-            "cargo": {
-              "mode": "listen"
-            }
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
         }
       },
       "geometry": {
@@ -23170,15 +23170,15 @@
         "phone": "+31 88 797 41 70",
         "name": "Post Nijmegen",
         "vhfdata": {
-            "generic": {
-              "mode": "listen"
-            },
-            "pleasure": {
-              "mode": "listen"
-            },
-            "cargo": {
-              "mode": "listen"
-            }
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
         }
       },
       "geometry": {
@@ -24813,15 +24813,15 @@
         "phone": "+31 10-2521000",
         "name": "Traffic Centre Hoek van Holland",
         "vhfdata": {
-            "generic": {
-              "mode": "listen"
-            },
-            "pleasure": {
-              "mode": "listen"
-            },
-            "cargo": {
-              "mode": "listen"
-            }
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
         }
       },
       "geometry": {
@@ -25319,6 +25319,52 @@
             [
               4.106766973,
               51.93798711
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "47802d46-0dd4-4605-a986-27060e06b912",
+        "name": "Test",
+        "callname": "Test",
+        "type": "vts",
+        "channel": "999",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.459075927734,
+              52.631744029445
+            ],
+            [
+              4.48860168457,
+              52.620484305478
+            ],
+            [
+              4.479675292969,
+              52.606301272734
+            ],
+            [
+              4.459075927734,
+              52.631744029445
             ]
           ]
         ]
