@@ -25496,6 +25496,56 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "24228f4c-7ceb-432a-9d35-a063e07f47ff",
+        "name": "koopvaarders tide lock",
+        "callname": "koopvaarders tide lock",
+        "type": "vts",
+        "channel": "22",
+        "url": "https://portofdenhelder.nl/shipping/bridges-and-locks",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.786766767502,
+              52.946459309298
+            ],
+            [
+              4.787061810493,
+              52.946375267093
+            ],
+            [
+              4.787898659706,
+              52.947661741437
+            ],
+            [
+              4.787603616714,
+              52.947729619674
+            ],
+            [
+              4.786766767502,
+              52.946459309298
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
