@@ -4990,6 +4990,36 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "76921e7d-eaa9-4c3f-8888-9bc39239c410",
+        "name": "Schleuse",
+        "callname": "Mühlendamm",
+        "type": "area",
+        "channel": "20",
+        "url": "https://https://www.wsa-spree-havel.wsv.de/Webs/WSA/Spree-Havel/DE/01_Wasserstrassen/01_BauwerkeAnlagen/02_Schleusen/SOW/Schleuse_Muehlendamm/schleusen_text.html",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.409070968628,
+          52.514653902015
+        ]
+      }
     }
   ]
 }
