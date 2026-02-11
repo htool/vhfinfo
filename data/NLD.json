@@ -25338,8 +25338,8 @@
             "mode": "announce"
           },
           "pleasure": {
-            "mode": "listen",
-            "note": "Pleasure craft: No need to announce"
+            "mode": "announce",
+            "note": "Every vessel entering has to announce"
           },
           "cargo": {
             "mode": "listen"
