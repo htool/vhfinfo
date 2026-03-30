@@ -128,7 +128,9 @@ module.exports = function (app, options) {
     app.streambundle
       .getSelfStream("navigation.position")
       .forEach((position) => {
-        currentCoordinates = [position.longitude, position.latitude];
+        if (position) {
+          currentCoordinates = [position.longitude, position.latitude];
+        }
       });
 
     app.streambundle
