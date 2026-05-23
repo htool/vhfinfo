@@ -25612,6 +25612,56 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "1bdaf04a-9ddd-4545-9865-adb6ef77502d",
+        "name": "Oude schouw",
+        "callname": "oude schouw",
+        "type": "vts",
+        "channel": "81",
+        "url": "https://",
+        "phone": "+31582925888",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.806293189526,
+              53.065687766702
+            ],
+            [
+              5.807009339333,
+              53.065349300652
+            ],
+            [
+              5.807105898857,
+              53.065428276301
+            ],
+            [
+              5.806403160095,
+              53.065774800399
+            ],
+            [
+              5.806293189526,
+              53.065687766702
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
