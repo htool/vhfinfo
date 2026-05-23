@@ -25662,6 +25662,56 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "8894b4db-40e3-465d-bd6b-36722b7752cd",
+        "name": "Schellingwoude brug",
+        "callname": "Schellingwoude",
+        "type": "vts",
+        "channel": "18",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.968234300613,
+              52.379659845452
+            ],
+            [
+              4.964425563812,
+              52.376948408035
+            ],
+            [
+              4.964908361435,
+              52.376699523794
+            ],
+            [
+              4.968641996384,
+              52.379437173292
+            ],
+            [
+              4.968234300613,
+              52.379659845452
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
