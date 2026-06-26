@@ -612,6 +612,513 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "b46dfa75-a53b-440a-8b00-f616425eedcb",
+        "name": "Ii remote station",
+        "callname": "Turku Radio",
+        "type": "area",
+        "channel": "07",
+        "url": "https://www.fintraffic.fi",
+        "phone": "+358 20 448 6400",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.1806640625,
+          65.587990421321
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "1577c52f-b89d-4fd7-aa08-5eaf0f71b970",
+        "name": "Raahe remote station",
+        "callname": "Turku Radio",
+        "type": "area",
+        "channel": "05",
+        "url": "https://www.fintraffic.fi",
+        "phone": "+358 20 448 6400",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.470672607422,
+          64.683841584222
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "486ce372-7ab1-44ac-a034-b9d6a82589c9",
+        "name": "Kruunupyy remote station",
+        "callname": "Turku Radio",
+        "type": "area",
+        "channel": "01",
+        "url": "https://www.fintrafic.fi",
+        "phone": "+358 20 448 6400",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.025970458984,
+          63.728438693975
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "412dfb8a-8cc9-4b8d-8537-63718098f82c",
+        "name": "Mustasaari remote station",
+        "callname": "Turku Radio",
+        "type": "area",
+        "channel": "04",
+        "url": "https://www.fintrafic.fi",
+        "phone": "+358 20 448 6400",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.685638427734,
+          63.12364090552
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "6f425b54-1ce1-4aba-9488-21e938a10cfa",
+        "name": "Kristiinankaupunki remote station",
+        "callname": "Turku Radio",
+        "type": "area",
+        "channel": "03",
+        "url": "https://www.fintrafic.fi",
+        "phone": "+358 20 488 6400",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.389007568359,
+          62.275590181762
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "7296c5ee-235f-4832-b611-1da41c20ff4b",
+        "name": "Eurajoki remote station",
+        "callname": "Turku Radio",
+        "type": "area",
+        "channel": "19",
+        "url": "https://fintrafic.fi",
+        "phone": "+358 20 448 6400",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.722717285156,
+          61.216718157756
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "8b5bb287-d4fe-44ce-9cb8-59e241cb8e6f",
+        "name": "Uusikaupunki remote station",
+        "callname": "Turku Radio",
+        "type": "area",
+        "channel": "01",
+        "url": "https://fintrafic.fi",
+        "phone": "+358 20 448 6400",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.402740478516,
+          60.803403576861
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "3fe666ed-7a7b-46e6-bb94-d06f5b895317",
+        "name": "Turku",
+        "callname": "Turku Radio",
+        "type": "vts",
+        "url": "https://fintrafic.fi",
+        "phone": "+358 20 448 6400",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.250061035156,
+          60.450445760271
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "2cdf2d22-4546-4c4d-bbff-c89b70bad539",
+        "name": "Nauvo remote station",
+        "callname": "Turku Radio",
+        "type": "area",
+        "channel": "23",
+        "url": "https://fintrafic.fi",
+        "phone": "+358 20 448 6400",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.920471191406,
+          60.192060091523
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "16030036-6755-4c15-895c-2ed552d9966d",
+        "name": "Geta remote station",
+        "callname": "Turku Radio",
+        "type": "area",
+        "channel": "05",
+        "url": "https://fintrafic.fi",
+        "phone": "+358 20 448 6400",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.849548339844,
+          60.379254068536
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "481519e1-f8f8-4e1a-b2a4-d8e92b57b19d",
+        "name": "Hammarland remote station",
+        "type": "area",
+        "channel": "07",
+        "url": "https://fintrafic.fi",
+        "phone": "+358 20 448 6400",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.705352783203,
+          60.22003701634
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "530fb621-21f8-4f23-824d-c3e98ecdd5cd",
+        "name": "Järsö remote station",
+        "callname": "Turku Radio",
+        "type": "area",
+        "channel": "04",
+        "url": "https://fintraffic.fi",
+        "phone": "+358 20 448 6400",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.997863769531,
+          60.01957970415
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ae7f1001-0e21-4b42-8580-10f7efbc0d70",
+        "name": "Utö remote station",
+        "callname": "Turku Radio",
+        "type": "area",
+        "channel": "79",
+        "url": "https://fintraffic.fi",
+        "phone": "+358 20 448 6400",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.372528076172,
+          59.786815806115
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "3b843089-832d-4343-bc0a-c411c9e5877b",
+        "name": "Hanko remote station",
+        "callname": "Turku Radio",
+        "type": "area",
+        "channel": "03",
+        "url": "https://fintraffic.fi",
+        "phone": "+358 20 448 6400",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.965545654297,
+          59.826873557241
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "2c720dcb-74be-48de-85cf-13fa1af55fca",
+        "name": "Espoo remote station",
+        "type": "area",
+        "channel": "04",
+        "url": "https://fintraffic.fi",
+        "phone": "+358 20 448 6400",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.673919677734,
+          60.195473189116
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "0b57d8a2-c036-42ac-b3fa-c44d98ad4495",
+        "name": "Kotka remote station",
+        "callname": "Turku Radio",
+        "type": "area",
+        "channel": "82",
+        "url": "https://fintraffic.fi",
+        "phone": "+358 20 448 6400",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.930236816406,
+          60.465342378921
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "081dd242-1016-49fa-9908-91ac76f38b7c",
+        "name": "Virolahti remote station",
+        "callname": "Turku Radio",
+        "type": "area",
+        "channel": "83",
+        "url": "https://fintraffic.fi",
+        "phone": "+358 20 448 6400",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.711296081543,
+          60.504244461546
+        ]
+      }
     }
   ]
 }
