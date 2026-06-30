@@ -935,7 +935,7 @@
       "type": "Feature",
       "properties": {
         "id": "d0bb48d0-4279-490e-8741-ff7e50212d2d",
-        "name": "Dover Port Control",
+        "name": "Dover VTS (Port Control)",
         "type": "vts",
         "channel": "74",
         "url": "https://www.doverport.co.uk/administrator/tinymce/source/VTS/Dover%20VTS%20Operational%20Information%20Brochure.pdf",
@@ -951,7 +951,8 @@
           "cargo": {
             "mode": "listen"
           }
-        }
+        },
+        "callname": "Dover VTS"
       },
       "geometry": {
         "type": "Polygon",
