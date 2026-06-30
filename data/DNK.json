@@ -2194,6 +2194,35 @@
           56.415420725861
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "12ebcb68-f9ec-4853-ba8c-1d4438620283",
+        "name": "Lyngby Radio - Kopenhagen",
+        "type": "area",
+        "channel": "3",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.6123046875,
+          55.714734550127
+        ]
+      }
     }
   ]
 }
