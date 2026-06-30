@@ -2165,6 +2165,35 @@
           55.063427631453
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "f3e20b7d-fd0e-4b3d-96d1-a7c084df2c01",
+        "name": "Lyngby Radion - Fornaes",
+        "type": "vts",
+        "channel": "18",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.8984375,
+          56.415420725861
+        ]
+      }
     }
   ]
 }
