@@ -1933,6 +1933,238 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bf753942-b0f7-4654-ada4-5f93569ac258",
+        "name": "Lyngby Radio - Felsted",
+        "type": "area",
+        "channel": "62",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.512786865234,
+          54.97997798159
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "f19a29b2-95e0-4c61-8955-38d45f4b99b0",
+        "name": "Lyngby Radio - Roesnaes",
+        "type": "vts",
+        "channel": "1",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.975341796875,
+          55.739481698693
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "0fa02e22-2f8b-43f4-af73-38d243adbcce",
+        "name": "Lyngby Radio - Vejby",
+        "type": "vts",
+        "channel": "63",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.153625488281,
+          56.073568446484
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "1cb1e287-122f-48f5-86bb-b650cd1b012d",
+        "name": "Lyngby Radio - Vejle",
+        "type": "vts",
+        "channel": "65",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.5361328125,
+          55.705450325203
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "6edb9f83-d036-40a2-8f14-2c15f64f6c1a",
+        "name": "Lyngby Radio - Fornæs",
+        "type": "vts",
+        "channel": "66",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.859985351563,
+          56.407823369827
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "e9e4d0fc-b689-4dd1-8883-91ed67641a51",
+        "name": "Lyngby Radion - Kopenhagen/Lynetten",
+        "type": "vts",
+        "channel": "3",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.632904052734,
+          55.681455864675
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "b470015c-9a37-4849-8fb3-3a5632611378",
+        "name": "Lyngby Radion - Mern",
+        "type": "vts",
+        "channel": "2",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.88720703125,
+          55.002825809793
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "a156008b-dacc-49ed-8016-c7adc42aa139",
+        "name": "Lyngby Radion - Svendborg",
+        "type": "vts",
+        "channel": "18",
+        "url": "https://",
+        "phone": "+",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.607299804688,
+          55.063427631453
+        ]
+      }
     }
   ]
 }
