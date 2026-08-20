@@ -21,15 +21,15 @@ Press the ![26px](public/arrow.png) button to enable/disable follow mode.
 You can change format of the map coordinates by clicking the coordinates in the bottom left.
 
 ## Adding or changing information
-Find the area on the map, then press the pencil button. Stay on the same map: click an area to change its details, or draw a new one with the tools on the left.
+Find the area on the map, then press the pencil button. You will be asked to sign in (we email you a link, or you can use Google — no password). Stay on the same map: click an area to change its details, or draw a new one with the tools on the left.
 
-When you are done, tap **Publish changes**. You will be asked for an email (in case of questions) and a short note.
+When you are done, tap **Publish changes**. Your signed-in email is attached to the change.
 
 ## Editing info
 The only shapes to use are &#11203 (polygon) and &#9679; (circles). No 'points' as it's impossible to tell if you'll pass through the point.
 See below for shape instructions.
 
-When you're done, tap **Publish changes**. You will be asked for an email (in case of questions) and a short note.
+When you're done, tap **Publish changes**. Your signed-in email is attached to the change.
 
 ### Drawing the coordinates on the map
 #### Lock
