@@ -47,5 +47,7 @@ Open the map, tap the pencil, enter your email, tap **Email me a sign-in link**,
 ## 5. Feature table (shadow copy)
 
 The website map loads `public.vhf_features` (view and edit). GitHub is the
-fallback. Publishing dual-writes git + the table (see `supabase/README.md`).
-The first load of existing git data is already done (380 rows).
+fallback. Publishing writes the table; `scripts/sync-vhf-to-git.js` plus the
+`Sync VHF features from database` GitHub Action keep `data/{CC}.json` in
+sync for the plugin. You can turn off `commit.vhfinfo.org` after this is on
+`main`.

@@ -17,7 +17,7 @@ see if certain VHF information is already present, you can look at the [online m
 ## Adding information
 Open the [online map](https://vhfinfo.org/map.html), find the area, and press the pencil. You stay on the same map. Changing the map requires signing in (email link or Google, no password).
 
-Site owners: see `AUTH_SETUP.md` to connect the free sign-in project. Feature rows live in Supabase (`supabase/README.md`); the website map reads that table, with GitHub as fallback.
+Site owners: see `AUTH_SETUP.md` to connect the free sign-in project. Feature rows live in Supabase (`supabase/README.md`); the website map reads that table, with GitHub as fallback. Git country files are synced from the table in the background.
 
 ### Drawing the coordinates on the map
 Goto one of the following country linke and draw the VHF channel area as a polygon.

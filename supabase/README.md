@@ -9,9 +9,10 @@ Project: `imgadhoivcpexrferorn` (`https://imgadhoivcpexrferorn.supabase.co`)
 
 Initial load is done: **380** unique rows (public `SELECT` works; anonymous writes are blocked). Re-running the import is an upsert by id.
 
-Publishing from the map **dual-writes**: git (`commit.vhfinfo.org`) and
-`public.vhf_features`. The website map reads the table; git remains for the
-plugin and as fallback until a later sync step.
+Publishing from the map writes `public.vhf_features`. A GitHub Action
+(`sync-vhf-from-db.yml`) copies the table into `data/{CC}.json` every 15
+minutes (and on manual run) so the SignalK plugin and GitHub fallback stay
+current. The browser no longer posts to `commit.vhfinfo.org`.
 
 ## What gets imported
 
