@@ -1,13 +1,15 @@
 # Feature documents (Step 3)
 
 Shadow copy of `data/{CC}.json` into Supabase table `public.vhf_features`.
-The map still reads GitHub. Do not point `map.html` at this table yet.
+Viewers still load GitHub GeoJSON. **Edit mode reads this table.**
 
 Project: `imgadhoivcpexrferorn` (`https://imgadhoivcpexrferorn.supabase.co`)
 
 Initial load is done: **380** unique rows (public `SELECT` works; anonymous writes are blocked). Re-running the import is an upsert by id.
 
-Publishing from the map now **dual-writes**: the existing git commit API still updates the public map, and the same add/change/delete is applied to `public.vhf_features` as the signed-in user. The map still **reads GitHub**.
+Publishing from the map now **dual-writes**: the existing git commit API still updates the public map, and the same add/change/delete is applied to `public.vhf_features` as the signed-in user.
+
+**Edit mode reads this table.** Viewers (not editing) still load GitHub GeoJSON. If the database cannot be reached, edit mode falls back to GitHub.
 
 ## What gets imported
 

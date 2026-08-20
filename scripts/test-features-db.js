@@ -84,6 +84,32 @@ assert.strictEqual(changeRow.channel, "12/16")
 assert.strictEqual(changeRow.created_by, undefined)
 assert.strictEqual(changeRow.updated_by, userId)
 
+const rebuilt = db.rowsToFeatures([
+  {
+    id: addId,
+    country: "NLD",
+    name: "Test marina",
+    type: "marina",
+    channel: "16",
+    properties: { id: addId, name: "Test marina", type: "marina", channel: 16 },
+    geometry: addRow.geometry,
+  },
+])
+assert.strictEqual(rebuilt.length, 1)
+assert.strictEqual(rebuilt[0].properties.id, addId)
+assert.strictEqual(rebuilt[0].properties.channel, 16)
+assert.strictEqual(rebuilt[0].geometry.type, "Polygon")
+assert.strictEqual(db.rowsToFeatures([{ id: addId, properties: {} }]).length, 0)
+
+const fs = require("fs")
+const path = require("path")
+const src = fs.readFileSync(
+  path.join(__dirname, "..", "website", "supabase-config.js"),
+  "utf8"
+)
+const supabaseUrl = (src.match(/url:\s*"([^"]+)"/) || [])[1]
+const anonKey = (src.match(/anonKey:\s*"([^"]+)"/) || [])[1]
+
 const mockCalls = []
 const mockClient = {
   from: function (table) {
@@ -115,7 +141,21 @@ db.publishFeaturesToDb("NLD", changes, {
     assert.strictEqual(result.deletes, 1)
     assert.strictEqual(mockCalls[0].op, "upsert")
     assert.strictEqual(mockCalls[1].op, "delete")
+    return db.fetchCountryFeatures("NLD", {
+      url: supabaseUrl,
+      anonKey: anonKey,
+    })
+  })
+  .then(function (features) {
+    assert.ok(features.length >= 200, "expected NLD areas from the database")
+    var scheveningen = features.find(function (f) {
+      return f.properties && f.properties.id === "549b42cd-e7ed-40e8-b38a-6adf49f629c8"
+    })
+    assert.ok(scheveningen, "Jachtclub Scheveningen should be in the DB copy")
+    assert.strictEqual(scheveningen.properties.name, "Jachtclub Scheveningen")
+    assert.strictEqual(scheveningen.geometry.type, "Polygon")
     console.log("features-db unit tests ok")
+    console.log("NLD from database: " + features.length + " areas")
   })
   .catch(function (err) {
     console.error(err)

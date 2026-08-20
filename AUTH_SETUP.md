@@ -46,6 +46,7 @@ Open the map, tap the pencil, enter your email, tap **Email me a sign-in link**,
 
 ## 5. Feature table (shadow copy)
 
-The map still reads GitHub. Publishing also writes the same change to
-`public.vhf_features` (see `supabase/README.md`). The first load of existing
-git data is already done (380 rows).
+The public map still reads GitHub. Edit mode loads `public.vhf_features` so
+editors see the database copy. Publishing dual-writes git + the table
+(see `supabase/README.md`). The first load of existing git data is already
+done (380 rows).
