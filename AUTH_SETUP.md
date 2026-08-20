@@ -43,3 +43,7 @@ Google is currently off, so the map hides that button until you enable it.
 ## 4. Check it
 
 Open the map, tap the pencil, enter your email, tap **Email me a sign-in link**, and open the mail. After you follow the link, you should be able to edit and publish.
+
+## 5. Feature table (shadow copy)
+
+The map still reads GitHub. To load `data/{CC}.json` into `public.vhf_features`, see `supabase/README.md`.
