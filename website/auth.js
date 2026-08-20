@@ -338,6 +338,8 @@ function authErrorMessage(err) {
   }
   return "Could not send the link. Try again in a little while.";
 }
+
+function sendMagicLink() {
   var emailInput = document.getElementById("auth-email");
   var email = (emailInput && emailInput.value ? emailInput.value : "").trim();
   if (!email || email.indexOf("@") < 0) {
