@@ -2,7 +2,7 @@
 /**
  * Dual-write helper: map publishes still go to commit.vhfinfo.org;
  * this also upserts/deletes the same features in public.vhf_features.
- * Edit mode reads this table. The public map still reads GitHub.
+ * The map (view and edit) reads this table. GitHub is the fallback.
  */
 (function (root, factory) {
   if (typeof module === "object" && module.exports) {

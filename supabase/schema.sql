@@ -2,8 +2,8 @@
 -- Run this once in the Supabase SQL editor:
 --   https://supabase.com/dashboard/project/imgadhoivcpexrferorn/sql/new
 --
--- The public map still reads GitHub. This table is the Step 3 copy so we can
--- dual-write and then switch reads later.
+-- The website map reads this table. GitHub GeoJSON is the fallback.
+-- Outlines and 12 Nm files stay in git.
 --
 -- Public can SELECT. Signed-in users can INSERT/UPDATE/DELETE.
 -- Do not grant write to anon. Do not put the service_role key in the website.
