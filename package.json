@@ -23,7 +23,15 @@
     "displayName": "VHFinfo"
   },
   "scripts": {
-    "format": "prettier --write --no-semi --single-quote plugin/*"
+    "format": "prettier --write --no-semi --single-quote plugin/*",
+    "import:vhf": "node scripts/import-vhf-features.js",
+    "import:vhf:sql": "node scripts/import-vhf-features.js --sql",
+    "import:vhf:verify": "node scripts/verify-vhf-features.js",
+    "test:features-db": "node scripts/test-features-db.js",
+    "test:dual-write-live": "node scripts/test-dual-write-live.js",
+    "sync:vhf": "node scripts/sync-vhf-to-git.js",
+    "sync:vhf:dry-run": "node scripts/sync-vhf-to-git.js --dry-run",
+    "test:sync-vhf": "node scripts/test-sync-vhf-to-git.js"
   },
   "dependencies": {
     "@turf/nearest-point": "6.5.0",
