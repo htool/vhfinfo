@@ -7,6 +7,8 @@ Project: `imgadhoivcpexrferorn` (`https://imgadhoivcpexrferorn.supabase.co`)
 
 Initial load is done: **380** unique rows (public `SELECT` works; anonymous writes are blocked). Re-running the import is an upsert by id.
 
+Publishing from the map now **dual-writes**: the existing git commit API still updates the public map, and the same add/change/delete is applied to `public.vhf_features` as the signed-in user. The map still **reads GitHub**.
+
 ## What gets imported
 
 - Country files such as `data/NLD.json`
