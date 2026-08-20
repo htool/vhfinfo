@@ -26,6 +26,11 @@ Sign-in talks to this project. People return to the map after they tap the email
 2. Leave it enabled. You do **not** need passwords.
 3. Optional: in **Authentication → Emails**, the “Magic Link” template is what people receive.
 
+The built-in mailer on the free plan only allows a few emails per hour for the
+whole project. If sending a link fails with a rate-limit message, wait a bit or
+use a tab that is already signed in. For more mail later, add your own sender
+under **Project Settings → Authentication → SMTP**.
+
 ## 3. Google sign-in (optional, but nicer)
 
 Google is currently off, so the map hides that button until you enable it.
