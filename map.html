@@ -1450,6 +1450,36 @@
         }
       }
 
+      function dismissFeaturePopup(layer) {
+        if (layer && layer.closePopup) {
+          layer.closePopup();
+        }
+        if (layer && layer.unbindPopup) {
+          layer.unbindPopup();
+        }
+        m.closePopup();
+      }
+
+      function unbindAllFeaturePopups() {
+        function strip(group) {
+          if (!group || !group.eachLayer) {
+            return;
+          }
+          group.eachLayer(function (layer) {
+            dismissFeaturePopup(layer);
+          });
+        }
+        strip(vtsLayer);
+        strip(radarLayer);
+        strip(lockLayer);
+        strip(bridgeLayer);
+        strip(marinaLayer);
+        strip(areaLayer);
+        strip(Nm12);
+        strip(drawnItems);
+        m.closePopup();
+      }
+
       function restoreLayerStyle(layer) {
         if (!layer) {
           return;
@@ -1520,7 +1550,11 @@
           },
           click: function (e) {
             if (editMode) {
-              L.DomEvent.stopPropagation(e);
+              L.DomEvent.stop(e);
+              if (e.originalEvent) {
+                L.DomEvent.stop(e.originalEvent);
+              }
+              dismissFeaturePopup(e.target);
               openEditor(e.target);
             } else {
               showInfo(e.target.feature, e.target, country);
@@ -1703,6 +1737,7 @@
             if (forEdit || (editMode && country === code)) {
               addCountryLayersToDrawnItems(code);
               setEditCountBanner(code, features.length, true);
+              unbindAllFeaturePopups();
             }
           })
           .catch(function (err) {
@@ -1889,7 +1924,9 @@
           country +
           '" style="text-decoration: none;">Change this info</a></td></tr>';
         html = html + "</table>";
-
+        if (editMode) {
+          return;
+        }
         layer.bindPopup(html).openPopup();
         layer.addTo(m);
       }
@@ -1999,7 +2036,11 @@
         ensureFeatureDefaults(layer, true);
         layer.on("click", function (evt) {
           if (editMode) {
-            L.DomEvent.stopPropagation(evt);
+            L.DomEvent.stop(evt);
+            if (evt.originalEvent) {
+              L.DomEvent.stop(evt.originalEvent);
+            }
+            dismissFeaturePopup(layer);
             openEditor(layer);
           }
         });
@@ -2121,6 +2162,7 @@
         $(".leaflet-container").css("cursor", "crosshair");
         setOrientation();
         setTimeout(removeUnwanted, 500);
+        unbindAllFeaturePopups();
         closeEditor();
         if (typeof updateAuthUi === "function") {
           updateAuthUi();
@@ -2325,6 +2367,7 @@
           return;
         }
         m.closePopup();
+        dismissFeaturePopup(layer);
         if (currentEditLayer && currentEditLayer !== layer) {
           restoreLayerStyle(currentEditLayer);
         }
@@ -2616,6 +2659,17 @@
           m.removeLayer(areaLayer);
         }
       }
+
+      m.on("popupopen", function () {
+        if (!editMode) {
+          return;
+        }
+        setTimeout(function () {
+          if (editMode) {
+            m.closePopup();
+          }
+        }, 0);
+      });
 
       m.on("zoomend", function () {
         checkIfLoaded();
