@@ -76,9 +76,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.EasyButton/2.4.0/easy-button.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.1/dist/umd/supabase.js"></script>
-    <script src="supabase-config.js?v=9"></script>
-    <script src="auth.js?v=9"></script>
-    <script src="features-db.js?v=9"></script>
+    <script src="supabase-config.js?v=10"></script>
+    <script src="auth.js?v=10"></script>
+    <script src="features-db.js?v=10"></script>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
@@ -685,8 +685,8 @@
       <div class="help-content">
         <h2>Publish your changes?</h2>
         <p>
-          This updates the public map (still stored in git). A copy is also
-          saved in the database. Add a short note about what you changed.
+          This updates the public map right away. A git copy for the plugin is
+          written in the background. Add a short note about what you changed.
         </p>
         <p id="publish-as"></p>
         <ul id="publish-list"></ul>
@@ -2486,40 +2486,28 @@
             changedLayer.removeLayer(layer);
           }
         });
-        var details = "";
-        Object.keys(changedIds).forEach(function (id) {
-          var info = changedIds[id];
-          details +=
-            " - " + info.name + " [" + info.action + "]: " + id + "\n";
-        });
-        var reason = email + " - " + (note || "Map update") + "\n\n" + details;
         var publishCountry = country;
         var publishPayload = changedIds;
-        commitGitHub(publishCountry, publishPayload, reason);
-        function finishPublish(dbErr) {
-          if (dbErr) {
-            alert(
-              "Published to the public map. The database copy could not be updated: " +
-                dbErr,
-            );
-          }
-          location.reload();
-        }
         if (
-          window.vhfFeaturesDb &&
-          typeof window.vhfFeaturesDb.publishFeaturesToDb === "function"
+          !window.vhfFeaturesDb ||
+          typeof window.vhfFeaturesDb.publishFeaturesToDb !== "function"
         ) {
-          window.vhfFeaturesDb
-            .publishFeaturesToDb(publishCountry, publishPayload)
-            .then(function (result) {
-              finishPublish(result && result.error);
-            })
-            .catch(function (err) {
-              finishPublish((err && err.message) || String(err));
-            });
-        } else {
-          location.reload();
+          alert("Could not publish: the database helper is missing.");
+          return;
         }
+        window.vhfFeaturesDb
+          .publishFeaturesToDb(publishCountry, publishPayload)
+          .then(function (result) {
+            if (result && result.error) {
+              alert("Could not publish: " + result.error);
+              return;
+            }
+            closePublishModal();
+            location.reload();
+          })
+          .catch(function (err) {
+            alert("Could not publish: " + ((err && err.message) || String(err)));
+          });
       }
 
       function removeIdFromLayer(id, type) {
@@ -2589,33 +2577,6 @@
         return Object.keys(obj).length > 0 || obj instanceof Array
           ? obj
           : undefined;
-      }
-
-      function commitGitHub(country, changesObj, reason) {
-        changesObj = removeEmpty(changesObj);
-        if (reason != "" && reason != null) {
-          let postURL =
-            "https://commit.vhfinfo.org:6644/apiv2?country=" +
-            country +
-            "&reason=" +
-            reason;
-          $.ajax({
-            type: "POST",
-            contentType: "application/json",
-            url: postURL,
-            cache: false,
-            async: false,
-            data: JSON.stringify(changesObj),
-            success: function (result) {
-              alert(result);
-              return result;
-            },
-            error: function (result) {
-              alert(result);
-              return result;
-            },
-          });
-        }
       }
 
       function jsonToBase64(jsonObj) {

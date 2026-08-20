@@ -1,7 +1,6 @@
 /* global vhfAuth, getSignedInUser */
 /**
- * Dual-write helper: map publishes still go to commit.vhfinfo.org;
- * this also upserts/deletes the same features in public.vhf_features.
+ * Map publishes write public.vhf_features. Git is synced in the background.
  * The map (view and edit) reads this table. GitHub is the fallback.
  */
 (function (root, factory) {
