@@ -4,19 +4,14 @@ Viewers do not need an account. People who change the map must sign in with
 **email (a link, no password)** or **Google**.
 
 Supabase organisation: `bwrgvqczyqfjvcmfhbsn`  
+Project: `imgadhoivcpexrferorn` (`https://imgadhoivcpexrferorn.supabase.co`)  
 Dashboard: [https://supabase.com/dashboard/org/bwrgvqczyqfjvcmfhbsn](https://supabase.com/dashboard/org/bwrgvqczyqfjvcmfhbsn)
 
-## 1. Create a free project in that organisation
+The website is already pointed at this project in `website/supabase-config.js` (anon public key only).
 
-The organisation slug is not enough to connect the map. Sign-in talks to a
-**project** (URL + anon key).
+## 1. Confirm redirect URLs
 
-1. Open the organisation dashboard above.
-2. **New project** if you do not already have one (any name is fine, for example `vhfinfo`). Pick a region close to your users. Wait until it is ready.
-3. Open **Project Settings → API**.
-4. Copy **Project URL** (looks like `https://abcdefghij.supabase.co`) and the **anon public** key into `website/supabase-config.js`, or send them as `SUPABASE_URL` and `SUPABASE_ANON_KEY`. Do not copy the `service_role` key.
-
-## 2. Tell Supabase which pages may sign people in
+Sign-in talks to this project. People return to the map after they tap the email link, so these URLs must be allowed:
 
 1. Open **Authentication → URL Configuration**.
 2. Set **Site URL** to `https://vhfinfo.org`.
@@ -25,22 +20,21 @@ The organisation slug is not enough to connect the map. Sign-in talks to a
    - `https://vhfinfo.org/**`
    - `http://localhost:8080/map.html` (for trying it on your computer)
 
-## 3. Email sign-in (the link in their inbox)
+## 2. Email sign-in (the link in their inbox)
 
 1. Open **Authentication → Providers → Email**.
 2. Leave it enabled. You do **not** need passwords.
 3. Optional: in **Authentication → Emails**, the “Magic Link” template is what people receive.
 
-## 4. Google sign-in (optional, but nicer)
+## 3. Google sign-in (optional, but nicer)
+
+Google is currently off, so the map hides that button until you enable it.
 
 1. In Google Cloud, create an OAuth client (Web application).
 2. Add authorized redirect URI:
-   `https://YOUR_PROJECT_REF.supabase.co/auth/v1/callback`
-   (Supabase shows this URI on the Google provider screen.)
+   `https://imgadhoivcpexrferorn.supabase.co/auth/v1/callback`
 3. In Supabase: **Authentication → Providers → Google**. Turn it on and paste the Client ID and Client secret.
 
-Until Google is turned on, the map still offers the email link. If someone taps Google too early, they see a short “use the email link instead” message.
-
-## 5. Check it
+## 4. Check it
 
 Open the map, tap the pencil, enter your email, tap **Email me a sign-in link**, and open the mail. After you follow the link, you should be able to edit and publish.
