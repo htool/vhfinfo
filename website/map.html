@@ -247,6 +247,184 @@
         color: white;
         font-size: 110%;
       }
+
+      #edit-banner {
+        display: none;
+        position: fixed;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1200;
+        background: #1a1a1a;
+        color: #fff;
+        padding: 8px 10px 8px 14px;
+        border-radius: 8px;
+        font-family: Helvetica, sans-serif;
+        font-size: 14px;
+        align-items: center;
+        gap: 8px;
+        max-width: calc(100% - 80px);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+      }
+      body.editing #edit-banner {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      #edit-banner-text {
+        flex: 1 1 auto;
+        min-width: 140px;
+      }
+      #edit-banner button {
+        font-family: Helvetica, sans-serif;
+        font-size: 13px;
+        border: none;
+        border-radius: 6px;
+        padding: 6px 10px;
+        cursor: pointer;
+      }
+      #edit-publish {
+        background: #2e7d32;
+        color: #fff;
+      }
+      #edit-tips,
+      #edit-done {
+        background: #eee;
+        color: #111;
+      }
+      #editor-panel {
+        display: none;
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 360px;
+        max-width: 100%;
+        background: #fff;
+        color: #111;
+        font-family: Helvetica, sans-serif;
+        font-size: 14px;
+        overflow: auto;
+        z-index: 1500;
+        box-shadow: -2px 0 12px rgba(0, 0, 0, 0.15);
+      }
+      body.editor-open #map {
+        width: calc(100% - 360px);
+        height: 100% !important;
+      }
+      body.editor-open #editor-panel {
+        display: flex;
+        flex-direction: column;
+      }
+      .editor-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 14px 8px 14px;
+        border-bottom: 1px solid #ddd;
+      }
+      .editor-header h2 {
+        margin: 0;
+        font-size: 1.1rem;
+      }
+      #editor-close {
+        border: none;
+        background: transparent;
+        font-size: 1.6rem;
+        line-height: 1;
+        cursor: pointer;
+        padding: 0 4px;
+      }
+      #editor-form,
+      .editor-actions {
+        padding: 10px 14px;
+      }
+      #editor-form label {
+        display: block;
+        font-weight: 600;
+        margin: 10px 0 4px;
+      }
+      #editor-form input,
+      #editor-form select,
+      #editor-form textarea {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 8px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      #editor-form textarea {
+        min-height: 60px;
+        resize: vertical;
+      }
+      .editor-hint {
+        margin: 0;
+        padding: 8px 14px;
+        background: #f4f7fb;
+        color: #333;
+        font-size: 13px;
+        line-height: 1.35;
+      }
+      .editor-error {
+        display: none;
+        margin: 0 14px;
+        padding: 8px 10px;
+        background: #fdecea;
+        color: #8a1f11;
+        border-radius: 4px;
+      }
+      .editor-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        border-top: 1px solid #ddd;
+      }
+      .editor-actions button {
+        font-size: 14px;
+        padding: 8px 12px;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+      }
+      #editor-save {
+        background: #1b5e20;
+        color: #fff;
+      }
+      #editor-delete {
+        background: #fff;
+        color: #b71c1c;
+        border: 1px solid #e0b4b4;
+      }
+      .editor-more {
+        margin-top: 12px;
+      }
+      .editor-more summary {
+        cursor: pointer;
+        font-weight: 600;
+      }
+      #publish-modal.helpPopup {
+        display: none;
+      }
+      #publish-modal .help-content {
+        max-width: 480px;
+        margin: 10% auto;
+      }
+      #publish-list {
+        margin: 12px 0;
+        padding-left: 18px;
+      }
+      @media (max-width: 700px) {
+        body.editor-open #map {
+          width: 100%;
+          height: 55% !important;
+        }
+        body.editor-open #editor-panel {
+          top: auto;
+          width: 100%;
+          height: 45%;
+        }
+      }
     </style>
 
     <title>VHF info</title>
@@ -329,6 +507,132 @@
         <div id="help-content"></div>
       </div>
     </div>
+    <div id="edit-banner">
+      <span id="edit-banner-text">Editing this map</span>
+      <button type="button" id="edit-publish">Publish changes</button>
+      <button type="button" id="edit-tips">Tips</button>
+      <button type="button" id="edit-done">Done</button>
+    </div>
+    <aside id="editor-panel" aria-label="Edit area details">
+      <div class="editor-header">
+        <h2 id="editor-title">Area details</h2>
+        <button type="button" id="editor-close" aria-label="Close">&times;</button>
+      </div>
+      <p class="editor-hint" id="editor-hint">
+        Click an area on the map to change it, or draw a new one with the tools
+        on the left.
+      </p>
+      <div class="editor-error" id="editor-error"></div>
+      <form id="editor-form">
+        <label for="ed-name">Name</label>
+        <input id="ed-name" name="name" type="text" autocomplete="off" />
+
+        <label for="ed-callname">What they say on the radio</label>
+        <input id="ed-callname" name="callname" type="text" autocomplete="off" />
+
+        <label for="ed-type">What is it?</label>
+        <select id="ed-type" name="type">
+          <option value="vts">Traffic service (VTS)</option>
+          <option value="vts radar support">VTS radar support</option>
+          <option value="lock">Lock</option>
+          <option value="bridge">Bridge</option>
+          <option value="marina">Marina</option>
+          <option value="area">Area</option>
+          <option value="territorial">12 mile zone</option>
+        </select>
+
+        <label for="ed-channel">VHF channel</label>
+        <input id="ed-channel" name="channel" type="text" autocomplete="off" />
+
+        <label for="ed-gmode">What should you do on this channel?</label>
+        <select id="ed-gmode" name="gmode">
+          <option value="listen">Listen</option>
+          <option value="announce">Call in when entering or leaving</option>
+          <option value="report">Report — they expect details</option>
+        </select>
+
+        <label for="ed-gnote">Note</label>
+        <textarea id="ed-gnote" name="gnote"></textarea>
+
+        <label for="ed-url">Website</label>
+        <input id="ed-url" name="url" type="url" placeholder="https://" />
+
+        <label for="ed-phone">Phone</label>
+        <input id="ed-phone" name="phone" type="text" placeholder="+" />
+
+        <details class="editor-more">
+          <summary>More details (optional)</summary>
+          <label for="ed-update">Regular broadcast (if any)</label>
+          <input id="ed-update" name="update" type="text" />
+
+          <p><b>Pleasure craft — only if different</b></p>
+          <label for="ed-pmode">What should pleasure craft do?</label>
+          <select id="ed-pmode" name="pmode">
+            <option value=""></option>
+            <option value="listen">Listen</option>
+            <option value="announce">Call in when entering or leaving</option>
+            <option value="report">Report — they expect details</option>
+          </select>
+          <label for="ed-pnote">Note for pleasure craft</label>
+          <input id="ed-pnote" name="pnote" type="text" />
+          <label for="ed-purl">Website for pleasure craft</label>
+          <input id="ed-purl" name="purl" type="url" />
+
+          <p><b>Cargo — only if different</b></p>
+          <label for="ed-cmode">What should cargo ships do?</label>
+          <select id="ed-cmode" name="cmode">
+            <option value=""></option>
+            <option value="listen">Listen</option>
+            <option value="announce">Call in when entering or leaving</option>
+            <option value="report">Report — they expect details</option>
+          </select>
+          <label for="ed-cnote">Note for cargo</label>
+          <input id="ed-cnote" name="cnote" type="text" />
+          <label for="ed-curl">Website for cargo</label>
+          <input id="ed-curl" name="curl" type="url" />
+        </details>
+      </form>
+      <div class="editor-actions">
+        <button type="button" id="editor-save">Save details</button>
+        <button type="button" id="editor-delete">Remove this area</button>
+      </div>
+    </aside>
+    <div id="publish-modal" class="helpPopup">
+      <div class="help-content">
+        <h2>Publish your changes?</h2>
+        <p>
+          This updates the public map. Please leave an email in case there is a
+          question, and a short note about what you changed.
+        </p>
+        <ul id="publish-list"></ul>
+        <p>
+          <label for="publish-email"><b>Your email</b></label
+          ><br />
+          <input
+            id="publish-email"
+            type="email"
+            placeholder="you@example.com"
+            style="width: 100%; padding: 8px; box-sizing: border-box"
+          />
+        </p>
+        <p>
+          <label for="publish-note"><b>Short note</b></label
+          ><br />
+          <input
+            id="publish-note"
+            type="text"
+            placeholder="Fixed the channel for this lock"
+            style="width: 100%; padding: 8px; box-sizing: border-box"
+          />
+        </p>
+        <p>
+          <button type="button" id="publish-confirm" class="donateButton">
+            Publish
+          </button>
+          <button type="button" id="publish-cancel">Cancel</button>
+        </p>
+      </div>
+    </div>
 
     <script type="text/javascript">
       var countriesGeoObj;
@@ -353,6 +657,44 @@
       var compassOn = false;
 
       var changedIds = {};
+      var newItems = [];
+      var drawControl = null;
+      var currentEditLayer = null;
+      var editPositionControlAdded = false;
+      var urlEditCountry;
+
+      var COUNTRY_NAMES = {
+        AGO: "Angola",
+        ALA: "Åland",
+        BEL: "Belgium",
+        DEU: "Germany",
+        DNK: "Denmark",
+        ESP: "Spain",
+        EST: "Estonia",
+        FIN: "Finland",
+        FRA: "France",
+        GBR: "the United Kingdom",
+        GGY: "Guernsey",
+        ITA: "Italy",
+        NLD: "the Netherlands",
+        NOR: "Norway",
+        POL: "Poland",
+        ROU: "Romania",
+        SWE: "Sweden",
+        USA: "the United States",
+      };
+
+      var TYPE_HINTS = {
+        lock: "Draw the lock chambers only. A simple rectangle is fine, even if it crosses a bit of land.",
+        bridge:
+          "Draw only under the bridge, fully from bank to bank — that way you can tell when you have passed it.",
+        marina: "Draw the marina. Covering the water (and a bit of land) is enough.",
+        vts: "Follow the official traffic-service limits as closely as you reasonably can. Less detail is OK for large sea areas.",
+        "vts radar support": "Draw only the radar-support area.",
+        area: "Draw where this channel applies.",
+        territorial:
+          "This is the 12 nautical mile zone. Only change it if you know it is wrong.",
+      };
 
       function sleep(ms) {
         return new Promise((resolve) => setTimeout(resolve, ms));
@@ -370,9 +712,9 @@
       }
 
       var editMode = false;
+      var country;
       if (GetURLParameter("edit") != undefined) {
-        editMode = true;
-        var country = GetURLParameter("edit");
+        urlEditCountry = GetURLParameter("edit");
       }
 
       var mapPos = false;
@@ -384,10 +726,6 @@
       loadCountriesBbox();
 
       console.log("editMode: %s", editMode);
-      if (editMode) {
-        console.log("editMode for country %s", country);
-        var newItems = [];
-      }
 
       var m = L.map("map").setView([0, 0], 8);
 
@@ -483,11 +821,6 @@
         Terrain: googleTerrain,
       };
 
-      if (editMode) {
-        m.addLayer(drawnItems);
-        setTimeout(removeUnwanted, 500);
-      }
-
       var popup = L.popup();
 
       //add a control layer to switch on the both basemaps
@@ -499,9 +832,6 @@
       ControlLayer.addOverlay(bridgeLayer, "Bridges");
       ControlLayer.addOverlay(marinaLayer, "Marinas");
       ControlLayer.addOverlay(areaLayer, "Areas");
-      if (editMode) {
-        ControlLayer.addOverlay(drawnItems, "Newly created");
-      }
 
       drawnItems.on("add", (e) => {
         console.log("drawnItems now selected");
@@ -528,37 +858,21 @@
       L.DomUtil.addClass(m._container, "crosshair-cursor-enabled");
 
       async function setupButtons() {
-        if (!editMode) {
-          button = L.easyButton(
-            '<span class="edit">&#9998;</span>',
-            function () {
-              let country = getCountryAtCoor();
-              activeCountry = country;
-              if (
-                confirm(
-                  "Do you want to start editting for country " + country + "?",
-                )
-              ) {
-                let center = m.getCenter();
-                open(
-                  "https://vhfinfo.org/map.html?edit=" +
-                    country +
-                    "&mapPosition=" +
-                    center.lat.toFixed(6) +
-                    "/" +
-                    center.lng.toFixed(6) +
-                    "/" +
-                    m.getZoom(),
-                  "_blank",
-                );
-              }
-            },
-            "Edit the country in the center of the map",
-          ).addTo(m);
-          _fixEasyButtonSize(button);
+        button = L.easyButton(
+          '<span class="edit">&#9998;</span>',
+          function () {
+            if (editMode) {
+              requestExitEditMode();
+              return;
+            }
+            requestEnterEditMode();
+          },
+          "Change VHF information on this map",
+        ).addTo(m);
+        _fixEasyButtonSize(button);
 
-          button = L.easyButton(
-            '<span class="splitview"><img src="splitview.png" width="25" height="25"></img></span>',
+        button = L.easyButton(
+          '<span class="splitview"><img src="splitview.png" width="25" height="25"></img></span>',
             function (btn, m) {
               splitviewMode = !splitviewMode;
               console.log("splitviewMode: " + splitviewMode);
@@ -677,64 +991,6 @@
           ).addTo(m);
           _fixEasyButtonSize(button);
           button.button.style.backgroundColor = "gold";
-        } else {
-          button = L.easyButton(
-            '<span class="upload"><img src="upload.png" width="20" height="16"></img></span>',
-            function (btn, m) {
-              if (Object.keys(changedIds).length == 0) {
-                alert("No changes were made");
-                return;
-              }
-              var uploadList = "Press [Ok] to upload the following changes:\n";
-              var uploadListDetails = "";
-              for (const [id, info] of Object.entries(changedIds)) {
-                uploadList =
-                  uploadList + " - " + info.name + " [" + info.action + "]\n";
-                uploadListDetails =
-                  uploadListDetails +
-                  " - " +
-                  info.name +
-                  " [" +
-                  info.action +
-                  "]: " +
-                  id +
-                  "\n";
-              }
-              if (confirm(uploadList) == true) {
-                console.log(changedIds);
-                for (const [uuid, info] of Object.entries(changedIds)) {
-                  console.log(info);
-                  if (info.action != "Delete") {
-                    id = info.leaflet_id;
-                    layer = m._layers[id];
-                    changedLayer.addLayer(layer);
-                    changedIds[uuid].feature =
-                      changedLayer.toGeoJSON(12).features[0];
-                    changedLayer.removeLayer(layer);
-                  }
-                }
-                console.log(changedIds);
-                var reason = prompt(
-                  "You are about to publish changes to " +
-                    country +
-                    ". Please add email (in case of questions) and a reason for change.",
-                  "your@emailaddress.com - Reason",
-                );
-                let commitResult = commitGitHub(
-                  country,
-                  changedIds,
-                  reason + "\n\n" + uploadListDetails,
-                );
-                location.reload();
-              } else {
-              }
-            },
-            "Upload your changed to VHFinfo",
-          ).addTo(m);
-          _fixEasyButtonSize(button);
-
-          m.addControl(position);
-        }
       }
 
       setupButtons();
@@ -864,14 +1120,6 @@
             }
           }
         }
-      }
-
-      if (editMode) {
-        var mouseposition = document.getElementsByClassName("mouseposition")[0];
-        L.DomEvent.addListener(mouseposition, "click", (event) => {
-          dms = !dms;
-          updateMousePosition(m.getCenter(m));
-        });
       }
 
       function followUpdate() {
@@ -1093,6 +1341,7 @@
                   break;
               }
               // console.log(feature)
+              layer._vhfCountry = country;
               layer.on({
                 mouseover: function (e) {
                   e.target.setStyle({
@@ -1110,16 +1359,17 @@
                 },
                 click: function (e) {
                   if (editMode) {
-                    editPopup(l, e.target.feature, this._leaflet_id);
+                    L.DomEvent.stopPropagation(e);
+                    openEditor(e.target);
                   } else {
-                    showInfo(e.target.feature, l, country);
+                    showInfo(e.target.feature, e.target, country);
                   }
                 },
                 contextmenu: function (e) {
                   l.bringToBack();
                 },
               });
-              if (editMode) {
+              if (editMode && country === layer._vhfCountry) {
                 drawnItems.addLayer(layer);
               }
               specific.addLayer(layer);
@@ -1295,21 +1545,11 @@
         html = html + addHTML("Generic", p.vhfdata.generic);
         html = html + addHTML("Pleasure", p.vhfdata.pleasure);
         html = html + addHTML("Emergency", p.vhfdata.emergency);
-        let center = m.getCenter();
-        let editUrl =
-          "https://vhfinfo.org/map.html?edit=" +
-          country +
-          "&mapPosition=" +
-          center.lat.toFixed(6) +
-          "/" +
-          center.lng.toFixed(6) +
-          "/" +
-          m.getZoom();
         html =
           html +
-          '<td></td><td style="text-align: right;"><a href="' +
-          editUrl +
-          '" target="_blank" style="text-decoration: none;">Edit</a></td>';
+          '<tr><td></td><td style="text-align: right;"><a href="#" class="popup-edit-link" data-country="' +
+          country +
+          '" style="text-decoration: none;">Change this info</a></td></tr>';
         html = html + "</table>";
 
         layer.bindPopup(html).openPopup();
@@ -1387,315 +1627,551 @@
       }
 
       if (mapPos) {
-        // console.log(mapPosition)
         const [lat, lon, zoom] = mapPosition.split("/");
-        // console.log('lat: ' + lat + '  lon: ' + lon + '  zoom: ' + zoom)
         m.panTo(new L.LatLng(lat, lon));
         m.setZoom(zoom);
-        if (!editMode) {
-          loadCountryOnCoordiate([lat, lon]);
-        }
+        loadCountryOnCoordiate([lat, lon]);
       }
 
-      if (!editMode) {
-        var geoOptions = {
-          enableHighAccuracy: true,
-          timeout: 5000,
-          maximumAge: 0,
-        };
-        if (!mapPos && navigator.geolocation) {
-          console.log("Checking browser location");
-          navigator.geolocation.getCurrentPosition(
-            geolocationSuccess,
-            geolocationError,
-            geoOptions,
-          );
-        }
-      } else {
-        if (!mapPos) {
-          let coor = countriesGeoObj[country];
-          let lon = coor.ne.lon - (coor.ne.lon - coor.sw.lon) / 2;
-          let lat = coor.ne.lat - (coor.ne.lat - coor.sw.lat) / 2;
-          m.panTo(new L.LatLng(lat, lon));
-          let coordinates = [
-            [coor.ne.lon, coor.ne.lat],
-            [coor.sw.lon, coor.sw.lat],
-          ];
-          let polygon = L.polygon(coordinates);
-          let bounds = polygon.getBounds();
-          let southWest = bounds.getSouthWest();
-          let northEast = bounds.getNorthEast();
-          let cSouthWest = L.latLng(southWest.lng, southWest.lat);
-          let cNortEast = L.latLng(northEast.lng, northEast.lat);
-          let newBounds = L.latLngBounds(cSouthWest, cNortEast);
-          m.fitBounds(newBounds);
-        }
-        loadUrl(
-          "https://raw.githubusercontent.com/htool/vhfinfo/main/data/" +
-            country +
-            ".json",
-          vhfinfo,
-          country,
-        );
-        loadUrl(
-          "https://raw.githubusercontent.com/htool/vhfinfo/main/data/" +
-            country +
-            "_12Nm.json",
-          Nm12,
-          country,
+      var geoOptions = {
+        enableHighAccuracy: true,
+        timeout: 5000,
+        maximumAge: 0,
+      };
+      if (!mapPos && !urlEditCountry && navigator.geolocation) {
+        console.log("Checking browser location");
+        navigator.geolocation.getCurrentPosition(
+          geolocationSuccess,
+          geolocationError,
+          geoOptions,
         );
       }
 
-      if (editMode) {
-        m.addControl(
-          new L.Control.Draw({
-            draw: {
-              polygon: {
-                icon: new L.DivIcon({
-                  iconSize: 5,
-                  className: "leaflet-div-icon leaflet-editing-icon",
-                }),
-              },
-              polyline: false,
-              rectangle: false,
-              marker: false,
-              circle: true,
-              circlemarker: false,
-            },
-            edit: {
-              featureGroup: drawnItems,
-              remove: false,
-            },
-          }),
-        );
-
-        m.on(L.Draw.Event.CREATED, function (e) {
-          var type = e.layerType,
-            layer = e.layer;
-
-          drawnItems.addLayer(layer);
-          layer.on("click", editPopup(layer)); //"mouseover", "click"
-
-          layer.on("edit", function (e) {
-            console.log("Editted");
-          });
-        });
-
-        m.on("draw:edited", function (e) {
-          const layers = e.layers;
-          layers.eachLayer(function (layer) {
-            const p = layer.feature.properties;
-            if (typeof changedIds[p.id] == "undefined") {
-              changedIds[p.id] = {
-                name: p.name,
-                action: "Change",
-                type: p.type,
-                leaflet_id: Object.keys(e.layers._layers)[0],
-              };
-              // console.log(JSON.stringify(changedIds[p.id], null, 2))
-              // console.log(JSON.stringify(changedIds, null, 2))
-            }
-          });
-        });
+      if (L.drawLocal && L.drawLocal.draw && L.drawLocal.draw.toolbar) {
+        L.drawLocal.draw.toolbar.buttons.polygon = "Draw an area";
+        L.drawLocal.draw.toolbar.buttons.circle = "Draw a circular area";
+        L.drawLocal.edit.toolbar.buttons.edit = "Change an area's shape";
+        L.drawLocal.edit.toolbar.buttons.editDisabled = "No areas to change";
       }
 
-      function isPopupOpen() {
-        return document.getElementsByClassName("leaflet-popup-content").length;
-      }
-
-      function addPullDown(text, id, options) {
-        var html = `<tr><td><label>${text}:<label></td><td><select id="${id}" name="${id}">`;
-        options.forEach((value) => {
-          html =
-            html +
-            '<option value="' +
-            value.toLowerCase() +
-            '">' +
-            value +
-            "</option>";
-        });
-        html = html + "</select>";
-        return html;
-      }
-
-      function editPopup(layer, f, l_id) {
-        console.log("Leaflet_id: " + l_id);
-        if (isPopupOpen()) {
-          layer.unbindPopup();
-        } else {
-          layer.addTo(m);
-          if (typeof f != "undefined") {
-            var feature = f;
-          } else {
-            var feature = (layer.feature = layer.feature || {}); // Initialize feature
+      m.on(L.Draw.Event.CREATED, function (e) {
+        var layer = e.layer;
+        layer._vhfCountry = country;
+        drawnItems.addLayer(layer);
+        ensureFeatureDefaults(layer, true);
+        layer.on("click", function (evt) {
+          if (editMode) {
+            L.DomEvent.stopPropagation(evt);
+            openEditor(layer);
           }
-          feature.type = feature.type || "Feature"; // Initialize feature.type
-          var p = (feature.properties = feature.properties || {}); // Initialize feature.properties
-          if (typeof p["name"] == "undefined") {
-            newItems.push(layer._leaflet_id);
-            p.id = generateUUID();
-            p.name = "New feature";
-            p.callname = "";
-            p.type = "vts";
-            (p.channel = ""), (p.url = "https://");
-            p.phone = "+";
-            p.note = "";
-            p.vhfdata = {
-              generic: {
-                mode: "listen",
-                note: "",
-              },
-              pleasure: {
-                mode: "listen",
-                url: "",
-                note: "",
-              },
-              cargo: {
-                mode: "listen",
-                url: "",
-                note: "",
-              },
-            };
+        });
+        openEditor(layer);
+      });
+
+      m.on("draw:edited", function (e) {
+        e.layers.eachLayer(function (layer) {
+          var p = layer.feature && layer.feature.properties;
+          if (!p || !p.id) {
+            return;
+          }
+          if (typeof changedIds[p.id] == "undefined") {
             changedIds[p.id] = {
               name: p.name,
-              action: "Add",
-              leaflet_id: l_id,
+              action: "Change",
+              type: p.type,
+              leaflet_id: layer._leaflet_id,
             };
+          } else {
+            changedIds[p.id].leaflet_id = layer._leaflet_id;
           }
+        });
+      });
 
-          var contentHTML =
-            '<form id="form" onsubmit="return false"><table>' +
-            '<tr><td><label>Name<label></td><td><input id="name" type="text"></td></tr>' +
-            '<tr><td><label>Call name:<label></td><td><input id="callname" type="text"></td></tr>';
-          contentHTML =
-            contentHTML +
-            addPullDown("Type", "type", [
-              "VTS",
-              "VTS Radar support",
-              "Lock",
-              "Bridge",
-              "Area",
-              "Marina",
-              "Territorial",
-            ]);
-          contentHTML =
-            contentHTML +
-            '<tr><td><label>Channel:<label></td><td><input id="channel" type="text"></td></tr>';
-          contentHTML =
-            contentHTML +
-            addPullDown("Mode", "gmode", ["Listen", "Announce", "Report"]);
-          contentHTML =
-            contentHTML +
-            '<tr><td><label>Note:<label></td><td><input id="gnote" type="text"></td></tr>' +
-            '<tr><td><label>URL:<label></td><td><input id="url" type="url"></td></tr>' +
-            '<tr><td><label>Phone:<label></td><td><input id="phone" type="text"></td></tr>' +
-            '<tr><td><label>Update:<label></td><td><input id="update" type="text"></td></tr>' +
-            '<tr><td colspan="2"><b>Pleasure overwrite</b></td></tr>';
-          contentHTML =
-            contentHTML +
-            addPullDown("Mode", "pmode", ["", "Listen", "Announce", "Report"]);
-          contentHTML =
-            contentHTML +
-            '<tr><td><label>Note:<label></td><td><input id="pnote" type="text"></td></tr>' +
-            '<tr><td><label>URL:<label></td><td><input id="purl" type="url"></td></tr>' +
-            '<tr><td colspan="2"><b>Cargo overwrite</b></td></tr>';
-          contentHTML =
-            contentHTML +
-            addPullDown("Mode", "cmode", ["", "Listen", "Announce", "Report"]);
-          contentHTML =
-            contentHTML +
-            '<tr><td><label>Note:<label></td><td><input id="cnote" type="text"></td></tr>' +
-            '<tr><td><label>URL:<label></td><td><input id="curl" type="url"></td></tr>' +
-            "</table></form>";
+      function friendlyCountry(code) {
+        if (!code) {
+          return "this country";
+        }
+        return COUNTRY_NAMES[code] || code;
+      }
 
-          var buttonSaveHTML =
-            '<div class="buttons" id="save"  ><button>Save</button></div>';
-          var buttonCancelHTML =
-            '<div class="buttons" id="cancel"><button>Cancel</button></div>';
-          var buttonDeleteHTML =
-            '<div class="buttons" id="delete"><button>Delete</button></div></div>';
+      function countryToEdit() {
+        var precise = getCountryAtCoor();
+        if (precise) {
+          return precise;
+        }
+        var list = getCountriesAtCoor(m.getCenter());
+        if (list && list.length) {
+          return list[0];
+        }
+        return null;
+      }
 
-          // Adding info to popup
-          let btnDiv = document.createElement("div", "buttons");
-
-          var content = L.DomUtil.create("div", "content");
-          content.innerHTML = contentHTML;
-          btnDiv.append(content);
-
-          var buttonSave = L.DomUtil.create("div", "buttons");
-          buttonSave.innerHTML = buttonSaveHTML;
-          btnDiv.append(buttonSave);
-
-          var buttonCancel = L.DomUtil.create("div", "buttons");
-          buttonCancel.innerHTML = buttonCancelHTML;
-          btnDiv.append(buttonCancel);
-
-          var buttonDelete = L.DomUtil.create("div", "buttons");
-          buttonDelete.innerHTML = buttonDeleteHTML;
-          btnDiv.append(buttonDelete);
-
-          layer.unbindPopup().bindPopup(btnDiv).openPopup();
-
-          sleep(200);
-          setValue(p.name, "name");
-          setValue(p.callname, "callname");
-          setValue(p.type, "type");
-          setValue(p.channel, "channel");
-          setValue(p.url, "url");
-          setValue(p.phone, "phone");
-          setValue(p.update, "update");
-          // Generic
-          setValue(p.vhfdata.generic.mode, "gmode");
-          setValue(p.vhfdata.generic.note, "gnote");
-          // Pleasure
-          if (typeof p.vhfdata.pleasure != "undefined") {
-            setValue(p.vhfdata.pleasure.note, "pnote");
-            setValue(p.vhfdata.pleasure.mode, "pmode");
-            setValue(p.vhfdata.pleasure.url, "purl");
+      function requestEnterEditMode(preferredCountry) {
+        var code = preferredCountry || countryToEdit();
+        if (!code) {
+          alert(
+            "Move the map so the country you want to change is in the center, then tap the pencil again.",
+          );
+          return;
+        }
+        if (editMode && country === code) {
+          return;
+        }
+        if (editMode && Object.keys(changedIds).length > 0) {
+          if (
+            !confirm(
+              "You have unpublished changes. Discard them and edit " +
+                friendlyCountry(code) +
+                " instead?",
+            )
+          ) {
+            return;
           }
-          // Cargo
-          if (typeof p.vhfdata.cargo != "undefined") {
-            setValue(p.vhfdata.cargo.url, "curl");
-            setValue(p.vhfdata.cargo.mode, "cmode");
-            setValue(p.vhfdata.cargo.note, "cnote");
-          }
+          changedIds = {};
+        }
+        if (editMode) {
+          exitEditMode();
+        }
+        enterEditMode(code, { fit: !!urlEditCountry && !mapPos });
+      }
 
-          // Save
-          L.DomEvent.addListener(buttonSave, "click", function (event) {
-            console.log(
-              "Adding properties: " +
-                JSON.stringify(layer._popup._source.feature.properties),
+      function enterEditMode(code, options) {
+        options = options || {};
+        country = code;
+        activeCountry = code;
+        editMode = true;
+        document.body.classList.add("editing");
+        if (splitviewMode) {
+          var splitBtn = document.getElementsByClassName("splitview")[0];
+          if (splitBtn) {
+            splitBtn.click();
+          }
+        }
+        document.getElementById("edit-banner-text").textContent =
+          "Editing " +
+          friendlyCountry(code) +
+          " — click an area, or draw a new one.";
+        ensureCountryLoaded(code, options.fit);
+        m.addLayer(drawnItems);
+        addCountryLayersToDrawnItems(code);
+        ensureDrawControl();
+        if (!editPositionControlAdded) {
+          m.addControl(position);
+          editPositionControlAdded = true;
+          var mouseposition =
+            document.getElementsByClassName("mouseposition")[0];
+          if (mouseposition) {
+            L.DomEvent.addListener(mouseposition, "click", function () {
+              dms = !dms;
+              updateMousePosition(m.getCenter(m));
+            });
+          }
+        }
+        m.addEventListener("mousemove", editMouseMove);
+        $(".leaflet-container").css("cursor", "crosshair");
+        setOrientation();
+        setTimeout(removeUnwanted, 500);
+        closeEditor();
+      }
+
+      function editMouseMove(event) {
+        var lat = Math.round(event.latlng.lat * 100000) / 100000;
+        var lng = Math.round(event.latlng.lng * 100000) / 100000;
+        updateMousePosition({ lat: lat, lng: lng });
+      }
+
+      function ensureCountryLoaded(code, fit) {
+        if (fit && countriesGeoObj[code]) {
+          var coor = countriesGeoObj[code];
+          var polygon = L.polygon([
+            [coor.ne.lon, coor.ne.lat],
+            [coor.sw.lon, coor.sw.lat],
+          ]);
+          var bounds = polygon.getBounds();
+          var southWest = bounds.getSouthWest();
+          var northEast = bounds.getNorthEast();
+          m.fitBounds(
+            L.latLngBounds(
+              L.latLng(southWest.lng, southWest.lat),
+              L.latLng(northEast.lng, northEast.lat),
+            ),
+          );
+        }
+        if (!countriesLoaded.includes(code)) {
+          var box = countriesGeoObj[code];
+          if (box) {
+            var lon = box.ne.lon - (box.ne.lon - box.sw.lon) / 2;
+            var lat = box.ne.lat - (box.ne.lat - box.sw.lat) / 2;
+            loadCountryOnCoordiate([lat, lon]);
+          } else {
+            loadUrl(
+              "https://raw.githubusercontent.com/htool/vhfinfo/main/data/" +
+                code +
+                ".json",
+              vhfinfo,
+              code,
             );
-            var properties = layer._popup._source.feature.properties;
-            saveProperties(properties, layer._popup._source._leaflet_id);
-            // console.log('layer._popup._source: ' + layer._popup._source)
-            $(".leaflet-popup-close-button")[0].click();
-          });
+            loadUrl(
+              "https://raw.githubusercontent.com/htool/vhfinfo/main/data/" +
+                code +
+                "_12Nm.json",
+              Nm12,
+              code,
+            );
+            countriesLoaded.push(code);
+          }
+        } else {
+          addCountryLayersToDrawnItems(code);
+        }
+      }
 
-          L.DomEvent.addListener(buttonCancel, "click", function (event) {
-            console.log("Cancelled - close popup");
-            $(".leaflet-popup-close-button")[0].click();
-          });
-
-          L.DomEvent.addListener(buttonDelete, "click", function (event) {
-            let popupId = layer._popup._leaflet_id;
-            let id = layer._popup._source._leaflet_id;
-            let uuid = layer._popup._source.feature.properties.id;
-            let name = layer._popup._source.feature.properties.name;
-            let type = layer._popup._source.feature.properties.type;
-            if (confirm("Sure you want to delete '" + name + "'?")) {
-              $(".leaflet-popup-close-button")[0].click();
-              changedIds[uuid] = { name: name, action: "Delete", type: type };
-              removeLayerFromGroup(id, drawnItems);
-              // removeLayerFromGroup(id, vhfinfo)     // Until diff
-              removeIdFromLayer(id, type);
-            } else {
-              $(".leaflet-popup-close-button")[0].click();
-              console.log("Do not delete feature");
+      function addCountryLayersToDrawnItems(code) {
+        [
+          vtsLayer,
+          radarLayer,
+          lockLayer,
+          bridgeLayer,
+          marinaLayer,
+          areaLayer,
+          Nm12,
+        ].forEach(function (group) {
+          group.eachLayer(function (layer) {
+            if (layer._vhfCountry === code) {
+              drawnItems.addLayer(layer);
             }
           });
-          // console.log(layer)
+        });
+      }
+
+      function ensureDrawControl() {
+        if (drawControl) {
+          return;
         }
+        drawControl = new L.Control.Draw({
+          draw: {
+            polygon: {
+              icon: new L.DivIcon({
+                iconSize: 5,
+                className: "leaflet-div-icon leaflet-editing-icon",
+              }),
+            },
+            polyline: false,
+            rectangle: false,
+            marker: false,
+            circle: true,
+            circlemarker: false,
+          },
+          edit: {
+            featureGroup: drawnItems,
+            remove: false,
+          },
+        });
+        m.addControl(drawControl);
+      }
+
+      function requestExitEditMode() {
+        if (Object.keys(changedIds).length > 0) {
+          if (
+            !confirm(
+              "You have unpublished changes. Leave without publishing? Changes on this screen will be lost.",
+            )
+          ) {
+            return;
+          }
+        }
+        exitEditMode();
+      }
+
+      function exitEditMode() {
+        closeEditor();
+        editMode = false;
+        document.body.classList.remove("editing");
+        if (drawControl) {
+          m.removeControl(drawControl);
+          drawControl = null;
+        }
+        var layers = [];
+        drawnItems.eachLayer(function (layer) {
+          layers.push(layer);
+        });
+        layers.forEach(function (layer) {
+          drawnItems.removeLayer(layer);
+        });
+        m.removeEventListener("mousemove", editMouseMove);
+        $(".leaflet-container").css("cursor", "");
+        changedIds = {};
+        currentEditLayer = null;
+        setOrientation();
+        m.invalidateSize(true);
+      }
+
+      function showEditorError(msg) {
+        var el = document.getElementById("editor-error");
+        if (!msg) {
+          el.style.display = "none";
+          el.textContent = "";
+          return;
+        }
+        el.style.display = "block";
+        el.textContent = msg;
+      }
+
+      function showEditorHint(text) {
+        document.getElementById("editor-hint").textContent =
+          text ||
+          "Click an area on the map to change it, or draw a new one with the tools on the left.";
+      }
+
+      function closeEditor() {
+        if (currentEditLayer && currentEditLayer._vhfPrevStyle) {
+          currentEditLayer.setStyle(currentEditLayer._vhfPrevStyle);
+          currentEditLayer._vhfPrevStyle = null;
+        }
+        currentEditLayer = null;
+        document.body.classList.remove("editor-open");
+        showEditorError("");
+        m.invalidateSize(true);
+      }
+
+      function ensureFeatureDefaults(layer, isNew) {
+        var feature = (layer.feature = layer.feature || {});
+        feature.type = feature.type || "Feature";
+        var p = (feature.properties = feature.properties || {});
+        if (typeof p.id == "undefined") {
+          p.id = generateUUID();
+        }
+        if (!p.vhfdata) {
+          p.vhfdata = {};
+        }
+        if (!p.vhfdata.generic) {
+          p.vhfdata.generic = { mode: "listen", note: "" };
+        }
+        if (isNew && (typeof p.name == "undefined" || p.name == "")) {
+          p.name = "New area";
+          p.callname = "";
+          p.type = p.type || "vts";
+          p.channel = "";
+          p.url = "https://";
+          p.phone = "+";
+          p.note = "";
+          p.vhfdata = {
+            generic: { mode: "listen", note: "" },
+            pleasure: { mode: "", url: "", note: "" },
+            cargo: { mode: "", url: "", note: "" },
+          };
+          changedIds[p.id] = {
+            name: p.name,
+            action: "Add",
+            leaflet_id: layer._leaflet_id,
+          };
+          newItems.push(layer._leaflet_id);
+        }
+        return p;
+      }
+
+      function openEditor(layer) {
+        if (!layer) {
+          return;
+        }
+        m.closePopup();
+        if (
+          currentEditLayer &&
+          currentEditLayer !== layer &&
+          currentEditLayer._vhfPrevStyle
+        ) {
+          currentEditLayer.setStyle(currentEditLayer._vhfPrevStyle);
+        }
+        currentEditLayer = layer;
+        var p = ensureFeatureDefaults(layer, false);
+        if (layer.setStyle) {
+          layer._vhfPrevStyle = {
+            fillOpacity: layer.options && layer.options.fillOpacity,
+            weight: layer.options && layer.options.weight,
+            opacity: layer.options && layer.options.opacity,
+            dashArray: layer.options && layer.options.dashArray,
+          };
+          layer.setStyle({
+            fillOpacity: 0.45,
+            weight: 3,
+            opacity: 0.9,
+            dashArray: "",
+          });
+        }
+        document.getElementById("editor-title").textContent = p.name
+          ? p.name
+          : "New area";
+        showEditorHint(TYPE_HINTS[p.type] || TYPE_HINTS.area);
+        showEditorError("");
+        setEditorField("ed-name", p.name);
+        setEditorField("ed-callname", p.callname);
+        setEditorField("ed-type", p.type);
+        setEditorField("ed-channel", p.channel);
+        setEditorField("ed-url", p.url);
+        setEditorField("ed-phone", p.phone);
+        setEditorField("ed-update", p.update);
+        setEditorField("ed-gmode", p.vhfdata.generic && p.vhfdata.generic.mode);
+        setEditorField("ed-gnote", p.vhfdata.generic && p.vhfdata.generic.note);
+        setEditorField("ed-pmode", p.vhfdata.pleasure && p.vhfdata.pleasure.mode);
+        setEditorField("ed-pnote", p.vhfdata.pleasure && p.vhfdata.pleasure.note);
+        setEditorField("ed-purl", p.vhfdata.pleasure && p.vhfdata.pleasure.url);
+        setEditorField("ed-cmode", p.vhfdata.cargo && p.vhfdata.cargo.mode);
+        setEditorField("ed-cnote", p.vhfdata.cargo && p.vhfdata.cargo.note);
+        setEditorField("ed-curl", p.vhfdata.cargo && p.vhfdata.cargo.url);
+        document.body.classList.add("editor-open");
+        m.invalidateSize(true);
+      }
+
+      function setEditorField(id, value) {
+        var el = document.getElementById(id);
+        if (!el) {
+          return;
+        }
+        el.value = typeof value != "undefined" && value != null ? value : "";
+      }
+
+      function editorField(id) {
+        var el = document.getElementById(id);
+        return el ? el.value : "";
+      }
+
+      function saveEditor() {
+        if (!currentEditLayer) {
+          return;
+        }
+        var name = editorField("ed-name").trim();
+        var channel = editorField("ed-channel").trim();
+        if (!name) {
+          showEditorError("Please add a name so others know what this area is.");
+          return;
+        }
+        if (!channel) {
+          showEditorError("Please add the VHF channel number.");
+          return;
+        }
+        var p = ensureFeatureDefaults(currentEditLayer, false);
+        p.name = name;
+        p.callname = editorField("ed-callname").trim();
+        p.type = editorField("ed-type");
+        p.channel = channel;
+        p.url = editorField("ed-url").trim();
+        p.phone = editorField("ed-phone").trim();
+        p.update = editorField("ed-update").trim();
+        p.vhfdata = p.vhfdata || {};
+        p.vhfdata.generic = {
+          mode: editorField("ed-gmode"),
+          note: editorField("ed-gnote").trim(),
+        };
+        p.vhfdata.pleasure = {
+          mode: editorField("ed-pmode"),
+          note: editorField("ed-pnote").trim(),
+          url: editorField("ed-purl").trim(),
+        };
+        p.vhfdata.cargo = {
+          mode: editorField("ed-cmode"),
+          note: editorField("ed-cnote").trim(),
+          url: editorField("ed-curl").trim(),
+        };
+        var action = "Change";
+        if (changedIds[p.id] && changedIds[p.id].action == "Add") {
+          action = "Add";
+        }
+        changedIds[p.id] = {
+          name: p.name,
+          type: p.type,
+          action: action,
+          leaflet_id: currentEditLayer._leaflet_id,
+        };
+        document.getElementById("editor-title").textContent = p.name;
+        showEditorError("");
+        showEditorHint(
+          "Saved on this screen. Tap “Publish changes” when you are ready to update the public map.",
+        );
+      }
+
+      function deleteCurrentArea() {
+        if (!currentEditLayer) {
+          return;
+        }
+        var p = currentEditLayer.feature && currentEditLayer.feature.properties;
+        var name = (p && p.name) || "this area";
+        if (!confirm("Remove “" + name + "” from the map?")) {
+          return;
+        }
+        var uuid = p && p.id;
+        var type = p && p.type;
+        var id = currentEditLayer._leaflet_id;
+        if (uuid) {
+          changedIds[uuid] = { name: name, action: "Delete", type: type };
+        }
+        drawnItems.removeLayer(currentEditLayer);
+        if (type) {
+          removeIdFromLayer(id, type);
+        }
+        m.removeLayer(currentEditLayer);
+        closeEditor();
+      }
+
+      function friendlyAction(action) {
+        if (action == "Add") {
+          return "New";
+        }
+        if (action == "Delete") {
+          return "Removed";
+        }
+        return "Changed";
+      }
+
+      function openPublishModal() {
+        if (Object.keys(changedIds).length == 0) {
+          alert(
+            "No changes to publish yet. Click an area to change it, or draw a new one.",
+          );
+          return;
+        }
+        var list = document.getElementById("publish-list");
+        list.innerHTML = "";
+        Object.keys(changedIds).forEach(function (id) {
+          var info = changedIds[id];
+          var li = document.createElement("li");
+          li.textContent =
+            friendlyAction(info.action) + ": " + (info.name || "unnamed area");
+          list.appendChild(li);
+        });
+        document.getElementById("publish-modal").style.display = "block";
+      }
+
+      function closePublishModal() {
+        document.getElementById("publish-modal").style.display = "none";
+      }
+
+      function confirmPublish() {
+        var email = document.getElementById("publish-email").value.trim();
+        var note = document.getElementById("publish-note").value.trim();
+        if (!email || email.indexOf("@") < 0) {
+          alert("Please enter an email address so we can contact you if needed.");
+          return;
+        }
+        Object.keys(changedIds).forEach(function (uuid) {
+          var info = changedIds[uuid];
+          if (info.action != "Delete") {
+            var layer = m._layers[info.leaflet_id];
+            if (!layer) {
+              return;
+            }
+            changedLayer.addLayer(layer);
+            changedIds[uuid].feature = changedLayer.toGeoJSON(12).features[0];
+            changedLayer.removeLayer(layer);
+          }
+        });
+        var details = "";
+        Object.keys(changedIds).forEach(function (id) {
+          var info = changedIds[id];
+          details +=
+            " - " + info.name + " [" + info.action + "]: " + id + "\n";
+        });
+        var reason = email + " - " + (note || "Map update") + "\n\n" + details;
+        commitGitHub(country, changedIds, reason);
+        location.reload();
       }
 
       function removeIdFromLayer(id, type) {
@@ -1797,73 +2273,6 @@
       function jsonToBase64(jsonObj) {
         const jsonString = JSON.stringify(jsonObj);
         return Base64.encode(jsonString);
-      }
-
-      function saveProperties(properties, leaflet_id) {
-        properties.name = getPropertyValue("name");
-        properties.callname = getPropertyValue("callname");
-        properties.type = getPropertyValue("type");
-        properties.channel = getPropertyValue("channel");
-        properties.url = getPropertyValue("url");
-        properties.phone = getPropertyValue("phone");
-        properties.update = getPropertyValue("update");
-        properties.vhfdata = {};
-        properties.vhfdata.generic = {};
-        properties.vhfdata.generic.mode = getPropertyValue("gmode");
-        properties.vhfdata.generic.note = getPropertyValue("gnote");
-        properties.vhfdata.pleasure = {};
-        properties.vhfdata.pleasure.mode = getPropertyValue("pmode");
-        properties.vhfdata.pleasure.note = getPropertyValue("pnote");
-        properties.vhfdata.pleasure.url = getPropertyValue("purl");
-        properties.vhfdata.cargo = {};
-        properties.vhfdata.cargo.mode = getPropertyValue("cmode");
-        properties.vhfdata.cargo.note = getPropertyValue("cnote");
-        properties.vhfdata.cargo.url = getPropertyValue("curl");
-        if (typeof changedIds[properties.id] != "undefined") {
-          if (changedIds[properties.id].action == "Add") {
-            changedIds[properties.id] = {
-              name: properties.name,
-              type: properties.type,
-              action: "Add",
-              leaflet_id: leaflet_id,
-            };
-            console.log("New item");
-          } else {
-            changedIds[properties.id] = {
-              name: properties.name,
-              action: "Change",
-              type: properties.type,
-              leaflet_id: leaflet_id,
-            };
-            console.log("Changed existing item again");
-            console.log(JSON.stringify(changedIds[properties.id], null, 2));
-          }
-        } else {
-          changedIds[properties.id] = {
-            name: properties.name,
-            action: "Change",
-            type: properties.type,
-            leaflet_id: leaflet_id,
-          };
-          console.log("Changed existing item first time");
-          console.log(JSON.stringify(changedIds[properties.id], null, 2));
-        }
-      }
-
-      function getPropertyValue(element) {
-        // console.log(document.getElementById(element).value + ' : ' + typeof document.getElementById(element).value)
-        if (document.getElementById(element).value != "undefined") {
-          return document.getElementById(element).value;
-        }
-      }
-
-      function setValue(value, element) {
-        // console.log('Value ' + value + ':' + typeof value + ' element ' + element)
-        if (typeof value != "undefined") {
-          document.getElementById(element).value = value;
-        } else {
-          document.getElementById(element).value = null;
-        }
       }
 
       function removeUnwanted() {
@@ -2299,14 +2708,39 @@
         setOrientation();
       });
 
-      if (editMode) {
-        setOrientation();
-        $(".leaflet-container").css("cursor", "crosshair");
-        showEditPopup();
+      document.getElementById("edit-publish").onclick = openPublishModal;
+      document.getElementById("edit-done").onclick = requestExitEditMode;
+      document.getElementById("edit-tips").onclick = showEditPopup;
+      document.getElementById("editor-close").onclick = closeEditor;
+      document.getElementById("editor-save").onclick = saveEditor;
+      document.getElementById("editor-delete").onclick = deleteCurrentArea;
+      document.getElementById("publish-cancel").onclick = closePublishModal;
+      document.getElementById("publish-confirm").onclick = confirmPublish;
+      document.getElementById("ed-type").onchange = function () {
+        showEditorHint(TYPE_HINTS[this.value] || "");
+      };
+      document.addEventListener("click", function (e) {
+        var a = e.target.closest && e.target.closest(".popup-edit-link");
+        if (!a) {
+          return;
+        }
+        e.preventDefault();
+        m.closePopup();
+        requestEnterEditMode(a.getAttribute("data-country"));
+      });
+      L.DomEvent.disableClickPropagation(
+        document.getElementById("editor-panel"),
+      );
+      L.DomEvent.disableScrollPropagation(
+        document.getElementById("editor-panel"),
+      );
+
+      document.getElementById("compass").innerHTML =
+        '<img src="./magicBlueDot.png" width="100px" height="100px">';
+      if (urlEditCountry) {
+        requestEnterEditMode(urlEditCountry);
       } else {
         document.getElementsByClassName("splitview")[0].click();
-        document.getElementById("compass").innerHTML =
-          '<img src="./magicBlueDot.png" width="100px" height="100px">';
         $(".leaflet-container").css("cursor", "");
       }
     </script>
