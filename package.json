@@ -23,7 +23,10 @@
     "displayName": "VHFinfo"
   },
   "scripts": {
-    "format": "prettier --write --no-semi --single-quote plugin/*"
+    "format": "prettier --write --no-semi --single-quote plugin/*",
+    "import:vhf": "node scripts/import-vhf-features.js",
+    "import:vhf:sql": "node scripts/import-vhf-features.js --sql",
+    "import:vhf:verify": "node scripts/verify-vhf-features.js"
   },
   "dependencies": {
     "@turf/nearest-point": "6.5.0",
