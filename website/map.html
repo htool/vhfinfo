@@ -75,6 +75,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.EasyButton/2.4.0/easy-button.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.1/dist/umd/supabase.js"></script>
+    <script src="supabase-config.js"></script>
+    <script src="auth.js"></script>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
@@ -425,6 +428,86 @@
           height: 45%;
         }
       }
+
+      #auth-chip {
+        display: none;
+        position: fixed;
+        right: 12px;
+        bottom: 12px;
+        z-index: 1200;
+        background: #1a1a1a;
+        color: #fff;
+        font-family: Helvetica, sans-serif;
+        font-size: 13px;
+        border-radius: 8px;
+        padding: 8px 10px;
+        align-items: center;
+        gap: 8px;
+        max-width: calc(100% - 24px);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+      }
+      #auth-chip button {
+        font-size: 13px;
+        border: none;
+        border-radius: 6px;
+        padding: 5px 8px;
+        cursor: pointer;
+      }
+      #auth-modal .help-content {
+        max-width: 420px;
+        margin: 12% auto;
+      }
+      #auth-modal h2 {
+        margin-top: 0;
+      }
+      #auth-modal input[type="email"] {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+        font-size: 16px;
+        margin: 8px 0 12px;
+      }
+      #auth-modal .auth-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      #auth-modal .auth-actions button {
+        font-size: 15px;
+        padding: 10px 12px;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+      }
+      #auth-send {
+        background: #1b5e20;
+        color: #fff;
+      }
+      #auth-google {
+        background: #fff;
+        color: #111;
+        border: 1px solid #ccc !important;
+      }
+      #auth-cancel,
+      #auth-use-other {
+        background: #eee;
+      }
+      .auth-message {
+        display: none;
+        margin: 8px 0;
+        padding: 8px 10px;
+        background: #f4f7fb;
+        border-radius: 4px;
+      }
+      .auth-message.auth-error {
+        background: #fdecea;
+        color: #8a1f11;
+      }
+      .auth-or {
+        text-align: center;
+        color: #666;
+        margin: 4px 0;
+      }
     </style>
 
     <title>VHF info</title>
@@ -601,20 +684,10 @@
       <div class="help-content">
         <h2>Publish your changes?</h2>
         <p>
-          This updates the public map. Please leave an email in case there is a
-          question, and a short note about what you changed.
+          This updates the public map. Add a short note about what you changed.
         </p>
+        <p id="publish-as"></p>
         <ul id="publish-list"></ul>
-        <p>
-          <label for="publish-email"><b>Your email</b></label
-          ><br />
-          <input
-            id="publish-email"
-            type="email"
-            placeholder="you@example.com"
-            style="width: 100%; padding: 8px; box-sizing: border-box"
-          />
-        </p>
         <p>
           <label for="publish-note"><b>Short note</b></label
           ><br />
@@ -632,6 +705,47 @@
           <button type="button" id="publish-cancel">Cancel</button>
         </p>
       </div>
+    </div>
+    <div id="auth-modal" class="helpPopup">
+      <div class="help-content">
+        <h2>Sign in to change the map</h2>
+        <p>
+          Anyone can look at the map. To add or change a channel, sign in so we
+          know who made the change. There is no password — we email you a link,
+          or you can use your Google account.
+        </p>
+        <div id="auth-message" class="auth-message"></div>
+        <div id="auth-form">
+          <label for="auth-email"><b>Your email</b></label>
+          <input
+            id="auth-email"
+            type="email"
+            autocomplete="email"
+            placeholder="you@example.com"
+          />
+          <div class="auth-actions">
+            <button type="button" id="auth-send">Email me a sign-in link</button>
+            <div class="auth-or">or</div>
+            <button type="button" id="auth-google">Continue with Google</button>
+            <button type="button" id="auth-cancel">Not now</button>
+          </div>
+        </div>
+        <div id="auth-sent" style="display: none">
+          <p>
+            Check your inbox for <b id="auth-sent-email"></b> and open the
+            sign-in link. You can close this window and come back after you tap
+            the link.
+          </p>
+          <div class="auth-actions">
+            <button type="button" id="auth-use-other">Use a different email</button>
+            <button type="button" id="auth-sent-close">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="auth-chip">
+      <span id="auth-chip-text">Signed in</span>
+      <button type="button" id="auth-sign-out">Sign out</button>
     </div>
 
     <script type="text/javascript">
@@ -865,9 +979,11 @@
               requestExitEditMode();
               return;
             }
-            requestEnterEditMode();
+            requireSignIn(function () {
+              requestEnterEditMode();
+            });
           },
-          "Change VHF information on this map",
+          "Sign in to change VHF information on this map",
         ).addTo(m);
         _fixEasyButtonSize(button);
 
@@ -2122,6 +2238,10 @@
       }
 
       function openPublishModal() {
+        if (!isSignedIn()) {
+          requireSignIn(openPublishModal);
+          return;
+        }
         if (Object.keys(changedIds).length == 0) {
           alert(
             "No changes to publish yet. Click an area to change it, or draw a new one.",
@@ -2137,6 +2257,7 @@
             friendlyAction(info.action) + ": " + (info.name || "unnamed area");
           list.appendChild(li);
         });
+        updateAuthUi();
         document.getElementById("publish-modal").style.display = "block";
       }
 
@@ -2145,10 +2266,14 @@
       }
 
       function confirmPublish() {
-        var email = document.getElementById("publish-email").value.trim();
+        if (!isSignedIn()) {
+          requireSignIn(confirmPublish);
+          return;
+        }
+        var email = getSignedInEmail();
         var note = document.getElementById("publish-note").value.trim();
         if (!email || email.indexOf("@") < 0) {
-          alert("Please enter an email address so we can contact you if needed.");
+          alert("Please sign in again, then publish.");
           return;
         }
         Object.keys(changedIds).forEach(function (uuid) {
@@ -2719,6 +2844,26 @@
       document.getElementById("ed-type").onchange = function () {
         showEditorHint(TYPE_HINTS[this.value] || "");
       };
+      document.getElementById("auth-send").onclick = sendMagicLink;
+      document.getElementById("auth-google").onclick = signInWithGoogle;
+      document.getElementById("auth-cancel").onclick = cancelAuthModal;
+      document.getElementById("auth-sent-close").onclick = hideAuthModal;
+      document.getElementById("auth-use-other").onclick = resetAuthForm;
+      document.getElementById("auth-sign-out").onclick = signOut;
+      document.getElementById("auth-email").addEventListener("keydown", function (e) {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          sendMagicLink();
+        }
+      });
+      document.getElementById("auth-modal").addEventListener("click", function (e) {
+        if (e.target.id === "auth-modal") {
+          cancelAuthModal();
+        }
+      });
+      L.DomEvent.disableClickPropagation(
+        document.querySelector("#auth-modal .help-content"),
+      );
       document.addEventListener("click", function (e) {
         var a = e.target.closest && e.target.closest(".popup-edit-link");
         if (!a) {
@@ -2726,7 +2871,9 @@
         }
         e.preventDefault();
         m.closePopup();
-        requestEnterEditMode(a.getAttribute("data-country"));
+        requireSignIn(function () {
+          requestEnterEditMode(a.getAttribute("data-country"));
+        }, a.getAttribute("data-country"));
       });
       L.DomEvent.disableClickPropagation(
         document.getElementById("editor-panel"),
@@ -2737,12 +2884,16 @@
 
       document.getElementById("compass").innerHTML =
         '<img src="./magicBlueDot.png" width="100px" height="100px">';
-      if (urlEditCountry) {
-        requestEnterEditMode(urlEditCountry);
-      } else {
-        document.getElementsByClassName("splitview")[0].click();
-        $(".leaflet-container").css("cursor", "");
-      }
+      initAuth().then(function () {
+        if (urlEditCountry) {
+          requireSignIn(function () {
+            requestEnterEditMode(urlEditCountry);
+          }, urlEditCountry);
+        } else {
+          document.getElementsByClassName("splitview")[0].click();
+          $(".leaflet-container").css("cursor", "");
+        }
+      });
     </script>
   </body>
 </html>
