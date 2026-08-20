@@ -13,7 +13,7 @@ var vhfHadAuthCallback =
 
 function authRedirectTo() {
   // Keep this as the path only. Query strings are not in the Supabase allow list;
-  // map position is restored from sessionStorage after sign-in.
+  // map position is restored from localStorage after sign-in.
   return window.location.origin + window.location.pathname;
 }
 
@@ -108,40 +108,56 @@ function rememberAuthIntent(pendingToken) {
       typeof countryToEdit === "function" ? countryToEdit() || "1" : "1";
   }
   try {
-    sessionStorage.setItem("vhf_enter_edit", "1");
-    sessionStorage.setItem("vhf_pending_edit", countryCode);
+    // localStorage: the email link opens a new tab, which has empty sessionStorage.
+    localStorage.setItem("vhf_enter_edit", "1");
+    localStorage.setItem("vhf_pending_edit", countryCode);
+    localStorage.setItem("vhf_pending_at", String(Date.now()));
     var pos = currentMapPosString();
     if (pos) {
-      sessionStorage.setItem("vhf_pending_map", pos);
+      localStorage.setItem("vhf_pending_map", pos);
     }
   } catch (err) {}
 }
 
 function clearAuthIntent() {
   try {
-    sessionStorage.removeItem("vhf_enter_edit");
-    sessionStorage.removeItem("vhf_pending_edit");
-    sessionStorage.removeItem("vhf_pending_map");
+    localStorage.removeItem("vhf_enter_edit");
+    localStorage.removeItem("vhf_pending_edit");
+    localStorage.removeItem("vhf_pending_map");
+    localStorage.removeItem("vhf_pending_at");
   } catch (err) {}
 }
 
-function consumeAuthIntent() {
+function peekAuthIntent() {
   var pending = null;
   var pos = null;
+  var at = null;
   try {
-    pending = sessionStorage.getItem("vhf_pending_edit");
-    pos = sessionStorage.getItem("vhf_pending_map");
+    pending = localStorage.getItem("vhf_pending_edit");
+    pos = localStorage.getItem("vhf_pending_map");
+    at = localStorage.getItem("vhf_pending_at");
   } catch (err) {
     return null;
   }
   if (!pending) {
     return null;
   }
-  clearAuthIntent();
+  if (at && Date.now() - parseInt(at, 10) > 2 * 60 * 60 * 1000) {
+    clearAuthIntent();
+    return null;
+  }
   return {
     country: pending && pending !== "1" ? pending : null,
     mapPos: pos,
   };
+}
+
+function consumeAuthIntent() {
+  var intent = peekAuthIntent();
+  if (intent) {
+    clearAuthIntent();
+  }
+  return intent;
 }
 
 function applyStoredMap(mapPos) {
@@ -171,16 +187,22 @@ function resumePendingEdit() {
   if (!isSignedIn() || typeof requestEnterEditMode !== "function") {
     return false;
   }
-  var intent = consumeAuthIntent();
+  var intent = peekAuthIntent();
   if (!intent) {
     return false;
   }
   vhfAuth.didResumeEdit = true;
   hideAuthModal();
   applyStoredMap(intent.mapPos);
+  var delay = intent.country ? 150 : 900;
   setTimeout(function () {
     requestEnterEditMode(intent.country || undefined, { silent: true });
-  }, 400);
+    if (typeof editMode !== "undefined" && editMode) {
+      clearAuthIntent();
+    } else {
+      vhfAuth.didResumeEdit = false;
+    }
+  }, delay);
   return true;
 }
 
