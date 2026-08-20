@@ -1,12 +1,19 @@
-/* global supabase */
+/* global supabase, m, mapPosition, countryToEdit, requestEnterEditMode, editMode, requestExitEditMode, changedIds, loadCountryOnCoordiate */
 
 var vhfAuth = {
   client: null,
   session: null,
   pendingAfterSignIn: null,
+  didResumeEdit: false,
 };
 
+var vhfHadAuthCallback =
+  window.location.search.indexOf("code=") >= 0 ||
+  window.location.hash.indexOf("access_token") >= 0;
+
 function authRedirectTo() {
+  // Keep this as the path only. Query strings are not in the Supabase allow list;
+  // map position is restored from sessionStorage after sign-in.
   return window.location.origin + window.location.pathname;
 }
 
@@ -74,9 +81,107 @@ function cancelAuthModal() {
   var waitingForEmail = sent && sent.style.display === "block";
   if (!waitingForEmail) {
     vhfAuth.pendingAfterSignIn = null;
-    sessionStorage.removeItem("vhf_pending_edit");
+    clearAuthIntent();
   }
   hideAuthModal();
+}
+
+function currentMapPosString() {
+  if (typeof m !== "undefined" && m && m.getCenter) {
+    try {
+      var c = m.getCenter();
+      return (
+        c.lat.toFixed(6) + "/" + c.lng.toFixed(6) + "/" + m.getZoom()
+      );
+    } catch (err) {}
+  }
+  if (typeof mapPosition === "string" && mapPosition) {
+    return decodeURIComponent(mapPosition);
+  }
+  return "";
+}
+
+function rememberAuthIntent(pendingToken) {
+  var countryCode = pendingToken;
+  if (!countryCode || countryCode === "1") {
+    countryCode =
+      typeof countryToEdit === "function" ? countryToEdit() || "1" : "1";
+  }
+  try {
+    sessionStorage.setItem("vhf_enter_edit", "1");
+    sessionStorage.setItem("vhf_pending_edit", countryCode);
+    var pos = currentMapPosString();
+    if (pos) {
+      sessionStorage.setItem("vhf_pending_map", pos);
+    }
+  } catch (err) {}
+}
+
+function clearAuthIntent() {
+  try {
+    sessionStorage.removeItem("vhf_enter_edit");
+    sessionStorage.removeItem("vhf_pending_edit");
+    sessionStorage.removeItem("vhf_pending_map");
+  } catch (err) {}
+}
+
+function consumeAuthIntent() {
+  var pending = null;
+  var pos = null;
+  try {
+    pending = sessionStorage.getItem("vhf_pending_edit");
+    pos = sessionStorage.getItem("vhf_pending_map");
+  } catch (err) {
+    return null;
+  }
+  if (!pending) {
+    return null;
+  }
+  clearAuthIntent();
+  return {
+    country: pending && pending !== "1" ? pending : null,
+    mapPos: pos,
+  };
+}
+
+function applyStoredMap(mapPos) {
+  if (!mapPos || typeof m === "undefined" || !m) {
+    return;
+  }
+  var parts = mapPos.split("/");
+  if (parts.length < 2) {
+    return;
+  }
+  var lat = parseFloat(parts[0]);
+  var lon = parseFloat(parts[1]);
+  var zoom = parseInt(parts[2] || "11", 10);
+  if (isNaN(lat) || isNaN(lon)) {
+    return;
+  }
+  m.setView([lat, lon], isNaN(zoom) ? 11 : zoom);
+  if (typeof loadCountryOnCoordiate === "function") {
+    loadCountryOnCoordiate([lat, lon]);
+  }
+}
+
+function resumePendingEdit() {
+  if (vhfAuth.didResumeEdit) {
+    return false;
+  }
+  if (!isSignedIn() || typeof requestEnterEditMode !== "function") {
+    return false;
+  }
+  var intent = consumeAuthIntent();
+  if (!intent) {
+    return false;
+  }
+  vhfAuth.didResumeEdit = true;
+  hideAuthModal();
+  applyStoredMap(intent.mapPos);
+  setTimeout(function () {
+    requestEnterEditMode(intent.country || undefined, { silent: true });
+  }, 400);
+  return true;
 }
 
 function updateAuthUi() {
@@ -87,7 +192,13 @@ function updateAuthUi() {
   if (chip && chipText) {
     if (email) {
       chip.style.display = "flex";
-      chipText.textContent = "Signed in as " + email;
+      chipText.textContent = email
+        ? "Signed in as " +
+          email +
+          (typeof editMode !== "undefined" && editMode
+            ? ""
+            : " — tap the pencil to edit")
+        : "";
     } else {
       chip.style.display = "none";
     }
@@ -126,26 +237,21 @@ function initAuth() {
     if (session && vhfAuth.pendingAfterSignIn) {
       var next = vhfAuth.pendingAfterSignIn;
       vhfAuth.pendingAfterSignIn = null;
-      sessionStorage.removeItem("vhf_pending_edit");
+      clearAuthIntent();
       hideAuthModal();
       next();
+      return;
     }
-    var pending = sessionStorage.getItem("vhf_pending_edit");
-    var returningFromAuth =
-      window.location.search.indexOf("code=") >= 0 ||
-      window.location.hash.indexOf("access_token") >= 0;
-    if (session && pending && returningFromAuth) {
-      sessionStorage.removeItem("vhf_pending_edit");
-      hideAuthModal();
-      if (typeof requestEnterEditMode === "function") {
-        requestEnterEditMode(pending === "1" ? undefined : pending);
-      }
+    if (session) {
+      resumePendingEdit();
     }
   });
   return vhfAuth.client.auth.getSession().then(function (result) {
     setAuthSession(result.data && result.data.session);
     if (window.location.search.indexOf("code=") >= 0) {
-      var clean = window.location.pathname + (window.location.hash || "");
+      var clean =
+        window.location.pathname +
+        (window.location.hash || "");
       window.history.replaceState({}, document.title, clean);
     }
     return fetchAuthProviderSettings().then(function () {
@@ -185,7 +291,7 @@ function requireSignIn(next, pendingToken) {
     return;
   }
   vhfAuth.pendingAfterSignIn = next;
-  sessionStorage.setItem("vhf_pending_edit", pendingToken || "1");
+  rememberAuthIntent(pendingToken);
   showAuthModal();
   if (!authIsConfigured()) {
     setAuthMessage(
@@ -249,7 +355,7 @@ function signInWithGoogle() {
     );
     return;
   }
-  sessionStorage.setItem("vhf_pending_edit", "1");
+  rememberAuthIntent();
   vhfAuth.client.auth
     .signInWithOAuth({
       provider: "google",
