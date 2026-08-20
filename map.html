@@ -76,9 +76,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.EasyButton/2.4.0/easy-button.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.1/dist/umd/supabase.js"></script>
-    <script src="supabase-config.js?v=7"></script>
-    <script src="auth.js?v=7"></script>
-    <script src="features-db.js?v=7"></script>
+    <script src="supabase-config.js?v=8"></script>
+    <script src="auth.js?v=8"></script>
+    <script src="features-db.js?v=8"></script>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
@@ -754,6 +754,10 @@
       var countriesGeoObj;
       var countriesGeoJSON = { type: "FeatureCollection", features: [] };
       var countriesLoaded = [];
+      var vhfCountrySource = {};
+      var editLoadSeq = 0;
+      var GITHUB_DATA =
+        "https://raw.githubusercontent.com/htool/vhfinfo/main/data/";
       var activeCountry = "";
       var vhfinfo;
       var Nm12;
@@ -1412,90 +1416,218 @@
         return closest;
       }
 
+      function githubDataUrl(code, suffix) {
+        return GITHUB_DATA + code + (suffix || "") + ".json";
+      }
+
+      function vhfFeatureStyle() {
+        return {
+          fillOpacity: 0.15,
+          color: "red",
+          dashArray: "3",
+          weight: 1,
+          opacity: 0.7,
+        };
+      }
+
+      function typeLayerFor(type) {
+        switch (type) {
+          case "vts":
+            return vtsLayer;
+          case "lock":
+            return lockLayer;
+          case "bridge":
+            return bridgeLayer;
+          case "vts radar support":
+            return radarLayer;
+          case "marina":
+            return marinaLayer;
+          case "area":
+            return areaLayer;
+          case "territorial":
+            return Nm12;
+          default:
+            return null;
+        }
+      }
+
+      function onEachVhfFeature(feature, layer, country, resetLayer) {
+        if (!feature.properties) {
+          feature.properties = {};
+        }
+        if (typeof feature.properties.id == "undefined") {
+          feature.properties.id = generateUUID();
+        }
+        layer._vhfCountry = country;
+        layer._vhfSource = vhfCountrySource[country] || "github";
+        layer.on({
+          mouseover: function (e) {
+            e.target.setStyle({
+              fillOpacity: 0.4,
+              dashArray: "",
+              weight: 2,
+              opacity: 0.2,
+            });
+            if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+              e.target.bringToFront();
+            }
+          },
+          mouseout: function (e) {
+            if (resetLayer && resetLayer.resetStyle) {
+              resetLayer.resetStyle(e.target);
+            } else {
+              e.target.setStyle(vhfFeatureStyle());
+            }
+          },
+          click: function (e) {
+            if (editMode) {
+              L.DomEvent.stopPropagation(e);
+              openEditor(e.target);
+            } else {
+              showInfo(e.target.feature, e.target, country);
+            }
+          },
+          contextmenu: function (e) {
+            if (resetLayer && resetLayer.bringToBack) {
+              resetLayer.bringToBack();
+            }
+          },
+        });
+        if (editMode && country === layer._vhfCountry) {
+          drawnItems.addLayer(layer);
+        }
+        var specific = typeLayerFor(feature.properties.type);
+        if (specific) {
+          specific.addLayer(layer);
+        }
+      }
+
       function loadUrl(url, layerGroup, country) {
         if (countriesLoaded.includes(url)) {
-          // console.log(country + ' already loadded')
           return;
         }
         console.log("Loading " + country);
         countriesLoaded.push(url);
         try {
           var l = new L.GeoJSON.AJAX(url, {
-            style: function (feature) {
-              return {
-                fillOpacity: 0.15,
-                color: "red",
-                dashArray: "3",
-                weight: 1,
-                opacity: 0.7,
-              };
-            },
+            style: vhfFeatureStyle,
             onEachFeature: function (feature, layer) {
-              if (typeof feature.properties.id == "undefined") {
-                feature.properties.id = generateUUID();
-              }
-              var specific;
-              switch (feature.properties.type) {
-                case "vts":
-                  specific = vtsLayer;
-                  break;
-                case "lock":
-                  specific = lockLayer;
-                  break;
-                case "bridge":
-                  specific = bridgeLayer;
-                  break;
-                case "vts radar support":
-                  specific = radarLayer;
-                  break;
-                case "marina":
-                  specific = marinaLayer;
-                  break;
-                case "area":
-                  specific = areaLayer;
-                  break;
-                case "territorial":
-                  specific = Nm12;
-                  break;
-              }
-              // console.log(feature)
-              layer._vhfCountry = country;
-              layer.on({
-                mouseover: function (e) {
-                  e.target.setStyle({
-                    fillOpacity: 0.4,
-                    dashArray: "",
-                    weight: 2,
-                    opacity: 0.2,
-                  });
-                  if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-                    e.target.bringToFront();
-                  }
-                },
-                mouseout: function (e) {
-                  l.resetStyle(e.target);
-                },
-                click: function (e) {
-                  if (editMode) {
-                    L.DomEvent.stopPropagation(e);
-                    openEditor(e.target);
-                  } else {
-                    showInfo(e.target.feature, e.target, country);
-                  }
-                },
-                contextmenu: function (e) {
-                  l.bringToBack();
-                },
-              });
-              if (editMode && country === layer._vhfCountry) {
-                drawnItems.addLayer(layer);
-              }
-              specific.addLayer(layer);
+              onEachVhfFeature(feature, layer, country, l);
             },
           });
         } catch (e) {
           console.log("Loading did not work");
         }
+      }
+
+      function addVhfFeatures(features, country) {
+        var collection = {
+          type: "FeatureCollection",
+          features: features || [],
+        };
+        var l = L.geoJSON(collection, {
+          style: vhfFeatureStyle,
+          onEachFeature: function (feature, layer) {
+            onEachVhfFeature(feature, layer, country, l);
+          },
+        });
+        return l;
+      }
+
+      function removeCountryVhfLayers(code) {
+        [
+          vtsLayer,
+          radarLayer,
+          lockLayer,
+          bridgeLayer,
+          marinaLayer,
+          areaLayer,
+        ].forEach(function (group) {
+          var doomed = [];
+          group.eachLayer(function (layer) {
+            if (layer._vhfCountry === code) {
+              doomed.push(layer);
+            }
+          });
+          doomed.forEach(function (layer) {
+            group.removeLayer(layer);
+            drawnItems.removeLayer(layer);
+          });
+        });
+      }
+
+      function forgetGithubJsonUrl(code) {
+        var url = githubDataUrl(code);
+        countriesLoaded = countriesLoaded.filter(function (item) {
+          return item !== url;
+        });
+      }
+
+      function setEditBanner(text) {
+        var el = document.getElementById("edit-banner-text");
+        if (el) {
+          el.textContent = text;
+        }
+      }
+
+      function reloadCountryFeaturesFromDb(code) {
+        var seq = ++editLoadSeq;
+        removeCountryVhfLayers(code);
+        forgetGithubJsonUrl(code);
+        vhfCountrySource[code] = "db";
+        setEditBanner(
+          "Editing " +
+            friendlyCountry(code) +
+            " — loading areas from the database…",
+        );
+        if (
+          !window.vhfFeaturesDb ||
+          typeof window.vhfFeaturesDb.fetchCountryFeatures !== "function"
+        ) {
+          loadCountryFeaturesFromGithub(code);
+          setEditBanner(
+            "Editing " +
+              friendlyCountry(code) +
+              " — database helper missing, using GitHub.",
+          );
+          return;
+        }
+        window.vhfFeaturesDb
+          .fetchCountryFeatures(code)
+          .then(function (features) {
+            if (seq !== editLoadSeq || !editMode || country !== code) {
+              return;
+            }
+            addVhfFeatures(features, code);
+            vhfCountrySource[code] = "db";
+            setEditBanner(
+              "Editing " +
+                friendlyCountry(code) +
+                " — " +
+                features.length +
+                " areas from the database.",
+            );
+            console.log(
+              "Loaded " + features.length + " " + code + " areas from database",
+            );
+          })
+          .catch(function (err) {
+            console.error(err);
+            if (seq !== editLoadSeq || !editMode || country !== code) {
+              return;
+            }
+            loadCountryFeaturesFromGithub(code);
+            setEditBanner(
+              "Editing " +
+                friendlyCountry(code) +
+                " — database unavailable, using GitHub.",
+            );
+          });
+      }
+
+      function loadCountryFeaturesFromGithub(code) {
+        vhfCountrySource[code] = "github";
+        loadUrl(githubDataUrl(code), vhfinfo, code);
       }
 
       if (editMode) {
@@ -1880,7 +2012,7 @@
         document.getElementById("edit-banner-text").textContent =
           "Editing " +
           friendlyCountry(code) +
-          " — click an area, or draw a new one.";
+          " — loading areas from the database…";
         ensureCountryLoaded(code, options.fit);
         m.addLayer(drawnItems);
         addCountryLayersToDrawnItems(code);
@@ -1930,6 +2062,14 @@
             ),
           );
         }
+        if (editMode) {
+          if (!countriesLoaded.includes(code)) {
+            loadCountry(code);
+            countriesLoaded.push(code);
+          }
+          reloadCountryFeaturesFromDb(code);
+          return;
+        }
         if (!countriesLoaded.includes(code)) {
           var box = countriesGeoObj[code];
           if (box) {
@@ -1937,20 +2077,8 @@
             var lat = box.ne.lat - (box.ne.lat - box.sw.lat) / 2;
             loadCountryOnCoordiate([lat, lon]);
           } else {
-            loadUrl(
-              "https://raw.githubusercontent.com/htool/vhfinfo/main/data/" +
-                code +
-                ".json",
-              vhfinfo,
-              code,
-            );
-            loadUrl(
-              "https://raw.githubusercontent.com/htool/vhfinfo/main/data/" +
-                code +
-                "_12Nm.json",
-              Nm12,
-              code,
-            );
+            loadUrl(githubDataUrl(code), vhfinfo, code);
+            loadUrl(githubDataUrl(code, "_12Nm"), Nm12, code);
             countriesLoaded.push(code);
           }
         } else {
@@ -2016,7 +2144,9 @@
       }
 
       function exitEditMode() {
+        var code = country;
         closeEditor();
+        editLoadSeq += 1;
         editMode = false;
         document.body.classList.remove("editing");
         if (drawControl) {
@@ -2034,6 +2164,15 @@
         $(".leaflet-container").css("cursor", "");
         changedIds = {};
         currentEditLayer = null;
+        if (code && vhfCountrySource[code] === "db") {
+          removeCountryVhfLayers(code);
+          forgetGithubJsonUrl(code);
+          loadCountryFeaturesFromGithub(code);
+          var nmUrl = githubDataUrl(code, "_12Nm");
+          if (!countriesLoaded.includes(nmUrl)) {
+            loadUrl(nmUrl, Nm12, code);
+          }
+        }
         setOrientation();
         m.invalidateSize(true);
         if (typeof updateAuthUi === "function") {
@@ -2560,20 +2699,8 @@
         countries.forEach((country) => {
           if (!countriesLoaded.includes(country)) {
             loadCountry(country);
-            loadUrl(
-              "https://raw.githubusercontent.com/htool/vhfinfo/main/data/" +
-                country +
-                ".json",
-              vhfinfo,
-              country,
-            );
-            loadUrl(
-              "https://raw.githubusercontent.com/htool/vhfinfo/main/data/" +
-                country +
-                "_12Nm.json",
-              Nm12,
-              country,
-            );
+            loadUrl(githubDataUrl(country), vhfinfo, country);
+            loadUrl(githubDataUrl(country, "_12Nm"), Nm12, country);
             countriesLoaded.push(country);
           }
         });
