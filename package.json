@@ -26,7 +26,9 @@
     "format": "prettier --write --no-semi --single-quote plugin/*",
     "import:vhf": "node scripts/import-vhf-features.js",
     "import:vhf:sql": "node scripts/import-vhf-features.js --sql",
-    "import:vhf:verify": "node scripts/verify-vhf-features.js"
+    "import:vhf:verify": "node scripts/verify-vhf-features.js",
+    "test:features-db": "node scripts/test-features-db.js",
+    "test:dual-write-live": "node scripts/test-dual-write-live.js"
   },
   "dependencies": {
     "@turf/nearest-point": "6.5.0",
