@@ -323,7 +323,21 @@ function requireSignIn(next, pendingToken) {
   }
 }
 
-function sendMagicLink() {
+function authErrorMessage(err) {
+  var code = (err && (err.code || err.error_code)) || "";
+  var msg = (err && (err.message || err.msg)) || "";
+  var combined = (code + " " + msg).toLowerCase();
+  if (combined.indexOf("rate") >= 0) {
+    return "Too many sign-in emails were sent in a short time. That is a limit on the free mailer. Wait about an hour, or use the browser tab where you are already signed in and tap the pencil.";
+  }
+  if (combined.indexOf("redirect") >= 0) {
+    return "This page address is not yet allowed for sign-in. Add it under Authentication → URL Configuration in Supabase.";
+  }
+  if (msg) {
+    return msg;
+  }
+  return "Could not send the link. Try again in a little while.";
+}
   var emailInput = document.getElementById("auth-email");
   var email = (emailInput && emailInput.value ? emailInput.value : "").trim();
   if (!email || email.indexOf("@") < 0) {
@@ -348,10 +362,7 @@ function sendMagicLink() {
     })
     .then(function (result) {
       if (result.error) {
-        setAuthMessage(
-          "Could not send the link. Check the address and try again.",
-          true,
-        );
+        setAuthMessage(authErrorMessage(result.error), true);
         console.error(result.error);
         return;
       }
@@ -362,10 +373,7 @@ function sendMagicLink() {
     })
     .catch(function (err) {
       console.error(err);
-      setAuthMessage(
-        "Could not send the link. Check the address and try again.",
-        true,
-      );
+      setAuthMessage(authErrorMessage(err), true);
     });
 }
 
