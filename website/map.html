@@ -76,8 +76,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.EasyButton/2.4.0/easy-button.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.1/dist/umd/supabase.js"></script>
-    <script src="supabase-config.js?v=3"></script>
-    <script src="auth.js?v=3"></script>
+    <script src="supabase-config.js?v=4"></script>
+    <script src="auth.js?v=4"></script>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
@@ -1822,12 +1822,24 @@
         return null;
       }
 
-      function requestEnterEditMode(preferredCountry) {
+      function requestEnterEditMode(preferredCountry, options) {
+        options = options || {};
+        if (!preferredCountry) {
+          var storedPos = null;
+          try {
+            storedPos = sessionStorage.getItem("vhf_pending_map");
+          } catch (err) {}
+          if (storedPos) {
+            applyStoredMap(storedPos);
+          }
+        }
         var code = preferredCountry || countryToEdit();
         if (!code) {
-          alert(
-            "Move the map so the country you want to change is in the center, then tap the pencil again.",
-          );
+          if (!options.silent) {
+            alert(
+              "Move the map so the country you want to change is in the center, then tap the pencil again.",
+            );
+          }
           return;
         }
         if (editMode && country === code) {
@@ -1888,6 +1900,9 @@
         setOrientation();
         setTimeout(removeUnwanted, 500);
         closeEditor();
+        if (typeof updateAuthUi === "function") {
+          updateAuthUi();
+        }
       }
 
       function editMouseMove(event) {
@@ -2019,6 +2034,9 @@
         currentEditLayer = null;
         setOrientation();
         m.invalidateSize(true);
+        if (typeof updateAuthUi === "function") {
+          updateAuthUi();
+        }
       }
 
       function showEditorError(msg) {
@@ -2885,6 +2903,9 @@
       document.getElementById("compass").innerHTML =
         '<img src="./magicBlueDot.png" width="100px" height="100px">';
       initAuth().then(function () {
+        if (resumePendingEdit()) {
+          return;
+        }
         if (urlEditCountry) {
           requireSignIn(function () {
             requestEnterEditMode(urlEditCountry);
