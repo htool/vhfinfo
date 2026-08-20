@@ -3,12 +3,18 @@
 Viewers do not need an account. People who change the map must sign in with
 **email (a link, no password)** or **Google**.
 
-## 1. Create a free Supabase project
+Supabase organisation: `bwrgvqczyqfjvcmfhbsn`  
+Dashboard: [https://supabase.com/dashboard/org/bwrgvqczyqfjvcmfhbsn](https://supabase.com/dashboard/org/bwrgvqczyqfjvcmfhbsn)
 
-1. Open [https://supabase.com/dashboard](https://supabase.com/dashboard) and sign in.
-2. **New project**. Any name is fine (for example `vhfinfo`). Pick a region close to your users. Wait until it is ready.
+## 1. Create a free project in that organisation
+
+The organisation slug is not enough to connect the map. Sign-in talks to a
+**project** (URL + anon key).
+
+1. Open the organisation dashboard above.
+2. **New project** if you do not already have one (any name is fine, for example `vhfinfo`). Pick a region close to your users. Wait until it is ready.
 3. Open **Project Settings → API**.
-4. Copy **Project URL** and the **anon public** key into `website/supabase-config.js`.
+4. Copy **Project URL** (looks like `https://abcdefghij.supabase.co`) and the **anon public** key into `website/supabase-config.js`, or send them as `SUPABASE_URL` and `SUPABASE_ANON_KEY`. Do not copy the `service_role` key.
 
 ## 2. Tell Supabase which pages may sign people in
 
