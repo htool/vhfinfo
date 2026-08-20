@@ -148,8 +148,35 @@ function initAuth() {
       var clean = window.location.pathname + (window.location.hash || "");
       window.history.replaceState({}, document.title, clean);
     }
-    return vhfAuth.session;
+    return fetchAuthProviderSettings().then(function () {
+      return vhfAuth.session;
+    });
   });
+}
+
+function fetchAuthProviderSettings() {
+  var cfg = authConfig();
+  return fetch(cfg.url + "/auth/v1/settings", {
+    headers: {
+      apikey: cfg.anonKey,
+      Authorization: "Bearer " + cfg.anonKey,
+    },
+  })
+    .then(function (res) {
+      return res.json();
+    })
+    .then(function (settings) {
+      var googleOn = !!(settings.external && settings.external.google);
+      var googleBtn = document.getElementById("auth-google");
+      var orEl = document.querySelector("#auth-modal .auth-or");
+      if (googleBtn) {
+        googleBtn.style.display = googleOn ? "" : "none";
+      }
+      if (orEl) {
+        orEl.style.display = googleOn ? "" : "none";
+      }
+    })
+    .catch(function () {});
 }
 
 function requireSignIn(next, pendingToken) {
