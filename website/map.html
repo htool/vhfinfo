@@ -1431,6 +1431,38 @@
         };
       }
 
+      function vhfSelectedStyle() {
+        return {
+          fillOpacity: 0.45,
+          weight: 3,
+          opacity: 0.9,
+          dashArray: "",
+        };
+      }
+
+      function applySelectedStyle(layer) {
+        if (!layer || !layer.setStyle) {
+          return;
+        }
+        layer.setStyle(vhfSelectedStyle());
+        if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+          layer.bringToFront();
+        }
+      }
+
+      function restoreLayerStyle(layer) {
+        if (!layer) {
+          return;
+        }
+        var resetLayer = layer._vhfResetLayer;
+        if (resetLayer && resetLayer.resetStyle) {
+          resetLayer.resetStyle(layer);
+        } else if (layer.setStyle) {
+          layer.setStyle(layer._vhfPrevStyle || vhfFeatureStyle());
+        }
+        layer._vhfPrevStyle = null;
+      }
+
       function typeLayerFor(type) {
         switch (type) {
           case "vts":
@@ -1461,24 +1493,30 @@
         }
         layer._vhfCountry = country;
         layer._vhfSource = vhfCountrySource[country] || "github";
+        layer._vhfResetLayer = resetLayer;
         layer.on({
           mouseover: function (e) {
-            e.target.setStyle({
+            var l = e.target;
+            if (l === currentEditLayer) {
+              return;
+            }
+            l.setStyle({
               fillOpacity: 0.4,
               dashArray: "",
               weight: 2,
               opacity: 0.2,
             });
             if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-              e.target.bringToFront();
+              l.bringToFront();
             }
           },
           mouseout: function (e) {
-            if (resetLayer && resetLayer.resetStyle) {
-              resetLayer.resetStyle(e.target);
-            } else {
-              e.target.setStyle(vhfFeatureStyle());
+            var l = e.target;
+            if (l === currentEditLayer) {
+              applySelectedStyle(l);
+              return;
             }
+            restoreLayerStyle(l);
           },
           click: function (e) {
             if (editMode) {
@@ -2237,9 +2275,8 @@
       }
 
       function closeEditor() {
-        if (currentEditLayer && currentEditLayer._vhfPrevStyle) {
-          currentEditLayer.setStyle(currentEditLayer._vhfPrevStyle);
-          currentEditLayer._vhfPrevStyle = null;
+        if (currentEditLayer) {
+          restoreLayerStyle(currentEditLayer);
         }
         currentEditLayer = null;
         document.body.classList.remove("editor-open");
@@ -2288,28 +2325,15 @@
           return;
         }
         m.closePopup();
-        if (
-          currentEditLayer &&
-          currentEditLayer !== layer &&
-          currentEditLayer._vhfPrevStyle
-        ) {
-          currentEditLayer.setStyle(currentEditLayer._vhfPrevStyle);
+        if (currentEditLayer && currentEditLayer !== layer) {
+          restoreLayerStyle(currentEditLayer);
         }
         currentEditLayer = layer;
         var p = ensureFeatureDefaults(layer, false);
         if (layer.setStyle) {
-          layer._vhfPrevStyle = {
-            fillOpacity: layer.options && layer.options.fillOpacity,
-            weight: layer.options && layer.options.weight,
-            opacity: layer.options && layer.options.opacity,
-            dashArray: layer.options && layer.options.dashArray,
-          };
-          layer.setStyle({
-            fillOpacity: 0.45,
-            weight: 3,
-            opacity: 0.9,
-            dashArray: "",
-          });
+          // Capture default style, not hover, so selection does not lag one click behind.
+          layer._vhfPrevStyle = vhfFeatureStyle();
+          applySelectedStyle(layer);
         }
         document.getElementById("editor-title").textContent = p.name
           ? p.name
