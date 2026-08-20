@@ -5,6 +5,8 @@ The map still reads GitHub. Do not point `map.html` at this table yet.
 
 Project: `imgadhoivcpexrferorn` (`https://imgadhoivcpexrferorn.supabase.co`)
 
+Initial load is done: **380** unique rows (public `SELECT` works; anonymous writes are blocked). Re-running the import is an upsert by id.
+
 ## What gets imported
 
 - Country files such as `data/NLD.json`
