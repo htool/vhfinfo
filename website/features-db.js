@@ -2,7 +2,7 @@
 /**
  * Dual-write helper: map publishes still go to commit.vhfinfo.org;
  * this also upserts/deletes the same features in public.vhf_features.
- * The public map still reads GitHub.
+ * Edit mode reads this table. The public map still reads GitHub.
  */
 (function (root, factory) {
   if (typeof module === "object" && module.exports) {
@@ -11,6 +11,17 @@
     root.vhfFeaturesDb = factory();
   }
 })(typeof window !== "undefined" ? window : this, function () {
+  function publicConfig(options) {
+    options = options || {};
+    if (options.url && options.anonKey) {
+      return { url: options.url, anonKey: options.anonKey };
+    }
+    if (typeof window !== "undefined" && window.VHFINFO_SUPABASE) {
+      return window.VHFINFO_SUPABASE;
+    }
+    return { url: "", anonKey: "" };
+  }
+
   function channelToText(value) {
     if (value == null || value === "") {
       return null;
@@ -112,10 +123,99 @@
       });
   }
 
+  function rowsToFeatures(rows) {
+    return (rows || [])
+      .filter(function (row) {
+        return row && row.geometry && row.geometry.type;
+      })
+      .map(function (row) {
+        var props = {};
+        if (
+          row.properties &&
+          typeof row.properties === "object" &&
+          !Array.isArray(row.properties)
+        ) {
+          Object.keys(row.properties).forEach(function (key) {
+            props[key] = row.properties[key];
+          });
+        }
+        if (!props.id) {
+          props.id = row.id;
+        }
+        if (props.name == null && row.name != null) {
+          props.name = row.name;
+        }
+        if (props.type == null && row.type != null) {
+          props.type = row.type;
+        }
+        if (props.channel == null && row.channel != null) {
+          props.channel = row.channel;
+        }
+        return {
+          type: "Feature",
+          properties: props,
+          geometry: row.geometry,
+        };
+      });
+  }
+
+  function fetchCountryFeatures(country, options) {
+    options = options || {};
+    var client =
+      options.client ||
+      (typeof vhfAuth !== "undefined" && vhfAuth.client) ||
+      null;
+    if (client && typeof client.from === "function") {
+      return client
+        .from("vhf_features")
+        .select("id,country,name,type,channel,properties,geometry")
+        .eq("country", country)
+        .limit(1000)
+        .then(function (res) {
+          if (res && res.error) {
+            throw res.error;
+          }
+          return rowsToFeatures(res && res.data);
+        });
+    }
+    var cfg = publicConfig(options);
+    var base = (cfg.url || "").replace(/\/$/, "");
+    if (!base || !cfg.anonKey) {
+      return Promise.reject(new Error("Supabase is not configured"));
+    }
+    var url =
+      base +
+      "/rest/v1/vhf_features?country=eq." +
+      encodeURIComponent(country) +
+      "&select=id,country,name,type,channel,properties,geometry&limit=1000";
+    return fetch(url, {
+      headers: {
+        apikey: cfg.anonKey,
+        Authorization: "Bearer " + cfg.anonKey,
+      },
+    }).then(function (res) {
+      return res.text().then(function (text) {
+        var data = text ? JSON.parse(text) : [];
+        if (!res.ok) {
+          throw new Error(
+            (data && (data.message || data.error)) ||
+              "Could not load features HTTP " + res.status,
+          );
+        }
+        if (!Array.isArray(data)) {
+          throw new Error("Unexpected feature response");
+        }
+        return rowsToFeatures(data);
+      });
+    });
+  }
+
   return {
     channelToText: channelToText,
     featureToRow: featureToRow,
     changesToDbOps: changesToDbOps,
     publishFeaturesToDb: publishFeaturesToDb,
+    rowsToFeatures: rowsToFeatures,
+    fetchCountryFeatures: fetchCountryFeatures,
   };
 });
