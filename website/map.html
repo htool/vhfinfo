@@ -2393,6 +2393,20 @@
         exitEditMode();
       }
 
+      function returnLayerToTypeGroup(layer) {
+        if (!layer) {
+          return;
+        }
+        var p = layer.feature && layer.feature.properties;
+        var specific = p && typeLayerFor(p.type);
+        if (specific) {
+          specific.addLayer(layer);
+        } else if (m && !m.hasLayer(layer)) {
+          m.addLayer(layer);
+        }
+        restoreLayerStyle(layer);
+      }
+
       function exitEditMode() {
         pendingEditFeatureId = null;
         closeEditor();
@@ -2407,7 +2421,13 @@
           layers.push(layer);
         });
         layers.forEach(function (layer) {
+          var p = layer.feature && layer.feature.properties;
+          var discardNew =
+            p && changedIds[p.id] && changedIds[p.id].action === "Add";
           drawnItems.removeLayer(layer);
+          if (!discardNew) {
+            returnLayerToTypeGroup(layer);
+          }
         });
         m.removeEventListener("mousemove", editMouseMove);
         $(".leaflet-container").css("cursor", "");
