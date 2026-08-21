@@ -1946,13 +1946,6 @@
               json.phone +
               "</a></td></tr>";
           }
-          if (typeof json.url != "undefined") {
-            h =
-              h +
-              '<tr><td>Info</td><td><a href="' +
-              json.url +
-              '" target="_blank">link</a></td></tr>';
-          }
           if (h.length > 0) {
             h = '<tr><td colspan="2"><b>' + title + "</td></b></tr>" + h;
           }
@@ -2273,6 +2266,20 @@
         exitEditMode();
       }
 
+      function returnLayerToTypeGroup(layer) {
+        if (!layer) {
+          return;
+        }
+        var p = layer.feature && layer.feature.properties;
+        var specific = p && typeLayerFor(p.type);
+        if (specific) {
+          specific.addLayer(layer);
+        } else if (m && !m.hasLayer(layer)) {
+          m.addLayer(layer);
+        }
+        restoreLayerStyle(layer);
+      }
+
       function exitEditMode() {
         closeEditor();
         editMode = false;
@@ -2286,7 +2293,13 @@
           layers.push(layer);
         });
         layers.forEach(function (layer) {
+          var p = layer.feature && layer.feature.properties;
+          var discardNew =
+            p && changedIds[p.id] && changedIds[p.id].action === "Add";
           drawnItems.removeLayer(layer);
+          if (!discardNew) {
+            returnLayerToTypeGroup(layer);
+          }
         });
         m.removeEventListener("mousemove", editMouseMove);
         $(".leaflet-container").css("cursor", "");
