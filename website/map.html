@@ -2554,6 +2554,12 @@
         if (err.message) {
           return String(err.message);
         }
+        if (err.details) {
+          return String(err.details);
+        }
+        if (err.hint) {
+          return String(err.hint);
+        }
         if (err.error_description) {
           return String(err.error_description);
         }
