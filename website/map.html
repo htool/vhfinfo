@@ -1859,6 +1859,35 @@
         );
       }
 
+      function escapeHtml(text) {
+        return String(text)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+      }
+
+      function shortUrlLabel(url) {
+        var raw = String(url || "").trim();
+        if (!raw) {
+          return "";
+        }
+        var display = raw.replace(/^https?:\/\//i, "").replace(/^www\./i, "");
+        try {
+          var parsed = new URL(raw);
+          var host = (parsed.hostname || "").replace(/^www\./i, "");
+          var path = parsed.pathname || "";
+          if (path === "/") {
+            path = "";
+          }
+          display = host + path;
+        } catch (err) {}
+        if (display.length > 36) {
+          display = display.slice(0, 34) + "\u2026";
+        }
+        return display;
+      }
+
       function showInfo(f, layer, country) {
         // console.log(f)
         // console.log(layer)
@@ -1887,12 +1916,16 @@
           p.vhfdata.generic.mode +
           ")</td></tr>";
 
-        if (typeof p.url != "undefined") {
+        if (typeof p.url != "undefined" && p.url) {
           html =
             html +
             '<tr><td>Info</td><td><a href="' +
-            p.url +
-            '" target="_blank">link</a></td></tr>';
+            escapeHtml(p.url) +
+            '" title="' +
+            escapeHtml(p.url) +
+            '" target="_blank" rel="noopener noreferrer">' +
+            escapeHtml(shortUrlLabel(p.url)) +
+            "</a></td></tr>";
         }
         if (typeof p.phone != "undefined") {
           html =
