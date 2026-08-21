@@ -547,12 +547,10 @@
         "vhfdata": {
           "generic": {
             "mode": "report",
-            "note": "Reporting details behind link."
+            "note": "Verkeerscentrale Vlissingen in this sector (callsign Traffic Centre Steenbank). Not the former Ouddorp/Haringvliet information service (closed 2024)."
           },
           "pleasure": {
-            "mode": "listen",
-            "note": "",
-            "url": ""
+            "mode": "listen"
           },
           "cargo": {
             "mode": "",
