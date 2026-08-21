@@ -121,6 +121,9 @@
       .leaflet-popup-pane {
         width: 20%;
       }
+      body.editing .leaflet-popup {
+        display: none !important;
+      }
       .edit {
         font-size: 1.55rem;
         z-index: 999;
@@ -757,6 +760,7 @@
       var vhfCountrySource = {};
       var vhfCountryCounts = {};
       var vhfLoadSeq = {};
+      var pendingEditFeatureId = null;
       var GITHUB_DATA =
         "https://raw.githubusercontent.com/htool/vhfinfo/main/data/";
       var activeCountry = "";
@@ -1467,6 +1471,11 @@
           }
           group.eachLayer(function (layer) {
             dismissFeaturePopup(layer);
+            if (layer.eachLayer) {
+              layer.eachLayer(function (child) {
+                dismissFeaturePopup(child);
+              });
+            }
           });
         }
         strip(vtsLayer);
@@ -1477,7 +1486,78 @@
         strip(areaLayer);
         strip(Nm12);
         strip(drawnItems);
+        if (m && m.eachLayer) {
+          m.eachLayer(function (layer) {
+            dismissFeaturePopup(layer);
+          });
+        }
         m.closePopup();
+      }
+
+      function featureIdOfLayer(layer) {
+        if (!layer || !layer.feature) {
+          return "";
+        }
+        var props = layer.feature.properties || {};
+        return String(props.id || layer.feature.id || "");
+      }
+
+      function findLayerByFeatureId(featureId) {
+        if (!featureId) {
+          return null;
+        }
+        var want = String(featureId);
+        var found = null;
+        function visit(layer) {
+          if (found || !layer) {
+            return;
+          }
+          if (featureIdOfLayer(layer) === want) {
+            found = layer;
+            return;
+          }
+          if (layer.eachLayer) {
+            layer.eachLayer(visit);
+          }
+        }
+        visit(drawnItems);
+        visit(vtsLayer);
+        visit(radarLayer);
+        visit(lockLayer);
+        visit(bridgeLayer);
+        visit(marinaLayer);
+        visit(areaLayer);
+        visit(Nm12);
+        if (!found && m && m.eachLayer) {
+          m.eachLayer(visit);
+        }
+        return found;
+      }
+
+      function openPendingEditFeature() {
+        if (!pendingEditFeatureId || !editMode) {
+          return;
+        }
+        var id = pendingEditFeatureId;
+        var attempts = 0;
+        function tryOpen() {
+          if (!editMode || pendingEditFeatureId !== id) {
+            return;
+          }
+          var layer = findLayerByFeatureId(id);
+          if (layer) {
+            pendingEditFeatureId = null;
+            dismissFeaturePopup(layer);
+            m.closePopup();
+            openEditor(layer);
+            return;
+          }
+          attempts += 1;
+          if (attempts < 40) {
+            setTimeout(tryOpen, 100);
+          }
+        }
+        tryOpen();
       }
 
       function restoreLayerStyle(layer) {
@@ -1555,10 +1635,11 @@
                 L.DomEvent.stop(e.originalEvent);
               }
               dismissFeaturePopup(e.target);
+              m.closePopup();
               openEditor(e.target);
-            } else {
-              showInfo(e.target.feature, e.target, country);
+              return;
             }
+            showInfo(e.target.feature, e.target, country);
           },
           contextmenu: function (e) {
             if (resetLayer && resetLayer.bringToBack) {
@@ -1677,6 +1758,8 @@
           if (forEdit) {
             addCountryLayersToDrawnItems(code);
             setEditCountBanner(code, vhfCountryCounts[code] || 0, true);
+            unbindAllFeaturePopups();
+            openPendingEditFeature();
           }
           return;
         }
@@ -1738,6 +1821,7 @@
               addCountryLayersToDrawnItems(code);
               setEditCountBanner(code, features.length, true);
               unbindAllFeaturePopups();
+              openPendingEditFeature();
             }
           })
           .catch(function (err) {
@@ -1889,8 +1973,10 @@
       }
 
       function showInfo(f, layer, country) {
-        // console.log(f)
-        // console.log(layer)
+        if (editMode) {
+          dismissFeaturePopup(layer);
+          return;
+        }
 
         let p = f.properties;
 
@@ -1954,14 +2040,20 @@
         html =
           html +
           '<tr><td></td><td style="text-align: right;"><a href="#" class="popup-edit-link" data-country="' +
-          country +
-          '" style="text-decoration: none;">Change this info</a></td></tr>';
+          escapeHtml(country || "") +
+          '" data-id="' +
+          escapeHtml((p && p.id) || "") +
+          '" style="text-decoration: none;">Edit this info</a></td></tr>';
         html = html + "</table>";
-        if (editMode) {
-          return;
+        if (layer.unbindPopup) {
+          layer.unbindPopup();
         }
         layer.bindPopup(html).openPopup();
-        layer.addTo(m);
+        layer.once("popupclose", function () {
+          if (layer.unbindPopup) {
+            layer.unbindPopup();
+          }
+        });
       }
 
       function addHTML(title, json) {
@@ -2132,6 +2224,7 @@
           return;
         }
         if (editMode && country === code) {
+          openPendingEditFeature();
           return;
         }
         if (editMode && Object.keys(changedIds).length > 0) {
@@ -2158,6 +2251,7 @@
         activeCountry = code;
         editMode = true;
         document.body.classList.add("editing");
+        closeEditor();
         if (splitviewMode) {
           var splitBtn = document.getElementsByClassName("splitview")[0];
           if (splitBtn) {
@@ -2189,10 +2283,10 @@
         setOrientation();
         setTimeout(removeUnwanted, 500);
         unbindAllFeaturePopups();
-        closeEditor();
         if (typeof updateAuthUi === "function") {
           updateAuthUi();
         }
+        openPendingEditFeature();
       }
 
       function editMouseMove(event) {
@@ -2300,6 +2394,7 @@
       }
 
       function exitEditMode() {
+        pendingEditFeatureId = null;
         closeEditor();
         editMode = false;
         document.body.classList.remove("editing");
@@ -2686,15 +2781,13 @@
         }
       }
 
-      m.on("popupopen", function () {
+      m.on("popupopen", function (e) {
         if (!editMode) {
           return;
         }
-        setTimeout(function () {
-          if (editMode) {
-            m.closePopup();
-          }
-        }, 0);
+        var src = e.popup && e.popup._source;
+        dismissFeaturePopup(src);
+        m.closePopup();
       });
 
       m.on("zoomend", function () {
@@ -3146,10 +3239,13 @@
           return;
         }
         e.preventDefault();
+        e.stopPropagation();
+        pendingEditFeatureId = a.getAttribute("data-id") || null;
+        var countryCode = a.getAttribute("data-country");
         m.closePopup();
         requireSignIn(function () {
-          requestEnterEditMode(a.getAttribute("data-country"));
-        }, a.getAttribute("data-country"));
+          requestEnterEditMode(countryCode);
+        }, countryCode);
       });
       L.DomEvent.disableClickPropagation(
         document.getElementById("editor-panel"),
