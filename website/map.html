@@ -690,6 +690,7 @@
         </p>
         <p id="publish-as"></p>
         <ul id="publish-list"></ul>
+        <div id="publish-error" class="auth-message auth-error"></div>
         <p>
           <label for="publish-note"><b>Short note</b></label
           ><br />
@@ -2042,6 +2043,8 @@
             }
             dismissFeaturePopup(layer);
             openEditor(layer);
+          } else if (layer.feature) {
+            showInfo(layer.feature, layer, layer._vhfCountry || country);
           }
         });
         openEditor(layer);
@@ -2523,11 +2526,75 @@
           list.appendChild(li);
         });
         updateAuthUi();
+        showPublishError("");
         document.getElementById("publish-modal").style.display = "block";
       }
 
       function closePublishModal() {
         document.getElementById("publish-modal").style.display = "none";
+        showPublishError("");
+      }
+
+      function showPublishError(msg) {
+        var el = document.getElementById("publish-error");
+        if (!el) {
+          return;
+        }
+        el.textContent = msg || "";
+        el.style.display = msg ? "block" : "none";
+      }
+
+      function publishErrorText(err) {
+        if (!err) {
+          return "Could not publish.";
+        }
+        if (typeof err === "string") {
+          return err;
+        }
+        if (err.message) {
+          return String(err.message);
+        }
+        if (err.error_description) {
+          return String(err.error_description);
+        }
+        try {
+          return JSON.stringify(err);
+        } catch (e) {
+          return "Could not publish.";
+        }
+      }
+
+      function setPublishBusy(busy) {
+        var btn = document.getElementById("publish-confirm");
+        if (!btn) {
+          return;
+        }
+        btn.disabled = !!busy;
+        btn.textContent = busy ? "Publishing…" : "Publish";
+      }
+
+      function attachPublishedLayer(layer) {
+        if (!layer || !layer.feature) {
+          return;
+        }
+        var p = layer.feature.properties || {};
+        var specific = typeLayerFor(p.type);
+        if (specific && !specific.hasLayer(layer)) {
+          specific.addLayer(layer);
+        }
+      }
+
+      function finishSuccessfulPublish() {
+        Object.keys(changedIds).forEach(function (uuid) {
+          var info = changedIds[uuid];
+          if (!info || info.action === "Delete") {
+            return;
+          }
+          attachPublishedLayer(m._layers[info.leaflet_id]);
+        });
+        changedIds = {};
+        closePublishModal();
+        exitEditMode();
       }
 
       function confirmPublish() {
@@ -2536,11 +2603,11 @@
           return;
         }
         var email = getSignedInEmail();
-        var note = document.getElementById("publish-note").value.trim();
         if (!email || email.indexOf("@") < 0) {
-          alert("Please sign in again, then publish.");
+          showPublishError("Please sign in again, then publish.");
           return;
         }
+        showPublishError("");
         Object.keys(changedIds).forEach(function (uuid) {
           var info = changedIds[uuid];
           if (info.action != "Delete") {
@@ -2559,21 +2626,34 @@
           !window.vhfFeaturesDb ||
           typeof window.vhfFeaturesDb.publishFeaturesToDb !== "function"
         ) {
-          alert("Could not publish: the database helper is missing.");
+          showPublishError("Could not publish: the database helper is missing.");
           return;
         }
+        setPublishBusy(true);
         window.vhfFeaturesDb
           .publishFeaturesToDb(publishCountry, publishPayload)
           .then(function (result) {
-            if (result && result.error) {
-              alert("Could not publish: " + result.error);
+            if (result && result.reason === "not-signed-in") {
+              showPublishError("Please sign in again, then publish.");
               return;
             }
-            closePublishModal();
-            location.reload();
+            if (result && result.error) {
+              showPublishError("Could not publish: " + publishErrorText(result.error));
+              return;
+            }
+            if (result && result.empty && result.skipped && result.skipped.length) {
+              showPublishError(
+                "Could not publish: some areas were missing their shape.",
+              );
+              return;
+            }
+            finishSuccessfulPublish();
           })
           .catch(function (err) {
-            alert("Could not publish: " + ((err && err.message) || String(err)));
+            showPublishError("Could not publish: " + publishErrorText(err));
+          })
+          .then(function () {
+            setPublishBusy(false);
           });
       }
 
