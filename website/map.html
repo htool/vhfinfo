@@ -290,8 +290,32 @@
         cursor: pointer;
       }
       #edit-publish {
+        background: #eee;
+        color: #111;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+      #edit-publish.has-unpublished {
         background: #2e7d32;
         color: #fff;
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.9);
+      }
+      .edit-publish-badge {
+        display: none;
+        min-width: 1.25em;
+        height: 1.25em;
+        padding: 0 5px;
+        border-radius: 999px;
+        background: #fff;
+        color: #1b5e20;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.25em;
+        text-align: center;
+      }
+      #edit-publish.has-unpublished .edit-publish-badge {
+        display: inline-block;
       }
       #edit-tips,
       #edit-done {
@@ -596,7 +620,10 @@
     </div>
     <div id="edit-banner">
       <span id="edit-banner-text">Editing this map</span>
-      <button type="button" id="edit-publish">Publish changes</button>
+      <button type="button" id="edit-publish" aria-label="Publish changes">
+        Publish changes
+        <span id="edit-publish-count" class="edit-publish-badge" hidden></span>
+      </button>
       <button type="button" id="edit-tips">Tips</button>
       <button type="button" id="edit-done">Done</button>
     </div>
@@ -2182,6 +2209,7 @@
             changedIds[p.id].leaflet_id = layer._leaflet_id;
           }
         });
+        updatePublishButton();
       });
 
       function friendlyCountry(code) {
@@ -2238,6 +2266,7 @@
             return;
           }
           changedIds = {};
+          updatePublishButton();
         }
         if (editMode) {
           exitEditMode();
@@ -2286,6 +2315,7 @@
         if (typeof updateAuthUi === "function") {
           updateAuthUi();
         }
+        updatePublishButton();
         openPendingEditFeature();
       }
 
@@ -2393,6 +2423,20 @@
         exitEditMode();
       }
 
+      function returnLayerToTypeGroup(layer) {
+        if (!layer) {
+          return;
+        }
+        var p = layer.feature && layer.feature.properties;
+        var specific = p && typeLayerFor(p.type);
+        if (specific) {
+          specific.addLayer(layer);
+        } else if (m && !m.hasLayer(layer)) {
+          m.addLayer(layer);
+        }
+        restoreLayerStyle(layer);
+      }
+
       function exitEditMode() {
         pendingEditFeatureId = null;
         closeEditor();
@@ -2407,7 +2451,13 @@
           layers.push(layer);
         });
         layers.forEach(function (layer) {
+          var p = layer.feature && layer.feature.properties;
+          var discardNew =
+            p && changedIds[p.id] && changedIds[p.id].action === "Add";
           drawnItems.removeLayer(layer);
+          if (!discardNew) {
+            returnLayerToTypeGroup(layer);
+          }
         });
         m.removeEventListener("mousemove", editMouseMove);
         $(".leaflet-container").css("cursor", "");
@@ -2418,6 +2468,7 @@
         if (typeof updateAuthUi === "function") {
           updateAuthUi();
         }
+        updatePublishButton();
       }
 
       function showEditorError(msg) {
@@ -2435,6 +2486,33 @@
         document.getElementById("editor-hint").textContent =
           text ||
           "Click an area on the map to change it, or draw a new one with the tools on the left.";
+      }
+
+      function unpublishedCount() {
+        return Object.keys(changedIds).length;
+      }
+
+      function updatePublishButton() {
+        var btn = document.getElementById("edit-publish");
+        var badge = document.getElementById("edit-publish-count");
+        if (!btn) {
+          return;
+        }
+        var n = unpublishedCount();
+        if (n > 0) {
+          btn.classList.add("has-unpublished");
+          btn.setAttribute(
+            "aria-label",
+            "Publish " + n + " unpublished " + (n === 1 ? "change" : "changes"),
+          );
+        } else {
+          btn.classList.remove("has-unpublished");
+          btn.setAttribute("aria-label", "Publish changes");
+        }
+        if (badge) {
+          badge.textContent = n > 0 ? String(n) : "";
+          badge.hidden = n === 0;
+        }
       }
 
       function closeEditor() {
@@ -2479,6 +2557,7 @@
             leaflet_id: layer._leaflet_id,
           };
           newItems.push(layer._leaflet_id);
+          updatePublishButton();
         }
         return p;
       }
@@ -2583,11 +2662,9 @@
           action: action,
           leaflet_id: currentEditLayer._leaflet_id,
         };
-        document.getElementById("editor-title").textContent = p.name;
         showEditorError("");
-        showEditorHint(
-          "Saved on this screen. Tap “Publish changes” when you are ready to update the public map.",
-        );
+        updatePublishButton();
+        closeEditor();
       }
 
       function deleteCurrentArea() {
@@ -2605,6 +2682,7 @@
         if (uuid) {
           changedIds[uuid] = { name: name, action: "Delete", type: type };
         }
+        updatePublishButton();
         drawnItems.removeLayer(currentEditLayer);
         if (type) {
           removeIdFromLayer(id, type);
