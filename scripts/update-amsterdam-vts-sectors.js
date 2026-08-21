@@ -1,12 +1,15 @@
 #!/usr/bin/env node
 /**
- * One-shot updater for Port of Amsterdam VTS sectors 1-5
- * (VTS communicatieregeling 2.0, in force 30 Sep 2025).
+ * Rebuild Port of Amsterdam VTS sectors 1-5 as water-only Polygons.
  *
- * IJmuiden aanloop (VHF 07, outside 12 NM) is intentionally not included.
+ * Sector IJmuiden: 12 NM from both pier heads, clipped to sea along the
+ * OSM coastline (including the official baseline between the pier lights),
+ * plus the inner harbour to the locks.
  *
- * Re-run from git HEAD of data/NLD.json. Not fully idempotent if geometries
- * were already rewritten.
+ * Inland sectors: OSM water polygons split at km 14.8 / Coentunnel / IJ10.
+ * Never write MultiPolygon; keep Polygon (holes are OK).
+ *
+ * IJmuiden aanloop (VHF 07) is intentionally not included.
  */
 
 const fs = require("fs")
@@ -15,6 +18,12 @@ const turf = require("@turf/turf")
 
 const ROOT = path.resolve(__dirname, "..")
 const FILE = path.join(ROOT, "data/NLD.json")
+const MAIN_FILE = "/tmp/NLD-main.json"
+const COAST_FILE = "/tmp/osm-coast-ijmuiden.json"
+const CORE_WATER_FILE = "/tmp/osm-core-water.json"
+const HARBOUR_WATER_FILE = "/tmp/osm-harbour-water.json"
+const IJMUIDEN_HARBOUR_FILE = "/tmp/osm-ijmuiden-harbour.json"
+
 const NEW_URL =
   "https://www.portofamsterdam.com/sites/default/files/2025-09/VTS%20communicatieregeling%202.0%20def.pdf"
 const PHONE = "+31205234600"
@@ -27,103 +36,284 @@ const IDS = {
   stad: "399163a7-0af7-482d-b481-5dfca9abe5ca",
 }
 
-const PIERS = [4.54625, 52.46215]
+// Official OSM baseline endpoints (lights on the IJmuiden pier heads).
+const PIER_NORTH = [4.54225, 52.46741]
+const PIER_SOUTH = [4.53258, 52.4638]
 const COENTUNNEL_LON = 4.864
 const IJ10_LON = 4.958
+const NZK_WEST_LON = 4.615
+const NZK_EAST_LON = 4.792
 
-function polygonFrom(feature) {
-  if (feature.geometry.type === "Polygon") {
-    return turf.polygon(feature.geometry.coordinates)
-  }
-  if (feature.geometry.type === "MultiPolygon") {
-    const parts = feature.geometry.coordinates.map((c) => turf.polygon(c))
-    return parts.reduce((acc, p) => (acc ? turf.union(acc, p) : p), null)
-  }
-  throw new Error("unsupported " + feature.geometry.type)
+function loadJson(file) {
+  return JSON.parse(fs.readFileSync(file, "utf8"))
 }
 
-function toGeom(feature) {
-  const dissolved = dissolveIfPossible(feature)
-  const cleaned = turf.truncate(turf.cleanCoords(dissolved), {
-    precision: 9,
+function osmCoords(geom) {
+  return geom.map((p) => [p.lon, p.lat])
+}
+
+function closeRing(coords) {
+  if (!coords.length) return coords
+  const a = coords[0]
+  const b = coords[coords.length - 1]
+  if (a[0] !== b[0] || a[1] !== b[1]) coords = coords.concat([a])
+  return coords
+}
+
+function wayPolygon(el) {
+  if (!el.geometry || el.geometry.length < 4) return null
+  const ring = closeRing(osmCoords(el.geometry))
+  if (ring.length < 4) return null
+  try {
+    return turf.rewind(turf.polygon([ring]))
+  } catch (e) {
+    return null
+  }
+}
+
+function relationPolygons(el) {
+  const outers = []
+  const inners = []
+  for (const m of el.members || []) {
+    if (!m.geometry || m.geometry.length < 2) continue
+    const ring = closeRing(osmCoords(m.geometry))
+    if (ring.length < 4) continue
+    let poly
+    try {
+      poly = turf.rewind(turf.polygon([ring]))
+    } catch (e) {
+      continue
+    }
+    if (m.role === "inner") inners.push(poly)
+    else outers.push(poly)
+  }
+  return outers.map((outer) => {
+    let poly = outer
+    for (const hole of inners) {
+      try {
+        const diff = turf.difference(poly, hole)
+        if (diff) poly = diff
+      } catch (e) {}
+    }
+    return poly
+  })
+}
+
+function largestPolygon(feat) {
+  if (!feat) return null
+  if (feat.geometry.type === "Polygon") return feat
+  if (feat.geometry.type !== "MultiPolygon") return null
+  let best = null
+  let bestArea = -1
+  for (const coords of feat.geometry.coordinates) {
+    const p = turf.polygon(coords)
+    const a = turf.area(p)
+    if (a > bestArea) {
+      best = p
+      bestArea = a
+    }
+  }
+  return best
+}
+
+function stripTinyHoles(feat, minM2) {
+  if (!feat || feat.geometry.type !== "Polygon") return feat
+  const rings = feat.geometry.coordinates
+  if (rings.length < 2) return feat
+  const kept = [rings[0]]
+  for (let i = 1; i < rings.length; i++) {
+    const hole = turf.polygon([rings[i]])
+    if (turf.area(hole) >= minM2) kept.push(rings[i])
+  }
+  return turf.polygon(kept)
+}
+
+function asPolygon(feat, label) {
+  let p = largestPolygon(feat)
+  if (!p || p.geometry.type !== "Polygon") {
+    throw new Error("expected Polygon for " + label + ", got " + (feat && feat.geometry && feat.geometry.type))
+  }
+  p = stripTinyHoles(p, 500)
+  return turf.truncate(turf.cleanCoords(p), {
+    precision: 7,
     coordinates: 2,
     mutate: false,
   })
-  return cleaned.geometry
 }
 
-function dissolveIfPossible(feature) {
-  if (!feature || feature.geometry.type !== "MultiPolygon") return feature
-  const parts = feature.geometry.coordinates.map((c) => turf.polygon(c))
-  let merged = parts[0]
-  for (let i = 1; i < parts.length; i++) {
-    const next = turf.union(merged, parts[i])
-    if (next) merged = next
+function unionAll(parts) {
+  let acc = null
+  for (const p of parts) {
+    if (!p) continue
+    acc = acc ? turf.union(acc, p) : p
   }
-  return merged
+  return acc
 }
 
-function splitByLon(polyFeat, lon) {
-  const bbox = turf.bbox(polyFeat)
-  const pad = 0.05
-  const westBox = turf.bboxPolygon([
-    bbox[0] - pad,
-    bbox[1] - pad,
-    lon,
-    bbox[3] + pad,
-  ])
-  const eastBox = turf.bboxPolygon([
-    lon,
-    bbox[1] - pad,
-    bbox[2] + pad,
-    bbox[3] + pad,
-  ])
-  const west = turf.intersect(polyFeat, westBox)
-  const east = turf.intersect(polyFeat, eastBox)
-  if (!west || !east) {
-    throw new Error("split failed at " + lon)
-  }
-  return { west, east }
-}
-
-function clipLonRange(polyFeat, westLon, eastLon) {
-  const bbox = turf.bbox(polyFeat)
+function clipLon(poly, west, east) {
+  const bbox = turf.bbox(poly)
   const box = turf.bboxPolygon([
-    westLon,
+    west,
     bbox[1] - 0.02,
-    eastLon,
+    east,
     bbox[3] + 0.02,
   ])
-  const clipped = turf.intersect(polyFeat, box)
-  if (!clipped) {
-    throw new Error("lon clip failed " + westLon + ".." + eastLon)
+  return turf.intersect(poly, box)
+}
+
+function stitchCoastline(osm) {
+  const segs = osm.elements
+    .filter((e) => e.type === "way" && e.geometry && e.geometry.length > 1)
+    .map((e) => osmCoords(e.geometry))
+  const used = new Array(segs.length).fill(false)
+  function near(a, b) {
+    return Math.abs(a[0] - b[0]) < 1e-5 && Math.abs(a[1] - b[1]) < 1e-5
   }
-  return clipped
+  function grow(startIdx) {
+    used[startIdx] = true
+    let line = segs[startIdx].slice()
+    let changed = true
+    while (changed) {
+      changed = false
+      for (let i = 0; i < segs.length; i++) {
+        if (used[i]) continue
+        const s = segs[i]
+        if (near(line[line.length - 1], s[0])) {
+          line = line.concat(s.slice(1))
+          used[i] = true
+          changed = true
+        } else if (near(line[line.length - 1], s[s.length - 1])) {
+          line = line.concat(s.slice(0, -1).reverse())
+          used[i] = true
+          changed = true
+        } else if (near(line[0], s[s.length - 1])) {
+          line = s.slice(0, -1).concat(line)
+          used[i] = true
+          changed = true
+        } else if (near(line[0], s[0])) {
+          line = s.slice(1).reverse().concat(line)
+          used[i] = true
+          changed = true
+        }
+      }
+    }
+    return line
+  }
+  const chains = []
+  for (let i = 0; i < segs.length; i++) {
+    if (!used[i]) chains.push(grow(i))
+  }
+  chains.sort((a, b) => b.length - a.length)
+  return chains[0]
 }
 
-function ijmuidenGeometry(existing) {
-  const harbour = polygonFrom(existing)
-  const circle = turf.circle(PIERS, 12, { units: "nauticalmiles", steps: 64 })
-  const bbox = turf.bbox(circle)
-  const seaBox = turf.bboxPolygon([bbox[0], bbox[1], PIERS[0], bbox[3]])
-  const seaSector = turf.intersect(circle, seaBox)
-  return turf.union(seaSector, harbour)
-}
-
-function stadIjCorridor() {
-  const corridor = turf.polygon([
-    [
-      [COENTUNNEL_LON, 52.37],
-      [IJ10_LON, 52.37],
-      [IJ10_LON, 52.392],
-      [COENTUNNEL_LON, 52.405],
-      [COENTUNNEL_LON, 52.37],
-    ],
+function landFromCoast(line) {
+  // Land is east of the Holland coast. Close the coastline with an inland box.
+  const lats = line.map((c) => c[1])
+  const north = Math.max(...lats)
+  const south = Math.min(...lats)
+  const east = 5.05
+  let ring = line.slice()
+  const start = ring[0]
+  const end = ring[ring.length - 1]
+  // Ensure we walk southward along the coast before closing east.
+  if (start[1] < end[1]) ring = ring.reverse()
+  ring = ring.concat([
+    [east, ring[ring.length - 1][1]],
+    [east, ring[0][1]],
+    ring[0],
   ])
-  return turf.buffer(corridor, 40, { units: "meters" })
+  const land = turf.rewind(turf.polygon([ring]))
+  const haarlem = turf.point([4.64, 52.38])
+  if (!turf.booleanPointInPolygon(haarlem, land)) {
+    ring = line.slice()
+    if (ring[0][1] > ring[ring.length - 1][1]) ring = ring.reverse()
+    ring = ring.concat([
+      [east, ring[ring.length - 1][1]],
+      [east, ring[0][1]],
+      ring[0],
+    ])
+    return turf.rewind(turf.polygon([ring]))
+  }
+  return land
 }
 
-const data = JSON.parse(fs.readFileSync(FILE, "utf8"))
+function ijmuidenSea() {
+  const coast = stitchCoastline(loadJson(COAST_FILE))
+  const land = landFromCoast(coast)
+  const cN = turf.circle(PIER_NORTH, 12, { units: "nauticalmiles", steps: 96 })
+  const cS = turf.circle(PIER_SOUTH, 12, { units: "nauticalmiles", steps: 96 })
+  const circles = turf.union(cN, cS)
+  const sea = turf.difference(circles, land)
+  if (!sea) throw new Error("sea difference empty")
+  // Keep the seaward piece that contains a North Sea point west of the piers.
+  const seaPoint = turf.point([4.4, 52.46])
+  if (sea.geometry.type === "Polygon") {
+    if (!turf.booleanPointInPolygon(seaPoint, sea)) {
+      throw new Error("sea polygon does not contain North Sea test point")
+    }
+    return sea
+  }
+  for (const coords of sea.geometry.coordinates) {
+    const p = turf.polygon(coords)
+    if (turf.booleanPointInPolygon(seaPoint, p)) return p
+  }
+  return largestPolygon(sea)
+}
+
+function ijmuidenInnerHarbour() {
+  const wantIds = new Set([
+    1105341590, // Oude Buitenhaven
+    1105341593, // Nieuwe Buitenhaven
+    6294870,
+    6294968,
+    14712712,
+  ])
+  const skip = /haringhaven|seaport|kennemermeer|marina/i
+  const parts = []
+  const src = loadJson(IJMUIDEN_HARBOUR_FILE)
+  for (const el of src.elements) {
+    const name = (el.tags && el.tags.name) || ""
+    if (skip.test(name)) continue
+    if (el.type === "way" && wantIds.has(el.id)) {
+      const p = wayPolygon(el)
+      if (p) parts.push(p)
+    } else if (el.type === "relation" && wantIds.has(el.id)) {
+      parts.push(...relationPolygons(el))
+    }
+  }
+  if (!parts.length) throw new Error("no inner harbour water")
+  let merged = unionAll(parts)
+  // Nudge touching basins together without spreading onto land.
+  merged = turf.union(turf.buffer(merged, 8, { units: "meters" }), merged)
+  return merged
+}
+function osmNamedWater() {
+  const parts = []
+  const core = loadJson(CORE_WATER_FILE)
+  for (const el of core.elements) {
+    const name = (el.tags && el.tags.name) || ""
+    if (!/IJ|Buiten|Buitenhaven/i.test(name)) continue
+    if (el.type === "way") {
+      const p = wayPolygon(el)
+      if (p) parts.push(p)
+    } else {
+      parts.push(...relationPolygons(el))
+    }
+  }
+  return parts
+}
+
+const mainData = loadJson(MAIN_FILE)
+function mainById(id) {
+  const f = mainData.features.find(
+    (x) => x.properties && x.properties.id === id
+  )
+  if (!f) throw new Error("missing main feature " + id)
+  return turf.polygon(f.geometry.coordinates)
+}
+
+const data = loadJson(FILE)
 const byId = new Map()
 data.features.forEach((f) => {
   if (f.properties && f.properties.id) byId.set(f.properties.id, f)
@@ -148,13 +338,35 @@ function setCommon(props, name, channel, note) {
   props.vhfdata.generic.note = note
 }
 
+const sea = ijmuidenSea()
+const innerHarbour = ijmuidenInnerHarbour()
+ijmuiden.geometry = asPolygon(unionAll([sea, innerHarbour]), "IJmuiden").geometry
 setCommon(
   ijmuiden.properties,
   "Sector IJmuiden",
   61,
-  "From the IJmuiden pier heads seaward to 12 NM, and inward to the sea locks (VTS communicatieregeling 2.0)."
+  "From the IJmuiden pier heads seaward to 12 NM along the coastline, and inward to the sea locks (VTS communicatieregeling 2.0)."
 )
-ijmuiden.geometry = toGeom(ijmuidenGeometry(ijmuiden))
+
+const nzkOrig = mainById(IDS.nzk)
+const amsOrig = mainById(IDS.amsterdam)
+const schellingOrig = mainById(IDS.schellingwoude)
+const westBox = turf.bboxPolygon([4.78, 52.36, COENTUNNEL_LON, 52.45])
+const eastBox = turf.bboxPolygon([COENTUNNEL_LON, 52.36, IJ10_LON, 52.45])
+const schellingBox = turf.bboxPolygon([IJ10_LON, 52.36, 5.03, 52.40])
+
+const namedWater = osmNamedWater()
+const westhavenWater = turf.intersect(amsOrig, westBox)
+let stadWater = turf.intersect(amsOrig, eastBox)
+stadWater = unionAll(
+  [stadWater].concat(namedWater.map((p) => turf.intersect(p, eastBox)).filter(Boolean))
+)
+let schellingWater = turf.intersect(schellingOrig, schellingBox)
+schellingWater = unionAll(
+  [schellingWater].concat(
+    namedWater.map((p) => turf.intersect(p, schellingBox)).filter(Boolean)
+  )
+)
 
 setCommon(
   nzk.properties,
@@ -162,16 +374,7 @@ setCommon(
   3,
   "From the IJmuiden sea locks to km 14.8 (Zijkanaal D)."
 )
-
-const ams = polygonFrom(amsterdam)
-const { west: westhaven, east: stadCore } = splitByLon(ams, COENTUNNEL_LON)
-let stad = turf.union(stadCore, stadIjCorridor())
-stad = clipLonRange(stad, COENTUNNEL_LON - 0.0001, IJ10_LON)
-const schellingRest = clipLonRange(
-  polygonFrom(schelling),
-  IJ10_LON,
-  turf.bbox(polygonFrom(schelling))[2] + 0.02
-)
+nzk.geometry = asPolygon(nzkOrig, "Noordzeekanaal").geometry
 
 setCommon(
   amsterdam.properties,
@@ -179,7 +382,7 @@ setCommon(
   4,
   "From km 14.8 (Zijkanaal D / Coenhaven) to km 19.6 (Coentunnel)."
 )
-amsterdam.geometry = toGeom(westhaven)
+amsterdam.geometry = asPolygon(westhavenWater, "Westhaven").geometry
 
 setCommon(
   schelling.properties,
@@ -187,7 +390,7 @@ setCommon(
   60,
   "East of buoy IJ10 / from km 26.5."
 )
-schelling.geometry = toGeom(schellingRest)
+schelling.geometry = asPolygon(schellingWater, "Schellingwoude").geometry
 
 const stadProps = {
   name: "Sector Stad",
@@ -205,27 +408,25 @@ const stadProps = {
   },
   id: IDS.stad,
 }
-
+const stadGeom = asPolygon(stadWater, "Stad").geometry
 if (byId.has(IDS.stad)) {
   Object.assign(byId.get(IDS.stad).properties, stadProps)
-  byId.get(IDS.stad).geometry = toGeom(stad)
+  byId.get(IDS.stad).geometry = stadGeom
 } else {
-  data.features.push({
-    type: "Feature",
-    properties: stadProps,
-    geometry: toGeom(stad),
-  })
+  data.features.push({ type: "Feature", properties: stadProps, geometry: stadGeom })
 }
 
 function info(f) {
   const areaKm2 = turf.area(f) / 1e6
   const bbox = turf.bbox(f)
+  const holes =
+    f.geometry.type === "Polygon" ? f.geometry.coordinates.length - 1 : 0
   return {
     id: f.properties.id,
     name: f.properties.name,
-    callname: f.properties.callname,
     channel: f.properties.channel,
     type: f.geometry.type,
+    holes,
     km2: Number(areaKm2.toFixed(2)),
     lon: [bbox[0].toFixed(4), bbox[2].toFixed(4)],
     lat: [bbox[1].toFixed(4), bbox[3].toFixed(4)],

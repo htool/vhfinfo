@@ -1306,20 +1306,7 @@
         // console.log('Closest: ' + JSON.stringify(closest))
         let lastKey = -1;
 
-        // Order VTS, VTS radar in case of both INSIDE
-        if (closest.length > 1) {
-          if (closest[0].distance < 0 && closest[1].distance < 0) {
-            // both INSIDE
-            if (
-              closest[0].type == "vts radar support" &&
-              closest[1].type == "vts"
-            ) {
-              // The case we'd like to switch [0] and [1]
-              // console.log('Swapping [0] and [1]')
-              closest[0] = closest.splice(1, 1, closest[0])[0];
-            }
-          }
-        }
+        // Prefer VTS over radar/other types when both are INSIDE.
 
         for (const [key, feature] of Object.entries(closest)) {
           if (typeof feature.callname != "undefined") {
@@ -3058,6 +3045,36 @@
         buttonElement.style.minHeight = "26px";
       }
 
+      function polygonsFromFeature(feature) {
+        var geom = feature && feature.geometry;
+        if (!geom) {
+          return [];
+        }
+        if (geom.type === "Polygon") {
+          return [feature];
+        }
+        if (geom.type === "MultiPolygon") {
+          return geom.coordinates.map(function (coords) {
+            return {
+              type: "Feature",
+              properties: feature.properties,
+              geometry: { type: "Polygon", coordinates: coords },
+            };
+          });
+        }
+        return [];
+      }
+
+      function nearbyTypeRank(type) {
+        if (type === "vts") {
+          return 0;
+        }
+        if (type === "vts radar support") {
+          return 1;
+        }
+        return 2;
+      }
+
       function findNearbyFeatures(currentCoordinates, heading, searchPolygon) {
         var nearbyFeatures = [];
         currentPosition = turf.point(currentCoordinates, {});
@@ -3074,14 +3091,17 @@
           if (m.hasLayer(l)) {
             l.toGeoJSON(12).features.forEach((feature) => {
               try {
-                intersect = turf.intersect(feature, searchPolygon);
-                if (intersect != null) {
+                var best = null;
+                polygonsFromFeature(feature).forEach(function (part) {
+                  var partIntersect = turf.intersect(part, searchPolygon);
+                  if (partIntersect == null) {
+                    return;
+                  }
                   var distance = Math.round(
-                    distanceToPolygon(currentPosition, feature),
+                    distanceToPolygon(currentPosition, part),
                   );
-                  feature.properties.distance = distance;
                   var nearestPoint = turf.nearestPointOnLine(
-                    turf.polygonToLine(feature),
+                    turf.polygonToLine(part),
                     currentPosition,
                   );
                   var relativeBearing = Math.round(
@@ -3093,11 +3113,17 @@
                   if (relativeBearing < -180) {
                     relativeBearing = relativeBearing + 360;
                   }
-                  feature.properties.relativeBearing = relativeBearing;
-                  // console.log('Intersects with %s (%dm at %d)', feature.properties.name, distance, relativeBearing)
-                  if (distance < searchDistance) {
-                    nearbyFeatures.push(feature.properties);
+                  if (best == null || distance < best.distance) {
+                    best = {
+                      distance: distance,
+                      relativeBearing: relativeBearing,
+                    };
                   }
+                });
+                if (best != null && best.distance < searchDistance) {
+                  feature.properties.distance = best.distance;
+                  feature.properties.relativeBearing = best.relativeBearing;
+                  nearbyFeatures.push(feature.properties);
                 }
               } catch (e) {
                 console.log("error with feature: " + feature.properties.name);
@@ -3107,11 +3133,18 @@
           }
         });
         nearbyFeatures.sort(function (a, b) {
+          var aIn = a.distance < 0;
+          var bIn = b.distance < 0;
+          if (aIn && bIn) {
+            var rank = nearbyTypeRank(a.type) - nearbyTypeRank(b.type);
+            if (rank !== 0) {
+              return rank;
+            }
+          }
           return (
             parseFloat(Math.abs(a.distance)) - parseFloat(Math.abs(b.distance))
           );
         });
-        // console.log(nearbyFeatures)
         return nearbyFeatures;
       }
 
@@ -3127,10 +3160,7 @@
         if (polygon.type === "MultiPolygon") {
           distance = polygon.coordinates
             .map((coords) =>
-              distanceToPolygon({
-                point,
-                polygon: turf.polygon(coords).geometry,
-              }),
+              distanceToPolygon(point, turf.polygon(coords).geometry),
             )
             .reduce((smallest, current) =>
               current < smallest ? current : smallest,
