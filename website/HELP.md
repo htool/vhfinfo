@@ -4,7 +4,7 @@
 
 ### Layers
 You can enable/disable different layer types using the ![26px](documentation/pictures/layers.png) button.
-You can bring an overlapping layer to back by pressing the right mouse button on the underlaying shape.
+Smaller areas are drawn on top of larger ones. Right-click an area to send **that** area behind the others so you can select what is underneath.
 
 ### Splitview mode
 You can disable/enable splitview mode (including map coordinates) using the ![26px](public/splitview.png) button.

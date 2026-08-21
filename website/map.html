@@ -1621,6 +1621,98 @@
         }
       }
 
+      function vhfPathLayerGroups() {
+        return [
+          vtsLayer,
+          radarLayer,
+          lockLayer,
+          bridgeLayer,
+          marinaLayer,
+          areaLayer,
+          Nm12,
+          drawnItems,
+        ];
+      }
+
+      function featureAreaM2(layer) {
+        if (!layer) {
+          return 0;
+        }
+        if (typeof L.Circle !== "undefined" && layer instanceof L.Circle) {
+          var radius = layer.getRadius();
+          return Math.PI * radius * radius;
+        }
+        try {
+          var geo =
+            layer.feature || (layer.toGeoJSON && layer.toGeoJSON());
+          if (!geo) {
+            return 0;
+          }
+          if (geo.type === "FeatureCollection") {
+            return 0;
+          }
+          if (geo.type !== "Feature") {
+            geo = {
+              type: "Feature",
+              properties: {},
+              geometry: geo.geometry || geo,
+            };
+          }
+          if (!geo.geometry || geo.geometry.type === "Point") {
+            return 0;
+          }
+          return turf.area(geo);
+        } catch (err) {
+          return 0;
+        }
+      }
+
+      function collectVhfPathLayers() {
+        var seen = {};
+        var layers = [];
+        function add(layer) {
+          if (!layer || seen[layer._leaflet_id]) {
+            return;
+          }
+          if (layer.eachLayer && !layer.feature) {
+            layer.eachLayer(add);
+            return;
+          }
+          if (!layer.bringToFront) {
+            return;
+          }
+          seen[layer._leaflet_id] = true;
+          layers.push(layer);
+        }
+        vhfPathLayerGroups().forEach(function (group) {
+          if (group && group.eachLayer) {
+            group.eachLayer(add);
+          }
+        });
+        return layers;
+      }
+
+      function orderVhfLayersByArea() {
+        var layers = collectVhfPathLayers();
+        layers.sort(function (a, b) {
+          return featureAreaM2(b) - featureAreaM2(a);
+        });
+        layers.forEach(function (layer) {
+          if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+            layer.bringToFront();
+          }
+        });
+        if (
+          currentEditLayer &&
+          currentEditLayer.bringToFront &&
+          !L.Browser.ie &&
+          !L.Browser.opera &&
+          !L.Browser.edge
+        ) {
+          currentEditLayer.bringToFront();
+        }
+      }
+
       function onEachVhfFeature(feature, layer, country, resetLayer) {
         if (!feature.properties) {
           feature.properties = {};
@@ -1643,9 +1735,6 @@
               weight: 2,
               opacity: 0.2,
             });
-            if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-              l.bringToFront();
-            }
           },
           mouseout: function (e) {
             var l = e.target;
@@ -1669,8 +1758,13 @@
             showInfo(e.target.feature, e.target, country);
           },
           contextmenu: function (e) {
-            if (resetLayer && resetLayer.bringToBack) {
-              resetLayer.bringToBack();
+            L.DomEvent.stop(e);
+            if (e.originalEvent) {
+              L.DomEvent.stop(e.originalEvent);
+            }
+            var l = e.target;
+            if (l && l.bringToBack) {
+              l.bringToBack();
             }
           },
         });
@@ -1696,6 +1790,9 @@
               onEachVhfFeature(feature, layer, country, l);
             },
           });
+          l.on("data:loaded", function () {
+            orderVhfLayersByArea();
+          });
         } catch (e) {
           console.log("Loading did not work");
         }
@@ -1712,6 +1809,7 @@
             onEachVhfFeature(feature, layer, country, l);
           },
         });
+        orderVhfLayersByArea();
         return l;
       }
 
@@ -2119,6 +2217,7 @@
               m.removeLayer(l);
             }
             updateNearby();
+            orderVhfLayersByArea();
             break;
           case "remove":
             if (m.hasLayer(l)) {
@@ -2130,6 +2229,7 @@
               m.removeLayer(l);
             }
             updateNearby();
+            orderVhfLayersByArea();
             break;
         }
       }
@@ -2190,6 +2290,7 @@
           }
         });
         openEditor(layer);
+        orderVhfLayersByArea();
       });
 
       m.on("draw:edited", function (e) {
@@ -2210,6 +2311,7 @@
           }
         });
         updatePublishButton();
+        orderVhfLayersByArea();
       });
 
       function friendlyCountry(code) {
@@ -2523,6 +2625,7 @@
         document.body.classList.remove("editor-open");
         showEditorError("");
         m.invalidateSize(true);
+        orderVhfLayersByArea();
       }
 
       function ensureFeatureDefaults(layer, isNew) {
