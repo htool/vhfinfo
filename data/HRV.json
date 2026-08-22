@@ -1,5 +1,958 @@
 {
   "type": "FeatureCollection",
   "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "044d0294-e41c-51cd-9e2e-31ee304bdcda",
+        "name": "Rijeka VTS",
+        "callname": "VTS RIJEKA",
+        "type": "vts",
+        "channel": "14",
+        "url": "https://www.hhi.hr/Portals/0/adam/HHI/a14_Qn4yJECeVbpwF_KLag/CouponFiles/VTS_RS_2015.pdf",
+        "phone": "+38551312300",
+        "vhfdata": {
+          "generic": {
+            "mode": "report",
+            "note": "VTS Croatia management sector. Mandatory reports (sailing, position, deviation) on the working VHF channel. ADRIREP also applies in the VTS area. Secondary channel on request of VTS. Secondary CH 62. Details: HHI Radioslužba za pomorce 2026 and VTS Croatia 2015 (HHI)."
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.905333333333333,
+              44.7695
+            ],
+            [
+              13.890833333333333,
+              44.758
+            ],
+            [
+              13.8745,
+              44.745
+            ],
+            [
+              14.304,
+              44.49783333333333
+            ],
+            [
+              14.309,
+              44.5
+            ],
+            [
+              14.4885,
+              44.5
+            ],
+            [
+              14.529,
+              44.5
+            ],
+            [
+              14.551,
+              44.5
+            ],
+            [
+              14.562333333333333,
+              44.5
+            ],
+            [
+              14.895333333333333,
+              44.5
+            ],
+            [
+              14.896,
+              44.5
+            ],
+            [
+              14.921,
+              44.5
+            ],
+            [
+              15.059333333333333,
+              44.5
+            ],
+            [
+              15.111,
+              44.5
+            ],
+            [
+              14.9,
+              44.9
+            ],
+            [
+              14.7,
+              45.15
+            ],
+            [
+              14.45,
+              45.32
+            ],
+            [
+              14.28,
+              45.22
+            ],
+            [
+              14.1,
+              45.05
+            ],
+            [
+              13.95,
+              44.85
+            ],
+            [
+              13.905333333333333,
+              44.7695
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "c4edce51-ae37-52ae-905e-fd9d5923914a",
+        "name": "Zadar VTS",
+        "callname": "VTS ZADAR",
+        "type": "vts",
+        "channel": "12",
+        "url": "https://www.hhi.hr/Portals/0/adam/HHI/a14_Qn4yJECeVbpwF_KLag/CouponFiles/VTS_RS_2015.pdf",
+        "phone": "+38551312300",
+        "vhfdata": {
+          "generic": {
+            "mode": "report",
+            "note": "VTS Croatia management sector. Mandatory reports (sailing, position, deviation) on the working VHF channel. ADRIREP also applies in the VTS area. Secondary channel on request of VTS. Secondary CH 60. Details: HHI Radioslužba za pomorce 2026 and VTS Croatia 2015 (HHI)."
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              15.111,
+              44.5
+            ],
+            [
+              15.059333333333333,
+              44.5
+            ],
+            [
+              14.921,
+              44.5
+            ],
+            [
+              14.896,
+              44.5
+            ],
+            [
+              14.895333333333333,
+              44.5
+            ],
+            [
+              14.562333333333333,
+              44.5
+            ],
+            [
+              14.551,
+              44.5
+            ],
+            [
+              14.529,
+              44.5
+            ],
+            [
+              14.4885,
+              44.5
+            ],
+            [
+              14.488333333333333,
+              44.40116666666667
+            ],
+            [
+              14.582666666666666,
+              44.35166666666667
+            ],
+            [
+              14.5855,
+              44.33866666666667
+            ],
+            [
+              14.802833333333334,
+              44.14633333333333
+            ],
+            [
+              15.295,
+              43.7725
+            ],
+            [
+              15.511166666666666,
+              43.657
+            ],
+            [
+              15.600833333333334,
+              43.678
+            ],
+            [
+              15.667166666666667,
+              43.7645
+            ],
+            [
+              15.6415,
+              43.799
+            ],
+            [
+              15.641666666666667,
+              43.79933333333334
+            ],
+            [
+              15.111,
+              44.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "dbc05597-1bf8-5dff-a304-9d04d0c33bbe",
+        "name": "Šibenik VTS",
+        "callname": "VTS ŠIBENIK",
+        "type": "vts",
+        "channel": "14",
+        "url": "https://www.hhi.hr/Portals/0/adam/HHI/a14_Qn4yJECeVbpwF_KLag/CouponFiles/VTS_RS_2015.pdf",
+        "phone": "+38521571440",
+        "vhfdata": {
+          "generic": {
+            "mode": "report",
+            "note": "VTS Croatia management sector. Mandatory reports (sailing, position, deviation) on the working VHF channel. ADRIREP also applies in the VTS area. Secondary channel on request of VTS. Secondary CH 60. Details: HHI Radioslužba za pomorce 2026 and VTS Croatia 2015 (HHI)."
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              15.641666666666667,
+              43.79933333333334
+            ],
+            [
+              15.6415,
+              43.799
+            ],
+            [
+              15.667166666666667,
+              43.7645
+            ],
+            [
+              15.600833333333334,
+              43.678
+            ],
+            [
+              15.600833333333334,
+              43.616166666666665
+            ],
+            [
+              15.9185,
+              43.5145
+            ],
+            [
+              15.938,
+              43.51466666666666
+            ],
+            [
+              15.941666666666666,
+              43.51466666666666
+            ],
+            [
+              15.954333333333333,
+              43.51466666666666
+            ],
+            [
+              15.641666666666667,
+              43.79933333333334
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "542a4c2e-502a-5772-be27-9d0796e62303",
+        "name": "Split VTS",
+        "callname": "VTS SPLIT",
+        "type": "vts",
+        "channel": "12",
+        "url": "https://www.hhi.hr/Portals/0/adam/HHI/a14_Qn4yJECeVbpwF_KLag/CouponFiles/VTS_RS_2015.pdf",
+        "phone": "+38521571440",
+        "vhfdata": {
+          "generic": {
+            "mode": "report",
+            "note": "VTS Croatia management sector. Mandatory reports (sailing, position, deviation) on the working VHF channel. ADRIREP also applies in the VTS area. Secondary channel on request of VTS. Secondary CH 62. Details: HHI Radioslužba za pomorce 2026 and VTS Croatia 2015 (HHI)."
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              15.996,
+              43.4875
+            ],
+            [
+              15.996166666666667,
+              43.43333333333333
+            ],
+            [
+              16.456,
+              43.208333333333336
+            ],
+            [
+              16.737,
+              43.15983333333333
+            ],
+            [
+              16.736333333333334,
+              43.2625
+            ],
+            [
+              16.736,
+              43.361666666666665
+            ],
+            [
+              16.736,
+              43.412166666666664
+            ],
+            [
+              15.996,
+              43.4875
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "057f02f2-4935-566c-ac8e-cf79b9f00869",
+        "name": "Ploče VTS",
+        "callname": "VTS PLOČE",
+        "type": "vts",
+        "channel": "14",
+        "url": "https://www.hhi.hr/Portals/0/adam/HHI/a14_Qn4yJECeVbpwF_KLag/CouponFiles/VTS_RS_2015.pdf",
+        "phone": "+38520333453",
+        "vhfdata": {
+          "generic": {
+            "mode": "report",
+            "note": "VTS Croatia management sector. Mandatory reports (sailing, position, deviation) on the working VHF channel. ADRIREP also applies in the VTS area. Secondary channel on request of VTS. Details: HHI Radioslužba za pomorce 2026 and VTS Croatia 2015 (HHI)."
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              16.736,
+              43.412166666666664
+            ],
+            [
+              16.736,
+              43.361666666666665
+            ],
+            [
+              16.736333333333334,
+              43.2625
+            ],
+            [
+              16.737,
+              43.15983333333333
+            ],
+            [
+              16.452666666666666,
+              43.161833333333334
+            ],
+            [
+              16.452666666666666,
+              43.157333333333334
+            ],
+            [
+              16.452666666666666,
+              43.155833333333334
+            ],
+            [
+              16.452833333333334,
+              43.07333333333333
+            ],
+            [
+              16.607,
+              42.983333333333334
+            ],
+            [
+              16.6235,
+              42.98466666666667
+            ],
+            [
+              16.627833333333335,
+              42.98533333333334
+            ],
+            [
+              17.202166666666667,
+              42.91733333333333
+            ],
+            [
+              17.2115,
+              42.961166666666664
+            ],
+            [
+              17.227666666666668,
+              42.97266666666667
+            ],
+            [
+              17.649,
+              42.88916666666667
+            ],
+            [
+              17.581333333333333,
+              42.93833333333333
+            ],
+            [
+              16.736,
+              43.412166666666664
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "e953b05e-2ee6-505b-9941-12b0128f9afc",
+        "name": "Dubrovnik VTS",
+        "callname": "VTS DUBROVNIK",
+        "type": "vts",
+        "channel": "12",
+        "url": "https://www.hhi.hr/Portals/0/adam/HHI/a14_Qn4yJECeVbpwF_KLag/CouponFiles/VTS_RS_2015.pdf",
+        "phone": "+38520333453",
+        "vhfdata": {
+          "generic": {
+            "mode": "report",
+            "note": "VTS Croatia management sector. Mandatory reports (sailing, position, deviation) on the working VHF channel. ADRIREP also applies in the VTS area. Secondary channel on request of VTS. Details: HHI Radioslužba za pomorce 2026 and VTS Croatia 2015 (HHI)."
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              17.583666666666666,
+              42.83283333333333
+            ],
+            [
+              17.547166666666666,
+              42.760333333333335
+            ],
+            [
+              17.748,
+              42.68683333333333
+            ],
+            [
+              18.174,
+              42.48316666666667
+            ],
+            [
+              18.232833333333332,
+              42.559
+            ],
+            [
+              17.583666666666666,
+              42.83283333333333
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "3e38ccdf-365c-54f6-b7cf-c42ea58a045e",
+        "name": "Pula Traffic",
+        "callname": "PULA TRAFFIC",
+        "type": "vts",
+        "channel": "9",
+        "url": "https://www.hhi.hr/Portals/0/adam/HHI/a14_Qn4yJECeVbpwF_KLag/CouponFiles/VTS_RS_2015.pdf",
+        "phone": "+38551312300",
+        "vhfdata": {
+          "generic": {
+            "mode": "report",
+            "note": "VTS Croatia manoeuvring sector (port approaches and anchorages). Call on VHF 9. Information service; TOS as required. Details: HHI Radioslužba za pomorce 2026 and VTS Croatia 2015 (HHI)."
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.734833333333333,
+              44.986333333333334
+            ],
+            [
+              13.709666666666667,
+              44.94533333333333
+            ],
+            [
+              13.721833333333333,
+              44.94433333333333
+            ],
+            [
+              13.735,
+              44.94116666666667
+            ],
+            [
+              13.75,
+              44.93033333333333
+            ],
+            [
+              13.751,
+              44.9265
+            ],
+            [
+              13.753,
+              44.88783333333333
+            ],
+            [
+              13.752833333333333,
+              44.8605
+            ],
+            [
+              13.801166666666667,
+              44.86066666666667
+            ],
+            [
+              13.734833333333333,
+              44.986333333333334
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ae973e26-2dc2-5efa-8f6c-787f2d3a110c",
+        "name": "Rijeka Traffic",
+        "callname": "RIJEKA TRAFFIC",
+        "type": "vts",
+        "channel": "9",
+        "url": "https://www.hhi.hr/Portals/0/adam/HHI/a14_Qn4yJECeVbpwF_KLag/CouponFiles/VTS_RS_2015.pdf",
+        "phone": "+38551312300",
+        "vhfdata": {
+          "generic": {
+            "mode": "report",
+            "note": "VTS Croatia manoeuvring sector (port approaches and anchorages). Call on VHF 9. Information service; TOS as required. Details: HHI Radioslužba za pomorce 2026 and VTS Croatia 2015 (HHI)."
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              14.378166666666667,
+              45.3385
+            ],
+            [
+              14.328166666666666,
+              45.2915
+            ],
+            [
+              14.471166666666667,
+              45.241
+            ],
+            [
+              14.44,
+              45.19266666666667
+            ],
+            [
+              14.4385,
+              45.185
+            ],
+            [
+              14.44,
+              45.17733333333334
+            ],
+            [
+              14.448666666666666,
+              45.16716666666667
+            ],
+            [
+              14.4655,
+              45.160666666666664
+            ],
+            [
+              14.522,
+              45.150666666666666
+            ],
+            [
+              14.554166666666667,
+              45.245666666666665
+            ],
+            [
+              14.5555,
+              45.25333333333333
+            ],
+            [
+              14.5625,
+              45.26566666666667
+            ],
+            [
+              14.378166666666667,
+              45.3385
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "657db259-972b-55ac-bfa4-6313c40cc7a9",
+        "name": "Zadar Traffic",
+        "callname": "ZADAR TRAFFIC",
+        "type": "vts",
+        "channel": "9",
+        "url": "https://www.hhi.hr/Portals/0/adam/HHI/a14_Qn4yJECeVbpwF_KLag/CouponFiles/VTS_RS_2015.pdf",
+        "phone": "+38551312300",
+        "vhfdata": {
+          "generic": {
+            "mode": "report",
+            "note": "VTS Croatia manoeuvring sector (port approaches and anchorages). Call on VHF 9. Information service; TOS as required. Details: HHI Radioslužba za pomorce 2026 and VTS Croatia 2015 (HHI)."
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              15.1875,
+              44.164
+            ],
+            [
+              15.1385,
+              44.128166666666665
+            ],
+            [
+              15.172833333333333,
+              44.10666666666667
+            ],
+            [
+              15.2115,
+              44.079166666666666
+            ],
+            [
+              15.2445,
+              44.052
+            ],
+            [
+              15.275833333333333,
+              44.08233333333333
+            ],
+            [
+              15.1875,
+              44.164
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "e653022a-b37c-5f8a-bf94-7ea6355974f0",
+        "name": "Šibenik Traffic",
+        "callname": "ŠIBENIK TRAFFIC",
+        "type": "vts",
+        "channel": "9",
+        "url": "https://www.hhi.hr/Portals/0/adam/HHI/a14_Qn4yJECeVbpwF_KLag/CouponFiles/VTS_RS_2015.pdf",
+        "phone": "+38521571440",
+        "vhfdata": {
+          "generic": {
+            "mode": "report",
+            "note": "VTS Croatia manoeuvring sector (port approaches and anchorages). Call on VHF 9. Information service; TOS as required. Details: HHI Radioslužba za pomorce 2026 and VTS Croatia 2015 (HHI)."
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              15.850166666666667,
+              43.7215
+            ],
+            [
+              15.814333333333334,
+              43.714
+            ],
+            [
+              15.8195,
+              43.701
+            ],
+            [
+              15.869,
+              43.6605
+            ],
+            [
+              15.869,
+              43.653333333333336
+            ],
+            [
+              15.872,
+              43.644333333333336
+            ],
+            [
+              15.877333333333333,
+              43.63733333333333
+            ],
+            [
+              15.884,
+              43.632666666666665
+            ],
+            [
+              15.891166666666667,
+              43.63016666666667
+            ],
+            [
+              15.8965,
+              43.629666666666665
+            ],
+            [
+              15.907666666666668,
+              43.63016666666667
+            ],
+            [
+              15.914833333333334,
+              43.632
+            ],
+            [
+              15.917,
+              43.63216666666667
+            ],
+            [
+              15.9375,
+              43.671
+            ],
+            [
+              15.938166666666667,
+              43.672333333333334
+            ],
+            [
+              15.843833333333333,
+              43.775166666666664
+            ],
+            [
+              15.8435,
+              43.777166666666666
+            ],
+            [
+              15.850166666666667,
+              43.7215
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "9d8598bb-eddd-52dc-b8d1-71230267f4ea",
+        "name": "Split Traffic",
+        "callname": "SPLIT TRAFFIC",
+        "type": "vts",
+        "channel": "9",
+        "url": "https://www.hhi.hr/Portals/0/adam/HHI/a14_Qn4yJECeVbpwF_KLag/CouponFiles/VTS_RS_2015.pdf",
+        "phone": "+38521571440",
+        "vhfdata": {
+          "generic": {
+            "mode": "report",
+            "note": "VTS Croatia manoeuvring sector (port approaches and anchorages). Call on VHF 9. Information service; TOS as required. Details: HHI Radioslužba za pomorce 2026 and VTS Croatia 2015 (HHI)."
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              16.252333333333333,
+              43.518
+            ],
+            [
+              16.253666666666668,
+              43.51533333333333
+            ],
+            [
+              16.392,
+              43.48833333333334
+            ],
+            [
+              16.488666666666667,
+              43.4435
+            ],
+            [
+              16.521833333333333,
+              43.44316666666667
+            ],
+            [
+              16.521833333333333,
+              43.498666666666665
+            ],
+            [
+              16.252333333333333,
+              43.518
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "8b9d2cf2-28de-51fa-84ec-5e760655e390",
+        "name": "Ploče Traffic",
+        "callname": "PLOČE TRAFFIC",
+        "type": "vts",
+        "channel": "9",
+        "url": "https://www.hhi.hr/Portals/0/adam/HHI/a14_Qn4yJECeVbpwF_KLag/CouponFiles/VTS_RS_2015.pdf",
+        "phone": "+38520333453",
+        "vhfdata": {
+          "generic": {
+            "mode": "report",
+            "note": "VTS Croatia manoeuvring sector (port approaches and anchorages). Call on VHF 9. Information service; TOS as required. Details: HHI Radioslužba za pomorce 2026 and VTS Croatia 2015 (HHI)."
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              17.3555,
+              43.086166666666664
+            ],
+            [
+              17.31,
+              43.053
+            ],
+            [
+              17.434833333333334,
+              42.9755
+            ],
+            [
+              17.462833333333332,
+              43.009
+            ],
+            [
+              17.465666666666667,
+              43.00966666666667
+            ],
+            [
+              17.469166666666666,
+              43.01133333333333
+            ],
+            [
+              17.652,
+              43.054
+            ],
+            [
+              17.652666666666665,
+              43.055166666666665
+            ],
+            [
+              17.435833333333335,
+              43.03516666666667
+            ],
+            [
+              17.435166666666667,
+              43.036
+            ],
+            [
+              17.3555,
+              43.086166666666664
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "1c0da502-763f-5477-b282-aa04cf4db1e8",
+        "name": "Dubrovnik Traffic",
+        "callname": "DUBROVNIK TRAFFIC",
+        "type": "vts",
+        "channel": "9",
+        "url": "https://www.hhi.hr/Portals/0/adam/HHI/a14_Qn4yJECeVbpwF_KLag/CouponFiles/VTS_RS_2015.pdf",
+        "phone": "+38520333453",
+        "vhfdata": {
+          "generic": {
+            "mode": "report",
+            "note": "VTS Croatia manoeuvring sector (port approaches and anchorages). Call on VHF 9. Information service; TOS as required. Details: HHI Radioslužba za pomorce 2026 and VTS Croatia 2015 (HHI)."
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.032666666666668,
+              42.687333333333335
+            ],
+            [
+              18.023,
+              42.669333333333334
+            ],
+            [
+              18.020333333333333,
+              42.66116666666667
+            ],
+            [
+              18.046166666666668,
+              42.647166666666664
+            ],
+            [
+              18.136166666666668,
+              42.61366666666667
+            ],
+            [
+              18.152,
+              42.627833333333335
+            ],
+            [
+              18.050166666666666,
+              42.68483333333333
+            ],
+            [
+              18.045666666666666,
+              42.684666666666665
+            ],
+            [
+              18.032666666666668,
+              42.687333333333335
+            ]
+          ]
+        ]
+      }
+    }
   ]
 }
