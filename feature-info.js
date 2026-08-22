@@ -1,4 +1,7 @@
-/* Shared VHF feature details — map popup and nearby cards use the same fields. */
+/* Shared VHF feature details.
+ * - buildInfoTable: Leaflet popup table
+ * - fillInfoBlock / infoBlockElement: map bottom info blocks and Nearby cards
+ */
 (function (root) {
   function escapeHtml(value) {
     return String(value)
@@ -298,6 +301,223 @@
     return '<table class="feature-info"><tbody>' + rows + "</tbody></table>";
   }
 
+  /* Map #panel bottom info blocks — Nearby cards use the same renderer. */
+  function isDefined(value) {
+    return typeof value !== "undefined";
+  }
+
+  function formatDistance(distance) {
+    if (distance == null || distance === "") {
+      return "";
+    }
+    var n = Number(distance);
+    if (!isFinite(n)) {
+      return "";
+    }
+    if (n < 0) {
+      return "INSIDE";
+    }
+    return n + "m";
+  }
+
+  function displayName(props) {
+    if (!props) {
+      return "-";
+    }
+    if (isDefined(props.callname)) {
+      return String(props.callname);
+    }
+    if (isDefined(props.name)) {
+      return String(props.name);
+    }
+    return "-";
+  }
+
+  function channelText(props) {
+    if (!props || !isDefined(props.channel)) {
+      return "-";
+    }
+    return String(props.channel).replace(/[/,]/g, " ");
+  }
+
+  function channelFontSizeEm(channel) {
+    return 7 - String(channel == null ? "" : channel).length * 0.7;
+  }
+
+  function pickBlockMode(props) {
+    var data = (props && props.vhfdata) || {};
+    if (data.pleasure && isDefined(data.pleasure.mode)) {
+      return data.pleasure.mode;
+    }
+    if (data.generic && isDefined(data.generic.mode)) {
+      return data.generic.mode;
+    }
+    return "";
+  }
+
+  function pickBlockNote(props) {
+    var data = (props && props.vhfdata) || {};
+    if (data.pleasure && isDefined(data.pleasure.note)) {
+      return data.pleasure.note;
+    }
+    if (data.generic && isDefined(data.generic.note)) {
+      return data.generic.note;
+    }
+    if (props && isDefined(props.note)) {
+      return props.note;
+    }
+    return "";
+  }
+
+  function pickBlockPhone(props) {
+    var data = (props && props.vhfdata) || {};
+    if (data.pleasure && isDefined(data.pleasure.phone)) {
+      return data.pleasure.phone;
+    }
+    if (props && isDefined(props.phone)) {
+      return props.phone;
+    }
+    return "";
+  }
+
+  function pickBlockUrl(props) {
+    var data = (props && props.vhfdata) || {};
+    if (data.pleasure && isDefined(data.pleasure.url)) {
+      return data.pleasure.url;
+    }
+    if (props && isDefined(props.url)) {
+      return props.url;
+    }
+    return "";
+  }
+
+  function typeLineHtml(props) {
+    if (!props) {
+      return "";
+    }
+    return (
+      typeLabel(props.type) +
+      " &#9656; " +
+      String(pickBlockMode(props) || "").toUpperCase() +
+      " &#9656; " +
+      formatDistance(props.distance)
+    );
+  }
+
+  function phoneIconHtml(phone) {
+    if (isPlaceholder(phone)) {
+      return "";
+    }
+    return (
+      '<a href="tel:' +
+      escapeHtml(String(phone)) +
+      '" style="text-decoration:none; color: white" aria-label="Call">&#9990;</a>'
+    );
+  }
+
+  function urlIconHtml(url) {
+    if (isPlaceholder(url)) {
+      return "";
+    }
+    return (
+      '<a href="' +
+      escapeHtml(String(url)) +
+      '" style="text-decoration:none; color: white" target="_blank" rel="noopener noreferrer" aria-label="Source link">&#128279;</a>'
+    );
+  }
+
+  function fillInfoBlock(els, props) {
+    if (!els) {
+      return;
+    }
+    if (!props) {
+      if (els.name) {
+        els.name.innerHTML = "-";
+      }
+      if (els.channel) {
+        els.channel.innerHTML = "";
+        els.channel.style.fontSize = "";
+      }
+      if (els.type) {
+        els.type.innerHTML = "";
+      }
+      if (els.note) {
+        els.note.innerHTML = "";
+      }
+      if (els.phone) {
+        els.phone.innerHTML = "";
+      }
+      if (els.url) {
+        els.url.innerHTML = "";
+      }
+      return;
+    }
+    var channel = channelText(props);
+    if (els.name) {
+      els.name.innerHTML = escapeHtml(displayName(props));
+    }
+    if (els.channel) {
+      if (isDefined(props.channel)) {
+        els.channel.innerHTML = escapeHtml(channel);
+        els.channel.style.fontSize = channelFontSizeEm(channel) + "em";
+      } else {
+        els.channel.innerHTML = "-";
+        els.channel.style.fontSize = "";
+      }
+    }
+    if (els.type) {
+      els.type.innerHTML = typeLineHtml(props);
+    }
+    if (els.note) {
+      els.note.innerHTML = pickBlockNote(props) || "";
+    }
+    if (els.phone) {
+      els.phone.innerHTML = phoneIconHtml(pickBlockPhone(props));
+    }
+    if (els.url) {
+      els.url.innerHTML = urlIconHtml(pickBlockUrl(props));
+    }
+  }
+
+  function fillInfoBlockByIndex(index, props) {
+    fillInfoBlock(
+      {
+        channel: document.getElementById("channel_" + index),
+        type: document.getElementById("type_" + index),
+        name: document.getElementById("name_" + index),
+        note: document.getElementById("note_" + index),
+        phone: document.getElementById("phone_" + index),
+        url: document.getElementById("url_" + index),
+      },
+      props,
+    );
+  }
+
+  function infoBlockElement(props, id) {
+    var wrap = document.createElement("article");
+    wrap.className = "vhf-info-block nearby";
+    wrap.id = "entry_" + id;
+    wrap.innerHTML =
+      '<div class="channel"></div>' +
+      '<div class="type"></div>' +
+      '<div class="name"></div>' +
+      '<div class="note"></div>' +
+      '<div class="phone"></div>' +
+      '<div class="url"></div>';
+    fillInfoBlock(
+      {
+        channel: wrap.querySelector(".channel"),
+        type: wrap.querySelector(".type"),
+        name: wrap.querySelector(".name"),
+        note: wrap.querySelector(".note"),
+        phone: wrap.querySelector(".phone"),
+        url: wrap.querySelector(".url"),
+      },
+      props,
+    );
+    return wrap;
+  }
+
   root.vhfFeatureInfo = {
     escapeHtml: escapeHtml,
     shortUrlLabel: shortUrlLabel,
@@ -308,5 +528,13 @@
     pickPhone: pickPhone,
     isPlaceholder: isPlaceholder,
     buildInfoTable: buildInfoTable,
+    formatDistance: formatDistance,
+    displayName: displayName,
+    channelText: channelText,
+    pickBlockMode: pickBlockMode,
+    pickBlockNote: pickBlockNote,
+    fillInfoBlock: fillInfoBlock,
+    fillInfoBlockByIndex: fillInfoBlockByIndex,
+    infoBlockElement: infoBlockElement,
   };
 })(typeof window !== "undefined" ? window : this);
