@@ -516,7 +516,7 @@
         url: wrap.querySelector(".url"),
       },
       props,
-      { channelScale: 0.78 },
+      { channelScale: 0.68 },
     );
     return wrap;
   }
