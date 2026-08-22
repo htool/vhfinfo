@@ -106,6 +106,169 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "dd955c0a-aa49-5f99-812b-6d6705709197",
+        "name": "Tarifa Traffic",
+        "callname": "TARIFA TRAFFIC",
+        "type": "vts",
+        "channel": "10",
+        "url": "https://wwwcdn.imo.org/localresources/en/KnowledgeCentre/IndexofIMOResolutions/MSCResolutions/MSC.300(87).pdf",
+        "phone": "+34956684740",
+        "vhfdata": {
+          "generic": {
+            "mode": "report",
+            "note": "GIBREP. Mandatory report for ships ≥300 GT in the Strait of Gibraltar between 005°58.00′W and 005°15.00′W. Report to Tarifa Traffic on VHF 10 (67 supplementary). Westbound report when crossing 005°15.00′W. Eastbound report to Tangier Traffic on VHF 69. IMO MSC.300(87)."
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -5.966667,
+              36.16
+            ],
+            [
+              -5.25,
+              36.18
+            ],
+            [
+              -5.25,
+              35.87
+            ],
+            [
+              -5.966667,
+              35.82
+            ],
+            [
+              -5.966667,
+              36.16
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "b87da775-762f-5fee-9e9e-9d4979dd792a",
+        "name": "Finisterre Traffic",
+        "callname": "FINISTERRE TRAFFIC",
+        "type": "vts",
+        "channel": "11",
+        "url": "https://wwwcdn.imo.org/localresources/en/KnowledgeCentre/IndexofIMOResolutions/MSCResolutions/MSC.162(78).pdf",
+        "phone": "+34981767320",
+        "vhfdata": {
+          "generic": {
+            "mode": "report",
+            "note": "Mandatory ship reporting Off Cape Finisterre. Area between the coast, a 130° bearing to Cape Villano, a 075° bearing to Cape Finisterre, and 010°15′W, including the Off Finisterre TSS. Report on VHF 11 (74 supplementary). IMO MSC.63(67) as amended by MSC.162(78)."
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -9.2,
+              43.13
+            ],
+            [
+              -9.18,
+              43.05
+            ],
+            [
+              -9.15,
+              42.94
+            ],
+            [
+              -9.2722,
+              42.8825
+            ],
+            [
+              -10.25,
+              42.69017
+            ],
+            [
+              -10.25,
+              43.792922
+            ],
+            [
+              -9.2114,
+              43.1606
+            ],
+            [
+              -9.2,
+              43.13
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "27c6e2c2-e78d-566f-bbf9-b7aded832b3a",
+        "name": "Barcelona Port Control",
+        "callname": "BARCELONA PORT CONTROL",
+        "type": "vts",
+        "channel": "14",
+        "url": "https://www.boe.es/boe/dias/2023/03/14/pdfs/BOE-A-2023-6719.pdf",
+        "phone": "+34933068800",
+        "vhfdata": {
+          "generic": {
+            "mode": "report",
+            "note": "Port of Barcelona VTS. Working channel 14. Ships report on VHF 14 (and CCS Barcelona Tráfico on 10) 1 hour before landfall buoys S/N, then again at 2 NM from S or 4 NM from N. Keep watch on 14 in port waters. Port de Barcelona ordinance (BOE-A-2023-6719)."
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2.232,
+              41.42
+            ],
+            [
+              2.3,
+              41.39
+            ],
+            [
+              2.28,
+              41.32
+            ],
+            [
+              2.2,
+              41.275
+            ],
+            [
+              2.14,
+              41.32
+            ],
+            [
+              2.16,
+              41.345
+            ],
+            [
+              2.175,
+              41.375
+            ],
+            [
+              2.2,
+              41.405
+            ],
+            [
+              2.232,
+              41.42
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
