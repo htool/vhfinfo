@@ -441,125 +441,97 @@ body.page-info .info-layers {
 }
 
 body.page-info #list {
-  padding: 0.55rem 0.35rem 2rem;
-  max-width: 44rem;
+  padding: 0;
+  max-width: 800px;
   margin: 0 auto;
 }
 
-body.page-info .entry {
-  display: block;
-  background: #222;
-  padding: 8px 10px 12px;
-  margin-bottom: 10px;
-  border-radius: 4px;
+/* Shared with map.html #panel bottom info blocks */
+.vhf-info-block {
+  position: relative;
+  color: #fff;
+  background: #000;
+  font-family: Helvetica, Sans-Serif;
+  border-bottom: 1px solid #404040;
 }
 
-body.page-info .feature-name {
-  display: block;
-  font-size: clamp(2.15rem, 9.5vw, 3.2rem);
-  font-weight: 800;
-  line-height: 1.08;
-  letter-spacing: -0.03em;
-  margin: 0 0 0.4rem;
-  padding: 0.1rem 2% 0;
+.vhf-info-block .name {
+  display: inline;
+  position: absolute;
+  top: 25px;
+  left: 125px;
+  right: 48px;
+  font-size: 1.6em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-body.page-info .channelblock {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 0.3rem 0.65rem;
-  align-items: start;
+.vhf-info-block .channel {
+  position: absolute;
+  display: inline;
+  width: 110px;
+  text-align: right;
+  top: 0;
+  left: 0;
+  font-size: 6em;
+  font-weight: 700;
+  line-height: 0.8;
 }
 
-body.page-info .channel {
-  font-size: clamp(1.7rem, 7vw, 2.5rem);
-  line-height: 0.95;
-  font-weight: 500;
-  text-align: center;
-  min-width: 2ch;
-  color: #ddd;
+.vhf-info-block .type {
+  position: absolute;
+  display: inline;
+  top: 7px;
+  left: 125px;
+  right: 48px;
+  font-size: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-body.page-info .typeblock {
-  font-size: clamp(1.05rem, 3.8vw, 1.35rem);
-  line-height: 1.2;
-  padding-top: 0.2rem;
+.vhf-info-block .note {
+  position: absolute;
+  display: inline;
+  bottom: 0;
+  left: 125px;
+  right: 8px;
+  font-size: 0.9em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-body.page-info .type,
-body.page-info .mode,
-body.page-info .distance {
-  display: block;
+.vhf-info-block .phone {
+  position: absolute;
+  display: inline;
+  top: -2px;
+  right: 40px;
+  font-size: 1.8em;
 }
 
-body.page-info .icons {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 0.15rem;
-  padding-top: 0.35rem;
-  font-size: 1.6rem;
+.vhf-info-block .url {
+  position: absolute;
+  display: inline;
+  top: 3px;
+  right: 5px;
+  font-size: 1.2em;
 }
 
-body.page-info .icons a {
+.vhf-info-block .phone a,
+.vhf-info-block .url a {
   color: #fff;
   text-decoration: none;
 }
 
-body.page-info .name,
-body.page-info .callname {
-  display: block;
-  font-size: clamp(1.15rem, 4vw, 1.5rem);
-  margin-top: 0.15rem;
-  padding-left: 2%;
-}
-
-body.page-info .notes {
-  display: block;
-  font-size: clamp(1.05rem, 3.6vw, 1.4rem);
-  text-align: left;
-  width: 98%;
-  border-radius: 5px;
-  background: dimgrey;
-  padding: 6px 8px;
-  margin: 0.45rem auto 0;
-}
-
-body.page-info .note {
-  display: block;
+body.page-info .vhf-info-block {
+  min-height: 5.6em;
+  width: 100%;
 }
 
 body.page-info .info-empty {
   color: #bbb;
   padding: 1.5rem 0.8rem;
   font-size: 1.2rem;
-}
-
-body.page-info .feature-info {
-  width: 100%;
-  margin-top: 0.5rem;
-  border-collapse: collapse;
-  font-size: clamp(1.05rem, 3.6vw, 1.35rem);
-  line-height: 1.35;
-}
-
-body.page-info .feature-info td {
-  padding: 0.2rem 0.4rem 0.2rem 2%;
-  vertical-align: top;
-}
-
-body.page-info .feature-info td:first-child {
-  width: 8.5rem;
-  color: #cfcfcf;
-  padding-left: 2%;
-}
-
-body.page-info .feature-info a {
-  color: var(--gold);
-}
-
-body.page-info .feature-info .feature-note {
-  background: dimgrey;
-  border-radius: 5px;
-  padding: 6px 8px;
 }
