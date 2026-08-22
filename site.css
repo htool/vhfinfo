@@ -527,7 +527,7 @@ body.page-info #list {
 
 body.page-info .vhf-info-block {
   display: grid;
-  grid-template-columns: minmax(5.75rem, 7.5rem) minmax(0, 1fr) auto auto;
+  grid-template-columns: minmax(4.4rem, 6rem) minmax(0, 1fr) auto auto;
   grid-template-areas:
     "channel type phone url"
     "channel name name name"
@@ -561,7 +561,7 @@ body.page-info .vhf-info-block .channel {
   align-self: center;
   justify-self: end;
   text-align: right;
-  font-size: 4.4em;
+  font-size: 3.8em;
   line-height: 0.85;
 }
 
@@ -574,15 +574,15 @@ body.page-info .vhf-info-block .name {
   grid-area: name;
   margin: 0;
   font-family: inherit;
-  font-size: 1.9em;
+  font-size: 2em;
   font-weight: 700;
   line-height: 1.15;
   color: inherit;
   overflow: visible;
   text-overflow: unset;
   white-space: normal;
-  overflow-wrap: anywhere;
-  word-break: break-word;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 body.page-info .vhf-info-block .note {
