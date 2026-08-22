@@ -2,6 +2,9 @@
 
 ## Viewing info
 
+### Nearby without a map
+Open the [nearby / info page](info.html) for a SignalK-style list of nearby channels (huge channel number, type, listen/announce/report, distance). It uses your GPS; no map is shown.
+
 ### Layers
 You can enable/disable different layer types using the ![26px](documentation/pictures/layers.png) button.
 You can bring an overlapping layer to back by pressing the right mouse button on the underlaying shape.
