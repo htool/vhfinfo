@@ -441,8 +441,8 @@ body.page-info .info-layers {
 }
 
 body.page-info #list {
-  padding: 0;
-  max-width: 800px;
+  padding: 0 0.4rem 1.25rem;
+  max-width: min(100%, 56rem);
   margin: 0 auto;
 }
 
@@ -526,8 +526,76 @@ body.page-info #list {
 }
 
 body.page-info .vhf-info-block {
-  min-height: 5.6em;
+  display: grid;
+  grid-template-columns: minmax(5.75rem, 7.5rem) minmax(0, 1fr) auto auto;
+  grid-template-areas:
+    "channel type phone url"
+    "channel name name name"
+    "channel note note note";
+  column-gap: 0.9rem;
+  row-gap: 0.2rem;
+  align-items: start;
+  box-sizing: border-box;
+  min-height: 8.75rem;
   width: 100%;
+  padding: 0.85rem 0.95rem 1.05rem;
+}
+
+body.page-info .vhf-info-block .channel,
+body.page-info .vhf-info-block .type,
+body.page-info .vhf-info-block .name,
+body.page-info .vhf-info-block .note,
+body.page-info .vhf-info-block .phone,
+body.page-info .vhf-info-block .url {
+  position: static;
+  display: block;
+  left: auto;
+  right: auto;
+  top: auto;
+  bottom: auto;
+  width: auto;
+}
+
+body.page-info .vhf-info-block .channel {
+  grid-area: channel;
+  align-self: center;
+  justify-self: end;
+  text-align: right;
+  font-size: 4.4em;
+  line-height: 0.85;
+}
+
+body.page-info .vhf-info-block .type {
+  grid-area: type;
+  padding-top: 0.2rem;
+}
+
+body.page-info .vhf-info-block .name {
+  grid-area: name;
+  margin: 0;
+  font-family: inherit;
+  font-size: 1.9em;
+  font-weight: 700;
+  line-height: 1.15;
+  color: inherit;
+  overflow: visible;
+  text-overflow: unset;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+body.page-info .vhf-info-block .note {
+  grid-area: note;
+}
+
+body.page-info .vhf-info-block .phone {
+  grid-area: phone;
+  font-size: 1.6em;
+}
+
+body.page-info .vhf-info-block .url {
+  grid-area: url;
 }
 
 body.page-info .info-empty {
