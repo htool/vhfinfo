@@ -276,35 +276,8 @@ function initAuth() {
         (window.location.hash || "");
       window.history.replaceState({}, document.title, clean);
     }
-    return fetchAuthProviderSettings().then(function () {
-      return vhfAuth.session;
-    });
+    return vhfAuth.session;
   });
-}
-
-function fetchAuthProviderSettings() {
-  var cfg = authConfig();
-  return fetch(cfg.url + "/auth/v1/settings", {
-    headers: {
-      apikey: cfg.anonKey,
-      Authorization: "Bearer " + cfg.anonKey,
-    },
-  })
-    .then(function (res) {
-      return res.json();
-    })
-    .then(function (settings) {
-      var googleOn = !!(settings.external && settings.external.google);
-      var googleBtn = document.getElementById("auth-google");
-      var orEl = document.querySelector("#auth-modal .auth-or");
-      if (googleBtn) {
-        googleBtn.style.display = googleOn ? "" : "none";
-      }
-      if (orEl) {
-        orEl.style.display = googleOn ? "" : "none";
-      }
-    })
-    .catch(function () {});
 }
 
 function requireSignIn(next, pendingToken) {
@@ -376,40 +349,6 @@ function sendMagicLink() {
     .catch(function (err) {
       console.error(err);
       setAuthMessage(authErrorMessage(err), true);
-    });
-}
-
-function signInWithGoogle() {
-  if (!authIsConfigured() || !vhfAuth.client) {
-    setAuthMessage(
-      "Google sign-in is not available yet. Use the email link instead.",
-      true,
-    );
-    return;
-  }
-  rememberAuthIntent();
-  vhfAuth.client.auth
-    .signInWithOAuth({
-      provider: "google",
-      options: {
-        redirectTo: authRedirectTo(),
-      },
-    })
-    .then(function (result) {
-      if (result.error) {
-        setAuthMessage(
-          "Google sign-in is not available yet. Use the email link instead.",
-          true,
-        );
-        console.error(result.error);
-      }
-    })
-    .catch(function (err) {
-      console.error(err);
-      setAuthMessage(
-        "Google sign-in is not available yet. Use the email link instead.",
-        true,
-      );
     });
 }
 

@@ -1,7 +1,7 @@
 # Sign-in setup (site owner)
 
 Viewers do not need an account. People who change the map must sign in with
-**email (a link, no password)** or **Google**.
+**email (a link, no password)**. Google is not used.
 
 Supabase organisation: `bwrgvqczyqfjvcmfhbsn`  
 Project: `imgadhoivcpexrferorn` (`https://imgadhoivcpexrferorn.supabase.co`)  
@@ -31,20 +31,11 @@ whole project. If sending a link fails with a rate-limit message, wait a bit or
 use a tab that is already signed in. For more mail later, add your own sender
 under **Project Settings → Authentication → SMTP**.
 
-## 3. Google sign-in (optional, but nicer)
-
-Google is currently off, so the map hides that button until you enable it.
-
-1. In Google Cloud, create an OAuth client (Web application).
-2. Add authorized redirect URI:
-   `https://imgadhoivcpexrferorn.supabase.co/auth/v1/callback`
-3. In Supabase: **Authentication → Providers → Google**. Turn it on and paste the Client ID and Client secret.
-
-## 4. Check it
+## 3. Check it
 
 Open the map, tap the pencil, enter your email, tap **Email me a sign-in link**, and open the mail. After you follow the link, you should be able to edit and publish.
 
-## 5. Feature table (shadow copy)
+## 4. Feature table (shadow copy)
 
 The website map loads `public.vhf_features` (view and edit). GitHub is the
 fallback. Publishing writes the table; `scripts/sync-vhf-to-git.js` plus the
