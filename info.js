@@ -7,7 +7,7 @@
   var SEARCH_ANGLE = 80;
   var MAX_RESULTS = 8;
   var DEMO = {
-    amsterdam: { lat: 52.377, lon: 4.9, label: "Amsterdam (IJ)" },
+    amsterdam: { lat: 52.395, lon: 4.897, label: "Amsterdam (IJ)" },
     ijsselmeer: { lat: 52.7, lon: 5.25, label: "IJsselmeer" },
   };
   var LAYER_STORAGE_KEY = "vhfinfo.nearbyLayers";
