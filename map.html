@@ -1782,13 +1782,14 @@
               if (e.originalEvent) {
                 L.DomEvent.stop(e.originalEvent);
               }
-              if (l === currentEditLayer && transformCtl.didDrag) {
+              var clicked = e.target;
+              if (clicked === currentEditLayer && transformCtl.didDrag) {
                 transformCtl.didDrag = false;
                 return;
               }
-              dismissFeaturePopup(e.target);
+              dismissFeaturePopup(clicked);
               m.closePopup();
-              openEditor(e.target);
+              openEditor(clicked);
               return;
             }
             showInfo(e.target.feature, e.target, country);
@@ -3324,7 +3325,11 @@
         setEditorField("ed-curl", p.vhfdata.cargo && p.vhfdata.cargo.url);
         document.body.classList.add("editor-open");
         m.invalidateSize(true);
-        enableTransformOverlay(layer);
+        try {
+          enableTransformOverlay(layer);
+        } catch (err) {
+          console.error(err);
+        }
       }
 
       function setEditorField(id, value) {
