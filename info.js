@@ -490,9 +490,15 @@
           '" aria-label="Call">&#9990;</a>';
       }
 
-      var details = info ? info.buildInfoTable(feature) : "";
+      var details = info
+        ? info.buildInfoTable(feature, { omit: ["heading", "vhf"] })
+        : "";
+      var name = feature.name || type || "";
 
       entry.innerHTML =
+        (name
+          ? '<h2 class="feature-name">' + escapeHtml(name) + "</h2>"
+          : "") +
         '<div class="channelblock">' +
         '<div class="channel">' +
         escapeHtml(channel) +
@@ -514,7 +520,7 @@
 
       if (channel.length > 3) {
         entry.querySelector(".channel").style.fontSize =
-          7 - channel.length * 0.55 + "rem";
+          Math.max(1.6, 4.4 - channel.length * 0.4) + "rem";
       }
       listEl.appendChild(entry);
     });

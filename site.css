@@ -449,9 +449,19 @@ body.page-info #list {
 body.page-info .entry {
   display: block;
   background: #222;
-  padding: 6px 8px 10px;
+  padding: 8px 10px 12px;
   margin-bottom: 10px;
   border-radius: 4px;
+}
+
+body.page-info .feature-name {
+  display: block;
+  font-size: clamp(1.85rem, 6.8vw, 2.7rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.35rem;
+  padding: 0.1rem 2% 0;
 }
 
 body.page-info .channelblock {
@@ -462,17 +472,17 @@ body.page-info .channelblock {
 }
 
 body.page-info .channel {
-  font-size: clamp(3.4rem, 18vw, 6rem);
-  line-height: 0.85;
+  font-size: clamp(2.2rem, 11vw, 3.6rem);
+  line-height: 0.9;
   font-weight: 500;
   text-align: center;
   min-width: 2.2ch;
 }
 
 body.page-info .typeblock {
-  font-size: clamp(1.15rem, 4.2vw, 1.5rem);
+  font-size: clamp(1.05rem, 3.8vw, 1.35rem);
   line-height: 1.2;
-  padding-top: 0.35rem;
+  padding-top: 0.2rem;
 }
 
 body.page-info .type,
