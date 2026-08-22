@@ -659,7 +659,7 @@
     <div id="map"></div>
     <div class="compass" id="compass"></div>
     <div id="panel">
-      <div class="nearby" id="nearby_0">
+      <div class="nearby vhf-info-block" id="nearby_0">
         <div class="channel" id="channel_0"></div>
         <div class="type" id="type_0"></div>
         <div class="name" id="name_0"></div>
@@ -667,7 +667,7 @@
         <div class="phone" id="phone_0"></div>
         <div class="url" id="url_0"></div>
       </div>
-      <div class="nearby" id="nearby_1">
+      <div class="nearby vhf-info-block" id="nearby_1">
         <div class="name" id="name_1"></div>
         <div class="channel" id="channel_1"></div>
         <div class="type" id="type_1"></div>
@@ -1472,118 +1472,20 @@
           }
         }
 
+        var info = window.vhfFeatureInfo;
         for (const [key, feature] of Object.entries(closest)) {
-          if (typeof feature.callname != "undefined") {
-            document.getElementById("name_" + key).innerHTML = feature.callname;
-          } else {
-            document.getElementById("name_" + key).innerHTML = feature.name;
+          if (info && info.fillInfoBlockByIndex) {
+            info.fillInfoBlockByIndex(key, feature);
           }
-          if (typeof feature.channel != "undefined") {
-            document.getElementById("channel_" + key).innerHTML =
-              feature.channel.toString().replace(/[\/,]/g, " ");
-            document.getElementById("channel_" + key).style.fontSize =
-              7 - feature.channel.length * 0.7 + "em";
-          } else {
-            document.getElementById("channel_" + key).innerHTML = "-";
-          }
-
-          let Distance = feature.distance;
-          if (Distance < 0) {
-            Distance = "INSIDE";
-          } else {
-            Distance = Distance + "m";
-          }
-          let featureType = feature.type.toUpperCase();
-          if (featureType == "VTS RADAR SUPPORT") {
-            featureType = "VTS RADAR";
-          }
-          let mode = "";
-          if (
-            typeof feature.vhfdata.pleasure != "undefined" &&
-            typeof feature.vhfdata.pleasure.mode != "undefined"
-          ) {
-            mode = feature.vhfdata.pleasure.mode;
-          } else if (
-            typeof feature.vhfdata.generic != "undefined" &&
-            typeof feature.vhfdata.generic.mode != "undefined"
-          ) {
-            mode = feature.vhfdata.generic.mode;
-          }
-
-          featureType =
-            featureType +
-            " &#9656; " +
-            mode.toUpperCase() +
-            " &#9656; " +
-            Distance;
-          document.getElementById("type_" + key).innerHTML = featureType;
-
-          if (
-            typeof feature.vhfdata.pleasure != "undefined" &&
-            typeof feature.vhfdata.pleasure.note != "undefined"
-          ) {
-            document.getElementById("note_" + key).innerHTML =
-              feature.vhfdata.pleasure.note;
-          } else if (
-            typeof feature.vhfdata.generic != "undefined" &&
-            typeof feature.vhfdata.generic.note != "undefined"
-          ) {
-            document.getElementById("note_" + key).innerHTML =
-              feature.vhfdata.generic.note;
-          } else if (typeof feature.note != "undefined") {
-            document.getElementById("note_" + key).innerHTML = feature.note;
-          } else {
-            document.getElementById("note_" + key).innerHTML = "";
-          }
-
-          if (
-            typeof feature.vhfdata.pleasure != "undefined" &&
-            typeof feature.vhfdata.pleasure.phone != "undefined"
-          ) {
-            document.getElementById("phone_" + key).innerHTML =
-              '<a href="tel:' +
-              feature.vhfdata.pleasure.phone +
-              '" style="text-decoration:none; color: white">&#9990;</a>';
-          } else if (typeof feature.phone != "undefined") {
-            document.getElementById("phone_" + key).innerHTML =
-              '<a href="tel:' +
-              feature.phone +
-              '" style="text-decoration:none; color: white">&#9990;</a>';
-          } else {
-            document.getElementById("phone_" + key).innerHTML = "";
-          }
-
-          if (
-            typeof feature.vhfdata.pleasure != "undefined" &&
-            typeof feature.vhfdata.pleasure.url != "undefined"
-          ) {
-            document.getElementById("url_" + key).innerHTML =
-              '<a href="' +
-              feature.vhfdata.pleasure.url +
-              '" style="text-decoration:none; color: white" target="_blank" >&#128279;</a>';
-          } else {
-            if (typeof feature.url != "undefined") {
-              document.getElementById("url_" + key).innerHTML =
-                '<a href="' +
-                feature.url +
-                '" style="text-decoration:none; color: white" target="_blank">&#128279;</a>';
-            } else {
-              document.getElementById("url_" + key).innerHTML = "";
-            }
-          }
-
           lastKey = Number(key);
           if (key == 1) {
             break;
           }
         }
         for (key = lastKey + 1; key <= 1; key++) {
-          document.getElementById("name_" + key).innerHTML = "-";
-          document.getElementById("channel_" + key).innerHTML = "";
-          document.getElementById("type_" + key).innerHTML = "";
-          document.getElementById("note_" + key).innerHTML = "";
-          document.getElementById("phone_" + key).innerHTML = "";
-          document.getElementById("url_" + key).innerHTML = "";
+          if (info && info.fillInfoBlockByIndex) {
+            info.fillInfoBlockByIndex(key, null);
+          }
         }
       }
 
