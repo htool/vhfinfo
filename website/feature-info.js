@@ -175,9 +175,31 @@
     );
   }
 
+  function omitSet(options) {
+    var set = {};
+    var list = (options && options.omit) || [];
+    if (!Array.isArray(list)) {
+      list = [list];
+    }
+    list.forEach(function (key) {
+      if (key == null || key === "") {
+        return;
+      }
+      set[String(key).toLowerCase()] = true;
+    });
+    return set;
+  }
+
+  function skipped(omit, keys) {
+    return keys.some(function (key) {
+      return !!omit[key];
+    });
+  }
+
   function buildInfoTable(props, options) {
     var p = props || {};
     var opts = options || {};
+    var omit = omitSet(opts);
     var data = p.vhfdata || {};
     var type = typeLabel(p.type);
     var name = p.name || "";
@@ -185,38 +207,49 @@
     var channel = p.channel == null ? "" : String(p.channel);
     var topUrl = pickUrl(p);
     var topPhone = pickPhone(p);
+    var rows = "";
 
-    var html =
-      '<table class="feature-info"><tbody><tr><td colspan="2"><b>[' +
-      escapeHtml(type) +
-      "] " +
-      escapeHtml(name) +
-      "</b></td></tr>";
+    if (!skipped(omit, ["heading", "name", "type"])) {
+      rows +=
+        '<tr><td colspan="2"><b>[' +
+        escapeHtml(type) +
+        "] " +
+        escapeHtml(name) +
+        "</b></td></tr>";
+    }
 
-    if (!isBlank(p.callname)) {
-      html +=
+    if (!isBlank(p.callname) && !skipped(omit, ["callname", "callsign"])) {
+      rows +=
         "<tr><td>Call&nbsp;sign</td><td>" +
         escapeHtml(p.callname) +
         "</td></tr>";
     }
 
-    html += "<tr><td>VHF</td><td>" + escapeHtml(channel);
-    if (mode) {
-      html += " (" + escapeHtml(mode) + ")";
+    if (!skipped(omit, ["vhf", "channel", "mode"])) {
+      rows += "<tr><td>VHF</td><td>" + escapeHtml(channel);
+      if (mode) {
+        rows += " (" + escapeHtml(mode) + ")";
+      }
+      rows += "</td></tr>";
     }
-    html += "</td></tr>";
 
-    html += infoLinkRow("Info", topUrl);
-    html += phoneRow(topPhone);
+    if (!skipped(omit, ["url", "info"])) {
+      rows += infoLinkRow("Info", topUrl);
+    }
+    if (!skipped(omit, ["phone"])) {
+      rows += phoneRow(topPhone);
+    }
 
-    if (!isBlank(p.update)) {
-      html +=
+    if (!isBlank(p.update) && !skipped(omit, ["update"])) {
+      rows +=
         "<tr><td>Update schedule</td><td>" +
         formatUpdate(p.update) +
         "</td></tr>";
     }
 
-    html += noteRow(p.note);
+    if (!skipped(omit, ["note", "notes"])) {
+      rows += noteRow(p.note);
+    }
 
     function skipDupUrl(block) {
       return !!(block && !isPlaceholder(block.url) && block.url === topUrl);
@@ -229,36 +262,40 @@
       );
     }
 
-    html += sectionRows(
-      "Generic",
-      data.generic,
-      skipDupUrl(data.generic),
-      skipDupPhone(data.generic),
-    );
-    html += sectionRows(
-      "Pleasure",
-      data.pleasure,
-      skipDupUrl(data.pleasure),
-      skipDupPhone(data.pleasure),
-    );
-    html += sectionRows(
-      "Cargo",
-      data.cargo,
-      skipDupUrl(data.cargo),
-      skipDupPhone(data.cargo),
-    );
-    html += sectionRows(
-      "Emergency",
-      data.emergency,
-      skipDupUrl(data.emergency),
-      skipDupPhone(data.emergency),
-    );
+    if (!skipped(omit, ["note", "notes", "sections"])) {
+      rows += sectionRows(
+        "Generic",
+        data.generic,
+        skipDupUrl(data.generic),
+        skipDupPhone(data.generic),
+      );
+      rows += sectionRows(
+        "Pleasure",
+        data.pleasure,
+        skipDupUrl(data.pleasure),
+        skipDupPhone(data.pleasure),
+      );
+      rows += sectionRows(
+        "Cargo",
+        data.cargo,
+        skipDupUrl(data.cargo),
+        skipDupPhone(data.cargo),
+      );
+      rows += sectionRows(
+        "Emergency",
+        data.emergency,
+        skipDupUrl(data.emergency),
+        skipDupPhone(data.emergency),
+      );
+    }
 
     if (opts.editLink) {
-      html += opts.editLink;
+      rows += opts.editLink;
     }
-    html += "</tbody></table>";
-    return html;
+    if (!rows) {
+      return "";
+    }
+    return '<table class="feature-info"><tbody>' + rows + "</tbody></table>";
   }
 
   root.vhfFeatureInfo = {
