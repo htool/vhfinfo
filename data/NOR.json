@@ -5484,7 +5484,7 @@
         "name": "Dolsveden (Kristiansand) remote station",
         "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "20",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
@@ -5646,7 +5646,7 @@
         "name": "Hisøy (Arendal) remote station",
         "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "03",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
@@ -5808,7 +5808,7 @@
         "name": "Ranvikheia (Risør) remote station",
         "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "05",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
@@ -5970,7 +5970,7 @@
         "name": "Tjøme remote station",
         "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "62",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
@@ -6132,7 +6132,7 @@
         "name": "Høyås (Halden) remote station",
         "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "07",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
@@ -6456,7 +6456,7 @@
         "name": "Bukten (Drammen) remote station",
         "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "61",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
@@ -6780,7 +6780,7 @@
         "name": "Lindesnes remote station",
         "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "60",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
@@ -7104,7 +7104,7 @@
         "name": "Lista (Storefjell) remote station",
         "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "02",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
@@ -7428,7 +7428,7 @@
         "name": "Stavanger (Ullandhaug) remote station",
         "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "64",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
@@ -7590,7 +7590,7 @@
         "name": "Bokn remote station",
         "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "20",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
@@ -7914,7 +7914,7 @@
         "name": "Stord remote station",
         "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "03",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
@@ -8076,7 +8076,7 @@
         "name": "Sotra remote station",
         "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "05",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
@@ -8238,7 +8238,7 @@
         "name": "Inner Hardanger (Grimo) remote station",
         "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "20",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
@@ -8562,7 +8562,7 @@
         "name": "Bergen (Lindås) remote station",
         "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "02",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
@@ -8724,7 +8724,7 @@
         "name": "Gulen remote station",
         "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "66",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
@@ -8886,7 +8886,7 @@
         "name": "Ligtvor remote station",
         "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "61",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
@@ -9048,7 +9048,7 @@
         "name": "Sogndal (Storehogen) remote station",
         "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "05",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
@@ -9210,7 +9210,7 @@
         "name": "Fjærland remote station",
         "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "65",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
@@ -9372,7 +9372,7 @@
         "name": "Kinn remote station",
         "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "20",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
@@ -9534,7 +9534,7 @@
         "name": "Storåsen remote station",
         "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "01",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
@@ -9858,7 +9858,7 @@
         "name": "Sagtennene remote station",
         "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "62",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
@@ -10182,7 +10182,7 @@
         "name": "Ljønibba (Hellesylt) remote station",
         "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "02",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
@@ -10344,7 +10344,7 @@
         "name": "Geiranger remote station",
         "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "05",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
@@ -11640,7 +11640,7 @@
         "name": "Kristiansund (Varden) remote station",
         "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "01",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
