@@ -269,6 +269,112 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "c418eec0-3ee2-5768-830d-475ed71f6015",
+        "name": "Valencia Port Control",
+        "callname": "VALENCIA PORT CONTROL",
+        "type": "vts",
+        "channel": "14",
+        "url": "https://www.valenciaport.com/wp-content/uploads/CUADERNILLO-VALENCIA-1.1.pdf",
+        "phone": "+34960640061",
+        "vhfdata": {
+          "generic": {
+            "mode": "report",
+            "note": "Valencia Port VTS. Working channel 14 (13/11 also listed). Contact 1 hour before arrival and again 3 NM from the entrance. Keep watch on 14 in port waters. Autoridad Portuaria de Valencia port information booklet (rev. 1-11-2023) and Valencia Port Control procedures."
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -0.33,
+              39.445833
+            ],
+            [
+              -0.337,
+              39.4
+            ],
+            [
+              -0.283817,
+              39.383333
+            ],
+            [
+              -0.2119,
+              39.383333
+            ],
+            [
+              -0.2119,
+              39.454183
+            ],
+            [
+              -0.2467,
+              39.4542
+            ],
+            [
+              -0.337,
+              39.48
+            ],
+            [
+              -0.33,
+              39.445833
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "4f641302-9e18-5f3d-a89b-9dd1cca393ae",
+        "name": "Tarragona Port Control",
+        "callname": "TARRAGONA TRAFFIC",
+        "type": "vts",
+        "channel": "74",
+        "url": "https://www.porttarragona.cat/files/docs/Serveis_Negoci/Negoci/Trafics_Estadistiques/Creuers/2022/Tarragona_Cruise_Port_Infrastructures_Port_Tarragona.pdf",
+        "phone": "+34977527934",
+        "vhfdata": {
+          "generic": {
+            "mode": "report",
+            "note": "Port of Tarragona VTS. Port control / Tarragona Traffic on VHF 74. Call 12 NM or 1 hour before arrival. Pilots on VHF 14. Port de Tarragona cruise/port infrastructures guide."
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.156,
+              41
+            ],
+            [
+              1.278333,
+              41
+            ],
+            [
+              1.465493,
+              40.965189
+            ],
+            [
+              1.543586,
+              41.106362
+            ],
+            [
+              1.156,
+              41.13
+            ],
+            [
+              1.156,
+              41
+            ]
+          ]
+        ]
+      }
     }
   ]
 }
