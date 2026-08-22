@@ -411,17 +411,54 @@
         margin: 0 0 4px;
       }
       .editor-transform-help {
-        margin: 0;
+        margin: 0 0 8px;
         color: #333;
         font-size: 13px;
         line-height: 1.35;
+      }
+      .editor-transform-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin: 0 0 8px;
+      }
+      .editor-transform-buttons button {
+        font-size: 13px;
+        padding: 7px 10px;
+        border-radius: 6px;
+        border: 1px solid #0d47a1;
+        background: #fff;
+        color: #0d47a1;
+        cursor: pointer;
+      }
+      .editor-transform-buttons button.is-active {
+        background: #0d47a1;
+        color: #fff;
+      }
+      .leaflet-bar.vhf-tf-bar a {
+        width: auto;
+        min-width: 72px;
+        padding: 0 8px;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 26px;
+        display: block;
+        text-align: center;
+        color: #0d47a1;
+      }
+      .leaflet-bar.vhf-tf-bar a.is-active {
+        background: #0d47a1;
+        color: #fff;
+      }
+      .leaflet-bar.vhf-tf-bar a.vhf-tf-bar-hidden {
+        display: none;
       }
       .leaflet-marker-icon.vhf-tf-handle {
         background: #fff;
         border: 2px solid #0d47a1;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
-        width: 16px !important;
-        height: 16px !important;
+        width: 22px !important;
+        height: 22px !important;
         pointer-events: auto !important;
       }
       .vhf-tf-scale {
@@ -688,9 +725,16 @@
       </p>
       <div class="editor-transform" id="editor-transform">
         <div class="editor-transform-title">Move, rotate, scale</div>
+        <div class="editor-transform-buttons" id="editor-transform-buttons">
+          <button type="button" data-tf="move" id="tf-btn-move">Move</button>
+          <button type="button" data-tf="scale" id="tf-btn-scale">Scale</button>
+          <button type="button" data-tf="rotate" id="tf-btn-rotate">
+            Rotate
+          </button>
+        </div>
         <p class="editor-transform-help" id="editor-transform-help">
-          Drag the shape to move it. Drag a square corner to scale. Drag the
-          round handle to rotate.
+          Choose Move, Scale, or Rotate, then drag the shape. Square corners
+          scale; the round handle rotates.
         </p>
       </div>
       <div class="editor-error" id="editor-error"></div>
@@ -887,6 +931,9 @@
         didDrag: false,
         hiddenForVertexEdit: false,
         moveHandler: null,
+        mode: "move",
+        pointerDrag: false,
+        bar: null,
       };
 
       var COUNTRY_NAMES = {
@@ -1735,13 +1782,14 @@
               if (e.originalEvent) {
                 L.DomEvent.stop(e.originalEvent);
               }
-              if (l === currentEditLayer && transformCtl.didDrag) {
+              var clicked = e.target;
+              if (clicked === currentEditLayer && transformCtl.didDrag) {
                 transformCtl.didDrag = false;
                 return;
               }
-              dismissFeaturePopup(e.target);
+              dismissFeaturePopup(clicked);
               m.closePopup();
-              openEditor(e.target);
+              openEditor(clicked);
               return;
             }
             showInfo(e.target.feature, e.target, country);
@@ -2786,7 +2834,11 @@
         transformCtl.handles = [];
         transformCtl.layer = null;
         transformCtl.dragging = null;
+        transformCtl.pointerDrag = false;
         transformCtl.startGeo = null;
+        if (transformCtl.bar && transformCtl.bar._map) {
+          m.removeControl(transformCtl.bar);
+        }
         endTransformPointer();
       }
 
@@ -2815,14 +2867,15 @@
       }
 
       function onTransformMapMouseMove(e) {
-        if (transformCtl.dragging !== "move") {
+        if (!transformCtl.pointerDrag || !transformCtl.dragging) {
           return;
         }
-        applyLiveTransform("move", e.latlng);
+        applyLiveTransform(transformCtl.dragging, e.latlng);
       }
 
       function onTransformMapMouseUp() {
-        if (transformCtl.dragging === "move") {
+        if (transformCtl.pointerDrag) {
+          transformCtl.pointerDrag = false;
           finishTransformDrag();
         }
       }
@@ -2841,12 +2894,37 @@
         if (e.originalEvent) {
           L.DomEvent.preventDefault(e.originalEvent);
         }
-        transformCtl.dragging = "move";
+        var kind = transformCtl.mode || "move";
+        if (transformCtl.layer instanceof L.Circle && kind === "rotate") {
+          kind = "move";
+        }
+        transformCtl.dragging = kind;
+        transformCtl.pointerDrag = true;
         transformCtl.moved = false;
         transformCtl.startGeo = cloneLayerGeo(transformCtl.layer);
         transformCtl.startLatLng = e.latlng;
         transformCtl.startPoint = m.latLngToContainerPoint(e.latlng);
         transformCtl.startZoom = m.getZoom();
+        transformCtl.pivot = layerCentroidLatLng(transformCtl.layer);
+        transformCtl.origin = transformCtl.pivot;
+        if (kind === "rotate" || kind === "scale") {
+          var pivotPt = turf.point([
+            transformCtl.pivot.lng,
+            transformCtl.pivot.lat,
+          ]);
+          var startPt = turf.point([e.latlng.lng, e.latlng.lat]);
+          var cPt = m.latLngToContainerPoint(transformCtl.pivot);
+          var sPt = m.latLngToContainerPoint(e.latlng);
+          if (cPt.distanceTo(sPt) < 40) {
+            sPt = L.point(cPt.x + 80, cPt.y);
+            transformCtl.startLatLng = m.containerPointToLatLng(sPt);
+            startPt = turf.point([
+              transformCtl.startLatLng.lng,
+              transformCtl.startLatLng.lat,
+            ]);
+          }
+          transformCtl.startBearing = turf.bearing(pivotPt, startPt);
+        }
         transformCtl.mapWasDraggable = m.dragging && m.dragging.enabled();
         transformCtl.mapHadBoxZoom = m.boxZoom && m.boxZoom.enabled();
         if (m.dragging) {
@@ -2862,8 +2940,8 @@
         var marker = L.marker(latlng, {
           icon: L.divIcon({
             className: "vhf-tf-handle " + className,
-            iconSize: [16, 16],
-            iconAnchor: [8, 8],
+            iconSize: [22, 22],
+            iconAnchor: [11, 11],
           }),
           draggable: true,
           keyboard: false,
@@ -2873,6 +2951,7 @@
         marker._vhfCorner = corner;
         marker.on("dragstart", function (ev) {
           L.DomEvent.stop(ev);
+          transformCtl.pointerDrag = false;
           transformCtl.dragging = kind;
           transformCtl.moved = false;
           transformCtl.startGeo = cloneLayerGeo(transformCtl.layer);
@@ -2884,7 +2963,10 @@
             se: b.getNorthWest(),
             sw: b.getNorthEast(),
           };
-          transformCtl.origin = opposite[ev.target._vhfCorner] || b.getCenter();
+          transformCtl.origin =
+            layerCentroidLatLng(transformCtl.layer) ||
+            opposite[ev.target._vhfCorner] ||
+            b.getCenter();
           transformCtl.pivot = layerCentroidLatLng(transformCtl.layer);
           if (kind === "rotate") {
             var pivotPt = turf.point([
@@ -2917,6 +2999,33 @@
         return marker;
       }
 
+      function transformGizmoPoints(layer) {
+        var centroid = layerCentroidLatLng(layer);
+        var size = m.getSize();
+        var cPt = m.latLngToContainerPoint(centroid);
+        var gizmoPt = cPt;
+        if (
+          cPt.x < 48 ||
+          cPt.y < 48 ||
+          cPt.x > size.x - 48 ||
+          cPt.y > size.y - 48
+        ) {
+          gizmoPt = L.point(size.x / 2, size.y / 2);
+        }
+        var arm = 56;
+        return {
+          centroid: centroid,
+          nw: m.containerPointToLatLng(L.point(gizmoPt.x - arm, gizmoPt.y - arm)),
+          ne: m.containerPointToLatLng(L.point(gizmoPt.x + arm, gizmoPt.y - arm)),
+          se: m.containerPointToLatLng(L.point(gizmoPt.x + arm, gizmoPt.y + arm)),
+          sw: m.containerPointToLatLng(L.point(gizmoPt.x - arm, gizmoPt.y + arm)),
+          top: m.containerPointToLatLng(L.point(gizmoPt.x, gizmoPt.y - arm)),
+          rot: m.containerPointToLatLng(
+            L.point(gizmoPt.x, gizmoPt.y - arm - 32),
+          ),
+        };
+      }
+
       function refreshTransformOverlay(keepHandle) {
         var layer = transformCtl.layer;
         if (!layer || !layer.getBounds) {
@@ -2926,16 +3035,7 @@
         if (!bounds || !bounds.isValid()) {
           return;
         }
-        var nw = bounds.getNorthWest();
-        var ne = bounds.getNorthEast();
-        var se = bounds.getSouthEast();
-        var sw = bounds.getSouthWest();
-        var top = L.latLng(
-          bounds.getNorth(),
-          (bounds.getWest() + bounds.getEast()) / 2,
-        );
-        var topPt = m.latLngToLayerPoint(top);
-        var rotLatLng = m.layerPointToLatLng(L.point(topPt.x, topPt.y - 28));
+        var gizmo = transformGizmoPoints(layer);
         if (!transformCtl.group) {
           transformCtl.group = L.layerGroup().addTo(m);
         }
@@ -2951,23 +3051,23 @@
           }).addTo(transformCtl.group);
         }
         if (transformCtl.stem) {
-          transformCtl.stem.setLatLngs([top, rotLatLng]);
+          transformCtl.stem.setLatLngs([gizmo.top, gizmo.rot]);
         } else {
-          transformCtl.stem = L.polyline([top, rotLatLng], {
+          transformCtl.stem = L.polyline([gizmo.top, gizmo.rot], {
             color: "#0d47a1",
             weight: 1,
             interactive: false,
           }).addTo(transformCtl.group);
         }
         var specs = [
-          { ll: nw, cls: "vhf-tf-scale vhf-tf-nw", corner: "nw", kind: "scale" },
-          { ll: ne, cls: "vhf-tf-scale vhf-tf-ne", corner: "ne", kind: "scale" },
-          { ll: se, cls: "vhf-tf-scale vhf-tf-se", corner: "se", kind: "scale" },
-          { ll: sw, cls: "vhf-tf-scale vhf-tf-sw", corner: "sw", kind: "scale" },
+          { ll: gizmo.nw, cls: "vhf-tf-scale vhf-tf-nw", corner: "nw", kind: "scale" },
+          { ll: gizmo.ne, cls: "vhf-tf-scale vhf-tf-ne", corner: "ne", kind: "scale" },
+          { ll: gizmo.se, cls: "vhf-tf-scale vhf-tf-se", corner: "se", kind: "scale" },
+          { ll: gizmo.sw, cls: "vhf-tf-scale vhf-tf-sw", corner: "sw", kind: "scale" },
         ];
         if (!(layer instanceof L.Circle)) {
           specs.push({
-            ll: rotLatLng,
+            ll: gizmo.rot,
             cls: "vhf-tf-rotate",
             corner: "rotate",
             kind: "rotate",
@@ -2996,10 +3096,95 @@
         });
       }
 
+      function transformHelpText(layer, mode) {
+        if (layer instanceof L.Circle) {
+          if (mode === "scale") {
+            return "Scale is selected. Drag the circle or a square handle to change its size.";
+          }
+          return "Move is selected. Drag the circle to move it, or a square handle to change its size.";
+        }
+        if (mode === "scale") {
+          return "Scale is selected. Drag the shape or a square handle.";
+        }
+        if (mode === "rotate") {
+          return "Rotate is selected. Drag the shape or the round handle.";
+        }
+        return "Move is selected. Drag the shape to move it. Use Scale or Rotate, or the square / round handles.";
+      }
+
+      function updateTransformModeUi(layer) {
+        var mode = transformCtl.mode || "move";
+        var isCircle = layer instanceof L.Circle;
+        if (isCircle && mode === "rotate") {
+          mode = "move";
+          transformCtl.mode = "move";
+        }
+        var buttons = document.querySelectorAll(
+          "#editor-transform-buttons button, .vhf-tf-bar a[data-tf]",
+        );
+        buttons.forEach(function (btn) {
+          var kind = btn.getAttribute("data-tf");
+          if (kind === "rotate" && isCircle) {
+            btn.classList.add("vhf-tf-bar-hidden");
+            btn.hidden = true;
+          } else {
+            btn.classList.remove("vhf-tf-bar-hidden");
+            btn.hidden = false;
+          }
+          if (kind === mode) {
+            btn.classList.add("is-active");
+          } else {
+            btn.classList.remove("is-active");
+          }
+        });
+        var help = document.getElementById("editor-transform-help");
+        if (help) {
+          help.textContent = transformHelpText(layer, mode);
+        }
+      }
+
+      function setTransformMode(kind) {
+        if (!kind) {
+          return;
+        }
+        transformCtl.mode = kind;
+        updateTransformModeUi(transformCtl.layer || currentEditLayer);
+      }
+
+      function ensureTransformBar() {
+        if (transformCtl.bar) {
+          return transformCtl.bar;
+        }
+        var Control = L.Control.extend({
+          options: { position: "topleft" },
+          onAdd: function () {
+            var wrap = L.DomUtil.create("div", "leaflet-bar vhf-tf-bar");
+            wrap.setAttribute("role", "group");
+            wrap.setAttribute("aria-label", "Move, scale, rotate");
+            ["move", "scale", "rotate"].forEach(function (kind) {
+              var a = L.DomUtil.create("a", "", wrap);
+              a.href = "#";
+              a.setAttribute("data-tf", kind);
+              a.title = kind.charAt(0).toUpperCase() + kind.slice(1);
+              a.setAttribute("role", "button");
+              a.textContent =
+                kind === "move" ? "Move" : kind === "scale" ? "Scale" : "Rotate";
+              L.DomEvent.disableClickPropagation(a);
+              L.DomEvent.on(a, "click", function (ev) {
+                L.DomEvent.stop(ev);
+                setTransformMode(kind);
+              });
+            });
+            return wrap;
+          },
+        });
+        transformCtl.bar = new Control();
+        return transformCtl.bar;
+      }
+
       function enableTransformOverlay(layer) {
         clearTransformOverlay();
         var box = document.getElementById("editor-transform");
-        var help = document.getElementById("editor-transform-help");
         if (!layerCanTransform(layer) || transformCtl.hiddenForVertexEdit) {
           if (box) {
             box.classList.remove("is-visible");
@@ -3009,21 +3194,23 @@
         if (box) {
           box.classList.add("is-visible");
         }
-        if (help) {
-          help.textContent =
-            layer instanceof L.Circle
-              ? "Drag the circle to move it. Drag a square corner to change its size."
-              : "Drag the shape to move it. Drag a square corner to scale. Drag the round handle to rotate.";
-        }
         transformCtl.layer = layer;
+        if (!transformCtl.mode) {
+          transformCtl.mode = "move";
+        }
         transformCtl.moveHandler = startMoveFromLayer;
         layer.options.bubblingMouseEvents = false;
         layer.on("mousedown", transformCtl.moveHandler);
+        ensureTransformBar();
+        if (transformCtl.bar && !transformCtl.bar._map) {
+          m.addControl(transformCtl.bar);
+        }
+        updateTransformModeUi(layer);
         refreshTransformOverlay();
       }
 
       function onTransformZoomEnd() {
-        if (transformCtl.layer && transformCtl.group) {
+        if (transformCtl.layer && transformCtl.group && !transformCtl.dragging) {
           refreshTransformOverlay();
         }
       }
@@ -3031,7 +3218,22 @@
       m.on("mousemove", onTransformMapMouseMove);
       m.on("mouseup", onTransformMapMouseUp);
       m.on("zoomend", onTransformZoomEnd);
+      m.on("moveend", onTransformZoomEnd);
       document.addEventListener("mouseup", onTransformMapMouseUp);
+      (function bindTransformButtons() {
+        var wrap = document.getElementById("editor-transform-buttons");
+        if (!wrap) {
+          return;
+        }
+        wrap.addEventListener("click", function (ev) {
+          var btn = ev.target.closest("[data-tf]");
+          if (!btn) {
+            return;
+          }
+          ev.preventDefault();
+          setTransformMode(btn.getAttribute("data-tf"));
+        });
+      })();
 
       function closeEditor() {
         clearTransformOverlay();
@@ -3123,7 +3325,11 @@
         setEditorField("ed-curl", p.vhfdata.cargo && p.vhfdata.cargo.url);
         document.body.classList.add("editor-open");
         m.invalidateSize(true);
-        enableTransformOverlay(layer);
+        try {
+          enableTransformOverlay(layer);
+        } catch (err) {
+          console.error(err);
+        }
       }
 
       function setEditorField(id, value) {
