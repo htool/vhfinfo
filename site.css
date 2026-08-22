@@ -340,6 +340,46 @@ section h2 {
   color: var(--gold);
 }
 
+/* Map page: site nav sits above the Leaflet viewport */
+html:has(body.page-map),
+body.page-map {
+  height: 100%;
+}
+
+body.page-map {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #000;
+}
+
+body.page-map .site-header {
+  flex: 0 0 auto;
+  position: relative;
+  z-index: 1600;
+}
+
+body.page-map .map-shell {
+  flex: 1 1 0;
+  min-height: 0;
+  position: relative;
+  width: 100%;
+}
+
+body.page-map #editor-panel {
+  top: var(--header-h);
+}
+
+body.page-map #edit-banner {
+  top: calc(var(--header-h) + 10px);
+}
+
+@media (max-width: 700px) {
+  body.page-map.editor-open #editor-panel {
+    top: auto;
+  }
+}
+
 /* Info / nearby page (SignalK-style cockpit list) */
 body.page-info {
   background: #000;
@@ -361,52 +401,52 @@ body.page-info .site-nav {
   }
 }
 
-.info-toolbar {
+body.page-info .info-toolbar {
   background: #111;
   border-bottom: 1px solid #333;
   padding: 0.75rem 0 0.9rem;
 }
 
-.info-status {
+body.page-info .info-status {
   margin: 0 0 0.65rem;
   font-size: 1.05rem;
   color: #f2f2f2;
 }
 
-.info-actions {
+body.page-info .info-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
 
-.info-actions .btn {
+body.page-info .info-actions .btn {
   min-height: 2.5rem;
   font-size: 0.95rem;
 }
 
-.info-actions .btn.is-on {
+body.page-info .info-actions .btn.is-on {
   background: var(--gold);
   color: var(--gold-ink);
   border-color: var(--gold);
 }
 
-.info-actions .btn-dark {
+body.page-info .info-actions .btn-dark {
   background: #222;
   color: #fff;
   border-color: #555;
 }
 
-.info-layers {
+body.page-info .info-layers {
   margin-top: 0.55rem;
 }
 
-#list {
+body.page-info #list {
   padding: 0.55rem 0.35rem 2rem;
   max-width: 44rem;
   margin: 0 auto;
 }
 
-.entry {
+body.page-info .entry {
   display: block;
   background: #222;
   padding: 6px 8px 10px;
@@ -414,14 +454,14 @@ body.page-info .site-nav {
   border-radius: 4px;
 }
 
-.channelblock {
+body.page-info .channelblock {
   display: grid;
   grid-template-columns: auto 1fr auto;
   gap: 0.35rem 0.7rem;
   align-items: start;
 }
 
-.channel {
+body.page-info .channel {
   font-size: clamp(3.4rem, 18vw, 6rem);
   line-height: 0.85;
   font-weight: 500;
@@ -429,19 +469,19 @@ body.page-info .site-nav {
   min-width: 2.2ch;
 }
 
-.typeblock {
+body.page-info .typeblock {
   font-size: clamp(1.15rem, 4.2vw, 1.5rem);
   line-height: 1.2;
   padding-top: 0.35rem;
 }
 
-.type,
-.mode,
-.distance {
+body.page-info .type,
+body.page-info .mode,
+body.page-info .distance {
   display: block;
 }
 
-.icons {
+body.page-info .icons {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -450,20 +490,20 @@ body.page-info .site-nav {
   font-size: 1.6rem;
 }
 
-.icons a {
+body.page-info .icons a {
   color: #fff;
   text-decoration: none;
 }
 
-.name,
-.callname {
+body.page-info .name,
+body.page-info .callname {
   display: block;
   font-size: clamp(1.15rem, 4vw, 1.5rem);
   margin-top: 0.15rem;
   padding-left: 2%;
 }
 
-.notes {
+body.page-info .notes {
   display: block;
   font-size: clamp(1.05rem, 3.6vw, 1.4rem);
   text-align: left;
@@ -474,12 +514,41 @@ body.page-info .site-nav {
   margin: 0.45rem auto 0;
 }
 
-.note {
+body.page-info .note {
   display: block;
 }
 
-.info-empty {
+body.page-info .info-empty {
   color: #bbb;
   padding: 1.5rem 0.8rem;
   font-size: 1.2rem;
+}
+
+body.page-info .feature-info {
+  width: 100%;
+  margin-top: 0.5rem;
+  border-collapse: collapse;
+  font-size: clamp(1.05rem, 3.6vw, 1.35rem);
+  line-height: 1.35;
+}
+
+body.page-info .feature-info td {
+  padding: 0.2rem 0.4rem 0.2rem 2%;
+  vertical-align: top;
+}
+
+body.page-info .feature-info td:first-child {
+  width: 8.5rem;
+  color: #cfcfcf;
+  padding-left: 2%;
+}
+
+body.page-info .feature-info a {
+  color: var(--gold);
+}
+
+body.page-info .feature-info .feature-note {
+  background: dimgrey;
+  border-radius: 5px;
+  padding: 6px 8px;
 }
