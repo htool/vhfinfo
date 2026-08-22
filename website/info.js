@@ -520,7 +520,7 @@
 
       if (channel.length > 3) {
         entry.querySelector(".channel").style.fontSize =
-          Math.max(1.6, 4.4 - channel.length * 0.4) + "rem";
+          Math.max(1.35, 2.8 - channel.length * 0.28) + "rem";
       }
       listEl.appendChild(entry);
     });
