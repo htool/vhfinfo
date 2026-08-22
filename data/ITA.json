@@ -4,87 +4,561 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "1a05ade6-d3bb-42e4-a7de-f6c8ec5dd504",
-        "name": "Palermo VTS",
+        "id": "16eae279-23e0-522d-af53-16257c0f7e92",
+        "name": "Messina VTS",
+        "callname": "MESSINA VTS",
         "type": "vts",
-        "url": "https://www.guardiacostiera.gov.it/mezzi-e-tecnologie/Documents/manualiVTS/ManualePalermoEn2013.pdf",
-        "phone": "+39916043202 ",
+        "channel": "10",
+        "url": "https://www.guardiacostiera.gov.it/portale/documents/d/guest/en_messina_users_manualvts",
+        "phone": "+3909041711",
         "vhfdata": {
           "generic": {
-            "mode": "listen"
-          },
-          "pleasure": {
-            "mode": "listen"
-          },
-          "cargo": {
-            "mode": "listen"
+            "mode": "report",
+            "note": "Mandatory for passenger vessels of any size and all vessels ≥300 GT. First contact 3 NM before VTS limits; keep continuous watch on VHF 16 and 10. Ship reporting also on CH 13 (reporting) and CH 14 (secondary); port entry/exit reports to Messina Harbour on CH 12. Roundabout TSS in the Strait."
           }
-        },
-        "channel": "10"
+        }
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
             [
-              13.376680612564,
-              38.411667951962
+              15.516667,
+              38.293333
             ],
             [
-              13.691679239273,
-              38.271669357237
+              15.516667,
+              38.371667
             ],
             [
-              13.691679239273,
-              38.126665776633
+              15.85,
+              38.371667
             ],
             [
-              13.511670827866,
-              38.125011554169
+              15.633333,
+              38.016667
             ],
             [
-              13.506317138672,
-              38.108627664321
+              15.443333,
+              38.016667
             ],
             [
-              13.488464355469,
-              38.098631771063
+              15.516667,
+              38.293333
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "4976fe1b-62dd-5413-8636-8427915390bd",
+        "name": "Bari VTS",
+        "callname": "BARI VTS",
+        "type": "vts",
+        "channel": "14",
+        "url": "https://www.guardiacostiera.gov.it/portale/documents/d/guest/en_bari_users_manualvts",
+        "phone": "+390805281511",
+        "vhfdata": {
+          "generic": {
+            "mode": "report",
+            "note": "Mandatory for vessels ≥300 GT, fishing vessels ≥45 m and pleasure craft ≥45 m. Contact Bari VTS before entering the area (precautionary zone outside the limits). Primary working CH 14; calling CH 16; port services/pilots CH 12. Continuous watch on 16 and 14."
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              16.766667,
+              41.158333
             ],
             [
-              13.426322937012,
-              38.090255780611
+              16.983333,
+              41.408333
             ],
             [
-              13.364181518555,
-              38.108897804618
+              17.5,
+              41.316667
             ],
             [
-              13.360147476196,
-              38.135029154068
+              17.233333,
+              41.0
             ],
             [
-              13.36727142334,
-              38.138539630367
+              16.766667,
+              41.158333
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "f6ff7782-f836-5298-b317-8503fa05705c",
+        "name": "Brindisi VTS",
+        "callname": "BRINDISI VTS",
+        "type": "vts",
+        "channel": "10",
+        "url": "https://www.guardiacostiera.gov.it/portale/documents/d/guest/en_brindisi_users_manualvts",
+        "phone": "+390831521022",
+        "vhfdata": {
+          "generic": {
+            "mode": "report",
+            "note": "Mandatory for passenger ships of any size, merchant vessels ≥300 GT, and fishing/recreational craft ≥45 m. Working channel CH 10; CH 16 emergency; CH 12 port allied services; CH 11 Brindisi Port Informer. Early-contact report 3 NM off the VTS limit."
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              17.703333,
+              40.758333
             ],
             [
-              13.370575904846,
-              38.132868777025
+              17.861667,
+              40.88
             ],
             [
-              13.372721672058,
-              38.13307131509
+              18.09,
+              40.893333
             ],
             [
-              13.375339508057,
-              38.126522299638
+              18.278333,
+              40.783333
             ],
             [
-              13.376680612564,
-              38.128345280479
+              18.323333,
+              40.61
             ],
             [
-              13.376680612564,
-              38.411667951962
+              18.211667,
+              40.461667
+            ],
+            [
+              17.703333,
+              40.758333
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "6ae05b31-43d9-5c29-af36-0e9a45986f72",
+        "name": "Genoa VTS",
+        "callname": "GENOA TRAFFIC",
+        "type": "vts",
+        "channel": "11",
+        "url": "https://www.guardiacostiera.gov.it/portale/documents/d/guest/en_genova_users_manualvts",
+        "phone": "+390102777385",
+        "vhfdata": {
+          "generic": {
+            "mode": "report",
+            "note": "Callsign GENOA TRAFFIC (not Genoa VTS). Mandatory for ships ≥300 GT and fishing/pleasure craft ≥45 m; report on CH 11 before entry while listening on CH 16 (also DSC 70). Watch 16 and 11. Pilots CH 12 (Porto Antico) / CH 10 (Multedo–Voltri); tugs CH 14/71; mooring CH 13."
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.583333,
+              44.361667
+            ],
+            [
+              8.833333,
+              44.066667
+            ],
+            [
+              9.316667,
+              44.05
+            ],
+            [
+              9.433333,
+              44.166667
+            ],
+            [
+              9.15,
+              44.316667
+            ],
+            [
+              8.583333,
+              44.361667
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "84000436-282e-5fab-8148-630990ba3d86",
+        "name": "Bonifacio Strait VTS",
+        "callname": "BONIFACIO TRAFFIC",
+        "type": "vts",
+        "channel": "10",
+        "url": "https://www.guardiacostiera.gov.it/portale/documents/d/guest/en_lamaddalena_users_manualvts",
+        "phone": "+390789730632",
+        "vhfdata": {
+          "generic": {
+            "mode": "report",
+            "note": "Franco-Italian Bonifacio Strait VTS from La Maddalena (IT) and Pertusato (FR); callsign BONIFACIO TRAFFIC. Mandatory for vessels ≥300 GT; monitor CH 10 and CH 16. IMO A.766(18) discourages laden tankers and ships with dangerous chemicals in bulk. Polygon is the two-way route (official TSS ends); west lines also join Cap de Feno and Capo Testa, east lines Pointe de Rondinara and Punta Galera."
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              9.1085,
+              41.319667
+            ],
+            [
+              9.373,
+              41.375833
+            ],
+            [
+              9.388333,
+              41.359667
+            ],
+            [
+              9.103,
+              41.279167
+            ],
+            [
+              9.1085,
+              41.319667
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "9b71db04-0a36-522e-a91d-8deed201ebc2",
+        "name": "La Spezia VTS",
+        "callname": "LA SPEZIA VTS",
+        "type": "vts",
+        "channel": "74",
+        "url": "https://www.guardiacostiera.gov.it/portale/documents/d/guest/scheda-informazioni-la-spezia",
+        "phone": "+3901872581222",
+        "vhfdata": {
+          "generic": {
+            "mode": "report",
+            "note": "No English users manual; data from the bilingual information sheet. Mandatory for vessels ≥300 GT and fishing/traditional/pleasure craft ≥45 m. Working CH 74. First contact between 3 NM and the VTS limit; position reports at inbound/outbound TSS lanes and before the western/eastern port passes. Phone from La Spezia VTS/ordinances (not printed on the sheet)."
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              9.495,
+              44.23
+            ],
+            [
+              9.225,
+              43.95
+            ],
+            [
+              9.753333,
+              43.766667
+            ],
+            [
+              10.02,
+              44.045
+            ],
+            [
+              9.495,
+              44.23
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "1a05ade6-d3bb-42e4-a7de-f6c8ec5dd504",
+        "name": "Palermo VTS",
+        "callname": "PALERMO VTS",
+        "type": "vts",
+        "channel": "11",
+        "url": "https://www.guardiacostiera.gov.it/portale/documents/d/guest/en_palermo_users_manualvts",
+        "phone": "+390916043202",
+        "vhfdata": {
+          "generic": {
+            "mode": "report",
+            "note": "Mandatory for passenger ships of any tonnage, cargo ≥300 GT, fishing ≥24 m and pleasure craft ≥45 m. Primary working CH 11; secondary CH 14; harbour services CH 12; calling CH 16. Continuous watch on 16 and 11. First contact in the 5 NM precautionary area."
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.376667,
+              38.128333
+            ],
+            [
+              13.376667,
+              38.411667
+            ],
+            [
+              13.691667,
+              38.271667
+            ],
+            [
+              13.691667,
+              38.126667
+            ],
+            [
+              13.511667,
+              38.125
+            ],
+            [
+              13.376667,
+              38.128333
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "248b3b6a-c325-5889-bdd8-dc76cd42d0ea",
+        "name": "Savona VTS",
+        "callname": "SAVONA VTS",
+        "type": "vts",
+        "channel": "15",
+        "url": "https://www.guardiacostiera.gov.it/portale/documents/d/guest/en_savona_users_manualvts",
+        "phone": "+39019856666",
+        "vhfdata": {
+          "generic": {
+            "mode": "report",
+            "note": "Mandatory for vessels ≥300 GT and recreational craft ≥45 m. English users manual: working CH 15, watch 16 and 15; pilots/allied services CH 13 (report 60 min before arrival). Website table lists bilingual sheet scheda-inforrmazioni-ita-en with working CH 71 — treat 15 as per EN manual and confirm 71 locally. Precautionary area 5 NM from Savona red light."
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.6,
+              44.361667
+            ],
+            [
+              8.841667,
+              44.08
+            ],
+            [
+              8.625,
+              43.925
+            ],
+            [
+              8.4,
+              43.658333
+            ],
+            [
+              8.116667,
+              43.633333
+            ],
+            [
+              7.841667,
+              43.725
+            ],
+            [
+              8.178333,
+              43.95
+            ],
+            [
+              8.192739,
+              44.015766
+            ],
+            [
+              8.305,
+              44.116667
+            ],
+            [
+              8.416667,
+              44.178333
+            ],
+            [
+              8.453333,
+              44.258333
+            ],
+            [
+              8.44,
+              44.275
+            ],
+            [
+              8.6,
+              44.361667
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "9114f635-6404-5cc1-8d4f-bff77c74ea81",
+        "name": "Taranto VTS",
+        "callname": "VTS TARANTO",
+        "type": "vts",
+        "channel": "13",
+        "url": "https://www.guardiacostiera.gov.it/portale/documents/d/guest/en_taranto_users_manualvts",
+        "phone": "+390994713611",
+        "vhfdata": {
+          "generic": {
+            "mode": "report",
+            "note": "Mandatory for passenger ships of any tonnage, cargo ≥300 GT, fishing ≥24 m and recreational craft ≥45 m. Primary working CH 13 in the VTS/precautionary/anchor areas; secondary CH 73; port services CH 12; calling CH 16. Watch 16 and 13. First contact in the 3 NM precautionary belt."
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              17.401667,
+              40.33
+            ],
+            [
+              17.166667,
+              40.216667
+            ],
+            [
+              16.966667,
+              40.333333
+            ],
+            [
+              16.951667,
+              40.473333
+            ],
+            [
+              17.401667,
+              40.33
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "67847562-c714-51f1-b74a-13f7d725a35c",
+        "name": "Trieste VTS",
+        "callname": "TRIESTE VTS",
+        "type": "vts",
+        "channel": "11",
+        "url": "https://www.guardiacostiera.gov.it/portale/documents/d/guest/en_trieste_users_manualvts",
+        "phone": "+39040676616",
+        "vhfdata": {
+          "generic": {
+            "mode": "report",
+            "note": "Mandatory for passenger ships and cargo ≥300 GT, and pleasure/traditional craft ≥45 m (also vessels posing a safety/environment risk). Working CH 11; port services CH 14; calling/distress CH 16. Watch 16, 11 and 14. Italian call may use VTS TRIESTE. IMO TSS in the Gulf of Trieste."
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.689883,
+              45.726367
+            ],
+            [
+              13.576667,
+              45.7075
+            ],
+            [
+              13.576667,
+              45.616433
+            ],
+            [
+              13.629817,
+              45.63065
+            ],
+            [
+              13.712317,
+              45.598983
+            ],
+            [
+              13.718983,
+              45.594817
+            ],
+            [
+              13.723133,
+              45.59525
+            ],
+            [
+              13.689883,
+              45.726367
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "2c4a505d-77e6-54c2-a1c9-ef4adba0d594",
+        "name": "Venice VTS",
+        "callname": "VENICE VTS",
+        "type": "vts",
+        "channel": "9",
+        "url": "https://www.guardiacostiera.gov.it/portale/documents/d/guest/en_venezia_manuale_utentevts",
+        "phone": "+390412405745",
+        "vhfdata": {
+          "generic": {
+            "mode": "report",
+            "note": "Mandatory for vessels ≥300 GT and fishing/traditional/recreational craft >45 m. Primary working CH 9; secondary CH 11; allied services (pilots/tugs) CH 13; Chioggia CH 14; emergency CH 16. Italian call VTS Venezia. First contact 5 NM outside the VTS limit. TSS for Lido/Malamocco/Chioggia approaches."
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              12.331667,
+              45.158333
+            ],
+            [
+              12.428333,
+              45.14
+            ],
+            [
+              12.583333,
+              45.266667
+            ],
+            [
+              12.583333,
+              45.415
+            ],
+            [
+              12.511667,
+              45.456667
+            ],
+            [
+              12.331667,
+              45.158333
             ]
           ]
         ]
@@ -211,124 +685,6 @@
             [
               13.373236656189,
               38.144395674099
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "397cf8a7-1a98-401c-b91b-c5102eb06578",
-        "name": "New feature",
-        "callname": "new",
-        "type": "vts",
-        "url": "https://",
-        "phone": "+",
-        "vhfdata": {
-          "generic": {
-            "mode": "listen"
-          },
-          "pleasure": {
-            "mode": "listen"
-          },
-          "cargo": {
-            "mode": "listen"
-          }
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              39.66064453125,
-              -4.149200693099
-            ],
-            [
-              39.111328125,
-              -3.535352145401
-            ],
-            [
-              39.232177734375,
-              -3.085665528722
-            ],
-            [
-              39.891357421875,
-              -2.284550660237
-            ],
-            [
-              40.2099609375,
-              -2.73455695127
-            ],
-            [
-              40.001220703125,
-              -3.414724764624
-            ],
-            [
-              39.66064453125,
-              -4.149200693099
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "c62dc49c-a6a2-4364-9b9e-884da1a8bfb1",
-        "name": "D-Marin Aregai",
-        "type": "marina",
-        "channel": "9",
-        "url": "https://",
-        "phone": "+",
-        "vhfdata": {
-          "generic": {
-            "mode": "listen"
-          },
-          "pleasure": {
-            "mode": "listen"
-          },
-          "cargo": {
-            "mode": "listen"
-          }
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              7.914174199104,
-              43.840268970728
-            ],
-            [
-              7.90683567524,
-              43.837034220918
-            ],
-            [
-              7.907136082649,
-              43.836035901474
-            ],
-            [
-              7.909432053566,
-              43.836074596337
-            ],
-            [
-              7.911642193794,
-              43.836430587901
-            ],
-            [
-              7.914506793022,
-              43.837312818712
-            ],
-            [
-              7.915987372398,
-              43.837823577956
-            ],
-            [
-              7.914174199104,
-              43.840268970728
             ]
           ]
         ]
