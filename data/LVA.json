@@ -9,11 +9,11 @@
         "callname": "Riga Rescue Radio",
         "type": "area",
         "channel": "71",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Latvian coast / traffic radio as shown on the 2017 Stockholmradio Nordic VHF map. MRCC Riga broadcasts weather and warnings on channel 71 at 07:03 and 15:03 local. Liepaja Traffic local weather on channel 11 at 08:05 and 20:05 local. Riga Traffic and Ventspils Traffic channel 9, weather on request. Local time = UTC+2 standard, UTC+3 summer."
+            "note": "Latvian coast / traffic radio as shown on the 2026 Stockholmradio Nordic VHF map. Riga Rescue Radio (MRCC Riga, MMSI 002750100) broadcasts MSI and weather on channel 71 at 07:03 and 15:03 local. Gale warnings at hh:03 and hh:33 on channel 71. VTS Riga and Ventspils monitor channel 9; Liepaja channel 11. Local time = UTC+2 standard, UTC+3 summer. The sheet draws additional unlabeled navy remotes along the coast; named sites are the Circ.22 A1 monitors plus the traffic services listed in the map legend."
           },
           "pleasure": {
             "mode": "listen"
@@ -28,136 +28,1270 @@
         "coordinates": [
           [
             [
-              24.105,
-              57.583629
+              24.083333,
+              57.582962
             ],
             [
-              24.304964,
-              57.572911
+              24.283293,
+              57.572244
             ],
             [
-              24.496904,
-              57.541187
+              24.47523,
+              57.54052
             ],
             [
-              24.67316,
-              57.489728
+              24.651483,
+              57.489061
             ],
             [
-              24.826772,
-              57.42059
+              24.805092,
+              57.419923
             ],
             [
-              24.951779,
-              57.336521
+              24.930096,
+              57.335854
             ],
             [
-              25.043455,
-              57.240842
+              25.021771,
+              57.240175
             ],
             [
-              25.098475,
-              57.137305
+              25.07679,
+              57.136638
             ],
             [
-              25.115012,
-              57.029935
+              25.093327,
+              57.029269
             ],
             [
-              25.092759,
-              56.922876
+              25.071075,
+              56.922209
             ],
             [
-              25.032892,
-              56.820219
+              25.011209,
+              56.819552
             ],
             [
-              24.937977,
-              56.725858
+              24.916295,
+              56.725191
             ],
             [
-              24.811831,
-              56.643345
+              24.790152,
+              56.642678
             ],
             [
-              24.659356,
-              56.575763
+              24.637679,
+              56.575096
             ],
             [
-              24.486338,
-              56.525623
+              24.464664,
+              56.524956
             ],
             [
-              24.299245,
-              56.494779
+              24.277575,
+              56.494112
             ],
             [
-              24.105,
-              56.484371
+              24.083333,
+              56.483704
             ],
             [
-              23.910755,
-              56.494779
+              23.889091,
+              56.494112
             ],
             [
-              23.723662,
-              56.525623
+              23.702002,
+              56.524956
             ],
             [
-              23.550644,
-              56.575763
+              23.528987,
+              56.575096
             ],
             [
-              23.398169,
-              56.643345
+              23.376514,
+              56.642678
             ],
             [
-              23.272023,
-              56.725858
+              23.250371,
+              56.725191
             ],
             [
-              23.177108,
-              56.820219
+              23.155457,
+              56.819552
             ],
             [
-              23.117241,
-              56.922876
+              23.095591,
+              56.922209
             ],
             [
-              23.094988,
-              57.029935
+              23.073339,
+              57.029269
             ],
             [
-              23.111525,
-              57.137305
+              23.089876,
+              57.136638
             ],
             [
-              23.166545,
-              57.240842
+              23.144895,
+              57.240175
             ],
             [
-              23.258221,
-              57.336521
+              23.23657,
+              57.335854
             ],
             [
-              23.383228,
-              57.42059
+              23.361574,
+              57.419923
             ],
             [
-              23.53684,
-              57.489728
+              23.515183,
+              57.489061
             ],
             [
-              23.713096,
-              57.541187
+              23.691436,
+              57.54052
             ],
             [
-              23.905036,
-              57.572911
+              23.883373,
+              57.572244
             ],
             [
-              24.105,
-              57.583629
+              24.083333,
+              57.582962
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "36d86619-7504-57f6-9959-ead0b86ebfd1",
+        "name": "Vitrupe",
+        "callname": "Vitrupe",
+        "type": "area",
+        "channel": "working channel",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "Latvian coast / traffic radio as shown on the 2026 Stockholmradio Nordic VHF map. Riga Rescue Radio (MRCC Riga, MMSI 002750100) broadcasts MSI and weather on channel 71 at 07:03 and 15:03 local. Gale warnings at hh:03 and hh:33 on channel 71. VTS Riga and Ventspils monitor channel 9; Liepaja channel 11. Local time = UTC+2 standard, UTC+3 summer. The sheet draws additional unlabeled navy remotes along the coast; named sites are the Circ.22 A1 monitors plus the traffic services listed in the map legend."
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              24.383333,
+              58.149629
+            ],
+            [
+              24.586466,
+              58.138908
+            ],
+            [
+              24.78144,
+              58.107173
+            ],
+            [
+              24.960466,
+              58.055699
+            ],
+            [
+              25.116474,
+              57.986544
+            ],
+            [
+              25.243406,
+              57.902458
+            ],
+            [
+              25.336466,
+              57.806765
+            ],
+            [
+              25.392285,
+              57.703218
+            ],
+            [
+              25.409014,
+              57.595846
+            ],
+            [
+              25.386353,
+              57.48879
+            ],
+            [
+              25.325504,
+              57.386144
+            ],
+            [
+              25.229082,
+              57.291798
+            ],
+            [
+              25.100968,
+              57.209301
+            ],
+            [
+              24.94614,
+              57.141736
+            ],
+            [
+              24.770473,
+              57.09161
+            ],
+            [
+              24.58053,
+              57.060776
+            ],
+            [
+              24.383333,
+              57.050371
+            ],
+            [
+              24.186136,
+              57.060776
+            ],
+            [
+              23.996193,
+              57.09161
+            ],
+            [
+              23.820526,
+              57.141736
+            ],
+            [
+              23.665698,
+              57.209301
+            ],
+            [
+              23.537584,
+              57.291798
+            ],
+            [
+              23.441162,
+              57.386144
+            ],
+            [
+              23.380313,
+              57.48879
+            ],
+            [
+              23.357652,
+              57.595846
+            ],
+            [
+              23.374381,
+              57.703218
+            ],
+            [
+              23.4302,
+              57.806765
+            ],
+            [
+              23.52326,
+              57.902458
+            ],
+            [
+              23.650192,
+              57.986544
+            ],
+            [
+              23.8062,
+              58.055699
+            ],
+            [
+              23.985226,
+              58.107173
+            ],
+            [
+              24.1802,
+              58.138908
+            ],
+            [
+              24.383333,
+              58.149629
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "034472ba-edb6-5db6-a275-27968df16d9e",
+        "name": "Mersrags",
+        "callname": "Mersrags",
+        "type": "area",
+        "channel": "working channel",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "Latvian coast / traffic radio as shown on the 2026 Stockholmradio Nordic VHF map. Riga Rescue Radio (MRCC Riga, MMSI 002750100) broadcasts MSI and weather on channel 71 at 07:03 and 15:03 local. Gale warnings at hh:03 and hh:33 on channel 71. VTS Riga and Ventspils monitor channel 9; Liepaja channel 11. Local time = UTC+2 standard, UTC+3 summer. The sheet draws additional unlabeled navy remotes along the coast; named sites are the Circ.22 A1 monitors plus the traffic services listed in the map legend."
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.116667,
+              57.916296
+            ],
+            [
+              23.318479,
+              57.905576
+            ],
+            [
+              23.512189,
+              57.873846
+            ],
+            [
+              23.69006,
+              57.822378
+            ],
+            [
+              23.845069,
+              57.75323
+            ],
+            [
+              23.971199,
+              57.669151
+            ],
+            [
+              24.063683,
+              57.573464
+            ],
+            [
+              24.119169,
+              57.469921
+            ],
+            [
+              24.135818,
+              57.36255
+            ],
+            [
+              24.113327,
+              57.255493
+            ],
+            [
+              24.052888,
+              57.152842
+            ],
+            [
+              23.957094,
+              57.05849
+            ],
+            [
+              23.8298,
+              56.975986
+            ],
+            [
+              23.675952,
+              56.908414
+            ],
+            [
+              23.50139,
+              56.858282
+            ],
+            [
+              23.312634,
+              56.827444
+            ],
+            [
+              23.116667,
+              56.817038
+            ],
+            [
+              22.9207,
+              56.827444
+            ],
+            [
+              22.731944,
+              56.858282
+            ],
+            [
+              22.557382,
+              56.908414
+            ],
+            [
+              22.403534,
+              56.975986
+            ],
+            [
+              22.27624,
+              57.05849
+            ],
+            [
+              22.180446,
+              57.152842
+            ],
+            [
+              22.120007,
+              57.255493
+            ],
+            [
+              22.097516,
+              57.36255
+            ],
+            [
+              22.114165,
+              57.469921
+            ],
+            [
+              22.169651,
+              57.573464
+            ],
+            [
+              22.262135,
+              57.669151
+            ],
+            [
+              22.388265,
+              57.75323
+            ],
+            [
+              22.543274,
+              57.822378
+            ],
+            [
+              22.721145,
+              57.873846
+            ],
+            [
+              22.914855,
+              57.905576
+            ],
+            [
+              23.116667,
+              57.916296
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "abdeec87-82dd-5566-983a-6d761cbf0635",
+        "name": "Kolka",
+        "callname": "Kolka",
+        "type": "area",
+        "channel": "working channel",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "Latvian coast / traffic radio as shown on the 2026 Stockholmradio Nordic VHF map. Riga Rescue Radio (MRCC Riga, MMSI 002750100) broadcasts MSI and weather on channel 71 at 07:03 and 15:03 local. Gale warnings at hh:03 and hh:33 on channel 71. VTS Riga and Ventspils monitor channel 9; Liepaja channel 11. Local time = UTC+2 standard, UTC+3 summer. The sheet draws additional unlabeled navy remotes along the coast; named sites are the Circ.22 A1 monitors plus the traffic services listed in the map legend."
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              22.583333,
+              58.299629
+            ],
+            [
+              22.787326,
+              58.288907
+            ],
+            [
+              22.983123,
+              58.25717
+            ],
+            [
+              23.162902,
+              58.205692
+            ],
+            [
+              23.319559,
+              58.136532
+            ],
+            [
+              23.447014,
+              58.052441
+            ],
+            [
+              23.54045,
+              57.956744
+            ],
+            [
+              23.596485,
+              57.853195
+            ],
+            [
+              23.613266,
+              57.745822
+            ],
+            [
+              23.590493,
+              57.638767
+            ],
+            [
+              23.529378,
+              57.536123
+            ],
+            [
+              23.432547,
+              57.441781
+            ],
+            [
+              23.303899,
+              57.359289
+            ],
+            [
+              23.148432,
+              57.291728
+            ],
+            [
+              22.972047,
+              57.241606
+            ],
+            [
+              22.781331,
+              57.210775
+            ],
+            [
+              22.583333,
+              57.200371
+            ],
+            [
+              22.385335,
+              57.210775
+            ],
+            [
+              22.194619,
+              57.241606
+            ],
+            [
+              22.018234,
+              57.291728
+            ],
+            [
+              21.862767,
+              57.359289
+            ],
+            [
+              21.734119,
+              57.441781
+            ],
+            [
+              21.637288,
+              57.536123
+            ],
+            [
+              21.576173,
+              57.638767
+            ],
+            [
+              21.5534,
+              57.745822
+            ],
+            [
+              21.570181,
+              57.853195
+            ],
+            [
+              21.626216,
+              57.956744
+            ],
+            [
+              21.719652,
+              58.052441
+            ],
+            [
+              21.847107,
+              58.136532
+            ],
+            [
+              22.003764,
+              58.205692
+            ],
+            [
+              22.183543,
+              58.25717
+            ],
+            [
+              22.37934,
+              58.288907
+            ],
+            [
+              22.583333,
+              58.299629
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "8307e1c9-809d-5420-82db-a383e8a4e3f5",
+        "name": "Jaunupe",
+        "callname": "Jaunupe",
+        "type": "area",
+        "channel": "working channel",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "Latvian coast / traffic radio as shown on the 2026 Stockholmradio Nordic VHF map. Riga Rescue Radio (MRCC Riga, MMSI 002750100) broadcasts MSI and weather on channel 71 at 07:03 and 15:03 local. Gale warnings at hh:03 and hh:33 on channel 71. VTS Riga and Ventspils monitor channel 9; Liepaja channel 11. Local time = UTC+2 standard, UTC+3 summer. The sheet draws additional unlabeled navy remotes along the coast; named sites are the Circ.22 A1 monitors plus the traffic services listed in the map legend."
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.683333,
+              58.082962
+            ],
+            [
+              21.886086,
+              58.072241
+            ],
+            [
+              22.080697,
+              58.040508
+            ],
+            [
+              22.259392,
+              57.989036
+            ],
+            [
+              22.415112,
+              57.919883
+            ],
+            [
+              22.541814,
+              57.835799
+            ],
+            [
+              22.634709,
+              57.740107
+            ],
+            [
+              22.690432,
+              57.636562
+            ],
+            [
+              22.707138,
+              57.52919
+            ],
+            [
+              22.684526,
+              57.422133
+            ],
+            [
+              22.623795,
+              57.319486
+            ],
+            [
+              22.527553,
+              57.225138
+            ],
+            [
+              22.399675,
+              57.142639
+            ],
+            [
+              22.245128,
+              57.075072
+            ],
+            [
+              22.069779,
+              57.024944
+            ],
+            [
+              21.880177,
+              56.99411
+            ],
+            [
+              21.683333,
+              56.983704
+            ],
+            [
+              21.486489,
+              56.99411
+            ],
+            [
+              21.296887,
+              57.024944
+            ],
+            [
+              21.121538,
+              57.075072
+            ],
+            [
+              20.966991,
+              57.142639
+            ],
+            [
+              20.839113,
+              57.225138
+            ],
+            [
+              20.742871,
+              57.319486
+            ],
+            [
+              20.68214,
+              57.422133
+            ],
+            [
+              20.659528,
+              57.52919
+            ],
+            [
+              20.676234,
+              57.636562
+            ],
+            [
+              20.731957,
+              57.740107
+            ],
+            [
+              20.824852,
+              57.835799
+            ],
+            [
+              20.951554,
+              57.919883
+            ],
+            [
+              21.107274,
+              57.989036
+            ],
+            [
+              21.285969,
+              58.040508
+            ],
+            [
+              21.48058,
+              58.072241
+            ],
+            [
+              21.683333,
+              58.082962
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "378512db-b7ac-5ce0-b112-bdf0acfd7907",
+        "name": "Uzava",
+        "callname": "Uzava",
+        "type": "area",
+        "channel": "working channel",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "Latvian coast / traffic radio as shown on the 2026 Stockholmradio Nordic VHF map. Riga Rescue Radio (MRCC Riga, MMSI 002750100) broadcasts MSI and weather on channel 71 at 07:03 and 15:03 local. Gale warnings at hh:03 and hh:33 on channel 71. VTS Riga and Ventspils monitor channel 9; Liepaja channel 11. Local time = UTC+2 standard, UTC+3 summer. The sheet draws additional unlabeled navy remotes along the coast; named sites are the Circ.22 A1 monitors plus the traffic services listed in the map legend."
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.433333,
+              57.766296
+            ],
+            [
+              21.634307,
+              57.755577
+            ],
+            [
+              21.827214,
+              57.723849
+            ],
+            [
+              22.004352,
+              57.672386
+            ],
+            [
+              22.158727,
+              57.603242
+            ],
+            [
+              22.284348,
+              57.519168
+            ],
+            [
+              22.376465,
+              57.423485
+            ],
+            [
+              22.43174,
+              57.319944
+            ],
+            [
+              22.448339,
+              57.212574
+            ],
+            [
+              22.425956,
+              57.105515
+            ],
+            [
+              22.365776,
+              57.002862
+            ],
+            [
+              22.270381,
+              56.908506
+            ],
+            [
+              22.143608,
+              56.825998
+            ],
+            [
+              21.990382,
+              56.758421
+            ],
+            [
+              21.816521,
+              56.708285
+            ],
+            [
+              21.628519,
+              56.677445
+            ],
+            [
+              21.433333,
+              56.667038
+            ],
+            [
+              21.238147,
+              56.677445
+            ],
+            [
+              21.050145,
+              56.708285
+            ],
+            [
+              20.876284,
+              56.758421
+            ],
+            [
+              20.723058,
+              56.825998
+            ],
+            [
+              20.596285,
+              56.908506
+            ],
+            [
+              20.50089,
+              57.002862
+            ],
+            [
+              20.44071,
+              57.105515
+            ],
+            [
+              20.418327,
+              57.212574
+            ],
+            [
+              20.434926,
+              57.319944
+            ],
+            [
+              20.490201,
+              57.423485
+            ],
+            [
+              20.582318,
+              57.519168
+            ],
+            [
+              20.707939,
+              57.603242
+            ],
+            [
+              20.862314,
+              57.672386
+            ],
+            [
+              21.039452,
+              57.723849
+            ],
+            [
+              21.232359,
+              57.755577
+            ],
+            [
+              21.433333,
+              57.766296
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "d324ba89-efdb-59fb-b437-2759e9a301ac",
+        "name": "Akmenrags",
+        "callname": "Akmenrags",
+        "type": "area",
+        "channel": "working channel",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "Latvian coast / traffic radio as shown on the 2026 Stockholmradio Nordic VHF map. Riga Rescue Radio (MRCC Riga, MMSI 002750100) broadcasts MSI and weather on channel 71 at 07:03 and 15:03 local. Gale warnings at hh:03 and hh:33 on channel 71. VTS Riga and Ventspils monitor channel 9; Liepaja channel 11. Local time = UTC+2 standard, UTC+3 summer. The sheet draws additional unlabeled navy remotes along the coast; named sites are the Circ.22 A1 monitors plus the traffic services listed in the map legend."
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.05,
+              57.382962
+            ],
+            [
+              21.248869,
+              57.372245
+            ],
+            [
+              21.439761,
+              57.340524
+            ],
+            [
+              21.615058,
+              57.28907
+            ],
+            [
+              21.767842,
+              57.219939
+            ],
+            [
+              21.892183,
+              57.135876
+            ],
+            [
+              21.98338,
+              57.040202
+            ],
+            [
+              22.038124,
+              56.936668
+            ],
+            [
+              22.054595,
+              56.8293
+            ],
+            [
+              22.032482,
+              56.722238
+            ],
+            [
+              21.972955,
+              56.619578
+            ],
+            [
+              21.87856,
+              56.525212
+            ],
+            [
+              21.753095,
+              56.442693
+            ],
+            [
+              21.601433,
+              56.375105
+            ],
+            [
+              21.429331,
+              56.32496
+            ],
+            [
+              21.243224,
+              56.294114
+            ],
+            [
+              21.05,
+              56.283704
+            ],
+            [
+              20.856776,
+              56.294114
+            ],
+            [
+              20.670669,
+              56.32496
+            ],
+            [
+              20.498567,
+              56.375105
+            ],
+            [
+              20.346905,
+              56.442693
+            ],
+            [
+              20.22144,
+              56.525212
+            ],
+            [
+              20.127045,
+              56.619578
+            ],
+            [
+              20.067518,
+              56.722238
+            ],
+            [
+              20.045405,
+              56.8293
+            ],
+            [
+              20.061876,
+              56.936668
+            ],
+            [
+              20.11662,
+              57.040202
+            ],
+            [
+              20.207817,
+              57.135876
+            ],
+            [
+              20.332158,
+              57.219939
+            ],
+            [
+              20.484942,
+              57.28907
+            ],
+            [
+              20.660239,
+              57.340524
+            ],
+            [
+              20.851131,
+              57.372245
+            ],
+            [
+              21.05,
+              57.382962
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "19a227b9-65a8-5698-a76b-2ab65e0db46a",
+        "name": "Jurmalciems",
+        "callname": "Jurmalciems",
+        "type": "area",
+        "channel": "working channel",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "Latvian coast / traffic radio as shown on the 2026 Stockholmradio Nordic VHF map. Riga Rescue Radio (MRCC Riga, MMSI 002750100) broadcasts MSI and weather on channel 71 at 07:03 and 15:03 local. Gale warnings at hh:03 and hh:33 on channel 71. VTS Riga and Ventspils monitor channel 9; Liepaja channel 11. Local time = UTC+2 standard, UTC+3 summer. The sheet draws additional unlabeled navy remotes along the coast; named sites are the Circ.22 A1 monitors plus the traffic services listed in the map legend."
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0,
+              57.066296
+            ],
+            [
+              21.19717,
+              57.055581
+            ],
+            [
+              21.386435,
+              57.023866
+            ],
+            [
+              21.560246,
+              56.97242
+            ],
+            [
+              21.711744,
+              56.903297
+            ],
+            [
+              21.835052,
+              56.819244
+            ],
+            [
+              21.925506,
+              56.723578
+            ],
+            [
+              21.979821,
+              56.620048
+            ],
+            [
+              21.996187,
+              56.512682
+            ],
+            [
+              21.974293,
+              56.405618
+            ],
+            [
+              21.915291,
+              56.302953
+            ],
+            [
+              21.821705,
+              56.208579
+            ],
+            [
+              21.697296,
+              56.126051
+            ],
+            [
+              21.546896,
+              56.058454
+            ],
+            [
+              21.376216,
+              56.008301
+            ],
+            [
+              21.191639,
+              55.977449
+            ],
+            [
+              21.0,
+              55.967038
+            ],
+            [
+              20.808361,
+              55.977449
+            ],
+            [
+              20.623784,
+              56.008301
+            ],
+            [
+              20.453104,
+              56.058454
+            ],
+            [
+              20.302704,
+              56.126051
+            ],
+            [
+              20.178295,
+              56.208579
+            ],
+            [
+              20.084709,
+              56.302953
+            ],
+            [
+              20.025707,
+              56.405618
+            ],
+            [
+              20.003813,
+              56.512682
+            ],
+            [
+              20.020179,
+              56.620048
+            ],
+            [
+              20.074494,
+              56.723578
+            ],
+            [
+              20.164948,
+              56.819244
+            ],
+            [
+              20.288256,
+              56.903297
+            ],
+            [
+              20.439754,
+              56.97242
+            ],
+            [
+              20.613565,
+              57.023866
+            ],
+            [
+              20.80283,
+              57.055581
+            ],
+            [
+              21.0,
+              57.066296
             ]
           ]
         ]
@@ -171,11 +1305,11 @@
         "callname": "Liepaja Traffic",
         "type": "area",
         "channel": "11",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Latvian coast / traffic radio as shown on the 2017 Stockholmradio Nordic VHF map. MRCC Riga broadcasts weather and warnings on channel 71 at 07:03 and 15:03 local. Liepaja Traffic local weather on channel 11 at 08:05 and 20:05 local. Riga Traffic and Ventspils Traffic channel 9, weather on request. Local time = UTC+2 standard, UTC+3 summer."
+            "note": "Latvian coast / traffic radio as shown on the 2026 Stockholmradio Nordic VHF map. Riga Rescue Radio (MRCC Riga, MMSI 002750100) broadcasts MSI and weather on channel 71 at 07:03 and 15:03 local. Gale warnings at hh:03 and hh:33 on channel 71. VTS Riga and Ventspils monitor channel 9; Liepaja channel 11. Local time = UTC+2 standard, UTC+3 summer. The sheet draws additional unlabeled navy remotes along the coast; named sites are the Circ.22 A1 monitors plus the traffic services listed in the map legend."
           },
           "pleasure": {
             "mode": "listen"
@@ -333,11 +1467,11 @@
         "callname": "Ventspils Traffic",
         "type": "area",
         "channel": "9",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Latvian coast / traffic radio as shown on the 2017 Stockholmradio Nordic VHF map. MRCC Riga broadcasts weather and warnings on channel 71 at 07:03 and 15:03 local. Liepaja Traffic local weather on channel 11 at 08:05 and 20:05 local. Riga Traffic and Ventspils Traffic channel 9, weather on request. Local time = UTC+2 standard, UTC+3 summer."
+            "note": "Latvian coast / traffic radio as shown on the 2026 Stockholmradio Nordic VHF map. Riga Rescue Radio (MRCC Riga, MMSI 002750100) broadcasts MSI and weather on channel 71 at 07:03 and 15:03 local. Gale warnings at hh:03 and hh:33 on channel 71. VTS Riga and Ventspils monitor channel 9; Liepaja channel 11. Local time = UTC+2 standard, UTC+3 summer. The sheet draws additional unlabeled navy remotes along the coast; named sites are the Circ.22 A1 monitors plus the traffic services listed in the map legend."
           },
           "pleasure": {
             "mode": "listen"
@@ -495,11 +1629,11 @@
         "callname": "Riga Traffic",
         "type": "area",
         "channel": "9",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Latvian coast / traffic radio as shown on the 2017 Stockholmradio Nordic VHF map. MRCC Riga broadcasts weather and warnings on channel 71 at 07:03 and 15:03 local. Liepaja Traffic local weather on channel 11 at 08:05 and 20:05 local. Riga Traffic and Ventspils Traffic channel 9, weather on request. Local time = UTC+2 standard, UTC+3 summer."
+            "note": "Latvian coast / traffic radio as shown on the 2026 Stockholmradio Nordic VHF map. Riga Rescue Radio (MRCC Riga, MMSI 002750100) broadcasts MSI and weather on channel 71 at 07:03 and 15:03 local. Gale warnings at hh:03 and hh:33 on channel 71. VTS Riga and Ventspils monitor channel 9; Liepaja channel 11. Local time = UTC+2 standard, UTC+3 summer. The sheet draws additional unlabeled navy remotes along the coast; named sites are the Circ.22 A1 monitors plus the traffic services listed in the map legend."
           },
           "pleasure": {
             "mode": "listen"

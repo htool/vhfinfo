@@ -9,11 +9,11 @@
         "callname": "Klaipeda Radio",
         "type": "area",
         "channel": "16 / 9",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Klaipeda (Radio 5) / Klaipeda State Sea Port Authority Harbour Master Office. Weather and warnings on request, channels 16 and 9. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Klaipeda (Radio 5) / MRCC Klaipeda (MMSI 002770330). MSI and weather on request; transmit request on channels 16 and 9. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -171,11 +171,11 @@
         "callname": "Klaipeda Radio",
         "type": "area",
         "channel": "16 / 9",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Klaipeda (Radio 5) / Klaipeda State Sea Port Authority Harbour Master Office. Weather and warnings on request, channels 16 and 9. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Klaipeda (Radio 5) / MRCC Klaipeda (MMSI 002770330). MSI and weather on request; transmit request on channels 16 and 9. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -333,11 +333,11 @@
         "callname": "Klaipeda Radio",
         "type": "area",
         "channel": "16 / 9",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Klaipeda (Radio 5) / Klaipeda State Sea Port Authority Harbour Master Office. Weather and warnings on request, channels 16 and 9. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Klaipeda (Radio 5) / MRCC Klaipeda (MMSI 002770330). MSI and weather on request; transmit request on channels 16 and 9. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"

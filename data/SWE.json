@@ -214,16 +214,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "651ec113-a937-503e-ad5b-d85a8dedbaab",
+        "id": "f91d9c9c-d572-5685-bebd-b762f193cca5",
         "name": "Kalix remote station",
         "callname": "Stockholm Radio",
         "type": "area",
-        "channel": "25",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "60",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 39 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 39 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -376,16 +376,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "3ae0aad6-5fc4-56d2-9b96-efe323e04d4f",
+        "id": "bbaed089-b775-5102-9b60-e34fa6cf7593",
         "name": "Luleå remote station",
         "callname": "Stockholm Radio",
         "type": "area",
-        "channel": "24",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "61",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 26 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 26 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -543,11 +543,11 @@
         "callname": "Stockholm Radio",
         "type": "area",
         "channel": "23",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 44 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 44 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -700,16 +700,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "f32b492d-73c3-53e3-810a-7711a84461c8",
+        "id": "edbd847c-fd35-5787-95c6-6f332c72f26b",
         "name": "Umeå remote station",
         "callname": "Stockholm Radio",
         "type": "area",
-        "channel": "26",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "62",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 54 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 54 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -862,16 +862,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "08e05b34-c910-5392-8dd2-3078ae6dd6ed",
+        "id": "444ba619-6a3c-5d46-9e94-a966702a0fb7",
         "name": "Örnsköldsvik remote station",
         "callname": "Stockholm Radio",
         "type": "area",
-        "channel": "28",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "63",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 42 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 42 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -1029,11 +1029,11 @@
         "callname": "Stockholm Radio",
         "type": "area",
         "channel": "64",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 43 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 43 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -1186,16 +1186,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "3f332fdc-14cb-5ecf-a65c-b482dd005fff",
+        "id": "9bca24d7-8fb5-5c31-bb19-8898252d5e26",
         "name": "Kramfors remote station",
         "callname": "Stockholm Radio",
         "type": "area",
-        "channel": "84",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "83",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 43 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 43 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -1353,11 +1353,11 @@
         "callname": "Stockholm Radio",
         "type": "area",
         "channel": "23",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 36 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 36 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -1510,16 +1510,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "2c3d2385-c9db-5553-a92f-327fc9167c97",
+        "id": "5af1c9b4-acb0-5052-9969-dfd60e225f1f",
         "name": "Sundsvall remote station",
         "callname": "Stockholm Radio",
         "type": "area",
-        "channel": "24",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "60",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 36 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 36 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -1672,16 +1672,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "fe96d366-cae5-5efc-8ca3-84dff36b6af3",
+        "id": "caab603c-ff2c-5ef7-a96c-7828761bbda8",
         "name": "Hudiksvall remote station",
         "callname": "Stockholm Radio",
         "type": "area",
-        "channel": "25",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "61",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 54 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 54 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -1839,11 +1839,11 @@
         "callname": "Stockholm Radio",
         "type": "area",
         "channel": "23",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 37 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 37 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -1996,16 +1996,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "b7b44b3d-5a0f-558b-8668-880d1a7360d6",
+        "id": "f316c739-94be-5f61-9f87-c2b04e1b4e25",
         "name": "Östhammar remote station",
         "callname": "Stockholm Radio",
         "type": "area",
-        "channel": "24",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "62",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 44 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 44 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -2158,16 +2158,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "4873e814-9b56-5ad4-aa2e-88fd4a79a7b5",
+        "id": "525a254a-7054-5972-9921-237703f8b5ed",
         "name": "Väddö remote station",
         "callname": "Stockholm Radio",
         "type": "area",
-        "channel": "78",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "82",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 32 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 32 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -2320,16 +2320,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "05f16c9d-69ca-58d1-89b7-f3d157c1ae89",
-        "name": "Stockholm / Nacka remote station",
+        "id": "311bf344-a0f7-52e4-a82c-d77ce4038907",
+        "name": "Nacka remote station",
         "callname": "Stockholm Radio",
         "type": "area",
-        "channel": "26 / 23",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "23",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 43 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 43 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -2482,16 +2482,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "83ff16ab-0cb5-5084-92d0-3e512c595d0b",
+        "id": "e927afc3-338e-5c67-adac-428462cd08c5",
         "name": "Svenska Högarna remote station",
         "callname": "Stockholm Radio",
         "type": "area",
-        "channel": "84",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "83",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 15 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 15 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -2649,11 +2649,11 @@
         "callname": "Stockholm Radio",
         "type": "area",
         "channel": "66",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 30 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 30 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -2806,16 +2806,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "a7ebadb5-de00-50fe-8fc3-36ae06ccec02",
+        "id": "ea4915d2-7dd6-55ca-9738-9bc900ad51bd",
         "name": "Västerås remote station",
         "callname": "Stockholm Radio",
         "type": "area",
-        "channel": "25",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "63",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 40 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 40 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -2968,16 +2968,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "7c678205-3bb1-5cbf-aa11-b18d6bbf99c3",
+        "id": "2718e5df-59de-59ba-a9ac-91180ec6c130",
         "name": "Torö remote station",
         "callname": "Stockholm Radio",
         "type": "area",
-        "channel": "24",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "61",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 26 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 26 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -3135,11 +3135,11 @@
         "callname": "Stockholm Radio",
         "type": "area",
         "channel": "65",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 22 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 22 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -3297,11 +3297,11 @@
         "callname": "Stockholm Radio",
         "type": "area",
         "channel": "64",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 43 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 43 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -3459,11 +3459,11 @@
         "callname": "Stockholm Radio",
         "type": "area",
         "channel": "23",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 45 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 45 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -3616,16 +3616,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "9c472ad7-651d-5919-a766-f6b14bcd0650",
+        "id": "57c54380-49cc-5589-9938-8dc23ff933a5",
         "name": "Fårö remote station",
         "callname": "Stockholm Radio",
         "type": "area",
-        "channel": "28",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "62",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 25 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 25 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -3778,16 +3778,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "4fe47924-0880-5693-ae32-b0707bc86b92",
+        "id": "2f7f8af9-5870-5313-a56b-e7d631fd1006",
         "name": "Visby remote station",
         "callname": "Stockholm Radio",
         "type": "area",
-        "channel": "25",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "63",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 43 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 43 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -3940,16 +3940,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "6803edef-23cb-5914-a7ba-b7ad4562ecac",
+        "id": "dc8425c7-3472-5743-962b-19cca502fbf4",
         "name": "Hoburgen remote station",
         "callname": "Stockholm Radio",
         "type": "area",
-        "channel": "24",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "61",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 25 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 25 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -4102,16 +4102,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "1554b27a-0ba9-51e0-9496-e162ff63d451",
+        "id": "70854dfa-2706-55e5-903c-7a7f5c6bdb30",
         "name": "Kalmar remote station",
         "callname": "Stockholm Radio",
         "type": "area",
-        "channel": "26",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "60",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 40 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 40 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -4264,16 +4264,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "9c54ebb0-104a-5ddf-b28e-8942d01d705d",
+        "id": "bd6c8d8e-6fcc-53a6-a137-2a1967b7c348",
         "name": "Öland South Point remote station",
         "callname": "Stockholm Radio",
         "type": "area",
-        "channel": "78",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "22",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 23 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 23 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -4431,11 +4431,11 @@
         "callname": "Stockholm Radio",
         "type": "area",
         "channel": "81",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 24 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 24 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -4588,16 +4588,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "f620ecef-6858-5c80-9394-ab58e4b45a1c",
+        "id": "aefd51a9-0d9f-50c2-9dce-2a202c0d77ca",
         "name": "Karlshamn remote station",
         "callname": "Stockholm Radio",
         "type": "area",
-        "channel": "25",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "62",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 48 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 48 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -4755,11 +4755,11 @@
         "callname": "Stockholm Radio",
         "type": "area",
         "channel": "21",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 39 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 39 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -4912,16 +4912,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "208119d3-984c-5a78-9156-7bdfc000d1f8",
+        "id": "146d498e-a137-5930-afd7-23c6c397515e",
         "name": "Malmö remote station",
         "callname": "Stockholm Radio",
         "type": "area",
-        "channel": "27",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "65",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 25 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 25 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -5074,16 +5074,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "989e5666-26ef-5ed5-aa44-ca6951fab8e4",
+        "id": "07074630-af7d-5fe1-af16-c14201b90533",
         "name": "Helsingborg remote station",
         "callname": "Stockholm Radio",
         "type": "area",
-        "channel": "24",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "60",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 28 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 28 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -5241,11 +5241,11 @@
         "callname": "Stockholm Radio",
         "type": "area",
         "channel": "62",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 52 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 52 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -5403,11 +5403,11 @@
         "callname": "Stockholm Radio",
         "type": "area",
         "channel": "22",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 35 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 35 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -5560,16 +5560,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "1b7aa4b7-53f2-5ab9-be01-3ce1188d885a",
+        "id": "0e38d9ef-600c-51e3-bb49-df4216885192",
         "name": "Gothenburg remote station",
         "callname": "Stockholm Radio",
         "type": "area",
-        "channel": "24",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "60",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 43 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 43 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -5727,11 +5727,11 @@
         "callname": "Stockholm Radio",
         "type": "area",
         "channel": "81",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 26 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 26 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -5884,16 +5884,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "a54caa0f-0f05-506a-a35e-7da1eb9272c9",
+        "id": "c5ee7674-bba6-5e84-9372-d14b589f8f9b",
         "name": "Uddevalla remote station",
         "callname": "Stockholm Radio",
         "type": "area",
-        "channel": "84",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "61",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 47 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 47 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -6051,11 +6051,11 @@
         "callname": "Stockholm Radio",
         "type": "area",
         "channel": "23",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 27 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 27 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -6208,16 +6208,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "d2a87e99-c6e8-5f93-a9db-0a202745c3d7",
+        "id": "5b9d80f2-e295-536b-ba21-d90a75c22892",
         "name": "Grebbestad remote station",
         "callname": "Stockholm Radio",
         "type": "area",
-        "channel": "26",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "62",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 25 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 25 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -6375,11 +6375,11 @@
         "callname": "Stockholm Radio",
         "type": "area",
         "channel": "22",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 25 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 25 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -6532,16 +6532,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "70b66113-6315-56b6-82fb-8ef773e66de8",
+        "id": "95f90b9a-97b6-5a63-bf9a-5b19530182ee",
         "name": "Trollhättan remote station",
         "callname": "Stockholm Radio",
         "type": "area",
-        "channel": "25",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "03",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 32 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 32 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -6694,16 +6694,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "0bb70343-0d75-5761-9a7f-9314cc017407",
+        "id": "06b5c529-c37d-511c-8623-a6d3d4cde5ab",
         "name": "Bäckefors remote station",
         "callname": "Stockholm Radio",
         "type": "area",
-        "channel": "78",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "05",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 50 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 50 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -6861,11 +6861,11 @@
         "callname": "Stockholm Radio",
         "type": "area",
         "channel": "01",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 43 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 43 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -7023,11 +7023,11 @@
         "callname": "Stockholm Radio",
         "type": "area",
         "channel": "65",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 36 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 36 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -7185,11 +7185,11 @@
         "callname": "Stockholm Radio",
         "type": "area",
         "channel": "23",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 49 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 49 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -7342,16 +7342,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "2ffcd64d-194c-5222-adce-11fe8369a72c",
+        "id": "90d4105d-208e-517c-98d1-6f8b0bf2f34a",
         "name": "Motala remote station",
         "callname": "Stockholm Radio",
         "type": "area",
-        "channel": "26",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "62",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. MSI Sweden (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels (not channel 23 at Nacka) at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 1 May–30 Sep, local 08:30–09:30, 16:30–17:30 and 21:30–22:30. Approximate radio horizon of this shore station: 47 NM (add the vessel's own radio horizon). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Stockholm Radio (MMSI 002652000). Most base stations also keep watch on channel 16 and DSC channel 70. Sweden Traffic (MMSI 002653500) broadcasts traffic lists and navigational warnings on working channels at 02:00, 06:00, 10:00, 14:00, 18:00 and 22:00 UTC; weather at 06:00 and 18:00 UTC. Stockholm Radio coastal weather 11 May–31 Aug, local 08:30–09:30 and 16:30–17:30. Approximate radio horizon of this shore station: 47 NM (add the vessel's own radio horizon). Coverage circle follows the 2026 Stockholmradio Sweden VHF map."
           },
           "pleasure": {
             "mode": "listen"

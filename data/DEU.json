@@ -5029,11 +5029,11 @@
         "callname": "Borkum Radio",
         "type": "area",
         "channel": "61",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "German coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map. DP07 Seefunk seasonal weather 07:45, 09:45, 12:45, 16:45 and 19:45 local, 6 April–8 October 2017 (historic season on this map). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "German coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map. DP07 Seefunk seasonal weather 07:45, 09:45, 12:45, 16:45 and 19:45 local; see https://dp07.com. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -5186,16 +5186,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "1250e6a9-5f23-528e-a3fa-cf51faf5cff8",
+        "id": "59038499-374a-5a5e-99ee-f9eafa37bbb4",
         "name": "Accumersiel coast radio",
         "callname": "Accumersiel Radio",
         "type": "area",
-        "channel": "28",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "62",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "German coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map. DP07 Seefunk seasonal weather 07:45, 09:45, 12:45, 16:45 and 19:45 local, 6 April–8 October 2017 (historic season on this map). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "German coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map. DP07 Seefunk seasonal weather 07:45, 09:45, 12:45, 16:45 and 19:45 local; see https://dp07.com. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -5348,16 +5348,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "6af8a011-1715-5170-9b5d-94fad01d93ec",
+        "id": "987f0b36-b0c5-5aa1-9055-5584fa7cc0d2",
         "name": "Elbe-Weser coast radio",
         "callname": "Elbe-Weser Radio",
         "type": "area",
-        "channel": "24",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "83",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "German coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map. DP07 Seefunk seasonal weather 07:45, 09:45, 12:45, 16:45 and 19:45 local, 6 April–8 October 2017 (historic season on this map). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "German coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map. DP07 Seefunk seasonal weather 07:45, 09:45, 12:45, 16:45 and 19:45 local; see https://dp07.com. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -5510,16 +5510,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "224647cb-1626-5605-8449-da729975f17a",
+        "id": "a6ef86b2-8a03-5a2e-aa63-b43ef4a86fad",
         "name": "Bremen coast radio",
         "callname": "Bremen Radio",
         "type": "area",
-        "channel": "25",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "23",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "German coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map. DP07 Seefunk seasonal weather 07:45, 09:45, 12:45, 16:45 and 19:45 local, 6 April–8 October 2017 (historic season on this map). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "German coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map. DP07 Seefunk seasonal weather 07:45, 09:45, 12:45, 16:45 and 19:45 local; see https://dp07.com. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -5672,16 +5672,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "97d1c77f-b322-5b57-a7e0-fe6434807b64",
+        "id": "0d8deecd-7d8c-5584-97c5-40405edf8cf7",
         "name": "Nordfriesland coast radio",
         "callname": "Nordfriesland Radio",
         "type": "area",
-        "channel": "26",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "01",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "German coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map. DP07 Seefunk seasonal weather 07:45, 09:45, 12:45, 16:45 and 19:45 local, 6 April–8 October 2017 (historic season on this map). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "German coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map. DP07 Seefunk seasonal weather 07:45, 09:45, 12:45, 16:45 and 19:45 local; see https://dp07.com. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -5834,16 +5834,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "7347686e-19f7-5782-9634-37feb2e14483",
+        "id": "2ddbc29d-4f62-50f0-bdf9-128d7556fd40",
         "name": "Flensburg coast radio",
         "callname": "Flensburg Radio",
         "type": "area",
-        "channel": "27",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "21",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "German coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map. DP07 Seefunk seasonal weather 07:45, 09:45, 12:45, 16:45 and 19:45 local, 6 April–8 October 2017 (historic season on this map). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "German coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map. DP07 Seefunk seasonal weather 07:45, 09:45, 12:45, 16:45 and 19:45 local; see https://dp07.com. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -6001,11 +6001,11 @@
         "callname": "Kiel Radio",
         "type": "area",
         "channel": "23",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "German coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map. DP07 Seefunk seasonal weather 07:45, 09:45, 12:45, 16:45 and 19:45 local, 6 April–8 October 2017 (historic season on this map). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "German coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map. DP07 Seefunk seasonal weather 07:45, 09:45, 12:45, 16:45 and 19:45 local; see https://dp07.com. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -6158,16 +6158,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "6ffe2cb7-61ae-5dfc-9062-b6c853c352a6",
+        "id": "879bd076-7c79-5f80-a71e-69bcb5820b24",
         "name": "Hamburg coast radio",
         "callname": "Hamburg Radio",
         "type": "area",
-        "channel": "83",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "01",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "German coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map. DP07 Seefunk seasonal weather 07:45, 09:45, 12:45, 16:45 and 19:45 local, 6 April–8 October 2017 (historic season on this map). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "German coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map. DP07 Seefunk seasonal weather 07:45, 09:45, 12:45, 16:45 and 19:45 local; see https://dp07.com. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -6320,16 +6320,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "5ed37787-f5a1-5406-97f7-29e652db27b5",
+        "id": "c11550f0-948f-51ef-b69a-b2398d662547",
         "name": "Lübeck coast radio",
         "callname": "Lübeck Radio",
         "type": "area",
-        "channel": "24",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "04",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "German coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map. DP07 Seefunk seasonal weather 07:45, 09:45, 12:45, 16:45 and 19:45 local, 6 April–8 October 2017 (historic season on this map). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "German coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map. DP07 Seefunk seasonal weather 07:45, 09:45, 12:45, 16:45 and 19:45 local; see https://dp07.com. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -6487,11 +6487,11 @@
         "callname": "Rostock Radio",
         "type": "area",
         "channel": "60",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "German coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map. DP07 Seefunk seasonal weather 07:45, 09:45, 12:45, 16:45 and 19:45 local, 6 April–8 October 2017 (historic season on this map). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "German coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map. DP07 Seefunk seasonal weather 07:45, 09:45, 12:45, 16:45 and 19:45 local; see https://dp07.com. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -6644,16 +6644,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "3cbeeb41-0376-5e99-87a7-f1504ae95045",
+        "id": "d2d0bbb8-1bb8-5e60-b8d1-890eb59378d3",
         "name": "Arkona coast radio",
         "callname": "Arkona Radio",
         "type": "area",
-        "channel": "66",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "23",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "German coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map. DP07 Seefunk seasonal weather 07:45, 09:45, 12:45, 16:45 and 19:45 local, 6 April–8 October 2017 (historic season on this map). Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "German coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map. DP07 Seefunk seasonal weather 07:45, 09:45, 12:45, 16:45 and 19:45 local; see https://dp07.com. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"

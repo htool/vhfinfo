@@ -620,12 +620,12 @@
         "name": "Ii remote station",
         "callname": "Turku Radio",
         "type": "area",
-        "channel": "26",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "07",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:33 and 18:33 UTC; also on request. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:00 and 18:00 UTC. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -783,12 +783,12 @@
         "name": "Raahe remote station",
         "callname": "Turku Radio",
         "type": "area",
-        "channel": "84",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "05",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:33 and 18:33 UTC; also on request. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:00 and 18:00 UTC. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -946,12 +946,12 @@
         "name": "Kruunupyy remote station",
         "callname": "Turku Radio",
         "type": "area",
-        "channel": "28",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "01",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:33 and 18:33 UTC; also on request. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:00 and 18:00 UTC. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -1109,12 +1109,12 @@
         "name": "Mustasaari remote station",
         "callname": "Turku Radio",
         "type": "area",
-        "channel": "25",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "04",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:33 and 18:33 UTC; also on request. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:00 and 18:00 UTC. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -1272,12 +1272,12 @@
         "name": "Kristinestad remote station",
         "callname": "Turku Radio",
         "type": "area",
-        "channel": "24",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "03",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:33 and 18:33 UTC; also on request. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:00 and 18:00 UTC. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -1435,12 +1435,12 @@
         "name": "Eurajoki remote station",
         "callname": "Turku Radio",
         "type": "area",
-        "channel": "26",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "19",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:33 and 18:33 UTC; also on request. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:00 and 18:00 UTC. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -1599,11 +1599,11 @@
         "callname": "Turku Radio",
         "type": "area",
         "channel": "01",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:33 and 18:33 UTC; also on request. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:00 and 18:00 UTC. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -1757,179 +1757,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "3fe666ed-7a7b-46e6-bb94-d06f5b895317",
-        "name": "Turku remote station",
-        "callname": "Turku Radio",
-        "type": "area",
-        "channel": "01",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
-        "vhfdata": {
-          "generic": {
-            "mode": "listen",
-            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:33 and 18:33 UTC; also on request. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
-          },
-          "pleasure": {
-            "mode": "listen"
-          },
-          "cargo": {
-            "mode": "listen"
-          }
-        },
-        "phone": "+358204486400"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              22.25,
-              60.999629
-            ],
-            [
-              22.471094,
-              60.988888
-            ],
-            [
-              22.683261,
-              60.957098
-            ],
-            [
-              22.877987,
-              60.905542
-            ],
-            [
-              23.047554,
-              60.83629
-            ],
-            [
-              23.185374,
-              60.752109
-            ],
-            [
-              23.28625,
-              60.656337
-            ],
-            [
-              23.34656,
-              60.552738
-            ],
-            [
-              23.364347,
-              60.44535
-            ],
-            [
-              23.339345,
-              60.338316
-            ],
-            [
-              23.272919,
-              60.235725
-            ],
-            [
-              23.167954,
-              60.141461
-            ],
-            [
-              23.028696,
-              60.059059
-            ],
-            [
-              22.860562,
-              59.991587
-            ],
-            [
-              22.669924,
-              59.941539
-            ],
-            [
-              22.463875,
-              59.910758
-            ],
-            [
-              22.25,
-              59.900371
-            ],
-            [
-              22.036125,
-              59.910758
-            ],
-            [
-              21.830076,
-              59.941539
-            ],
-            [
-              21.639438,
-              59.991587
-            ],
-            [
-              21.471304,
-              60.059059
-            ],
-            [
-              21.332046,
-              60.141461
-            ],
-            [
-              21.227081,
-              60.235725
-            ],
-            [
-              21.160655,
-              60.338316
-            ],
-            [
-              21.135653,
-              60.44535
-            ],
-            [
-              21.15344,
-              60.552738
-            ],
-            [
-              21.21375,
-              60.656337
-            ],
-            [
-              21.314626,
-              60.752109
-            ],
-            [
-              21.452446,
-              60.83629
-            ],
-            [
-              21.622013,
-              60.905542
-            ],
-            [
-              21.816739,
-              60.957098
-            ],
-            [
-              22.028906,
-              60.988888
-            ],
-            [
-              22.25,
-              60.999629
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "id": "2cdf2d22-4546-4c4d-bbff-c89b70bad539",
         "name": "Nagu remote station",
         "callname": "Turku Radio",
         "type": "area",
         "channel": "23",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:33 and 18:33 UTC; also on request. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:00 and 18:00 UTC. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -2088,11 +1925,11 @@
         "callname": "Turku Radio",
         "type": "area",
         "channel": "05",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:33 and 18:33 UTC; also on request. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:00 and 18:00 UTC. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -2251,11 +2088,11 @@
         "callname": "Turku Radio",
         "type": "area",
         "channel": "07",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:33 and 18:33 UTC; also on request. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:00 and 18:00 UTC. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -2413,12 +2250,12 @@
         "name": "Järsö remote station",
         "callname": "Turku Radio",
         "type": "area",
-        "channel": "25",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "04",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:33 and 18:33 UTC; also on request. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:00 and 18:00 UTC. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -2576,12 +2413,12 @@
         "name": "Utö remote station",
         "callname": "Turku Radio",
         "type": "area",
-        "channel": "24",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "79",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:33 and 18:33 UTC; also on request. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:00 and 18:00 UTC. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -2740,11 +2577,11 @@
         "callname": "Turku Radio",
         "type": "area",
         "channel": "03",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:33 and 18:33 UTC; also on request. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:00 and 18:00 UTC. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -2903,11 +2740,11 @@
         "callname": "Turku Radio",
         "type": "area",
         "channel": "04",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:33 and 18:33 UTC; also on request. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:00 and 18:00 UTC. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -3065,12 +2902,12 @@
         "name": "Kotka remote station",
         "callname": "Turku Radio",
         "type": "area",
-        "channel": "25",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "82",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:33 and 18:33 UTC; also on request. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:00 and 18:00 UTC. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -3228,12 +3065,12 @@
         "name": "Virolahti remote station",
         "callname": "Turku Radio",
         "type": "area",
-        "channel": "24",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "83",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:33 and 18:33 UTC; also on request. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:00 and 18:00 UTC. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -3379,169 +3216,6 @@
             [
               27.711,
               61.053629
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "60cb8a24-194e-53ea-ad06-bc4de61688f4",
-        "name": "Kemi remote station",
-        "callname": "Turku Radio",
-        "type": "area",
-        "channel": "27",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
-        "vhfdata": {
-          "generic": {
-            "mode": "listen",
-            "note": "Coast radio remote for Turku Radio (MMSI 002300230, call sign OFK). Watch on channel 16 and DSC channel 70. Navigational warnings on working channels at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather at 06:33 and 18:33 UTC; also on request. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
-          },
-          "pleasure": {
-            "mode": "listen"
-          },
-          "cargo": {
-            "mode": "listen"
-          }
-        },
-        "phone": "+358204486400"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              24.563,
-              66.285629
-            ],
-            [
-              24.8295,
-              66.274841
-            ],
-            [
-              25.085102,
-              66.242916
-            ],
-            [
-              25.319433,
-              66.19116
-            ],
-            [
-              25.523136,
-              66.121675
-            ],
-            [
-              25.688276,
-              66.037263
-            ],
-            [
-              25.808666,
-              65.941299
-            ],
-            [
-              25.880066,
-              65.837577
-            ],
-            [
-              25.900286,
-              65.730152
-            ],
-            [
-              25.869178,
-              65.623172
-            ],
-            [
-              25.788546,
-              65.520718
-            ],
-            [
-              25.661984,
-              65.42665
-            ],
-            [
-              25.494672,
-              65.344476
-            ],
-            [
-              25.293131,
-              65.277228
-            ],
-            [
-              25.064967,
-              65.22737
-            ],
-            [
-              24.818602,
-              65.196714
-            ],
-            [
-              24.563,
-              65.186371
-            ],
-            [
-              24.307398,
-              65.196714
-            ],
-            [
-              24.061033,
-              65.22737
-            ],
-            [
-              23.832869,
-              65.277228
-            ],
-            [
-              23.631328,
-              65.344476
-            ],
-            [
-              23.464016,
-              65.42665
-            ],
-            [
-              23.337454,
-              65.520718
-            ],
-            [
-              23.256822,
-              65.623172
-            ],
-            [
-              23.225714,
-              65.730152
-            ],
-            [
-              23.245934,
-              65.837577
-            ],
-            [
-              23.317334,
-              65.941299
-            ],
-            [
-              23.437724,
-              66.037263
-            ],
-            [
-              23.602864,
-              66.121675
-            ],
-            [
-              23.806567,
-              66.19116
-            ],
-            [
-              24.040898,
-              66.242916
-            ],
-            [
-              24.2965,
-              66.274841
-            ],
-            [
-              24.563,
-              66.285629
             ]
           ]
         ]

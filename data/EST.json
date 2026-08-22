@@ -107,16 +107,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "5e144b26-06cf-5c52-9c4b-c63057d20a4d",
+        "id": "b33f8d80-6080-5ba5-8b37-8d6f59ed1f6f",
         "name": "Dirhami remote station",
         "callname": "Tallinn Radio",
         "type": "area",
-        "channel": "26",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "64",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Tallinn Radio. Navigational warnings on channels 1, 3, 5, 7, 26 and 27 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather on those channels at 06:33 and 15:33 local time. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Tallinn Radio (MMSI 002761000). Navigational warnings and weather on channels 1, 3, 5, 7, 20, 62, 64 and 66 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; weather also at 06:33 and 15:33 local time. Storm warnings immediately after silence minutes (hh:03, hh:18, hh:33, hh:48). Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -274,11 +274,11 @@
         "callname": "Tallinn Radio",
         "type": "area",
         "channel": "01",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Tallinn Radio. Navigational warnings on channels 1, 3, 5, 7, 26 and 27 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather on those channels at 06:33 and 15:33 local time. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Tallinn Radio (MMSI 002761000). Navigational warnings and weather on channels 1, 3, 5, 7, 20, 62, 64 and 66 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; weather also at 06:33 and 15:33 local time. Storm warnings immediately after silence minutes (hh:03, hh:18, hh:33, hh:48). Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -436,11 +436,11 @@
         "callname": "Tallinn Radio",
         "type": "area",
         "channel": "20",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Tallinn Radio. Navigational warnings on channels 1, 3, 5, 7, 26 and 27 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather on those channels at 06:33 and 15:33 local time. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Tallinn Radio (MMSI 002761000). Navigational warnings and weather on channels 1, 3, 5, 7, 20, 62, 64 and 66 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; weather also at 06:33 and 15:33 local time. Storm warnings immediately after silence minutes (hh:03, hh:18, hh:33, hh:48). Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -593,16 +593,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "f4d9c4e9-4f03-582e-928b-d5595c6826e3",
+        "id": "ccca80e3-1aa0-5705-a9c7-565c5b6307bf",
         "name": "Aabla remote station",
         "callname": "Tallinn Radio",
         "type": "area",
-        "channel": "27",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "62",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Tallinn Radio. Navigational warnings on channels 1, 3, 5, 7, 26 and 27 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather on those channels at 06:33 and 15:33 local time. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Tallinn Radio (MMSI 002761000). Navigational warnings and weather on channels 1, 3, 5, 7, 20, 62, 64 and 66 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; weather also at 06:33 and 15:33 local time. Storm warnings immediately after silence minutes (hh:03, hh:18, hh:33, hh:48). Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -760,11 +760,11 @@
         "callname": "Tallinn Radio",
         "type": "area",
         "channel": "03",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Tallinn Radio. Navigational warnings on channels 1, 3, 5, 7, 26 and 27 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather on those channels at 06:33 and 15:33 local time. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Tallinn Radio (MMSI 002761000). Navigational warnings and weather on channels 1, 3, 5, 7, 20, 62, 64 and 66 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; weather also at 06:33 and 15:33 local time. Storm warnings immediately after silence minutes (hh:03, hh:18, hh:33, hh:48). Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -917,16 +917,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "56521f7a-bfdd-52e3-a4c8-9ab84352cbe3",
+        "id": "ae8e44ec-0411-5570-b808-6a0edf56ef2b",
         "name": "Toila remote station",
         "callname": "Tallinn Radio",
         "type": "area",
-        "channel": "26",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "66",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Tallinn Radio. Navigational warnings on channels 1, 3, 5, 7, 26 and 27 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather on those channels at 06:33 and 15:33 local time. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Tallinn Radio (MMSI 002761000). Navigational warnings and weather on channels 1, 3, 5, 7, 20, 62, 64 and 66 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; weather also at 06:33 and 15:33 local time. Storm warnings immediately after silence minutes (hh:03, hh:18, hh:33, hh:48). Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -1079,178 +1079,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "f034e4b7-74dd-5239-830f-ea761c28ace3",
-        "name": "Undva remote station",
-        "callname": "Tallinn Radio",
-        "type": "area",
-        "channel": "03",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
-        "vhfdata": {
-          "generic": {
-            "mode": "listen",
-            "note": "Coast radio remote for Tallinn Radio. Navigational warnings on channels 1, 3, 5, 7, 26 and 27 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather on those channels at 06:33 and 15:33 local time. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
-          },
-          "pleasure": {
-            "mode": "listen"
-          },
-          "cargo": {
-            "mode": "listen"
-          }
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              21.923167,
-              59.055796
-            ],
-            [
-              22.13163,
-              59.045069
-            ],
-            [
-              22.331708,
-              59.013318
-            ],
-            [
-              22.515396,
-              58.961819
-            ],
-            [
-              22.67543,
-              58.892635
-            ],
-            [
-              22.805599,
-              58.808521
-            ],
-            [
-              22.900985,
-              58.712803
-            ],
-            [
-              22.958142,
-              58.609241
-            ],
-            [
-              22.975191,
-              58.501864
-            ],
-            [
-              22.951839,
-              58.394815
-            ],
-            [
-              22.889338,
-              58.292185
-            ],
-            [
-              22.79038,
-              58.197863
-            ],
-            [
-              22.658956,
-              58.115395
-            ],
-            [
-              22.500174,
-              58.047858
-            ],
-            [
-              22.320056,
-              57.997756
-            ],
-            [
-              22.125324,
-              57.966938
-            ],
-            [
-              21.923167,
-              57.956538
-            ],
-            [
-              21.72101,
-              57.966938
-            ],
-            [
-              21.526278,
-              57.997756
-            ],
-            [
-              21.34616,
-              58.047858
-            ],
-            [
-              21.187378,
-              58.115395
-            ],
-            [
-              21.055954,
-              58.197863
-            ],
-            [
-              20.956996,
-              58.292185
-            ],
-            [
-              20.894495,
-              58.394815
-            ],
-            [
-              20.871143,
-              58.501864
-            ],
-            [
-              20.888192,
-              58.609241
-            ],
-            [
-              20.945349,
-              58.712803
-            ],
-            [
-              21.040735,
-              58.808521
-            ],
-            [
-              21.170904,
-              58.892635
-            ],
-            [
-              21.330938,
-              58.961819
-            ],
-            [
-              21.514626,
-              59.013318
-            ],
-            [
-              21.714704,
-              59.045069
-            ],
-            [
-              21.923167,
-              59.055796
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "516240b4-b85c-5129-bc99-a31a18bd6f41",
+        "id": "b552b82a-91a9-5143-a5a4-a7ee00594037",
         "name": "Kõpu remote station",
         "callname": "Tallinn Radio",
         "type": "area",
-        "channel": "01",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "03",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Tallinn Radio. Navigational warnings on channels 1, 3, 5, 7, 26 and 27 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather on those channels at 06:33 and 15:33 local time. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Tallinn Radio (MMSI 002761000). Navigational warnings and weather on channels 1, 3, 5, 7, 20, 62, 64 and 66 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; weather also at 06:33 and 15:33 local time. Storm warnings immediately after silence minutes (hh:03, hh:18, hh:33, hh:48). Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -1403,16 +1241,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "08000be7-fd38-5d5b-bd85-b1f404a0c45e",
+        "id": "c4b271a1-a0b9-5417-81e0-41f68a9800b1",
         "name": "Suuremõisa remote station",
         "callname": "Tallinn Radio",
         "type": "area",
-        "channel": "27",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "07",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Tallinn Radio. Navigational warnings on channels 1, 3, 5, 7, 26 and 27 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather on those channels at 06:33 and 15:33 local time. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Tallinn Radio (MMSI 002761000). Navigational warnings and weather on channels 1, 3, 5, 7, 20, 62, 64 and 66 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; weather also at 06:33 and 15:33 local time. Storm warnings immediately after silence minutes (hh:03, hh:18, hh:33, hh:48). Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -1565,16 +1403,178 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "544b8f88-e5bf-5c0d-9fe4-d52b0fce8297",
-        "name": "Torgu (Sõrve) remote station",
+        "id": "1db94723-19b7-5e87-92e7-8fb0a8dd1c19",
+        "name": "Undva remote station",
         "callname": "Tallinn Radio",
         "type": "area",
-        "channel": "26",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "01",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Tallinn Radio. Navigational warnings on channels 1, 3, 5, 7, 26 and 27 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather on those channels at 06:33 and 15:33 local time. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Tallinn Radio (MMSI 002761000). Navigational warnings and weather on channels 1, 3, 5, 7, 20, 62, 64 and 66 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; weather also at 06:33 and 15:33 local time. Storm warnings immediately after silence minutes (hh:03, hh:18, hh:33, hh:48). Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.923167,
+              59.055796
+            ],
+            [
+              22.13163,
+              59.045069
+            ],
+            [
+              22.331708,
+              59.013318
+            ],
+            [
+              22.515396,
+              58.961819
+            ],
+            [
+              22.67543,
+              58.892635
+            ],
+            [
+              22.805599,
+              58.808521
+            ],
+            [
+              22.900985,
+              58.712803
+            ],
+            [
+              22.958142,
+              58.609241
+            ],
+            [
+              22.975191,
+              58.501864
+            ],
+            [
+              22.951839,
+              58.394815
+            ],
+            [
+              22.889338,
+              58.292185
+            ],
+            [
+              22.79038,
+              58.197863
+            ],
+            [
+              22.658956,
+              58.115395
+            ],
+            [
+              22.500174,
+              58.047858
+            ],
+            [
+              22.320056,
+              57.997756
+            ],
+            [
+              22.125324,
+              57.966938
+            ],
+            [
+              21.923167,
+              57.956538
+            ],
+            [
+              21.72101,
+              57.966938
+            ],
+            [
+              21.526278,
+              57.997756
+            ],
+            [
+              21.34616,
+              58.047858
+            ],
+            [
+              21.187378,
+              58.115395
+            ],
+            [
+              21.055954,
+              58.197863
+            ],
+            [
+              20.956996,
+              58.292185
+            ],
+            [
+              20.894495,
+              58.394815
+            ],
+            [
+              20.871143,
+              58.501864
+            ],
+            [
+              20.888192,
+              58.609241
+            ],
+            [
+              20.945349,
+              58.712803
+            ],
+            [
+              21.040735,
+              58.808521
+            ],
+            [
+              21.170904,
+              58.892635
+            ],
+            [
+              21.330938,
+              58.961819
+            ],
+            [
+              21.514626,
+              59.013318
+            ],
+            [
+              21.714704,
+              59.045069
+            ],
+            [
+              21.923167,
+              59.055796
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "9a182f82-1144-51a6-beb6-4bf6bfcca2d7",
+        "name": "Torgu (Sõrve) remote station",
+        "callname": "Tallinn Radio",
+        "type": "area",
+        "channel": "05",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "Coast radio remote for Tallinn Radio (MMSI 002761000). Navigational warnings and weather on channels 1, 3, 5, 7, 20, 62, 64 and 66 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; weather also at 06:33 and 15:33 local time. Storm warnings immediately after silence minutes (hh:03, hh:18, hh:33, hh:48). Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -1727,16 +1727,340 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "c79e8262-0356-5968-bd57-4c39b9695044",
-        "name": "Pärnu remote station",
+        "id": "20d4224f-e9db-5f40-884f-53915df382a6",
+        "name": "Orissaare remote station",
         "callname": "Tallinn Radio",
         "type": "area",
-        "channel": "01",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "66",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Tallinn Radio. Navigational warnings on channels 1, 3, 5, 7, 26 and 27 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather on those channels at 06:33 and 15:33 local time. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Tallinn Radio (MMSI 002761000). Navigational warnings and weather on channels 1, 3, 5, 7, 20, 62, 64 and 66 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; weather also at 06:33 and 15:33 local time. Storm warnings immediately after silence minutes (hh:03, hh:18, hh:33, hh:48). Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.067833,
+              59.105296
+            ],
+            [
+              23.276597,
+              59.094568
+            ],
+            [
+              23.476962,
+              59.062816
+            ],
+            [
+              23.660913,
+              59.011317
+            ],
+            [
+              23.821175,
+              58.942131
+            ],
+            [
+              23.951526,
+              58.858015
+            ],
+            [
+              24.047043,
+              58.762296
+            ],
+            [
+              24.104276,
+              58.658733
+            ],
+            [
+              24.121343,
+              58.551356
+            ],
+            [
+              24.097952,
+              58.444307
+            ],
+            [
+              24.035357,
+              58.341678
+            ],
+            [
+              23.936257,
+              58.247358
+            ],
+            [
+              23.804646,
+              58.164891
+            ],
+            [
+              23.64564,
+              58.097355
+            ],
+            [
+              23.465272,
+              58.047254
+            ],
+            [
+              23.27027,
+              58.016437
+            ],
+            [
+              23.067833,
+              58.006038
+            ],
+            [
+              22.865396,
+              58.016437
+            ],
+            [
+              22.670394,
+              58.047254
+            ],
+            [
+              22.490026,
+              58.097355
+            ],
+            [
+              22.33102,
+              58.164891
+            ],
+            [
+              22.199409,
+              58.247358
+            ],
+            [
+              22.100309,
+              58.341678
+            ],
+            [
+              22.037714,
+              58.444307
+            ],
+            [
+              22.014323,
+              58.551356
+            ],
+            [
+              22.03139,
+              58.658733
+            ],
+            [
+              22.088623,
+              58.762296
+            ],
+            [
+              22.18414,
+              58.858015
+            ],
+            [
+              22.314491,
+              58.942131
+            ],
+            [
+              22.474753,
+              59.011317
+            ],
+            [
+              22.658704,
+              59.062816
+            ],
+            [
+              22.859069,
+              59.094568
+            ],
+            [
+              23.067833,
+              59.105296
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "c15de7d4-4a52-5498-adcf-ff979b98d16c",
+        "name": "Tõstamaa remote station",
+        "callname": "Tallinn Radio",
+        "type": "area",
+        "channel": "01",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "Coast radio remote for Tallinn Radio (MMSI 002761000). Navigational warnings and weather on channels 1, 3, 5, 7, 20, 62, 64 and 66 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; weather also at 06:33 and 15:33 local time. Storm warnings immediately after silence minutes (hh:03, hh:18, hh:33, hh:48). Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.989,
+              58.852962
+            ],
+            [
+              24.196241,
+              58.842236
+            ],
+            [
+              24.395149,
+              58.810489
+            ],
+            [
+              24.577769,
+              58.758996
+            ],
+            [
+              24.73688,
+              58.689818
+            ],
+            [
+              24.866307,
+              58.605711
+            ],
+            [
+              24.961161,
+              58.509999
+            ],
+            [
+              25.018012,
+              58.40644
+            ],
+            [
+              25.034988,
+              58.299064
+            ],
+            [
+              25.011795,
+              58.192013
+            ],
+            [
+              24.949672,
+              58.08938
+            ],
+            [
+              24.851296,
+              57.995053
+            ],
+            [
+              24.72063,
+              57.912578
+            ],
+            [
+              24.562754,
+              57.845034
+            ],
+            [
+              24.383656,
+              57.794926
+            ],
+            [
+              24.190021,
+              57.764105
+            ],
+            [
+              23.989,
+              57.753704
+            ],
+            [
+              23.787979,
+              57.764105
+            ],
+            [
+              23.594344,
+              57.794926
+            ],
+            [
+              23.415246,
+              57.845034
+            ],
+            [
+              23.25737,
+              57.912578
+            ],
+            [
+              23.126704,
+              57.995053
+            ],
+            [
+              23.028328,
+              58.08938
+            ],
+            [
+              22.966205,
+              58.192013
+            ],
+            [
+              22.943012,
+              58.299064
+            ],
+            [
+              22.959988,
+              58.40644
+            ],
+            [
+              23.016839,
+              58.509999
+            ],
+            [
+              23.111693,
+              58.605711
+            ],
+            [
+              23.24112,
+              58.689818
+            ],
+            [
+              23.400231,
+              58.758996
+            ],
+            [
+              23.582851,
+              58.810489
+            ],
+            [
+              23.781759,
+              58.842236
+            ],
+            [
+              23.989,
+              58.852962
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "eeaaad00-cad9-53e6-bdab-9ec2999e7cd4",
+        "name": "Pärnu remote station",
+        "callname": "Tallinn Radio",
+        "type": "area",
+        "channel": "05",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "Coast radio remote for Tallinn Radio (MMSI 002761000). Navigational warnings and weather on channels 1, 3, 5, 7, 20, 62, 64 and 66 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; weather also at 06:33 and 15:33 local time. Storm warnings immediately after silence minutes (hh:03, hh:18, hh:33, hh:48). Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -1889,16 +2213,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "d7a94b13-8cf4-5a70-a14b-cda64711b695",
-        "name": "Tõstamaa remote station",
+        "id": "7376098f-4704-5bc3-9008-6e01afcc1e8a",
+        "name": "Kihnu remote station",
         "callname": "Tallinn Radio",
         "type": "area",
-        "channel": "03",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "62",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Tallinn Radio. Navigational warnings on channels 1, 3, 5, 7, 26 and 27 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC. Weather on those channels at 06:33 and 15:33 local time. Coverage circle follows the 2017 Stockholmradio Nordic VHF map."
+            "note": "Coast radio remote for Tallinn Radio (MMSI 002761000). Navigational warnings and weather on channels 1, 3, 5, 7, 20, 62, 64 and 66 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; weather also at 06:33 and 15:33 local time. Storm warnings immediately after silence minutes (hh:03, hh:18, hh:33, hh:48). Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
           },
           "pleasure": {
             "mode": "listen"
@@ -1913,136 +2237,298 @@
         "coordinates": [
           [
             [
-              23.989,
-              58.852962
+              23.99,
+              58.679629
             ],
             [
-              24.196241,
-              58.842236
+              24.196211,
+              58.668904
             ],
             [
-              24.395149,
-              58.810489
+              24.394131,
+              58.63716
             ],
             [
-              24.577769,
-              58.758996
+              24.57585,
+              58.585672
             ],
             [
-              24.73688,
-              58.689818
+              24.734183,
+              58.5165
             ],
             [
-              24.866307,
-              58.605711
+              24.862984,
+              58.432398
             ],
             [
-              24.961161,
-              58.509999
+              24.957388,
+              58.336691
             ],
             [
-              25.018012,
-              58.40644
+              25.01398,
+              58.233135
             ],
             [
-              25.034988,
-              58.299064
+              25.030894,
+              58.12576
             ],
             [
-              25.011795,
-              58.192013
+              25.007835,
+              58.018708
             ],
             [
-              24.949672,
-              58.08938
+              24.946032,
+              57.916071
             ],
             [
-              24.851296,
-              57.995053
+              24.848146,
+              57.821739
             ],
             [
-              24.72063,
-              57.912578
+              24.718121,
+              57.739259
             ],
             [
-              24.562754,
-              57.845034
+              24.561009,
+              57.67171
             ],
             [
-              24.383656,
-              57.794926
+              24.382771,
+              57.621598
             ],
             [
-              24.190021,
-              57.764105
+              24.190062,
+              57.590773
             ],
             [
-              23.989,
-              57.753704
+              23.99,
+              57.580371
             ],
             [
-              23.787979,
-              57.764105
+              23.789938,
+              57.590773
             ],
             [
-              23.594344,
-              57.794926
+              23.597229,
+              57.621598
             ],
             [
-              23.415246,
-              57.845034
+              23.418991,
+              57.67171
             ],
             [
-              23.25737,
-              57.912578
+              23.261879,
+              57.739259
             ],
             [
-              23.126704,
-              57.995053
+              23.131854,
+              57.821739
             ],
             [
-              23.028328,
-              58.08938
+              23.033968,
+              57.916071
             ],
             [
-              22.966205,
-              58.192013
+              22.972165,
+              58.018708
             ],
             [
-              22.943012,
-              58.299064
+              22.949106,
+              58.12576
             ],
             [
-              22.959988,
-              58.40644
+              22.96602,
+              58.233135
             ],
             [
-              23.016839,
-              58.509999
+              23.022612,
+              58.336691
             ],
             [
-              23.111693,
-              58.605711
+              23.117016,
+              58.432398
             ],
             [
-              23.24112,
-              58.689818
+              23.245817,
+              58.5165
             ],
             [
-              23.400231,
-              58.758996
+              23.40415,
+              58.585672
             ],
             [
-              23.582851,
-              58.810489
+              23.585869,
+              58.63716
             ],
             [
-              23.781759,
-              58.842236
+              23.783789,
+              58.668904
             ],
             [
-              23.989,
-              58.852962
+              23.99,
+              58.679629
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "255f4513-4ba3-52c3-a1f5-0cdc3b8121e3",
+        "name": "Ruhnu remote station",
+        "callname": "Tallinn Radio",
+        "type": "area",
+        "channel": "03",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "Coast radio remote for Tallinn Radio (MMSI 002761000). Navigational warnings and weather on channels 1, 3, 5, 7, 20, 62, 64 and 66 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; weather also at 06:33 and 15:33 local time. Storm warnings immediately after silence minutes (hh:03, hh:18, hh:33, hh:48). Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.254833,
+              58.351629
+            ],
+            [
+              23.459126,
+              58.340906
+            ],
+            [
+              23.655211,
+              58.309168
+            ],
+            [
+              23.835252,
+              58.257689
+            ],
+            [
+              23.992136,
+              58.188528
+            ],
+            [
+              24.119773,
+              58.104435
+            ],
+            [
+              24.21334,
+              58.008737
+            ],
+            [
+              24.26945,
+              57.905187
+            ],
+            [
+              24.286249,
+              57.797814
+            ],
+            [
+              24.263438,
+              57.690759
+            ],
+            [
+              24.20223,
+              57.588116
+            ],
+            [
+              24.105256,
+              57.493776
+            ],
+            [
+              23.976421,
+              57.411285
+            ],
+            [
+              23.820732,
+              57.343726
+            ],
+            [
+              23.644097,
+              57.293605
+            ],
+            [
+              23.453111,
+              57.262775
+            ],
+            [
+              23.254833,
+              57.252371
+            ],
+            [
+              23.056555,
+              57.262775
+            ],
+            [
+              22.865569,
+              57.293605
+            ],
+            [
+              22.688934,
+              57.343726
+            ],
+            [
+              22.533245,
+              57.411285
+            ],
+            [
+              22.40441,
+              57.493776
+            ],
+            [
+              22.307436,
+              57.588116
+            ],
+            [
+              22.246228,
+              57.690759
+            ],
+            [
+              22.223417,
+              57.797814
+            ],
+            [
+              22.240216,
+              57.905187
+            ],
+            [
+              22.296326,
+              58.008737
+            ],
+            [
+              22.389893,
+              58.104435
+            ],
+            [
+              22.51753,
+              58.188528
+            ],
+            [
+              22.674414,
+              58.257689
+            ],
+            [
+              22.854455,
+              58.309168
+            ],
+            [
+              23.05054,
+              58.340906
+            ],
+            [
+              23.254833,
+              58.351629
             ]
           ]
         ]

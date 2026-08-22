@@ -5480,16 +5480,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "0232287c-4552-51c0-bbac-53c08671a877",
+        "id": "8659939d-8599-5f1d-91b8-5cf4f3fa5f7c",
         "name": "Dolsveden (Kristiansand) remote station",
-        "callname": "Tjøme Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Tjøme Radio, MMSI 002570100). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -5642,16 +5642,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "dcebcf54-657f-5d86-ac5f-dfe5ee355f29",
+        "id": "cfdfa97f-b2b9-557e-8fec-cf23c8bad74f",
         "name": "Hisøy (Arendal) remote station",
-        "callname": "Tjøme Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Tjøme Radio, MMSI 002570100). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -5804,16 +5804,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "d6053fcc-2dcf-52ee-b05e-e85d0c80f3ab",
+        "id": "90e473bb-ae3a-560f-9a73-ccfa3793fffa",
         "name": "Ranvikheia (Risør) remote station",
-        "callname": "Tjøme Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Tjøme Radio, MMSI 002570100). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -5966,16 +5966,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "734ad62c-5af0-5444-b504-5eaef8ecb56d",
+        "id": "1cc3f681-d641-59ef-b992-2140f0ef8b56",
         "name": "Tjøme remote station",
-        "callname": "Tjøme Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Tjøme Radio, MMSI 002570100). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -6128,16 +6128,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "ce6e7162-a516-58e0-8b97-15cb3a8e0263",
+        "id": "de43da63-a03f-56d6-8948-3db794cf555b",
         "name": "Høyås (Halden) remote station",
-        "callname": "Tjøme Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Tjøme Radio, MMSI 002570100). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -6290,16 +6290,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "f3864aaf-267f-5432-b4f2-d1ab1c74cfd4",
+        "id": "5e6684ea-5eb9-5e7d-a39f-07ad6a0fb14e",
         "name": "Vealøs (Porsgrunn) remote station",
-        "callname": "Tjøme Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "01",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Tjøme Radio, MMSI 002570100). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -6452,16 +6452,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "552d7e0c-a291-5e16-8587-e1f851f2b880",
+        "id": "416846e2-11d9-5c3a-903d-ce85e22f9b3b",
         "name": "Bukten (Drammen) remote station",
-        "callname": "Tjøme Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Tjøme Radio, MMSI 002570100). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -6614,16 +6614,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "dcfa8ed6-ab77-5796-8907-8c52e2123fcb",
+        "id": "7b7fb892-7d72-5fad-b033-9f78a8c9ef59",
         "name": "Tryvann (Oslo) remote station",
-        "callname": "Tjøme Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "66",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Tjøme Radio, MMSI 002570100). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -6776,16 +6776,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "47119649-a075-533b-b3ab-a19fac4f3245",
+        "id": "cbb4e042-3b0a-55ac-bb18-9f1588882310",
         "name": "Lindesnes remote station",
-        "callname": "Rogaland Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Rogaland Radio, MMSI 002570300). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -6938,16 +6938,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "d2860eb2-d92a-57a5-b9ba-ee55af74b8c6",
+        "id": "2cf0e379-18a0-5edd-980a-7707fb94f1de",
         "name": "Farsund remote station",
-        "callname": "Rogaland Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Rogaland Radio, MMSI 002570300). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -7100,16 +7100,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "06d1788b-c6b1-515a-abe5-9d9c2edd8e30",
+        "id": "f60e2233-8646-5d3c-b829-72d00c82f5ec",
         "name": "Lista (Storefjell) remote station",
-        "callname": "Rogaland Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Rogaland Radio, MMSI 002570300). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -7262,16 +7262,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "c3d9b945-a781-5ac8-8842-70c7a65c1b44",
+        "id": "fdfdb91b-77be-54b2-97ab-6b5d1abcd8dd",
         "name": "Bjerkreim remote station",
-        "callname": "Rogaland Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "63",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Rogaland Radio, MMSI 002570300). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -7424,16 +7424,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "cee98fcc-4c67-56af-91e8-e15742d229cd",
+        "id": "d3cdb694-ea5e-5c7a-8355-c304927f055d",
         "name": "Stavanger (Ullandhaug) remote station",
-        "callname": "Rogaland Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Rogaland Radio, MMSI 002570300). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -7586,16 +7586,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "3a5b6ae4-8dc9-5d4e-93b4-417f478cd50f",
+        "id": "a9bc8fff-21ed-5cd8-94d6-0363fa2c4eb2",
         "name": "Bokn remote station",
-        "callname": "Rogaland Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Rogaland Radio, MMSI 002570300). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -7748,16 +7748,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "5b5a7e70-94e6-567a-a040-6b0885f00a29",
+        "id": "e03ad70c-d0ce-5354-9f4b-ac5c3eacd312",
         "name": "Haugesund remote station",
-        "callname": "Rogaland Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "01",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Rogaland Radio, MMSI 002570300). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -7910,16 +7910,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "6bc6791f-32c8-51be-b859-0a52214d859d",
+        "id": "a57155a3-6e2f-5b99-8fbd-96434feed11b",
         "name": "Stord remote station",
-        "callname": "Rogaland Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Rogaland Radio, MMSI 002570300). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -8072,16 +8072,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "a86d26c5-c70a-59a5-ac62-05de2006680c",
+        "id": "a2e6d31a-a815-5446-bfe1-29c4712e501f",
         "name": "Sotra remote station",
-        "callname": "Rogaland Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Rogaland Radio, MMSI 002570300). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -8234,16 +8234,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "bd02b32c-ae45-572d-b830-626d9f31f1ee",
+        "id": "e4934e68-3acb-528a-a507-e8893845b858",
         "name": "Inner Hardanger (Grimo) remote station",
-        "callname": "Rogaland Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Rogaland Radio, MMSI 002570300). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -8396,16 +8396,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "c0a8737b-4f19-57c6-8ca9-8d33cf713ccd",
+        "id": "8ac7b801-a5ae-5363-8f1b-802faeca6362",
         "name": "Bergen (Rundemannen) remote station",
-        "callname": "Rogaland Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "channel": "60",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Rogaland Radio, MMSI 002570300). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -8558,16 +8558,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "992f48bb-3bd6-5174-9123-a0770bac08ba",
+        "id": "017ba910-efb0-5aea-aa3d-68425e6292cc",
         "name": "Bergen (Lindås) remote station",
-        "callname": "Rogaland Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Rogaland Radio, MMSI 002570300). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -8720,16 +8720,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "d191e297-3de4-5a9b-9382-a0691da6505c",
+        "id": "5fcf8d2d-eac4-5e93-92bd-bfd3b236eeda",
         "name": "Gulen remote station",
-        "callname": "Florø Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Florø Radio, MMSI 002570500). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -8882,16 +8882,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "ea39753f-c53d-51b8-aac5-14b7b0c1272f",
+        "id": "3d0ff1b9-77cc-5f6c-ad5e-b46bb2108acf",
         "name": "Ligtvor remote station",
-        "callname": "Florø Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Florø Radio, MMSI 002570500). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -9044,16 +9044,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "185afc06-efc9-5dfb-be41-0d7c22fd8725",
+        "id": "b7fe793c-0211-58c1-8484-47e9417161fc",
         "name": "Sogndal (Storehogen) remote station",
-        "callname": "Florø Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Florø Radio, MMSI 002570500). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -9206,16 +9206,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "f243237b-f103-57a9-8c9f-3ff2c3f047f6",
+        "id": "f30597bb-5cea-5ce9-b92e-8560c4228b10",
         "name": "Fjærland remote station",
-        "callname": "Florø Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Florø Radio, MMSI 002570500). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -9368,16 +9368,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "ca070e2d-7e4f-5917-8399-df305a586b8f",
+        "id": "a906cd61-c2cf-530d-89e7-f46b2a80115d",
         "name": "Kinn remote station",
-        "callname": "Florø Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Florø Radio, MMSI 002570500). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -9530,16 +9530,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "e8f96c2f-03c1-574e-8731-2a70584ddb38",
+        "id": "cb5fdb3c-b255-5828-9d89-818ad78cc43a",
         "name": "Storåsen remote station",
-        "callname": "Florø Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Florø Radio, MMSI 002570500). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -9692,16 +9692,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "ddfa0f63-19c4-5e30-a528-02146d2da8b4",
+        "id": "7c20f6fe-2bc5-5201-90b2-9c90e2c25beb",
         "name": "Bremanger remote station",
-        "callname": "Florø Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Florø Radio, MMSI 002570500). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -9854,16 +9854,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "ccbcccf5-6c83-5242-ba67-e1608c906782",
+        "id": "b52cccfc-e28a-559d-ab95-f2c37d122ea2",
         "name": "Sagtennene remote station",
-        "callname": "Florø Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Florø Radio, MMSI 002570500). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -10016,16 +10016,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "3180af57-df37-56c7-8546-13b3c68136ac",
+        "id": "f2e98e83-af2d-50ef-8cbb-d0e3810255e2",
         "name": "Måløy (Raudeberg) remote station",
-        "callname": "Florø Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Florø Radio, MMSI 002570500). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -10178,16 +10178,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "db9db9ea-8b25-57f8-948c-4ed439335c61",
+        "id": "0c11e9f2-fde5-5599-bbc7-5b5d6a1cbd16",
         "name": "Ljønibba (Hellesylt) remote station",
-        "callname": "Florø Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Florø Radio, MMSI 002570500). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -10340,16 +10340,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "09590c1d-0019-5e03-90f8-b7c17c550c0a",
+        "id": "5455ba5c-47b0-5e07-bc38-dae1ded221f9",
         "name": "Geiranger remote station",
-        "callname": "Florø Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Florø Radio, MMSI 002570500). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -10502,16 +10502,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "acdab72f-44c3-519b-9601-ec57a4db6570",
+        "id": "bb86dd2b-2b02-549b-93fc-3f03e265599f",
         "name": "Fosnavåg (Nerlandshorn) remote station",
-        "callname": "Florø Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Florø Radio, MMSI 002570500). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -10664,16 +10664,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "121d99c0-5d0a-5388-a966-1db5b21893df",
+        "id": "1f2972af-2152-56b2-b819-22071739c6a2",
         "name": "Hareid (Hjørunganes) remote station",
-        "callname": "Florø Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Florø Radio, MMSI 002570500). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -10826,16 +10826,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "8dc73f31-e9aa-5357-901e-6d54b99203ff",
+        "id": "3a222ed5-0c3e-5412-b045-820d12793fc3",
         "name": "Ålesund (Aksla) remote station",
-        "callname": "Florø Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Florø Radio, MMSI 002570500). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -10988,16 +10988,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "63be7907-0e01-5512-983f-e165428ba991",
+        "id": "2f88ab80-8df3-5d1f-acef-dc31749aee8b",
         "name": "Ørskogfjellet remote station",
-        "callname": "Florø Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Florø Radio, MMSI 002570500). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -11150,16 +11150,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "2537bd4c-a2a2-5262-872e-074e730da845",
+        "id": "190899b1-82a6-5ca3-9b30-72e07655568c",
         "name": "Brattvåg (Gamlemstveten) remote station",
-        "callname": "Florø Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Florø Radio, MMSI 002570500). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -11312,16 +11312,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "b04472c1-c99f-5d42-9917-978031de4b9e",
+        "id": "df0682e8-c5bf-51ea-854a-bbaafce66824",
         "name": "Molde remote station",
-        "callname": "Florø Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Florø Radio, MMSI 002570500). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -11474,16 +11474,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "cf5fc49e-6ac5-5222-a346-1712aae68611",
+        "id": "afe08596-8790-53a5-89d2-fae1b287e7e6",
         "name": "Tingvoll (Reinsfjell) remote station",
-        "callname": "Florø Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Florø Radio, MMSI 002570500). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -11636,16 +11636,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "b6a8dcc0-1a63-5493-a472-dc891e0c109d",
+        "id": "69ab289b-ffcc-54fe-af4e-4cfcc02a1e18",
         "name": "Kristiansund (Varden) remote station",
-        "callname": "Florø Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Florø Radio, MMSI 002570500). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -11798,16 +11798,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "a7dbdfa8-ae04-556b-a830-4fcf31503689",
+        "id": "37962951-fedd-5acd-9466-078a6dfe9633",
         "name": "Littlefonni (Tjelbergodden) remote station",
-        "callname": "Florø Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Florø Radio, MMSI 002570500). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -11960,16 +11960,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "8171cce3-5d53-594f-ae75-dc3bd1d4489e",
+        "id": "de055818-195b-5554-a3cc-1ac4d94f39e3",
         "name": "Stjørdal (Forbordsfjell) remote station",
-        "callname": "Florø Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Florø Radio, MMSI 002570500). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -12122,16 +12122,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "7a99e614-901b-52b5-b1cd-9452639e2c74",
+        "id": "066dfd35-b68f-51ce-b554-76bd0b0aa87c",
         "name": "Mosvik (Skavlen) remote station",
-        "callname": "Florø Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Florø Radio, MMSI 002570500). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -12284,16 +12284,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "9dbf6cc3-8d0c-58a8-b930-271693374265",
+        "id": "177afce2-3e1c-5ae1-9701-dceb50966c7f",
         "name": "Ørland (Kopparen) remote station",
-        "callname": "Florø Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Florø Radio, MMSI 002570500). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -12446,16 +12446,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "30354158-91fb-56a3-ac25-f19affe7626d",
+        "id": "262a4298-a9d0-53fe-88d4-bc133b6aa95c",
         "name": "Buholmråen (Yttervåg) remote station",
-        "callname": "Florø Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Florø Radio, MMSI 002570500). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -12608,16 +12608,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "3944a719-8d10-5a68-8fb1-fbe7ecf1efee",
+        "id": "51ebeae4-c039-5312-b8a3-70711027b4e5",
         "name": "Namsos (Spillumsaksla) remote station",
-        "callname": "Florø Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Florø Radio, MMSI 002570500). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -12770,16 +12770,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "5d48b1aa-99ee-59b3-8dee-b5ac2e5473d9",
+        "id": "31320f39-37e7-57a9-8261-a577861305cd",
         "name": "Rørvik (Falkhetta) remote station",
-        "callname": "Florø Radio",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Florø Radio, MMSI 002570500). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Sør, MMSI 002570100). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -12932,16 +12932,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "fc330f6c-ef5a-530f-aaac-0635afdf228c",
+        "id": "22541c47-6c86-5c0c-b66e-24bfca16b82b",
         "name": "Vega remote station",
-        "callname": "Bodø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Bodø Radio, MMSI 002570700). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -13094,16 +13094,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "6ab17b51-fb71-5782-96e9-57e4b8fd9dca",
+        "id": "1f2c7be7-56cb-5512-baff-bad212c1fbd8",
         "name": "Horva remote station",
-        "callname": "Bodø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Bodø Radio, MMSI 002570700). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -13256,16 +13256,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "f44a175c-000f-5cf0-9c6f-b0c58544dd9f",
+        "id": "823e1ba4-94eb-5e15-a600-36c5811d55b5",
         "name": "Mo i Rana remote station",
-        "callname": "Bodø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Bodø Radio, MMSI 002570700). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -13418,16 +13418,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "d47ca32d-3448-5288-8677-1bc90849ac08",
+        "id": "b0c68d01-b08e-5626-a1c4-f3f5af91ea29",
         "name": "Trænfjord remote station",
-        "callname": "Bodø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Bodø Radio, MMSI 002570700). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -13580,16 +13580,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "c945915a-947f-57d2-8ebc-66e4823fd4ac",
+        "id": "89275194-11ec-57c0-a225-5d902752deeb",
         "name": "Meløy remote station",
-        "callname": "Bodø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Bodø Radio, MMSI 002570700). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -13742,16 +13742,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "9a485398-e197-538d-859f-ae530922784e",
+        "id": "8b2faac1-3387-5d8c-ae16-47536860b6e4",
         "name": "Rønvikfjell (Bodø) remote station",
-        "callname": "Bodø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Bodø Radio, MMSI 002570700). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -13904,16 +13904,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "f31c42ac-ff0f-536e-a6db-65260c2cc949",
+        "id": "c818bf72-5ad4-5014-90fe-ccf8e5c7a836",
         "name": "Fornesfjell remote station",
-        "callname": "Bodø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Bodø Radio, MMSI 002570700). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -14066,16 +14066,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "39db4b9a-c1b6-57e1-93b9-38206a326d14",
+        "id": "d8d3af22-fc9f-5fa6-b864-18202917defe",
         "name": "Værøy remote station",
-        "callname": "Bodø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Bodø Radio, MMSI 002570700). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -14228,16 +14228,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "b4f56316-33cd-59cd-804c-0f0931b341ea",
+        "id": "a87a793d-5375-5877-a497-d03139f66ebe",
         "name": "Steigen remote station",
-        "callname": "Bodø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Bodø Radio, MMSI 002570700). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -14390,16 +14390,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "3d249ad2-f365-588f-9836-fd1fcfb8660f",
+        "id": "47cc5588-5982-5967-97d8-7953403755d4",
         "name": "Fredvang remote station",
-        "callname": "Bodø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Bodø Radio, MMSI 002570700). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -14552,16 +14552,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "c46f9007-6336-5d2d-8b2c-486967ce2623",
+        "id": "8b4051da-0638-56c6-8e30-2bf7f9b78f78",
         "name": "Hagskaret remote station",
-        "callname": "Bodø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Bodø Radio, MMSI 002570700). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -14714,16 +14714,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "adec54a3-f959-55fd-a6c7-61f668ff77dd",
+        "id": "91717047-f98c-5483-acdf-0a4aef7ab3e6",
         "name": "Kvalnes remote station",
-        "callname": "Bodø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Bodø Radio, MMSI 002570700). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -14876,16 +14876,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "427b5ab8-2eca-5620-b505-61c8ca7747cf",
+        "id": "b8792c82-f7d2-50ce-8c1b-a4c2a0f42b1f",
         "name": "Lødingen remote station",
-        "callname": "Bodø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Bodø Radio, MMSI 002570700). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -15038,16 +15038,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "35c65def-c79b-5322-9c4d-3f068ca08408",
+        "id": "96a48120-f84f-5ec1-ba2f-21509e2e6292",
         "name": "Raften (Svolvær) remote station",
-        "callname": "Bodø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Bodø Radio, MMSI 002570700). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -15200,16 +15200,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "e1140318-292e-522f-9c0f-8bdfc9e8a04b",
+        "id": "ed6fc566-aad7-5a98-901d-079cd0191590",
         "name": "Veggen (Narvik) remote station",
-        "callname": "Bodø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Bodø Radio, MMSI 002570700). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -15362,16 +15362,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "990685d7-b52a-575e-b107-bf78e93cdcd2",
+        "id": "3130e4ff-7b12-5657-8e0e-687bb30330bd",
         "name": "Storheia (Hadsel) remote station",
-        "callname": "Bodø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Bodø Radio, MMSI 002570700). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -15524,16 +15524,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "2029d493-6195-534f-a4df-dff4c6d8412e",
+        "id": "a993ac39-fef2-5308-9552-deacb4d6a19d",
         "name": "Harstad remote station",
-        "callname": "Bodø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Bodø Radio, MMSI 002570700). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -15686,16 +15686,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "0884016e-e05e-5bba-ac50-22501e3134ff",
+        "id": "1a489051-6115-50cf-b56a-a51af7bdd4ed",
         "name": "Stamnes remote station",
-        "callname": "Bodø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Bodø Radio, MMSI 002570700). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -15848,16 +15848,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "05a4611a-17ac-59ac-8e2e-d85921aa60da",
+        "id": "86117cef-5223-5cdc-9764-d45deff955a7",
         "name": "Myre (Vesterålen) remote station",
-        "callname": "Bodø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Bodø Radio, MMSI 002570700). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -16010,16 +16010,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "8cd71284-938a-500d-b2c4-b3e60ac4e322",
+        "id": "9e5da265-bb33-5acf-b6da-780692ef9583",
         "name": "Andenes remote station",
-        "callname": "Bodø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Bodø Radio, MMSI 002570700). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -16172,16 +16172,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "acf1b799-b741-5bc1-989d-3a8facae84ab",
+        "id": "24c7b245-e0ba-52b9-9649-6033a98d4b42",
         "name": "Kistefjell remote station",
-        "callname": "Bodø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Bodø Radio, MMSI 002570700). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -16334,16 +16334,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "1ea85ff4-1c68-5527-958c-f386cf1a6d6a",
+        "id": "3067586e-f1a0-5854-80a0-0abbf88b795d",
         "name": "Hillesøy remote station",
-        "callname": "Bodø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Bodø Radio, MMSI 002570700). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -16496,16 +16496,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "4cb48964-38b1-5897-8b84-4de45670449e",
+        "id": "b5308c1e-2999-555e-a10c-8c118067b78e",
         "name": "Tromsø remote station",
-        "callname": "Bodø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Bodø Radio, MMSI 002570700). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -16658,16 +16658,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "ea018815-0730-58e7-90a2-71fc5ffd7ad5",
+        "id": "e2e2c226-2c39-5184-aaa6-ca38d08b3bbc",
         "name": "Tonsnes remote station",
-        "callname": "Bodø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Bodø Radio, MMSI 002570700). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -16820,16 +16820,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "3b5adc54-352f-5d2a-b0ca-365a2e5ab8c3",
+        "id": "8eb113d5-307c-56c9-907a-a733c8a3549f",
         "name": "Kirkenes remote station",
-        "callname": "Vardø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Vardø Radio, MMSI 002570800). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -16982,16 +16982,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "1e730ce4-f0d3-5c6e-b82f-33be50c9dcf0",
+        "id": "dbada6d1-2c54-5339-9f60-b3c8f4d9e0fc",
         "name": "Skjervøy (Stussnesfjell) remote station",
-        "callname": "Vardø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Vardø Radio, MMSI 002570800). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -17144,16 +17144,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "ed54e76c-aca2-5684-8cfd-bf1bd9e1e1fa",
+        "id": "f09a1d03-955a-58f6-9dc0-784881a9d01a",
         "name": "Skjervøy (Trolltind) remote station",
-        "callname": "Vardø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Vardø Radio, MMSI 002570800). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -17306,16 +17306,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "b83d5001-4630-5122-85d3-c9b5c73fc5fe",
+        "id": "59820b53-227d-50e6-899c-0e6f2f699272",
         "name": "Varangerfjord (Torsvåde) remote station",
-        "callname": "Vardø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Vardø Radio, MMSI 002570800). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -17468,16 +17468,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "79c57c4d-0464-5240-abe9-c6a691552033",
+        "id": "183f459d-a430-5a09-b326-eab26d9e38e2",
         "name": "Alta (Helligfjell) remote station",
-        "callname": "Vardø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Vardø Radio, MMSI 002570800). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -17630,16 +17630,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "d7cb8762-4b61-5623-a6a7-7cbb34b965c0",
+        "id": "700217ec-ff36-5280-b204-88330aad9271",
         "name": "Karlsøy (Torsvåg) remote station",
-        "callname": "Vardø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Vardø Radio, MMSI 002570800). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -17792,16 +17792,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "319356f3-7cd3-5805-b74d-72b17087bc32",
+        "id": "9024b6bc-3281-5894-ad49-f4359e8014ab",
         "name": "Domen (Vardø) remote station",
-        "callname": "Vardø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Vardø Radio, MMSI 002570800). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -17954,16 +17954,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "a425a94e-fc71-5e4f-9d8a-159726a6706b",
+        "id": "7dcf5994-efe3-587d-81e0-28f4f35a5446",
         "name": "Tana (Algasvarre) remote station",
-        "callname": "Vardø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Vardø Radio, MMSI 002570800). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -18116,16 +18116,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "85ddd311-8065-5408-8a62-16e20ac4c882",
+        "id": "b1941d81-7857-546b-8c8d-9a0f64d9f25e",
         "name": "Hammerfest (Tyven) remote station",
-        "callname": "Vardø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Vardø Radio, MMSI 002570800). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -18278,16 +18278,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "06553a21-99b3-5aec-8bbb-afeb181af1a0",
+        "id": "f2cb6442-3bea-55d3-a759-f99b86f0f858",
         "name": "Hasvik (Fuglen) remote station",
-        "callname": "Vardø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Vardø Radio, MMSI 002570800). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -18440,16 +18440,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "5ccdd6ff-7933-553b-94ed-16d9a23409e2",
+        "id": "f2a2bca8-6cd2-58be-851d-90d7e0d1fd82",
         "name": "Båtsfjord (Hamnefjell) remote station",
-        "callname": "Vardø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Vardø Radio, MMSI 002570800). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -18602,16 +18602,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "136cfb51-c60e-5577-ad19-0deb52074568",
+        "id": "35710d1c-e196-5f7d-88ba-07c57fcdd134",
         "name": "Berlevåg (Berlevågfjell) remote station",
-        "callname": "Vardø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Vardø Radio, MMSI 002570800). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -18764,16 +18764,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "b763b845-d264-5af9-8cc5-1350fea98a70",
+        "id": "5fae69e5-4fdd-5b1d-a060-f21d0bc5ed42",
         "name": "Lebesby (Oksen) remote station",
-        "callname": "Vardø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Vardø Radio, MMSI 002570800). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -18926,16 +18926,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "185aad08-e714-52c3-9e6b-4bf9fb817804",
+        "id": "15d8215b-3cba-5d5a-b13f-6529fbf765f8",
         "name": "Nordkapp (Honningsvåg) remote station",
-        "callname": "Vardø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Vardø Radio, MMSI 002570800). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -19088,16 +19088,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "4f707d17-5779-51e9-99f7-c8652da4a261",
+        "id": "bb5c3930-16e1-5edb-98c2-caf12bb2ffc1",
         "name": "Havøysund (Havøygavlen) remote station",
-        "callname": "Vardø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Vardø Radio, MMSI 002570800). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
@@ -19250,16 +19250,16 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "d004972e-18fc-526d-9c84-ecb06c555bed",
+        "id": "33d3eb65-766d-5f68-b286-e8871633fe3f",
         "name": "Mehamn (Trollhetta) remote station",
-        "callname": "Vardø Radio",
+        "callname": "Kystradio Nord",
         "type": "area",
         "channel": "working channel",
-        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Norwegian coast radio remote as shown on the 2017 Stockholmradio Nordic VHF map (Vardø Radio, MMSI 002570800). Safety traffic lists from all stations 02:33–22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (matches the 2017 map marker set). Named Kystradio Sør / Vest / Nord after 2018; this proposal keeps the 2017 call names."
+            "note": "Norwegian coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map (Kystradio Nord, MMSI 002570000). MSI from all stations at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; local weather on working channels at 09:00, 12:00, 15:00, 18:00 and 21:00 local. Position from ITU GMDSS.1/Circ.22 (coastal remotes drawn on the 2026 sheet; offshore platforms and Svalbard omitted)."
           },
           "pleasure": {
             "mode": "listen"
