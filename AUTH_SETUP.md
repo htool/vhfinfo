@@ -33,12 +33,15 @@ under **Project Settings → Authentication → SMTP**.
 
 ## 3. Google sign-in (optional, but nicer)
 
-Google is currently off, so the map hides that button until you enable it.
+The edit login always shows **Continue with Google**. Until this provider is
+on, that button explains that Google is not enabled and the email link still
+works.
 
 1. In Google Cloud, create an OAuth client (Web application).
 2. Add authorized redirect URI:
    `https://imgadhoivcpexrferorn.supabase.co/auth/v1/callback`
-3. In Supabase: **Authentication → Providers → Google**. Turn it on and paste the Client ID and Client secret.
+3. In Supabase: **Authentication → Providers → Google**. Turn it on and paste the Client ID and Client secret. The Client secret stays in the dashboard — never commit it.
+4. Confirm **Redirect URLs** still include `https://vhfinfo.org/map.html` and `http://localhost:8080/map.html` (same list as email).
 
 ## 4. Check it
 

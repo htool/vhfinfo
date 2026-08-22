@@ -276,35 +276,8 @@ function initAuth() {
         (window.location.hash || "");
       window.history.replaceState({}, document.title, clean);
     }
-    return fetchAuthProviderSettings().then(function () {
-      return vhfAuth.session;
-    });
+    return vhfAuth.session;
   });
-}
-
-function fetchAuthProviderSettings() {
-  var cfg = authConfig();
-  return fetch(cfg.url + "/auth/v1/settings", {
-    headers: {
-      apikey: cfg.anonKey,
-      Authorization: "Bearer " + cfg.anonKey,
-    },
-  })
-    .then(function (res) {
-      return res.json();
-    })
-    .then(function (settings) {
-      var googleOn = !!(settings.external && settings.external.google);
-      var googleBtn = document.getElementById("auth-google");
-      var orEl = document.querySelector("#auth-modal .auth-or");
-      if (googleBtn) {
-        googleBtn.style.display = googleOn ? "" : "none";
-      }
-      if (orEl) {
-        orEl.style.display = googleOn ? "" : "none";
-      }
-    })
-    .catch(function () {});
 }
 
 function requireSignIn(next, pendingToken) {
@@ -332,6 +305,12 @@ function authErrorMessage(err) {
   }
   if (combined.indexOf("redirect") >= 0) {
     return "This page address is not yet allowed for sign-in. Add it under Authentication → URL Configuration in Supabase.";
+  }
+  if (
+    combined.indexOf("provider is not enabled") >= 0 ||
+    combined.indexOf("unsupported provider") >= 0
+  ) {
+    return "Google sign-in is not enabled yet on this project. Use the email link for now, or turn on Google under Authentication → Providers in Supabase.";
   }
   if (msg) {
     return msg;
@@ -379,37 +358,65 @@ function sendMagicLink() {
     });
 }
 
+function setGoogleBusy(busy) {
+  var googleBtn = document.getElementById("auth-google");
+  if (googleBtn) {
+    googleBtn.disabled = !!busy;
+  }
+}
+
+function googleErrorMessage(err) {
+  var mapped = authErrorMessage(err);
+  if (mapped && mapped.indexOf("Could not send the link") !== 0) {
+    return mapped;
+  }
+  return "Could not start Google sign-in. Try the email link, or try Google again in a moment.";
+}
+
 function signInWithGoogle() {
   if (!authIsConfigured() || !vhfAuth.client) {
     setAuthMessage(
-      "Google sign-in is not available yet. Use the email link instead.",
+      "Google sign-in is not connected yet. Use the email link instead.",
       true,
     );
     return;
   }
   rememberAuthIntent();
+  setGoogleBusy(true);
+  setAuthMessage("Opening Google…");
   vhfAuth.client.auth
     .signInWithOAuth({
       provider: "google",
       options: {
         redirectTo: authRedirectTo(),
+        skipBrowserRedirect: true,
+        queryParams: {
+          prompt: "select_account",
+        },
       },
     })
     .then(function (result) {
       if (result.error) {
+        setGoogleBusy(false);
+        setAuthMessage(googleErrorMessage(result.error), true);
+        console.error(result.error);
+        return;
+      }
+      var url = result.data && result.data.url;
+      if (!url) {
+        setGoogleBusy(false);
         setAuthMessage(
-          "Google sign-in is not available yet. Use the email link instead.",
+          "Could not start Google sign-in. Try the email link instead.",
           true,
         );
-        console.error(result.error);
+        return;
       }
+      window.location.assign(url);
     })
     .catch(function (err) {
       console.error(err);
-      setAuthMessage(
-        "Google sign-in is not available yet. Use the email link instead.",
-        true,
-      );
+      setGoogleBusy(false);
+      setAuthMessage(googleErrorMessage(err), true);
     });
 }
 
