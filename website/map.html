@@ -1084,7 +1084,7 @@
       m.addLayer(vtsLayer);
       m.addLayer(marinaLayer);
       m.addLayer(radarLayer);
-      // m.addLayer(areaLayer);
+      m.addLayer(areaLayer);
       // m.addLayer(Nm12);
 
       //add basemaps in an array
@@ -3583,9 +3583,7 @@
       function removeUnwanted() {
         if (editMode) {
           m.addLayer(Nm12);
-          m.addLayer(areaLayer);
           m.removeLayer(Nm12);
-          m.removeLayer(areaLayer);
         }
       }
 
