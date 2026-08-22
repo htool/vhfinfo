@@ -396,6 +396,10 @@ body.page-info .site-nav {
   border-color: #555;
 }
 
+.info-layers {
+  margin-top: 0.55rem;
+}
+
 #list {
   padding: 0.55rem 0.35rem 2rem;
   max-width: 44rem;

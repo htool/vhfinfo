@@ -10,6 +10,22 @@
     amsterdam: { lat: 52.377, lon: 4.9, label: "Amsterdam (IJ)" },
     ijsselmeer: { lat: 52.7, lon: 5.25, label: "IJsselmeer" },
   };
+  var LAYER_STORAGE_KEY = "vhfinfo.nearbyLayers";
+  var LAYER_DEFS = [
+    { key: "vts", label: "VTS", type: "vts" },
+    { key: "radar", label: "VTS Radar", type: "vts radar support" },
+    { key: "lock", label: "Locks", type: "lock" },
+    { key: "bridge", label: "Bridges", type: "bridge" },
+    { key: "marina", label: "Marinas", type: "marina" },
+    { key: "area", label: "Areas", type: "area" },
+  ];
+  var LAYER_KEYS = LAYER_DEFS.map(function (def) {
+    return def.key;
+  });
+  var TYPE_TO_LAYER = {};
+  LAYER_DEFS.forEach(function (def) {
+    TYPE_TO_LAYER[def.type] = def.key;
+  });
 
   var statusEl = document.getElementById("status");
   var listEl = document.getElementById("list");
@@ -29,6 +45,7 @@
   var sourceLabel = "";
   var refreshTimer = null;
   var lastRefreshAt = 0;
+  var layerState = defaultLayers();
 
   function qs(name) {
     var params = new URLSearchParams(window.location.search);
@@ -226,11 +243,157 @@
     return t === "territorial" || t === "12nm";
   }
 
+  function defaultLayers() {
+    var layers = {};
+    LAYER_KEYS.forEach(function (key) {
+      layers[key] = true;
+    });
+    return layers;
+  }
+
+  function normalizeLayers(obj) {
+    var layers = defaultLayers();
+    if (!obj || typeof obj !== "object" || Array.isArray(obj)) {
+      return layers;
+    }
+    LAYER_KEYS.forEach(function (key) {
+      if (Object.prototype.hasOwnProperty.call(obj, key)) {
+        layers[key] = !!obj[key];
+      }
+    });
+    return layers;
+  }
+
+  function parseLayersParam(value) {
+    var layers = defaultLayers();
+    var raw = String(value == null ? "" : value).trim().toLowerCase();
+    if (raw === "all") {
+      return layers;
+    }
+    LAYER_KEYS.forEach(function (key) {
+      layers[key] = false;
+    });
+    if (!raw) {
+      return layers;
+    }
+    raw.split(/[,+\s]+/).forEach(function (token) {
+      if (!token) {
+        return;
+      }
+      if (token === "all") {
+        LAYER_KEYS.forEach(function (key) {
+          layers[key] = true;
+        });
+        return;
+      }
+      if (LAYER_KEYS.indexOf(token) !== -1) {
+        layers[token] = true;
+      }
+    });
+    return layers;
+  }
+
+  function layersParamValue(layers) {
+    var on = LAYER_KEYS.filter(function (key) {
+      return layers[key];
+    });
+    if (on.length === LAYER_KEYS.length) {
+      return "all";
+    }
+    return on.join(",");
+  }
+
+  function loadLayersFromStorage() {
+    try {
+      var raw = window.localStorage.getItem(LAYER_STORAGE_KEY);
+      if (!raw) {
+        return null;
+      }
+      var parsed = JSON.parse(raw);
+      if (typeof parsed === "string") {
+        parsed = parseLayersParam(parsed);
+      }
+      return normalizeLayers(parsed);
+    } catch (err) {
+      return null;
+    }
+  }
+
+  function loadLayers() {
+    var params = new URLSearchParams(window.location.search);
+    if (params.has("layers")) {
+      return parseLayersParam(params.get("layers"));
+    }
+    var stored = loadLayersFromStorage();
+    if (stored) {
+      return stored;
+    }
+    return defaultLayers();
+  }
+
+  function persistLayers(updateUrl) {
+    try {
+      window.localStorage.setItem(
+        LAYER_STORAGE_KEY,
+        JSON.stringify(layerState),
+      );
+    } catch (err) {
+      /* ignore quota / private mode */
+    }
+    if (!updateUrl) {
+      return;
+    }
+    var url = new URL(window.location.href);
+    url.searchParams.set("layers", layersParamValue(layerState));
+    history.replaceState({}, "", url);
+  }
+
+  function selectedLayerLabels() {
+    return LAYER_DEFS.filter(function (def) {
+      return layerState[def.key];
+    }).map(function (def) {
+      return def.label;
+    });
+  }
+
+  function layerKeyForType(type) {
+    return TYPE_TO_LAYER[String(type || "").toLowerCase()] || null;
+  }
+
+  function typeAllowed(type) {
+    if (skipType(type)) {
+      return false;
+    }
+    var key = layerKeyForType(type);
+    if (key == null) {
+      return true;
+    }
+    return !!layerState[key];
+  }
+
+  function syncLayerButtons() {
+    LAYER_DEFS.forEach(function (def) {
+      var btn = document.getElementById("btn-layer-" + def.key);
+      if (!btn) {
+        return;
+      }
+      var on = !!layerState[def.key];
+      btn.classList.toggle("is-on", on);
+      btn.classList.toggle("btn-gold", on);
+      btn.classList.toggle("btn-dark", !on);
+      btn.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+  }
+
   function findNearbyFeatures(lon, lat, features, searchPolygon) {
     var nearby = [];
     var here = turf.point([lon, lat], {});
     features.forEach(function (feature) {
-      if (!feature || !feature.geometry || skipType(feature.properties && feature.properties.type)) {
+      if (
+        !feature ||
+        !feature.geometry ||
+        !typeAllowed(feature.properties && feature.properties.type)
+      ) {
         return;
       }
       try {
@@ -308,8 +471,18 @@
   function renderList(items) {
     listEl.innerHTML = "";
     if (!items.length) {
-      listEl.innerHTML =
-        '<p class="info-empty">No VHF areas in range. Try another location or turn look-ahead off.</p>';
+      var labels = selectedLayerLabels();
+      var empty;
+      if (!labels.length) {
+        empty =
+          "No layers selected. Enable VTS, VTS Radar, Locks, Bridges, Marinas, or Areas to see nearby channels.";
+      } else {
+        empty =
+          "No VHF areas in range for the selected layers (" +
+          labels.join(", ") +
+          "). Try another location, turn look-ahead off, or enable more layers.";
+      }
+      listEl.innerHTML = '<p class="info-empty">' + escapeHtml(empty) + "</p>";
       return;
     }
     items.forEach(function (feature, id) {
@@ -600,6 +773,28 @@
     history.replaceState({}, "", url);
   }
 
+  function toggleLayer(key) {
+    if (LAYER_KEYS.indexOf(key) === -1) {
+      return;
+    }
+    layerState[key] = !layerState[key];
+    persistLayers(true);
+    syncLayerButtons();
+    if (position) {
+      requestRefresh(true);
+    }
+  }
+
+  LAYER_DEFS.forEach(function (def) {
+    var btn = document.getElementById("btn-layer-" + def.key);
+    if (!btn) {
+      return;
+    }
+    btn.addEventListener("click", function () {
+      toggleLayer(def.key);
+    });
+  });
+
   gpsBtn.addEventListener("click", function () {
     var url = new URL(window.location.href);
     url.searchParams.delete("demo");
@@ -616,6 +811,10 @@
   ijsselmeerBtn.addEventListener("click", function () {
     applyDemo("ijsselmeer");
   });
+
+  layerState = loadLayers();
+  persistLayers(false);
+  syncLayerButtons();
 
   var demoKey = (qs("demo") || "").toLowerCase();
   var qLat = qs("lat");
