@@ -340,8 +340,9 @@
     return String(props.channel).replace(/[/,]/g, " ");
   }
 
-  function channelFontSizeEm(channel) {
-    return 7 - String(channel == null ? "" : channel).length * 0.7;
+  function channelFontSizeEm(channel, scale) {
+    var size = 7 - String(channel == null ? "" : channel).length * 0.7;
+    return size * (scale == null ? 1 : scale);
   }
 
   function pickBlockMode(props) {
@@ -426,10 +427,11 @@
     );
   }
 
-  function fillInfoBlock(els, props) {
+  function fillInfoBlock(els, props, options) {
     if (!els) {
       return;
     }
+    var channelScale = options && options.channelScale != null ? options.channelScale : 1;
     if (!props) {
       if (els.name) {
         els.name.innerHTML = "-";
@@ -459,7 +461,7 @@
     if (els.channel) {
       if (isDefined(props.channel)) {
         els.channel.innerHTML = escapeHtml(channel);
-        els.channel.style.fontSize = channelFontSizeEm(channel) + "em";
+        els.channel.style.fontSize = channelFontSizeEm(channel, channelScale) + "em";
       } else {
         els.channel.innerHTML = "-";
         els.channel.style.fontSize = "";
@@ -500,7 +502,7 @@
     wrap.innerHTML =
       '<div class="channel"></div>' +
       '<div class="type"></div>' +
-      '<div class="name"></div>' +
+      '<h2 class="name"></h2>' +
       '<div class="note"></div>' +
       '<div class="phone"></div>' +
       '<div class="url"></div>';
@@ -514,6 +516,7 @@
         url: wrap.querySelector(".url"),
       },
       props,
+      { channelScale: 0.68 },
     );
     return wrap;
   }
