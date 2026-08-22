@@ -397,6 +397,56 @@
         font-size: 13px;
         line-height: 1.35;
       }
+      .editor-transform {
+        display: none;
+        margin: 0;
+        padding: 10px 14px 4px;
+        border-bottom: 1px solid #eee;
+      }
+      .editor-transform.is-visible {
+        display: block;
+      }
+      .editor-transform-title {
+        font-weight: 600;
+        margin: 0 0 4px;
+      }
+      .editor-transform-help {
+        margin: 0;
+        color: #333;
+        font-size: 13px;
+        line-height: 1.35;
+      }
+      .leaflet-marker-icon.vhf-tf-handle {
+        background: #fff;
+        border: 2px solid #0d47a1;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+        width: 16px !important;
+        height: 16px !important;
+        pointer-events: auto !important;
+      }
+      .vhf-tf-scale {
+        border-radius: 2px;
+      }
+      .vhf-tf-nw,
+      .vhf-tf-se {
+        cursor: nwse-resize;
+      }
+      .vhf-tf-ne,
+      .vhf-tf-sw {
+        cursor: nesw-resize;
+      }
+      .leaflet-marker-icon.vhf-tf-handle.vhf-tf-rotate {
+        background: #0d47a1;
+        border-radius: 50%;
+        cursor: grab;
+      }
+      .leaflet-container.vhf-transforming {
+        cursor: grabbing !important;
+        user-select: none;
+      }
+      .leaflet-container.vhf-transforming .vhf-tf-rotate {
+        cursor: grabbing;
+      }
       .editor-error {
         display: none;
         margin: 0 14px;
@@ -636,6 +686,13 @@
         Click an area on the map to change it, or draw a new one with the tools
         on the left.
       </p>
+      <div class="editor-transform" id="editor-transform">
+        <div class="editor-transform-title">Move, rotate, scale</div>
+        <p class="editor-transform-help" id="editor-transform-help">
+          Drag the shape to move it. Drag a square corner to scale. Drag the
+          round handle to rotate.
+        </p>
+      </div>
       <div class="editor-error" id="editor-error"></div>
       <form id="editor-form">
         <label for="ed-name">Name</label>
@@ -814,6 +871,23 @@
       var currentEditLayer = null;
       var editPositionControlAdded = false;
       var urlEditCountry;
+      var transformCtl = {
+        layer: null,
+        group: null,
+        bbox: null,
+        stem: null,
+        handles: [],
+        dragging: null,
+        startGeo: null,
+        startLatLng: null,
+        origin: null,
+        pivot: null,
+        startBearing: 0,
+        mapWasDraggable: true,
+        didDrag: false,
+        hiddenForVertexEdit: false,
+        moveHandler: null,
+      };
 
       var COUNTRY_NAMES = {
         AGO: "Angola",
@@ -1661,6 +1735,10 @@
               if (e.originalEvent) {
                 L.DomEvent.stop(e.originalEvent);
               }
+              if (l === currentEditLayer && transformCtl.didDrag) {
+                transformCtl.didDrag = false;
+                return;
+              }
               dismissFeaturePopup(e.target);
               m.closePopup();
               openEditor(e.target);
@@ -2185,6 +2263,10 @@
             if (evt.originalEvent) {
               L.DomEvent.stop(evt.originalEvent);
             }
+            if (layer === currentEditLayer && transformCtl.didDrag) {
+              transformCtl.didDrag = false;
+              return;
+            }
             dismissFeaturePopup(layer);
             openEditor(layer);
           }
@@ -2210,6 +2292,18 @@
           }
         });
         updatePublishButton();
+      });
+
+      m.on("draw:editstart", function () {
+        transformCtl.hiddenForVertexEdit = true;
+        clearTransformOverlay();
+      });
+
+      m.on("draw:editstop", function () {
+        transformCtl.hiddenForVertexEdit = false;
+        if (editMode && currentEditLayer) {
+          enableTransformOverlay(currentEditLayer);
+        }
       });
 
       function friendlyCountry(code) {
@@ -2515,13 +2609,442 @@
         }
       }
 
+      function layerCanTransform(layer) {
+        return !!(
+          layer &&
+          (layer instanceof L.Circle || typeof layer.getLatLngs === "function")
+        );
+      }
+
+      function moveLatLngFromPixels(current) {
+        if (!transformCtl.startPoint || transformCtl.startZoom == null) {
+          return current;
+        }
+        var curPt = m.latLngToContainerPoint(current);
+        var dx = curPt.x - transformCtl.startPoint.x;
+        var dy = curPt.y - transformCtl.startPoint.y;
+        if (dx === 0 && dy === 0) {
+          return transformCtl.startLatLng;
+        }
+        var origin = m.project(
+          transformCtl.startLatLng,
+          transformCtl.startZoom,
+        );
+        return m.unproject(origin.add([dx, dy]), transformCtl.startZoom);
+      }
+
+      function cloneLayerGeo(layer) {
+        if (layer instanceof L.Circle) {
+          var ll = layer.getLatLng();
+          return {
+            type: "Circle",
+            lat: ll.lat,
+            lng: ll.lng,
+            radius: layer.getRadius(),
+          };
+        }
+        return JSON.parse(JSON.stringify(layer.toGeoJSON(12)));
+      }
+
+      function setLayerFromGeoJSON(layer, feature) {
+        var geom = feature.geometry;
+        if (!geom || !geom.coordinates) {
+          return;
+        }
+        var depth = geom.type === "MultiPolygon" ? 2 : 1;
+        layer.setLatLngs(L.GeoJSON.coordsToLatLngs(geom.coordinates, depth));
+        if (!layer.feature) {
+          layer.feature = { type: "Feature", properties: {} };
+        }
+        layer.feature.geometry = geom;
+      }
+
+      function layerCentroidLatLng(layer) {
+        if (layer instanceof L.Circle) {
+          return layer.getLatLng();
+        }
+        var c = turf.centroid(layer.toGeoJSON(12));
+        var p = c.geometry.coordinates;
+        return L.latLng(p[1], p[0]);
+      }
+
+      function markLayerGeometryChanged(layer) {
+        var p = layer && layer.feature && layer.feature.properties;
+        if (!p || !p.id) {
+          return;
+        }
+        var action = "Change";
+        if (changedIds[p.id] && changedIds[p.id].action === "Add") {
+          action = "Add";
+        }
+        changedIds[p.id] = {
+          name: p.name,
+          action: action,
+          type: p.type,
+          leaflet_id: layer._leaflet_id,
+        };
+        updatePublishButton();
+      }
+
+      function applyLiveTransform(kind, current) {
+        var layer = transformCtl.layer;
+        var start = transformCtl.startLatLng;
+        var geo = transformCtl.startGeo;
+        if (!layer || !start || !geo || !current) {
+          return;
+        }
+        if (geo.type === "Circle") {
+          if (kind === "move") {
+            var movedTo = moveLatLngFromPixels(current);
+            if (!movedTo) {
+              return;
+            }
+            layer.setLatLng([
+              geo.lat + (movedTo.lat - transformCtl.startLatLng.lat),
+              geo.lng + (movedTo.lng - transformCtl.startLatLng.lng),
+            ]);
+          } else if (kind === "scale") {
+            var center = L.latLng(geo.lat, geo.lng);
+            var d0 = center.distanceTo(start);
+            var d1 = center.distanceTo(current);
+            if (d0 > 0 && d1 > 0) {
+              var radius = geo.radius * (d1 / d0);
+              if (radius < 5) {
+                radius = 5;
+              }
+              layer.setRadius(radius);
+            }
+          }
+          transformCtl.moved = true;
+          return;
+        }
+        var startPt = turf.point([start.lng, start.lat]);
+        var curPt = turf.point([current.lng, current.lat]);
+        var next = geo;
+        if (kind === "move") {
+          var dest = moveLatLngFromPixels(current);
+          if (!dest) {
+            return;
+          }
+          var fromPt = turf.point([
+            transformCtl.startLatLng.lng,
+            transformCtl.startLatLng.lat,
+          ]);
+          var toPt = turf.point([dest.lng, dest.lat]);
+          var dist = turf.distance(fromPt, toPt, { units: "meters" });
+          if (dist === 0) {
+            return;
+          }
+          next = turf.transformTranslate(
+            geo,
+            dist,
+            turf.bearing(fromPt, toPt),
+            { units: "meters" },
+          );
+        } else if (kind === "rotate") {
+          var pivot = transformCtl.pivot;
+          var pivotPt = turf.point([pivot.lng, pivot.lat]);
+          next = turf.transformRotate(
+            geo,
+            turf.bearing(pivotPt, curPt) - transformCtl.startBearing,
+            { pivot: [pivot.lng, pivot.lat] },
+          );
+        } else if (kind === "scale") {
+          var origin = transformCtl.origin;
+          var originPt = turf.point([origin.lng, origin.lat]);
+          var dStart = turf.distance(originPt, startPt, { units: "meters" });
+          var dNow = turf.distance(originPt, curPt, { units: "meters" });
+          if (dStart <= 0) {
+            return;
+          }
+          var factor = dNow / dStart;
+          if (factor < 0.05) {
+            factor = 0.05;
+          }
+          if (factor > 20) {
+            factor = 20;
+          }
+          next = turf.transformScale(geo, factor, {
+            origin: [origin.lng, origin.lat],
+          });
+        }
+        setLayerFromGeoJSON(layer, next);
+        transformCtl.moved = true;
+      }
+
+      function clearTransformOverlay() {
+        if (transformCtl.moveHandler && transformCtl.layer) {
+          transformCtl.layer.off("mousedown", transformCtl.moveHandler);
+        }
+        transformCtl.moveHandler = null;
+        if (transformCtl.group) {
+          m.removeLayer(transformCtl.group);
+        }
+        transformCtl.group = null;
+        transformCtl.bbox = null;
+        transformCtl.stem = null;
+        transformCtl.handles = [];
+        transformCtl.layer = null;
+        transformCtl.dragging = null;
+        transformCtl.startGeo = null;
+        endTransformPointer();
+      }
+
+      function endTransformPointer() {
+        L.DomUtil.removeClass(m.getContainer(), "vhf-transforming");
+        if (transformCtl.mapWasDraggable && m.dragging) {
+          m.dragging.enable();
+        }
+        if (transformCtl.mapHadBoxZoom && m.boxZoom) {
+          m.boxZoom.enable();
+        }
+      }
+
+      function finishTransformDrag() {
+        if (!transformCtl.dragging) {
+          return;
+        }
+        var moved = transformCtl.moved;
+        transformCtl.dragging = null;
+        endTransformPointer();
+        if (moved && transformCtl.layer) {
+          transformCtl.didDrag = true;
+          markLayerGeometryChanged(transformCtl.layer);
+          refreshTransformOverlay();
+        }
+      }
+
+      function onTransformMapMouseMove(e) {
+        if (transformCtl.dragging !== "move") {
+          return;
+        }
+        applyLiveTransform("move", e.latlng);
+      }
+
+      function onTransformMapMouseUp() {
+        if (transformCtl.dragging === "move") {
+          finishTransformDrag();
+        }
+      }
+
+      function startMoveFromLayer(e) {
+        if (!editMode || transformCtl.hiddenForVertexEdit) {
+          return;
+        }
+        if (e.target !== currentEditLayer) {
+          return;
+        }
+        if (e.originalEvent && e.originalEvent.button && e.originalEvent.button !== 0) {
+          return;
+        }
+        L.DomEvent.stop(e);
+        if (e.originalEvent) {
+          L.DomEvent.preventDefault(e.originalEvent);
+        }
+        transformCtl.dragging = "move";
+        transformCtl.moved = false;
+        transformCtl.startGeo = cloneLayerGeo(transformCtl.layer);
+        transformCtl.startLatLng = e.latlng;
+        transformCtl.startPoint = m.latLngToContainerPoint(e.latlng);
+        transformCtl.startZoom = m.getZoom();
+        transformCtl.mapWasDraggable = m.dragging && m.dragging.enabled();
+        transformCtl.mapHadBoxZoom = m.boxZoom && m.boxZoom.enabled();
+        if (m.dragging) {
+          m.dragging.disable();
+        }
+        if (m.boxZoom) {
+          m.boxZoom.disable();
+        }
+        L.DomUtil.addClass(m.getContainer(), "vhf-transforming");
+      }
+
+      function makeTransformHandle(latlng, kind, className, corner) {
+        var marker = L.marker(latlng, {
+          icon: L.divIcon({
+            className: "vhf-tf-handle " + className,
+            iconSize: [16, 16],
+            iconAnchor: [8, 8],
+          }),
+          draggable: true,
+          keyboard: false,
+          zIndexOffset: 5000,
+        });
+        marker._vhfKind = kind;
+        marker._vhfCorner = corner;
+        marker.on("dragstart", function (ev) {
+          L.DomEvent.stop(ev);
+          transformCtl.dragging = kind;
+          transformCtl.moved = false;
+          transformCtl.startGeo = cloneLayerGeo(transformCtl.layer);
+          transformCtl.startLatLng = ev.target.getLatLng();
+          var b = transformCtl.layer.getBounds();
+          var opposite = {
+            nw: b.getSouthEast(),
+            ne: b.getSouthWest(),
+            se: b.getNorthWest(),
+            sw: b.getNorthEast(),
+          };
+          transformCtl.origin = opposite[ev.target._vhfCorner] || b.getCenter();
+          transformCtl.pivot = layerCentroidLatLng(transformCtl.layer);
+          if (kind === "rotate") {
+            var pivotPt = turf.point([
+              transformCtl.pivot.lng,
+              transformCtl.pivot.lat,
+            ]);
+            var startPt = turf.point([
+              transformCtl.startLatLng.lng,
+              transformCtl.startLatLng.lat,
+            ]);
+            transformCtl.startBearing = turf.bearing(pivotPt, startPt);
+          }
+          transformCtl.mapWasDraggable = m.dragging && m.dragging.enabled();
+          transformCtl.mapHadBoxZoom = m.boxZoom && m.boxZoom.enabled();
+          if (m.dragging) {
+            m.dragging.disable();
+          }
+          if (m.boxZoom) {
+            m.boxZoom.disable();
+          }
+          L.DomUtil.addClass(m.getContainer(), "vhf-transforming");
+        });
+        marker.on("drag", function (ev) {
+          applyLiveTransform(kind, ev.target.getLatLng());
+          refreshTransformOverlay(ev.target);
+        });
+        marker.on("dragend", function () {
+          finishTransformDrag();
+        });
+        return marker;
+      }
+
+      function refreshTransformOverlay(keepHandle) {
+        var layer = transformCtl.layer;
+        if (!layer || !layer.getBounds) {
+          return;
+        }
+        var bounds = layer.getBounds();
+        if (!bounds || !bounds.isValid()) {
+          return;
+        }
+        var nw = bounds.getNorthWest();
+        var ne = bounds.getNorthEast();
+        var se = bounds.getSouthEast();
+        var sw = bounds.getSouthWest();
+        var top = L.latLng(
+          bounds.getNorth(),
+          (bounds.getWest() + bounds.getEast()) / 2,
+        );
+        var topPt = m.latLngToLayerPoint(top);
+        var rotLatLng = m.layerPointToLatLng(L.point(topPt.x, topPt.y - 28));
+        if (!transformCtl.group) {
+          transformCtl.group = L.layerGroup().addTo(m);
+        }
+        if (transformCtl.bbox) {
+          transformCtl.bbox.setBounds(bounds);
+        } else {
+          transformCtl.bbox = L.rectangle(bounds, {
+            color: "#0d47a1",
+            weight: 1,
+            dashArray: "4 3",
+            fill: false,
+            interactive: false,
+          }).addTo(transformCtl.group);
+        }
+        if (transformCtl.stem) {
+          transformCtl.stem.setLatLngs([top, rotLatLng]);
+        } else {
+          transformCtl.stem = L.polyline([top, rotLatLng], {
+            color: "#0d47a1",
+            weight: 1,
+            interactive: false,
+          }).addTo(transformCtl.group);
+        }
+        var specs = [
+          { ll: nw, cls: "vhf-tf-scale vhf-tf-nw", corner: "nw", kind: "scale" },
+          { ll: ne, cls: "vhf-tf-scale vhf-tf-ne", corner: "ne", kind: "scale" },
+          { ll: se, cls: "vhf-tf-scale vhf-tf-se", corner: "se", kind: "scale" },
+          { ll: sw, cls: "vhf-tf-scale vhf-tf-sw", corner: "sw", kind: "scale" },
+        ];
+        if (!(layer instanceof L.Circle)) {
+          specs.push({
+            ll: rotLatLng,
+            cls: "vhf-tf-rotate",
+            corner: "rotate",
+            kind: "rotate",
+          });
+        }
+        if (!transformCtl.handles.length) {
+          specs.forEach(function (spec) {
+            var handle = makeTransformHandle(
+              spec.ll,
+              spec.kind,
+              spec.cls,
+              spec.corner,
+            );
+            handle.addTo(transformCtl.group);
+            transformCtl.handles.push(handle);
+          });
+          return;
+        }
+        transformCtl.handles.forEach(function (handle, i) {
+          if (keepHandle && handle === keepHandle) {
+            return;
+          }
+          if (specs[i]) {
+            handle.setLatLng(specs[i].ll);
+          }
+        });
+      }
+
+      function enableTransformOverlay(layer) {
+        clearTransformOverlay();
+        var box = document.getElementById("editor-transform");
+        var help = document.getElementById("editor-transform-help");
+        if (!layerCanTransform(layer) || transformCtl.hiddenForVertexEdit) {
+          if (box) {
+            box.classList.remove("is-visible");
+          }
+          return;
+        }
+        if (box) {
+          box.classList.add("is-visible");
+        }
+        if (help) {
+          help.textContent =
+            layer instanceof L.Circle
+              ? "Drag the circle to move it. Drag a square corner to change its size."
+              : "Drag the shape to move it. Drag a square corner to scale. Drag the round handle to rotate.";
+        }
+        transformCtl.layer = layer;
+        transformCtl.moveHandler = startMoveFromLayer;
+        layer.options.bubblingMouseEvents = false;
+        layer.on("mousedown", transformCtl.moveHandler);
+        refreshTransformOverlay();
+      }
+
+      function onTransformZoomEnd() {
+        if (transformCtl.layer && transformCtl.group) {
+          refreshTransformOverlay();
+        }
+      }
+
+      m.on("mousemove", onTransformMapMouseMove);
+      m.on("mouseup", onTransformMapMouseUp);
+      m.on("zoomend", onTransformZoomEnd);
+      document.addEventListener("mouseup", onTransformMapMouseUp);
+
       function closeEditor() {
+        clearTransformOverlay();
         if (currentEditLayer) {
           restoreLayerStyle(currentEditLayer);
         }
         currentEditLayer = null;
         document.body.classList.remove("editor-open");
         showEditorError("");
+        var box = document.getElementById("editor-transform");
+        if (box) {
+          box.classList.remove("is-visible");
+        }
         m.invalidateSize(true);
       }
 
@@ -2600,6 +3123,7 @@
         setEditorField("ed-curl", p.vhfdata.cargo && p.vhfdata.cargo.url);
         document.body.classList.add("editor-open");
         m.invalidateSize(true);
+        enableTransformOverlay(layer);
       }
 
       function setEditorField(id, value) {
