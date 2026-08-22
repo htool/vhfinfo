@@ -165,26 +165,10 @@
         { name: "searchPolygon" },
       );
     }
-    var pointNE = turf.destination(
-      currentPosition,
-      SEARCH_DISTANCE / 2,
-      45,
-      options,
-    );
-    var pointSW = turf.destination(
-      currentPosition,
-      SEARCH_DISTANCE / 2,
-      225,
-      options,
-    );
-    return turf.bboxPolygon(
-      turf.bbox(
-        turf.lineString([
-          pointNE.geometry.coordinates,
-          pointSW.geometry.coordinates,
-        ]),
-      ),
-    );
+    return turf.circle([lng, lat], SEARCH_DISTANCE / 1000, {
+      steps: 32,
+      units: "kilometers",
+    });
   }
 
   function distanceToPolygon(point, polygon) {
@@ -508,6 +492,14 @@
     }
   }
 
+  function setActiveButtons(mode) {
+    gpsBtn.classList.toggle("is-on", mode === "gps");
+    gpsBtn.classList.toggle("btn-gold", mode === "gps");
+    gpsBtn.classList.toggle("btn-dark", mode !== "gps");
+    amsterdamBtn.classList.toggle("is-on", mode === "amsterdam");
+    ijsselmeerBtn.classList.toggle("is-on", mode === "ijsselmeer");
+  }
+
   function startGps() {
     if (!navigator.geolocation) {
       setStatus("This browser has no geolocation. Use a demo location.");
@@ -515,6 +507,7 @@
     }
     setStatus("Locating…");
     sourceLabel = "GPS";
+    setActiveButtons("gps");
     navigator.geolocation.getCurrentPosition(
       function (pos) {
         useCoords(pos.coords.latitude, pos.coords.longitude, "GPS");
@@ -598,6 +591,7 @@
       return;
     }
     stopWatch();
+    setActiveButtons(key);
     useCoords(demo.lat, demo.lon, demo.label);
     var url = new URL(window.location.href);
     url.searchParams.set("demo", key);
