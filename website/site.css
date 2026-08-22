@@ -602,6 +602,39 @@ body.page-info .vhf-info-block .url {
 }
 
 @media (max-width: 560px) {
+  body.page-info .info-toolbar {
+    padding: 0.4rem 0 0.5rem;
+  }
+
+  body.page-info .info-toolbar .wrap {
+    width: min(100% - 1rem, var(--max));
+  }
+
+  body.page-info .info-status {
+    margin: 0 0 0.35rem;
+    font-size: 0.9rem;
+  }
+
+  body.page-info .info-actions {
+    gap: 0.3rem;
+  }
+
+  body.page-info .info-actions .btn {
+    min-height: 2.25rem;
+    padding: 0.22rem 0.58rem;
+    font-size: 0.8rem;
+    border-radius: 8px;
+  }
+
+  body.page-info .info-layers {
+    margin-top: 0.3rem;
+  }
+
+  /* Keep Amsterdam demo; drop the IJsselmeer demo on phones. */
+  body.page-info #btn-ijsselmeer {
+    display: none;
+  }
+
   body.page-info .vhf-info-block {
     grid-template-columns: minmax(0, 1fr) auto auto;
     grid-template-areas:
