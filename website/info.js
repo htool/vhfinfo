@@ -459,69 +459,15 @@
     }
     var info = window.vhfFeatureInfo;
     items.forEach(function (feature, id) {
-      var channel =
-        feature.channel == null
-          ? "-"
-          : String(feature.channel).replace(/[/,]/g, " ");
-      var type = info
-        ? info.typeLabel(feature.type)
-        : String(feature.type || "").toUpperCase();
-      var mode = String((info ? info.pickMode(feature) : "") || "").toUpperCase();
+      if (info && info.infoBlockElement) {
+        listEl.appendChild(info.infoBlockElement(feature, id));
+        return;
+      }
       var distanceText =
         feature.distance < 0 ? "INSIDE" : feature.distance + "m";
-      var url = info ? info.pickUrl(feature) : "";
-      var phone = info ? info.pickPhone(feature) : "";
-
       var entry = document.createElement("article");
-      entry.className = "entry";
-      entry.id = "entry_" + id;
-
-      var icons = "";
-      if (url) {
-        icons +=
-          '<a class="url" href="' +
-          escapeHtml(url) +
-          '" target="_blank" rel="noopener noreferrer" aria-label="Source link">&#128279;</a>';
-      }
-      if (phone) {
-        icons +=
-          '<a class="phone" href="tel:' +
-          escapeHtml(phone) +
-          '" aria-label="Call">&#9990;</a>';
-      }
-
-      var details = info
-        ? info.buildInfoTable(feature, { omit: ["heading", "vhf"] })
-        : "";
-      var name = feature.name || type || "";
-
-      entry.innerHTML =
-        (name
-          ? '<h2 class="feature-name">' + escapeHtml(name) + "</h2>"
-          : "") +
-        '<div class="channelblock">' +
-        '<div class="channel">' +
-        escapeHtml(channel) +
-        "</div>" +
-        '<div class="typeblock">' +
-        '<div class="type">' +
-        escapeHtml(type) +
-        "</div>" +
-        (mode ? '<div class="mode">' + escapeHtml(mode) + "</div>" : "") +
-        '<div class="distance">' +
-        escapeHtml(distanceText) +
-        "</div>" +
-        "</div>" +
-        '<div class="icons">' +
-        icons +
-        "</div>" +
-        "</div>" +
-        details;
-
-      if (channel.length > 3) {
-        entry.querySelector(".channel").style.fontSize =
-          Math.max(1.35, 2.8 - channel.length * 0.28) + "rem";
-      }
+      entry.className = "vhf-info-block nearby";
+      entry.textContent = (feature.name || "") + " · " + distanceText;
       listEl.appendChild(entry);
     });
   }
