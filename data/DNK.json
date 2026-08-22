@@ -2751,7 +2751,7 @@
         "name": "Copenhagen (Lynetten) remote station",
         "callname": "Lyngby Radio",
         "type": "area",
-        "channel": "3",
+        "channel": "3 / 5",
         "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
         "vhfdata": {
           "generic": {
@@ -3395,11 +3395,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "8d7dd109-651b-5aee-b02b-e4802df33b4b",
+        "id": "a172cf1e-5dc4-5ed6-ac28-7a792abcbe73",
         "name": "Bornholm (Årsballe) remote station",
         "callname": "Lyngby Radio",
         "type": "area",
-        "channel": "1",
+        "channel": "1 / 4",
         "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
         "vhfdata": {
           "generic": {
@@ -4853,11 +4853,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "b1d8e104-27da-5c39-8468-5e6bcf2cf560",
+        "id": "9ac9855d-f6ce-59dd-863f-1542a243bed3",
         "name": "Skagen remote station",
         "callname": "Lyngby Radio",
         "type": "area",
-        "channel": "4",
+        "channel": "4 / 65",
         "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
         "vhfdata": {
           "generic": {
