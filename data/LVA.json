@@ -1,5 +1,653 @@
 {
   "type": "FeatureCollection",
   "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "5a0a0ec5-4b1d-5609-b00c-106839ad6bcc",
+        "name": "Riga Rescue Radio (MRCC Riga)",
+        "callname": "Riga Rescue Radio",
+        "type": "area",
+        "channel": "71",
+        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "Latvian coast / traffic radio as shown on the 2017 Stockholmradio Nordic VHF map. MRCC Riga broadcasts weather and warnings on channel 71 at 07:03 and 15:03 local. Liepaja Traffic local weather on channel 11 at 08:05 and 20:05 local. Riga Traffic and Ventspils Traffic channel 9, weather on request. Local time = UTC+2 standard, UTC+3 summer."
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              24.105,
+              57.583629
+            ],
+            [
+              24.304964,
+              57.572911
+            ],
+            [
+              24.496904,
+              57.541187
+            ],
+            [
+              24.67316,
+              57.489728
+            ],
+            [
+              24.826772,
+              57.42059
+            ],
+            [
+              24.951779,
+              57.336521
+            ],
+            [
+              25.043455,
+              57.240842
+            ],
+            [
+              25.098475,
+              57.137305
+            ],
+            [
+              25.115012,
+              57.029935
+            ],
+            [
+              25.092759,
+              56.922876
+            ],
+            [
+              25.032892,
+              56.820219
+            ],
+            [
+              24.937977,
+              56.725858
+            ],
+            [
+              24.811831,
+              56.643345
+            ],
+            [
+              24.659356,
+              56.575763
+            ],
+            [
+              24.486338,
+              56.525623
+            ],
+            [
+              24.299245,
+              56.494779
+            ],
+            [
+              24.105,
+              56.484371
+            ],
+            [
+              23.910755,
+              56.494779
+            ],
+            [
+              23.723662,
+              56.525623
+            ],
+            [
+              23.550644,
+              56.575763
+            ],
+            [
+              23.398169,
+              56.643345
+            ],
+            [
+              23.272023,
+              56.725858
+            ],
+            [
+              23.177108,
+              56.820219
+            ],
+            [
+              23.117241,
+              56.922876
+            ],
+            [
+              23.094988,
+              57.029935
+            ],
+            [
+              23.111525,
+              57.137305
+            ],
+            [
+              23.166545,
+              57.240842
+            ],
+            [
+              23.258221,
+              57.336521
+            ],
+            [
+              23.383228,
+              57.42059
+            ],
+            [
+              23.53684,
+              57.489728
+            ],
+            [
+              23.713096,
+              57.541187
+            ],
+            [
+              23.905036,
+              57.572911
+            ],
+            [
+              24.105,
+              57.583629
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "af3d79b2-f9e1-56ef-abc2-9b83d0a8dd44",
+        "name": "Liepaja Traffic",
+        "callname": "Liepaja Traffic",
+        "type": "area",
+        "channel": "11",
+        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "Latvian coast / traffic radio as shown on the 2017 Stockholmradio Nordic VHF map. MRCC Riga broadcasts weather and warnings on channel 71 at 07:03 and 15:03 local. Liepaja Traffic local weather on channel 11 at 08:05 and 20:05 local. Riga Traffic and Ventspils Traffic channel 9, weather on request. Local time = UTC+2 standard, UTC+3 summer."
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.013,
+              57.066629
+            ],
+            [
+              21.210172,
+              57.055914
+            ],
+            [
+              21.399438,
+              57.024199
+            ],
+            [
+              21.573251,
+              56.972753
+            ],
+            [
+              21.724751,
+              56.90363
+            ],
+            [
+              21.84806,
+              56.819577
+            ],
+            [
+              21.938514,
+              56.723911
+            ],
+            [
+              21.99283,
+              56.620381
+            ],
+            [
+              22.009196,
+              56.513015
+            ],
+            [
+              21.987302,
+              56.405951
+            ],
+            [
+              21.928299,
+              56.303286
+            ],
+            [
+              21.834712,
+              56.208912
+            ],
+            [
+              21.710302,
+              56.126384
+            ],
+            [
+              21.559901,
+              56.058787
+            ],
+            [
+              21.38922,
+              56.008634
+            ],
+            [
+              21.204641,
+              55.977782
+            ],
+            [
+              21.013,
+              55.967371
+            ],
+            [
+              20.821359,
+              55.977782
+            ],
+            [
+              20.63678,
+              56.008634
+            ],
+            [
+              20.466099,
+              56.058787
+            ],
+            [
+              20.315698,
+              56.126384
+            ],
+            [
+              20.191288,
+              56.208912
+            ],
+            [
+              20.097701,
+              56.303286
+            ],
+            [
+              20.038698,
+              56.405951
+            ],
+            [
+              20.016804,
+              56.513015
+            ],
+            [
+              20.03317,
+              56.620381
+            ],
+            [
+              20.087486,
+              56.723911
+            ],
+            [
+              20.17794,
+              56.819577
+            ],
+            [
+              20.301249,
+              56.90363
+            ],
+            [
+              20.452749,
+              56.972753
+            ],
+            [
+              20.626562,
+              57.024199
+            ],
+            [
+              20.815828,
+              57.055914
+            ],
+            [
+              21.013,
+              57.066629
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "2a048b4b-5e86-5a42-ba5c-3b62de12e608",
+        "name": "Ventspils Traffic",
+        "callname": "Ventspils Traffic",
+        "type": "area",
+        "channel": "9",
+        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "Latvian coast / traffic radio as shown on the 2017 Stockholmradio Nordic VHF map. MRCC Riga broadcasts weather and warnings on channel 71 at 07:03 and 15:03 local. Liepaja Traffic local weather on channel 11 at 08:05 and 20:05 local. Riga Traffic and Ventspils Traffic channel 9, weather on request. Local time = UTC+2 standard, UTC+3 summer."
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.564,
+              57.943629
+            ],
+            [
+              21.765966,
+              57.932909
+            ],
+            [
+              21.959822,
+              57.901178
+            ],
+            [
+              22.137828,
+              57.84971
+            ],
+            [
+              22.292953,
+              57.780561
+            ],
+            [
+              22.419177,
+              57.696481
+            ],
+            [
+              22.511727,
+              57.600793
+            ],
+            [
+              22.567252,
+              57.49725
+            ],
+            [
+              22.583911,
+              57.389879
+            ],
+            [
+              22.5614,
+              57.282822
+            ],
+            [
+              22.500913,
+              57.180171
+            ],
+            [
+              22.405046,
+              57.08582
+            ],
+            [
+              22.277657,
+              57.003317
+            ],
+            [
+              22.123695,
+              56.935746
+            ],
+            [
+              21.949004,
+              56.885615
+            ],
+            [
+              21.76011,
+              56.854777
+            ],
+            [
+              21.564,
+              56.844371
+            ],
+            [
+              21.36789,
+              56.854777
+            ],
+            [
+              21.178996,
+              56.885615
+            ],
+            [
+              21.004305,
+              56.935746
+            ],
+            [
+              20.850343,
+              57.003317
+            ],
+            [
+              20.722954,
+              57.08582
+            ],
+            [
+              20.627087,
+              57.180171
+            ],
+            [
+              20.5666,
+              57.282822
+            ],
+            [
+              20.544089,
+              57.389879
+            ],
+            [
+              20.560748,
+              57.49725
+            ],
+            [
+              20.616273,
+              57.600793
+            ],
+            [
+              20.708823,
+              57.696481
+            ],
+            [
+              20.835047,
+              57.780561
+            ],
+            [
+              20.990172,
+              57.84971
+            ],
+            [
+              21.168178,
+              57.901178
+            ],
+            [
+              21.362034,
+              57.932909
+            ],
+            [
+              21.564,
+              57.943629
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "e5feec49-bf2f-53ed-9063-4a731fd30b78",
+        "name": "Riga Traffic",
+        "callname": "Riga Traffic",
+        "type": "area",
+        "channel": "9",
+        "url": "https://stockholmradio.se/wp-content/uploads/2017/09/VHF-kartan-Norden-2017.pdf",
+        "vhfdata": {
+          "generic": {
+            "mode": "listen",
+            "note": "Latvian coast / traffic radio as shown on the 2017 Stockholmradio Nordic VHF map. MRCC Riga broadcasts weather and warnings on channel 71 at 07:03 and 15:03 local. Liepaja Traffic local weather on channel 11 at 08:05 and 20:05 local. Riga Traffic and Ventspils Traffic channel 9, weather on request. Local time = UTC+2 standard, UTC+3 summer."
+          },
+          "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              24.09,
+              57.586629
+            ],
+            [
+              24.289981,
+              57.575911
+            ],
+            [
+              24.481937,
+              57.544187
+            ],
+            [
+              24.658207,
+              57.492728
+            ],
+            [
+              24.811831,
+              57.42359
+            ],
+            [
+              24.936848,
+              57.339521
+            ],
+            [
+              25.028531,
+              57.243842
+            ],
+            [
+              25.083556,
+              57.140304
+            ],
+            [
+              25.100094,
+              57.032935
+            ],
+            [
+              25.077839,
+              56.925875
+            ],
+            [
+              25.017967,
+              56.823219
+            ],
+            [
+              24.923044,
+              56.728858
+            ],
+            [
+              24.796888,
+              56.646345
+            ],
+            [
+              24.6444,
+              56.578763
+            ],
+            [
+              24.471368,
+              56.528622
+            ],
+            [
+              24.284261,
+              56.497779
+            ],
+            [
+              24.09,
+              56.487371
+            ],
+            [
+              23.895739,
+              56.497779
+            ],
+            [
+              23.708632,
+              56.528622
+            ],
+            [
+              23.5356,
+              56.578763
+            ],
+            [
+              23.383112,
+              56.646345
+            ],
+            [
+              23.256956,
+              56.728858
+            ],
+            [
+              23.162033,
+              56.823219
+            ],
+            [
+              23.102161,
+              56.925875
+            ],
+            [
+              23.079906,
+              57.032935
+            ],
+            [
+              23.096444,
+              57.140304
+            ],
+            [
+              23.151469,
+              57.243842
+            ],
+            [
+              23.243152,
+              57.339521
+            ],
+            [
+              23.368169,
+              57.42359
+            ],
+            [
+              23.521793,
+              57.492728
+            ],
+            [
+              23.698063,
+              57.544187
+            ],
+            [
+              23.890019,
+              57.575911
+            ],
+            [
+              24.09,
+              57.586629
+            ]
+          ]
+        ]
+      }
+    }
   ]
 }
