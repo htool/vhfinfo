@@ -440,34 +440,6 @@
     return nearby.slice(0, MAX_RESULTS);
   }
 
-  function pickVhf(feature, field) {
-    var data = feature.vhfdata || {};
-    if (data.pleasure && data.pleasure[field]) {
-      return data.pleasure[field];
-    }
-    if (data.generic && data.generic[field]) {
-      return data.generic[field];
-    }
-    if (feature[field]) {
-      return feature[field];
-    }
-    return "";
-  }
-
-  function noteLines(feature) {
-    var lines = [];
-    var data = feature.vhfdata || {};
-    if (feature.note) {
-      lines.push(String(feature.note));
-    }
-    ["generic", "pleasure", "cargo"].forEach(function (kind) {
-      if (data[kind] && data[kind].note) {
-        lines.push(kind.toUpperCase() + ": " + data[kind].note);
-      }
-    });
-    return lines;
-  }
-
   function renderList(items) {
     listEl.innerHTML = "";
     if (!items.length) {
@@ -485,20 +457,20 @@
       listEl.innerHTML = '<p class="info-empty">' + escapeHtml(empty) + "</p>";
       return;
     }
+    var info = window.vhfFeatureInfo;
     items.forEach(function (feature, id) {
-      var channel = feature.channel == null ? "-" : String(feature.channel).replace(/[/,]/g, " ");
-      var type = String(feature.type || "").toUpperCase();
-      if (type === "VTS RADAR SUPPORT") {
-        type = "VTS RADAR";
-      }
-      var mode = String(pickVhf(feature, "mode") || "").toUpperCase();
+      var channel =
+        feature.channel == null
+          ? "-"
+          : String(feature.channel).replace(/[/,]/g, " ");
+      var type = info
+        ? info.typeLabel(feature.type)
+        : String(feature.type || "").toUpperCase();
+      var mode = String((info ? info.pickMode(feature) : "") || "").toUpperCase();
       var distanceText =
         feature.distance < 0 ? "INSIDE" : feature.distance + "m";
-      var phone = pickVhf(feature, "phone");
-      var url = pickVhf(feature, "url");
-      var name = feature.name ? "Name: " + feature.name : "";
-      var callsign = feature.callname ? "Callsign: " + feature.callname : "";
-      var notes = noteLines(feature);
+      var url = info ? info.pickUrl(feature) : "";
+      var phone = info ? info.pickPhone(feature) : "";
 
       var entry = document.createElement("article");
       entry.className = "entry";
@@ -518,17 +490,7 @@
           '" aria-label="Call">&#9990;</a>';
       }
 
-      var notesHtml = "";
-      if (notes.length) {
-        notesHtml =
-          '<div class="notes">' +
-          notes
-            .map(function (line) {
-              return '<div class="note">' + escapeHtml(line) + "</div>";
-            })
-            .join("") +
-          "</div>";
-      }
+      var details = info ? info.buildInfoTable(feature) : "";
 
       entry.innerHTML =
         '<div class="channelblock">' +
@@ -548,11 +510,7 @@
         icons +
         "</div>" +
         "</div>" +
-        (name ? '<div class="name">' + escapeHtml(name) + "</div>" : "") +
-        (callsign
-          ? '<div class="callname">' + escapeHtml(callsign) + "</div>"
-          : "") +
-        notesHtml;
+        details;
 
       if (channel.length > 3) {
         entry.querySelector(".channel").style.fontSize =

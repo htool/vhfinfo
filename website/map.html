@@ -29,6 +29,7 @@
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9140576115803931"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="site.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
@@ -79,6 +80,7 @@
     <script src="supabase-config.js?v=10"></script>
     <script src="auth.js?v=10"></script>
     <script src="features-db.js?v=10"></script>
+    <script src="feature-info.js"></script>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
@@ -88,7 +90,7 @@
       html {
         height: 100%;
       }
-      body {
+      body.page-map {
         height: 100%;
         margin: 0;
         padding: 0;
@@ -97,6 +99,12 @@
       #map {
         resize: vertical;
         height: 100%;
+      }
+      .leaflet-popup-content .feature-info {
+        border-collapse: collapse;
+      }
+      .leaflet-popup-content .feature-info td {
+        padding: 2px 6px 2px 0;
       }
       #panel {
         display: flex;
@@ -627,7 +635,27 @@
 
     <title>VHF info</title>
   </head>
-  <body>
+  <body class="page-map">
+    <a class="skip-link" href="#map">Skip to map</a>
+    <header class="site-header">
+      <a class="site-brand" href="./index.html">VHFinfo</a>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        Menu
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="./index.html">Home</a>
+        <a href="./map.html" aria-current="page">Map</a>
+        <a href="./info.html">Nearby</a>
+        <a href="./index.html#contact">Contact</a>
+        <a href="./index.html#donate">Donate</a>
+      </nav>
+    </header>
+    <div class="map-shell">
     <div id="map"></div>
     <div class="compass" id="compass"></div>
     <div id="panel">
@@ -647,6 +675,7 @@
         <div class="phone" id="phone_1"></div>
         <div class="url" id="url_1"></div>
       </div>
+    </div>
     </div>
     <style>
       table td,
@@ -881,6 +910,7 @@
       <button type="button" id="auth-sign-out">Sign out</button>
     </div>
 
+    <script src="site.js"></script>
     <script type="text/javascript">
       var countriesGeoObj;
       var countriesGeoJSON = { type: "FeatureCollection", features: [] };
@@ -2132,72 +2162,16 @@
         }
 
         let p = f.properties;
-
-        var html =
-          '<table><tr><td colspan="2"><b>' +
-          "[" +
-          p.type.toUpperCase() +
-          "] " +
-          p.name +
-          "</b></td></tr>";
-        if (typeof p.callname != "undefined") {
-          html =
-            html +
-            "<tr><td>Call&nbsp;sign</td><td>" +
-            p.callname +
-            "</td></tr>";
-        }
-        html =
-          html +
-          "<tr><td>VHF</td><td>" +
-          p.channel +
-          " (" +
-          p.vhfdata.generic.mode +
-          ")</td></tr>";
-
-        if (typeof p.url != "undefined" && p.url) {
-          html =
-            html +
-            '<tr><td>Info</td><td><a href="' +
-            escapeHtml(p.url) +
-            '" title="' +
-            escapeHtml(p.url) +
-            '" target="_blank" rel="noopener noreferrer">' +
-            escapeHtml(shortUrlLabel(p.url)) +
-            "</a></td></tr>";
-        }
-        if (typeof p.phone != "undefined") {
-          html =
-            html +
-            '<tr><td>Phone</td><td><a href="tel:' +
-            p.phone +
-            '">' +
-            p.phone +
-            "</a></td></tr>";
-        }
-        if (typeof p.update != "undefined" && p.update != "") {
-          var update;
-          try {
-            update = cronstrue.toString(p.update + " * * *");
-          } catch {
-            update = p.update;
-          }
-          html =
-            html + "<tr><td>Update schedule</td><td>" + update + "</td></tr>";
-        }
-
-        html = html + addHTML(p);
-        html = html + addHTML("Generic", p.vhfdata.generic);
-        html = html + addHTML("Pleasure", p.vhfdata.pleasure);
-        html = html + addHTML("Emergency", p.vhfdata.emergency);
-        html =
-          html +
+        var editLink =
           '<tr><td></td><td style="text-align: right;"><a href="#" class="popup-edit-link" data-country="' +
           escapeHtml(country || "") +
           '" data-id="' +
           escapeHtml((p && p.id) || "") +
           '" style="text-decoration: none;">Edit this info</a></td></tr>';
-        html = html + "</table>";
+        var html =
+          window.vhfFeatureInfo && window.vhfFeatureInfo.buildInfoTable
+            ? window.vhfFeatureInfo.buildInfoTable(p, { editLink: editLink })
+            : "<p>Missing feature-info.js</p>";
         if (layer.unbindPopup) {
           layer.unbindPopup();
         }
