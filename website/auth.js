@@ -411,7 +411,53 @@ function signInWithGoogle() {
         );
         return;
       }
-      window.location.assign(url);
+      return fetch(url, { redirect: "manual" })
+        .then(function (res) {
+          if (res.status >= 400) {
+            return res.json().then(
+              function (body) {
+                setGoogleBusy(false);
+                setAuthMessage(googleErrorMessage(body), true);
+              },
+              function () {
+                setGoogleBusy(false);
+                setAuthMessage(
+                  "Google sign-in is not enabled yet on this project. Use the email link for now, or turn on Google under Authentication → Providers in Supabase.",
+                  true,
+                );
+              },
+            );
+          }
+          window.location.assign(url);
+        })
+        .catch(function () {
+          var cfg = authConfig();
+          return fetch(cfg.url + "/auth/v1/settings", {
+            headers: {
+              apikey: cfg.anonKey,
+              Authorization: "Bearer " + cfg.anonKey,
+            },
+          })
+            .then(function (res) {
+              return res.json();
+            })
+            .then(function (settings) {
+              if (!(settings.external && settings.external.google)) {
+                setGoogleBusy(false);
+                setAuthMessage(
+                  googleErrorMessage({
+                    message: "Unsupported provider: provider is not enabled",
+                  }),
+                  true,
+                );
+                return;
+              }
+              window.location.assign(url);
+            })
+            .catch(function () {
+              window.location.assign(url);
+            });
+        });
     })
     .catch(function (err) {
       console.error(err);
