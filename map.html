@@ -78,7 +78,7 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.1/dist/umd/supabase.js"></script>
     <script src="supabase-config.js?v=10"></script>
-    <script src="auth.js?v=10"></script>
+    <script src="auth.js?v=13"></script>
     <script src="features-db.js?v=10"></script>
     <script src="feature-info.js"></script>
     <meta
@@ -606,11 +606,6 @@
         background: #1b5e20;
         color: #fff;
       }
-      #auth-google {
-        background: #fff;
-        color: #111;
-        border: 1px solid #ccc !important;
-      }
       #auth-cancel,
       #auth-use-other {
         background: #eee;
@@ -625,11 +620,6 @@
       .auth-message.auth-error {
         background: #fdecea;
         color: #8a1f11;
-      }
-      .auth-or {
-        text-align: center;
-        color: #666;
-        margin: 4px 0;
       }
     </style>
 
@@ -650,7 +640,7 @@
       <nav id="site-nav" class="site-nav" aria-label="Primary">
         <a href="./index.html">Home</a>
         <a href="./map.html" aria-current="page">Map</a>
-        <a href="./info.html">Nearby</a>
+        <a href="./nearby.html">Nearby</a>
         <a href="./index.html#contact">Contact</a>
         <a href="./index.html#donate">Donate</a>
       </nav>
@@ -873,8 +863,8 @@
         <h2>Sign in to change the map</h2>
         <p>
           Anyone can look at the map. To add or change a channel, sign in so we
-          know who made the change. There is no password — we email you a link,
-          or you can use your Google account.
+          know who made the change. There is no password — we email you a
+          sign-in link.
         </p>
         <div id="auth-message" class="auth-message"></div>
         <div id="auth-form">
@@ -887,8 +877,6 @@
           />
           <div class="auth-actions">
             <button type="button" id="auth-send">Email me a sign-in link</button>
-            <div class="auth-or">or</div>
-            <button type="button" id="auth-google">Continue with Google</button>
             <button type="button" id="auth-cancel">Not now</button>
           </div>
         </div>
@@ -3896,7 +3884,6 @@
         showEditorHint(TYPE_HINTS[this.value] || "");
       };
       document.getElementById("auth-send").onclick = sendMagicLink;
-      document.getElementById("auth-google").onclick = signInWithGoogle;
       document.getElementById("auth-cancel").onclick = cancelAuthModal;
       document.getElementById("auth-sent-close").onclick = hideAuthModal;
       document.getElementById("auth-use-other").onclick = resetAuthForm;
