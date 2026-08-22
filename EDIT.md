@@ -13,7 +13,7 @@ You want to be able to look ahead and 'see' the next channel, not what you've ju
 ## Editing info
 The only shapes to use are &#11203 (polygon) and &#9679; (circles). No 'points' as it's impossible to tell if you'll pass through the point.
 
-Click an area to select it. You can then **move**, **scale**, and **rotate** the whole shape: drag the fill to move, drag a square corner to scale, drag the round handle to rotate. Use the left-hand Edit tool if you need to change individual corners.
+Click an area to select it. **Move**, **Scale**, and **Rotate** buttons appear in the side panel and under the draw tools on the left. Drag the shape, or use the square handles to scale and the round handle to rotate. Use the left-hand Edit tool if you need to change individual corners.
 
 When you're done, tap **Publish changes**. Your signed-in email is attached to the change.
 
