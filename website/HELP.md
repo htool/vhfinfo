@@ -26,7 +26,7 @@ Press the ![26px](public/arrow.png) button to enable/disable follow mode.
 You can change format of the map coordinates by clicking the coordinates in the bottom left.
 
 ## Adding or changing information
-Find the area on the map, then press the pencil button. You will be asked to sign in (we email you a link, or you can use Google — no password). Stay on the same map: click an area to change its details, or draw a new one with the tools on the left.
+Find the area on the map, then press the pencil button. You will be asked to sign in (we email you a link — no password). Stay on the same map: click an area to change its details, or draw a new one with the tools on the left.
 
 When you are done, tap **Publish changes**. Your signed-in email is attached to the change.
 
