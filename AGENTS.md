@@ -4,14 +4,14 @@
 
 VHFinfo is a maritime VHF-channel dataset (`data/*.json` GeoJSON) plus two consumers:
 
-- **Map website** (`website/`): a static Leaflet map (`website/map.html`, `website/index.html`). It has no build step and pulls its GeoJSON at runtime from `https://raw.githubusercontent.com/htool/vhfinfo/main/data/...` (needs outbound internet), not from the local `data/` dir.
+- **Map website** (`website/`): a static Leaflet map (`website/map.html`, `website/index.html`) plus the Nearby list at `website/nearby.html` (legacy `website/info.html` is a query-preserving redirect). It has no build step and pulls its GeoJSON at runtime from `https://raw.githubusercontent.com/htool/vhfinfo/main/data/...` (needs outbound internet), not from the local `data/` dir.
 - **SignalK plugin** (`plugin/index.js`): the npm package itself (`main` in `package.json`). It runs inside an external SignalK server host and exposes `/plugins/vhfinfo/nearby` + `/plugins/vhfinfo/options`.
 
 ### Live site deploy (non-obvious)
 
 https://vhfinfo.org is Apache on Strato. The docroot is the **contents** of `website/` (`index.html` at `/`, not `/website/`).
 
-**Every time files under `website/` change, SFTP those changed pages/assets to the live docroot** with the same relative paths (`website/index.html` → `/index.html`, `website/info.js` → `/info.js`, images/fonts/`HELP.md` likewise). Upload only what changed unless a full sync is clearly needed.
+**Every time files under `website/` change, SFTP those changed pages/assets to the live docroot** with the same relative paths (`website/index.html` → `/index.html`, `website/nearby.html` → `/nearby.html`, `website/info.js` → `/info.js`, images/fonts/`HELP.md` likewise). Upload only what changed unless a full sync is clearly needed.
 
 - SFTP only (no SSH shell): `stu175515244@52922741.ssh.w1.strato.hosting:22`
 - Do **not** use `stu24273589` or `stu475512247` — those are the wrong jails and do not map to vhfinfo.org.
