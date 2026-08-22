@@ -2616,6 +2616,23 @@
         );
       }
 
+      function moveLatLngFromPixels(current) {
+        if (!transformCtl.startPoint || transformCtl.startZoom == null) {
+          return current;
+        }
+        var curPt = m.latLngToContainerPoint(current);
+        var dx = curPt.x - transformCtl.startPoint.x;
+        var dy = curPt.y - transformCtl.startPoint.y;
+        if (dx === 0 && dy === 0) {
+          return transformCtl.startLatLng;
+        }
+        var origin = m.project(
+          transformCtl.startLatLng,
+          transformCtl.startZoom,
+        );
+        return m.unproject(origin.add([dx, dy]), transformCtl.startZoom);
+      }
+
       function cloneLayerGeo(layer) {
         if (layer instanceof L.Circle) {
           var ll = layer.getLatLng();
@@ -2678,9 +2695,13 @@
         }
         if (geo.type === "Circle") {
           if (kind === "move") {
+            var movedTo = moveLatLngFromPixels(current);
+            if (!movedTo) {
+              return;
+            }
             layer.setLatLng([
-              geo.lat + (current.lat - start.lat),
-              geo.lng + (current.lng - start.lng),
+              geo.lat + (movedTo.lat - transformCtl.startLatLng.lat),
+              geo.lng + (movedTo.lng - transformCtl.startLatLng.lng),
             ]);
           } else if (kind === "scale") {
             var center = L.latLng(geo.lat, geo.lng);
@@ -2701,14 +2722,23 @@
         var curPt = turf.point([current.lng, current.lat]);
         var next = geo;
         if (kind === "move") {
-          var dist = turf.distance(startPt, curPt, { units: "meters" });
+          var dest = moveLatLngFromPixels(current);
+          if (!dest) {
+            return;
+          }
+          var fromPt = turf.point([
+            transformCtl.startLatLng.lng,
+            transformCtl.startLatLng.lat,
+          ]);
+          var toPt = turf.point([dest.lng, dest.lat]);
+          var dist = turf.distance(fromPt, toPt, { units: "meters" });
           if (dist === 0) {
             return;
           }
           next = turf.transformTranslate(
             geo,
             dist,
-            turf.bearing(startPt, curPt),
+            turf.bearing(fromPt, toPt),
             { units: "meters" },
           );
         } else if (kind === "rotate") {
@@ -2765,6 +2795,9 @@
         if (transformCtl.mapWasDraggable && m.dragging) {
           m.dragging.enable();
         }
+        if (transformCtl.mapHadBoxZoom && m.boxZoom) {
+          m.boxZoom.enable();
+        }
       }
 
       function finishTransformDrag() {
@@ -2805,13 +2838,22 @@
           return;
         }
         L.DomEvent.stop(e);
+        if (e.originalEvent) {
+          L.DomEvent.preventDefault(e.originalEvent);
+        }
         transformCtl.dragging = "move";
         transformCtl.moved = false;
         transformCtl.startGeo = cloneLayerGeo(transformCtl.layer);
         transformCtl.startLatLng = e.latlng;
+        transformCtl.startPoint = m.latLngToContainerPoint(e.latlng);
+        transformCtl.startZoom = m.getZoom();
         transformCtl.mapWasDraggable = m.dragging && m.dragging.enabled();
+        transformCtl.mapHadBoxZoom = m.boxZoom && m.boxZoom.enabled();
         if (m.dragging) {
           m.dragging.disable();
+        }
+        if (m.boxZoom) {
+          m.boxZoom.disable();
         }
         L.DomUtil.addClass(m.getContainer(), "vhf-transforming");
       }
@@ -2856,8 +2898,12 @@
             transformCtl.startBearing = turf.bearing(pivotPt, startPt);
           }
           transformCtl.mapWasDraggable = m.dragging && m.dragging.enabled();
+          transformCtl.mapHadBoxZoom = m.boxZoom && m.boxZoom.enabled();
           if (m.dragging) {
             m.dragging.disable();
+          }
+          if (m.boxZoom) {
+            m.boxZoom.disable();
           }
           L.DomUtil.addClass(m.getContainer(), "vhf-transforming");
         });
@@ -2971,6 +3017,7 @@
         }
         transformCtl.layer = layer;
         transformCtl.moveHandler = startMoveFromLayer;
+        layer.options.bubblingMouseEvents = false;
         layer.on("mousedown", transformCtl.moveHandler);
         refreshTransformOverlay();
       }
