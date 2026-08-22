@@ -13,7 +13,7 @@
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Russian GMDSS A1 coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map. MRCC St Petersburg MMSI 002733700; MRCC Kaliningrad MMSI 002734417. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
+            "note": "MMSI 002733700."
           },
           "pleasure": {
             "mode": "listen"
@@ -175,7 +175,7 @@
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Russian GMDSS A1 coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map. MRCC St Petersburg MMSI 002733700; MRCC Kaliningrad MMSI 002734417. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
+            "note": "MMSI 002733700."
           },
           "pleasure": {
             "mode": "listen"
@@ -337,7 +337,7 @@
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Russian GMDSS A1 coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map. MRCC St Petersburg MMSI 002733700; MRCC Kaliningrad MMSI 002734417. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
+            "note": "MMSI 002733700."
           },
           "pleasure": {
             "mode": "listen"
@@ -499,7 +499,7 @@
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Russian GMDSS A1 coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map. MRCC St Petersburg MMSI 002733700; MRCC Kaliningrad MMSI 002734417. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
+            "note": "MMSI 002733700."
           },
           "pleasure": {
             "mode": "listen"
@@ -661,7 +661,7 @@
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Russian GMDSS A1 coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map. MRCC St Petersburg MMSI 002733700; MRCC Kaliningrad MMSI 002734417. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
+            "note": "MMSI 002733700."
           },
           "pleasure": {
             "mode": "listen"
@@ -823,7 +823,7 @@
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Russian GMDSS A1 coast radio remote as shown on the 2026 Stockholmradio Nordic VHF map. MRCC St Petersburg MMSI 002733700; MRCC Kaliningrad MMSI 002734417. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
+            "note": "MMSI 002734417."
           },
           "pleasure": {
             "mode": "listen"

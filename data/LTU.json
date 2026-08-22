@@ -13,7 +13,7 @@
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Klaipeda (Radio 5) / MRCC Klaipeda (MMSI 002770330). MSI and weather on request; transmit request on channels 16 and 9. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
+            "note": "MMSI 002770330. MSI/weather on request (ch 16/09)."
           },
           "pleasure": {
             "mode": "listen"
@@ -175,7 +175,7 @@
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Klaipeda (Radio 5) / MRCC Klaipeda (MMSI 002770330). MSI and weather on request; transmit request on channels 16 and 9. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
+            "note": "MMSI 002770330. MSI/weather on request (ch 16/09)."
           },
           "pleasure": {
             "mode": "listen"
@@ -337,7 +337,7 @@
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Klaipeda (Radio 5) / MRCC Klaipeda (MMSI 002770330). MSI and weather on request; transmit request on channels 16 and 9. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
+            "note": "MMSI 002770330. MSI/weather on request (ch 16/09)."
           },
           "pleasure": {
             "mode": "listen"

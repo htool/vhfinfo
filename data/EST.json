@@ -116,7 +116,7 @@
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Tallinn Radio (MMSI 002761000). Navigational warnings and weather on channels 1, 3, 5, 7, 20, 62, 64 and 66 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; weather also at 06:33 and 15:33 local time. Storm warnings immediately after silence minutes (hh:03, hh:18, hh:33, hh:48). Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
+            "note": "MMSI 002761000. MSI/weather 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather also 06:33, 15:33 local."
           },
           "pleasure": {
             "mode": "listen"
@@ -278,7 +278,7 @@
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Tallinn Radio (MMSI 002761000). Navigational warnings and weather on channels 1, 3, 5, 7, 20, 62, 64 and 66 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; weather also at 06:33 and 15:33 local time. Storm warnings immediately after silence minutes (hh:03, hh:18, hh:33, hh:48). Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
+            "note": "MMSI 002761000. MSI/weather 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather also 06:33, 15:33 local."
           },
           "pleasure": {
             "mode": "listen"
@@ -440,7 +440,7 @@
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Tallinn Radio (MMSI 002761000). Navigational warnings and weather on channels 1, 3, 5, 7, 20, 62, 64 and 66 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; weather also at 06:33 and 15:33 local time. Storm warnings immediately after silence minutes (hh:03, hh:18, hh:33, hh:48). Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
+            "note": "MMSI 002761000. MSI/weather 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather also 06:33, 15:33 local."
           },
           "pleasure": {
             "mode": "listen"
@@ -602,7 +602,7 @@
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Tallinn Radio (MMSI 002761000). Navigational warnings and weather on channels 1, 3, 5, 7, 20, 62, 64 and 66 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; weather also at 06:33 and 15:33 local time. Storm warnings immediately after silence minutes (hh:03, hh:18, hh:33, hh:48). Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
+            "note": "MMSI 002761000. MSI/weather 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather also 06:33, 15:33 local."
           },
           "pleasure": {
             "mode": "listen"
@@ -764,7 +764,7 @@
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Tallinn Radio (MMSI 002761000). Navigational warnings and weather on channels 1, 3, 5, 7, 20, 62, 64 and 66 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; weather also at 06:33 and 15:33 local time. Storm warnings immediately after silence minutes (hh:03, hh:18, hh:33, hh:48). Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
+            "note": "MMSI 002761000. MSI/weather 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather also 06:33, 15:33 local."
           },
           "pleasure": {
             "mode": "listen"
@@ -926,7 +926,7 @@
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Tallinn Radio (MMSI 002761000). Navigational warnings and weather on channels 1, 3, 5, 7, 20, 62, 64 and 66 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; weather also at 06:33 and 15:33 local time. Storm warnings immediately after silence minutes (hh:03, hh:18, hh:33, hh:48). Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
+            "note": "MMSI 002761000. MSI/weather 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather also 06:33, 15:33 local."
           },
           "pleasure": {
             "mode": "listen"
@@ -1088,7 +1088,7 @@
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Tallinn Radio (MMSI 002761000). Navigational warnings and weather on channels 1, 3, 5, 7, 20, 62, 64 and 66 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; weather also at 06:33 and 15:33 local time. Storm warnings immediately after silence minutes (hh:03, hh:18, hh:33, hh:48). Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
+            "note": "MMSI 002761000. MSI/weather 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather also 06:33, 15:33 local."
           },
           "pleasure": {
             "mode": "listen"
@@ -1250,7 +1250,7 @@
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Tallinn Radio (MMSI 002761000). Navigational warnings and weather on channels 1, 3, 5, 7, 20, 62, 64 and 66 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; weather also at 06:33 and 15:33 local time. Storm warnings immediately after silence minutes (hh:03, hh:18, hh:33, hh:48). Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
+            "note": "MMSI 002761000. MSI/weather 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather also 06:33, 15:33 local."
           },
           "pleasure": {
             "mode": "listen"
@@ -1412,7 +1412,7 @@
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Tallinn Radio (MMSI 002761000). Navigational warnings and weather on channels 1, 3, 5, 7, 20, 62, 64 and 66 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; weather also at 06:33 and 15:33 local time. Storm warnings immediately after silence minutes (hh:03, hh:18, hh:33, hh:48). Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
+            "note": "MMSI 002761000. MSI/weather 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather also 06:33, 15:33 local."
           },
           "pleasure": {
             "mode": "listen"
@@ -1574,7 +1574,7 @@
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Tallinn Radio (MMSI 002761000). Navigational warnings and weather on channels 1, 3, 5, 7, 20, 62, 64 and 66 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; weather also at 06:33 and 15:33 local time. Storm warnings immediately after silence minutes (hh:03, hh:18, hh:33, hh:48). Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
+            "note": "MMSI 002761000. MSI/weather 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather also 06:33, 15:33 local."
           },
           "pleasure": {
             "mode": "listen"
@@ -1736,7 +1736,7 @@
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Tallinn Radio (MMSI 002761000). Navigational warnings and weather on channels 1, 3, 5, 7, 20, 62, 64 and 66 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; weather also at 06:33 and 15:33 local time. Storm warnings immediately after silence minutes (hh:03, hh:18, hh:33, hh:48). Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
+            "note": "MMSI 002761000. MSI/weather 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather also 06:33, 15:33 local."
           },
           "pleasure": {
             "mode": "listen"
@@ -1898,7 +1898,7 @@
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Tallinn Radio (MMSI 002761000). Navigational warnings and weather on channels 1, 3, 5, 7, 20, 62, 64 and 66 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; weather also at 06:33 and 15:33 local time. Storm warnings immediately after silence minutes (hh:03, hh:18, hh:33, hh:48). Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
+            "note": "MMSI 002761000. MSI/weather 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather also 06:33, 15:33 local."
           },
           "pleasure": {
             "mode": "listen"
@@ -2060,7 +2060,7 @@
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Tallinn Radio (MMSI 002761000). Navigational warnings and weather on channels 1, 3, 5, 7, 20, 62, 64 and 66 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; weather also at 06:33 and 15:33 local time. Storm warnings immediately after silence minutes (hh:03, hh:18, hh:33, hh:48). Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
+            "note": "MMSI 002761000. MSI/weather 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather also 06:33, 15:33 local."
           },
           "pleasure": {
             "mode": "listen"
@@ -2222,7 +2222,7 @@
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Tallinn Radio (MMSI 002761000). Navigational warnings and weather on channels 1, 3, 5, 7, 20, 62, 64 and 66 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; weather also at 06:33 and 15:33 local time. Storm warnings immediately after silence minutes (hh:03, hh:18, hh:33, hh:48). Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
+            "note": "MMSI 002761000. MSI/weather 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather also 06:33, 15:33 local."
           },
           "pleasure": {
             "mode": "listen"
@@ -2384,7 +2384,7 @@
         "vhfdata": {
           "generic": {
             "mode": "listen",
-            "note": "Coast radio remote for Tallinn Radio (MMSI 002761000). Navigational warnings and weather on channels 1, 3, 5, 7, 20, 62, 64 and 66 at 02:33, 06:33, 10:33, 14:33, 18:33 and 22:33 UTC; weather also at 06:33 and 15:33 local time. Storm warnings immediately after silence minutes (hh:03, hh:18, hh:33, hh:48). Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
+            "note": "MMSI 002761000. MSI/weather 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather also 06:33, 15:33 local."
           },
           "pleasure": {
             "mode": "listen"
