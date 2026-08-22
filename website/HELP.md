@@ -27,6 +27,9 @@ When you are done, tap **Publish changes**. Your signed-in email is attached to 
 
 ## Editing info
 The only shapes to use are &#11203 (polygon) and &#9679; (circles). No 'points' as it's impossible to tell if you'll pass through the point.
+
+Click an area to select it. Drag the shape to **move** it, drag a square corner to **scale**, and drag the round handle to **rotate**. Use the left-hand Edit tool to change individual corners.
+
 See below for shape instructions.
 
 When you're done, tap **Publish changes**. Your signed-in email is attached to the change.
