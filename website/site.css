@@ -568,6 +568,9 @@ body.page-info .vhf-info-block .channel {
 body.page-info .vhf-info-block .type {
   grid-area: type;
   padding-top: 0.2rem;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
 }
 
 body.page-info .vhf-info-block .name {
@@ -596,6 +599,25 @@ body.page-info .vhf-info-block .phone {
 
 body.page-info .vhf-info-block .url {
   grid-area: url;
+}
+
+@media (max-width: 560px) {
+  body.page-info .vhf-info-block {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    grid-template-areas:
+      "channel phone url"
+      "type type type"
+      "name name name"
+      "note note note";
+    min-height: 9.25rem;
+    column-gap: 0.55rem;
+    padding: 0.7rem 0.8rem 0.95rem;
+  }
+
+  body.page-info .vhf-info-block .channel {
+    justify-self: start;
+    text-align: left;
+  }
 }
 
 body.page-info .info-empty {
