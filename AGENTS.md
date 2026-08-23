@@ -40,8 +40,9 @@ Do not delete VTS / lock / marina polygons or existing Norwegian
   only run it if you intend to reformat.
 - **Tests:** `node scripts/test-features-db.js` and
   `node scripts/test-sync-vhf-to-git.js`. `npm run sync:vhf:dry-run` compares
-  git `data/` to the live table (drift is possible; do not commit a country
-  overwrite unless that is the intent).
+  git `data/` to the live table. One country:
+  `node scripts/sync-vhf-to-git.js --country NLD --dry-run`. Drift is possible;
+  do not commit a country overwrite unless that is the intent.
 - **Run the SignalK plugin end-to-end without a full SignalK server**:
   `signalk-server` is the external host and is *not* a dependency of this
   repo. Load `plugin/index.js` with a mock `app` that implements

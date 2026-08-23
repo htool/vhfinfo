@@ -11,6 +11,7 @@
  * Usage:
  *   node scripts/sync-vhf-to-git.js --dry-run
  *   node scripts/sync-vhf-to-git.js
+ *   node scripts/sync-vhf-to-git.js --country NLD
  */
 
 const fs = require("fs")
@@ -21,15 +22,43 @@ const ROOT = path.resolve(__dirname, "..")
 const DATA_DIR = path.join(ROOT, "data")
 const SKIP_FILES = new Set(["countries.json", "countries_bbox.json"])
 
+function normalizeCountry(value) {
+  const country = String(value || "")
+    .trim()
+    .toUpperCase()
+  if (!/^[A-Z]{2,3}$/.test(country)) {
+    return ""
+  }
+  return country
+}
+
 function parseArgs(argv) {
-  const args = { dryRun: false }
+  const args = { dryRun: false, country: "" }
   for (let i = 2; i < argv.length; i++) {
     const a = argv[i]
-    if (a === "--dry-run") args.dryRun = true
-    else {
-      console.error("Unknown argument: " + a)
-      process.exit(2)
+    if (a === "--dry-run") {
+      args.dryRun = true
+      continue
     }
+    if (a === "--country") {
+      args.country = normalizeCountry(argv[i + 1])
+      if (!args.country) {
+        console.error("Expected a country code after --country")
+        process.exit(2)
+      }
+      i += 1
+      continue
+    }
+    if (a.indexOf("--country=") === 0) {
+      args.country = normalizeCountry(a.slice("--country=".length))
+      if (!args.country) {
+        console.error("Expected a country code after --country=")
+        process.exit(2)
+      }
+      continue
+    }
+    console.error("Unknown argument: " + a)
+    process.exit(2)
   }
   return args
 }
@@ -170,17 +199,25 @@ function stringifyCollection(collection) {
   )
 }
 
-async function fetchAllRows(url, anonKey) {
+function featuresQueryPath(country, offset, pageSize) {
+  let path =
+    "/rest/v1/vhf_features?select=id,country,name,type,channel,properties,geometry&order=country,id&limit=" +
+    pageSize +
+    "&offset=" +
+    offset
+  if (country) {
+    path += "&country=eq." + encodeURIComponent(country)
+  }
+  return path
+}
+
+async function fetchAllRows(url, anonKey, country) {
   const pageSize = 1000
   const all = []
   let offset = 0
   while (true) {
     const res = await fetch(
-      url.replace(/\/$/, "") +
-        "/rest/v1/vhf_features?select=id,country,name,type,channel,properties,geometry&order=country,id&limit=" +
-        pageSize +
-        "&offset=" +
-        offset,
+      url.replace(/\/$/, "") + featuresQueryPath(country, offset, pageSize),
       {
         headers: {
           apikey: anonKey,
@@ -224,27 +261,39 @@ function existingCountryFiles() {
     .sort()
 }
 
-function syncFiles(byCountry, dryRun) {
-  const files = existingCountryFiles()
-  const known = new Set(
-    files.map(function (name) {
-      return countryFromFilename(name)
+function syncFiles(byCountry, dryRun, options) {
+  options = options || {}
+  const dataDir = options.dataDir || DATA_DIR
+  const onlyCountries = (options.countries || [])
+    .map(normalizeCountry)
+    .filter(Boolean)
+  let files
+  if (onlyCountries.length) {
+    files = onlyCountries.map(function (country) {
+      return country + ".json"
     })
-  )
-  Object.keys(byCountry).forEach(function (country) {
-    if (!known.has(country)) {
-      files.push(country + ".json")
-      known.add(country)
-    }
-  })
-  files.sort()
+  } else {
+    files = existingCountryFiles()
+    const known = new Set(
+      files.map(function (name) {
+        return countryFromFilename(name)
+      })
+    )
+    Object.keys(byCountry).forEach(function (country) {
+      if (!known.has(country)) {
+        files.push(country + ".json")
+        known.add(country)
+      }
+    })
+    files.sort()
+  }
 
   const changed = []
   const unchanged = []
   for (let i = 0; i < files.length; i++) {
     const name = files[i]
     const country = countryFromFilename(name)
-    const dest = path.join(DATA_DIR, name)
+    const dest = path.join(dataDir, name)
     const next = toFeatureCollection(byCountry[country] || [])
     let prev = { type: "FeatureCollection", features: [] }
     if (fs.existsSync(dest)) {
@@ -276,11 +325,14 @@ async function main() {
   if (!cfg.url || !cfg.anonKey) {
     throw new Error("Missing public Supabase config")
   }
-  const rows = await fetchAllRows(cfg.url, cfg.anonKey)
+  const rows = await fetchAllRows(cfg.url, cfg.anonKey, args.country || "")
   const byCountry = groupFeatures(rows)
-  const result = syncFiles(byCountry, args.dryRun)
+  const result = syncFiles(byCountry, args.dryRun, {
+    countries: args.country ? [args.country] : [],
+  })
   const summary = {
     dryRun: args.dryRun,
+    country: args.country || null,
     rows: rows.length,
     countriesInDb: Object.keys(byCountry).length,
     filesUnchanged: result.unchanged,
@@ -291,10 +343,14 @@ async function main() {
 }
 
 module.exports = {
+  normalizeCountry: normalizeCountry,
+  parseArgs: parseArgs,
+  featuresQueryPath: featuresQueryPath,
   toFeatureCollection: toFeatureCollection,
   sameCollection: sameCollection,
   stringifyCollection: stringifyCollection,
   groupFeatures: groupFeatures,
+  syncFiles: syncFiles,
   stableClone: stableClone,
 }
 
