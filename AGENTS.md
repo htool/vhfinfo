@@ -10,7 +10,8 @@ SignalK plugin (`plugin/index.js`). The vhfinfo.org website lives in
   [htool/VHFinfoSite](https://github.com/htool/VHFinfoSite) and SFTP from that
   repo’s root (docroot = repo root). Live jail:
   `stu175515244@52922741.ssh.w1.strato.hosting:22`. Do **not** use
-  `stu24273589` or `stu475512247`.
+  `stu24273589` or `stu475512247`. The Cursor GitHub App must be installed on
+  `htool/VHFinfoSite` or agents cannot push there.
 - **SignalK plugin** (`plugin/index.js`): npm `main`. It runs inside an
   external SignalK server and exposes `/plugins/vhfinfo/nearby` +
   `/plugins/vhfinfo/options`.
