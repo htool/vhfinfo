@@ -1,5 +1,10 @@
 name: Sync VHF features from database
 
+# Backup copy of public.vhf_features → data/{CC}.json.
+# On-save pushes will come from htool/VHFinfoSite once that repo's
+# "Push VHF data to vhfinfo" Action is configured. Keep this schedule
+# until that Action is writing, then this file can be removed.
+
 on:
   schedule:
     - cron: "*/15 * * * *"

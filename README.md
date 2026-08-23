@@ -11,13 +11,18 @@ By collection the VHF channel info together with coordinate information it's eas
 ## Format used
 The information is collected as [GeoJSON](https://geojson.org/) which holds both coordinates and properties.
 
+## Repositories
+
+- **[htool/vhfinfo](https://github.com/htool/vhfinfo)** (this repo): GeoJSON in `data/` and the SignalK plugin.
+- **[htool/VHFinfoSite](https://github.com/htool/VHFinfoSite)**: [vhfinfo.org](https://vhfinfo.org) (map, Nearby, editor).
+
 ## Viewing information
-see if certain VHF information is already present, you can look at the [online map](https://vhfinfo.org/index.html)
+See if certain VHF information is already present on the [online map](https://vhfinfo.org/).
 
 ## Adding information
-Open the [online map](https://vhfinfo.org/map.html), find the area, and press the pencil. You stay on the same map. Changing the map requires signing in (email link, no password).
+Open the [online map](https://vhfinfo.org/map.html), find the area, and press the pencil. Changing the map requires signing in (email link, no password). Site source and sign-in setup live in [htool/VHFinfoSite](https://github.com/htool/VHFinfoSite).
 
-Site owners: see `AUTH_SETUP.md` to connect the free sign-in project. Feature rows live in Supabase (`supabase/README.md`); the website map reads that table, with GitHub as fallback. Git country files are synced from the table in the background.
+Feature rows live in Supabase (`supabase/README.md`). The map reads that table, with this repo’s `data/{CC}.json` as fallback. Publishing writes the table; country files here are synced from it.
 
 ### Drawing the coordinates on the map
 Goto one of the following country linke and draw the VHF channel area as a polygon.

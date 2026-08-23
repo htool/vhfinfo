@@ -7,7 +7,7 @@ const fs = require('fs')
 const path = require('path')
 
 const ROOT = path.resolve(__dirname, '..')
-const src = fs.readFileSync(path.join(ROOT, 'website', 'supabase-config.js'), 'utf8')
+const src = fs.readFileSync(path.join(ROOT, 'lib', 'supabase-config.js'), 'utf8')
 const url = (src.match(/url:\s*"([^"]+)"/) || [])[1]
 const anonKey = (src.match(/anonKey:\s*"([^"]+)"/) || [])[1]
 

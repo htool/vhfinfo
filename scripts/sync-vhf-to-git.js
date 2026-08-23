@@ -15,7 +15,7 @@
 
 const fs = require("fs")
 const path = require("path")
-const db = require("../website/features-db.js")
+const db = require("../lib/features-db.js")
 
 const ROOT = path.resolve(__dirname, "..")
 const DATA_DIR = path.join(ROOT, "data")
@@ -47,7 +47,7 @@ function countryFromFilename(name) {
 
 function readPublicSupabaseConfig() {
   const src = fs.readFileSync(
-    path.join(ROOT, "website", "supabase-config.js"),
+    path.join(ROOT, "lib", "supabase-config.js"),
     "utf8"
   )
   const url = (src.match(/url:\s*"([^"]+)"/) || [])[1]
@@ -55,12 +55,91 @@ function readPublicSupabaseConfig() {
   return { url, anonKey }
 }
 
-function featureKey(feature) {
-  return JSON.stringify({
-    id: feature && feature.properties && feature.properties.id,
-    properties: feature && feature.properties,
-    geometry: feature && feature.geometry,
+const COLLECTION_KEY_ORDER = ["type", "features"]
+const FEATURE_KEY_ORDER = ["type", "properties", "geometry"]
+const PROPERTY_KEY_ORDER = [
+  "id",
+  "name",
+  "callname",
+  "type",
+  "channel",
+  "update",
+  "url",
+  "phone",
+  "vhfdata",
+]
+const VHFDATA_KEY_ORDER = [
+  "generic",
+  "pleasure",
+  "passenger",
+  "fishing",
+  "cargo",
+  "emergency",
+]
+const MODE_KEY_ORDER = ["mode", "note", "url", "phone"]
+const GEOMETRY_KEY_ORDER = ["type", "coordinates", "geometries"]
+
+function keyOrderFor(parentKey) {
+  if (parentKey === "collection") return COLLECTION_KEY_ORDER
+  if (parentKey === "feature") return FEATURE_KEY_ORDER
+  if (parentKey === "properties") return PROPERTY_KEY_ORDER
+  if (parentKey === "vhfdata") return VHFDATA_KEY_ORDER
+  if (parentKey === "geometry") return GEOMETRY_KEY_ORDER
+  if (
+    parentKey === "generic" ||
+    parentKey === "pleasure" ||
+    parentKey === "passenger" ||
+    parentKey === "fishing" ||
+    parentKey === "cargo" ||
+    parentKey === "emergency"
+  ) {
+    return MODE_KEY_ORDER
+  }
+  return []
+}
+
+function stableClone(value, parentKey) {
+  if (Array.isArray(value)) {
+    return value.map(function (item) {
+      return stableClone(item)
+    })
+  }
+  if (!value || typeof value !== "object") {
+    return value
+  }
+  const preferred = keyOrderFor(parentKey)
+  const seen = {}
+  const ordered = []
+  preferred.forEach(function (key) {
+    if (Object.prototype.hasOwnProperty.call(value, key)) {
+      ordered.push(key)
+      seen[key] = true
+    }
   })
+  Object.keys(value)
+    .sort()
+    .forEach(function (key) {
+      if (!seen[key]) ordered.push(key)
+    })
+  const out = {}
+  ordered.forEach(function (key) {
+    if (parentKey === "collection" && key === "features") {
+      out[key] = (value[key] || []).map(function (feature) {
+        return stableClone(feature, "feature")
+      })
+      return
+    }
+    let childParent = key
+    if (parentKey === "feature" && key === "properties") childParent = "properties"
+    else if (parentKey === "feature" && key === "geometry") childParent = "geometry"
+    else if (parentKey === "properties" && key === "vhfdata") childParent = "vhfdata"
+    out[key] = stableClone(value[key], childParent)
+  })
+  return out
+}
+
+function featureKey(feature) {
+  return JSON.stringify(stableClone(feature, "feature"))
 }
 
 function sameCollection(a, b) {
@@ -79,11 +158,16 @@ function toFeatureCollection(features) {
     const idB = (b.properties && b.properties.id) || ""
     return idA < idB ? -1 : idA > idB ? 1 : 0
   })
-  return { type: "FeatureCollection", features: sorted }
+  return stableClone(
+    { type: "FeatureCollection", features: sorted },
+    "collection"
+  )
 }
 
 function stringifyCollection(collection) {
-  return JSON.stringify(collection, null, 2) + "\n"
+  return (
+    JSON.stringify(stableClone(collection, "collection"), null, 2) + "\n"
+  )
 }
 
 async function fetchAllRows(url, anonKey) {
@@ -211,6 +295,7 @@ module.exports = {
   sameCollection: sameCollection,
   stringifyCollection: stringifyCollection,
   groupFeatures: groupFeatures,
+  stableClone: stableClone,
 }
 
 if (require.main === module) {

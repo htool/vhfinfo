@@ -9,10 +9,10 @@ Project: `imgadhoivcpexrferorn` (`https://imgadhoivcpexrferorn.supabase.co`)
 
 Initial load is done: **380** unique rows (public `SELECT` works; anonymous writes are blocked). Re-running the import is an upsert by id.
 
-Publishing from the map writes `public.vhf_features`. A GitHub Action
-(`sync-vhf-from-db.yml`) copies the table into `data/{CC}.json` every 15
-minutes (and on manual run) so the SignalK plugin and GitHub fallback stay
-current. The browser no longer posts to `commit.vhfinfo.org`.
+Publishing from the map writes `public.vhf_features`.
+[htool/VHFinfoSite](https://github.com/htool/VHFinfoSite) then pushes the
+changed `data/{CC}.json` into this repo. A 15-minute Action here
+(`sync-vhf-from-db.yml`) remains as a backup until that push is live.
 
 ## What gets imported
 
@@ -40,7 +40,7 @@ Paste `/tmp/vhf-seed.sql` into the SQL editor and run it.
 SUPABASE_SERVICE_ROLE_KEY=... node scripts/import-vhf-features.js
 ```
 
-The service_role key is from **Project Settings → API**. Never put it in `website/`.
+The service_role key is from **Project Settings → API**. Never put it in the website repo.
 
 ## Check
 

@@ -1,5 +1,5 @@
 {
-  "description": "VHF GeoJSON information with SignalK plugin",
+  "description": "VHF GeoJSON dataset and SignalK plugin. Website: htool/VHFinfoSite.",
   "keywords": [
     "vhfinfo",
     "signalk-node-server-plugin",

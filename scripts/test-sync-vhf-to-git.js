@@ -42,4 +42,74 @@ const grouped = sync.groupFeatures([
 assert.strictEqual(grouped.NLD.length, 1)
 assert.strictEqual(grouped.DEU.length, 1)
 assert.ok(sync.stringifyCollection(col).endsWith("\n"))
+
+const shuffled = {
+  type: "Feature",
+  geometry: { coordinates: [1, 2], type: "Point" },
+  properties: {
+    vhfdata: {
+      cargo: { url: "https://ex", mode: "listen" },
+      generic: { mode: "listen", note: "n" },
+    },
+    name: "A",
+    id: a.properties.id,
+    type: "vts",
+    channel: "16",
+  },
+}
+assert.ok(
+  sync.sameCollection(
+    { type: "FeatureCollection", features: [shuffled] },
+    {
+      type: "FeatureCollection",
+      features: [
+        {
+          type: "Feature",
+          properties: {
+            id: a.properties.id,
+            name: "A",
+            type: "vts",
+            channel: "16",
+            vhfdata: {
+              generic: { mode: "listen", note: "n" },
+              cargo: { mode: "listen", url: "https://ex" },
+            },
+          },
+          geometry: { type: "Point", coordinates: [1, 2] },
+        },
+      ],
+    }
+  )
+)
+const stableText = sync.stringifyCollection(
+  sync.toFeatureCollection([shuffled])
+)
+const parsed = JSON.parse(stableText)
+assert.deepStrictEqual(Object.keys(parsed.features[0].properties), [
+  "id",
+  "name",
+  "type",
+  "channel",
+  "vhfdata",
+])
+assert.deepStrictEqual(Object.keys(parsed.features[0].properties.vhfdata), [
+  "generic",
+  "cargo",
+])
+assert.deepStrictEqual(
+  Object.keys(parsed.features[0].properties.vhfdata.cargo),
+  ["mode", "url"]
+)
+const renamed = {
+  type: "Feature",
+  properties: Object.assign({}, shuffled.properties, { name: "B" }),
+  geometry: shuffled.geometry,
+}
+assert.ok(
+  !sync.sameCollection(
+    { type: "FeatureCollection", features: [shuffled] },
+    { type: "FeatureCollection", features: [renamed] }
+  )
+)
+
 console.log("sync-vhf-to-git unit tests ok")
