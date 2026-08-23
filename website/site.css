@@ -516,8 +516,8 @@ body.page-info .vhf-info-block {
   grid-template-columns: auto minmax(0, 1fr) auto auto;
   grid-template-areas:
     "channel type phone url"
-    "channel name name name"
-    "channel note note note";
+    "name name name name"
+    "note note note note";
   column-gap: 0.4rem;
   row-gap: 0.2rem;
   align-items: start;
