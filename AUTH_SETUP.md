@@ -38,7 +38,19 @@ Open the map, tap the pencil, enter your email, tap **Email me a sign-in link**,
 ## 4. Feature table (shadow copy)
 
 The website map loads `public.vhf_features` (view and edit). GitHub is the
-fallback. Publishing writes the table; `scripts/sync-vhf-to-git.js` plus the
-`Sync VHF features from database` GitHub Action keep `data/{CC}.json` in
-sync for the plugin. You can turn off `commit.vhfinfo.org` after this is on
-`main`.
+fallback. Publishing writes the table, then asks GitHub to rewrite that
+country’s `data/{CC}.json` (`sync-git.php` → `repository_dispatch` →
+`scripts/sync-vhf-to-git.js --country CC`). A 15-minute Action remains as a
+safety net. You can turn off `commit.vhfinfo.org` after this is on `main`.
+
+### GitHub token for on-save sync
+
+Create a classic PAT with `public_repo` (or a fine-grained token that can
+dispatch workflows on `htool/vhfinfo`). Put **only** the token in a file named
+`sync-git.token` in the live site docroot (same folder as `map.html`). Do not
+commit it. `.htaccess` blocks HTTP reads of that file.
+
+```bash
+# from the machine that can SFTP to vhfinfo.org
+# contents of sync-git.token: the PAT, nothing else
+```

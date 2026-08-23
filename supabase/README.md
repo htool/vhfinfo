@@ -9,10 +9,17 @@ Project: `imgadhoivcpexrferorn` (`https://imgadhoivcpexrferorn.supabase.co`)
 
 Initial load is done: **380** unique rows (public `SELECT` works; anonymous writes are blocked). Re-running the import is an upsert by id.
 
-Publishing from the map writes `public.vhf_features`. A GitHub Action
-(`sync-vhf-from-db.yml`) copies the table into `data/{CC}.json` every 15
-minutes (and on manual run) so the SignalK plugin and GitHub fallback stay
-current. The browser no longer posts to `commit.vhfinfo.org`.
+Publishing from the map writes `public.vhf_features`, then triggers
+`Sync VHF features from database` for **that country only** so `data/{CC}.json`
+updates on save. The same Action still runs every 15 minutes as a backup.
+The browser no longer posts to `commit.vhfinfo.org`.
+
+To rewrite one country by hand:
+
+```bash
+node scripts/sync-vhf-to-git.js --country NLD --dry-run
+node scripts/sync-vhf-to-git.js --country NLD
+```
 
 ## What gets imported
 
