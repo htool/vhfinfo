@@ -387,20 +387,6 @@ body.page-info {
   font-family: Handset, "Arial Narrow", "Helvetica Condensed", sans-serif;
 }
 
-body.page-info .site-header {
-  background: #111;
-}
-
-body.page-info .site-nav {
-  background: #1a1a1a;
-}
-
-@media (min-width: 720px) {
-  body.page-info .site-nav {
-    background: transparent;
-  }
-}
-
 body.page-info .info-toolbar {
   background: #111;
   border-bottom: 1px solid #333;
