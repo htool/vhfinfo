@@ -4,24 +4,86 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "52d85cca-11f3-4d19-8e56-de88c6bf5d83",
-        "name": "Shilshole Bay Marina",
-        "callname": "Shilshole Bay Marina",
+        "id": "3b886e9d-6b90-42a2-b026-1f07f896f2fd",
+        "url": "https://charlestownmamarina.com/",
+        "name": "Charlestown Marina",
         "type": "marina",
-        "channel": "17",
-        "url": "https://",
-        "phone": "+1206-601-4089",
+        "phone": "+1617.242.2020",
+        "channel": "71",
         "vhfdata": {
+          "cargo": {
+            "mode": "listen"
+          },
+          "generic": {
+            "mode": "announce"
+          },
+          "pleasure": {
+            "mode": "listen"
+          }
+        },
+        "callname": "Charlestown Marina"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.049978733063,
+              42.376046500333
+            ],
+            [
+              -71.049356460571,
+              42.377171952442
+            ],
+            [
+              -71.047425270081,
+              42.376220867473
+            ],
+            [
+              -71.047661304474,
+              42.374873472444
+            ],
+            [
+              -71.049592494965,
+              42.371924954244
+            ],
+            [
+              -71.051180362701,
+              42.373304117085
+            ],
+            [
+              -71.050794124603,
+              42.373510196288
+            ],
+            [
+              -71.049978733063,
+              42.376046500333
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "52d85cca-11f3-4d19-8e56-de88c6bf5d83",
+        "url": "https://",
+        "name": "Shilshole Bay Marina",
+        "type": "marina",
+        "phone": "+1206-601-4089",
+        "channel": "17",
+        "vhfdata": {
+          "cargo": {
+            "mode": "listen"
+          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
-          },
-          "cargo": {
-            "mode": "listen"
           }
-        }
+        },
+        "callname": "Shilshole Bay Marina"
       },
       "geometry": {
         "type": "Polygon",
@@ -74,174 +136,24 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "71e4fa59-180a-4ee0-aa1e-c6dfbbfd54bb",
-        "name": "Salmon Bay Bridge",
-        "callname": "Bridge 4",
-        "type": "bridge",
-        "channel": "13",
-        "url": "https://",
+        "id": "650e835b-a7ca-478c-ae54-86b6bff3f006",
+        "url": "https://www.cityoffortpierce.com/1015/City-Marina",
+        "name": "Fort Pierce City Marina",
+        "type": "marina",
         "phone": "+",
+        "channel": "16",
         "vhfdata": {
+          "cargo": {
+            "mode": "listen"
+          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
-            "mode": "listen"
-          },
-          "cargo": {
-            "mode": "listen"
-          }
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.402275800705,
-              47.667735569362
-            ],
-            [
-              -122.401943206787,
-              47.667713894033
-            ],
-            [
-              -122.401857376099,
-              47.666073767987
-            ],
-            [
-              -122.402340173721,
-              47.666203823916
-            ],
-            [
-              -122.402275800705,
-              47.667735569362
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "9f4de983-38d8-4bc4-bb6c-d810e73aa79b",
-        "name": "Ballard Locks",
-        "callname": "Government Locks",
-        "type": "lock",
-        "channel": "13",
-        "url": "https://",
-        "phone": "+",
-        "vhfdata": {
-          "generic": {
-            "mode": "listen"
-          },
-          "pleasure": {
-            "mode": "listen"
-          },
-          "cargo": {
-            "mode": "listen"
-          }
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.398252487183,
-              47.666160471976
-            ],
-            [
-              -122.395130395889,
-              47.665376518175
-            ],
-            [
-              -122.395484447479,
-              47.664921313791
-            ],
-            [
-              -122.398644089699,
-              47.665730563285
-            ],
-            [
-              -122.398252487183,
-              47.666160471976
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "90378ca2-f551-4e14-9c3e-0a87ab2d40e0",
-        "callname": "Fort Pierce Nort Bridge",
-        "type": "bridge",
-        "url": "https://marinas.com/view/bridge/qgujr_North_Fort_Pierce_Bridge_Fort_Pierce_FL_United_States",
-        "phone": "+",
-        "vhfdata": {
-          "generic": {
-            "mode": "listen"
-          },
-          "pleasure": {
-            "mode": "listen"
-          },
-          "cargo": {
             "mode": "listen"
           }
         },
-        "name": "Fort Pierce Nort Bridge",
-        "channel": "9"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -80.324365496635,
-              27.47198614745
-            ],
-            [
-              -80.324640423059,
-              27.471894526894
-            ],
-            [
-              -80.324686020613,
-              27.472001615848
-            ],
-            [
-              -80.324416458607,
-              27.472094426191
-            ],
-            [
-              -80.324365496635,
-              27.47198614745
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "650e835b-a7ca-478c-ae54-86b6bff3f006",
-        "name": "Fort Pierce City Marina",
-        "callname": "Fort Pierce City Marina",
-        "type": "marina",
-        "channel": "16",
-        "url": "https://www.cityoffortpierce.com/1015/City-Marina",
-        "phone": "+",
-        "vhfdata": {
-          "generic": {
-            "mode": "listen"
-          },
-          "pleasure": {
-            "mode": "listen"
-          },
-          "cargo": {
-            "mode": "listen"
-          }
-        }
+        "callname": "Fort Pierce City Marina"
       },
       "geometry": {
         "type": "Polygon",
@@ -278,60 +190,148 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "3b886e9d-6b90-42a2-b026-1f07f896f2fd",
-        "name": "Charlestown Marina",
-        "callname": "Charlestown Marina",
-        "type": "marina",
-        "channel": "71",
-        "url": "https://charlestownmamarina.com/",
-        "phone": "+1617.242.2020",
+        "id": "71e4fa59-180a-4ee0-aa1e-c6dfbbfd54bb",
+        "url": "https://",
+        "name": "Salmon Bay Bridge",
+        "type": "bridge",
+        "phone": "+",
+        "channel": "13",
         "vhfdata": {
+          "cargo": {
+            "mode": "listen"
+          },
           "generic": {
-            "mode": "announce"
+            "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
-          },
-          "cargo": {
-            "mode": "listen"
           }
-        }
+        },
+        "callname": "Bridge 4"
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
             [
-              -71.049978733063,
-              42.376046500333
+              -122.402275800705,
+              47.667735569362
             ],
             [
-              -71.049356460571,
-              42.377171952442
+              -122.401943206787,
+              47.667713894033
             ],
             [
-              -71.047425270081,
-              42.376220867473
+              -122.401857376099,
+              47.666073767987
             ],
             [
-              -71.047661304474,
-              42.374873472444
+              -122.402340173721,
+              47.666203823916
             ],
             [
-              -71.049592494965,
-              42.371924954244
+              -122.402275800705,
+              47.667735569362
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "90378ca2-f551-4e14-9c3e-0a87ab2d40e0",
+        "url": "https://marinas.com/view/bridge/qgujr_North_Fort_Pierce_Bridge_Fort_Pierce_FL_United_States",
+        "name": "Fort Pierce Nort Bridge",
+        "type": "bridge",
+        "phone": "+",
+        "channel": "9",
+        "vhfdata": {
+          "cargo": {
+            "mode": "listen"
+          },
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          }
+        },
+        "callname": "Fort Pierce Nort Bridge"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.324365496635,
+              27.47198614745
             ],
             [
-              -71.051180362701,
-              42.373304117085
+              -80.324640423059,
+              27.471894526894
             ],
             [
-              -71.050794124603,
-              42.373510196288
+              -80.324686020613,
+              27.472001615848
             ],
             [
-              -71.049978733063,
-              42.376046500333
+              -80.324416458607,
+              27.472094426191
+            ],
+            [
+              -80.324365496635,
+              27.47198614745
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "9f4de983-38d8-4bc4-bb6c-d810e73aa79b",
+        "url": "https://",
+        "name": "Ballard Locks",
+        "type": "lock",
+        "phone": "+",
+        "channel": "13",
+        "vhfdata": {
+          "cargo": {
+            "mode": "listen"
+          },
+          "generic": {
+            "mode": "listen"
+          },
+          "pleasure": {
+            "mode": "listen"
+          }
+        },
+        "callname": "Government Locks"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.398252487183,
+              47.666160471976
+            ],
+            [
+              -122.395130395889,
+              47.665376518175
+            ],
+            [
+              -122.395484447479,
+              47.664921313791
+            ],
+            [
+              -122.398644089699,
+              47.665730563285
+            ],
+            [
+              -122.398252487183,
+              47.666160471976
             ]
           ]
         ]
@@ -341,23 +341,23 @@
       "type": "Feature",
       "properties": {
         "id": "cc1a8c1e-6783-4f00-8c4b-3241dae1ed00",
-        "name": "Boston Waterboat Marina",
-        "callname": "Boston Waterboat Marina",
-        "type": "marina",
-        "channel": "9",
         "url": "https://www.waterboatmarina.com/",
+        "name": "Boston Waterboat Marina",
+        "type": "marina",
         "phone": "+16175231027",
+        "channel": "9",
         "vhfdata": {
+          "cargo": {
+            "mode": "listen"
+          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
             "mode": "listen"
-          },
-          "cargo": {
-            "mode": "listen"
           }
-        }
+        },
+        "callname": "Boston Waterboat Marina"
       },
       "geometry": {
         "type": "Polygon",

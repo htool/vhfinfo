@@ -5,19 +5,19 @@
       "type": "Feature",
       "properties": {
         "id": "bccd2beb-a567-47b7-bae3-adf3033d98d0",
+        "url": "https://gov.gg/CHttpHandler.ashx?id=119938&p=0",
         "name": "Guernsey VTS",
         "type": "vts",
-        "channel": "12",
-        "url": "https://gov.gg/CHttpHandler.ashx?id=119938&p=0",
         "phone": "+441481720481",
+        "channel": "12",
         "vhfdata": {
+          "cargo": {
+            "mode": "listen"
+          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
-            "mode": "listen"
-          },
-          "cargo": {
             "mode": "listen"
           }
         }

@@ -5,23 +5,23 @@
       "type": "Feature",
       "properties": {
         "id": "15742b4b-fd54-5c67-91f1-a273527e4292",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Šventoji",
-        "callname": "Klaipeda Radio",
         "type": "area",
         "channel": "16 / 9",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
+          "cargo": {
+            "mode": "listen"
+          },
           "generic": {
             "mode": "listen",
-            "note": "Klaipeda (Radio 5) / MRCC Klaipeda (MMSI 002770330). MSI and weather on request; transmit request on channels 16 and 9. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
+            "note": "MMSI 002770330. MSI/weather on request (ch 16/09)."
           },
           "pleasure": {
             "mode": "listen"
-          },
-          "cargo": {
-            "mode": "listen"
           }
-        }
+        },
+        "callname": "Klaipeda Radio"
       },
       "geometry": {
         "type": "Polygon",
@@ -167,23 +167,23 @@
       "type": "Feature",
       "properties": {
         "id": "b99ae8f9-28e5-557d-9394-f3f707430e58",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Klaipeda (Radio 5)",
-        "callname": "Klaipeda Radio",
         "type": "area",
         "channel": "16 / 9",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
+          "cargo": {
+            "mode": "listen"
+          },
           "generic": {
             "mode": "listen",
-            "note": "Klaipeda (Radio 5) / MRCC Klaipeda (MMSI 002770330). MSI and weather on request; transmit request on channels 16 and 9. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
+            "note": "MMSI 002770330. MSI/weather on request (ch 16/09)."
           },
           "pleasure": {
             "mode": "listen"
-          },
-          "cargo": {
-            "mode": "listen"
           }
-        }
+        },
+        "callname": "Klaipeda Radio"
       },
       "geometry": {
         "type": "Polygon",
@@ -329,23 +329,23 @@
       "type": "Feature",
       "properties": {
         "id": "cb0cd66d-ebc0-5655-8cdd-d28766f95a32",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Nida",
-        "callname": "Klaipeda Radio",
         "type": "area",
         "channel": "16 / 9",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
+          "cargo": {
+            "mode": "listen"
+          },
           "generic": {
             "mode": "listen",
-            "note": "Klaipeda (Radio 5) / MRCC Klaipeda (MMSI 002770330). MSI and weather on request; transmit request on channels 16 and 9. Coverage circle follows the 2026 Stockholmradio Nordic VHF map."
+            "note": "MMSI 002770330. MSI/weather on request (ch 16/09)."
           },
           "pleasure": {
             "mode": "listen"
-          },
-          "cargo": {
-            "mode": "listen"
           }
-        }
+        },
+        "callname": "Klaipeda Radio"
       },
       "geometry": {
         "type": "Polygon",

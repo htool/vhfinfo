@@ -6,20 +6,20 @@
       "properties": {
         "id": "a6b891fc-94f8-4f6e-a084-9d369544080d",
         "name": "VTS Constanta",
-        "callname": "VTS Constanta",
         "type": "vts",
         "channel": "67/16",
         "vhfdata": {
+          "cargo": {
+            "mode": "announce"
+          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
             "mode": "announce"
-          },
-          "cargo": {
-            "mode": "announce"
           }
-        }
+        },
+        "callname": "VTS Constanta"
       },
       "geometry": {
         "type": "Polygon",
