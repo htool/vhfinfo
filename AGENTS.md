@@ -21,11 +21,14 @@ SignalK plugin (`plugin/index.js`). The vhfinfo.org website lives in
 
 ### Data sync
 
-`scripts/sync-vhf-to-git.js` writes `data/{CC}.json` from the table. The
-15-minute Action `.github/workflows/sync-vhf-from-db.yml` is a backup.
-On-save updates are dispatched from VHFinfoSite (`sync-git.php` → Action
-that checks out this repo and **pushes**). Do not delete VTS / lock /
-marina polygons or existing Norwegian `Kystradio Arbeidskanal` areas.
+Publishing a country on the map writes Supabase, then `VHFinfoSite`
+dispatches `vhf-features-changed` with that country code. The Action runs
+`node scripts/sync-vhf-to-git.js --country CC` and pushes only
+`data/{CC}.json` here. Manual full or one-country runs are
+`workflow_dispatch` on that Action. There is no 15-minute job.
+
+Do not delete VTS / lock / marina polygons or existing Norwegian
+`Kystradio Arbeidskanal` areas.
 
 ### Setup / run notes (non-obvious)
 

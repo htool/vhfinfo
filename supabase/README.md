@@ -10,9 +10,8 @@ Project: `imgadhoivcpexrferorn` (`https://imgadhoivcpexrferorn.supabase.co`)
 Initial load is done: **380** unique rows (public `SELECT` works; anonymous writes are blocked). Re-running the import is an upsert by id.
 
 Publishing from the map writes `public.vhf_features`.
-[htool/VHFinfoSite](https://github.com/htool/VHFinfoSite) then pushes the
-changed `data/{CC}.json` into this repo. A 15-minute Action here
-(`sync-vhf-from-db.yml`) remains as a backup until that push is live.
+[htool/VHFinfoSite](https://github.com/htool/VHFinfoSite) then pushes that
+country’s `data/{CC}.json` into this repo (on save, not on a timer).
 
 ## What gets imported
 
