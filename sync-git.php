@@ -48,7 +48,7 @@ $context = stream_context_create(
     )
 );
 $result = @file_get_contents(
-    "https://api.github.com/repos/htool/vhfinfo/dispatches",
+    "https://api.github.com/repos/htool/VHFinfoSite/dispatches",
     false,
     $context
 );

@@ -1,0 +1,13 @@
+{
+  "name": "vhfinfosite",
+  "private": true,
+  "description": "vhfinfo.org website. Data and SignalK plugin live in htool/vhfinfo.",
+  "license": "ISC",
+  "scripts": {
+    "sync:vhf": "node scripts/sync-vhf-to-git.js",
+    "sync:vhf:dry-run": "node scripts/sync-vhf-to-git.js --dry-run",
+    "test:features-db": "node scripts/test-features-db.js",
+    "test:sync-vhf": "node scripts/test-sync-vhf-to-git.js",
+    "test:dual-write-live": "node scripts/test-dual-write-live.js"
+  }
+}

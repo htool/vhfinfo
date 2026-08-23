@@ -1,0 +1,58 @@
+name: Push VHF data to vhfinfo
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      country:
+        description: ISO country code such as NLD (empty = all countries)
+        required: false
+        type: string
+  repository_dispatch:
+    types: [vhf-features-changed]
+
+concurrency:
+  group: sync-vhf-data-${{ github.event.client_payload.country || github.event.inputs.country || 'all' }}
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      COUNTRY: ${{ github.event.client_payload.country || github.event.inputs.country || '' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: htool/vhfinfo
+          token: ${{ secrets.VHFINFO_DATA_PUSH_TOKEN }}
+          path: vhfinfo-data
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Write country GeoJSON into htool/vhfinfo
+        env:
+          VHFINFO_DATA_DIR: ${{ github.workspace }}/vhfinfo-data/data
+        run: |
+          if [ -n "$COUNTRY" ]; then
+            node scripts/sync-vhf-to-git.js --country "$COUNTRY"
+          else
+            node scripts/sync-vhf-to-git.js
+          fi
+      - name: Push data commits to htool/vhfinfo
+        working-directory: vhfinfo-data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- data
+          if git diff --cached --quiet; then
+            echo "No GeoJSON changes"
+            exit 0
+          fi
+          if [ -n "$COUNTRY" ]; then
+            git commit -m "Sync ${COUNTRY} VHF features from database"
+          else
+            git commit -m "Sync VHF features from database"
+          fi
+          git push

@@ -1,7 +1,7 @@
 /* global vhfAuth, getSignedInUser */
 /**
- * Map publishes write public.vhf_features, then ask git to rewrite
- * data/{CC}.json for that country. GitHub is still the fallback.
+ * Map publishes write public.vhf_features, then ask this site repo to
+ * push data/{CC}.json into htool/vhfinfo. GitHub is still the fallback.
  */
 (function (root, factory) {
   if (typeof module === "object" && module.exports) {
@@ -108,7 +108,7 @@
     var token = String(options.githubToken || envDispatchToken() || "").trim();
     var request;
     if (token) {
-      request = fetchFn("https://api.github.com/repos/htool/vhfinfo/dispatches", {
+      request = fetchFn("https://api.github.com/repos/htool/VHFinfoSite/dispatches", {
         method: "POST",
         headers: githubDispatchHeaders(token),
         body: JSON.stringify({
