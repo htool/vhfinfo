@@ -43,6 +43,80 @@ assert.strictEqual(grouped.NLD.length, 1)
 assert.strictEqual(grouped.DEU.length, 1)
 assert.ok(sync.stringifyCollection(col).endsWith("\n"))
 
+const shuffled = {
+  type: "Feature",
+  geometry: { coordinates: [1, 2], type: "Point" },
+  properties: {
+    vhfdata: {
+      cargo: { url: "https://ex", mode: "listen" },
+      generic: { mode: "listen", note: "n" },
+    },
+    name: "A",
+    id: a.properties.id,
+    type: "vts",
+    channel: "16",
+  },
+}
+assert.ok(
+  sync.sameCollection(
+    { type: "FeatureCollection", features: [shuffled] },
+    {
+      type: "FeatureCollection",
+      features: [
+        {
+          type: "Feature",
+          properties: {
+            id: a.properties.id,
+            name: "A",
+            type: "vts",
+            channel: "16",
+            vhfdata: {
+              generic: { mode: "listen", note: "n" },
+              cargo: { mode: "listen", url: "https://ex" },
+            },
+          },
+          geometry: { type: "Point", coordinates: [1, 2] },
+        },
+      ],
+    }
+  )
+)
+const stableText = sync.stringifyCollection(
+  sync.toFeatureCollection([shuffled])
+)
+const parsed = JSON.parse(stableText)
+assert.deepStrictEqual(Object.keys(parsed.features[0].properties), [
+  "id",
+  "name",
+  "type",
+  "channel",
+  "vhfdata",
+])
+assert.deepStrictEqual(Object.keys(parsed.features[0].properties.vhfdata), [
+  "generic",
+  "cargo",
+])
+assert.deepStrictEqual(
+  Object.keys(parsed.features[0].properties.vhfdata.cargo),
+  ["mode", "url"]
+)
+assert.deepStrictEqual(Object.keys(parsed.features[0]), [
+  "type",
+  "properties",
+  "geometry",
+])
+const renamed = {
+  type: "Feature",
+  properties: Object.assign({}, shuffled.properties, { name: "B" }),
+  geometry: shuffled.geometry,
+}
+assert.ok(
+  !sync.sameCollection(
+    { type: "FeatureCollection", features: [shuffled] },
+    { type: "FeatureCollection", features: [renamed] }
+  )
+)
+
 assert.strictEqual(sync.normalizeCountry("nld"), "NLD")
 assert.strictEqual(sync.normalizeCountry("NLD.json"), "")
 assert.deepStrictEqual(sync.parseArgs(["node", "sync", "--country", "nld", "--dry-run"]), {
@@ -84,5 +158,17 @@ const wroteNld = JSON.parse(fs.readFileSync(path.join(tmp, "NLD.json"), "utf8"))
 assert.strictEqual(wroteNld.features[0].properties.id, a.properties.id)
 const belUnchanged = JSON.parse(fs.readFileSync(path.join(tmp, "BEL.json"), "utf8"))
 assert.strictEqual(belUnchanged.features.length, 0)
+
+const orderTmp = fs.mkdtempSync(path.join(os.tmpdir(), "vhf-sync-order-"))
+fs.writeFileSync(
+  path.join(orderTmp, "NLD.json"),
+  JSON.stringify({ type: "FeatureCollection", features: [shuffled] })
+)
+const orderOnly = sync.syncFiles(
+  { NLD: [shuffled] },
+  false,
+  { dataDir: orderTmp, countries: ["NLD"] }
+)
+assert.strictEqual(orderOnly.changed.length, 0)
 
 console.log("sync-vhf-to-git unit tests ok")
