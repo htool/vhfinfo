@@ -527,12 +527,12 @@ body.page-info #list {
 
 body.page-info .vhf-info-block {
   display: grid;
-  grid-template-columns: minmax(4.4rem, 6rem) minmax(0, 1fr) auto auto;
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
   grid-template-areas:
     "channel type phone url"
     "channel name name name"
     "channel note note note";
-  column-gap: 0.9rem;
+  column-gap: 0.4rem;
   row-gap: 0.2rem;
   align-items: start;
   box-sizing: border-box;
@@ -558,16 +558,17 @@ body.page-info .vhf-info-block .url {
 
 body.page-info .vhf-info-block .channel {
   grid-area: channel;
-  align-self: center;
-  justify-self: end;
-  text-align: right;
+  align-self: start;
+  justify-self: start;
+  text-align: left;
   font-size: 3.8em;
   line-height: 0.85;
 }
 
 body.page-info .vhf-info-block .type {
   grid-area: type;
-  padding-top: 0.2rem;
+  align-self: start;
+  padding-top: 0.18rem;
   white-space: normal;
   overflow: visible;
   text-overflow: unset;
@@ -636,20 +637,9 @@ body.page-info .vhf-info-block .url {
   }
 
   body.page-info .vhf-info-block {
-    grid-template-columns: minmax(0, 1fr) auto auto;
-    grid-template-areas:
-      "channel phone url"
-      "type type type"
-      "name name name"
-      "note note note";
     min-height: 9.25rem;
-    column-gap: 0.55rem;
+    column-gap: 0.35rem;
     padding: 0.7rem 0.8rem 0.95rem;
-  }
-
-  body.page-info .vhf-info-block .channel {
-    justify-self: start;
-    text-align: left;
   }
 }
 
