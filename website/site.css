@@ -79,6 +79,7 @@ a:hover {
   padding: 0.4rem 0.9rem;
   background: var(--navy);
   color: #fff;
+  font-family: var(--sans);
 }
 
 .site-brand {
