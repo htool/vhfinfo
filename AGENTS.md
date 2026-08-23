@@ -14,9 +14,9 @@ https://vhfinfo.org is Apache on Strato. The docroot is the **contents** of `web
 **Every time files under `website/` change, SFTP those changed pages/assets to the live docroot** with the same relative paths (`website/index.html` → `/index.html`, `website/nearby.html` → `/nearby.html`, `website/info.js` → `/info.js`, images/fonts/`HELP.md` likewise). Upload only what changed unless a full sync is clearly needed.
 
 - SFTP only (no SSH shell): `stu175515244@52922741.ssh.w1.strato.hosting:22`
-- Do **not** use `stu24273589` or `stu475512247` — those are the wrong jails and do not map to vhfinfo.org.
+- Do **not** use `stu24273589` or `stu475512247` — those are the wrong jails and do not map to vhfinfo.org. Ignore `STRATO_USER` if it is one of those; it is not the vhfinfo.org docroot.
 - Never commit SFTP passwords, Supabase service-role keys, or other secrets. Use env secrets `STRATO_SFTP_PASSWORD` or `VHFINFO_SFTP_PASSWORD` (copy into `SSHPASS` for `sshpass -e`).
-- OpenSSH may warn about RSA host-key signatures; `sshpass` / `expect` work.
+- OpenSSH may warn about RSA host-key signatures; `sshpass` / `expect` work. `sshpass -b` batch files can fail auth here; a here-doc of `put` commands on stdin works.
 
 Example (password already in `SSHPASS`):
 
