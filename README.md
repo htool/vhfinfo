@@ -24,8 +24,9 @@ change, SFTP the changed files to the Strato jail for vhfinfo.org. See
 ## Data sync
 
 Map publish → `public.vhf_features` → `sync-git.php` → this repo’s
-`Push VHF data to vhfinfo` Action → commit on `htool/vhfinfo`.
+`Push VHF data to vhfinfo` Action with that country code → commit
+`data/{CC}.json` on `htool/vhfinfo`. There is no timer.
 
 The Action needs repo secret `VHFINFO_DATA_PUSH_TOKEN` (a PAT that can push
 to `htool/vhfinfo`). Live `sync-git.token` is a PAT that can dispatch this
-repo; do not commit it.
+repo; do not commit it. Manual catch-up: Actions → Run workflow.

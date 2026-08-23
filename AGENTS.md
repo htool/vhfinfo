@@ -22,12 +22,15 @@ relative paths (`index.html` → `/index.html`, `nearby.html` → `/nearby.html`
 
 ### Data push into htool/vhfinfo
 
-On map publish, `features-db.js` asks `sync-git.php` to dispatch this repo.
-The Action checks out `htool/vhfinfo`, runs
-`node scripts/sync-vhf-to-git.js --country CC`, and **pushes** the country
+On map publish, `features-db.js` asks `sync-git.php` to dispatch this repo
+with that country code. The Action checks out `htool/vhfinfo`, runs
+`node scripts/sync-vhf-to-git.js --country CC`, and **pushes** only that
 file. Secret `VHFINFO_DATA_PUSH_TOKEN` must be able to write `htool/vhfinfo`.
+Live `/sync-git.token` must be able to create `repository_dispatch` on this
+repo (do not commit it).
 
-Direct REST/SQL upserts still get the 15-minute scheduled push as a backup.
+SQL/REST edits do not fire that dispatch; use **Run workflow** with a
+country (or empty for all) if git needs a catch-up.
 
 ### Run / test
 

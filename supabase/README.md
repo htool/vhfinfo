@@ -11,8 +11,9 @@ Initial load is done: **380** unique rows (public `SELECT` works; anonymous writ
 
 Publishing from the map writes `public.vhf_features`, then this repo pushes
 **that country only** into [`htool/vhfinfo`](https://github.com/htool/vhfinfo)
-`data/{CC}.json`. The same Action still runs every 15 minutes as a backup.
-The browser no longer posts to `commit.vhfinfo.org`.
+`data/{CC}.json` (on save, not on a timer). The browser no longer posts to
+`commit.vhfinfo.org`. Use **Run workflow** if git needs a catch-up after a
+SQL/REST edit.
 
 To rewrite one country by hand:
 

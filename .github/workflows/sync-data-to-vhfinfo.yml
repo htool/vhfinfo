@@ -1,8 +1,6 @@
 name: Push VHF data to vhfinfo
 
 on:
-  schedule:
-    - cron: "*/15 * * * *"
   workflow_dispatch:
     inputs:
       country:

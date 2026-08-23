@@ -41,7 +41,7 @@ The website map loads `public.vhf_features` (view and edit). GitHub is the
 fallback. Publishing writes the table, then this repo’s Action pushes that
 country’s `data/{CC}.json` into [`htool/vhfinfo`](https://github.com/htool/vhfinfo)
 (`sync-git.php` → `repository_dispatch` → `scripts/sync-vhf-to-git.js --country CC`).
-A 15-minute Action remains as a safety net.
+There is no 15-minute job.
 
 ### GitHub token for on-save sync
 
