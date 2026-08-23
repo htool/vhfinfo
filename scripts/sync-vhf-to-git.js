@@ -15,7 +15,7 @@
 
 const fs = require("fs")
 const path = require("path")
-const db = require("../website/features-db.js")
+const db = require("../lib/features-db.js")
 
 const ROOT = path.resolve(__dirname, "..")
 const DATA_DIR = path.join(ROOT, "data")
@@ -47,7 +47,7 @@ function countryFromFilename(name) {
 
 function readPublicSupabaseConfig() {
   const src = fs.readFileSync(
-    path.join(ROOT, "website", "supabase-config.js"),
+    path.join(ROOT, "lib", "supabase-config.js"),
     "utf8"
   )
   const url = (src.match(/url:\s*"([^"]+)"/) || [])[1]

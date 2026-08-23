@@ -10,7 +10,7 @@
  *   node scripts/import-vhf-features.js --sql > supabase/seed.sql
  *   SUPABASE_SERVICE_ROLE_KEY=... node scripts/import-vhf-features.js
  *
- * Never pass the service_role key to the website. Anon cannot insert these rows.
+ * Never pass the service_role key to the website repo. Anon cannot insert these rows.
  */
 
 const fs = require('fs')
@@ -56,7 +56,7 @@ function channelToText(value) {
 
 function readPublicSupabaseConfig() {
   const src = fs.readFileSync(
-    path.join(ROOT, 'website', 'supabase-config.js'),
+    path.join(ROOT, 'lib', 'supabase-config.js'),
     'utf8'
   )
   const url = (src.match(/url:\s*"([^"]+)"/) || [])[1]
@@ -242,7 +242,7 @@ async function main() {
   const url = process.env.SUPABASE_URL || cfg.url
   const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY
   if (!url) {
-    console.error('Missing SUPABASE_URL (and website/supabase-config.js).')
+    console.error('Missing SUPABASE_URL (and lib/supabase-config.js).')
     process.exit(1)
   }
   if (!serviceKey) {

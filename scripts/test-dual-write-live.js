@@ -8,10 +8,10 @@
 const fs = require("fs")
 const path = require("path")
 const crypto = require("crypto")
-const db = require("../website/features-db.js")
+const db = require("../lib/features-db.js")
 
 const ROOT = path.resolve(__dirname, "..")
-const src = fs.readFileSync(path.join(ROOT, "website", "supabase-config.js"), "utf8")
+const src = fs.readFileSync(path.join(ROOT, "lib", "supabase-config.js"), "utf8")
 const url = (process.env.SUPABASE_URL || (src.match(/url:\s*"([^"]+)"/) || [])[1] || "").replace(/\/$/, "")
 const anonKey = (src.match(/anonKey:\s*"([^"]+)"/) || [])[1]
 const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY

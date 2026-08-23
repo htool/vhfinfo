@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const assert = require("assert")
-const db = require("../website/features-db.js")
+const db = require("../lib/features-db.js")
 
 const userId = "11111111-1111-4111-8111-111111111111"
 const addId = "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa"
@@ -104,7 +104,7 @@ assert.strictEqual(db.rowsToFeatures([{ id: addId, properties: {} }]).length, 0)
 const fs = require("fs")
 const path = require("path")
 const src = fs.readFileSync(
-  path.join(__dirname, "..", "website", "supabase-config.js"),
+  path.join(__dirname, "..", "lib", "supabase-config.js"),
   "utf8"
 )
 const supabaseUrl = (src.match(/url:\s*"([^"]+)"/) || [])[1]
