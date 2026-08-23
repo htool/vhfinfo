@@ -1,7 +1,7 @@
 /* global vhfAuth, getSignedInUser */
 /**
- * Map publishes write public.vhf_features. Git is synced in the background.
- * The map (view and edit) reads this table. GitHub is the fallback.
+ * Map publishes write public.vhf_features, then ask git to rewrite
+ * data/{CC}.json for that country. GitHub is still the fallback.
  */
 (function (root, factory) {
   if (typeof module === "object" && module.exports) {
@@ -73,6 +73,79 @@
     return { upserts: upserts, deletes: deletes, skipped: skipped };
   }
 
+  function githubDispatchHeaders(token) {
+    return {
+      Accept: "application/vnd.github+json",
+      Authorization: "Bearer " + token,
+      "Content-Type": "application/json",
+      "X-GitHub-Api-Version": "2022-11-28",
+      "User-Agent": "vhfinfo-sync-git",
+    };
+  }
+
+  function envDispatchToken() {
+    if (typeof process === "undefined" || !process.env) {
+      return "";
+    }
+    return String(process.env.GITHUB_DISPATCH_TOKEN || "").trim();
+  }
+
+  function requestGitSync(country, options) {
+    options = options || {};
+    if (options.skipGitSync) {
+      return Promise.resolve({ skipped: true, reason: "skip" });
+    }
+    var code = String(country || "")
+      .trim()
+      .toUpperCase();
+    if (!/^[A-Z]{2,3}$/.test(code)) {
+      return Promise.resolve({ skipped: true, reason: "bad-country" });
+    }
+    var fetchFn = options.fetch || (typeof fetch === "function" ? fetch : null);
+    if (!fetchFn) {
+      return Promise.resolve({ skipped: true, reason: "no-fetch" });
+    }
+    var token = String(options.githubToken || envDispatchToken() || "").trim();
+    var request;
+    if (token) {
+      request = fetchFn("https://api.github.com/repos/htool/vhfinfo/dispatches", {
+        method: "POST",
+        headers: githubDispatchHeaders(token),
+        body: JSON.stringify({
+          event_type: "vhf-features-changed",
+          client_payload: { country: code },
+        }),
+      });
+    } else if (typeof window !== "undefined") {
+      request = fetchFn("sync-git.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ country: code }),
+      });
+    } else {
+      return Promise.resolve({ skipped: true, reason: "no-token" });
+    }
+    return request
+      .then(function (res) {
+        if (!res || !res.ok) {
+          var status = res && res.status;
+          return {
+            ok: false,
+            country: code,
+            status: status,
+            error: "git sync dispatch HTTP " + status,
+          };
+        }
+        return { ok: true, country: code };
+      })
+      .catch(function (err) {
+        return {
+          skipped: true,
+          reason: (err && err.message) || String(err),
+        };
+      });
+  }
+
   function publishFeaturesToDb(country, changesObj, options) {
     options = options || {};
     var client =
@@ -112,7 +185,14 @@
     }
     return chain
       .then(function () {
-        return { ok: true, upserts: ops.upserts.length, deletes: ops.deletes.length };
+        return requestGitSync(country, options).then(function (gitSync) {
+          return {
+            ok: true,
+            upserts: ops.upserts.length,
+            deletes: ops.deletes.length,
+            gitSync: gitSync,
+          };
+        });
       })
       .catch(function (err) {
         console.error(err);
@@ -214,6 +294,7 @@
     featureToRow: featureToRow,
     changesToDbOps: changesToDbOps,
     publishFeaturesToDb: publishFeaturesToDb,
+    requestGitSync: requestGitSync,
     rowsToFeatures: rowsToFeatures,
     fetchCountryFeatures: fetchCountryFeatures,
   };

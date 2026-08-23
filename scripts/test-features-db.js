@@ -139,6 +139,7 @@ db.publishFeaturesToDb("NLD", changes, {
     assert.strictEqual(result.ok, true)
     assert.strictEqual(result.upserts, 2)
     assert.strictEqual(result.deletes, 1)
+    assert.ok(result.gitSync && result.gitSync.skipped)
     assert.strictEqual(mockCalls[0].op, "upsert")
     assert.strictEqual(mockCalls[1].op, "delete")
     return db.fetchCountryFeatures("NLD", {
@@ -154,8 +155,28 @@ db.publishFeaturesToDb("NLD", changes, {
     assert.ok(scheveningen, "Jachtclub Scheveningen should be in the DB copy")
     assert.strictEqual(scheveningen.properties.name, "Jachtclub Scheveningen")
     assert.strictEqual(scheveningen.geometry.type, "Polygon")
-    console.log("features-db unit tests ok")
-    console.log("NLD from database: " + features.length + " areas")
+    var gitCalls = []
+    return db
+      .requestGitSync("NLD", {
+        githubToken: "test-token",
+        fetch: function (url, opts) {
+          gitCalls.push({ url: url, opts: opts })
+          return Promise.resolve({ ok: true, status: 204 })
+        },
+      })
+      .then(function (syncResult) {
+        assert.strictEqual(syncResult.ok, true)
+        assert.strictEqual(syncResult.country, "NLD")
+        assert.strictEqual(
+          gitCalls[0].url,
+          "https://api.github.com/repos/htool/vhfinfo/dispatches"
+        )
+        var body = JSON.parse(gitCalls[0].opts.body)
+        assert.strictEqual(body.event_type, "vhf-features-changed")
+        assert.strictEqual(body.client_payload.country, "NLD")
+        console.log("features-db unit tests ok")
+        console.log("NLD from database: " + features.length + " areas")
+      })
   })
   .catch(function (err) {
     console.error(err)

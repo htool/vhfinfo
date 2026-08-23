@@ -4,24 +4,38 @@ on:
   schedule:
     - cron: "*/15 * * * *"
   workflow_dispatch:
+    inputs:
+      country:
+        description: ISO country code such as NLD (empty = all countries)
+        required: false
+        type: string
+  repository_dispatch:
+    types: [vhf-features-changed]
 
 permissions:
   contents: write
 
 concurrency:
-  group: sync-vhf-from-db
-  cancel-in-progress: false
+  group: sync-vhf-from-db-${{ github.event.client_payload.country || github.event.inputs.country || 'all' }}
+  cancel-in-progress: true
 
 jobs:
   sync:
     runs-on: ubuntu-latest
+    env:
+      COUNTRY: ${{ github.event.client_payload.country || github.event.inputs.country || '' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
       - name: Write country GeoJSON from public.vhf_features
-        run: node scripts/sync-vhf-to-git.js
+        run: |
+          if [ -n "$COUNTRY" ]; then
+            node scripts/sync-vhf-to-git.js --country "$COUNTRY"
+          else
+            node scripts/sync-vhf-to-git.js
+          fi
       - name: Commit if the git copy changed
         run: |
           git config user.name "github-actions[bot]"
@@ -31,5 +45,9 @@ jobs:
             echo "No GeoJSON changes"
             exit 0
           fi
-          git commit -m "Sync VHF features from database"
+          if [ -n "$COUNTRY" ]; then
+            git commit -m "Sync ${COUNTRY} VHF features from database"
+          else
+            git commit -m "Sync VHF features from database"
+          fi
           git push
