@@ -5,23 +5,23 @@
       "type": "Feature",
       "properties": {
         "id": "0bf92a0b-a8ed-5d05-a18d-8e25288dfd35",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Kaliningrad remote station",
+        "callname": "Kaliningrad Radio",
         "type": "area",
-        "channel": "working channel",
+        "channel": "05",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002734417."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kaliningrad Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -167,23 +167,23 @@
       "type": "Feature",
       "properties": {
         "id": "69bafc32-d123-5c3d-be07-1de231e7007a",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Saint Petersburg remote station",
+        "callname": "St Petersburg Radio",
         "type": "area",
-        "channel": "working channel",
+        "channel": "16",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002733700."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "St Petersburg Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -329,23 +329,23 @@
       "type": "Feature",
       "properties": {
         "id": "8e4c173c-bf0e-5673-b39b-fdf7c2aaa301",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Gorki remote station",
+        "callname": "St Petersburg Radio",
         "type": "area",
-        "channel": "working channel",
+        "channel": "16",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002733700."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "St Petersburg Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -491,23 +491,23 @@
       "type": "Feature",
       "properties": {
         "id": "dc3482cb-7a95-5625-994a-bd0ed578608c",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Gogland (Hogland) remote station",
+        "callname": "St Petersburg Radio",
         "type": "area",
         "channel": "24",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002733700."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "St Petersburg Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -653,23 +653,23 @@
       "type": "Feature",
       "properties": {
         "id": "e744ba4b-f5ff-582c-a023-e61f2bc088fa",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Vysotsk remote station",
+        "callname": "St Petersburg Radio",
         "type": "area",
-        "channel": "working channel",
+        "channel": "16",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002733700."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "St Petersburg Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -815,23 +815,23 @@
       "type": "Feature",
       "properties": {
         "id": "f7fd53ca-2f6d-5b8f-a7d6-2d5ed1851bfa",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Primorsk remote station",
+        "callname": "St Petersburg Radio",
         "type": "area",
-        "channel": "working channel",
+        "channel": "16",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002733700."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "St Petersburg Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",

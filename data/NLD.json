@@ -5,17 +5,17 @@
       "type": "Feature",
       "properties": {
         "id": "000065ea-8aae-45f5-94a2-c355e843af27",
-        "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
         "name": "Volkeraksluizen",
+        "callname": "Volkeraksluizen Zuid",
         "type": "vts",
-        "phone": "+31887970800",
         "channel": 78,
+        "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
+        "phone": "+31887970800",
         "vhfdata": {
           "generic": {
             "mode": "announce"
           }
-        },
-        "callname": "Volkeraksluizen Zuid"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -81,18 +81,18 @@
       "type": "Feature",
       "properties": {
         "id": "00382e50-a50d-4b94-a588-a5a445f2f109",
-        "url": "https://www.vdrest.nl/jachthaven-kats/",
         "name": "Jachthaven Kats",
         "type": "marina",
+        "url": "https://www.vdrest.nl/jachthaven-kats/",
         "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -137,23 +137,23 @@
       "type": "Feature",
       "properties": {
         "id": "016d22b1-e387-4bb0-93bf-77600217ee34",
-        "url": "https://waterkaart.net/gids/brug.php?naam=Frisiabrug-/-Frisiabr%C3%AAge%2C-Van-Harinxmakanaal",
         "name": "Frisiabrêge",
+        "callname": "Frisiabrug",
         "type": "bridge",
-        "phone": "+",
         "channel": "80",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Frisiabrug-/-Frisiabr%C3%AAge%2C-Van-Harinxmakanaal",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "report"
-          },
           "generic": {
             "mode": "report"
           },
           "pleasure": {
             "mode": "report"
+          },
+          "cargo": {
+            "mode": "report"
           }
-        },
-        "callname": "Frisiabrug"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -187,18 +187,18 @@
       "type": "Feature",
       "properties": {
         "id": "01be74fc-6eac-434f-a15a-cb3e2dce3f00",
-        "url": "https://waterkaart.net/gids/brug.php?naam=Sluis-IV,-brug-over-benedenhoofd",
         "name": "Brug over benedenhoofd Sluis IV",
         "type": "bridge",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Sluis-IV,-brug-over-benedenhoofd",
         "phone": "+31 (0)13 5811881",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -235,23 +235,23 @@
       "type": "Feature",
       "properties": {
         "id": "03963b8d-85d4-4f13-bf1d-06f7531d099c",
-        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-2-6",
         "name": "Postbrug",
+        "callname": "Sluizen Hansweert",
         "type": "bridge",
-        "phone": "+",
         "channel": "22",
+        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-2-6",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Sluizen Hansweert"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -285,23 +285,23 @@
       "type": "Feature",
       "properties": {
         "id": "0753a155-043d-4f3e-982e-05dcf69d4d17",
-        "url": "https://",
         "name": "Wemeldinge",
+        "callname": "Post Wemeldinge",
         "type": "vts",
-        "phone": "+",
         "channel": "68",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Post Wemeldinge"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1063,19 +1063,19 @@
       "type": "Feature",
       "properties": {
         "id": "0a5d285b-55a9-4bd5-a771-265485a60035",
-        "url": "https://waterkaart.net/gids/sluis.php?naam=sluis-II",
         "name": "Sluis II",
         "type": "lock",
-        "phone": "+31 (0)88 7974825",
         "channel": "18",
+        "url": "https://waterkaart.net/gids/sluis.php?naam=sluis-II",
+        "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -1112,23 +1112,23 @@
       "type": "Feature",
       "properties": {
         "id": "0bb40c0a-bb9f-4826-a022-9acbd3948074",
-        "url": "https://",
         "name": "Wierummerschouw",
+        "callname": "Wierummerschouw",
         "type": "bridge",
-        "phone": "+",
         "channel": "78",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "report"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
             "mode": "announce"
+          },
+          "cargo": {
+            "mode": "report"
           }
-        },
-        "callname": "Wierummerschouw"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1162,11 +1162,11 @@
       "type": "Feature",
       "properties": {
         "id": "0cb36df6-6ca0-49e7-be87-47cd386db023",
-        "url": "https://waterkaart.net/gids/sluis.php?naam=Houtribsluizen",
         "name": "Houtribsluis",
         "type": "lock",
-        "phone": "+31887973302",
         "channel": 20,
+        "url": "https://waterkaart.net/gids/sluis.php?naam=Houtribsluizen",
+        "phone": "+31887973302",
         "vhfdata": {
           "generic": {
             "mode": "report"
@@ -1208,24 +1208,24 @@
       "type": "Feature",
       "properties": {
         "id": "0ccde8cf-2b25-4b27-aed3-2af3c13677b5",
-        "url": "https://",
         "name": "Dorkwerdersluis",
+        "callname": "Dorkwerdersluis",
         "type": "lock",
-        "phone": "+",
         "channel": "78",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "report"
-          },
           "generic": {
             "mode": "report",
             "note": "No mooring northside, busy cargo traffic"
           },
           "pleasure": {
             "mode": "report"
+          },
+          "cargo": {
+            "mode": "report"
           }
-        },
-        "callname": "Dorkwerdersluis"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1275,18 +1275,18 @@
       "type": "Feature",
       "properties": {
         "id": "0d5854a8-4d36-48d6-af26-0f7d48019558",
-        "url": "https://www.binnenvaartinbeeld.com/nl/zuid_willemsvaart/sluis_10",
         "name": "Sluis 10",
         "type": "lock",
+        "url": "https://www.binnenvaartinbeeld.com/nl/zuid_willemsvaart/sluis_10",
         "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -1323,17 +1323,17 @@
       "type": "Feature",
       "properties": {
         "id": "0de76e6e-c67d-4428-a132-762ecd8e369f",
-        "url": "https://www.portofharlingen.nl/en/",
         "name": "Port of Harlingen",
+        "callname": "Havendienst Harlingen",
         "type": "marina",
-        "phone": "+31517412 512 ",
         "channel": "11",
+        "url": "https://www.portofharlingen.nl/en/",
+        "phone": "+31517412 512 ",
         "vhfdata": {
           "generic": {
             "mode": "listen"
           }
-        },
-        "callname": "Havendienst Harlingen"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1435,11 +1435,11 @@
       "type": "Feature",
       "properties": {
         "id": "0eaf9819-bdb0-4a73-81a1-a0bfbb153aa6",
-        "url": "https://www.waddenhaventexel.nl/",
         "name": "Waddenhaven Texel",
         "type": "marina",
-        "phone": "+31222321227",
         "channel": 31,
+        "url": "https://www.waddenhaventexel.nl/",
+        "phone": "+31222321227",
         "vhfdata": {
           "generic": {
             "mode": "Listen"
@@ -1498,23 +1498,23 @@
       "type": "Feature",
       "properties": {
         "id": "0fc9b727-254b-47dd-933c-e7daa11a0084",
-        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-2-6",
         "name": "Sluis Hansweert",
+        "callname": "Lock Hansweert",
         "type": "lock",
-        "phone": "+",
         "channel": "22",
+        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-2-6",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Lock Hansweert"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1548,19 +1548,19 @@
       "type": "Feature",
       "properties": {
         "id": "110370a3-e4aa-49b6-8772-7352cbc31ed0",
-        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Heuvel",
         "name": "Brug Heuvel",
         "type": "bridge",
-        "phone": "+31 (0)88 7974825",
         "channel": "20",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Heuvel",
+        "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -1597,19 +1597,19 @@
       "type": "Feature",
       "properties": {
         "id": "122c6e89-6ff8-4b88-8327-72ec7aeffa7e",
-        "url": "https://www.binnenvaartinbeeld.com/nl/zuid_willemsvaart/sluis_11",
         "name": "Sluis 11",
         "type": "lock",
-        "phone": "+31 (0)88 7974825",
         "channel": "18",
+        "url": "https://www.binnenvaartinbeeld.com/nl/zuid_willemsvaart/sluis_11",
+        "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -1646,19 +1646,19 @@
       "type": "Feature",
       "properties": {
         "id": "123d7665-8752-4782-b648-e08632206de9",
-        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Lijnsheike",
         "name": "Brug Lijnsheike",
         "type": "bridge",
-        "phone": "+31 (0)88 7974825",
         "channel": "20",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Lijnsheike",
+        "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -1695,23 +1695,23 @@
       "type": "Feature",
       "properties": {
         "id": "12952936-7410-41b1-8462-71842f5d5691",
-        "url": "https://",
         "name": "jachthaven Schiermonnikoog",
+        "callname": "Jachthaven Schier",
         "type": "marina",
-        "phone": "+",
         "channel": "31",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "announce"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
             "mode": "announce"
+          },
+          "cargo": {
+            "mode": "announce"
           }
         },
-        "callname": "Jachthaven Schier",
         "distance": 481,
         "relativeBearing": 85
       },
@@ -1747,18 +1747,18 @@
       "type": "Feature",
       "properties": {
         "id": "1296c91f-9f5a-4b6d-a49c-4a9448fa82b0",
-        "url": "https://www.goes.nl/openingstijden-ringbrug-en-st-maartensbrug",
         "name": "Sint Maartenbrug",
         "type": "bridge",
+        "url": "https://www.goes.nl/openingstijden-ringbrug-en-st-maartensbrug",
         "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -1795,17 +1795,17 @@
       "type": "Feature",
       "properties": {
         "id": "142e265a-db40-4eb8-8d14-f418e12a40ed",
-        "url": "https://www.enkhuizen.nl/direct-regelen/ontspanning-en-vrije-tijd/havens-en-varen/havens/",
         "name": "Gemeentehaven Enkhuizen",
+        "callname": "Havendienst Enkhuizen",
         "type": "marina",
-        "phone": "+31623700390",
         "channel": "12",
+        "url": "https://www.enkhuizen.nl/direct-regelen/ontspanning-en-vrije-tijd/havens-en-varen/havens/",
+        "phone": "+31623700390",
         "vhfdata": {
           "generic": {
             "mode": "announce"
           }
-        },
-        "callname": "Havendienst Enkhuizen"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1907,20 +1907,20 @@
       "type": "Feature",
       "properties": {
         "id": "160f7867-a5da-42de-93e3-8d60379c12f7",
-        "url": "file:///home/hans/Videos/blck_hp1_y2020_baz62.pdf",
         "name": "Vliehors Range Control",
         "type": "area",
-        "phone": "+",
         "channel": "74",
+        "url": "file:///home/hans/Videos/blck_hp1_y2020_baz62.pdf",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce",
             "note": "Firing range Mon-Fri 08h30 - 22h30. Check before entering."
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -2009,15 +2009,13 @@
       "type": "Feature",
       "properties": {
         "id": "1638a8d5-4c82-4717-944c-47191ac66b04",
-        "url": "https://",
         "name": "Platvoetbrug",
+        "callname": "Platvoetbrug",
         "type": "bridge",
-        "phone": "+",
         "channel": "78",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "report"
-          },
           "generic": {
             "mode": "report",
             "note": "Kruisend verkeer v Starkeborg kanaal. MELDEN!"
@@ -2025,9 +2023,11 @@
           "pleasure": {
             "mode": "report",
             "note": "Report for crossing carco traffic"
+          },
+          "cargo": {
+            "mode": "report"
           }
-        },
-        "callname": "Platvoetbrug"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2061,12 +2061,12 @@
       "type": "Feature",
       "properties": {
         "id": "17f9620c-fe2b-48fb-b26b-d80e20ae0c9a",
-        "url": "https://www.binnenvaartkennis.nl/wp-content/uploads/2021/03/VTS-Procedures-Den-Helder.pdf",
         "name": "Den Helder",
         "type": "vts",
-        "phone": "+31889561242",
-        "update": "5 *",
         "channel": "62",
+        "update": "5 *",
+        "url": "https://www.binnenvaartkennis.nl/wp-content/uploads/2021/03/VTS-Procedures-Den-Helder.pdf",
+        "phone": "+31889561242",
         "vhfdata": {
           "generic": {
             "mode": "announce",
@@ -2249,23 +2249,23 @@
       "type": "Feature",
       "properties": {
         "id": "1aea55dc-872b-40dc-aac3-614a7c00b6be",
-        "url": "https://waterkaart.net/gids/brug.php?naam=Harinxmabrug-/-van-Harinxmabrug,-Van-Harinxmakanaal",
         "name": "HarinxmaBrug",
+        "callname": "Harinxmabrug",
         "type": "bridge",
-        "phone": "+",
         "channel": "18",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Harinxmabrug-/-van-Harinxmabrug,-Van-Harinxmakanaal",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "report"
-          },
           "generic": {
             "mode": "report"
           },
           "pleasure": {
             "mode": "report"
+          },
+          "cargo": {
+            "mode": "report"
           }
-        },
-        "callname": "Harinxmabrug"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2301,8 +2301,8 @@
         "id": "1b83d0d6-877f-4ea5-9b0e-4e5a69df354d",
         "name": "Terschelling",
         "type": "vts",
-        "phone": "+31887974599",
         "channel": 2,
+        "phone": "+31887974599",
         "vhfdata": {
           "generic": {
             "mode": "listen"
@@ -2405,23 +2405,23 @@
       "type": "Feature",
       "properties": {
         "id": "1bdaf04a-9ddd-4545-9865-adb6ef77502d",
-        "url": "https://",
         "name": "Oude schouw",
+        "callname": "oude schouw",
         "type": "vts",
-        "phone": "+31582925888",
         "channel": "81",
+        "url": "https://",
+        "phone": "+31582925888",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "oude schouw"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2455,24 +2455,24 @@
       "type": "Feature",
       "properties": {
         "id": "1c272732-5c1b-47fd-a04b-c15df88ea168",
-        "url": "https://www.varendoejesamen.nl/knooppunten/knooppunt-1-27-amsterdam-rijnkanaal-en-de-stad-utrecht",
         "name": "Post Wijk bij Duurstede",
+        "callname": "Sector Maarssen",
         "type": "vts",
-        "phone": "+31 343-595111",
-        "rws_id": 16500471,
         "channel": "61",
+        "url": "https://www.varendoejesamen.nl/knooppunten/knooppunt-1-27-amsterdam-rijnkanaal-en-de-stad-utrecht",
+        "phone": "+31 343-595111",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
         },
-        "callname": "Sector Maarssen"
+        "rws_id": 16500471
       },
       "geometry": {
         "type": "Polygon",
@@ -2718,20 +2718,20 @@
       "type": "Feature",
       "properties": {
         "id": "1c98740f-6ebe-4dbc-b1d3-63ec4f5b720a",
-        "url": "https://",
         "name": "Marksluis",
         "type": "bridge",
-        "phone": "+31 (0)88 7974825",
         "channel": "78",
+        "url": "https://",
+        "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Alternative phone: +31 (0)13-5811881"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -2768,19 +2768,19 @@
       "type": "Feature",
       "properties": {
         "id": "1e4b055a-cae0-4a68-9c39-c09c0ffdaec5",
-        "url": "https://www.wsv-sint-annaland.nl/passant",
         "name": "WSV Sint-Annaland",
         "type": "marina",
-        "phone": "+31 166 653 079",
         "channel": "31",
+        "url": "https://www.wsv-sint-annaland.nl/passant",
+        "phone": "+31 166 653 079",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -2833,11 +2833,11 @@
       "type": "Feature",
       "properties": {
         "id": "1ff71ffa-5679-44e0-91f7-0d2f18fea31b",
-        "url": "http://www.waddenhavenvlieland.nl/",
         "name": "Waddenhaven Vlieland",
         "type": "marina",
-        "phone": "+31562451729",
         "channel": 12,
+        "url": "http://www.waddenhavenvlieland.nl/",
+        "phone": "+31562451729",
         "vhfdata": {
           "generic": {
             "mode": "Listen"
@@ -2911,23 +2911,23 @@
       "type": "Feature",
       "properties": {
         "id": "20e19baf-1d85-415b-b194-a6f430106d92",
-        "url": "https://",
         "name": "Stavoren",
+        "callname": "Haven Stavoren",
         "type": "marina",
-        "phone": "+",
         "channel": "74",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "report"
-          },
           "generic": {
             "mode": "report"
           },
           "pleasure": {
             "mode": "report"
+          },
+          "cargo": {
+            "mode": "report"
           }
-        },
-        "callname": "Haven Stavoren"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2989,19 +2989,19 @@
       "type": "Feature",
       "properties": {
         "id": "22ddd863-99a4-4ddc-be23-3d48fe1348bb",
-        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Waalstraat",
         "name": "Brug Waalstraat",
         "type": "bridge",
-        "phone": "+31 (0)88 7974825",
         "channel": "20",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Waalstraat",
+        "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -3038,17 +3038,17 @@
       "type": "Feature",
       "properties": {
         "id": "23e3ff8f-ce4a-4513-9d2a-939acb86b04f",
-        "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
         "name": "Verkeerspost Dordrecht",
+        "callname": "Sector Dordrecht",
         "type": "vts",
-        "phone": "+31887970800",
         "channel": 79,
+        "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
+        "phone": "+31887970800",
         "vhfdata": {
           "generic": {
             "mode": "listen"
           }
-        },
-        "callname": "Sector Dordrecht"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -3138,23 +3138,23 @@
       "type": "Feature",
       "properties": {
         "id": "24228f4c-7ceb-432a-9d35-a063e07f47ff",
-        "url": "https://portofdenhelder.nl/shipping/bridges-and-locks",
         "name": "koopvaarders tide lock",
+        "callname": "koopvaarders tide lock",
         "type": "vts",
-        "phone": "+",
         "channel": "22",
+        "url": "https://portofdenhelder.nl/shipping/bridges-and-locks",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "koopvaarders tide lock"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -3188,20 +3188,20 @@
       "type": "Feature",
       "properties": {
         "id": "281cc989-6986-4232-956a-1a0c6306aa1e",
-        "url": "https://www.groningen-seaports.com/wp-content/uploads/InfoKaart-Eems-1.pdf",
         "name": "Delfzijl Radar",
         "type": "vts",
-        "phone": "+",
         "channel": "03",
+        "url": "https://www.groningen-seaports.com/wp-content/uploads/InfoKaart-Eems-1.pdf",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "report",
             "note": "Havendienst Delfzijl/Eemshaven – VHF 66"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -3410,23 +3410,23 @@
       "type": "Feature",
       "properties": {
         "id": "2887a2c7-fc65-4db9-b277-5f6c46780a4a",
-        "url": "https://",
         "name": "Havendienst Urk",
+        "callname": "Havendienst Urk",
         "type": "marina",
-        "phone": "+",
         "channel": "12",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "report"
-          },
           "generic": {
             "mode": "report"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "report"
           }
-        },
-        "callname": "Havendienst Urk"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -3532,19 +3532,19 @@
       "type": "Feature",
       "properties": {
         "id": "2b889cb6-c065-4938-83cb-7f7c563f8576",
-        "url": "https://waterkaart.net/gids/sluis.php?naam=Sluis-IV",
         "name": "Sluis IV",
         "type": "lock",
-        "phone": "+31 (0)88 7974825",
         "channel": "20",
+        "url": "https://waterkaart.net/gids/sluis.php?naam=Sluis-IV",
+        "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -3581,16 +3581,13 @@
       "type": "Feature",
       "properties": {
         "id": "2c7d5b5c-f0a6-438a-a832-60a3b9eecec0",
-        "url": "https://waterkaart.net/gids/brug.php?naam=Spoorbrug-HRMK",
         "name": "Spoorbrug HRMK",
+        "callname": "Spoorbrug HRMK",
         "type": "bridge",
-        "phone": "+",
         "channel": "20",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Spoorbrug-HRMK",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "report",
-            "note": "Long waiting possible, report early"
-          },
           "generic": {
             "mode": "report",
             "note": "Long waiting possible, report early"
@@ -3598,9 +3595,12 @@
           "pleasure": {
             "mode": "report",
             "note": "Long waiting possible, report early"
+          },
+          "cargo": {
+            "mode": "report",
+            "note": "Long waiting possible, report early"
           }
-        },
-        "callname": "Spoorbrug HRMK"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -3642,19 +3642,19 @@
       "type": "Feature",
       "properties": {
         "id": "2df444f5-c342-461f-a1be-ba2fb892de3a",
-        "url": "https://waterkaart.net/gids/brug.php?naam=Erpsebrug",
         "name": "Erpse brug",
         "type": "bridge",
-        "phone": "+31 (0)88 7974825",
         "channel": "20",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Erpsebrug",
+        "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -3691,19 +3691,19 @@
       "type": "Feature",
       "properties": {
         "id": "2fec1184-5267-463f-877b-9de68de10794",
-        "url": "https://www.binnenvaartkennis.nl/2018/10/marifoonkanalen-nederland/",
         "name": "Prinsenlandsebrug",
         "type": "bridge",
-        "phone": "+",
         "channel": "22",
+        "url": "https://www.binnenvaartkennis.nl/2018/10/marifoonkanalen-nederland/",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -3740,22 +3740,22 @@
       "type": "Feature",
       "properties": {
         "id": "3093daaa-2f81-4136-a287-92d57de9fce9",
-        "url": "https://www.portofamsterdam.com/sites/default/files/2025-09/VTS%20communicatieregeling%202.0%20def.pdf",
         "name": "Sector Schellingwoude",
+        "callname": "Sector Schellingwoude",
         "type": "vts",
-        "phone": "+31205234600",
         "channel": 60,
+        "url": "https://www.portofamsterdam.com/sites/default/files/2025-09/VTS%20communicatieregeling%202.0%20def.pdf",
+        "phone": "+31205234600",
         "vhfdata": {
-          "cargo": {
-            "mode": "report",
-            "note": "Report destination."
-          },
           "generic": {
             "mode": "listen",
             "note": "PDF orange outline, rotated to north with the map compass and scaled/moved on Oranjesluizen and Hoek van 't IJ, joined across the middle gap into one polygon, then simplified to about 1/10 of the vertices."
+          },
+          "cargo": {
+            "mode": "report",
+            "note": "Report destination."
           }
         },
-        "callname": "Sector Schellingwoude",
         "distance": 1181,
         "relativeBearing": 84
       },
@@ -4143,17 +4143,17 @@
       "type": "Feature",
       "properties": {
         "id": "30fb1f3b-2f5e-4299-98fd-dc5d0977829d",
-        "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
         "name": "Volkeraksluizen",
+        "callname": "Volkeraksluizen Noord",
         "type": "vts",
-        "phone": "+31887970800",
         "channel": 7,
+        "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
+        "phone": "+31887970800",
         "vhfdata": {
           "generic": {
             "mode": "announce"
           }
-        },
-        "callname": "Volkeraksluizen Noord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4231,23 +4231,23 @@
       "type": "Feature",
       "properties": {
         "id": "310143a5-c215-471f-9d34-129881842958",
-        "url": "https://",
         "name": "Haven Beverwijk",
+        "callname": "Haven Beverwijk",
         "type": "marina",
-        "phone": "+",
         "channel": "71",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Haven Beverwijk"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4297,23 +4297,23 @@
       "type": "Feature",
       "properties": {
         "id": "329c1a45-36d5-408a-90e1-da85f6843202",
-        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
         "name": "Arneverkeersbrug",
+        "callname": "Arne bruggen",
         "type": "bridge",
-        "phone": "+",
         "channel": "22",
+        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Arne bruggen"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4347,24 +4347,24 @@
       "type": "Feature",
       "properties": {
         "id": "375fcef8-8949-468a-bb66-ab53d8223ad1",
-        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
         "name": "Schroebrug",
+        "callname": "Schroebrug",
         "type": "bridge",
-        "phone": "+",
         "channel": "22",
+        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Let op: blauwe golf."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Schroebrug"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4398,23 +4398,23 @@
       "type": "Feature",
       "properties": {
         "id": "377f50a3-990f-4772-bd87-8a22a1ef7d77",
-        "url": "https://",
         "name": "Urkersluis",
+        "callname": "Urkersluis",
         "type": "lock",
-        "phone": "+",
         "channel": "22",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "announce"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
             "mode": "announce"
+          },
+          "cargo": {
+            "mode": "announce"
           }
-        },
-        "callname": "Urkersluis"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4448,18 +4448,18 @@
       "type": "Feature",
       "properties": {
         "id": "390f2f40-13d2-4be4-8e36-2ab2d3236e02",
-        "url": "https://waterkaart.net/gids/brug.php?naam=Sluis-I,-brug-over-benedenhoofd",
         "name": "Brug over benedenhoofd Sluis I",
         "type": "bridge",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Sluis-I,-brug-over-benedenhoofd",
         "phone": "+31 (0)162 490791",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -4496,22 +4496,22 @@
       "type": "Feature",
       "properties": {
         "id": "399163a7-0af7-482d-b481-5dfca9abe5ca",
-        "url": "https://www.portofamsterdam.com/sites/default/files/2025-09/VTS%20communicatieregeling%202.0%20def.pdf",
         "name": "Sector Stad",
+        "callname": "Sector Stad",
         "type": "vts",
-        "phone": "+31205234600",
         "channel": 5,
+        "url": "https://www.portofamsterdam.com/sites/default/files/2025-09/VTS%20communicatieregeling%202.0%20def.pdf",
+        "phone": "+31205234600",
         "vhfdata": {
-          "cargo": {
-            "mode": "report",
-            "note": "Report destination."
-          },
           "generic": {
             "mode": "listen",
             "note": "PDF outline for Sector Stad (VHF 05), rotated to north with the map compass."
+          },
+          "cargo": {
+            "mode": "report",
+            "note": "Report destination."
           }
         },
-        "callname": "Sector Stad",
         "distance": 328,
         "relativeBearing": 130
       },
@@ -4927,19 +4927,19 @@
       "type": "Feature",
       "properties": {
         "id": "3ab9c2b4-6d8f-4a91-a786-43acf7a57cc4",
-        "url": "https://",
         "name": "Sluis V",
         "type": "lock",
-        "phone": "+31 (0)88 7974825",
         "channel": "22",
+        "url": "https://",
+        "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -4976,19 +4976,19 @@
       "type": "Feature",
       "properties": {
         "id": "3ade3f65-fd4c-4885-beeb-248b16346a1e",
-        "url": "https://waterkaart.net/gids/sluis.php?naam=Sluis-Schijndel",
         "name": "Sluis Schijndel",
         "type": "lock",
-        "phone": "+31 (0)88 7974825",
         "channel": "20",
+        "url": "https://waterkaart.net/gids/sluis.php?naam=Sluis-Schijndel",
+        "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -5025,24 +5025,24 @@
       "type": "Feature",
       "properties": {
         "id": "41948179-66b7-45a1-86ee-d14ae77bdbe8",
-        "url": "https://www.varendoejesamen.nl/nieuws/1-juni-2016-krijgt-vts-sector-millingen-een-eigen-marifoonkanaal-vhf5",
         "name": "Post Tiel",
+        "callname": "Sector St. Andries",
         "type": "vts",
-        "phone": "+31 88 797 36 90",
-        "rws_id": 16501189,
         "channel": "68",
+        "url": "https://www.varendoejesamen.nl/nieuws/1-juni-2016-krijgt-vts-sector-millingen-een-eigen-marifoonkanaal-vhf5",
+        "phone": "+31 88 797 36 90",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
         },
-        "callname": "Sector St. Andries"
+        "rws_id": 16501189
       },
       "geometry": {
         "type": "Polygon",
@@ -5860,24 +5860,24 @@
       "type": "Feature",
       "properties": {
         "id": "428acbb7-ecfe-4d74-a0cc-650d0a409297",
-        "url": "https://",
         "name": "Berlage brug",
+        "callname": "Berlage brug",
         "type": "bridge",
-        "phone": "+",
         "channel": "9",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "report"
-          },
           "generic": {
             "mode": "announce",
             "note": "City of Groningen CH-9"
           },
           "pleasure": {
             "mode": "announce"
+          },
+          "cargo": {
+            "mode": "report"
           }
-        },
-        "callname": "Berlage brug"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -5912,20 +5912,20 @@
       "properties": {
         "id": "448f605c-a23b-40f8-aa64-05c0289b138b",
         "name": "Centrale meldpost Waddenzee",
+        "callname": "Centrale meldpost Waddenzee",
         "type": "area",
-        "phone": "+31887974599",
         "channel": "4",
+        "phone": "+31887974599",
         "vhfdata": {
-          "cargo": {
-            "mode": "report",
-            "note": "Ships with dangerous cargo and special transports have a reporting obligation"
-          },
           "generic": {
             "mode": "report",
             "note": "Ship to ship on VHF 10"
+          },
+          "cargo": {
+            "mode": "report",
+            "note": "Ships with dangerous cargo and special transports have a reporting obligation"
           }
-        },
-        "callname": "Centrale meldpost Waddenzee"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -6231,23 +6231,23 @@
       "type": "Feature",
       "properties": {
         "id": "461e7e6e-e77a-4a8e-a540-139cef63a481",
-        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
         "name": "Arnespoorbrug",
+        "callname": "Arne bruggen",
         "type": "bridge",
-        "phone": "+",
         "channel": "22",
+        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Arne bruggen"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -6281,24 +6281,24 @@
       "type": "Feature",
       "properties": {
         "id": "4806f2c3-3e24-4c90-87c0-5b73121e3415",
-        "url": "https://www.buyshaven.nl/contact",
         "name": "Buyshaven",
+        "callname": "Buyshaven",
         "type": "marina",
-        "phone": "+0031 6 3013 6854",
         "channel": "31",
+        "url": "https://www.buyshaven.nl/contact",
+        "phone": "+0031 6 3013 6854",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce",
             "note": "  0031 228 315 660"
           },
           "pleasure": {
             "mode": "announce"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Buyshaven"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -6368,19 +6368,19 @@
       "type": "Feature",
       "properties": {
         "id": "487e1dc3-249f-4cad-9b12-38ff8396eb63",
-        "url": "https://www.vaarweginformatie.nl/frp/main/#/geo/detail/LOCK/7069661",
         "name": "Grevelingensluis",
         "type": "lock",
-        "phone": "+31 (0)88-7970123",
         "channel": "20",
+        "url": "https://www.vaarweginformatie.nl/frp/main/#/geo/detail/LOCK/7069661",
+        "phone": "+31 (0)88-7970123",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -6417,23 +6417,23 @@
       "type": "Feature",
       "properties": {
         "id": "4906bebc-3c71-4f61-a0fe-e2b392d88fdf",
-        "url": "https://",
         "name": "Havendienst Medemblik",
+        "callname": "Havendienst medemblik",
         "type": "marina",
-        "phone": "+",
         "channel": "9",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "report"
-          },
           "generic": {
             "mode": "report"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "report"
           }
-        },
-        "callname": "Havendienst medemblik"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -6511,11 +6511,12 @@
       "type": "Feature",
       "properties": {
         "id": "4a440732-6be5-473e-bcc0-546ab2a7c359",
-        "url": "https://www.portofrotterdam.com/sites/default/files/2021-05/aanbevolen-oversteekroute-voor-kleine-vaartuigen-haven-rotterdam.pdf",
         "name": "Hoek van Holland",
+        "callname": "Sector Maasmond",
         "type": "vts",
-        "phone": "+31102522801",
         "channel": 3,
+        "url": "https://www.portofrotterdam.com/sites/default/files/2021-05/aanbevolen-oversteekroute-voor-kleine-vaartuigen-haven-rotterdam.pdf",
+        "phone": "+31102522801",
         "vhfdata": {
           "generic": {
             "mode": "report"
@@ -6528,8 +6529,7 @@
             "mode": "report",
             "note": "Report upon entering ship name, direction and current position relative to buoy MV or MN1"
           }
-        },
-        "callname": "Sector Maasmond"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -6563,23 +6563,23 @@
       "type": "Feature",
       "properties": {
         "id": "4ad1d819-3d59-4f8f-b2f8-b5691195ee65",
-        "url": "https://varendoejesamen.nl/storage/app/media//knooppunten/knooppuntenfoto-1-17.jpg",
         "name": "Eemhaven",
+        "callname": "Sector Eemhaven",
         "type": "vts",
-        "phone": "+",
         "channel": "63",
+        "url": "https://varendoejesamen.nl/storage/app/media//knooppunten/knooppuntenfoto-1-17.jpg",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "report"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Sector Eemhaven"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -7433,23 +7433,23 @@
       "type": "Feature",
       "properties": {
         "id": "4bf517b9-d039-4331-99ed-17ceef9c1575",
-        "url": "https://www.binnenvaartinbeeld.com/nl/kanaal_wessem_nederweert/sluis_panheel",
         "name": "Sluis Panheel",
+        "callname": "Sluis Panheel",
         "type": "lock",
-        "phone": "+",
         "channel": "81",
+        "url": "https://www.binnenvaartinbeeld.com/nl/kanaal_wessem_nederweert/sluis_panheel",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Sluis Panheel"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -7491,23 +7491,23 @@
       "type": "Feature",
       "properties": {
         "id": "4db4f45a-81cf-4f02-8e76-b761e2b56487",
-        "url": "https://www.roompotmarina.com/nl/contact/",
         "name": "Roompot Marina",
+        "callname": "",
         "type": "marina",
-        "phone": "+31113405110",
         "channel": "31",
+        "url": "https://www.roompotmarina.com/nl/contact/",
+        "phone": "+31113405110",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": ""
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -7561,20 +7561,20 @@
       "type": "Feature",
       "properties": {
         "id": "526269e9-e39f-47ae-bacc-99e1c870a12e",
-        "url": "https://wetten.overheid.nl/BWBR0010360/2021-10-06",
         "name": "Zeeverkeerspost Schiermonnikoog",
         "type": "vts",
-        "update": "30 0,2,4,6,8,10,12,14,16,18,20,22",
         "channel": "5",
+        "update": "30 0,2,4,6,8,10,12,14,16,18,20,22",
+        "url": "https://wetten.overheid.nl/BWBR0010360/2021-10-06",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Area not well defined. Has depths and tonnage info."
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -7795,17 +7795,17 @@
       "type": "Feature",
       "properties": {
         "id": "5443803c-8e86-43a8-a6bd-86962b2e3aeb",
-        "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
         "name": "Volkeraksluizen",
+        "callname": "",
         "type": "lock",
-        "phone": "+31887970800",
         "channel": 64,
+        "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
+        "phone": "+31887970800",
         "vhfdata": {
           "generic": {
             "mode": "announce"
           }
-        },
-        "callname": ""
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -7839,18 +7839,18 @@
       "type": "Feature",
       "properties": {
         "id": "5461d3e2-acf9-418b-8b62-318b6149becc",
-        "url": "https://www.jachthavenscharendijke.nl/",
         "name": "Jachthaven Scharendijke",
         "type": "marina",
+        "url": "https://www.jachthavenscharendijke.nl/",
         "phone": "+31 (0)111 671 264",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -7939,11 +7939,11 @@
       "type": "Feature",
       "properties": {
         "id": "549b42cd-e7ed-40e8-b38a-6adf49f629c8",
-        "url": "https://www.jachtclubscheveningen.com/",
         "name": "Jachtclub Scheveningen",
         "type": "marina",
-        "phone": "+31653293137",
         "channel": 31,
+        "url": "https://www.jachtclubscheveningen.com/",
+        "phone": "+31653293137",
         "vhfdata": {
           "generic": {
             "mode": "listen",
@@ -7991,20 +7991,20 @@
       "type": "Feature",
       "properties": {
         "id": "562442bc-2de8-42de-b1aa-d736e4a0673c",
-        "url": "https://waterkaart.net/gids/sluis.php?naam=Roompotsluis",
         "name": "Roompotsluis",
         "type": "lock",
-        "phone": "+31887974790",
         "channel": "18",
+        "url": "https://waterkaart.net/gids/sluis.php?naam=Roompotsluis",
+        "phone": "+31887974790",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Pay attention to bridge height"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -8041,11 +8041,11 @@
       "type": "Feature",
       "properties": {
         "id": "562c71a2-84d3-4ab7-a52b-d2ebcc19570b",
-        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-6-6",
         "name": "Verkeerscentrale Scheveningen",
         "type": "vts",
-        "phone": "+31703527721",
         "channel": 21,
+        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-6-6",
+        "phone": "+31703527721",
         "vhfdata": {
           "generic": {
             "mode": "report",
@@ -8201,24 +8201,24 @@
       "type": "Feature",
       "properties": {
         "id": "569a77d5-06da-42ae-8473-6f271d2f80b0",
-        "url": "https://varendoejesamen.nl/storage/app/media//knooppunten/knooppuntenfoto-1-17.jpg",
         "name": "Maasbruggen",
+        "callname": "Sector Maasbruggen",
         "type": "vts",
-        "phone": "+",
         "channel": "81",
+        "url": "https://varendoejesamen.nl/storage/app/media//knooppunten/knooppuntenfoto-1-17.jpg",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "report",
             "note": "km993-1003"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Sector Maasbruggen"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -9028,24 +9028,24 @@
       "type": "Feature",
       "properties": {
         "id": "5724ed71-76a3-4136-bf27-415cb44efd21",
-        "url": "https://www.portofrotterdam.com/sites/default/files/2022-02/informatie-scheepvaart-vts-2022.pdf",
         "name": "Traffic Centre Hoek van Holland",
+        "callname": "Sector Europoort",
         "type": "vts",
-        "phone": "+31 10-2521000",
-        "rws_id": 16501238,
         "channel": "66",
+        "url": "https://www.portofrotterdam.com/sites/default/files/2022-02/informatie-scheepvaart-vts-2022.pdf",
+        "phone": "+31 10-2521000",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
         },
-        "callname": "Sector Europoort"
+        "rws_id": 16501238
       },
       "geometry": {
         "type": "Polygon",
@@ -9671,23 +9671,23 @@
       "type": "Feature",
       "properties": {
         "id": "5882d3b8-db50-4524-b922-097dd2839da7",
-        "url": "https://",
         "name": "Brug Ritsumasyl",
+        "callname": "Brug Ritsumasyl",
         "type": "bridge",
-        "phone": "+",
         "channel": "80",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "report"
-          },
           "generic": {
             "mode": "report"
           },
           "pleasure": {
             "mode": "report"
+          },
+          "cargo": {
+            "mode": "report"
           }
-        },
-        "callname": "Brug Ritsumasyl"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -9721,17 +9721,17 @@
       "type": "Feature",
       "properties": {
         "id": "58d4a595-1239-4df1-9666-5c9cec1a592d",
-        "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
         "name": "Verkeerspost Dordrecht",
+        "callname": "Sector Heerjansdam",
         "type": "vts",
-        "phone": "+31887970800",
         "channel": 4,
+        "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
+        "phone": "+31887970800",
         "vhfdata": {
           "generic": {
             "mode": "listen"
           }
-        },
-        "callname": "Sector Heerjansdam"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -10001,19 +10001,19 @@
       "type": "Feature",
       "properties": {
         "id": "5a0106e9-2b73-468f-8e6a-723df6f99b76",
-        "url": "https://www.wsvburghsluis.nl/contact",
         "name": "Haven Burghsluis",
         "type": "marina",
-        "phone": "+31 \t(0)111-653114",
         "channel": "31",
+        "url": "https://www.wsvburghsluis.nl/contact",
+        "phone": "+31 \t(0)111-653114",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -10058,19 +10058,19 @@
       "type": "Feature",
       "properties": {
         "id": "5c23656f-8625-4d2e-be82-152d40225408",
-        "url": "https://waterkaart.net/gids/sluis.php?naam=sluis-Helmond",
         "name": "Sluis Helmond",
         "type": "lock",
-        "phone": "+31 (0)88 7974825",
         "channel": "18",
+        "url": "https://waterkaart.net/gids/sluis.php?naam=sluis-Helmond",
+        "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -10107,23 +10107,23 @@
       "type": "Feature",
       "properties": {
         "id": "5cb36ee9-d8c9-4f67-bf33-b57c836d92ca",
-        "url": "https://",
         "name": "Havendienst Hoorn",
+        "callname": "Havendienst Hoorn",
         "type": "marina",
-        "phone": "+",
         "channel": "74",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "report"
-          },
           "generic": {
             "mode": "report"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "report"
           }
-        },
-        "callname": "Havendienst Hoorn"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -10209,19 +10209,19 @@
       "type": "Feature",
       "properties": {
         "id": "5ccc8810-75bf-4e53-8e01-61e7c7ec85a7",
-        "url": "https://waterkaart.net/gids/brug.php?naam=Hefbrug-Son",
         "name": "Hefbrug Son",
         "type": "bridge",
-        "phone": "+31 (0)88 7974825",
         "channel": "22",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Hefbrug-Son",
+        "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -10258,11 +10258,11 @@
       "type": "Feature",
       "properties": {
         "id": "5e0d6c2e-d349-4d60-a88c-c693a8b6608d",
-        "url": "https://beterbediend.rws.nl",
         "name": "Van Brienenoordbrug",
         "type": "bridge",
-        "phone": "+31887985132",
         "channel": "20",
+        "url": "https://beterbediend.rws.nl",
+        "phone": "+31887985132",
         "vhfdata": {
           "generic": {
             "mode": "listen",
@@ -10302,22 +10302,22 @@
       "type": "Feature",
       "properties": {
         "id": "5f9616db-0542-42a9-9345-bf370889e572",
-        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-1-23",
         "name": "Haringvlietbrug",
+        "callname": "20",
         "type": "bridge",
+        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-1-23",
         "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "20"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -10351,23 +10351,23 @@
       "type": "Feature",
       "properties": {
         "id": "5fd53ed8-f524-4347-9bce-c9b19e929f9b",
-        "url": "https://www.goes.nl/openingstijden-ringbrug-en-st-maartensbrug",
         "name": "Ringbrug",
+        "callname": "N.A.",
         "type": "bridge",
-        "phone": "N.A.",
         "channel": "N.A.",
+        "url": "https://www.goes.nl/openingstijden-ringbrug-en-st-maartensbrug",
+        "phone": "N.A.",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "N.A."
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -10401,23 +10401,23 @@
       "type": "Feature",
       "properties": {
         "id": "60c6e229-f0cb-4021-8651-fa0d8623bdaa",
-        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
         "name": "Zeesluis Vlissingen",
+        "callname": "Zeesluis Vlissingen",
         "type": "lock",
-        "phone": "+",
         "channel": "18",
+        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Zeesluis Vlissingen"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -10451,23 +10451,23 @@
       "type": "Feature",
       "properties": {
         "id": "623a35a3-5868-4285-a00a-1c573a6b8655",
-        "url": "https://",
         "name": "Brug Kiesterzijl",
+        "callname": "Brug Kiesterzijl",
         "type": "bridge",
-        "phone": "+",
         "channel": "80",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "report"
-          },
           "generic": {
             "mode": "report"
           },
           "pleasure": {
             "mode": "report"
+          },
+          "cargo": {
+            "mode": "report"
           }
-        },
-        "callname": "Brug Kiesterzijl"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -10501,23 +10501,23 @@
       "type": "Feature",
       "properties": {
         "id": "6677b8ac-9d75-4c9d-aa4b-36365e88953f",
-        "url": "https://",
         "name": "Palma Brêge",
+        "callname": "Palma Brêge",
         "type": "bridge",
-        "phone": "+",
         "channel": "80",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "announce"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
             "mode": "announce"
+          },
+          "cargo": {
+            "mode": "announce"
           }
-        },
-        "callname": "Palma Brêge"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -10551,16 +10551,13 @@
       "type": "Feature",
       "properties": {
         "id": "6744f768-7434-44e8-9127-d1f3374dd797",
-        "url": "https://",
         "name": "Stationsbrug Franeker",
+        "callname": "Stationsbrug Franeker",
         "type": "bridge",
-        "phone": "+",
         "channel": "80",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "announce",
-            "note": "Small passage for bridge"
-          },
           "generic": {
             "mode": "announce",
             "note": "Report early for corner! yachts must wait for the traffic lights"
@@ -10568,9 +10565,12 @@
           "pleasure": {
             "mode": "listen",
             "note": "Small passage before bridge"
+          },
+          "cargo": {
+            "mode": "announce",
+            "note": "Small passage for bridge"
           }
-        },
-        "callname": "Stationsbrug Franeker"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -10640,24 +10640,24 @@
       "type": "Feature",
       "properties": {
         "id": "699bb759-b7c5-418d-b6f6-cc982e818a54",
-        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-4-10",
         "name": "Princes Maxima Sluizen",
+        "callname": "Princes Maxima sluis",
         "type": "lock",
-        "phone": "+",
         "channel": "22",
+        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-4-10",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce",
             "note": "South lock has a fixed bridge."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Princes Maxima sluis"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -10699,23 +10699,23 @@
       "type": "Feature",
       "properties": {
         "id": "6a36c87a-aade-46b6-8181-addc75d20f1c",
-        "url": "https://varendoejesamen.nl/storage/app/media//knooppunten/knooppuntenfoto-1-17.jpg",
         "name": "Oude Maas",
+        "callname": "Sector Oude Maas",
         "type": "vts",
-        "phone": "+",
         "channel": "62",
+        "url": "https://varendoejesamen.nl/storage/app/media//knooppunten/knooppuntenfoto-1-17.jpg",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "report"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Sector Oude Maas"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -11089,23 +11089,23 @@
       "type": "Feature",
       "properties": {
         "id": "6d385c38-cef5-4a47-abb1-946fd6907bf5",
-        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
         "name": "Zeelandbrug Oosterschelde",
+        "callname": "Zeelandbrug",
         "type": "bridge",
-        "phone": "+",
         "channel": "18",
+        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Zeelandbrug"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -11139,19 +11139,19 @@
       "type": "Feature",
       "properties": {
         "id": "6e4a614f-e45c-44f9-8736-8a9f549b51c4",
-        "url": "https://waterkaart.net/gids/brug.php?naam=Den-Ophef",
         "name": "Den Ophef",
         "type": "bridge",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Den-Ophef",
         "phone": "+31 (0)13 5429372",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce",
             "note": "Samen met Prinsenhoeven"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -11188,24 +11188,24 @@
       "type": "Feature",
       "properties": {
         "id": "703924b1-2017-4547-891a-a21180e15cf4",
-        "url": "https://",
         "name": "Zernike brug",
+        "callname": "Zernike brug",
         "type": "bridge",
-        "phone": "+",
         "channel": "9",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "report"
-          },
           "generic": {
             "mode": "announce",
             "note": "City of Groningen CH-9"
           },
           "pleasure": {
             "mode": "announce"
+          },
+          "cargo": {
+            "mode": "report"
           }
-        },
-        "callname": "Zernike brug"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -11239,18 +11239,18 @@
       "type": "Feature",
       "properties": {
         "id": "717065ca-f79a-4aba-98c9-bb685761cded",
-        "url": "https://waterkaart.net/gids/sluis.php?naam=Sluis-III%2C-Tilburg",
         "name": "Sluis III",
         "type": "lock",
+        "url": "https://waterkaart.net/gids/sluis.php?naam=Sluis-III%2C-Tilburg",
         "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -11287,11 +11287,11 @@
       "type": "Feature",
       "properties": {
         "id": "7256fffc-5692-4eda-a5c4-0e80c1f2fc9c",
-        "url": "https://waterkaart.net/gids/sluis.php?naam=Lorentzsluizen",
         "name": "Lorentzsluizen",
         "type": "lock",
-        "phone": "+31887974589",
         "channel": 18,
+        "url": "https://waterkaart.net/gids/sluis.php?naam=Lorentzsluizen",
+        "phone": "+31887974589",
         "vhfdata": {
           "generic": {
             "mode": "report"
@@ -11377,24 +11377,24 @@
       "type": "Feature",
       "properties": {
         "id": "736789cd-5c64-43c7-bd2c-b503195eb39d",
-        "url": "https://www.varendoejesamen.nl/nieuws/1-juni-2016-krijgt-vts-sector-millingen-een-eigen-marifoonkanaal-vhf5",
         "name": "Post Tiel",
+        "callname": "Sector Tiel",
         "type": "vts",
-        "phone": "+31 88 797 36 90",
-        "rws_id": 16501347,
         "channel": "69",
+        "url": "https://www.varendoejesamen.nl/nieuws/1-juni-2016-krijgt-vts-sector-millingen-een-eigen-marifoonkanaal-vhf5",
+        "phone": "+31 88 797 36 90",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
         },
-        "callname": "Sector Tiel"
+        "rws_id": 16501347
       },
       "geometry": {
         "type": "Polygon",
@@ -12188,19 +12188,19 @@
       "type": "Feature",
       "properties": {
         "id": "73f49053-f970-4460-addd-ee9a01c2e866",
-        "url": "https://www.vaarweginformatie.nl/frp/main/#/geo/detail/LOCK/12785011",
         "name": "Sluis Hintham",
         "type": "lock",
-        "phone": "+31 (0)88 7974825",
         "channel": "81",
+        "url": "https://www.vaarweginformatie.nl/frp/main/#/geo/detail/LOCK/12785011",
+        "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -12237,23 +12237,23 @@
       "type": "Feature",
       "properties": {
         "id": "7434b9cc-5c09-42a7-8e3f-06f72fe4ddaa",
-        "url": "https://www.goes.nl/contactgegevens-sluis-en-bruggen",
         "name": "Wilhelminabrug",
+        "callname": "Wilhelminabrug",
         "type": "bridge",
-        "phone": "+31113216744",
         "channel": "18",
+        "url": "https://www.goes.nl/contactgegevens-sluis-en-bruggen",
+        "phone": "+31113216744",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Wilhelminabrug"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -12287,24 +12287,24 @@
       "type": "Feature",
       "properties": {
         "id": "7a628277-d2c6-4e00-ba46-613d23fd7f9d",
-        "url": "https://www.portofrotterdam.com/sites/default/files/2022-02/informatie-scheepvaart-vts-2022.pdf",
         "name": "Traffic Centre Hoek van Holland",
+        "callname": "Sector Hartelkanaal",
         "type": "vts",
-        "phone": "+31 10-2521000",
-        "rws_id": 58028726,
         "channel": "10",
+        "url": "https://www.portofrotterdam.com/sites/default/files/2022-02/informatie-scheepvaart-vts-2022.pdf",
+        "phone": "+31 10-2521000",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
         },
-        "callname": "Sector Hartelkanaal"
+        "rws_id": 58028726
       },
       "geometry": {
         "type": "Polygon",
@@ -12810,18 +12810,18 @@
       "type": "Feature",
       "properties": {
         "id": "7b2fa4f2-5b6c-4f42-b4f9-943f7495550d",
-        "url": "http://",
         "name": "Alblasserdamse Brug",
+        "callname": "Brug Alblasserdam",
         "type": "bridge",
-        "phone": "+31887985132",
         "channel": 22,
+        "url": "http://",
+        "phone": "+31887985132",
         "vhfdata": {
           "generic": {
             "mode": "listen",
             "note": "Hefbrug, closed 11,94 m (bij NAP 1,00m)"
           }
-        },
-        "callname": "Brug Alblasserdam"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -12855,12 +12855,13 @@
       "type": "Feature",
       "properties": {
         "id": "7d6e8c82-8499-4b1c-a957-1b7558449d2a",
-        "url": "https://www.binnenvaartkennis.nl/wp-content/uploads/2021/01/Rotterdam.pdf",
         "name": "Hoek van Holland",
+        "callname": "Sector Rozenburg",
         "type": "vts",
-        "phone": "+31102522801",
-        "update": "https://varendoejesamen.nl/storage/app/media//knooppunten/knooppuntenfoto-1-17.jpg",
         "channel": "65",
+        "update": "https://varendoejesamen.nl/storage/app/media//knooppunten/knooppuntenfoto-1-17.jpg",
+        "url": "https://www.binnenvaartkennis.nl/wp-content/uploads/2021/01/Rotterdam.pdf",
+        "phone": "+31102522801",
         "vhfdata": {
           "generic": {
             "mode": "report"
@@ -12868,8 +12869,7 @@
           "pleasure": {
             "mode": "listen"
           }
-        },
-        "callname": "Sector Rozenburg"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -13211,17 +13211,17 @@
       "type": "Feature",
       "properties": {
         "id": "7de8ab82-63d9-44bc-9e7c-3b0ad29034e3",
-        "url": "https://www.portofrotterdam.com/sites/default/files/2022-07/procedure-VHF-communication-VTS-HCC-2022-English.pdf",
         "name": "Hoek van Holland",
+        "callname": "Sector Pilot Maas",
         "type": "vts",
-        "phone": "+31102522801",
         "channel": 2,
+        "url": "https://www.portofrotterdam.com/sites/default/files/2022-07/procedure-VHF-communication-VTS-HCC-2022-English.pdf",
+        "phone": "+31102522801",
         "vhfdata": {
           "generic": {
             "mode": "report"
           }
-        },
-        "callname": "Sector Pilot Maas"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -13267,25 +13267,25 @@
       "type": "Feature",
       "properties": {
         "id": "7e11842c-6b6d-4a08-a006-f6711b0c30ae",
-        "url": "https://dehavengids.nl/wordpress/havens/makkum-gemeentehaven/",
         "name": "Havendienst Makkum",
+        "callname": "Havendienst Makkum",
         "type": "marina",
-        "phone": "+",
         "channel": "84",
+        "url": "https://dehavengids.nl/wordpress/havens/makkum-gemeentehaven/",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "report"
-          },
           "generic": {
             "mode": "announce",
             "note": "Buitenhaven"
           },
           "pleasure": {
-            "url": "https://dehavengids.nl/wordpress/havens/makkum-gemeentehaven/",
-            "mode": "listen"
+            "mode": "listen",
+            "url": "https://dehavengids.nl/wordpress/havens/makkum-gemeentehaven/"
+          },
+          "cargo": {
+            "mode": "report"
           }
-        },
-        "callname": "Havendienst Makkum"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -13347,23 +13347,29 @@
       "type": "Feature",
       "properties": {
         "id": "7e4188f4-162e-4672-9599-ff2ce3cdc316",
-        "url": "https://",
         "name": "Havendienst Den Oever",
+        "callname": "Havendienst Den Oever",
         "type": "marina",
+        "channel": "11",
+        "update": "",
+        "url": "https://",
         "phone": "+",
-        "channel": "9",
         "vhfdata": {
-          "cargo": {
-            "mode": "report"
-          },
           "generic": {
-            "mode": "report"
+            "mode": "report",
+            "note": ""
           },
           "pleasure": {
-            "mode": "listen"
+            "mode": "listen",
+            "note": "",
+            "url": ""
+          },
+          "cargo": {
+            "mode": "report",
+            "note": "",
+            "url": ""
           }
-        },
-        "callname": "Havendienst Den Oever"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -13371,51 +13377,51 @@
           [
             [
               5.035407543182,
-              52.938151270929
+              52.938125408302
             ],
             [
               5.033841133118,
-              52.938500434614
+              52.938474571987
             ],
             [
               5.036716461182,
-              52.939871198138
+              52.939845335511
             ],
             [
               5.035214424133,
-              52.940905707894
+              52.940879845267
             ],
             [
               5.030751228333,
-              52.94271604045
+              52.942690177823
             ],
             [
               5.028862953186,
-              52.94082812052
+              52.940802257893
             ],
             [
               5.032553672791,
-              52.93873320884
+              52.938707346213
             ],
             [
               5.031051635742,
-              52.93715549235
+              52.937129629723
             ],
             [
               5.037703514099,
-              52.932810008577
+              52.93278414595
             ],
             [
               5.040106773376,
-              52.934129219417
+              52.93410335679
             ],
             [
               5.035235881805,
-              52.937465867352
+              52.937440004725
             ],
             [
               5.035407543182,
-              52.938151270929
+              52.938125408302
             ]
           ]
         ]
@@ -13425,19 +13431,19 @@
       "type": "Feature",
       "properties": {
         "id": "7e687758-35c3-4376-8f71-c7aa33aaa920",
-        "url": "https://waterkaart.net/gids/brug.php?naam=Prinsenhoeven",
         "name": "Prinsenhoeven",
         "type": "bridge",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Prinsenhoeven",
         "phone": "+31 (0)13 5429372",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce",
             "note": "Samen met Den Ophef."
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -13474,29 +13480,29 @@
       "type": "Feature",
       "properties": {
         "id": "7ef00147-93f4-42eb-a15e-10c8867f882d",
-        "url": "https://www.binnenvaartkennis.nl/wp-content/uploads/2021/01/Rotterdam.pdf",
         "name": "Rotterdam",
+        "callname": "Sector Maassluis",
         "type": "vts",
-        "phone": "+31102522601",
-        "update": "",
         "channel": "80",
+        "update": "",
+        "url": "https://www.binnenvaartkennis.nl/wp-content/uploads/2021/01/Rotterdam.pdf",
+        "phone": "+31102522601",
         "vhfdata": {
-          "cargo": {
-            "url": "",
-            "mode": "",
-            "note": ""
-          },
           "generic": {
             "mode": "report",
             "note": ""
           },
           "pleasure": {
-            "url": "https://varendoejesamen.nl/storage/app/media//knooppunten/knooppuntenfoto-1-17.jpg",
             "mode": "listen",
-            "note": ""
+            "note": "",
+            "url": "https://varendoejesamen.nl/storage/app/media//knooppunten/knooppuntenfoto-1-17.jpg"
+          },
+          "cargo": {
+            "mode": "",
+            "note": "",
+            "url": ""
           }
         },
-        "callname": "Sector Maassluis",
         "distance": 64810,
         "relativeBearing": -127
       },
@@ -13708,19 +13714,19 @@
       "type": "Feature",
       "properties": {
         "id": "7f234d01-f31d-4678-a484-3615d07a9f1d",
-        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Groenewoud",
         "name": "Brug Groenewoud",
         "type": "bridge",
-        "phone": "+31 (0)88 7974825",
         "channel": "20",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Groenewoud",
+        "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -13757,11 +13763,11 @@
       "type": "Feature",
       "properties": {
         "id": "7fcb108a-06c3-4eea-a11a-c8051f428f24",
-        "url": "https://waterkaart.net/gids/sluis.php?naam=Stevinsluis",
         "name": "Stevinsluis",
         "type": "lock",
-        "phone": "+31887974540",
         "channel": 20,
+        "url": "https://waterkaart.net/gids/sluis.php?naam=Stevinsluis",
+        "phone": "+31887974540",
         "vhfdata": {
           "generic": {
             "mode": "report"
@@ -13800,19 +13806,19 @@
       "type": "Feature",
       "properties": {
         "id": "81a84096-e621-4f4f-88c4-b9d722c30f1a",
-        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Holenakker",
         "name": "Brug Biesthoutakker",
         "type": "bridge",
-        "phone": "+31 (0)88 7974825",
         "channel": "20",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Holenakker",
+        "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -13849,24 +13855,24 @@
       "type": "Feature",
       "properties": {
         "id": "84189961-98be-4c1a-a6e5-7b98800420d8",
-        "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
         "name": "Verkeerspost Dordrecht",
+        "callname": "Overnachtingshaven Dordtsche Kil",
         "type": "marina",
-        "phone": "+31887970800",
         "channel": 71,
+        "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
+        "phone": "+31887970800",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce",
             "note": "Only for berth request"
           },
           "pleasure": {
             "mode": "report"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Overnachtingshaven Dordtsche Kil"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -13930,8 +13936,8 @@
         "id": "848005f4-34de-46ab-8ae9-27a930e704c5",
         "name": "Zeesluis IJmuiden",
         "type": "lock",
-        "phone": "+31255514457",
         "channel": 22,
+        "phone": "+31255514457",
         "vhfdata": {
           "generic": {
             "mode": "announce"
@@ -14034,24 +14040,24 @@
       "type": "Feature",
       "properties": {
         "id": "860ca492-587c-4fb1-b5ab-582cee56040e",
-        "url": "https://www.varendoejesamen.nl/nieuws/1-juni-2016-krijgt-vts-sector-millingen-een-eigen-marifoonkanaal-vhf5",
         "name": "Post Nijmegen",
+        "callname": "Sector Nijmegen",
         "type": "vts",
-        "phone": "+31 88 797 41 70",
-        "rws_id": 16498982,
         "channel": "4",
+        "url": "https://www.varendoejesamen.nl/nieuws/1-juni-2016-krijgt-vts-sector-millingen-een-eigen-marifoonkanaal-vhf5",
+        "phone": "+31 88 797 41 70",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
         },
-        "callname": "Sector Nijmegen"
+        "rws_id": 16498982
       },
       "geometry": {
         "type": "Polygon",
@@ -15141,19 +15147,19 @@
       "type": "Feature",
       "properties": {
         "id": "862c5a27-bf77-4eee-98b7-390baff897db",
-        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Dr.-Deelenlaan",
         "name": "Brug Dr. Deelenlaan",
         "type": "bridge",
-        "phone": "+31 (0)88 7974825",
         "channel": "20",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Dr.-Deelenlaan",
+        "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -15190,19 +15196,19 @@
       "type": "Feature",
       "properties": {
         "id": "86df0d61-6003-4ce9-b7d2-b8a2b483be81",
-        "url": "https://waterkaart.net/gids/sluis.php?naam=Sluis-5",
         "name": "Sluis 5",
         "type": "lock",
-        "phone": "+31 (0)88 7974825",
         "channel": "20",
+        "url": "https://waterkaart.net/gids/sluis.php?naam=Sluis-5",
+        "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -15239,23 +15245,23 @@
       "type": "Feature",
       "properties": {
         "id": "875004fd-b11d-4af3-a3f5-1f1699ac4802",
-        "url": "https://www.wvy.nl/pages/WVYBeatrix.php",
         "name": "Prinses Beatrixhaven",
+        "callname": "Havenmeester Prinses Beatrix",
         "type": "marina",
-        "phone": "+31 (0)6 22 55 67 44",
         "channel": "74",
+        "url": "https://www.wvy.nl/pages/WVYBeatrix.php",
+        "phone": "+31 (0)6 22 55 67 44",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Havenmeester Prinses Beatrix"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -15313,19 +15319,19 @@
       "type": "Feature",
       "properties": {
         "id": "87f0c47d-16fd-4362-9d98-fc0d10dc1e44",
-        "url": "https://waterkaart.net/gids/brug.php?naam=Beeksebrug",
         "name": "Beeksebrug",
         "type": "bridge",
-        "phone": "+31 (0)88 7974825",
         "channel": "20",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Beeksebrug",
+        "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -15362,23 +15368,23 @@
       "type": "Feature",
       "properties": {
         "id": "8894b4db-40e3-465d-bd6b-36722b7752cd",
-        "url": "https://",
         "name": "Schellingwoude brug",
+        "callname": "Schellingwoude",
         "type": "vts",
-        "phone": "+",
         "channel": "18",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Schellingwoude"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -15412,19 +15418,19 @@
       "type": "Feature",
       "properties": {
         "id": "88b47172-4dd5-419b-9de0-838b62c3d262",
-        "url": "https://www.wvbrouwershaven.nl/contact",
         "name": "Gemeentehaven Brouwershaven",
         "type": "marina",
-        "phone": "+31 (0)111 - 691330",
         "channel": "31",
+        "url": "https://www.wvbrouwershaven.nl/contact",
+        "phone": "+31 (0)111 - 691330",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -15477,23 +15483,23 @@
       "type": "Feature",
       "properties": {
         "id": "89f0d9bc-7661-46d1-bae9-f8cc473a8455",
-        "url": "https://",
         "name": "Jachthaven Andijk",
+        "callname": "Jachthaven Andijk",
         "type": "marina",
-        "phone": "+",
         "channel": "31",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Jachthaven Andijk"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -15539,19 +15545,19 @@
       "type": "Feature",
       "properties": {
         "id": "8a8199d0-1d2d-4cf4-9f42-70504386e0d9",
-        "url": "https://www.binnenvaartinbeeld.com/nl/zuid_willemsvaart/sluis_6",
         "name": "Sluis 6",
         "type": "lock",
-        "phone": "+31 (0)88 7974825",
         "channel": "20",
+        "url": "https://www.binnenvaartinbeeld.com/nl/zuid_willemsvaart/sluis_6",
+        "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -15588,19 +15594,19 @@
       "type": "Feature",
       "properties": {
         "id": "8ad04892-10c2-4e7b-8a6d-0575edc51f73",
-        "url": "https://waterkaart.net/gids/brug.php?naam=Markspoorbrug-Zevenbergen",
         "name": "Markspoorbrug Zevenbergen",
         "type": "bridge",
-        "phone": "+31 (0)88 2318022",
         "channel": "N.A.",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Markspoorbrug-Zevenbergen",
+        "phone": "+31 (0)88 2318022",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -15637,19 +15643,19 @@
       "type": "Feature",
       "properties": {
         "id": "8b42f93e-22ad-4fa9-8fbb-723936a38e8a",
-        "url": "https://",
         "name": "Bergsediepsluis",
         "type": "lock",
-        "phone": "+",
         "channel": "18",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -15686,21 +15692,21 @@
       "type": "Feature",
       "properties": {
         "id": "8cbad1ca-df70-4bfd-ba85-0f63b2364a1b",
-        "url": "https://www.havenoudeschild.nl/",
         "name": "Gemeentehaven Oudeschild",
+        "callname": "Oudeschild",
         "type": "marina",
-        "phone": "+31222312710",
         "channel": "12",
+        "url": "https://www.havenoudeschild.nl/",
+        "phone": "+31222312710",
         "vhfdata": {
-          "cargo": {
-            "mode": "report"
-          },
           "generic": {
             "mode": "report",
             "note": "Listen when approaching. On Mon and Fri announce due to fishing boats."
+          },
+          "cargo": {
+            "mode": "report"
           }
-        },
-        "callname": "Oudeschild"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -15842,23 +15848,23 @@
       "type": "Feature",
       "properties": {
         "id": "8f253fdb-e7ec-4a25-9794-c80cc4ba3eeb",
-        "url": "https://",
         "name": "Roodehaansterbrug",
+        "callname": "Brug Rode Haan",
         "type": "bridge",
-        "phone": "+",
         "channel": "78",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "report"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
             "mode": "announce"
+          },
+          "cargo": {
+            "mode": "report"
           }
-        },
-        "callname": "Brug Rode Haan"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -15892,24 +15898,24 @@
       "type": "Feature",
       "properties": {
         "id": "8f8a4885-1b12-4359-a26b-02d40e10383d",
-        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
         "name": "Binnenkeer- en schutsluis Vlissingen",
+        "callname": "Keersluis Vlissingen",
         "type": "lock",
-        "phone": "+",
         "channel": "22",
+        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Let op: blauwe golf."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Keersluis Vlissingen"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -15943,23 +15949,23 @@
       "type": "Feature",
       "properties": {
         "id": "9064dcbc-c120-4429-bc54-890670c01350",
-        "url": "https://",
         "name": "Galle Brêge",
+        "callname": "Galle Brêge",
         "type": "bridge",
-        "phone": "+",
         "channel": "80",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "announce"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
             "mode": "announce"
+          },
+          "cargo": {
+            "mode": "announce"
           }
-        },
-        "callname": "Galle Brêge"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -15993,24 +15999,24 @@
       "type": "Feature",
       "properties": {
         "id": "906f4681-c643-450f-ab6d-2d95ae018025",
-        "url": "https://",
         "name": "v Starkenborgkanaal",
+        "callname": "v Starkenborgkanaal",
         "type": "area",
-        "phone": "+",
         "channel": "20",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "report"
-          },
           "generic": {
             "mode": "listen",
             "note": "Busy cargo traffic"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "report"
           }
-        },
-        "callname": "v Starkenborgkanaal"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -16076,23 +16082,23 @@
       "type": "Feature",
       "properties": {
         "id": "9182e2bf-e918-418c-8ca7-bec1adbcd45d",
-        "url": "https://www.wsvnb.nl/passanten",
         "name": "Marina Colijnsplaat",
+        "callname": "N.A.",
         "type": "marina",
-        "phone": "N.A.",
         "channel": "N.A.",
+        "url": "https://www.wsvnb.nl/passanten",
+        "phone": "N.A.",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "N.A."
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -16162,16 +16168,13 @@
       "type": "Feature",
       "properties": {
         "id": "91bf3fb8-4e65-4281-832d-68cb3c2da3e4",
-        "url": "https://waterkaart.net/gids/brug.php?naam=Spoorbrug-HRM",
         "name": "Spoorbrug HRM",
+        "callname": "Spoorbrug HRM",
         "type": "bridge",
-        "phone": "+",
         "channel": "22",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Spoorbrug-HRM",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "report",
-            "note": "Long waiting possible, report early"
-          },
           "generic": {
             "mode": "report",
             "note": "Long waiting possible, report early"
@@ -16179,9 +16182,12 @@
           "pleasure": {
             "mode": "report",
             "note": "Long waiting possible, report early"
+          },
+          "cargo": {
+            "mode": "report",
+            "note": "Long waiting possible, report early"
           }
-        },
-        "callname": "Spoorbrug HRM"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -16215,23 +16221,23 @@
       "type": "Feature",
       "properties": {
         "id": "91eb99a9-dde0-4a66-a31a-3fe6d4374e82",
-        "url": "https://www.vdrest.nl/jachthaven-wemeldinge/",
         "name": "Jachthaven Wemeldinge",
+        "callname": "Jachthaven Wemeldinge",
         "type": "marina",
-        "phone": "+31113622022",
         "channel": "31",
+        "url": "https://www.vdrest.nl/jachthaven-wemeldinge/",
+        "phone": "+31113622022",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Jachthaven Wemeldinge"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -16329,23 +16335,23 @@
       "type": "Feature",
       "properties": {
         "id": "928cb1ae-9c92-4feb-be63-6d69902f89cf",
-        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
         "name": "Dokbrug Vlissingen",
+        "callname": "Dokbrug",
         "type": "bridge",
-        "phone": "+",
         "channel": "22",
+        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Dokbrug"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -16379,22 +16385,22 @@
       "type": "Feature",
       "properties": {
         "id": "93f9fd5b-7af8-49a0-9d20-dd9745da4e4d",
-        "url": "https://www.portofamsterdam.com/sites/default/files/2025-09/VTS%20communicatieregeling%202.0%20def.pdf",
         "name": "Sector Westhaven",
+        "callname": "Sector Westhaven",
         "type": "vts",
-        "phone": "+31205234600",
         "channel": 4,
+        "url": "https://www.portofamsterdam.com/sites/default/files/2025-09/VTS%20communicatieregeling%202.0%20def.pdf",
+        "phone": "+31205234600",
         "vhfdata": {
-          "cargo": {
-            "mode": "report",
-            "note": "Report destination."
-          },
           "generic": {
             "mode": "listen",
             "note": "PDF outline for Sector Westhaven (VHF 04), rotated to north with the map compass."
+          },
+          "cargo": {
+            "mode": "report",
+            "note": "Report destination."
           }
         },
-        "callname": "Sector Westhaven",
         "distance": 95,
         "relativeBearing": -179
       },
@@ -16810,24 +16816,24 @@
       "type": "Feature",
       "properties": {
         "id": "9803d3bb-63cd-40c2-98e3-1b9e6c565fea",
-        "url": "https://",
         "name": "Wetsinger sluis",
+        "callname": "Wetsinger sluis",
         "type": "bridge",
-        "phone": "+",
         "channel": "78",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "report"
-          },
           "generic": {
             "mode": "announce",
             "note": "Alleen brug, sluis staat open"
           },
           "pleasure": {
             "mode": "announce"
+          },
+          "cargo": {
+            "mode": "report"
           }
-        },
-        "callname": "Wetsinger sluis"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -16861,23 +16867,23 @@
       "type": "Feature",
       "properties": {
         "id": "99a0af0a-0144-49fb-baa6-4eb71f4d4ee9",
-        "url": "https://varendoejesamen.nl/storage/app/media//knooppunten/knooppuntenfoto-1-17.jpg",
         "name": "Waalhaven",
+        "callname": "Sector Waalhaven",
         "type": "vts",
-        "phone": "+",
         "channel": "60",
+        "url": "https://varendoejesamen.nl/storage/app/media//knooppunten/knooppuntenfoto-1-17.jpg",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "report"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Sector Waalhaven"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -17735,11 +17741,11 @@
       "type": "Feature",
       "properties": {
         "id": "9ad9d4c9-1c10-47fc-bb93-894f9dca2eea",
-        "url": "https://www.marinaseaport.nl/",
         "name": "Seaport IJmuiden",
         "type": "marina",
-        "phone": "+31255560300",
         "channel": 74,
+        "url": "https://www.marinaseaport.nl/",
+        "phone": "+31255560300",
         "vhfdata": {
           "generic": {
             "mode": "listen"
@@ -17778,24 +17784,24 @@
       "type": "Feature",
       "properties": {
         "id": "9b009680-659d-40d9-807b-6ab64a99d5d6",
-        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
         "name": "Brug Souburg",
+        "callname": "Brug Souburg",
         "type": "bridge",
-        "phone": "+",
         "channel": "22",
+        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Let op:  blauwe golf."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Brug Souburg"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -17829,23 +17835,23 @@
       "type": "Feature",
       "properties": {
         "id": "9b6af8d5-ff1a-4cc9-afcc-a7ea3ceb833f",
-        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-4-3",
         "name": "Sluis Maasbracht",
+        "callname": "Sluis Maasbracht",
         "type": "lock",
-        "phone": "+",
         "channel": "78",
+        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-4-3",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Sluis Maasbracht"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -17887,24 +17893,24 @@
       "type": "Feature",
       "properties": {
         "id": "9c0ea4da-797d-40cd-9348-c8f15b133a3a",
-        "url": "https://",
         "name": "Binnenhaven Stavoren",
+        "callname": "Binnenhaven Stavoren",
         "type": "marina",
-        "phone": "+",
         "channel": "74",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "announce"
-          },
           "generic": {
             "mode": "announce",
             "note": "+ old lock"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "announce"
           }
-        },
-        "callname": "Binnenhaven Stavoren"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -17990,18 +17996,18 @@
       "type": "Feature",
       "properties": {
         "id": "9cbe44b6-1186-4035-825f-2f6d8963fe07",
-        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Bosscheweg",
         "name": "Brug Boscjheweg",
         "type": "bridge",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Bosscheweg",
         "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -18038,23 +18044,23 @@
       "type": "Feature",
       "properties": {
         "id": "9f682d04-1752-4709-adf0-dc043d284fbf",
-        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-4-6",
         "name": "Sluis Belfeld",
+        "callname": "Sluis Belfeld",
         "type": "lock",
-        "phone": "+",
         "channel": "18",
+        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-4-6",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Sluis Belfeld"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -18104,24 +18110,24 @@
       "type": "Feature",
       "properties": {
         "id": "a0d4c2dc-7475-4dd6-b51b-3add0f88ec8a",
-        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-2-6",
         "name": "Vlakebruggen",
+        "callname": "Sluizen Hansweert",
         "type": "bridge",
-        "phone": "+",
         "channel": "22",
+        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-2-6",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Road- + trainbridge"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Sluizen Hansweert"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -18155,11 +18161,11 @@
       "type": "Feature",
       "properties": {
         "id": "a12b27ed-cb9e-49b6-adcd-f39dd51abed5",
-        "url": "https://waterkaart.net/gids/sluis.php?naam=Prinses%20Margrietsluis",
         "name": "Prinses Margrietsluis ",
         "type": "lock",
-        "phone": "+31887975555",
         "channel": 20,
+        "url": "https://waterkaart.net/gids/sluis.php?naam=Prinses%20Margrietsluis",
+        "phone": "+31887975555",
         "vhfdata": {
           "generic": {
             "mode": "report"
@@ -18201,23 +18207,23 @@
       "type": "Feature",
       "properties": {
         "id": "a219a9d1-09be-4a75-9015-42345e46d6a7",
-        "url": "https://www.rijkswaterstaat.nl/nieuws/archief/2025/10/nieuw-vts-gebied-off-texel-vanaf-3-november-operationeel",
         "name": "Off Texel VTS",
+        "callname": "Off Texel",
         "type": "vts",
         "channel": "63",
+        "url": "https://www.rijkswaterstaat.nl/nieuws/archief/2025/10/nieuw-vts-gebied-off-texel-vanaf-3-november-operationeel",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
             "mode": "announce",
             "note": "Every vessel entering has to announce"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Off Texel"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -18271,12 +18277,13 @@
       "type": "Feature",
       "properties": {
         "id": "a2381757-1f66-4cf5-9ba6-b9c237d3dadb",
-        "url": "https://www.portofrotterdam.com/sites/default/files/2022-07/procedure-VHF-communication-VTS-HCC-2022-English.pdf",
         "name": "Hoek van Holland",
+        "callname": "Sector Maasmond",
         "type": "vts",
-        "phone": "+31102522801",
-        "update": "https://varendoejesamen.nl/storage/app/media//knooppunten/knooppuntenfoto-1-17.jpg",
         "channel": "3",
+        "update": "https://varendoejesamen.nl/storage/app/media//knooppunten/knooppuntenfoto-1-17.jpg",
+        "url": "https://www.portofrotterdam.com/sites/default/files/2022-07/procedure-VHF-communication-VTS-HCC-2022-English.pdf",
+        "phone": "+31102522801",
         "vhfdata": {
           "generic": {
             "mode": "report"
@@ -18285,8 +18292,7 @@
             "mode": "report",
             "note": "Report using the corridor."
           }
-        },
-        "callname": "Sector Maasmond"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -18380,24 +18386,24 @@
       "type": "Feature",
       "properties": {
         "id": "a2d61c41-ee69-4dca-ace8-fb601de3f826",
-        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-4-4-b",
         "name": "Sluis Heel",
+        "callname": "Sluis Heel",
         "type": "lock",
-        "phone": "+",
         "channel": "18",
+        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-4-4-b",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce",
             "note": "Fixed bridge."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Sluis Heel"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -18439,20 +18445,20 @@
       "type": "Feature",
       "properties": {
         "id": "a386c5db-af91-45c8-b6ff-9e793df8f161",
-        "url": "https://www.groningen-seaports.com/wp-content/uploads/InfoKaart-Eems-1.pdf",
         "name": "Eemshaven Radar",
         "type": "vts",
-        "phone": "+",
         "channel": "01",
+        "url": "https://www.groningen-seaports.com/wp-content/uploads/InfoKaart-Eems-1.pdf",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "report",
             "note": "Havendienst Delfzijl/Eemshaven – VHF 66"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -18589,24 +18595,24 @@
       "type": "Feature",
       "properties": {
         "id": "a3d95aec-1adb-434d-af4d-24cdb0b67f69",
-        "url": "https://www.varendoejesamen.nl/knooppunten/knooppunt-1-31-oversteek-lek-bij-wijk-bij-duurstede-en-de-prinses-irenesluizen",
         "name": "Post Wijk bij Duurstede",
+        "callname": "Sector Wijk bij Duurstede",
         "type": "vts",
-        "phone": "+31 343-595111",
-        "rws_id": 16499928,
         "channel": "60",
+        "url": "https://www.varendoejesamen.nl/knooppunten/knooppunt-1-31-oversteek-lek-bij-wijk-bij-duurstede-en-de-prinses-irenesluizen",
+        "phone": "+31 343-595111",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
         },
-        "callname": "Sector Wijk bij Duurstede"
+        "rws_id": 16499928
       },
       "geometry": {
         "type": "Polygon",
@@ -19048,19 +19054,19 @@
       "type": "Feature",
       "properties": {
         "id": "a610839a-817e-4279-9887-04171ea8258d",
-        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Oisterwijksebaan",
         "name": "Brug Oisterwijksebaan",
         "type": "bridge",
-        "phone": "+31 (0)88 7974825",
         "channel": "20",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Oisterwijksebaan",
+        "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -19097,24 +19103,24 @@
       "type": "Feature",
       "properties": {
         "id": "a6971c64-6c4a-4b30-af89-f9a7cc34842c",
-        "url": "https://",
         "name": "Ketelbrug",
+        "callname": "ketelbrug",
         "type": "bridge",
-        "phone": "+",
         "channel": "18",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "report"
-          },
           "generic": {
             "mode": "report",
             "note": "For ships >11m airdraught"
           },
           "pleasure": {
             "mode": "report"
+          },
+          "cargo": {
+            "mode": "report"
           }
-        },
-        "callname": "ketelbrug"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -19148,24 +19154,24 @@
       "type": "Feature",
       "properties": {
         "id": "a7d89760-f4b5-4baf-9607-d0fd01ccc75f",
-        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-4-9",
         "name": "Sluis Grave",
+        "callname": "Sluis Grave",
         "type": "lock",
-        "phone": "+",
         "channel": "20",
+        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-4-9",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Fixed bridge"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Sluis Grave"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -19215,19 +19221,19 @@
       "type": "Feature",
       "properties": {
         "id": "a97d1f7b-56c4-4a96-9d91-098f28f68614",
-        "url": "https://waterkaart.net/gids/sluis.php?naam=sluis-4",
         "name": "Sluis 4",
         "type": "lock",
-        "phone": "+31 (0)88 7974825",
         "channel": "20",
+        "url": "https://waterkaart.net/gids/sluis.php?naam=sluis-4",
+        "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -19264,24 +19270,24 @@
       "type": "Feature",
       "properties": {
         "id": "a9e68992-2540-40b9-becd-f3c604d1216c",
-        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-4-4-b",
         "name": "Sluis Linne",
+        "callname": "Sluis Linne",
         "type": "lock",
-        "phone": "+",
         "channel": "22",
+        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-4-4-b",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Fixed bridge"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Sluis Linne"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -19315,22 +19321,22 @@
       "type": "Feature",
       "properties": {
         "id": "aa3f5a23-9e2d-4e85-81b6-6a0708ead5d1",
-        "url": "https://www.portofamsterdam.com/sites/default/files/2025-09/VTS%20communicatieregeling%202.0%20def.pdf",
         "name": "Sector IJmuiden",
+        "callname": "Sector IJmuiden",
         "type": "vts",
-        "phone": "+31205234600",
         "channel": 61,
+        "url": "https://www.portofamsterdam.com/sites/default/files/2025-09/VTS%20communicatieregeling%202.0%20def.pdf",
+        "phone": "+31205234600",
         "vhfdata": {
-          "cargo": {
-            "mode": "report",
-            "note": "Report destination."
-          },
           "generic": {
             "mode": "listen",
             "note": "PDF harbour outline plus 12 NM seaward half-circle from the IJmuiden pier heads (VTS communicatieregeling 2.0)."
+          },
+          "cargo": {
+            "mode": "report",
+            "note": "Report destination."
           }
         },
-        "callname": "Sector IJmuiden",
         "distance": -3940,
         "relativeBearing": 113
       },
@@ -19622,23 +19628,23 @@
       "type": "Feature",
       "properties": {
         "id": "aab2af37-7218-42f7-a314-9b157e53987a",
-        "url": "https://",
         "name": "Haven lemmer",
+        "callname": "Havendienst Lemmer",
         "type": "marina",
-        "phone": "+",
         "channel": "11",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "report"
-          },
           "generic": {
             "mode": "report"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "report"
           }
-        },
-        "callname": "Havendienst Lemmer"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -19832,23 +19838,23 @@
       "type": "Feature",
       "properties": {
         "id": "ad746889-86b1-40fd-a470-dfc5438e421c",
-        "url": "https://",
         "name": "Lammersburen Schutsluis",
+        "callname": "Sluis Electra",
         "type": "bridge",
-        "phone": "+",
         "channel": "78",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "announce"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
             "mode": "announce"
+          },
+          "cargo": {
+            "mode": "announce"
           }
-        },
-        "callname": "Sluis Electra"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -19882,24 +19888,24 @@
       "type": "Feature",
       "properties": {
         "id": "ae066185-a713-443c-9a5b-a99a98aedc65",
-        "url": "https://www.varendoejesamen.nl/nieuws/1-juni-2016-krijgt-vts-sector-millingen-een-eigen-marifoonkanaal-vhf5",
         "name": "Post Nijmegen",
+        "callname": "Sector Millingen",
         "type": "vts",
-        "phone": "+31 88 797 41 70",
-        "rws_id": 16501706,
         "channel": "5",
+        "url": "https://www.varendoejesamen.nl/nieuws/1-juni-2016-krijgt-vts-sector-millingen-een-eigen-marifoonkanaal-vhf5",
+        "phone": "+31 88 797 41 70",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
         },
-        "callname": "Sector Millingen"
+        "rws_id": 16501706
       },
       "geometry": {
         "type": "Polygon",
@@ -21525,23 +21531,23 @@
       "type": "Feature",
       "properties": {
         "id": "afc0dcad-89c8-42e7-8608-e14a1801f893",
-        "url": "https://",
         "name": "Tutse Brêge",
+        "callname": "Tutse Brêge",
         "type": "bridge",
-        "phone": "+",
         "channel": "80",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "announce"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
             "mode": "announce"
+          },
+          "cargo": {
+            "mode": "announce"
           }
-        },
-        "callname": "Tutse Brêge"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -21575,19 +21581,19 @@
       "type": "Feature",
       "properties": {
         "id": "b017f3bc-cbef-4ff4-8d3a-7070c3c0e7a0",
-        "url": "https://varendoejesamen.nl/knooppunten/knooppunt-6-4-goereese-sluis-noordzee-haringvliet",
         "name": "Goereese Sluis",
         "type": "lock",
         "channel": "20",
+        "url": "https://varendoejesamen.nl/knooppunten/knooppunt-6-4-goereese-sluis-noordzee-haringvliet",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Slijkgat depths change irregularly. Verkeerspost Ouddorp closed January 2024. Ask this lock (VHF 20), Coastguard (VHF 16), or Verkeerscentrale Vlissingen for waves/depth. Adjacent North Sea VTS is Traffic Centre Steenbank, VHF 64."
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -21624,19 +21630,19 @@
       "type": "Feature",
       "properties": {
         "id": "b0a49985-5315-4de5-bb6d-6b99c84a7f81",
-        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Stad-van-Gerwen",
         "name": "Brug Stad van Gerwen",
         "type": "bridge",
-        "phone": "+31 (0)88 7974825",
         "channel": "22",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Stad-van-Gerwen",
+        "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -21673,18 +21679,18 @@
       "type": "Feature",
       "properties": {
         "id": "b3c13e04-1e8b-4353-9df3-35203063d139",
-        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Hooijdonk",
         "name": "Brug Hooijdonk",
         "type": "bridge",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Hooijdonk",
         "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -21721,17 +21727,17 @@
       "type": "Feature",
       "properties": {
         "id": "b47696ef-1f42-4258-b29c-bc207a40c001",
-        "url": "https://waddenhavenameland.nl/",
         "name": "Waddenhaven Ameland",
+        "callname": "Haven Ameland",
         "type": "marina",
-        "phone": "+31519542159",
         "channel": "31",
+        "url": "https://waddenhavenameland.nl/",
+        "phone": "+31519542159",
         "vhfdata": {
           "generic": {
             "mode": "Listen"
           }
-        },
-        "callname": "Haven Ameland"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -21777,19 +21783,19 @@
       "type": "Feature",
       "properties": {
         "id": "b5a83af4-fb3a-4ebe-84b5-8e792cb99e8f",
-        "url": "https://www.binnenvaartinbeeld.com/nl/zuid_willemsvaart/donksebrug",
         "name": "Donksebrug",
         "type": "bridge",
-        "phone": "+31 (0)88 7974825",
         "channel": "20",
+        "url": "https://www.binnenvaartinbeeld.com/nl/zuid_willemsvaart/donksebrug",
+        "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -21826,24 +21832,24 @@
       "type": "Feature",
       "properties": {
         "id": "b627a71d-8447-44f4-94da-abe311cd2484",
-        "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
         "name": "Stadsbediening Dordrecht",
+        "callname": "Verkeerspost Dordrecht",
         "type": "marina",
-        "phone": "+31887970800",
         "channel": 74,
+        "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
+        "phone": "+31887970800",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce",
             "note": "Berths only"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Verkeerspost Dordrecht"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -21889,23 +21895,23 @@
       "type": "Feature",
       "properties": {
         "id": "b9e81023-caeb-4f0e-9baf-8825b647789c",
-        "url": "http://",
         "name": "Zandkreeksluis en bruggen",
+        "callname": "Zandkreeksluis",
         "type": "lock",
-        "phone": "+",
         "channel": "18",
+        "url": "http://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Zandkreeksluis"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -21939,24 +21945,24 @@
       "type": "Feature",
       "properties": {
         "id": "ba1141cd-17e7-410e-bd7d-5a2c6e48eae1",
-        "url": "https://",
         "name": "Makkum",
+        "callname": "Lock / Bridges Makkum",
         "type": "lock",
-        "phone": "+",
         "channel": "20",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "report"
-          },
           "generic": {
             "mode": "report",
             "note": "Lock + Bridges"
           },
           "pleasure": {
             "mode": "report"
+          },
+          "cargo": {
+            "mode": "report"
           }
-        },
-        "callname": "Lock / Bridges Makkum"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -22058,19 +22064,19 @@
       "type": "Feature",
       "properties": {
         "id": "bb3b71a3-b2da-46e1-a8e2-a942721fcba0",
-        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Heikantsebaan",
         "name": "Brug Heikantsebaan",
         "type": "bridge",
-        "phone": "+31 (0)88 7974825",
         "channel": "20",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Heikantsebaan",
+        "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -22107,17 +22113,17 @@
       "type": "Feature",
       "properties": {
         "id": "bcc9bdfd-98a0-463f-a62b-4a87ead45df9",
-        "url": "https://waterkaart.net/gids/sluis.php?naam=Naviduct-Krabbersgat",
         "name": "Naviduct Krabbersgat",
+        "callname": "Naviduct",
         "type": "lock",
-        "phone": "+31887973915",
         "channel": 22,
+        "url": "https://waterkaart.net/gids/sluis.php?naam=Naviduct-Krabbersgat",
+        "phone": "+31887973915",
         "vhfdata": {
           "generic": {
             "mode": "report"
           }
-        },
-        "callname": "Naviduct"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -22151,22 +22157,22 @@
       "type": "Feature",
       "properties": {
         "id": "beb3b92b-6cc6-4ad3-ab89-89bfe7af6ad2",
-        "url": "https://www.portofamsterdam.com/sites/default/files/2025-09/VTS%20communicatieregeling%202.0%20def.pdf",
         "name": "Sector Noordzeekanaal",
+        "callname": "Sector Noordzeekanaal",
         "type": "vts",
-        "phone": "+31205234600",
         "channel": 3,
+        "url": "https://www.portofamsterdam.com/sites/default/files/2025-09/VTS%20communicatieregeling%202.0%20def.pdf",
+        "phone": "+31205234600",
         "vhfdata": {
-          "cargo": {
-            "mode": "report",
-            "note": "Report destination."
-          },
           "generic": {
             "mode": "listen",
             "note": "PDF outline for Sector Noordzeekanaal (VHF 03), rotated to north with the map compass."
+          },
+          "cargo": {
+            "mode": "report",
+            "note": "Report destination."
           }
         },
-        "callname": "Sector Noordzeekanaal",
         "distance": 7926,
         "relativeBearing": -72
       },
@@ -22582,23 +22588,23 @@
       "type": "Feature",
       "properties": {
         "id": "bf92bbed-7f1b-40ea-8f5a-22a75c3ac660",
-        "url": "https://varendoejesamen.nl/storage/app/media//knooppunten/knooppuntenfoto-1-17.jpg",
         "name": "Botlek",
+        "callname": "Sector Botlek",
         "type": "vts",
-        "phone": "+",
         "channel": "61",
+        "url": "https://varendoejesamen.nl/storage/app/media//knooppunten/knooppuntenfoto-1-17.jpg",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "report"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Sector Botlek"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -23060,24 +23066,24 @@
       "type": "Feature",
       "properties": {
         "id": "c0e667e5-7389-49bd-ae80-c8d0f3ad1354",
-        "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
         "name": "Verkeers-en spoorbrug Dordrecht",
+        "callname": "Spoorbrug Dordrecht",
         "type": "bridge",
-        "phone": "+31887970800",
         "channel": 71,
+        "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
+        "phone": "+31887970800",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Bridge closed  9,75 m"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Spoorbrug Dordrecht"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -23111,19 +23117,19 @@
       "type": "Feature",
       "properties": {
         "id": "c382a9a1-421d-4694-be13-8179b2c6be90",
-        "url": "https://www.wsvdenosse.nl/contact/",
         "name": "WSV Den Osse",
         "type": "marina",
-        "phone": "+31 (0)111691457",
         "channel": "31",
+        "url": "https://www.wsvdenosse.nl/contact/",
+        "phone": "+31 (0)111691457",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -23192,19 +23198,19 @@
       "type": "Feature",
       "properties": {
         "id": "c6c5ea87-2abe-44f7-be64-f5a5a7254ed9",
-        "url": "http://veerhavenrotterdam.nl/bruggen-en-sluizen/",
         "name": "Koninginnebrug",
         "type": "bridge",
-        "phone": "+31 (0)10-4857900",
         "channel": "20",
+        "url": "http://veerhavenrotterdam.nl/bruggen-en-sluizen/",
+        "phone": "+31 (0)10-4857900",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -23241,24 +23247,24 @@
       "type": "Feature",
       "properties": {
         "id": "c747c83b-3233-4c95-ad3d-dff49f90d7ef",
-        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
         "name": "Keersluisbrug Vlissingen",
+        "callname": "Keersluisbrug Vlissingen",
         "type": "bridge",
-        "phone": "+",
         "channel": "22",
+        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Let op: blauwe golf."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Keersluisbrug Vlissingen"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -23292,23 +23298,23 @@
       "type": "Feature",
       "properties": {
         "id": "ca8d3cfb-6ae5-4745-86ea-ebf52780323b",
-        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-5-6",
         "name": "Robbengatsluis",
+        "callname": "Sluis Robbengat",
         "type": "lock",
-        "phone": "+",
         "channel": "84",
+        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-5-6",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Sluis Robbengat"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -23342,19 +23348,19 @@
       "type": "Feature",
       "properties": {
         "id": "cf5bc187-0668-45ea-89d5-c0c3152038e1",
-        "url": "https://waterkaart.net/gids/sluis.php?naam=sluis-I",
         "name": "Sluis I",
         "type": "lock",
-        "phone": "+31 (0)88 7974825",
         "channel": "18",
+        "url": "https://waterkaart.net/gids/sluis.php?naam=sluis-I",
+        "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -23391,18 +23397,18 @@
       "type": "Feature",
       "properties": {
         "id": "cf6d2772-e476-4fcf-bb09-e06f412a3684",
-        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Enschotsestraat",
         "name": "Brug Enschotsestraat",
         "type": "bridge",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Enschotsestraat",
         "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -23439,23 +23445,23 @@
       "type": "Feature",
       "properties": {
         "id": "cfd39198-20d4-4cee-a43d-c404c2137e17",
-        "url": "https://",
         "name": "Reitdiep Brug",
+        "callname": "Reitdiep Brug",
         "type": "bridge",
-        "phone": "+",
         "channel": "78",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "report"
-          },
           "generic": {
             "mode": "report"
           },
           "pleasure": {
             "mode": "announce"
+          },
+          "cargo": {
+            "mode": "report"
           }
-        },
-        "callname": "Reitdiep Brug"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -23489,19 +23495,19 @@
       "type": "Feature",
       "properties": {
         "id": "d05970e0-975c-4b37-8dc4-de04fb250357",
-        "url": "https://",
         "name": "Sluis Empel",
         "type": "lock",
-        "phone": "+31 (0)88 7974825",
         "channel": "81",
+        "url": "https://",
+        "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -23538,20 +23544,20 @@
       "type": "Feature",
       "properties": {
         "id": "d198aeae-5c23-4077-bc2b-6ff804613bef",
-        "url": "http://veerhavenrotterdam.nl/bruggen-en-sluizen/",
         "name": "De Hef",
         "type": "bridge",
-        "phone": "+31 (0)10-4857900",
         "channel": "20",
+        "url": "http://veerhavenrotterdam.nl/bruggen-en-sluizen/",
+        "phone": "+31 (0)10-4857900",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce",
             "note": "See link for details"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -23588,19 +23594,19 @@
       "type": "Feature",
       "properties": {
         "id": "d1dfd15a-8c91-4edb-883e-47289d2e70b2",
-        "url": "https://www.mpz.nl/contact/",
         "name": "Haven Port Zeelande",
         "type": "marina",
-        "phone": "+31 (0)111-671920 optie 1",
         "channel": "31",
+        "url": "https://www.mpz.nl/contact/",
+        "phone": "+31 (0)111-671920 optie 1",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -23733,23 +23739,23 @@
       "type": "Feature",
       "properties": {
         "id": "d7e2f5a3-c3e6-4717-93a8-e71c9be1d59c",
-        "url": "https://",
         "name": "Brug Dronrijp",
+        "callname": "Brug Dronrijp",
         "type": "bridge",
-        "phone": "+",
         "channel": "80",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "report"
-          },
           "generic": {
             "mode": "report"
           },
           "pleasure": {
             "mode": "report"
+          },
+          "cargo": {
+            "mode": "report"
           }
-        },
-        "callname": "Brug Dronrijp"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -23783,23 +23789,23 @@
       "type": "Feature",
       "properties": {
         "id": "d8bbda2b-b3b8-4f78-8325-3cdfe970914f",
-        "url": "https://",
         "name": "Koningsbrug",
+        "callname": "Koningsbrug",
         "type": "bridge",
-        "phone": "+",
         "channel": "18",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "report"
-          },
           "generic": {
             "mode": "report"
           },
           "pleasure": {
             "mode": "report"
+          },
+          "cargo": {
+            "mode": "report"
           }
-        },
-        "callname": "Koningsbrug"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -23833,17 +23839,17 @@
       "type": "Feature",
       "properties": {
         "id": "d90881b9-139c-4571-b925-3f497ebd1004",
-        "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
         "name": "Volkeraksluizen",
+        "callname": "Volkeraksluizen Jachtensluis",
         "type": "lock",
-        "phone": "+31887970800",
         "channel": 18,
+        "url": "https://varendoejesamen.nl/storage/app/media/downloads/Marifoonblokkanalen-regio-zuid-holland.pdf",
+        "phone": "+31887970800",
         "vhfdata": {
           "generic": {
             "mode": "listen"
           }
-        },
-        "callname": "Volkeraksluizen Jachtensluis"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -23877,23 +23883,23 @@
       "type": "Feature",
       "properties": {
         "id": "da87c90e-85ac-4dbe-a938-adc696e0863f",
-        "url": "https://",
         "name": "Brug Garnwerd",
+        "callname": "Brug Garnwerd",
         "type": "bridge",
-        "phone": "+",
         "channel": "78",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "report"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
             "mode": "announce"
+          },
+          "cargo": {
+            "mode": "report"
           }
-        },
-        "callname": "Brug Garnwerd"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -23927,23 +23933,23 @@
       "type": "Feature",
       "properties": {
         "id": "dd519aa4-fbaa-45ec-860b-de6fe98bf2fd",
-        "url": "https://",
         "name": "Bataviahaven",
+        "callname": "Bataviahaven",
         "type": "marina",
-        "phone": "+",
         "channel": "14",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Bataviahaven"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -24033,23 +24039,23 @@
       "type": "Feature",
       "properties": {
         "id": "dfa89f07-c430-4b84-ad2f-e3eefa8fdbbd",
-        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
         "name": "Sluizen Veere",
+        "callname": "Sluis Veere",
         "type": "lock",
-        "phone": "+",
         "channel": "18",
+        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Sluis Veere"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -24147,11 +24153,12 @@
       "type": "Feature",
       "properties": {
         "id": "e1208e2a-2ee8-466d-ab44-2611715483b6",
-        "url": "https://www.jachthaventerschelling.nl/",
         "name": "Passantenhaven Terschelling",
+        "callname": "Terschelling",
         "type": "marina",
-        "phone": "+31562443337",
         "channel": 31,
+        "url": "https://www.jachthaventerschelling.nl/",
+        "phone": "+31562443337",
         "vhfdata": {
           "generic": {
             "mode": "Listen"
@@ -24159,8 +24166,7 @@
           "passenger": {
             "mode": "announce"
           }
-        },
-        "callname": "Terschelling"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -24218,19 +24224,19 @@
       "type": "Feature",
       "properties": {
         "id": "e1a0f252-ac53-4cfd-b9b6-8b89e915a46a",
-        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-5-6",
         "name": "Vissershaven",
         "type": "marina",
-        "phone": "+",
         "channel": "11",
+        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-5-6",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "report"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -24279,19 +24285,19 @@
       "type": "Feature",
       "properties": {
         "id": "e90ea52d-709f-49f2-adf1-292e4587ed46",
-        "url": "https://www.port-adhoc.com/nl/onze-havens/jachthaven-bruinisse/",
         "name": "Jachthaven Bruinisse",
         "type": "marina",
-        "phone": "+31111481485",
         "channel": "0",
+        "url": "https://www.port-adhoc.com/nl/onze-havens/jachthaven-bruinisse/",
+        "phone": "+31111481485",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -24364,19 +24370,19 @@
       "type": "Feature",
       "properties": {
         "id": "e9c06ff6-dd0e-4502-880c-b66bb7dc14d6",
-        "url": "https://www.binnenvaartinbeeld.com/nl/zuid_willemsvaart/sluis_12",
         "name": "Sluis 12",
         "type": "lock",
-        "phone": "+31 (0)88 7974825",
         "channel": "18",
+        "url": "https://www.binnenvaartinbeeld.com/nl/zuid_willemsvaart/sluis_12",
+        "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -24413,20 +24419,20 @@
       "type": "Feature",
       "properties": {
         "id": "e9d2f7b2-314b-45a8-aa94-9c60f8fa8057",
-        "url": "https://www.vaarweginformatie.nl/frp/main/#/geo/detail/LOCK/32698",
         "name": "Manders sluis",
         "type": "lock",
-        "phone": "+",
         "channel": "20",
+        "url": "https://www.vaarweginformatie.nl/frp/main/#/geo/detail/LOCK/32698",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce",
             "note": "In general the lock is open."
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -24463,19 +24469,19 @@
       "type": "Feature",
       "properties": {
         "id": "e9debc6f-6a7f-4a75-ae45-d6dbda4703c8",
-        "url": "https://www.binnenvaartinbeeld.com/nl/zuid_willemsvaart/sluis_13_someren",
         "name": "Sluis 13",
         "type": "lock",
-        "phone": "+31 (0)88 7974825",
         "channel": "18",
+        "url": "https://www.binnenvaartinbeeld.com/nl/zuid_willemsvaart/sluis_13_someren",
+        "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -24512,24 +24518,24 @@
       "type": "Feature",
       "properties": {
         "id": "ea7daea9-7bbb-4776-8fae-f890886c725f",
-        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
         "name": "Sloebrug",
+        "callname": "Sloebrug",
         "type": "bridge",
-        "phone": "+",
         "channel": "22",
+        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Let op:  blauwe golf."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Sloebrug"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -24563,19 +24569,19 @@
       "type": "Feature",
       "properties": {
         "id": "ef57910c-d87b-4e88-b0d8-99d28b4d6b19",
-        "url": "https://www.binnenvaartinbeeld.com/nl/wilhelminakanaal/brug_sluis_v",
         "name": "New feature",
         "type": "bridge",
-        "phone": "+",
         "channel": "22",
+        "url": "https://www.binnenvaartinbeeld.com/nl/wilhelminakanaal/brug_sluis_v",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -24612,19 +24618,19 @@
       "type": "Feature",
       "properties": {
         "id": "ef7bd000-a452-4a5c-b741-f877072fecee",
-        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Houtens",
         "name": "Brug Houtens",
         "type": "bridge",
-        "phone": "+31 (0)88 7974825",
         "channel": "22",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Houtens",
+        "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -24661,19 +24667,19 @@
       "type": "Feature",
       "properties": {
         "id": "f0616a6c-0326-4215-be0b-a2c8e5a003bf",
-        "url": "https://",
         "name": "Vlietbrug",
         "type": "bridge",
-        "phone": "+31  (0)165 579800",
         "channel": "N.A.",
+        "url": "https://",
+        "phone": "+31  (0)165 579800",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -24710,18 +24716,18 @@
       "type": "Feature",
       "properties": {
         "id": "f0fd897c-36c1-4669-a488-8187a59a35d9",
-        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Oranjelaan",
         "name": "Brug Oranjelaan",
         "type": "bridge",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Oranjelaan",
         "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -24758,19 +24764,19 @@
       "type": "Feature",
       "properties": {
         "id": "f1f6af8f-9fac-4a09-a45f-00ddad8bae02",
-        "url": "https://marinavolendam.nl/",
         "name": "Marina Volendam",
         "type": "marina",
-        "phone": "+31299320262",
         "channel": "31",
+        "url": "https://marinavolendam.nl/",
+        "phone": "+31299320262",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -24835,24 +24841,24 @@
       "type": "Feature",
       "properties": {
         "id": "f3b46c57-60c9-48ea-99cd-7de2f3008a0e",
-        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
         "name": "Stationsbrug",
+        "callname": "Stationsbrug Vlissingen",
         "type": "bridge",
-        "phone": "+",
         "channel": "22",
+        "url": "https://www.zeeland.nl/actueel/bedieningstijden-sluizen-en-bruggen",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Let op: blauwe golf."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stationsbrug Vlissingen"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -24886,19 +24892,19 @@
       "type": "Feature",
       "properties": {
         "id": "f78be3df-0d18-4586-8dfe-632635f4096e",
-        "url": "https://waterkaart.net/gids/brug.php?naam=Havenspoorbrug%2C-Maassluis",
         "name": "Maassluis Haven",
         "type": "vts",
-        "phone": "+31 88-5445253",
         "channel": "68",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Havenspoorbrug%2C-Maassluis",
+        "phone": "+31 88-5445253",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -25071,11 +25077,11 @@
       "type": "Feature",
       "properties": {
         "id": "f7f0b436-d945-4a4e-8f74-1504d1dc3799",
-        "url": "https://waterkaart.net/gids/sluis.php?naam=Oranjesluizen",
         "name": "Oranjesluizen",
         "type": "lock",
-        "phone": "+31887973464",
         "channel": 18,
+        "url": "https://waterkaart.net/gids/sluis.php?naam=Oranjesluizen",
+        "phone": "+31887973464",
         "vhfdata": {
           "generic": {
             "mode": "report"
@@ -25161,23 +25167,23 @@
       "type": "Feature",
       "properties": {
         "id": "f80d73f7-5995-424b-b191-1bf5f0fc3977",
-        "url": "https://",
         "name": "Tjerck Hiddes sluis",
+        "callname": "Tjerck Hiddes sluis",
         "type": "lock",
-        "phone": "+",
         "channel": "22",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "report"
-          },
           "generic": {
             "mode": "report"
           },
           "pleasure": {
             "mode": "report"
+          },
+          "cargo": {
+            "mode": "report"
           }
-        },
-        "callname": "Tjerck Hiddes sluis"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -25239,23 +25245,23 @@
       "type": "Feature",
       "properties": {
         "id": "f82c4b39-f1c9-4965-b719-eed782598508",
-        "url": "https://www.terschelling.nl/de-haven-van-terschelling",
         "name": "Haven West-Terschelling",
+        "callname": "Haven West-Terschelling",
         "type": "marina",
-        "phone": "+31562446244",
         "channel": "12",
+        "url": "https://www.terschelling.nl/de-haven-van-terschelling",
+        "phone": "+31562446244",
         "vhfdata": {
-          "cargo": {
-            "mode": "announce"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "announce"
           }
-        },
-        "callname": "Haven West-Terschelling"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -25353,18 +25359,18 @@
       "type": "Feature",
       "properties": {
         "id": "f837ea48-a0e7-49db-84d1-e52893538f2e",
-        "url": "https://waterkaart.net/gids/brug.php?naam=Trappistenbrug",
         "name": "Trapistenbrug",
         "type": "bridge",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Trappistenbrug",
         "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -25403,20 +25409,20 @@
         "id": "f89857e6-c925-433d-97ec-ce0ef5fbad7f",
         "name": "Centrale meldpost IJsselmeer",
         "type": "area",
-        "phone": "+31887973300",
-        "update": "15 *",
         "channel": "1",
+        "update": "15 *",
+        "phone": "+31887973300",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen",
-            "note": "Voluntary Report destination."
-          },
           "generic": {
             "mode": "listen",
             "note": "Ship to ship on VHF 10"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen",
+            "note": "Voluntary Report destination."
           }
         }
       },
@@ -25852,23 +25858,23 @@
       "type": "Feature",
       "properties": {
         "id": "f9a7a36e-7204-4143-86f1-ee03a0f3dc75",
-        "url": "https://www.goes.nl/contactgegevens-sluis-en-bruggen",
         "name": "Goesche Sas",
+        "callname": "Goesche Sas",
         "type": "lock",
-        "phone": "+31113216744",
         "channel": "18",
+        "url": "https://www.goes.nl/contactgegevens-sluis-en-bruggen",
+        "phone": "+31113216744",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Goesche Sas"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -25902,19 +25908,19 @@
       "type": "Feature",
       "properties": {
         "id": "f9ea0e2b-43fd-4bce-ab7f-20cce9d1930a",
-        "url": "http://veerhavenrotterdam.nl/bruggen-en-sluizen/",
         "name": "Erasmusbrug",
         "type": "bridge",
-        "phone": "+31 (0)10 – 4857900",
         "channel": "20",
+        "url": "http://veerhavenrotterdam.nl/bruggen-en-sluizen/",
+        "phone": "+31 (0)10 – 4857900",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -25951,23 +25957,23 @@
       "type": "Feature",
       "properties": {
         "id": "fb8219a4-1c46-40ad-9ab7-6b23126f9d12",
-        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-4-5",
         "name": "Sluis Roermond",
+        "callname": "Sluis Roermond",
         "type": "lock",
-        "phone": "+",
         "channel": "20",
+        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-4-5",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Sluis Roermond"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -26001,20 +26007,20 @@
       "type": "Feature",
       "properties": {
         "id": "fbdf4290-cc70-43a3-b4f7-4ad3d638f104",
-        "url": "https://waterkaart.net/gids/sluis.php?naam=Henriettesluis-(Schutsluis-Engelen)",
         "name": "Henriettesluis",
         "type": "lock",
-        "phone": "+31 (0)73 6311492",
         "channel": "18",
+        "url": "https://waterkaart.net/gids/sluis.php?naam=Henriettesluis-(Schutsluis-Engelen)",
+        "phone": "+31 (0)73 6311492",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce",
             "note": "Incl. bridge."
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -26051,23 +26057,23 @@
       "type": "Feature",
       "properties": {
         "id": "fd351cc9-78f3-4ef3-835c-38cfd0fdb2b2",
-        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-2-3-b",
         "name": "Krammersluis",
+        "callname": "Krammersluizen",
         "type": "lock",
-        "phone": "+",
         "channel": "22",
+        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-2-3-b",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Krammersluizen"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -26101,19 +26107,19 @@
       "type": "Feature",
       "properties": {
         "id": "fe401775-2509-44e3-a583-fb5423112025",
-        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-4-7",
         "name": "Sluis Sambeek",
         "type": "lock",
-        "phone": "+",
         "channel": "22",
+        "url": "https://varendoejesamen.nl/kenniscentrum/artikel/knooppunt-4-7",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -26166,19 +26172,19 @@
       "type": "Feature",
       "properties": {
         "id": "fe4915ea-eb75-4c06-aca7-5b68c095355a",
-        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Holenakker",
         "name": "Brug Holenakker",
         "type": "bridge",
-        "phone": "+31 (0)88 7974825",
         "channel": "20",
+        "url": "https://waterkaart.net/gids/brug.php?naam=Brug-Holenakker",
+        "phone": "+31 (0)88 7974825",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "announce"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -26215,20 +26221,20 @@
       "type": "Feature",
       "properties": {
         "id": "ffea92a1-cb47-45b9-be3a-0637aa339c0a",
-        "url": "https://",
         "name": "Beneden Sas",
         "type": "lock",
-        "phone": "+",
         "channel": "N.A.",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "In general the lock is open"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }

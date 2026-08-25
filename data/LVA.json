@@ -5,23 +5,23 @@
       "type": "Feature",
       "properties": {
         "id": "034472ba-edb6-5db6-a275-27968df16d9e",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Mersrags",
+        "callname": "Mersrags",
         "type": "area",
-        "channel": "working channel",
+        "channel": "71",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002750100. MSI/weather 07:03, 15:03 local. Gale warnings hh:03, hh:33."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Mersrags"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -167,23 +167,23 @@
       "type": "Feature",
       "properties": {
         "id": "19a227b9-65a8-5698-a76b-2ab65e0db46a",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Jurmalciems",
+        "callname": "Jurmalciems",
         "type": "area",
-        "channel": "working channel",
+        "channel": "71",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002750100. MSI/weather 07:03, 15:03 local. Gale warnings hh:03, hh:33."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Jurmalciems"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -329,23 +329,23 @@
       "type": "Feature",
       "properties": {
         "id": "2a048b4b-5e86-5a42-ba5c-3b62de12e608",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Ventspils Traffic",
+        "callname": "Ventspils Traffic",
         "type": "area",
         "channel": "9",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002750100. MSI/weather 07:03, 15:03 local. Gale warnings hh:03, hh:33."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Ventspils Traffic"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -491,23 +491,23 @@
       "type": "Feature",
       "properties": {
         "id": "36d86619-7504-57f6-9959-ead0b86ebfd1",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Vitrupe",
+        "callname": "Vitrupe",
         "type": "area",
-        "channel": "working channel",
+        "channel": "71",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002750100. MSI/weather 07:03, 15:03 local. Gale warnings hh:03, hh:33."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Vitrupe"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -653,23 +653,23 @@
       "type": "Feature",
       "properties": {
         "id": "378512db-b7ac-5ce0-b112-bdf0acfd7907",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Uzava",
+        "callname": "Uzava",
         "type": "area",
-        "channel": "working channel",
+        "channel": "71",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002750100. MSI/weather 07:03, 15:03 local. Gale warnings hh:03, hh:33."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Uzava"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -815,23 +815,23 @@
       "type": "Feature",
       "properties": {
         "id": "5a0a0ec5-4b1d-5609-b00c-106839ad6bcc",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Riga Rescue Radio (MRCC Riga)",
+        "callname": "Riga Rescue Radio",
         "type": "area",
         "channel": "71",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002750100. MSI/weather 07:03, 15:03 local. Gale warnings hh:03, hh:33."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Riga Rescue Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -977,23 +977,23 @@
       "type": "Feature",
       "properties": {
         "id": "8307e1c9-809d-5420-82db-a383e8a4e3f5",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Jaunupe",
+        "callname": "Jaunupe",
         "type": "area",
-        "channel": "working channel",
+        "channel": "71",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002750100. MSI/weather 07:03, 15:03 local. Gale warnings hh:03, hh:33."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Jaunupe"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1139,23 +1139,23 @@
       "type": "Feature",
       "properties": {
         "id": "abdeec87-82dd-5566-983a-6d761cbf0635",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Kolka",
+        "callname": "Kolka",
         "type": "area",
-        "channel": "working channel",
+        "channel": "71",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002750100. MSI/weather 07:03, 15:03 local. Gale warnings hh:03, hh:33."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kolka"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1301,23 +1301,23 @@
       "type": "Feature",
       "properties": {
         "id": "af3d79b2-f9e1-56ef-abc2-9b83d0a8dd44",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Liepaja Traffic",
+        "callname": "Liepaja Traffic",
         "type": "area",
         "channel": "11",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002750100. MSI/weather 07:03, 15:03 local. Gale warnings hh:03, hh:33."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Liepaja Traffic"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1463,23 +1463,23 @@
       "type": "Feature",
       "properties": {
         "id": "d324ba89-efdb-59fb-b437-2759e9a301ac",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Akmenrags",
+        "callname": "Akmenrags",
         "type": "area",
-        "channel": "working channel",
+        "channel": "71",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002750100. MSI/weather 07:03, 15:03 local. Gale warnings hh:03, hh:33."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Akmenrags"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1625,23 +1625,23 @@
       "type": "Feature",
       "properties": {
         "id": "e5feec49-bf2f-53ed-9063-4a731fd30b78",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Riga Traffic",
+        "callname": "Riga Traffic",
         "type": "area",
         "channel": "9",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002750100. MSI/weather 07:03, 15:03 local. Gale warnings hh:03, hh:33."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Riga Traffic"
+        }
       },
       "geometry": {
         "type": "Polygon",

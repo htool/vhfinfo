@@ -5,19 +5,19 @@
       "type": "Feature",
       "properties": {
         "id": "00929b1f-8649-426b-a445-55a4be08a690",
-        "url": "https://www.kystverket.no/en/navigation-and-monitoring/vts---vessel-traffic-service/",
         "name": "Brevik VTS",
         "type": "vts",
-        "phone": "+4735572620",
         "channel": "80",
+        "url": "https://www.kystverket.no/en/navigation-and-monitoring/vts---vessel-traffic-service/",
+        "phone": "+4735572620",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         },
@@ -264,23 +264,23 @@
       "type": "Feature",
       "properties": {
         "id": "017ba910-efb0-5aea-aa3d-68425e6292cc",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Bergen (Lindås) remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "02",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -426,23 +426,23 @@
       "type": "Feature",
       "properties": {
         "id": "066dfd35-b68f-51ce-b554-76bd0b0aa87c",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Mosvik (Skavlen) remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "65",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -588,23 +588,23 @@
       "type": "Feature",
       "properties": {
         "id": "0c11e9f2-fde5-5599-bbc7-5b5d6a1cbd16",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Ljønibba (Hellesylt) remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "02",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -750,19 +750,19 @@
       "type": "Feature",
       "properties": {
         "id": "156c3cbd-6681-4eef-be2a-d81f04b0b45d",
-        "url": "https://www.kystverket.no/en/navigation-and-monitoring/vts---vessel-traffic-service/",
         "name": "Nor VTS",
         "type": "vts",
-        "phone": "+4778989898",
         "channel": "71",
+        "url": "https://www.kystverket.no/en/navigation-and-monitoring/vts---vessel-traffic-service/",
+        "phone": "+4778989898",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -1907,23 +1907,23 @@
       "type": "Feature",
       "properties": {
         "id": "15d8215b-3cba-5d5a-b13f-6529fbf765f8",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Nordkapp (Honningsvåg) remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "20",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2069,23 +2069,23 @@
       "type": "Feature",
       "properties": {
         "id": "177afce2-3e1c-5ae1-9701-dceb50966c7f",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Ørland (Kopparen) remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "61",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2231,23 +2231,23 @@
       "type": "Feature",
       "properties": {
         "id": "183f459d-a430-5a09-b326-eab26d9e38e2",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Alta (Helligfjell) remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "65",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2393,23 +2393,23 @@
       "type": "Feature",
       "properties": {
         "id": "190899b1-82a6-5ca3-9b30-72e07655568c",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Brattvåg (Gamlemstveten) remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "05",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2555,23 +2555,23 @@
       "type": "Feature",
       "properties": {
         "id": "1a489051-6115-50cf-b56a-a51af7bdd4ed",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Stamnes remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "07",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2717,23 +2717,23 @@
       "type": "Feature",
       "properties": {
         "id": "1cc3f681-d641-59ef-b992-2140f0ef8b56",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Tjøme remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "62",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2879,23 +2879,23 @@
       "type": "Feature",
       "properties": {
         "id": "1f2972af-2152-56b2-b819-22071739c6a2",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Hareid (Hjørunganes) remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "05",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -3041,23 +3041,23 @@
       "type": "Feature",
       "properties": {
         "id": "1f2c7be7-56cb-5512-baff-bad212c1fbd8",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Horva remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "01",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -3203,23 +3203,23 @@
       "type": "Feature",
       "properties": {
         "id": "22541c47-6c86-5c0c-b66e-24bfca16b82b",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Vega remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "60",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -3365,23 +3365,23 @@
       "type": "Feature",
       "properties": {
         "id": "24c7b245-e0ba-52b9-9649-6033a98d4b42",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Kistefjell remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "65",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -3527,23 +3527,23 @@
       "type": "Feature",
       "properties": {
         "id": "262a4298-a9d0-53fe-88d4-bc133b6aa95c",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Buholmråen (Yttervåg) remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "62",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -3689,23 +3689,23 @@
       "type": "Feature",
       "properties": {
         "id": "2cf0e379-18a0-5edd-980a-7707fb94f1de",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Farsund remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "07",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -3851,23 +3851,23 @@
       "type": "Feature",
       "properties": {
         "id": "2f88ab80-8df3-5d1f-acef-dc31749aee8b",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Ørskogfjellet remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "05",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4013,23 +4013,23 @@
       "type": "Feature",
       "properties": {
         "id": "3067586e-f1a0-5854-80a0-0abbf88b795d",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Hillesøy remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "07",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4175,23 +4175,23 @@
       "type": "Feature",
       "properties": {
         "id": "3130e4ff-7b12-5657-8e0e-687bb30330bd",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Storheia (Hadsel) remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "20",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4337,23 +4337,23 @@
       "type": "Feature",
       "properties": {
         "id": "31320f39-37e7-57a9-8261-a577861305cd",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Rørvik (Falkhetta) remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "20",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4499,23 +4499,23 @@
       "type": "Feature",
       "properties": {
         "id": "33d3eb65-766d-5f68-b286-e8871633fe3f",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Mehamn (Trollhetta) remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "07",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4661,23 +4661,23 @@
       "type": "Feature",
       "properties": {
         "id": "35710d1c-e196-5f7d-88ba-07c57fcdd134",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Berlevåg (Berlevågfjell) remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "07",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4823,23 +4823,23 @@
       "type": "Feature",
       "properties": {
         "id": "37962951-fedd-5acd-9466-078a6dfe9633",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Littlefonni (Tjelbergodden) remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "66",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4985,23 +4985,23 @@
       "type": "Feature",
       "properties": {
         "id": "3a222ed5-0c3e-5412-b045-820d12793fc3",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Ålesund (Aksla) remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "05",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -5147,19 +5147,19 @@
       "type": "Feature",
       "properties": {
         "id": "3a92190a-f3b7-47f4-9815-6adbcf5cff07",
-        "url": "https://www.kystverket.no/en/navigation-and-monitoring/vts---vessel-traffic-service/",
         "name": "Horten VTS South",
         "type": "vts",
-        "phone": "+4733034953",
         "channel": "18",
+        "url": "https://www.kystverket.no/en/navigation-and-monitoring/vts---vessel-traffic-service/",
+        "phone": "+4733034953",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         },
@@ -5422,19 +5422,19 @@
       "type": "Feature",
       "properties": {
         "id": "3ad1190a-f3b7-47f4-9815-6adbcf5cff07",
-        "url": "https://www.kystverket.no/en/navigation-and-monitoring/vts---vessel-traffic-service/",
         "name": "Horten VTS North",
         "type": "vts",
-        "phone": "+4733034960",
         "channel": "19",
+        "url": "https://www.kystverket.no/en/navigation-and-monitoring/vts---vessel-traffic-service/",
+        "phone": "+4733034960",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         },
@@ -5805,19 +5805,19 @@
       "type": "Feature",
       "properties": {
         "id": "3cb90b74-7698-4cc4-b385-296f36de4fe4",
-        "url": "https://",
         "name": "Kystradio Arbeidskanal",
         "type": "area",
-        "phone": "+",
         "channel": "66",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -5954,23 +5954,23 @@
       "type": "Feature",
       "properties": {
         "id": "3d0ff1b9-77cc-5f6c-ad5e-b46bb2108acf",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Ligtvor remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "61",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -6116,23 +6116,23 @@
       "type": "Feature",
       "properties": {
         "id": "416846e2-11d9-5c3a-903d-ce85e22f9b3b",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Bukten (Drammen) remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "61",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -6278,23 +6278,23 @@
       "type": "Feature",
       "properties": {
         "id": "47cc5588-5982-5967-97d8-7953403755d4",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Fredvang remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "20",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -6440,19 +6440,19 @@
       "type": "Feature",
       "properties": {
         "id": "4a68e9fd-ce08-4f43-9c4b-427fa68cd2ac",
-        "url": "https://www.kystverket.no/en/navigation-and-monitoring/vts---vessel-traffic-service/",
         "name": "Kvitsøy VTS South",
         "type": "vts",
-        "phone": "+4751736032",
         "channel": "18",
+        "url": "https://www.kystverket.no/en/navigation-and-monitoring/vts---vessel-traffic-service/",
+        "phone": "+4751736032",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -7417,19 +7417,19 @@
       "type": "Feature",
       "properties": {
         "id": "4ba8a153-7dfb-45c7-bec0-43f4838a47e3",
-        "url": "https://www.kystradio.no/s/article/N%C3%B8dprosedyrer-og-kanalplaner?language=no",
         "name": "Kystradio Arbeidskanal",
         "type": "area",
-        "phone": "+",
         "channel": "07",
+        "url": "https://www.kystradio.no/s/article/N%C3%B8dprosedyrer-og-kanalplaner?language=no",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -7558,23 +7558,23 @@
       "type": "Feature",
       "properties": {
         "id": "51ebeae4-c039-5312-b8a3-70711027b4e5",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Namsos (Spillumsaksla) remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "62",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -7720,23 +7720,23 @@
       "type": "Feature",
       "properties": {
         "id": "5455ba5c-47b0-5e07-bc38-dae1ded221f9",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Geiranger remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "05",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -7882,23 +7882,23 @@
       "type": "Feature",
       "properties": {
         "id": "59820b53-227d-50e6-899c-0e6f2f699272",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Varangerfjord (Torsvåde) remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "60",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -8044,23 +8044,23 @@
       "type": "Feature",
       "properties": {
         "id": "5e6684ea-5eb9-5e7d-a39f-07ad6a0fb14e",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Vealøs (Porsgrunn) remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "01",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -8206,23 +8206,23 @@
       "type": "Feature",
       "properties": {
         "id": "5fae69e5-4fdd-5b1d-a060-f21d0bc5ed42",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Lebesby (Oksen) remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "07",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -8368,23 +8368,23 @@
       "type": "Feature",
       "properties": {
         "id": "5fcf8d2d-eac4-5e93-92bd-bfd3b236eeda",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Gulen remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "66",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -8530,19 +8530,19 @@
       "type": "Feature",
       "properties": {
         "id": "65f8bce4-7192-467b-8c28-b5497dfbb239",
-        "url": "https://",
         "name": "Kystradio Arbeidskanal",
         "type": "area",
-        "phone": "+",
         "channel": "61",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -8687,23 +8687,23 @@
       "type": "Feature",
       "properties": {
         "id": "69ab289b-ffcc-54fe-af4e-4cfcc02a1e18",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Kristiansund (Varden) remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "01",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -8849,23 +8849,23 @@
       "type": "Feature",
       "properties": {
         "id": "700217ec-ff36-5280-b204-88330aad9271",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Karlsøy (Torsvåg) remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "07",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -9011,23 +9011,23 @@
       "type": "Feature",
       "properties": {
         "id": "7b7fb892-7d72-5fad-b033-9f78a8c9ef59",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Tryvann (Oslo) remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "66",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -9173,23 +9173,23 @@
       "type": "Feature",
       "properties": {
         "id": "7c20f6fe-2bc5-5201-90b2-9c90e2c25beb",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Bremanger remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "01",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -9335,23 +9335,23 @@
       "type": "Feature",
       "properties": {
         "id": "7dcf5994-efe3-587d-81e0-28f4f35a5446",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Tana (Algasvarre) remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "66",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -9497,19 +9497,19 @@
       "type": "Feature",
       "properties": {
         "id": "7f65e8fa-c604-411d-a971-372f47111be6",
-        "url": "https://",
         "name": "Kystradio Arbeidskanal",
         "type": "area",
-        "phone": "+",
         "channel": "20",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -9626,19 +9626,19 @@
       "type": "Feature",
       "properties": {
         "id": "81346610-d6e9-4ac9-b341-b684f679021e",
-        "url": "https://www.kystverket.no/en/navigation-and-monitoring/vts---vessel-traffic-service/",
         "name": "Kinn VTS",
         "type": "vts",
-        "phone": "+4770231123",
         "channel": "18",
+        "url": "https://www.kystverket.no/en/navigation-and-monitoring/vts---vessel-traffic-service/",
+        "phone": "+4770231123",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -10183,23 +10183,23 @@
       "type": "Feature",
       "properties": {
         "id": "823e1ba4-94eb-5e15-a600-36c5811d55b5",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Mo i Rana remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "65",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -10345,23 +10345,23 @@
       "type": "Feature",
       "properties": {
         "id": "86117cef-5223-5cdc-9764-d45deff955a7",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Myre (Vesterålen) remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "61",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -10507,23 +10507,23 @@
       "type": "Feature",
       "properties": {
         "id": "8659939d-8599-5f1d-91b8-5cf4f3fa5f7c",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Dolsveden (Kristiansand) remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "20",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -10669,23 +10669,23 @@
       "type": "Feature",
       "properties": {
         "id": "89275194-11ec-57c0-a225-5d902752deeb",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Meløy remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "61",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -10831,23 +10831,23 @@
       "type": "Feature",
       "properties": {
         "id": "8ac7b801-a5ae-5363-8f1b-802faeca6362",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Bergen (Rundemannen) remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "60",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -10993,23 +10993,23 @@
       "type": "Feature",
       "properties": {
         "id": "8b2faac1-3387-5d8c-ae16-47536860b6e4",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Rønvikfjell (Bodø) remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "66",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -11155,23 +11155,23 @@
       "type": "Feature",
       "properties": {
         "id": "8b4051da-0638-56c6-8e30-2bf7f9b78f78",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Hagskaret remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "20",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -11317,23 +11317,23 @@
       "type": "Feature",
       "properties": {
         "id": "8eb113d5-307c-56c9-907a-a733c8a3549f",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Kirkenes remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "65",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -11479,23 +11479,23 @@
       "type": "Feature",
       "properties": {
         "id": "9024b6bc-3281-5894-ad49-f4359e8014ab",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Domen (Vardø) remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "01",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -11641,19 +11641,19 @@
       "type": "Feature",
       "properties": {
         "id": "90bfac68-7f74-4bc6-a908-e57d6dcb4554",
-        "url": "https://www.oslohavn.no/en/menu/services/port-control/",
         "name": "Oslo VTS",
         "type": "vts",
-        "phone": "+4791799900 ",
         "channel": "18",
+        "url": "https://www.oslohavn.no/en/menu/services/port-control/",
+        "phone": "+4791799900 ",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -11758,23 +11758,23 @@
       "type": "Feature",
       "properties": {
         "id": "90e473bb-ae3a-560f-9a73-ccfa3793fffa",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Ranvikheia (Risør) remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "05",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -11920,23 +11920,23 @@
       "type": "Feature",
       "properties": {
         "id": "91717047-f98c-5483-acdf-0a4aef7ab3e6",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Kvalnes remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "01",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -12082,19 +12082,19 @@
       "type": "Feature",
       "properties": {
         "id": "9436e268-77cf-4d58-937b-7c720dedf0a2",
-        "url": "https://",
         "name": "Kystradio Arbeidskanal",
         "type": "area",
-        "phone": "+",
         "channel": "03",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -12199,19 +12199,19 @@
       "type": "Feature",
       "properties": {
         "id": "967a69a6-52ed-4054-9d9f-92e9d515a6b0",
-        "url": "https://",
         "name": "Kystradio Arbeidskanal",
         "type": "area",
-        "phone": "+",
         "channel": "65",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -12312,23 +12312,23 @@
       "type": "Feature",
       "properties": {
         "id": "96a48120-f84f-5ec1-ba2f-21509e2e6292",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Raften (Svolvær) remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "07",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -12474,23 +12474,23 @@
       "type": "Feature",
       "properties": {
         "id": "9e5da265-bb33-5acf-b6da-780692ef9583",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Andenes remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "61",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -12636,23 +12636,23 @@
       "type": "Feature",
       "properties": {
         "id": "a2e6d31a-a815-5446-bfe1-29c4712e501f",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Sotra remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "05",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -12798,19 +12798,19 @@
       "type": "Feature",
       "properties": {
         "id": "a42e8ab0-6f6e-472c-8b58-02da2eab1efb",
-        "url": "https://",
         "name": "Kystradio Arbeidskanal",
         "type": "area",
-        "phone": "+",
         "channel": "20",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -12923,23 +12923,23 @@
       "type": "Feature",
       "properties": {
         "id": "a57155a3-6e2f-5b99-8fbd-96434feed11b",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Stord remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "03",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -13085,23 +13085,23 @@
       "type": "Feature",
       "properties": {
         "id": "a87a793d-5375-5877-a497-d03139f66ebe",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Steigen remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "60",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -13247,23 +13247,23 @@
       "type": "Feature",
       "properties": {
         "id": "a906cd61-c2cf-530d-89e7-f46b2a80115d",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Kinn remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "20",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -13409,23 +13409,23 @@
       "type": "Feature",
       "properties": {
         "id": "a993ac39-fef2-5308-9552-deacb4d6a19d",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Harstad remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "07",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -13571,23 +13571,23 @@
       "type": "Feature",
       "properties": {
         "id": "a9bc8fff-21ed-5cd8-94d6-0363fa2c4eb2",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Bokn remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "20",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -13733,19 +13733,19 @@
       "type": "Feature",
       "properties": {
         "id": "ae7037d6-c489-4aa3-bec1-8a36273ae480",
-        "url": "https://www.kystverket.no/en/navigation-and-monitoring/vts---vessel-traffic-service/",
         "name": "Fedje VTS South",
         "type": "vts",
-        "phone": "+4756164430",
         "channel": "71",
+        "url": "https://www.kystverket.no/en/navigation-and-monitoring/vts---vessel-traffic-service/",
+        "phone": "+4756164430",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -13818,23 +13818,23 @@
       "type": "Feature",
       "properties": {
         "id": "afe08596-8790-53a5-89d2-fae1b287e7e6",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Tingvoll (Reinsfjell) remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "07",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -13980,23 +13980,23 @@
       "type": "Feature",
       "properties": {
         "id": "b0c68d01-b08e-5626-a1c4-f3f5af91ea29",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Trænfjord remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "20",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -14142,23 +14142,23 @@
       "type": "Feature",
       "properties": {
         "id": "b1941d81-7857-546b-8c8d-9a0f64d9f25e",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Hammerfest (Tyven) remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "62",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -14304,23 +14304,23 @@
       "type": "Feature",
       "properties": {
         "id": "b52cccfc-e28a-559d-ab95-f2c37d122ea2",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Sagtennene remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "62",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -14466,23 +14466,23 @@
       "type": "Feature",
       "properties": {
         "id": "b5308c1e-2999-555e-a10c-8c118067b78e",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Tromsø remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "07",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -14628,23 +14628,23 @@
       "type": "Feature",
       "properties": {
         "id": "b7fe793c-0211-58c1-8484-47e9417161fc",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Sogndal (Storehogen) remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "05",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -14790,23 +14790,23 @@
       "type": "Feature",
       "properties": {
         "id": "b8792c82-f7d2-50ce-8c1b-a4c2a0f42b1f",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Lødingen remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "07",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -14952,23 +14952,23 @@
       "type": "Feature",
       "properties": {
         "id": "bb5c3930-16e1-5edb-98c2-caf12bb2ffc1",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Havøysund (Havøygavlen) remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "02",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -15114,23 +15114,23 @@
       "type": "Feature",
       "properties": {
         "id": "bb86dd2b-2b02-549b-93fc-3f03e265599f",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Fosnavåg (Nerlandshorn) remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "05",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -15276,19 +15276,19 @@
       "type": "Feature",
       "properties": {
         "id": "bd4967c4-dd91-4ef2-9bf1-4da6c65efabd",
-        "url": "https://",
         "name": "Kystradio Arbeidskanal",
         "type": "area",
-        "phone": "+",
         "channel": "66",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -15389,19 +15389,19 @@
       "type": "Feature",
       "properties": {
         "id": "c2a65d4c-94d8-4746-b3e9-f8f748748dd0",
-        "url": "https://www.kystverket.no/en/navigation-and-monitoring/vts---vessel-traffic-service/",
         "name": "Fedje VTS North",
         "type": "vts",
-        "phone": "+4756164432",
         "channel": "80",
+        "url": "https://www.kystverket.no/en/navigation-and-monitoring/vts---vessel-traffic-service/",
+        "phone": "+4756164432",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         },
@@ -15464,19 +15464,19 @@
       "type": "Feature",
       "properties": {
         "id": "c3bf6894-eec8-44ea-b218-bca8648fb69c",
-        "url": "https://legacy.iho.int/mtg_docs/com_wg/SNPWG/SNPWG13/SNPWG13_VTSpresentation-eng.pdf",
         "name": "Kvitsøy VTS North",
         "type": "vts",
-        "phone": "+4751736033",
         "channel": "19",
+        "url": "https://legacy.iho.int/mtg_docs/com_wg/SNPWG/SNPWG13/SNPWG13_VTSpresentation-eng.pdf",
+        "phone": "+4751736033",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -15761,23 +15761,23 @@
       "type": "Feature",
       "properties": {
         "id": "c818bf72-5ad4-5014-90fe-ccf8e5c7a836",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Fornesfjell remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "62",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -15923,19 +15923,19 @@
       "type": "Feature",
       "properties": {
         "id": "c9ef7d3a-0dc8-4322-9170-83f87a7b9072",
-        "url": "https://legacy.iho.int/mtg_docs/com_wg/SNPWG/SNPWG13/SNPWG13_VTSpresentation-eng.pdf",
         "name": "Kvitsøy VTS North",
         "type": "vts",
-        "phone": "+4751736033",
         "channel": "19",
+        "url": "https://legacy.iho.int/mtg_docs/com_wg/SNPWG/SNPWG13/SNPWG13_VTSpresentation-eng.pdf",
+        "phone": "+4751736033",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -16016,23 +16016,23 @@
       "type": "Feature",
       "properties": {
         "id": "cb5fdb3c-b255-5828-9d89-818ad78cc43a",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Storåsen remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "01",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -16178,23 +16178,23 @@
       "type": "Feature",
       "properties": {
         "id": "cbb4e042-3b0a-55ac-bb18-9f1588882310",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Lindesnes remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "60",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -16340,23 +16340,23 @@
       "type": "Feature",
       "properties": {
         "id": "cfdfa97f-b2b9-557e-8fec-cf23c8bad74f",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Hisøy (Arendal) remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "03",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -16502,23 +16502,23 @@
       "type": "Feature",
       "properties": {
         "id": "d3cdb694-ea5e-5c7a-8355-c304927f055d",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Stavanger (Ullandhaug) remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "64",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -16664,23 +16664,23 @@
       "type": "Feature",
       "properties": {
         "id": "d8d3af22-fc9f-5fa6-b864-18202917defe",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Værøy remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "64",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -16826,23 +16826,23 @@
       "type": "Feature",
       "properties": {
         "id": "dbada6d1-2c54-5339-9f60-b3c8f4d9e0fc",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Skjervøy (Stussnesfjell) remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "07",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -16988,23 +16988,23 @@
       "type": "Feature",
       "properties": {
         "id": "de055818-195b-5554-a3cc-1ac4d94f39e3",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Stjørdal (Forbordsfjell) remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "65",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -17150,23 +17150,23 @@
       "type": "Feature",
       "properties": {
         "id": "de43da63-a03f-56d6-8948-3db794cf555b",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Høyås (Halden) remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "07",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -17312,23 +17312,23 @@
       "type": "Feature",
       "properties": {
         "id": "df0682e8-c5bf-51ea-854a-bbaafce66824",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Molde remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "07",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -17474,23 +17474,23 @@
       "type": "Feature",
       "properties": {
         "id": "e03ad70c-d0ce-5354-9f4b-ac5c3eacd312",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Haugesund remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "01",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -17636,23 +17636,23 @@
       "type": "Feature",
       "properties": {
         "id": "e2e2c226-2c39-5184-aaa6-ca38d08b3bbc",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Tonsnes remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "07",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -17798,23 +17798,23 @@
       "type": "Feature",
       "properties": {
         "id": "e4934e68-3acb-528a-a507-e8893845b858",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Inner Hardanger (Grimo) remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "20",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -17960,23 +17960,23 @@
       "type": "Feature",
       "properties": {
         "id": "ed6fc566-aad7-5a98-901d-079cd0191590",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Veggen (Narvik) remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "03",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -18122,23 +18122,23 @@
       "type": "Feature",
       "properties": {
         "id": "f09a1d03-955a-58f6-9dc0-784881a9d01a",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Skjervøy (Trolltind) remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "07",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -18284,23 +18284,23 @@
       "type": "Feature",
       "properties": {
         "id": "f2a2bca8-6cd2-58be-851d-90d7e0d1fd82",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Båtsfjord (Hamnefjell) remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "61",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -18446,23 +18446,23 @@
       "type": "Feature",
       "properties": {
         "id": "f2cb6442-3bea-55d3-a759-f99b86f0f858",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Hasvik (Fuglen) remote station",
+        "callname": "Kystradio Nord",
         "type": "area",
-        "channel": "working channel",
+        "channel": "01",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570000. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Nord"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -18608,23 +18608,23 @@
       "type": "Feature",
       "properties": {
         "id": "f2e98e83-af2d-50ef-8cbb-d0e3810255e2",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Måløy (Raudeberg) remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
-        "channel": "working channel",
+        "channel": "01",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -18770,23 +18770,23 @@
       "type": "Feature",
       "properties": {
         "id": "f30597bb-5cea-5ce9-b92e-8560c4228b10",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Fjærland remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "65",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -18932,23 +18932,23 @@
       "type": "Feature",
       "properties": {
         "id": "f60e2233-8646-5d3c-b829-72d00c82f5ec",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Lista (Storefjell) remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "02",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -19094,19 +19094,19 @@
       "type": "Feature",
       "properties": {
         "id": "fcbeb86c-696a-4715-9395-313f59a3b145",
-        "url": "https://",
         "name": "Kystradio Arbeidskanal",
         "type": "area",
-        "phone": "+",
         "channel": "01",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -19251,23 +19251,23 @@
       "type": "Feature",
       "properties": {
         "id": "fdfdb91b-77be-54b2-97ab-6b5d1abcd8dd",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Bjerkreim remote station",
+        "callname": "Kystradio Sør",
         "type": "area",
         "channel": "63",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002570100. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 09:00, 12:00, 15:00, 18:00, 21:00 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kystradio Sør"
+        }
       },
       "geometry": {
         "type": "Polygon",
