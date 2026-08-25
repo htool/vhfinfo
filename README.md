@@ -93,7 +93,7 @@ The plugin flow is as follows:
  8. /plugin/vhfinfo/nearby can be called to pull the whole result set of 7.
  9. Write the nearest POI and VTS to the path configured in the plugin
 
-SignalK App Store installs come from the npm package [`vhfinfo`](https://www.npmjs.com/package/vhfinfo). A GitHub Action publishes a new patch version at most once per UTC day when country GeoJSON in `data/` has changed since the last release (see `.github/workflows/npm-publish-geojson.yml`). That job needs an `NPM_TOKEN` repository secret.
+SignalK App Store installs come from the npm package [`vhfinfo`](https://www.npmjs.com/package/vhfinfo). A GitHub Action publishes a new patch version at most once per UTC day when country GeoJSON in `data/` has changed since the last release (see `.github/workflows/npm-publish-geojson.yml`). Publishing uses [npm trusted publishing](https://docs.npmjs.com/trusted-publishers/) (GitHub OIDC), so you do not need a rotating npm access token. Once, as package owner on npmjs.com: **Package → Settings → Trusted Publisher → GitHub Actions**, with organization `htool`, repository `vhfinfo`, workflow filename `npm-publish-geojson.yml`, and allowed action `npm publish`.
 
 #### API
 The resulting nearby VHF info objects array can be queried here:

@@ -29,8 +29,11 @@ marina polygons or existing Norwegian `Kystradio Arbeidskanal` areas.
 
 `.github/workflows/npm-publish-geojson.yml` patch-bumps and `npm publish`es
 at most once per UTC day when `data/{CC}.json` (or `*_12Nm.json` /
-`countries_bbox.json`) changed since the last npm release. Needs repository
-secret `NPM_TOKEN`. Dry-run locally: `npm run check:npm-geojson-publish`.
+`countries_bbox.json`) changed since the last npm release. Auth is npm
+trusted publishing (OIDC), not a token. On npmjs.com → `vhfinfo` →
+Settings → Trusted Publisher → GitHub Actions, set org `htool`, repo
+`vhfinfo`, workflow `npm-publish-geojson.yml`, allow `npm publish`.
+Dry-run locally: `npm run check:npm-geojson-publish`.
 
 ### Setup / run notes (non-obvious)
 

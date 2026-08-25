@@ -2,8 +2,16 @@ name: Publish npm when GeoJSON changed
 
 # Patch-bump and npm publish at most once per UTC day when plugin GeoJSON
 # (data/{CC}.json, *_12Nm.json, countries_bbox.json) changed since the last
-# release. Requires repository secret NPM_TOKEN (npm automation token with
-# publish rights on vhfinfo).
+# release.
+#
+# No NPM_TOKEN. After merge, once on npmjs.com as package owner:
+#   Package → Settings → Trusted Publisher → GitHub Actions
+#     Organization or user: htool
+#     Repository:           vhfinfo
+#     Workflow filename:    npm-publish-geojson.yml
+#     Environment:          (leave empty)
+#     Allowed actions:      npm publish
+# https://docs.npmjs.com/trusted-publishers/
 
 on:
   schedule:
@@ -37,7 +45,8 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          # npm 11.5.1+ is required for OIDC trusted publishing.
+          node-version: "24"
           registry-url: "https://registry.npmjs.org"
 
       - name: Decide whether to publish
@@ -54,16 +63,6 @@ jobs:
         if: steps.decide.outputs.should_publish == 'true'
         run: node scripts/test-npm-geojson-publish-check.js
 
-      - name: Require NPM_TOKEN
-        if: steps.decide.outputs.should_publish == 'true'
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          if [ -z "$NODE_AUTH_TOKEN" ]; then
-            echo "Add an npm automation token as repository secret NPM_TOKEN."
-            exit 1
-          fi
-
       - name: Bump package version
         if: steps.decide.outputs.should_publish == 'true'
         run: |
@@ -71,11 +70,12 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           npm version "${{ steps.decide.outputs.next_version }}" -m "Release %s (GeoJSON update)"
 
-      - name: Publish to npm
+      - name: Publish to npm with OIDC
         if: steps.decide.outputs.should_publish == 'true'
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm publish --access public --provenance
+        run: |
+          node -v
+          npm -v
+          npm publish --access public
 
       - name: Push version bump and tag
         if: steps.decide.outputs.should_publish == 'true'
