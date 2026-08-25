@@ -43,7 +43,7 @@ jobs:
       - name: Decide whether to publish
         id: decide
         env:
-          FORCE_PUBLISH: ${{ github.event_name == 'workflow_dispatch' && inputs.force }}
+          FORCE_PUBLISH: ${{ github.event.inputs.force }}
         run: node scripts/npm-geojson-publish-check.js --github-output
 
       - name: Skip
