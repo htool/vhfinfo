@@ -31,7 +31,9 @@
     "test:dual-write-live": "node scripts/test-dual-write-live.js",
     "sync:vhf": "node scripts/sync-vhf-to-git.js",
     "sync:vhf:dry-run": "node scripts/sync-vhf-to-git.js --dry-run",
-    "test:sync-vhf": "node scripts/test-sync-vhf-to-git.js"
+    "test:sync-vhf": "node scripts/test-sync-vhf-to-git.js",
+    "test:npm-geojson-publish": "node scripts/test-npm-geojson-publish-check.js",
+    "check:npm-geojson-publish": "node scripts/npm-geojson-publish-check.js"
   },
   "dependencies": {
     "@turf/nearest-point": "6.5.0",

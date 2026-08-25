@@ -27,6 +27,11 @@ On-save updates are dispatched from VHFinfoSite (`sync-git.php` → Action
 that checks out this repo and **pushes**). Do not delete VTS / lock /
 marina polygons or existing Norwegian `Kystradio Arbeidskanal` areas.
 
+`.github/workflows/npm-publish-geojson.yml` patch-bumps and `npm publish`es
+at most once per UTC day when `data/{CC}.json` (or `*_12Nm.json` /
+`countries_bbox.json`) changed since the last npm release. Needs repository
+secret `NPM_TOKEN`. Dry-run locally: `npm run check:npm-geojson-publish`.
+
 ### Setup / run notes (non-obvious)
 
 - `npm install` is the only dependency step; there is **no website build**.
