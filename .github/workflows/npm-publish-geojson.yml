@@ -1,0 +1,84 @@
+name: Publish npm when GeoJSON changed
+
+# Patch-bump and npm publish at most once per UTC day when plugin GeoJSON
+# (data/{CC}.json, *_12Nm.json, countries_bbox.json) changed since the last
+# release.
+#
+# No NPM_TOKEN. After merge, once on npmjs.com as package owner:
+#   Package → Settings → Trusted Publisher → GitHub Actions
+#     Organization or user: htool
+#     Repository:           vhfinfo
+#     Workflow filename:    npm-publish-geojson.yml
+#     Environment:          (leave empty)
+#     Allowed actions:      npm publish
+# https://docs.npmjs.com/trusted-publishers/
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Publish even if GeoJSON is unchanged (also bypasses the once-a-day cap)
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths:
+      - "data/*.json"
+
+permissions:
+  contents: write
+  id-token: write
+
+concurrency:
+  group: npm-publish-geojson
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          # npm 11.5.1+ is required for OIDC trusted publishing.
+          node-version: "24"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Decide whether to publish
+        id: decide
+        env:
+          FORCE_PUBLISH: ${{ github.event.inputs.force }}
+        run: node scripts/npm-geojson-publish-check.js --github-output
+
+      - name: Skip
+        if: steps.decide.outputs.should_publish != 'true'
+        run: echo "${{ steps.decide.outputs.reason }}"
+
+      - name: Test publish decision
+        if: steps.decide.outputs.should_publish == 'true'
+        run: node scripts/test-npm-geojson-publish-check.js
+
+      - name: Bump package version
+        if: steps.decide.outputs.should_publish == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          npm version "${{ steps.decide.outputs.next_version }}" -m "Release %s (GeoJSON update)"
+
+      - name: Publish to npm with OIDC
+        if: steps.decide.outputs.should_publish == 'true'
+        run: |
+          node -v
+          npm -v
+          npm publish --access public
+
+      - name: Push version bump and tag
+        if: steps.decide.outputs.should_publish == 'true'
+        run: |
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}" --follow-tags
