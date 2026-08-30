@@ -44,6 +44,8 @@ module.exports = function (app, options) {
         type: "number",
         title: "Beam angle",
         default: 90,
+        minimum: 1,
+        maximum: 360,
       },
       distance: {
         type: "number",
@@ -64,6 +66,14 @@ module.exports = function (app, options) {
         type: "number",
         title: "Max number of SignalK paths to write",
         default: 5,
+      },
+      minimumSpeedForCogKn: {
+        type: "number",
+        title: "Minimum speed for using COG (knots)",
+        description:
+          "Below this speed COG is ignored and an omnidirectional search is used.",
+        default: 0.5,
+        minimum: 0,
       },
       types: {
         type: "object",
@@ -119,11 +129,36 @@ module.exports = function (app, options) {
     var dataDir = path.join(userDir, "/node_modules/vhfinfo/data/");
 
     var currentHeading = null;
+    var currentSpeed = null;
     var currentCoordinates = null;
     var lastCoordinates = null;
     var currentPosition = null;
     var headingTrue = false;
     var headingMagnetic = false;
+    var minimumSpeedForCogKn = Number(options.minimumSpeedForCogKn);
+    if (!Number.isFinite(minimumSpeedForCogKn)) {
+      minimumSpeedForCogKn = 0.5;
+    }
+    var minimumSpeedForCogMs = minimumSpeedForCogKn / 1.943844;
+
+    function validHeadingDegrees(value) {
+      var radians = Number(value);
+      if (!Number.isFinite(radians)) {
+        return null;
+      }
+      var degrees = rad2deg(radians);
+      if (!Number.isFinite(degrees) || degrees < 0 || degrees >= 360) {
+        return null;
+      }
+      return degrees;
+    }
+
+    function useOmnidirectionalSearch(status) {
+      if (headingTrue == false && headingMagnetic == false) {
+        currentHeading = null;
+        pluginStatus = status;
+      }
+    }
 
     app.streambundle
       .getSelfStream("navigation.position")
@@ -134,12 +169,30 @@ module.exports = function (app, options) {
       });
 
     app.streambundle
+      .getSelfStream("navigation.speedOverGround")
+      .forEach((speed) => {
+        currentSpeed = Number(speed);
+        if (
+          !Number.isFinite(currentSpeed) ||
+          currentSpeed < minimumSpeedForCogMs
+        ) {
+          useOmnidirectionalSearch("Started - stationary, using bbox");
+        }
+      });
+
+    app.streambundle
       .getSelfStream("navigation.headingTrue")
       .forEach((heading) => {
-        currentHeading = rad2deg(heading);
-        if (headingTrue == false) {
+        var degrees = validHeadingDegrees(heading);
+        headingTrue = degrees != null;
+        if (headingTrue) {
+          currentHeading = degrees;
           headingTrue = true;
           pluginStatus = "Started - using headingTrue";
+        } else if (headingMagnetic == false) {
+          useOmnidirectionalSearch(
+            "Started - no valid heading, using bbox",
+          );
         }
       });
 
@@ -147,18 +200,39 @@ module.exports = function (app, options) {
       .getSelfStream("navigation.headingMagnetic")
       .forEach((heading) => {
         if (headingTrue == false) {
-          currentHeading = rad2deg(heading);
-          headingMagnetic = true;
-          pluginStatus = "Started - using headingMagnetic";
+          var degrees = validHeadingDegrees(heading);
+          headingMagnetic = degrees != null;
+          if (headingMagnetic) {
+            currentHeading = degrees;
+            pluginStatus = "Started - using headingMagnetic";
+          } else {
+            useOmnidirectionalSearch(
+              "Started - no valid heading, using bbox",
+            );
+          }
         }
       });
 
     app.streambundle
       .getSelfStream("navigation.courseOverGroundTrue")
       .forEach((heading) => {
-        if (headingMagnetic == false) {
-          currentHeading = rad2deg(heading);
-          pluginStatus = "Started - using COG";
+        if (headingTrue == false && headingMagnetic == false) {
+          var degrees = validHeadingDegrees(heading);
+          if (
+            degrees != null &&
+            Number.isFinite(currentSpeed) &&
+            currentSpeed >= minimumSpeedForCogMs
+          ) {
+            currentHeading = degrees;
+            pluginStatus = "Started - underway, using COG";
+          } else if (
+            !Number.isFinite(currentSpeed) ||
+            currentSpeed < minimumSpeedForCogMs
+          ) {
+            useOmnidirectionalSearch("Started - stationary, using bbox");
+          } else {
+            useOmnidirectionalSearch("Started - invalid COG, using bbox");
+          }
         }
       });
 
@@ -461,6 +535,12 @@ module.exports = function (app, options) {
       if (currentCoordinates != null && currentHeading != null) {
         currentPosition = turf.point(currentCoordinates, {});
         var options = { units: "meters" };
+        if (angle >= 360) {
+          return turf.circle(currentPosition, distance, {
+            steps: 64,
+            units: "meters",
+          });
+        }
         var bearing = currentHeading - angle / 2;
         var pointA = turf.rhumbDestination(
           currentPosition,
@@ -497,8 +577,15 @@ module.exports = function (app, options) {
           return null;
         }
         if (currentCoordinates != null && currentHeading == null) {
-          pluginStatus =
-            "Started. Still missing heading or COG. Using bbox for now.";
+          if (
+            Number.isFinite(currentSpeed) &&
+            currentSpeed < minimumSpeedForCogMs
+          ) {
+            pluginStatus = "Started - stationary, using bbox";
+          } else {
+            pluginStatus =
+              "Started. Still missing heading or COG. Using bbox for now.";
+          }
           app.debug("createSearchPolygon: heading/COG info is missing");
           currentPosition = turf.point(currentCoordinates, {});
           var options = { units: "meters" };
@@ -610,11 +697,14 @@ module.exports = function (app, options) {
             turf.polygonToLine(feature),
             currentPosition,
           );
+          var bearingReference = Number.isFinite(currentHeading)
+            ? currentHeading
+            : 0;
           var relativeBearing = Math.round(
             turf.rhumbBearing(
               currentPosition,
               nearestPoint.geometry.coordinates,
-            ) - currentHeading,
+            ) - bearingReference,
           );
           if (relativeBearing < -180) {
             relativeBearing = relativeBearing + 360;
