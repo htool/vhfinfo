@@ -1,8 +1,11 @@
-name: Publish npm when GeoJSON changed
+name: Publish npm when GeoJSON or plugin changed
 
 # Patch-bump and npm publish at most once per UTC day when plugin GeoJSON
-# (data/{CC}.json, *_12Nm.json, countries_bbox.json) changed since the last
-# release.
+# (data/{CC}.json, *_12Nm.json, countries_bbox.json) or plugin/ changed
+# since the last release.
+#
+# Keep this filename: npm trusted publishing is bound to
+# npm-publish-geojson.yml on npmjs.com.
 #
 # No NPM_TOKEN. After merge, once on npmjs.com as package owner:
 #   Package → Settings → Trusted Publisher → GitHub Actions
@@ -19,13 +22,14 @@ on:
   workflow_dispatch:
     inputs:
       force:
-        description: Publish even if GeoJSON is unchanged (also bypasses the once-a-day cap)
+        description: Publish even if GeoJSON and plugin are unchanged (also bypasses the once-a-day cap)
         type: boolean
         default: false
   push:
     branches: [main]
     paths:
       - "data/*.json"
+      - "plugin/**"
 
 permissions:
   contents: write
@@ -68,7 +72,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          npm version "${{ steps.decide.outputs.next_version }}" -m "Release %s (GeoJSON update)"
+          npm version "${{ steps.decide.outputs.next_version }}" -m "Release %s"
 
       - name: Publish to npm with OIDC
         if: steps.decide.outputs.should_publish == 'true'
