@@ -9,6 +9,12 @@ assert.strictEqual(check.isPublishableGeoJson("data/NLD_map.json"), false)
 assert.strictEqual(check.isPublishableGeoJson("data/countries.json"), false)
 assert.strictEqual(check.isPublishableGeoJson("plugin/index.js"), false)
 assert.strictEqual(check.isPublishableGeoJson("data/nested/NLD.json"), false)
+assert.strictEqual(check.isPublishablePlugin("plugin/index.js"), true)
+assert.strictEqual(check.isPublishablePlugin("plugin/foo.js"), true)
+assert.strictEqual(check.isPublishablePlugin("data/NLD.json"), false)
+assert.strictEqual(check.isPublishablePath("plugin/index.js"), true)
+assert.strictEqual(check.isPublishablePath("data/NLD.json"), true)
+assert.strictEqual(check.isPublishablePath("README.md"), false)
 
 assert.strictEqual(check.bumpPatch("0.0.37"), "0.0.38")
 assert.strictEqual(check.nextPublishVersion("0.0.37", "0.0.37"), "0.0.38")
@@ -28,7 +34,7 @@ assert.strictEqual(
 const skipToday = check.shouldPublish({
   now: noon,
   lastPublishTime: "2026-08-25T06:00:00.000Z",
-  changedFiles: ["data/NLD.json"],
+  changedFiles: ["data/NLD.json", "plugin/index.js"],
 })
 assert.strictEqual(skipToday.publish, false)
 assert.strictEqual(skipToday.reason, "already published today")
@@ -39,7 +45,10 @@ const skipNoChange = check.shouldPublish({
   changedFiles: ["data/NLD_map.json", "README.md"],
 })
 assert.strictEqual(skipNoChange.publish, false)
-assert.strictEqual(skipNoChange.reason, "no GeoJSON updates since last publish")
+assert.strictEqual(
+  skipNoChange.reason,
+  "no GeoJSON or plugin updates since last publish"
+)
 
 const publishGeo = check.shouldPublish({
   now: noon,
@@ -47,7 +56,28 @@ const publishGeo = check.shouldPublish({
   changedFiles: ["data/NLD.json", "data/NLD_map.json", "data/DEU_12Nm.json"],
 })
 assert.strictEqual(publishGeo.publish, true)
+assert.strictEqual(publishGeo.reason, "GeoJSON updated since last publish")
 assert.deepStrictEqual(publishGeo.files, ["data/NLD.json", "data/DEU_12Nm.json"])
+
+const publishPlugin = check.shouldPublish({
+  now: noon,
+  lastPublishTime: "2026-03-30T16:21:25.000Z",
+  changedFiles: ["plugin/index.js", "README.md"],
+})
+assert.strictEqual(publishPlugin.publish, true)
+assert.strictEqual(publishPlugin.reason, "plugin updated since last publish")
+assert.deepStrictEqual(publishPlugin.files, ["plugin/index.js"])
+
+const publishBoth = check.shouldPublish({
+  now: noon,
+  lastPublishTime: "2026-03-30T16:21:25.000Z",
+  changedFiles: ["data/BEL.json", "plugin/index.js"],
+})
+assert.strictEqual(publishBoth.publish, true)
+assert.strictEqual(
+  publishBoth.reason,
+  "GeoJSON and plugin updated since last publish"
+)
 
 const forced = check.shouldPublish({
   force: true,
@@ -63,7 +93,7 @@ const decided = check.decide({
   now: noon,
   localVersion: "0.0.37",
   npmRelease: { version: "0.0.37", time: "2026-03-30T16:21:25.000Z" },
-  changedFiles: ["data/BEL.json"],
+  changedFiles: ["plugin/index.js"],
 })
 assert.strictEqual(decided.publish, true)
 assert.strictEqual(decided.nextVersion, "0.0.38")

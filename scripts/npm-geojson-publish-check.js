@@ -2,8 +2,9 @@
 /**
  * Decide whether to patch-bump and npm publish vhfinfo.
  *
- * Publishes at most once per UTC day, and only when plugin GeoJSON changed
- * since the last npm release (data/{CC}.json, *_12Nm.json, countries_bbox.json).
+ * Publishes at most once per UTC day when plugin GeoJSON
+ * (data/{CC}.json, *_12Nm.json, countries_bbox.json) or plugin/ changed
+ * since the last npm release.
  *
  * Usage:
  *   node scripts/npm-geojson-publish-check.js
@@ -17,6 +18,7 @@ const { spawnSync } = require("child_process")
 
 const ROOT = path.resolve(__dirname, "..")
 const SKIP_FILES = new Set(["countries.json"])
+const TRACKED_PATHS = ["data", "plugin"]
 
 function parseArgs(argv) {
   const args = { githubOutput: false, force: false }
@@ -51,6 +53,16 @@ function isPublishableGeoJson(relPath) {
   if (SKIP_FILES.has(base)) return false
   if (base.endsWith("_map.json")) return false
   return true
+}
+
+function isPublishablePlugin(relPath) {
+  if (!relPath) return false
+  const norm = relPath.replace(/\\/g, "/")
+  return norm === "plugin" || norm.startsWith("plugin/")
+}
+
+function isPublishablePath(relPath) {
+  return isPublishableGeoJson(relPath) || isPublishablePlugin(relPath)
 }
 
 function parseVersion(v) {
@@ -88,38 +100,48 @@ function alreadyPublishedToday(lastPublishTime, now) {
   return utcDateString(lastPublishTime) === utcDateString(now)
 }
 
+function changeReason(geojson, plugin) {
+  if (geojson.length && plugin.length) {
+    return "GeoJSON and plugin updated since last publish"
+  }
+  if (plugin.length) return "plugin updated since last publish"
+  return "GeoJSON updated since last publish"
+}
+
 function shouldPublish(opts) {
   const force = !!opts.force
   const now = opts.now || new Date()
   const lastPublishTime = opts.lastPublishTime
   const changedFiles = opts.changedFiles || []
   const geojson = unique(changedFiles.filter(isPublishableGeoJson))
+  const plugin = unique(changedFiles.filter(isPublishablePlugin))
+  const files = unique(geojson.concat(plugin))
 
   if (force) {
     return {
       publish: true,
       reason: "forced",
-      files: geojson,
+      files: files,
     }
   }
   if (alreadyPublishedToday(lastPublishTime, now)) {
     return {
       publish: false,
       reason: "already published today",
-      files: geojson,
+      files: files,
     }
   }
-  if (geojson.length === 0) {
+  if (files.length === 0) {
     return {
       publish: false,
-      reason: "no GeoJSON updates since last publish",
+      reason: "no GeoJSON or plugin updates since last publish",
       files: [],
     }
   }
   return {
     publish: true,
-    reason: "GeoJSON updated since last publish",
-    files: geojson,
+    reason: changeReason(geojson, plugin),
+    files: files,
   }
 }
 
@@ -148,14 +170,17 @@ function gitChangedFilesSince(iso, cwd) {
   const repo = cwd || ROOT
   const base = runGit(["rev-list", "-n", "1", "--before=" + iso, "HEAD"], repo)
   if (!base) {
-    return runGit(["ls-files", "--", "data"], repo)
+    return runGit(["ls-files", "--"].concat(TRACKED_PATHS), repo)
       .split("\n")
       .map(function (s) {
         return s.trim()
       })
       .filter(Boolean)
   }
-  const diff = runGit(["diff", "--name-only", base, "HEAD", "--", "data"], repo)
+  const diff = runGit(
+    ["diff", "--name-only", base, "HEAD", "--"].concat(TRACKED_PATHS),
+    repo
+  )
   if (!diff) return []
   return diff.split("\n").map(function (s) {
     return s.trim()
@@ -237,6 +262,8 @@ function main() {
 
 module.exports = {
   isPublishableGeoJson: isPublishableGeoJson,
+  isPublishablePlugin: isPublishablePlugin,
+  isPublishablePath: isPublishablePath,
   alreadyPublishedToday: alreadyPublishedToday,
   shouldPublish: shouldPublish,
   nextPublishVersion: nextPublishVersion,
