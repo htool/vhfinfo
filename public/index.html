@@ -45,7 +45,7 @@
   var options = {};
 
   function readOptions() {
-    $.getJSON("/plugins/vhfinfo/options", function (json) {
+    $.getJSON("/signalk/v1/api/vhfinfo/options", function (json) {
       options = json;
     });
     if (typeof options.path != "undefined") {

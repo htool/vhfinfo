@@ -13,8 +13,9 @@ SignalK plugin (`plugin/index.js`). The vhfinfo.org website lives in
   `stu24273589` or `stu475512247`. The Cursor GitHub App must be installed on
   `htool/VHFinfoSite` or agents cannot push there.
 - **SignalK plugin** (`plugin/index.js`): npm `main`. It runs inside an
-  external SignalK server and exposes `/plugins/vhfinfo/nearby` +
-  `/plugins/vhfinfo/options`.
+  external SignalK server and exposes admin `/plugins/vhfinfo/nearby` +
+  `/plugins/vhfinfo/options`, and the same GETs on readonly
+  `/signalk/v1/api/vhfinfo/` (`plugin.signalKApiRoutes`).
 - Live map reads Supabase `public.vhf_features` first. GitHub
   `data/{CC}.json` in **this** repo is the fallback (and what the plugin
   reads). Country outlines / 12 Nm files stay here.
