@@ -18,7 +18,7 @@ const { spawnSync } = require("child_process")
 
 const ROOT = path.resolve(__dirname, "..")
 const SKIP_FILES = new Set(["countries.json"])
-const TRACKED_PATHS = ["data", "plugin"]
+const TRACKED_PATHS = ["data", "plugin", "public"]
 
 function parseArgs(argv) {
   const args = { githubOutput: false, force: false }
@@ -58,7 +58,12 @@ function isPublishableGeoJson(relPath) {
 function isPublishablePlugin(relPath) {
   if (!relPath) return false
   const norm = relPath.replace(/\\/g, "/")
-  return norm === "plugin" || norm.startsWith("plugin/")
+  return (
+    norm === "plugin" ||
+    norm.startsWith("plugin/") ||
+    norm === "public" ||
+    norm.startsWith("public/")
+  )
 }
 
 function isPublishablePath(relPath) {
