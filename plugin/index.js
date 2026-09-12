@@ -238,17 +238,27 @@ module.exports = function (app, options) {
 
     app.debug("options: %s", JSON.stringify(options));
 
+    function handleOptions(req, res) {
+      res.contentType("application/json");
+      res.send(JSON.stringify(options));
+    }
+    function handleNearby(req, res) {
+      res.contentType("application/json");
+      res.send(JSON.stringify(nearbyFeatures));
+      res.sendStatus(200);
+    }
+
     plugin.registerWithRouter = function (router) {
       app.debug("registerWithRouter");
-      router.get("/options", (req, res) => {
-        res.contentType("application/json");
-        res.send(JSON.stringify(options));
-      });
-      router.get("/nearby", (req, res) => {
-        res.contentType("application/json");
-        res.send(JSON.stringify(nearbyFeatures));
-        res.sendStatus(200);
-      });
+      router.get("/options", handleOptions);
+      router.get("/nearby", handleNearby);
+    };
+
+    // SK 2.x /plugins is admin-only. MFD/readonly clients use /signalk/v1/api.
+    plugin.signalKApiRoutes = function (router) {
+      router.get("/vhfinfo/options", handleOptions);
+      router.get("/vhfinfo/nearby", handleNearby);
+      return router;
     };
 
     var distance = options.distance; // m

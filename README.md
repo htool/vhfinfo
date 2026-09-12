@@ -100,6 +100,11 @@ The resulting nearby VHF info objects array can be queried here:
 ```
 /plugins/vhfinfo/nearby
 ```
+On Signal K 2.x that path is admin-only. Readonly clients (MFD tiles with `allow_readonly`) use:
+```
+/signalk/v1/api/vhfinfo/nearby
+/signalk/v1/api/vhfinfo/options
+```
 
 #### SignalK path
 You can configure where the plugin writes the two nearest Point of Interest (lock, bridge, marina) and VTS (Vessel Traffic Service). This can be used together with the [SignalK Instrument Display Plugin](https://www.npmjs.com/package/signalk-instrument-display-plugin) to display current VHF info on any display.

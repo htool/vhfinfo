@@ -1,8 +1,8 @@
 name: Publish npm when GeoJSON or plugin changed
 
 # Patch-bump and npm publish at most once per UTC day when plugin GeoJSON
-# (data/{CC}.json, *_12Nm.json, countries_bbox.json) or plugin/ changed
-# since the last release.
+# (data/{CC}.json, *_12Nm.json, countries_bbox.json), plugin/, or public/
+# changed since the last release.
 #
 # Keep this filename: npm trusted publishing is bound to
 # npm-publish-geojson.yml on npmjs.com.
@@ -30,6 +30,7 @@ on:
     paths:
       - "data/*.json"
       - "plugin/**"
+      - "public/**"
 
 permissions:
   contents: write
@@ -57,6 +58,7 @@ jobs:
         id: decide
         env:
           FORCE_PUBLISH: ${{ github.event.inputs.force }}
+          NODE_AUTH_TOKEN: ""
         run: node scripts/npm-geojson-publish-check.js --github-output
 
       - name: Skip
