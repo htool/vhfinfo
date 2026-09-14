@@ -5,10 +5,11 @@
       "type": "Feature",
       "properties": {
         "id": "07bd0373-2615-408f-8cc1-5f90f1f1e824",
-        "url": "https://www.sjofartsverket.se/globalassets/sound-vts/soundvts_folder.pdf",
         "name": "Sound Traffic",
+        "callname": "Sector 2 South",
         "type": "vts",
         "channel": 71,
+        "url": "https://www.sjofartsverket.se/globalassets/sound-vts/soundvts_folder.pdf",
         "vhfdata": {
           "generic": {
             "mode": "report",
@@ -17,8 +18,7 @@
           "pleasure": {
             "mode": "listen"
           }
-        },
-        "callname": "Sector 2 South"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -452,23 +452,23 @@
       "type": "Feature",
       "properties": {
         "id": "0fa02e22-2f8b-43f4-af73-38d243adbcce",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Vejby remote station",
-        "type": "area",
+        "callname": "Lyngby Radio",
+        "type": "information",
         "channel": "63",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002191000. MSI 01:33, 05:33, 09:33, 13:33, 17:33, 21:33 UTC. Weather on request."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Lyngby Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -614,18 +614,18 @@
       "type": "Feature",
       "properties": {
         "id": "124bc54e-c022-4356-988c-d4fcc8834735",
-        "url": "https://dma.dk/Media/637787223374336711/Order%20on%20the%20ship%20reporting%20system%20BELTREP%20and%20on%20navigation%20under%20the%20East%20Bridge%20and%20the%20West%20Bridge%20in%20the%20Great%20Belt.pdf",
         "name": "Great Belt South",
+        "callname": "Belt Traffic",
         "type": "vts",
-        "phone": "+4558376868",
         "channel": 16,
+        "url": "https://dma.dk/Media/637787223374336711/Order%20on%20the%20ship%20reporting%20system%20BELTREP%20and%20on%20navigation%20under%20the%20East%20Bridge%20and%20the%20West%20Bridge%20in%20the%20Great%20Belt.pdf",
+        "phone": "+4558376868",
         "vhfdata": {
           "generic": {
             "mode": "report",
             "note": "Report on VHF 11. See link for reporting details. Pleasure craft with a length less than 15 m or with a gross tonnage less than 50 are exempted from participation. "
           }
-        },
-        "callname": "Belt Traffic"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -963,23 +963,23 @@
       "type": "Feature",
       "properties": {
         "id": "1cb1e287-122f-48f5-86bb-b650cd1b012d",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Vejle remote station",
-        "type": "area",
+        "callname": "Lyngby Radio",
+        "type": "information",
         "channel": "65",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002191000. MSI 01:33, 05:33, 09:33, 13:33, 17:33, 21:33 UTC. Weather on request."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Lyngby Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1125,23 +1125,23 @@
       "type": "Feature",
       "properties": {
         "id": "1e05fd12-ccbb-572e-a1ec-0cb3dbd7f5f2",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Hirtshals remote station",
-        "type": "area",
+        "callname": "Lyngby Radio",
+        "type": "information",
         "channel": "63",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002191000. MSI 01:33, 05:33, 09:33, 13:33, 17:33, 21:33 UTC. Weather on request."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Lyngby Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1287,10 +1287,11 @@
       "type": "Feature",
       "properties": {
         "id": "4d1a226e-f5dc-45d3-8a84-7131a7903530",
-        "url": "https://www.sjofartsverket.se/globalassets/sound-vts/soundvts_folder.pdf",
         "name": "Sound Traffic",
+        "callname": "Sector 1 North",
         "type": "vts",
         "channel": "73",
+        "url": "https://www.sjofartsverket.se/globalassets/sound-vts/soundvts_folder.pdf",
         "vhfdata": {
           "generic": {
             "mode": "report",
@@ -1299,8 +1300,7 @@
           "pleasure": {
             "mode": "listen"
           }
-        },
-        "callname": "Sector 1 North"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2010,23 +2010,23 @@
       "type": "Feature",
       "properties": {
         "id": "521698c4-d3e0-530b-bd9b-13395a7dd36c",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Frejlev remote station",
-        "type": "area",
+        "callname": "Lyngby Radio",
+        "type": "information",
         "channel": "03",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002191000. MSI 01:33, 05:33, 09:33, 13:33, 17:33, 21:33 UTC. Weather on request."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Lyngby Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2172,19 +2172,19 @@
       "type": "Feature",
       "properties": {
         "id": "5a65f2c0-0eaa-4379-b4db-ccb1982dacc7",
-        "url": "https://www.thyboronport.com/",
         "name": "Thyboron Port",
         "type": "vts",
-        "phone": "+4596900320",
         "channel": "12/16",
+        "url": "https://www.thyboronport.com/",
+        "phone": "+4596900320",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -2257,23 +2257,23 @@
       "type": "Feature",
       "properties": {
         "id": "6eb8a5f2-2327-58c0-8fa5-fad07c22fa03",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Skagen remote station",
-        "type": "area",
+        "callname": "Lyngby Radio",
+        "type": "information",
         "channel": "04 / 65",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002191000. MSI 01:33, 05:33, 09:33, 13:33, 17:33, 21:33 UTC. Weather on request."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Lyngby Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2419,23 +2419,23 @@
       "type": "Feature",
       "properties": {
         "id": "6edb9f83-d036-40a2-8f14-2c15f64f6c1a",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Fornæs remote station",
-        "type": "area",
+        "callname": "Lyngby Radio",
+        "type": "information",
         "channel": "66",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002191000. MSI 01:33, 05:33, 09:33, 13:33, 17:33, 21:33 UTC. Weather on request."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Lyngby Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2581,23 +2581,23 @@
       "type": "Feature",
       "properties": {
         "id": "704204f3-6d38-520d-a031-9bbee64c09f8",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Bornholm (Årsballe) remote station",
-        "type": "area",
+        "callname": "Lyngby Radio",
+        "type": "information",
         "channel": "01 / 04",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002191000. MSI 01:33, 05:33, 09:33, 13:33, 17:33, 21:33 UTC. Weather on request."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Lyngby Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2743,23 +2743,23 @@
       "type": "Feature",
       "properties": {
         "id": "72ed0961-f2d3-5a72-a176-ca9fd31f202e",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Blåvand remote station",
-        "type": "area",
+        "callname": "Lyngby Radio",
+        "type": "information",
         "channel": "07",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002191000. MSI 01:33, 05:33, 09:33, 13:33, 17:33, 21:33 UTC. Weather on request."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Lyngby Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2905,23 +2905,23 @@
       "type": "Feature",
       "properties": {
         "id": "8c744604-e209-5ebb-84eb-f4f1f5e8f3a8",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Læsø remote station",
-        "type": "area",
+        "callname": "Lyngby Radio",
+        "type": "information",
         "channel": "64",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002191000. MSI 01:33, 05:33, 09:33, 13:33, 17:33, 21:33 UTC. Weather on request."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Lyngby Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -3067,23 +3067,23 @@
       "type": "Feature",
       "properties": {
         "id": "9376d249-def3-5b65-a046-dcd63d324648",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Silkeborg remote station",
-        "type": "area",
+        "callname": "Lyngby Radio",
+        "type": "information",
         "channel": "05",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002191000. MSI 01:33, 05:33, 09:33, 13:33, 17:33, 21:33 UTC. Weather on request."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Lyngby Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -3229,23 +3229,23 @@
       "type": "Feature",
       "properties": {
         "id": "a156008b-dacc-49ed-8016-c7adc42aa139",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Svendborg remote station",
-        "type": "area",
+        "callname": "Lyngby Radio",
+        "type": "information",
         "channel": "18",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002191000. MSI 01:33, 05:33, 09:33, 13:33, 17:33, 21:33 UTC. Weather on request."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Lyngby Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -3391,18 +3391,18 @@
       "type": "Feature",
       "properties": {
         "id": "aa60e628-8b48-4bca-9cfa-37f9e70ad6ec",
-        "url": "https://dma.dk/Media/637787223374336711/Order%20on%20the%20ship%20reporting%20system%20BELTREP%20and%20on%20navigation%20under%20the%20East%20Bridge%20and%20the%20West%20Bridge%20in%20the%20Great%20Belt.pdf",
         "name": "Great Belt North",
+        "callname": "Belt Traffic",
         "type": "vts",
-        "phone": "+4558376868",
         "channel": 16,
+        "url": "https://dma.dk/Media/637787223374336711/Order%20on%20the%20ship%20reporting%20system%20BELTREP%20and%20on%20navigation%20under%20the%20East%20Bridge%20and%20the%20West%20Bridge%20in%20the%20Great%20Belt.pdf",
+        "phone": "+4558376868",
         "vhfdata": {
           "generic": {
             "mode": "report",
             "note": "Report on VHF 74. See link for reporting details. Pleasure craft with a length less than 15 m or with a gross tonnage less than 50 are exempted from participation. "
           }
-        },
-        "callname": "Belt Traffic"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -3720,23 +3720,23 @@
       "type": "Feature",
       "properties": {
         "id": "ac7c2d93-dd79-5bbe-a71a-49c5562f6392",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Karleby remote station",
-        "type": "area",
+        "callname": "Lyngby Radio",
+        "type": "information",
         "channel": "07 / 61",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002191000. MSI 01:33, 05:33, 09:33, 13:33, 17:33, 21:33 UTC. Weather on request."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Lyngby Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -3882,23 +3882,23 @@
       "type": "Feature",
       "properties": {
         "id": "b470015c-9a37-4849-8fb3-3a5632611378",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Mern remote station",
-        "type": "area",
+        "callname": "Lyngby Radio",
+        "type": "information",
         "channel": "02 / 64",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002191000. MSI 01:33, 05:33, 09:33, 13:33, 17:33, 21:33 UTC. Weather on request."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Lyngby Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4044,23 +4044,23 @@
       "type": "Feature",
       "properties": {
         "id": "bf753942-b0f7-4654-ada4-5f93569ac258",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Als (Felsted) remote station",
-        "type": "area",
+        "callname": "Lyngby Radio",
+        "type": "information",
         "channel": "62",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002191000. MSI 01:33, 05:33, 09:33, 13:33, 17:33, 21:33 UTC. Weather on request."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Lyngby Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4206,23 +4206,23 @@
       "type": "Feature",
       "properties": {
         "id": "c4716c79-7d63-58d9-a889-b415ee05d3a8",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Bovbjerg remote station",
-        "type": "area",
+        "callname": "Lyngby Radio",
+        "type": "information",
         "channel": "02",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002191000. MSI 01:33, 05:33, 09:33, 13:33, 17:33, 21:33 UTC. Weather on request."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Lyngby Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4368,23 +4368,23 @@
       "type": "Feature",
       "properties": {
         "id": "e9e4d0fc-b689-4dd1-8883-91ed67641a51",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Copenhagen (Lynetten) remote station",
-        "type": "area",
+        "callname": "Lyngby Radio",
+        "type": "information",
         "channel": "03 / 05",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002191000. MSI 01:33, 05:33, 09:33, 13:33, 17:33, 21:33 UTC. Weather on request."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Lyngby Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4530,23 +4530,23 @@
       "type": "Feature",
       "properties": {
         "id": "f19a29b2-95e0-4c61-8955-38d45f4b99b0",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Røsnæs remote station",
-        "type": "area",
+        "callname": "Lyngby Radio",
+        "type": "information",
         "channel": "01 / 04",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002191000. MSI 01:33, 05:33, 09:33, 13:33, 17:33, 21:33 UTC. Weather on request."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Lyngby Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4692,23 +4692,23 @@
       "type": "Feature",
       "properties": {
         "id": "f558a1ef-f7d5-5b58-a53e-52861afe0efe",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Hanstholm remote station",
-        "type": "area",
+        "callname": "Lyngby Radio",
+        "type": "information",
         "channel": "01",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002191000. MSI 01:33, 05:33, 09:33, 13:33, 17:33, 21:33 UTC. Weather on request."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Lyngby Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4854,23 +4854,23 @@
       "type": "Feature",
       "properties": {
         "id": "fa7b620e-757b-5a30-91ff-359b995a5ba1",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Anholt remote station",
-        "type": "area",
+        "callname": "Lyngby Radio",
+        "type": "information",
         "channel": "07",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002191000. MSI 01:33, 05:33, 09:33, 13:33, 17:33, 21:33 UTC. Weather on request."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Lyngby Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",

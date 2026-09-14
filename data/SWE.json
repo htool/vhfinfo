@@ -5,23 +5,23 @@
       "type": "Feature",
       "properties": {
         "id": "01bef975-2bf9-54f8-9673-fedaa599871a",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Mjällom remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "64",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -167,23 +167,23 @@
       "type": "Feature",
       "properties": {
         "id": "06b5c529-c37d-511c-8623-a6d3d4cde5ab",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Bäckefors remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "05",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -329,23 +329,23 @@
       "type": "Feature",
       "properties": {
         "id": "07074630-af7d-5fe1-af16-c14201b90533",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Helsingborg remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "60",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -491,23 +491,23 @@
       "type": "Feature",
       "properties": {
         "id": "0e38d9ef-600c-51e3-bb49-df4216885192",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Gothenburg remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "60",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -653,23 +653,23 @@
       "type": "Feature",
       "properties": {
         "id": "146d498e-a137-5930-afd7-23c6c397515e",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Malmö remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "65",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -815,23 +815,23 @@
       "type": "Feature",
       "properties": {
         "id": "1c2f1b87-84fd-58d4-8f40-2cb2489e46e8",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Tjörn remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "81",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -977,23 +977,23 @@
       "type": "Feature",
       "properties": {
         "id": "2718e5df-59de-59ba-a9ac-91180ec6c130",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Torö remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "61",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1139,23 +1139,23 @@
       "type": "Feature",
       "properties": {
         "id": "2f7f8af9-5870-5313-a56b-e7d631fd1006",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Visby remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "63",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1301,23 +1301,23 @@
       "type": "Feature",
       "properties": {
         "id": "311bf344-a0f7-52e4-a82c-d77ce4038907",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Nacka remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "23",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1463,23 +1463,23 @@
       "type": "Feature",
       "properties": {
         "id": "31c9f1bf-85e4-514e-be18-f19f263ed89c",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Halmstad remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "62",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1625,23 +1625,23 @@
       "type": "Feature",
       "properties": {
         "id": "35a65b0d-522c-465e-b6f1-27582080aeee",
-        "url": "https://www.sjofartsverket.se/en/services/pilotage/pilot-area-gothenburg/nautical-information/communication/",
         "name": "Gothenburg",
+        "callname": "VTS Gothenburg",
         "type": "vts",
-        "phone": "+46771630000",
         "channel": "13",
+        "url": "https://www.sjofartsverket.se/en/services/pilotage/pilot-area-gothenburg/nautical-information/communication/",
+        "phone": "+46771630000",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "VTS Gothenburg"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1835,23 +1835,23 @@
       "type": "Feature",
       "properties": {
         "id": "3b94b3ef-4e43-5d26-879e-6eb8f4048133",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Södertälje remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "66",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1997,23 +1997,23 @@
       "type": "Feature",
       "properties": {
         "id": "3fa60f0c-432d-5f51-ac24-531259f8549c",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Kivik remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "21",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2159,23 +2159,23 @@
       "type": "Feature",
       "properties": {
         "id": "444ba619-6a3c-5d46-9e94-a966702a0fb7",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Örnsköldsvik remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "63",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2321,23 +2321,23 @@
       "type": "Feature",
       "properties": {
         "id": "457e202d-37e2-5396-813b-71b29065cda5",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Skellefteå remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "23",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2483,23 +2483,23 @@
       "type": "Feature",
       "properties": {
         "id": "525a254a-7054-5972-9921-237703f8b5ed",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Väddö remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "82",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2645,23 +2645,23 @@
       "type": "Feature",
       "properties": {
         "id": "57c54380-49cc-5589-9938-8dc23ff933a5",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Fårö remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "62",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2807,23 +2807,23 @@
       "type": "Feature",
       "properties": {
         "id": "5af1c9b4-acb0-5052-9969-dfd60e225f1f",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Sundsvall remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "60",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2969,23 +2969,23 @@
       "type": "Feature",
       "properties": {
         "id": "5b9d80f2-e295-536b-ba21-d90a75c22892",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Grebbestad remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "62",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -3131,23 +3131,23 @@
       "type": "Feature",
       "properties": {
         "id": "65c66774-229d-5f66-9cd5-691e9152a6ce",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Gotska Sandön remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "65",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -3293,23 +3293,23 @@
       "type": "Feature",
       "properties": {
         "id": "6740ab99-6d55-5e97-8531-30ad5a36080d",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Karlskrona remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "81",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -3455,23 +3455,23 @@
       "type": "Feature",
       "properties": {
         "id": "707198d5-4bff-52cf-b057-bc9b7d78f113",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Härnösand remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "23",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -3617,23 +3617,23 @@
       "type": "Feature",
       "properties": {
         "id": "70854dfa-2706-55e5-903c-7a7f5c6bdb30",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Kalmar remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "60",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -3779,23 +3779,23 @@
       "type": "Feature",
       "properties": {
         "id": "90d4105d-208e-517c-98d1-6f8b0bf2f34a",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Motala remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "62",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -3941,23 +3941,23 @@
       "type": "Feature",
       "properties": {
         "id": "918bf9a1-5602-5e65-8485-6b8da7f0cae6",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Strömstad remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "22",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4103,23 +4103,23 @@
       "type": "Feature",
       "properties": {
         "id": "95f90b9a-97b6-5a63-bf9a-5b19530182ee",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Trollhättan remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "03",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4265,23 +4265,23 @@
       "type": "Feature",
       "properties": {
         "id": "96060e69-d466-5780-a65d-39b296a0ecb3",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Grimeton remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "22",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4427,23 +4427,23 @@
       "type": "Feature",
       "properties": {
         "id": "9bca24d7-8fb5-5c31-bb19-8898252d5e26",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Kramfors remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "83",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4589,23 +4589,23 @@
       "type": "Feature",
       "properties": {
         "id": "aefd51a9-0d9f-50c2-9dce-2a202c0d77ca",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Karlshamn remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "62",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4751,23 +4751,23 @@
       "type": "Feature",
       "properties": {
         "id": "b1c9b1e9-c0a2-549b-bb06-4ee2e243e2f4",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Norrköping remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "64",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4913,23 +4913,23 @@
       "type": "Feature",
       "properties": {
         "id": "b82bf476-c04b-5d9e-9d35-c2296d9a1853",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Karlstad remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "65",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -5075,23 +5075,23 @@
       "type": "Feature",
       "properties": {
         "id": "bbaed089-b775-5102-9b60-e34fa6cf7593",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Luleå remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "61",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -5237,23 +5237,23 @@
       "type": "Feature",
       "properties": {
         "id": "bd6c8d8e-6fcc-53a6-a137-2a1967b7c348",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Öland South Point remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "22",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -5399,23 +5399,23 @@
       "type": "Feature",
       "properties": {
         "id": "c5ee7674-bba6-5e84-9372-d14b589f8f9b",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Uddevalla remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "61",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -5561,23 +5561,23 @@
       "type": "Feature",
       "properties": {
         "id": "c7581cfb-cb1d-5d7c-b0b6-a1eadba8948f",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Kinnekulle remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "01",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -5723,23 +5723,23 @@
       "type": "Feature",
       "properties": {
         "id": "caab603c-ff2c-5ef7-a96c-7828761bbda8",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Hudiksvall remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "61",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -5885,23 +5885,23 @@
       "type": "Feature",
       "properties": {
         "id": "cb1398eb-ffa8-59a6-b9fe-f3aa65b9f3b2",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Kungshamn remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "23",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -6047,23 +6047,23 @@
       "type": "Feature",
       "properties": {
         "id": "d6d0374e-bc81-5777-854d-88b7872695f9",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Västervik remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "23",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -6209,23 +6209,23 @@
       "type": "Feature",
       "properties": {
         "id": "dc8425c7-3472-5743-962b-19cca502fbf4",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Hoburgen remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "61",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -6371,23 +6371,23 @@
       "type": "Feature",
       "properties": {
         "id": "df30af07-8b8e-5c09-a71e-9265b5543efc",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Gävle remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "23",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -6533,23 +6533,23 @@
       "type": "Feature",
       "properties": {
         "id": "e420cb16-9ea3-5f90-956d-97a46fd09560",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Jönköping remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "23",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -6695,23 +6695,23 @@
       "type": "Feature",
       "properties": {
         "id": "e927afc3-338e-5c67-adac-428462cd08c5",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Svenska Högarna remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "83",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -6857,23 +6857,23 @@
       "type": "Feature",
       "properties": {
         "id": "ea4915d2-7dd6-55ca-9738-9bc900ad51bd",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Västerås remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "63",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -7019,23 +7019,23 @@
       "type": "Feature",
       "properties": {
         "id": "edbd847c-fd35-5787-95c6-6f332c72f26b",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Umeå remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "62",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -7181,23 +7181,23 @@
       "type": "Feature",
       "properties": {
         "id": "f316c739-94be-5f61-9f87-c2b04e1b4e25",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Östhammar remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "62",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -7343,23 +7343,23 @@
       "type": "Feature",
       "properties": {
         "id": "f91d9c9c-d572-5685-bebd-b762f193cca5",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "name": "Kalix remote station",
-        "type": "area",
+        "callname": "Stockholm Radio",
+        "type": "information",
         "channel": "60",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Sverige_Swe-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002652000. MSI 02:00, 06:00, 10:00, 14:00, 18:00, 22:00 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Stockholm Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",

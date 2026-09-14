@@ -7,7 +7,7 @@
         "id": "034472ba-edb6-5db6-a275-27968df16d9e",
         "name": "Mersrags",
         "callname": "Mersrags",
-        "type": "area",
+        "type": "information",
         "channel": "71",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
@@ -169,7 +169,7 @@
         "id": "19a227b9-65a8-5698-a76b-2ab65e0db46a",
         "name": "Jurmalciems",
         "callname": "Jurmalciems",
-        "type": "area",
+        "type": "information",
         "channel": "71",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
@@ -493,7 +493,7 @@
         "id": "36d86619-7504-57f6-9959-ead0b86ebfd1",
         "name": "Vitrupe",
         "callname": "Vitrupe",
-        "type": "area",
+        "type": "information",
         "channel": "71",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
@@ -655,7 +655,7 @@
         "id": "378512db-b7ac-5ce0-b112-bdf0acfd7907",
         "name": "Uzava",
         "callname": "Uzava",
-        "type": "area",
+        "type": "information",
         "channel": "71",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
@@ -817,7 +817,7 @@
         "id": "5a0a0ec5-4b1d-5609-b00c-106839ad6bcc",
         "name": "Riga Rescue Radio (MRCC Riga)",
         "callname": "Riga Rescue Radio",
-        "type": "area",
+        "type": "information",
         "channel": "71",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
@@ -979,7 +979,7 @@
         "id": "8307e1c9-809d-5420-82db-a383e8a4e3f5",
         "name": "Jaunupe",
         "callname": "Jaunupe",
-        "type": "area",
+        "type": "information",
         "channel": "71",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
@@ -1141,7 +1141,7 @@
         "id": "abdeec87-82dd-5566-983a-6d761cbf0635",
         "name": "Kolka",
         "callname": "Kolka",
-        "type": "area",
+        "type": "information",
         "channel": "71",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
@@ -1465,7 +1465,7 @@
         "id": "d324ba89-efdb-59fb-b437-2759e9a301ac",
         "name": "Akmenrags",
         "callname": "Akmenrags",
-        "type": "area",
+        "type": "information",
         "channel": "71",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {

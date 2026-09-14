@@ -7,7 +7,7 @@
         "id": "0bf92a0b-a8ed-5d05-a18d-8e25288dfd35",
         "name": "Kaliningrad remote station",
         "callname": "Kaliningrad Radio",
-        "type": "area",
+        "type": "information",
         "channel": "05",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
@@ -169,7 +169,7 @@
         "id": "69bafc32-d123-5c3d-be07-1de231e7007a",
         "name": "Saint Petersburg remote station",
         "callname": "St Petersburg Radio",
-        "type": "area",
+        "type": "information",
         "channel": "16",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
@@ -331,7 +331,7 @@
         "id": "8e4c173c-bf0e-5673-b39b-fdf7c2aaa301",
         "name": "Gorki remote station",
         "callname": "St Petersburg Radio",
-        "type": "area",
+        "type": "information",
         "channel": "16",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
@@ -493,7 +493,7 @@
         "id": "dc3482cb-7a95-5625-994a-bd0ed578608c",
         "name": "Gogland (Hogland) remote station",
         "callname": "St Petersburg Radio",
-        "type": "area",
+        "type": "information",
         "channel": "24",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
@@ -655,7 +655,7 @@
         "id": "e744ba4b-f5ff-582c-a023-e61f2bc088fa",
         "name": "Vysotsk remote station",
         "callname": "St Petersburg Radio",
-        "type": "area",
+        "type": "information",
         "channel": "16",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
@@ -817,7 +817,7 @@
         "id": "f7fd53ca-2f6d-5b8f-a7d6-2d5ed1851bfa",
         "name": "Primorsk remote station",
         "callname": "St Petersburg Radio",
-        "type": "area",
+        "type": "information",
         "channel": "16",
         "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {

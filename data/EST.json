@@ -5,23 +5,23 @@
       "type": "Feature",
       "properties": {
         "id": "1db94723-19b7-5e87-92e7-8fb0a8dd1c19",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Undva remote station",
-        "type": "area",
+        "callname": "Tallinn Radio",
+        "type": "information",
         "channel": "01",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002761000. MSI/weather 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather also 06:33, 15:33 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Tallinn Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -167,23 +167,23 @@
       "type": "Feature",
       "properties": {
         "id": "20d4224f-e9db-5f40-884f-53915df382a6",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Orissaare remote station",
-        "type": "area",
+        "callname": "Tallinn Radio",
+        "type": "information",
         "channel": "66",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002761000. MSI/weather 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather also 06:33, 15:33 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Tallinn Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -329,23 +329,23 @@
       "type": "Feature",
       "properties": {
         "id": "255f4513-4ba3-52c3-a1f5-0cdc3b8121e3",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Ruhnu remote station",
-        "type": "area",
+        "callname": "Tallinn Radio",
+        "type": "information",
         "channel": "03",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002761000. MSI/weather 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather also 06:33, 15:33 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Tallinn Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -491,23 +491,23 @@
       "type": "Feature",
       "properties": {
         "id": "5d780f49-6a7f-5ba5-822a-f8bd3909f34b",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Eisma remote station",
-        "type": "area",
+        "callname": "Tallinn Radio",
+        "type": "information",
         "channel": "03",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002761000. MSI/weather 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather also 06:33, 15:33 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Tallinn Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -653,23 +653,23 @@
       "type": "Feature",
       "properties": {
         "id": "7376098f-4704-5bc3-9008-6e01afcc1e8a",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Kihnu remote station",
-        "type": "area",
+        "callname": "Tallinn Radio",
+        "type": "information",
         "channel": "62",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002761000. MSI/weather 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather also 06:33, 15:33 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Tallinn Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -815,23 +815,23 @@
       "type": "Feature",
       "properties": {
         "id": "9a182f82-1144-51a6-beb6-4bf6bfcca2d7",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Torgu (Sõrve) remote station",
-        "type": "area",
+        "callname": "Tallinn Radio",
+        "type": "information",
         "channel": "05",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002761000. MSI/weather 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather also 06:33, 15:33 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Tallinn Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -977,23 +977,23 @@
       "type": "Feature",
       "properties": {
         "id": "9ba4748d-a02f-58e2-b263-1c92904783e2",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Suurupi remote station",
-        "type": "area",
+        "callname": "Tallinn Radio",
+        "type": "information",
         "channel": "01",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002761000. MSI/weather 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather also 06:33, 15:33 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Tallinn Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1139,23 +1139,23 @@
       "type": "Feature",
       "properties": {
         "id": "ae8e44ec-0411-5570-b808-6a0edf56ef2b",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Toila remote station",
-        "type": "area",
+        "callname": "Tallinn Radio",
+        "type": "information",
         "channel": "66",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002761000. MSI/weather 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather also 06:33, 15:33 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Tallinn Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1301,23 +1301,23 @@
       "type": "Feature",
       "properties": {
         "id": "b33f8d80-6080-5ba5-8b37-8d6f59ed1f6f",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Dirhami remote station",
-        "type": "area",
+        "callname": "Tallinn Radio",
+        "type": "information",
         "channel": "64",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002761000. MSI/weather 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather also 06:33, 15:33 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Tallinn Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1463,23 +1463,23 @@
       "type": "Feature",
       "properties": {
         "id": "b552b82a-91a9-5143-a5a4-a7ee00594037",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Kõpu remote station",
-        "type": "area",
+        "callname": "Tallinn Radio",
+        "type": "information",
         "channel": "03",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002761000. MSI/weather 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather also 06:33, 15:33 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Tallinn Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1625,23 +1625,23 @@
       "type": "Feature",
       "properties": {
         "id": "c15de7d4-4a52-5498-adcf-ff979b98d16c",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Tõstamaa remote station",
-        "type": "area",
+        "callname": "Tallinn Radio",
+        "type": "information",
         "channel": "01",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002761000. MSI/weather 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather also 06:33, 15:33 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Tallinn Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1787,23 +1787,23 @@
       "type": "Feature",
       "properties": {
         "id": "c4b271a1-a0b9-5417-81e0-41f68a9800b1",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Suuremõisa remote station",
-        "type": "area",
+        "callname": "Tallinn Radio",
+        "type": "information",
         "channel": "07",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002761000. MSI/weather 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather also 06:33, 15:33 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Tallinn Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1949,23 +1949,23 @@
       "type": "Feature",
       "properties": {
         "id": "ccca80e3-1aa0-5705-a9c7-565c5b6307bf",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Aabla remote station",
-        "type": "area",
+        "callname": "Tallinn Radio",
+        "type": "information",
         "channel": "62",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002761000. MSI/weather 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather also 06:33, 15:33 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Tallinn Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2111,24 +2111,24 @@
       "type": "Feature",
       "properties": {
         "id": "d9a918d4-d107-4e44-814a-68fa162b2dfd",
-        "url": "https://www.ts.ee/en/old-city-marina/",
         "name": "Tallinn Old City Harbour control",
+        "callname": "Tallinn Radio 5",
         "type": "vts",
-        "phone": "+3726318588",
         "channel": "14",
+        "url": "https://www.ts.ee/en/old-city-marina/",
+        "phone": "+3726318588",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "report",
             "note": "Recreational craft wishing to enter the Old City Harbor must authorize the craft by contacting the Port Control of the harbor"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Tallinn Radio 5"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2214,23 +2214,23 @@
       "type": "Feature",
       "properties": {
         "id": "e22792d3-cfc0-5ec8-a7d7-457fb8c8ad42",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Merivälja (Tallinn) remote station",
-        "type": "area",
+        "callname": "Tallinn Radio",
+        "type": "information",
         "channel": "20",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002761000. MSI/weather 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather also 06:33, 15:33 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Tallinn Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2376,23 +2376,23 @@
       "type": "Feature",
       "properties": {
         "id": "eeaaad00-cad9-53e6-bdab-9ec2999e7cd4",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Pärnu remote station",
-        "type": "area",
+        "callname": "Tallinn Radio",
+        "type": "information",
         "channel": "05",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002761000. MSI/weather 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather also 06:33, 15:33 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Tallinn Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",

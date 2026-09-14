@@ -5,18 +5,18 @@
       "type": "Feature",
       "properties": {
         "id": "0bed76ba-0b1d-4c30-82fc-1f7b72408010",
-        "url": "https://www.bootsausbildung.com/media/doc/material-src-pruefung-bsh.pdf",
         "name": "Verkehrszentrale Bremerhaven",
+        "callname": "Bremerhafen Weser Traffic",
         "type": "vts",
-        "phone": "+494714835333",
         "channel": "22",
+        "url": "https://www.bootsausbildung.com/media/doc/material-src-pruefung-bsh.pdf",
+        "phone": "+494714835333",
         "vhfdata": {
           "generic": {
             "mode": "listen",
             "note": "Area needs more work, see link."
           }
-        },
-        "callname": "Bremerhafen Weser Traffic"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -150,23 +150,23 @@
       "type": "Feature",
       "properties": {
         "id": "0d8deecd-7d8c-5584-97c5-40405edf8cf7",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Nordfriesland coast radio",
-        "type": "area",
+        "callname": "Nordfriesland Radio",
+        "type": "information",
         "channel": "01",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Weather 07:45, 09:45, 12:45, 16:45, 19:45 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Nordfriesland Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -313,15 +313,15 @@
       "properties": {
         "id": "101363c3-bd13-4188-addd-ae80d2afdb9c",
         "name": "Verkehrszentrale Warnemünde",
+        "callname": "Wolgast Traffic",
         "type": "vts",
-        "phone": "+4938120671844",
         "channel": "9",
+        "phone": "+4938120671844",
         "vhfdata": {
           "generic": {
             "mode": "listen"
           }
-        },
-        "callname": "Wolgast Traffic"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -464,15 +464,15 @@
       "properties": {
         "id": "10436074-d712-48a9-8d58-9ab27e0314eb",
         "name": "Verkehrszentrale Travemünde",
+        "callname": "Kiel Traffic",
         "type": "vts",
-        "phone": "+49450284750",
         "channel": "67",
+        "phone": "+49450284750",
         "vhfdata": {
           "generic": {
             "mode": "listen"
           }
-        },
-        "callname": "Kiel Traffic"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -626,18 +626,18 @@
       "type": "Feature",
       "properties": {
         "id": "12cf37fd-eaef-4088-b118-85f8f7d648cc",
-        "url": "https://borkum-yachthafen.de/yachthafen/",
         "name": "Borkum Yachthafen",
         "type": "marina",
+        "url": "https://borkum-yachthafen.de/yachthafen/",
         "phone": "+4949227773",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -683,9 +683,10 @@
       "properties": {
         "id": "1a82c7e8-9e10-4e6a-9b12-47f92190f4a9",
         "name": "Verkehrszentrale Bremen",
+        "callname": "Hunte Traffic",
         "type": "vts",
-        "phone": "+49 421 5378381",
         "channel": "63",
+        "phone": "+49 421 5378381",
         "vhfdata": {
           "generic": {
             "mode": "listen"
@@ -693,8 +694,7 @@
           "emergency": {
             "url": ""
           }
-        },
-        "callname": "Hunte Traffic"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -824,20 +824,20 @@
       "type": "Feature",
       "properties": {
         "id": "1c70859a-3b98-4eeb-af48-9b1b5773c946",
-        "url": "https://www.seame.com/en/poi/12259/revierfunk-ems",
         "name": "Borkum",
         "type": "vts radar support",
-        "phone": "+",
         "channel": "18",
+        "url": "https://www.seame.com/en/poi/12259/revierfunk-ems",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "h+50 Weather at the approach, tidal stage, nautical warnings, tidal times"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -894,23 +894,23 @@
       "type": "Feature",
       "properties": {
         "id": "1cac406a-adbc-5e2c-871b-da57024a42e2",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Kiel coast radio",
-        "type": "area",
+        "callname": "Kiel Radio",
+        "type": "information",
         "channel": "23",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Weather 07:45, 09:45, 12:45, 16:45, 19:45 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kiel Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1057,9 +1057,10 @@
       "properties": {
         "id": "1d156309-4335-464a-8bd0-7bf5060d86cd",
         "name": "Verkehrszentrale Warnemünde",
+        "callname": "Sassnitz Traffic",
         "type": "vts",
-        "phone": "+49 381 20671844",
         "channel": "13",
+        "phone": "+49 381 20671844",
         "vhfdata": {
           "generic": {
             "mode": "listen"
@@ -1067,8 +1068,7 @@
           "emergency": {
             "url": ""
           }
-        },
-        "callname": "Sassnitz Traffic"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1250,23 +1250,23 @@
       "type": "Feature",
       "properties": {
         "id": "20a72c09-84e5-451b-8a4e-d13f6ddc88e3",
-        "url": "https://www.wsa-ostsee.wsv.de/Webs/WSA/Ostsee/DE/6_Ueber_uns/AnfahrtAdressen/anfahrtadressen_text.html",
         "name": "Warnemünde Traffic",
+        "callname": "Warnemünde Traffic",
         "type": "vts",
-        "phone": "+49 381 20671841",
         "channel": "73",
+        "url": "https://www.wsa-ostsee.wsv.de/Webs/WSA/Ostsee/DE/6_Ueber_uns/AnfahrtAdressen/anfahrtadressen_text.html",
+        "phone": "+49 381 20671841",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Warnemünde Traffic"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1365,15 +1365,15 @@
       "properties": {
         "id": "215b3cf7-c574-47b6-87f2-630acfbcf741",
         "name": "Verkehrszentrale Cuxhaven",
+        "callname": "West Coast Traffic",
         "type": "vts",
-        "phone": "+49 4721 567384",
         "channel": "15",
+        "phone": "+49 4721 567384",
         "vhfdata": {
           "generic": {
             "mode": "listen"
           }
-        },
-        "callname": "West Coast Traffic"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1531,23 +1531,23 @@
       "type": "Feature",
       "properties": {
         "id": "26f99dea-64e1-4ceb-a024-423fc69dc101",
-        "url": "https://",
         "name": "Lehnitz locks",
+        "callname": "Schleuse Lehnitz",
         "type": "lock",
-        "phone": "+49 3301 204734\t",
         "channel": "18",
+        "url": "https://",
+        "phone": "+49 3301 204734\t",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Schleuse Lehnitz"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1597,20 +1597,20 @@
       "type": "Feature",
       "properties": {
         "id": "2c20b6e8-2692-458e-9003-f3f6e5cf944a",
-        "url": "https://www.seame.com/en/poi/12259/revierfunk-ems",
         "name": "Wybelsum",
         "type": "vts radar support",
-        "phone": "+",
         "channel": "21",
+        "url": "https://www.seame.com/en/poi/12259/revierfunk-ems",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "h+50 Weather at the approach, tidal stage, nautical warnings, tidal times"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -1647,23 +1647,23 @@
       "type": "Feature",
       "properties": {
         "id": "2ddbc29d-4f62-50f0-bdf9-128d7556fd40",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Flensburg coast radio",
-        "type": "area",
+        "callname": "Flensburg Radio",
+        "type": "information",
         "channel": "21",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Weather 07:45, 09:45, 12:45, 16:45, 19:45 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Flensburg Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1809,23 +1809,23 @@
       "type": "Feature",
       "properties": {
         "id": "3110bc97-38b8-4e8e-99f8-cebb9b738617",
-        "url": "https://www.gdws.wsv.bund.de/DE/schifffahrt/01_seeschifffahrt/nord-ostsee-kanal/Sportboot-NOK/Flyer/PDF_Merkbl_Spobo_eng.pdf?__blob=publicationFile&v=4",
         "name": "Kieler kanal",
+        "callname": "Kiel Kanal 3",
         "type": "vts",
-        "phone": "+",
         "channel": "3",
+        "url": "https://www.gdws.wsv.bund.de/DE/schifffahrt/01_seeschifffahrt/nord-ostsee-kanal/Sportboot-NOK/Flyer/PDF_Merkbl_Spobo_eng.pdf?__blob=publicationFile&v=4",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kiel Kanal 3"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2163,17 +2163,17 @@
       "type": "Feature",
       "properties": {
         "id": "3c2e74fe-fd05-4942-aabc-4d25006ebbc6",
-        "url": "https://www.gdws.wsv.bund.de/DE/schifffahrt/01_seeschifffahrt/nord-ostsee-kanal/Sportboot-NOK/Flyer/PDF_Merkbl_Spobo_eng.pdf?__blob=publicationFile&v=4",
         "name": "Holtenau lock",
+        "callname": "Kiel Kanal 4",
         "type": "lock",
-        "phone": "+",
         "channel": "12",
+        "url": "https://www.gdws.wsv.bund.de/DE/schifffahrt/01_seeschifffahrt/nord-ostsee-kanal/Sportboot-NOK/Flyer/PDF_Merkbl_Spobo_eng.pdf?__blob=publicationFile&v=4",
+        "phone": "+",
         "vhfdata": {
           "generic": {
             "mode": "listen"
           }
-        },
-        "callname": "Kiel Kanal 4"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2208,15 +2208,15 @@
       "properties": {
         "id": "4555f3d1-375a-4845-a11f-466104164058",
         "name": "Verkehrszentrale Cuxhaven",
+        "callname": "German North Sea Traffic",
         "type": "vts",
-        "phone": "+49 4721 567384",
         "channel": "11",
+        "phone": "+49 4721 567384",
         "vhfdata": {
           "generic": {
             "mode": "listen"
           }
-        },
-        "callname": "German North Sea Traffic"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2283,15 +2283,15 @@
       "properties": {
         "id": "49ad546e-8132-42ea-9a6f-fb6a5f966431",
         "name": "Verkehrszentrale Travemünde",
+        "callname": "Trave Traffic",
         "type": "vts",
-        "phone": "+49 4502 84750",
         "channel": "13",
+        "phone": "+49 4502 84750",
         "vhfdata": {
           "generic": {
             "mode": "listen"
           }
-        },
-        "callname": "Trave Traffic"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2553,20 +2553,20 @@
       "type": "Feature",
       "properties": {
         "id": "4b0ce5d0-c3c5-4940-addd-91c7e93e6ff0",
-        "url": "https://www.seame.com/en/poi/12259/revierfunk-ems",
         "name": "Knock",
         "type": "vts radar support",
-        "phone": "+",
         "channel": "20",
+        "url": "https://www.seame.com/en/poi/12259/revierfunk-ems",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "h+50 Weather at the approach, tidal stage, nautical warnings, tidal times"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -2663,23 +2663,23 @@
       "type": "Feature",
       "properties": {
         "id": "59038499-374a-5a5e-99ee-f9eafa37bbb4",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Accumersiel coast radio",
-        "type": "area",
+        "callname": "Accumersiel Radio",
+        "type": "information",
         "channel": "62",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Weather 07:45, 09:45, 12:45, 16:45, 19:45 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Accumersiel Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2825,19 +2825,19 @@
       "type": "Feature",
       "properties": {
         "id": "6556929a-6783-4b90-b5d4-9c8b279e3fce",
-        "url": "https://",
         "name": "Stralsund Traffic",
         "type": "vts",
-        "phone": "+",
         "channel": "67",
+        "url": "https://",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -2966,24 +2966,24 @@
       "type": "Feature",
       "properties": {
         "id": "6edd24df-26d8-45e4-904c-68289344dd8c",
-        "url": "https://www.elwis.de/DE/dynamisch/mvc/main.php?modul=schleuseninfo&choice=1&show_ft=1&show_contacts=1&specialsi=148&schleusenid=148",
         "name": "Plötzensee locks",
+        "callname": "Schleuse Plötzensee",
         "type": "lock",
-        "phone": "+49 30 3435710",
         "channel": "22",
+        "url": "https://www.elwis.de/DE/dynamisch/mvc/main.php?modul=schleuseninfo&choice=1&show_ft=1&show_contacts=1&specialsi=148&schleusenid=148",
+        "phone": "+49 30 3435710",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "remotely operated"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Schleuse Plötzensee"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -3018,15 +3018,15 @@
       "properties": {
         "id": "6f0a605a-96c4-4197-81ac-77d0a59be562",
         "name": "Verkehrszentrale Travemünde",
+        "callname": "Kiel Bight Traffic",
         "type": "vts",
-        "phone": "+49 4502 84750",
         "channel": "73",
+        "phone": "+49 4502 84750",
         "vhfdata": {
           "generic": {
             "mode": "listen"
           }
-        },
-        "callname": "Kiel Bight Traffic"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -3365,15 +3365,15 @@
       "properties": {
         "id": "740d89a3-5d70-4497-8d46-a91ba2ab7815",
         "name": "Verkehrszentrale Cuxhaven",
+        "callname": "Cuxhaven Elbe Traffic",
         "type": "vts",
-        "phone": "+49 4721 567380",
         "channel": "71",
+        "phone": "+49 4721 567380",
         "vhfdata": {
           "generic": {
             "mode": "listen"
           }
-        },
-        "callname": "Cuxhaven Elbe Traffic"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -3487,17 +3487,17 @@
       "type": "Feature",
       "properties": {
         "id": "7d959337-6350-419e-ab2b-a76805b5ecbe",
-        "url": "https://www.wsa-weser-jade-nordsee.wsv.de/",
         "name": "Verkehrszentrale Wilhelmshaven",
+        "callname": "North Coast Traffic",
         "type": "vts",
-        "phone": "+494421489281",
         "channel": "79",
+        "url": "https://www.wsa-weser-jade-nordsee.wsv.de/",
+        "phone": "+494421489281",
         "vhfdata": {
           "generic": {
             "mode": "listen"
           }
-        },
-        "callname": "North Coast Traffic"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -3659,22 +3659,22 @@
       "type": "Feature",
       "properties": {
         "id": "86552f4a-2e31-4c87-9922-76df2981b874",
-        "url": "https://www.groningen-seaports.com/wp-content/uploads/InfoKaart-Eems-1.pdf",
         "name": "Verkehrszentrale Emden",
+        "callname": "Ems-Traffic",
         "type": "vts",
-        "phone": "+49 4927 1877281",
         "channel": "15/74",
+        "url": "https://www.groningen-seaports.com/wp-content/uploads/InfoKaart-Eems-1.pdf",
+        "phone": "+49 4927 1877281",
         "vhfdata": {
-          "cargo": {
-            "url": "https://wetten.overheid.nl/BWBV0005343/1978-07-01",
-            "note": "Area defined by law, see URL below:"
-          },
           "generic": {
             "mode": "announce",
             "note": "Announcements:  Borkum Radar – VHF 18 Knock Radar – VHF 20 Wybelsum Radar – VHF 21 Ems Rivier Radar – VHF 15"
+          },
+          "cargo": {
+            "note": "Area defined by law, see URL below:",
+            "url": "https://wetten.overheid.nl/BWBV0005343/1978-07-01"
           }
-        },
-        "callname": "Ems-Traffic"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -3908,23 +3908,23 @@
       "type": "Feature",
       "properties": {
         "id": "8774d2e6-ed85-57a2-bb56-7d15027ec6c2",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Borkum coast radio",
-        "type": "area",
+        "callname": "Borkum Radio",
+        "type": "information",
         "channel": "61",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Weather 07:45, 09:45, 12:45, 16:45, 19:45 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Borkum Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4070,23 +4070,23 @@
       "type": "Feature",
       "properties": {
         "id": "879bd076-7c79-5f80-a71e-69bcb5820b24",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Hamburg coast radio",
-        "type": "area",
+        "callname": "Hamburg Radio",
+        "type": "information",
         "channel": "01",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Weather 07:45, 09:45, 12:45, 16:45, 19:45 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Hamburg Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4232,23 +4232,23 @@
       "type": "Feature",
       "properties": {
         "id": "987f0b36-b0c5-5aa1-9055-5584fa7cc0d2",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Elbe-Weser coast radio",
-        "type": "area",
+        "callname": "Elbe-Weser Radio",
+        "type": "information",
         "channel": "83",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Weather 07:45, 09:45, 12:45, 16:45, 19:45 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Elbe-Weser Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4394,23 +4394,23 @@
       "type": "Feature",
       "properties": {
         "id": "98cb7ac9-7f2d-444e-958b-67aa281e3e5b",
-        "url": "http://",
         "name": "Segelclub Juist",
+        "callname": "Commenly used call sign",
         "type": "marina",
+        "url": "http://",
         "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Contact VHF73 Frisia-Fahren before entry."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Commenly used call sign"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4449,9 +4449,10 @@
       "properties": {
         "id": "9d467516-8a6e-43e9-8f6c-a25ca27a29d0",
         "name": "Verkehrszentrale Warnemünde",
+        "callname": "Kadetrenden Traffic",
         "type": "vts",
-        "phone": "+49 381 20671841 (42)",
         "channel": "71",
+        "phone": "+49 381 20671841 (42)",
         "vhfdata": {
           "generic": {
             "mode": "listen"
@@ -4459,8 +4460,7 @@
           "emergency": {
             "url": ""
           }
-        },
-        "callname": "Kadetrenden Traffic"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4530,17 +4530,17 @@
       "type": "Feature",
       "properties": {
         "id": "a50adb88-1621-4518-9e42-dea8d723755e",
-        "url": "https://www.wsa-weser-jade-nordsee.wsv.de/",
         "name": "Verkehrszentrale Wilhelmshaven",
+        "callname": "German Bight Traffic",
         "type": "vts",
-        "phone": "+494421489282",
         "channel": "79/80",
+        "url": "https://www.wsa-weser-jade-nordsee.wsv.de/",
+        "phone": "+494421489282",
         "vhfdata": {
           "generic": {
             "mode": "listen"
           }
-        },
-        "callname": "German Bight Traffic"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4618,23 +4618,23 @@
       "type": "Feature",
       "properties": {
         "id": "a6ef86b2-8a03-5a2e-aa63-b43ef4a86fad",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Bremen coast radio",
-        "type": "area",
+        "callname": "Bremen Radio",
+        "type": "information",
         "channel": "23",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Weather 07:45, 09:45, 12:45, 16:45, 19:45 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Bremen Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4780,24 +4780,24 @@
       "type": "Feature",
       "properties": {
         "id": "a73d626f-757d-48e8-92c4-4b0666c1f567",
-        "url": "https://www.gdws.wsv.bund.de/DE/schifffahrt/01_seeschifffahrt/nord-ostsee-kanal/Sportboot-NOK/Flyer/PDF_Merkbl_Spobo_eng.pdf?__blob=publicationFile&v=4",
         "name": "Brunsbüttel lock",
+        "callname": "Kiel Kanal 1",
         "type": "lock",
-        "phone": "+",
         "channel": "13",
+        "url": "https://www.gdws.wsv.bund.de/DE/schifffahrt/01_seeschifffahrt/nord-ostsee-kanal/Sportboot-NOK/Flyer/PDF_Merkbl_Spobo_eng.pdf?__blob=publicationFile&v=4",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "report"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen",
             "note": "Elbe waiting area east of the entrance."
+          },
+          "cargo": {
+            "mode": "report"
           }
-        },
-        "callname": "Kiel Kanal 1"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4847,23 +4847,23 @@
       "type": "Feature",
       "properties": {
         "id": "b012a39b-2b90-442c-a6f7-a9a596120331",
-        "url": "https://www.elwis.de/DE/dynamisch/mvc/main.php?modul=schleuseninfo&choice=1&show_ft=1&show_contacts=1&specialsi=449&schleusenid=449",
         "name": "Charlottenburg locks",
+        "callname": "Schleuse Charlottenburg",
         "type": "lock",
-        "phone": "+49 30 34357120",
         "channel": "82",
+        "url": "https://www.elwis.de/DE/dynamisch/mvc/main.php?modul=schleuseninfo&choice=1&show_ft=1&show_contacts=1&specialsi=449&schleusenid=449",
+        "phone": "+49 30 34357120",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Schleuse Charlottenburg"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4921,23 +4921,23 @@
       "type": "Feature",
       "properties": {
         "id": "b60db458-a23a-4e0c-8280-c6b3ef5d5d80",
-        "url": "https://",
         "name": "Niederfinow lift",
+        "callname": "Schiffshebewerk Niederfinow",
         "type": "lock",
-        "phone": "+49 33362 619122",
         "channel": "22",
+        "url": "https://",
+        "phone": "+49 33362 619122",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Schiffshebewerk Niederfinow"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -4984,15 +4984,15 @@
       "properties": {
         "id": "b99018ce-8a0b-4465-aa7f-80bff5d83aa8",
         "name": "Verkehrszentrale Bremen",
+        "callname": "Bremen Weser Traffic",
         "type": "vts",
-        "phone": "+49 421 5378381",
         "channel": "19/78/81",
+        "phone": "+49 421 5378381",
         "vhfdata": {
           "generic": {
             "mode": "listen"
           }
-        },
-        "callname": "Bremen Weser Traffic"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -5118,19 +5118,19 @@
       "type": "Feature",
       "properties": {
         "id": "bd55dfe6-0fdf-48b3-9153-47b170cb6756",
-        "url": "https://www.burkana-hafen.de/",
         "name": "Burkana Hafen",
         "type": "marina",
+        "url": "https://www.burkana-hafen.de/",
         "phone": "+4949229249547",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Contact by phone. Only berth at Schwimmbrücke 1."
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -5187,23 +5187,23 @@
       "type": "Feature",
       "properties": {
         "id": "c11550f0-948f-51ef-b69a-b2398d662547",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Lübeck coast radio",
-        "type": "area",
+        "callname": "Lübeck Radio",
+        "type": "information",
         "channel": "04",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Weather 07:45, 09:45, 12:45, 16:45, 19:45 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Lübeck Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -5350,9 +5350,10 @@
       "properties": {
         "id": "c3b5daa8-920a-4371-84a6-b5a0f06e3d03",
         "name": "Verkehrszentrale Travemünde",
+        "callname": "Fehmarnbelt Traffic",
         "type": "vts",
-        "phone": "+49 4502 84750",
         "channel": "68",
+        "phone": "+49 4502 84750",
         "vhfdata": {
           "generic": {
             "mode": "listen"
@@ -5360,8 +5361,7 @@
           "emergency": {
             "url": ""
           }
-        },
-        "callname": "Fehmarnbelt Traffic"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -5463,23 +5463,23 @@
       "type": "Feature",
       "properties": {
         "id": "c8f958b6-709f-470b-8b22-00fba3a1a562",
-        "url": "https://",
         "name": "Hohensaaten lock",
+        "callname": "Schleuse Hohensaaten",
         "type": "lock",
-        "phone": "+49 33368 223",
         "channel": "20",
+        "url": "https://",
+        "phone": "+49 33368 223",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Schleuse Hohensaaten"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -5525,23 +5525,23 @@
       "type": "Feature",
       "properties": {
         "id": "d2d0bbb8-1bb8-5e60-b8d1-890eb59378d3",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Arkona coast radio",
-        "type": "area",
+        "callname": "Arkona Radio",
+        "type": "information",
         "channel": "23",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Weather 07:45, 09:45, 12:45, 16:45, 19:45 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Arkona Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -5687,23 +5687,23 @@
       "type": "Feature",
       "properties": {
         "id": "dcdc204d-af7e-4198-b52f-8bd2ac1653a0",
-        "url": "https://www.wsa-weser-jade-nordsee.wsv.de/",
         "name": "Verkehrszentrale Wilhelmshaven",
+        "callname": "Jade traffic",
         "type": "vts",
-        "phone": "+494421489281",
         "channel": "63/20",
+        "url": "https://www.wsa-weser-jade-nordsee.wsv.de/",
+        "phone": "+494421489281",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Jade traffic"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -5754,15 +5754,15 @@
       "properties": {
         "id": "e22b4eae-0d53-4c26-b2c0-b086a72e55da",
         "name": "Verkehrszentrale Brunsbüttel",
+        "callname": "Brunsbüttel Elbe Traffic",
         "type": "vts",
-        "phone": "+49 4852 885393",
         "channel": "68",
+        "phone": "+49 4852 885393",
         "vhfdata": {
           "generic": {
             "mode": "listen"
           }
-        },
-        "callname": "Brunsbüttel Elbe Traffic"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -5901,9 +5901,10 @@
       "properties": {
         "id": "e4895144-0feb-4404-83f4-22620212e5a6",
         "name": "Verkehrszentrale Travemünde",
+        "callname": "Wismar Traffic",
         "type": "vts",
-        "phone": "+49 4502 84750",
         "channel": "12",
+        "phone": "+49 4502 84750",
         "vhfdata": {
           "generic": {
             "mode": "listen"
@@ -5911,8 +5912,7 @@
           "emergency": {
             "url": ""
           }
-        },
-        "callname": "Wismar Traffic"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -6086,23 +6086,23 @@
       "type": "Feature",
       "properties": {
         "id": "ee86bc22-b798-536c-a18d-4c82d54e27c7",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Rostock coast radio",
-        "type": "area",
+        "callname": "Rostock Radio",
+        "type": "information",
         "channel": "60",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Weather 07:45, 09:45, 12:45, 16:45, 19:45 local."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Rostock Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -6249,15 +6249,15 @@
       "properties": {
         "id": "f354e976-303c-4b98-a4fa-7b5e8cc7dd21",
         "name": "VTS Centre Hamburg",
+        "callname": "Hamburg Port Traffic",
         "type": "vts",
-        "phone": "+49 40 42847 3700",
         "channel": "14",
+        "phone": "+49 40 42847 3700",
         "vhfdata": {
           "generic": {
             "mode": "listen"
           }
-        },
-        "callname": "Hamburg Port Traffic"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -6363,23 +6363,23 @@
       "type": "Feature",
       "properties": {
         "id": "f38c204a-1ed6-4af5-bca7-37d4ec973db8",
-        "url": "https://www.elwis.de/DE/dynamisch/mvc/main.php?modul=schleuseninfo&choice=1&show_ft=1&show_contacts=1&show_sperr=1",
         "name": "Spandau lock",
+        "callname": "Schleuse Spandau",
         "type": "lock",
-        "phone": "+49 30 33080520",
         "channel": "23",
+        "url": "https://www.elwis.de/DE/dynamisch/mvc/main.php?modul=schleuseninfo&choice=1&show_ft=1&show_contacts=1&show_sperr=1",
+        "phone": "+49 30 33080520",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Schleuse Spandau"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -6413,23 +6413,23 @@
       "type": "Feature",
       "properties": {
         "id": "fd86bd9f-8b55-4678-8243-568f22a0ad14",
-        "url": "https://www.gdws.wsv.bund.de/DE/schifffahrt/01_seeschifffahrt/nord-ostsee-kanal/Sportboot-NOK/Flyer/PDF_Merkbl_Spobo_eng.pdf?__blob=publicationFile&v=4",
         "name": "Kieler kanal",
+        "callname": "Kiel Kanal 2",
         "type": "vts",
-        "phone": "+",
         "channel": "2",
+        "url": "https://www.gdws.wsv.bund.de/DE/schifffahrt/01_seeschifffahrt/nord-ostsee-kanal/Sportboot-NOK/Flyer/PDF_Merkbl_Spobo_eng.pdf?__blob=publicationFile&v=4",
+        "phone": "+",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Kiel Kanal 2"
+        }
       },
       "geometry": {
         "type": "Polygon",

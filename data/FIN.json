@@ -5,24 +5,24 @@
       "type": "Feature",
       "properties": {
         "id": "081dd242-1016-49fa-9908-91ac76f38b7c",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Virolahti remote station",
-        "type": "area",
-        "phone": "+358204486400",
+        "callname": "Turku Radio",
+        "type": "information",
         "channel": "83",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
+        "phone": "+358204486400",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002300230. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Turku Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -168,24 +168,24 @@
       "type": "Feature",
       "properties": {
         "id": "0b57d8a2-c036-42ac-b3fa-c44d98ad4495",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Kotka remote station",
-        "type": "area",
-        "phone": "+358204486400",
+        "callname": "Turku Radio",
+        "type": "information",
         "channel": "82",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
+        "phone": "+358204486400",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002300230. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Turku Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -331,20 +331,20 @@
       "type": "Feature",
       "properties": {
         "id": "108b0299-3721-4a66-acf7-84d9df583605",
-        "url": "https://www.fintraffic.fi/sites/default/files/2022-10/Helsinki%20VTS%20Sector%202%20EN.pdf",
         "name": "Helsinki VTS Sector 2",
         "type": "vts",
-        "phone": "+358204485389",
         "channel": "9",
+        "url": "https://www.fintraffic.fi/sites/default/files/2022-10/Helsinki%20VTS%20Sector%202%20EN.pdf",
+        "phone": "+358204485389",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Vessels of 24 metres in length overall or more are obliged to participate in the vessel traffic services. "
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -389,24 +389,24 @@
       "type": "Feature",
       "properties": {
         "id": "1577c52f-b89d-4fd7-aa08-5eaf0f71b970",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Raahe remote station",
-        "type": "area",
-        "phone": "+358204486400",
+        "callname": "Turku Radio",
+        "type": "information",
         "channel": "05",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
+        "phone": "+358204486400",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002300230. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Turku Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -552,24 +552,24 @@
       "type": "Feature",
       "properties": {
         "id": "16030036-6755-4c15-895c-2ed552d9966d",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Geta remote station",
-        "type": "area",
-        "phone": "+358204486400",
+        "callname": "Turku Radio",
+        "type": "information",
         "channel": "05",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
+        "phone": "+358204486400",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002300230. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Turku Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -715,20 +715,20 @@
       "type": "Feature",
       "properties": {
         "id": "263746e3-c9ac-412b-b05b-08aa94167ba4",
-        "url": "https://www.fintraffic.fi/sites/default/files/2022-10/Helsinki%20VTS%20Sector%202%20EN.pdf",
         "name": "Helsinki VTS Sector 2",
         "type": "vts",
-        "phone": "+358204485389",
         "channel": "9",
+        "url": "https://www.fintraffic.fi/sites/default/files/2022-10/Helsinki%20VTS%20Sector%202%20EN.pdf",
+        "phone": "+358204485389",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Vessels of 24 metres in length overall or more are obliged to participate in the vessel traffic services. "
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -785,24 +785,24 @@
       "type": "Feature",
       "properties": {
         "id": "2c720dcb-74be-48de-85cf-13fa1af55fca",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Espoo remote station",
-        "type": "area",
-        "phone": "+358204486400",
+        "callname": "Turku Radio",
+        "type": "information",
         "channel": "04",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
+        "phone": "+358204486400",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002300230. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Turku Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -948,24 +948,24 @@
       "type": "Feature",
       "properties": {
         "id": "2cdf2d22-4546-4c4d-bbff-c89b70bad539",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Nagu remote station",
-        "type": "area",
-        "phone": "+358204486400",
+        "callname": "Turku Radio",
+        "type": "information",
         "channel": "23",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
+        "phone": "+358204486400",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002300230. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Turku Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1111,24 +1111,24 @@
       "type": "Feature",
       "properties": {
         "id": "3b843089-832d-4343-bc0a-c411c9e5877b",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Hanko remote station",
-        "type": "area",
-        "phone": "+358204486400",
+        "callname": "Turku Radio",
+        "type": "information",
         "channel": "03",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
+        "phone": "+358204486400",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002300230. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Turku Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1274,24 +1274,24 @@
       "type": "Feature",
       "properties": {
         "id": "412dfb8a-8cc9-4b8d-8537-63718098f82c",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Mustasaari remote station",
-        "type": "area",
-        "phone": "+358204486400",
+        "callname": "Turku Radio",
+        "type": "information",
         "channel": "04",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
+        "phone": "+358204486400",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002300230. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Turku Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1437,24 +1437,24 @@
       "type": "Feature",
       "properties": {
         "id": "481519e1-f8f8-4e1a-b2a4-d8e92b57b19d",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Hammarland remote station",
-        "type": "area",
-        "phone": "+358204486400",
+        "callname": "Turku Radio",
+        "type": "information",
         "channel": "07",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
+        "phone": "+358204486400",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002300230. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Turku Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1600,24 +1600,24 @@
       "type": "Feature",
       "properties": {
         "id": "486ce372-7ab1-44ac-a034-b9d6a82589c9",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Kruunupyy remote station",
-        "type": "area",
-        "phone": "+358204486400",
+        "callname": "Turku Radio",
+        "type": "information",
         "channel": "01",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
+        "phone": "+358204486400",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002300230. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Turku Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1763,24 +1763,24 @@
       "type": "Feature",
       "properties": {
         "id": "530fb621-21f8-4f23-824d-c3e98ecdd5cd",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Järsö remote station",
-        "type": "area",
-        "phone": "+358204486400",
+        "callname": "Turku Radio",
+        "type": "information",
         "channel": "04",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
+        "phone": "+358204486400",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002300230. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Turku Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1926,24 +1926,24 @@
       "type": "Feature",
       "properties": {
         "id": "6f425b54-1ce1-4aba-9488-21e938a10cfa",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Kristinestad remote station",
-        "type": "area",
-        "phone": "+358204486400",
+        "callname": "Turku Radio",
+        "type": "information",
         "channel": "03",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
+        "phone": "+358204486400",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002300230. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Turku Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2089,24 +2089,24 @@
       "type": "Feature",
       "properties": {
         "id": "7296c5ee-235f-4832-b611-1da41c20ff4b",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Eurajoki remote station",
-        "type": "area",
-        "phone": "+358204486400",
+        "callname": "Turku Radio",
+        "type": "information",
         "channel": "19",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
+        "phone": "+358204486400",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002300230. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Turku Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2252,20 +2252,20 @@
       "type": "Feature",
       "properties": {
         "id": "7cdd66b0-7810-4872-9494-db9b5340a121",
-        "url": "https://www.fintraffic.fi/sites/default/files/2022-10/Archipelago%20VTS_EN.pdf",
         "name": "Archipelago VTS",
         "type": "vts",
-        "phone": "+358204486521 ",
         "channel": "71",
+        "url": "https://www.fintraffic.fi/sites/default/files/2022-10/Archipelago%20VTS_EN.pdf",
+        "phone": "+358204486521 ",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Ships over 24m need to participate in VTS"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -2326,24 +2326,24 @@
       "type": "Feature",
       "properties": {
         "id": "8b5bb287-d4fe-44ce-9cb8-59e241cb8e6f",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Uusikaupunki remote station",
-        "type": "area",
-        "phone": "+358204486400",
+        "callname": "Turku Radio",
+        "type": "information",
         "channel": "01",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
+        "phone": "+358204486400",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002300230. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Turku Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2489,24 +2489,24 @@
       "type": "Feature",
       "properties": {
         "id": "ae7f1001-0e21-4b42-8580-10f7efbc0d70",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Utö remote station",
-        "type": "area",
-        "phone": "+358204486400",
+        "callname": "Turku Radio",
+        "type": "information",
         "channel": "79",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
+        "phone": "+358204486400",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002300230. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Turku Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2652,24 +2652,24 @@
       "type": "Feature",
       "properties": {
         "id": "b46dfa75-a53b-440a-8b00-f616425eedcb",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Ii remote station",
-        "type": "area",
-        "phone": "+358204486400",
+        "callname": "Turku Radio",
+        "type": "information",
         "channel": "07",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
+        "phone": "+358204486400",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002300230. MSI 02:33, 06:33, 10:33, 14:33, 18:33, 22:33 UTC. Weather 06:00, 18:00 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Turku Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -2815,20 +2815,20 @@
       "type": "Feature",
       "properties": {
         "id": "dae233e1-cb78-4775-b64e-921e21b2b6d0",
-        "url": "https://www.fintraffic.fi/sites/default/files/2022-10/Helsinki%20VTS%20Sector%201%20EN.pdf",
         "name": "Helsinki VTS Sector 1",
         "type": "vts",
-        "phone": "+358204485385",
         "channel": "71",
+        "url": "https://www.fintraffic.fi/sites/default/files/2022-10/Helsinki%20VTS%20Sector%201%20EN.pdf",
+        "phone": "+358204485385",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Vessels of 24 metres in length overall or more are obliged to participate in the vessel traffic services. "
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -2885,20 +2885,20 @@
       "type": "Feature",
       "properties": {
         "id": "ef91fa17-7b77-412d-bd61-85105cd7c853",
-        "url": "https://www.fintraffic.fi/sites/default/files/2022-10/Bothnia%20VTS_EN.pdf",
         "name": "Bothnia VTS",
         "type": "vts",
-        "phone": "+358204487356",
         "channel": "67",
+        "url": "https://www.fintraffic.fi/sites/default/files/2022-10/Bothnia%20VTS_EN.pdf",
+        "phone": "+358204487356",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Vessels of 24 metres in length overall or more are obliged to participate in the vessel traffic services. "
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -3159,20 +3159,20 @@
       "type": "Feature",
       "properties": {
         "id": "f49ad04e-8a99-49f6-9417-420e9c8967ed",
-        "url": "https://www.fintraffic.fi/sites/default/files/2022-10/Hanko%20VTS_EN.pdf",
         "name": "Hanko VTS",
         "type": "vts",
-        "phone": "+358204485388",
         "channel": "67",
+        "url": "https://www.fintraffic.fi/sites/default/files/2022-10/Hanko%20VTS_EN.pdf",
+        "phone": "+358204485388",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "Vessels of 24 metres in length overall or more are obliged to participate in the vessel traffic services. "
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }

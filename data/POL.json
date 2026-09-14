@@ -5,23 +5,23 @@
       "type": "Feature",
       "properties": {
         "id": "00fd1991-3d38-5cc6-b48e-d13c81ec79e7",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Niechorze remote station",
-        "type": "area",
+        "callname": "Polish Rescue Radio",
+        "type": "information",
         "channel": "62",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002610210. MSI 05:05, 11:05, 17:05, 22:05 UTC. Weather 01:35, 07:35, 13:35, 19:35 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Polish Rescue Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -167,19 +167,19 @@
       "type": "Feature",
       "properties": {
         "id": "1f2b196c-b006-48d1-b30e-d497dbd00ca8",
-        "url": "https://www.umgdy.gov.pl/en/marine-safety/vts-zatoka-gdanska-en/",
         "name": "VTS Zatoka Gdanska",
         "type": "vts",
-        "phone": "+48583553610",
         "channel": "71",
+        "url": "https://www.umgdy.gov.pl/en/marine-safety/vts-zatoka-gdanska-en/",
+        "phone": "+48583553610",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen"
           },
           "pleasure": {
+            "mode": "listen"
+          },
+          "cargo": {
             "mode": "listen"
           }
         }
@@ -292,23 +292,23 @@
       "type": "Feature",
       "properties": {
         "id": "378bd2b7-9117-53d8-a827-c11dce73281c",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Police remote station",
-        "type": "area",
+        "callname": "Polish Rescue Radio",
+        "type": "information",
         "channel": "61",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002610210. MSI 05:05, 11:05, 17:05, 22:05 UTC. Weather 01:35, 07:35, 13:35, 19:35 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Polish Rescue Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -454,23 +454,23 @@
       "type": "Feature",
       "properties": {
         "id": "40c731b7-38f6-5fe0-9d0e-21eba8f8d70c",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Gdańsk (Oksywie) remote station",
-        "type": "area",
+        "callname": "Polish Rescue Radio",
+        "type": "information",
         "channel": "05",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002610210. MSI 05:05, 11:05, 17:05, 22:05 UTC. Weather 01:35, 07:35, 13:35, 19:35 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Polish Rescue Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -616,23 +616,23 @@
       "type": "Feature",
       "properties": {
         "id": "40c7fa7d-8ec3-5338-90a7-ab4493f48c74",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Czołpino remote station",
-        "type": "area",
+        "callname": "Polish Rescue Radio",
+        "type": "information",
         "channel": "05",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002610210. MSI 05:05, 11:05, 17:05, 22:05 UTC. Weather 01:35, 07:35, 13:35, 19:35 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Polish Rescue Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -778,23 +778,23 @@
       "type": "Feature",
       "properties": {
         "id": "53b1f2a0-1207-5f6f-9115-934eddc9f069",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Kikut remote station",
-        "type": "area",
+        "callname": "Polish Rescue Radio",
+        "type": "information",
         "channel": "05",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002610210. MSI 05:05, 11:05, 17:05, 22:05 UTC. Weather 01:35, 07:35, 13:35, 19:35 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Polish Rescue Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -940,23 +940,23 @@
       "type": "Feature",
       "properties": {
         "id": "570469af-740b-510c-bda1-735012905585",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Stilo remote station",
-        "type": "area",
+        "callname": "Polish Rescue Radio",
+        "type": "information",
         "channel": "61",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002610210. MSI 05:05, 11:05, 17:05, 22:05 UTC. Weather 01:35, 07:35, 13:35, 19:35 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Polish Rescue Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1102,23 +1102,23 @@
       "type": "Feature",
       "properties": {
         "id": "86ea1edb-608f-5132-8023-697b906b4980",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Gąski remote station",
-        "type": "area",
+        "callname": "Polish Rescue Radio",
+        "type": "information",
         "channel": "61",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002610210. MSI 05:05, 11:05, 17:05, 22:05 UTC. Weather 01:35, 07:35, 13:35, 19:35 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Polish Rescue Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1264,23 +1264,23 @@
       "type": "Feature",
       "properties": {
         "id": "8973b716-8416-5b37-a82c-874c94a2c83c",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Krynica Morska remote station",
-        "type": "area",
+        "callname": "Polish Rescue Radio",
+        "type": "information",
         "channel": "61",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002610210. MSI 05:05, 11:05, 17:05, 22:05 UTC. Weather 01:35, 07:35, 13:35, 19:35 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Polish Rescue Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1426,23 +1426,23 @@
       "type": "Feature",
       "properties": {
         "id": "8df2a2f7-a8a9-501f-a969-0b61c3147fd2",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Rozewie remote station",
-        "type": "area",
+        "callname": "Polish Rescue Radio",
+        "type": "information",
         "channel": "62",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002610210. MSI 05:05, 11:05, 17:05, 22:05 UTC. Weather 01:35, 07:35, 13:35, 19:35 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Polish Rescue Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -1588,23 +1588,23 @@
       "type": "Feature",
       "properties": {
         "id": "d7172f79-f38d-535e-b8da-79169b028095",
-        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "name": "Jarosławiec remote station",
-        "type": "area",
+        "callname": "Polish Rescue Radio",
+        "type": "information",
         "channel": "62",
+        "url": "https://stockholmradio.se/wp-content/uploads/2026/06/VHF-Kartan_2026_Norden_Eng-0626-1.pdf",
         "vhfdata": {
-          "cargo": {
-            "mode": "listen"
-          },
           "generic": {
             "mode": "listen",
             "note": "MMSI 002610210. MSI 05:05, 11:05, 17:05, 22:05 UTC. Weather 01:35, 07:35, 13:35, 19:35 UTC."
           },
           "pleasure": {
             "mode": "listen"
+          },
+          "cargo": {
+            "mode": "listen"
           }
-        },
-        "callname": "Polish Rescue Radio"
+        }
       },
       "geometry": {
         "type": "Polygon",
