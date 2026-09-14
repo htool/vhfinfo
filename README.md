@@ -43,7 +43,7 @@ Here it is important to cover the documented coordinates of the VTS as close as 
       "properties": {
         "name": "",           // Full name
         "callname": "",       // Short name typically used in call
-        "type": "",           // ['Lock','Bridge','Marina','VTS','VTS Radar support', 'Territorial']
+        "type": "",           // Operational: Lock, Bridge, Marina, VTS, VTS Radar support, Area, Territorial. Information: information
         "channel": ,          // VHF channel number
         "update": "5 *",      // Update bulletin (eg weather) in this VHF area in 'cron format'
         "vhfdata": {
@@ -88,10 +88,10 @@ The plugin flow is as follows:
  3. Use countries_bbox.json to create bboxes and check if they intersect with the locationBox from step 2
  4. Read features from intersecting to see which intersect with locationBox from 2 and keep them in memory (featuresInBox)
  5. Use headingTrue, headingMagnetic, COG or bbox and location to create a searchPolygon 'beam' (or bbox) using the plugin config parameters
- 6. Go through the features in featuresInBox and check if they intersect with searchPolygon
- 7. Use result of 6 to calculate distance to each feature and sort by distance (negative distance means your located inside the feature)
- 8. /plugin/vhfinfo/nearby can be called to pull the whole result set of 7.
- 9. Write the nearest POI and VTS to the path configured in the plugin
+  6. Go through the features in featuresInBox. Operational services (VTS/lock/bridge/marina/area) must intersect the searchPolygon. Information (`information`) is included only when the ship is inside the coverage, then sorted by distance to the coverage centre (polygon centroid), ignoring heading.
+  7. Use result of 6 to calculate distance to each feature. Operational types keep signed distance to the boundary (negative means you are inside). Information uses positive distance to the centre. Sort those nearest-centre first.
+  8. /plugin/vhfinfo/nearby can be called to pull the whole result set of 7.
+  9. Write the nearest of each type (including `vhfdata.nearest.information`) and the numbered list to the path configured in the plugin
 
 SignalK App Store installs come from the npm package [`vhfinfo`](https://www.npmjs.com/package/vhfinfo). A GitHub Action publishes a new patch version at most once per UTC day when country GeoJSON in `data/` or the SignalK plugin in `plugin/` has changed since the last release (see `.github/workflows/npm-publish-geojson.yml`). Publishing uses [npm trusted publishing](https://docs.npmjs.com/trusted-publishers/) (GitHub OIDC), so you do not need a rotating npm access token. Once, as package owner on npmjs.com: **Package → Settings → Trusted Publisher → GitHub Actions**, with organization `htool`, repository `vhfinfo`, workflow filename `npm-publish-geojson.yml`, and allowed action `npm publish`.
 

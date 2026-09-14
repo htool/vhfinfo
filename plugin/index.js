@@ -104,7 +104,11 @@ module.exports = function (app, options) {
             type: "boolean",
           },
           area: {
-            title: "Areas",
+            title: "Areas (operational)",
+            type: "boolean",
+          },
+          information: {
+            title: "Information",
             type: "boolean",
           },
         },
@@ -431,6 +435,7 @@ module.exports = function (app, options) {
       var lock = false;
       var bridge = false;
       var area = false;
+      var information = false;
       var territorial = false;
       features.forEach((feature) => {
         switch (feature.type) {
@@ -480,6 +485,14 @@ module.exports = function (app, options) {
                 objectToPath(options.path + "." + "area", feature),
               );
               area = true;
+            }
+            break;
+          case "information":
+            if (information == false) {
+              values = values.concat(
+                objectToPath(options.path + "." + "information", feature),
+              );
+              information = true;
             }
             break;
         }
@@ -694,49 +707,108 @@ module.exports = function (app, options) {
       return distance;
     }
 
+    function isInformationType(type) {
+      return String(type || "").toLowerCase() === "information";
+    }
+
+    function informationCenterPoint(feature) {
+      try {
+        var center = turf.centroid(feature);
+        if (
+          center &&
+          center.geometry &&
+          Array.isArray(center.geometry.coordinates)
+        ) {
+          return center;
+        }
+      } catch (e) {}
+      return null;
+    }
+
+    function relativeBearingTo(target) {
+      var bearingReference = Number.isFinite(currentHeading)
+        ? currentHeading
+        : 0;
+      var relativeBearing = Math.round(
+        turf.rhumbBearing(currentPosition, target) - bearingReference,
+      );
+      if (relativeBearing < -180) {
+        relativeBearing = relativeBearing + 360;
+      }
+      return relativeBearing;
+    }
+
+    function annotateBeamFeature(feature) {
+      var distance = Math.round(distanceToPolygon(currentPosition, feature));
+      feature.properties.distance = distance;
+      var nearestPoint = turf.nearestPointOnLine(
+        turf.polygonToLine(feature),
+        currentPosition,
+      );
+      var relativeBearing = relativeBearingTo(
+        nearestPoint.geometry.coordinates,
+      );
+      feature.properties.relativeBearing = relativeBearing;
+      app.debug(
+        "Intersects with %s (%dm at %d)",
+        feature.properties.name,
+        distance,
+        relativeBearing,
+      );
+      return feature.properties;
+    }
+
+    function annotateInformationFeature(feature) {
+      if (!turf.booleanPointInPolygon(currentPosition, feature)) {
+        return null;
+      }
+      var center = informationCenterPoint(feature);
+      if (!center) {
+        return null;
+      }
+      var distance = Math.round(
+        turf.distance(currentPosition, center, { units: "meters" }),
+      );
+      feature.properties.distance = distance;
+      feature.properties.relativeBearing = relativeBearingTo(center);
+      app.debug(
+        "Information %s inside (%dm to center at %d)",
+        feature.properties.name,
+        distance,
+        feature.properties.relativeBearing,
+      );
+      return feature.properties;
+    }
+
     function findNearbyFeatures(currentCoordinates, features) {
-      var nearbyFeatures = [];
+      var operationalFeatures = [];
+      var informationFeatures = [];
       currentPosition = turf.point(currentCoordinates, {});
       features.forEach((feature) => {
-        if (turf.booleanIntersects(feature, searchPolygon)) {
-          var distance = Math.round(
-            distanceToPolygon(currentPosition, feature),
-          );
-          feature.properties.distance = distance;
-          var nearestPoint = turf.nearestPointOnLine(
-            turf.polygonToLine(feature),
-            currentPosition,
-          );
-          var bearingReference = Number.isFinite(currentHeading)
-            ? currentHeading
-            : 0;
-          var relativeBearing = Math.round(
-            turf.rhumbBearing(
-              currentPosition,
-              nearestPoint.geometry.coordinates,
-            ) - bearingReference,
-          );
-          if (relativeBearing < -180) {
-            relativeBearing = relativeBearing + 360;
+        if (
+          isInformationType(feature.properties && feature.properties.type)
+        ) {
+          var infoProps = annotateInformationFeature(feature);
+          if (infoProps) {
+            informationFeatures.push(infoProps);
           }
-          feature.properties.relativeBearing = relativeBearing;
-          app.debug(
-            "Intersects with %s (%dm at %d)",
-            feature.properties.name,
-            distance,
-            relativeBearing,
-          );
-          nearbyFeatures.push(feature.properties);
+          return;
+        }
+        if (searchPolygon && turf.booleanIntersects(feature, searchPolygon)) {
+          operationalFeatures.push(annotateBeamFeature(feature));
         }
       });
 
-      nearbyFeatures.sort(function (a, b) {
+      operationalFeatures.sort(function (a, b) {
         return (
           parseFloat(Math.abs(a.distance)) - parseFloat(Math.abs(b.distance))
         );
       });
+      informationFeatures.sort(function (a, b) {
+        return parseFloat(a.distance) - parseFloat(b.distance);
+      });
 
-      return nearbyFeatures;
+      return operationalFeatures.concat(informationFeatures);
     }
 
     function rad2deg(radians) {

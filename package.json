@@ -27,6 +27,7 @@
     "import:vhf": "node scripts/import-vhf-features.js",
     "import:vhf:sql": "node scripts/import-vhf-features.js --sql",
     "import:vhf:verify": "node scripts/verify-vhf-features.js",
+    "test:information-center": "node scripts/test-information-center-order.js",
     "test:features-db": "node scripts/test-features-db.js",
     "test:dual-write-live": "node scripts/test-dual-write-live.js",
     "sync:vhf": "node scripts/sync-vhf-to-git.js",
