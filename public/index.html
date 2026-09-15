@@ -15,6 +15,7 @@
     <meta name="navico-store" content="mfd-insight-store" />
     <title>VHFinfo</title>
     <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="mfd.js"></script>
     <script>
       document.write(
         '<link rel="stylesheet" href="style.css?ver=' +
@@ -35,27 +36,108 @@
   </body>
 </html>
 <script>
-  // Set day or night mode
-
   var connected = false;
   var ws;
   var wsNr = 0;
-  var nearest = {};
-  var numeric = /[0-9]+/;
+  var reconnectTimer;
   var options = {};
+  var catalog = {};
+  var shownCount = 0;
+  var lastCompact = null;
+  var NEARBY_URL = "/signalk/v1/api/vhfinfo/nearby";
+  var OPTIONS_URL = "/signalk/v1/api/vhfinfo/options";
+  var COMPACT_PATH = "vhfinfo.nearby";
+
+  function pathNr() {
+    return options.pathNr || 5;
+  }
+
+  function rememberCatalog(list) {
+    catalog = Object.assign(catalog, vhfMfd.catalogFromList(list));
+  }
+
+  function applyRecords(records) {
+    var listEl = document.getElementById("list");
+    var slots = vhfMfd.slotsForDisplay(records, pathNr());
+    var i;
+    if (slots.length === 0) {
+      listEl.innerHTML = "No VHF stations nearby";
+      shownCount = 0;
+      return;
+    }
+    if (!document.getElementById("entry_0")) {
+      listEl.innerHTML = "";
+      shownCount = 0;
+    }
+    for (i = 0; i < slots.length; i++) {
+      if (document.getElementById("entry_" + i) == null) {
+        createEntry(i);
+      }
+      updateEntry(i, slots[i]);
+    }
+    for (i = slots.length; i < shownCount; i++) {
+      var node = document.getElementById("entry_" + i);
+      if (node) {
+        node.remove();
+      }
+    }
+    shownCount = slots.length;
+  }
+
+  function fetchNearby(thenApply) {
+    $.getJSON(NEARBY_URL)
+      .done(function (list) {
+        if (!Array.isArray(list)) {
+          return;
+        }
+        rememberCatalog(list);
+        if (lastCompact) {
+          applyRecords(vhfMfd.mergeHits(lastCompact, catalog));
+        } else if (thenApply !== false) {
+          applyRecords(list);
+        }
+      })
+      .fail(function () {
+        if (shownCount === 0) {
+          document.getElementById("list").innerHTML =
+            "Waiting for VHFinfo nearby…";
+        }
+      });
+  }
+
+  function applyCompact(hits) {
+    lastCompact = hits;
+    if (vhfMfd.needsCatalog(hits, catalog)) {
+      fetchNearby(false);
+    }
+    applyRecords(vhfMfd.mergeHits(hits, catalog));
+  }
 
   function readOptions() {
-    $.getJSON("/signalk/v1/api/vhfinfo/options", function (json) {
-      options = json;
-    });
-    if (typeof options.path != "undefined") {
-      document.getElementById("list").innerHTML =
-        "Loaded SignalK plugin config options, now connecting...";
-      setTimeout(connect, 500);
-    } else {
-      document.getElementById("list").innerHTML =
-        "Reading SigalK plugin options...";
-      setTimeout(readOptions, 1000);
+    $.getJSON(OPTIONS_URL)
+      .done(function (json) {
+        options = json || {};
+      })
+      .always(function () {
+        fetchNearby(true);
+        connect();
+      });
+  }
+
+  function handlePathValue(path, value) {
+    if (path === COMPACT_PATH) {
+      applyCompact(Array.isArray(value) ? value : []);
+      return;
+    }
+  }
+
+  function handleData(data) {
+    var updates = (data && data.updates) || [];
+    for (var u = 0; u < updates.length; u++) {
+      var values = (updates[u] && updates[u].values) || [];
+      for (var i = 0; i < values.length; i++) {
+        handlePathValue(values[i].path, values[i].value);
+      }
     }
   }
 
@@ -70,249 +152,184 @@
         "/signalk/v1/stream?subscribe=none",
     );
     ws.onopen = function () {
-      document.getElementById("list").innerHTML = "";
       wsNr++;
       connected = true;
-
-      var paths = [{ path: options.path + ".*" }];
-      var subscriptionObject = {
+      var subscriptionMessage = JSON.stringify({
         context: "vessels.self",
-        subscribe: paths,
-      };
-      var subscriptionMessage = JSON.stringify(subscriptionObject);
+        subscribe: [{ path: COMPACT_PATH }],
+      });
       console.log("subscriptionMessage: " + subscriptionMessage);
       ws.send(subscriptionMessage);
-
-      ws.onmessage = function (event) {
-        if (event.data.includes("signalk-server")) {
-          welcomeMessage = event.data;
-          console.log("Skipping welcome message: " + welcomeMessage);
-        } else {
-          handleData(JSON.parse(event.data));
-        }
-      };
-
-      ws.onclose = function () {
-        connected = false;
-        wsNr--;
-        console.log("WebSocket closed - wsNr: " + wsNr);
-        if (instantReconnect) {
-          instantReconnect = false;
-          connect();
-        } else {
-          setInterval(function () {
-            connect();
-          }, 1000);
-        }
-      };
-
-      ws.onerror = function (err) {
-        console.log(
-          "WebSocket connection error: " +
-            err.message +
-            " - closing connection",
-        );
-        ws.close();
-      };
+      fetchNearby(true);
+    };
+    ws.onmessage = function (event) {
+      if (String(event.data).indexOf("signalk-server") !== -1) {
+        return;
+      }
+      try {
+        handleData(JSON.parse(event.data));
+      } catch (e) {
+        console.log(e);
+      }
+    };
+    ws.onclose = function () {
+      connected = false;
+      wsNr = Math.max(0, wsNr - 1);
+      clearTimeout(reconnectTimer);
+      reconnectTimer = setTimeout(connect, 1000);
+    };
+    ws.onerror = function (err) {
+      console.log(
+        "WebSocket connection error: " + err.message + " - closing connection",
+      );
+      ws.close();
     };
   }
 
-  readOptions();
-
-  function handleData(data) {
-    if (typeof data.updates[0].values[0].path != "undefined") {
-      var path = data.updates[0].values[0].path.replace(
-        "resources.vhfdata.nearest.",
-        "",
-      );
-      var value = data.updates[0].values[0].value;
-      if (typeof value == "string" && value.startsWith("{")) {
-        nearest[path] = JSON.parse(value);
-        if (path.match(numeric)) {
-          console.log(path);
-          updateNearest(path);
-        }
-      }
+  function updateEntry(id, record) {
+    if (!record) {
+      return;
     }
-  }
-
-  function updateNearest(id) {
-    console.log(nearest[id]);
-    // Check if dom should exist
-    if (nearest[id].name == "") {
-      // Remove dom if exists
-      console.log("Empty data entry");
-      console.log("Remove? " + document.getElementById("entry_" + id));
-      if (document.getElementById("entry_" + id) != null) {
-        document.getElementById("entry_" + id).remove();
-      }
-    } else {
-      // Add dom if doesn't exist
-      console.log("Create? " + document.getElementById("entry_" + id));
-      if (document.getElementById("entry_" + id) == null) {
-        createEntry(id);
-      }
-      updateEntry(id);
+    var nameEl = document.getElementById("name_" + id);
+    var callEl = document.getElementById("callname_" + id);
+    var channelEl = document.getElementById("channel_" + id);
+    var typeEl = document.getElementById("type_" + id);
+    var modeEl = document.getElementById("mode_" + id);
+    var distanceEl = document.getElementById("distance_" + id);
+    var urlEl = document.getElementById("url_" + id);
+    var phoneEl = document.getElementById("phone_" + id);
+    if (nameEl) {
+      nameEl.innerHTML = record.name ? "Name: " + record.name : "";
     }
-  }
-
-  function updateEntry(id) {
-    var fields = [
-      "name",
-      "callname",
-      "channel",
-      "note",
-      "mode",
-      "distance",
-      "type",
-    ];
-    var sub_types = ["generic", "pleasure", "cargo"];
+    if (callEl) {
+      callEl.innerHTML = record.callname ? "Callsign: " + record.callname : "";
+    }
+    if (channelEl) {
+      channelEl.innerHTML = record.channel || "";
+    }
+    if (typeEl) {
+      typeEl.innerHTML = String(record.type || "").toUpperCase();
+    }
+    if (modeEl) {
+      modeEl.innerHTML = vhfMfd.displayMode(record);
+    }
+    if (distanceEl) {
+      var distance = record.distance;
+      distanceEl.innerHTML =
+        distance == null || distance === "" ? "" : distance + "m";
+    }
+    if (urlEl) {
+      urlEl.innerHTML = record.url
+        ? '<a href="' +
+          record.url +
+          '" style="text-decoration:none; color: white">&#128279;</a>'
+        : "";
+    }
+    if (phoneEl) {
+      phoneEl.innerHTML = record.phone
+        ? '<a href="tel:' +
+          record.phone +
+          '" style="text-decoration:none; color: white">&#9990;</a>'
+        : "";
+    }
     var note = false;
-
-    fields.forEach((field) => {
-      console.log(`nearest[${id}][${field}]: ` + nearest[id][field]);
-      if (typeof nearest[id][field] != "undefined") {
-        switch (field) {
-          case "note":
-            note = true;
-            document.getElementById(field + "_" + id).innerHTML =
-              nearest[id][field];
-            break;
-          case "name":
-            document.getElementById(field + "_" + id).innerHTML =
-              "Name: " + nearest[id][field];
-            break;
-          case "callname":
-            document.getElementById(field + "_" + id).innerHTML =
-              "Callsign: " + nearest[id][field];
-            break;
-          default:
-            document.getElementById(field + "_" + id).innerHTML =
-              nearest[id][field];
-            break;
-        }
+    var sub_types = ["generic", "pleasure", "cargo"];
+    sub_types.forEach(function (sub_type) {
+      var el = document.getElementById(sub_type + "_note_" + id);
+      if (!el) {
+        return;
       }
-    });
-    var mode;
-    if (
-      typeof nearest[id].vhfdata != "undefined" &&
-      typeof nearest[id].vhfdata.generic != "undefined" &&
-      typeof nearest[id].vhfdata.generic.mode != "undefined"
-    ) {
-      mode = nearest[id].vhfdata.generic.mode;
-    }
-    if (
-      typeof nearest[id].vhfdata != "undefined" &&
-      typeof nearest[id].vhfdata.pleasure != "undefined" &&
-      typeof nearest[id].vhfdata.pleasure.mode != "undefined"
-    ) {
-      mode = nearest[id].vhfdata.pleasure.mode;
-    }
-    document.getElementById("mode_" + id).innerHTML = mode.toUpperCase();
-    document.getElementById("type_" + id).innerHTML =
-      nearest[id].type.toUpperCase();
-    document.getElementById("distance_" + id).innerHTML =
-      nearest[id].distance + "m";
-    document.getElementById("url_" + id).innerHTML =
-      '<a href="' +
-      nearest[id].url +
-      '" style="text-decoration:none; color: white">&#128279;</a>';
-    document.getElementById("phone_" + id).innerHTML =
-      '<a href="tel:' +
-      nearest[id].phone +
-      '" style="text-decoration:none; color: white">&#9990;</a>';
-    sub_types.forEach((sub_type) => {
       if (
-        typeof nearest[id].vhfdata != "undefined" &&
-        typeof nearest[id].vhfdata[sub_type] != "undefined" &&
-        typeof nearest[id].vhfdata[sub_type]["note"] != "undefined"
+        record.vhfdata &&
+        record.vhfdata[sub_type] &&
+        record.vhfdata[sub_type].note
       ) {
-        document.getElementById(sub_type + "_" + "note" + "_" + id).innerHTML =
-          sub_type.toUpperCase() + ": " + nearest[id].vhfdata[sub_type]["note"];
+        el.innerHTML =
+          sub_type.toUpperCase() + ": " + record.vhfdata[sub_type].note;
         note = true;
+      } else {
+        el.innerHTML = "";
       }
     });
-    if (note == false) {
-      if (document.getElementById("notes_" + id) != null) {
-        document.getElementById("notes_" + id).remove();
-      }
+    var notes = document.getElementById("notes_" + id);
+    if (notes) {
+      notes.style.display = note ? "" : "none";
     }
   }
 
   function createEntry(id) {
-    console.log("Creating entry for " + id);
-    const entry = document.createElement("entry_" + id);
+    const entry = document.createElement("div");
     entry.classList.add("entry");
     entry.id = "entry_" + id;
 
-    const channelblock = document.createElement("channelblock_" + id);
+    const channelblock = document.createElement("div");
     channelblock.classList.add("channelblock");
 
-    const channel = document.createElement("channel_" + id);
+    const channel = document.createElement("div");
     channel.classList.add("channel");
     channel.id = "channel_" + id;
     channelblock.appendChild(channel);
 
-    const typeblock = document.createElement("typeblock");
+    const typeblock = document.createElement("div");
     typeblock.classList.add("typeblock");
-    const type = document.createElement("type_" + id);
+    const type = document.createElement("div");
     type.classList.add("type");
     type.id = "type_" + id;
     typeblock.appendChild(type);
-    const mode = document.createElement("mode_" + id);
+    const mode = document.createElement("div");
     mode.classList.add("mode");
     mode.id = "mode_" + id;
     typeblock.appendChild(mode);
-    const distance = document.createElement("distance_" + id);
+    const distance = document.createElement("div");
     distance.classList.add("distance");
     distance.id = "distance_" + id;
     typeblock.appendChild(distance);
-    const phone = document.createElement("phone_" + id);
+    const phone = document.createElement("div");
     phone.classList.add("phone");
     phone.id = "phone_" + id;
     typeblock.appendChild(phone);
-    const url = document.createElement("url_" + id);
+    const url = document.createElement("div");
     url.classList.add("url");
     url.id = "url_" + id;
     typeblock.appendChild(url);
     channelblock.appendChild(typeblock);
     entry.appendChild(channelblock);
 
-    const name = document.createElement("name_" + id);
+    const name = document.createElement("div");
     name.classList.add("name");
     name.id = "name_" + id;
     entry.appendChild(name);
 
-    const callname = document.createElement("callname_" + id);
+    const callname = document.createElement("div");
     callname.classList.add("name");
     callname.id = "callname_" + id;
     entry.appendChild(callname);
 
-    const notes = document.createElement("notes_" + id);
+    const notes = document.createElement("div");
     notes.classList.add("notes");
     notes.id = "notes_" + id;
     entry.appendChild(notes);
 
-    const note = document.createElement("note_" + id);
-    note.classList.add("note");
-    note.id = "note_" + id;
-    notes.appendChild(note);
-
-    const generic_note = document.createElement("generic_note_" + id);
+    const generic_note = document.createElement("div");
     generic_note.classList.add("note");
     generic_note.id = "generic_note_" + id;
     notes.appendChild(generic_note);
 
-    const pleasure_note = document.createElement("pleasure_note_" + id);
+    const pleasure_note = document.createElement("div");
     pleasure_note.classList.add("note");
     pleasure_note.id = "pleasure_note_" + id;
     notes.appendChild(pleasure_note);
 
-    const cargo_note = document.createElement("cargo_note_" + id);
+    const cargo_note = document.createElement("div");
     cargo_note.classList.add("note");
     cargo_note.id = "cargo_note_" + id;
     notes.appendChild(cargo_note);
 
     document.getElementById("list").appendChild(entry);
   }
+
+  readOptions();
+  setInterval(function () {
+    fetchNearby(true);
+  }, 5000);
 </script>

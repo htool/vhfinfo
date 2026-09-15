@@ -20,22 +20,6 @@ module.exports = function (app, options) {
     "Plugin that reads VHFinfo data and returns nearby info through an API";
 
   var pluginStatus = "Starting";
-  let emptyFeature = {
-    name: "",
-    callname: "",
-    type: "",
-    channel: "",
-    phone: "",
-    update: "",
-    vhfdata: {
-      generic: { mode: "", note: "" },
-      pleasure: { mode: "", note: "" },
-      cargo: { mode: "", note: "" },
-    },
-    id: "",
-    distance: "",
-    relativeBearing: "",
-  };
 
   var schema = {
     type: "object",
@@ -128,6 +112,8 @@ module.exports = function (app, options) {
     app.debug("Plugin started");
     const turf = require("@turf/turf");
     const path = require("path");
+    const regions = require("./regions");
+    const deltas = require("./deltas");
 
     var userDir = app.config.configPath;
     var dataDir = path.join(userDir, "/node_modules/vhfinfo/data/");
@@ -248,8 +234,7 @@ module.exports = function (app, options) {
     }
     function handleNearby(req, res) {
       res.contentType("application/json");
-      res.send(JSON.stringify(nearbyFeatures));
-      res.sendStatus(200);
+      res.status(200).send(JSON.stringify(nearbyFeatures));
     }
 
     plugin.registerWithRouter = function (router) {
@@ -273,6 +258,20 @@ module.exports = function (app, options) {
     var nearbyFeatures = [];
     var featureCount = 0;
     var searchPolygon;
+
+    if (typeof app.registerResourceProvider === "function") {
+      app.registerResourceProvider({
+        type: "regions",
+        methods: regions.createRegionProviderMethods(function () {
+          return {
+            features: featuresInBox,
+            position: currentCoordinates,
+            beamMeters: distance,
+            $source: regions.SOURCE,
+          };
+        }),
+      });
+    }
 
     setTimeout(updateFeaturesInBox, 10000); // Start 10 seconds after plugin start
 
@@ -428,95 +427,12 @@ module.exports = function (app, options) {
     }
 
     function sendUpdates(features) {
-      var values = [];
-      var vts = false;
-      var vtsradar = false;
-      var marina = false;
-      var lock = false;
-      var bridge = false;
-      var area = false;
-      var information = false;
-      var territorial = false;
-      features.forEach((feature) => {
-        switch (feature.type) {
-          case "vts":
-            if (vts == false) {
-              values = values.concat(
-                objectToPath(options.path + "." + "vts", feature),
-              );
-              vts = true;
-            }
-            break;
-          case "vtsradar":
-            if (vtsradar == false) {
-              values = values.concat(
-                objectToPath(options.path + "." + "vtsradar", feature),
-              );
-              vtsradar = true;
-            }
-            break;
-          case "lock":
-            if (lock == false) {
-              values = values.concat(
-                objectToPath(options.path + "." + "lock", feature),
-              );
-              lock = true;
-            }
-            break;
-          case "bridge":
-            if (bridge == false) {
-              values = values.concat(
-                objectToPath(options.path + "." + "bridge", feature),
-              );
-              bridge = true;
-            }
-            break;
-          case "marina":
-            if (marina == false) {
-              values = values.concat(
-                objectToPath(options.path + "." + "marina", feature),
-              );
-              marina = true;
-            }
-            break;
-          case "area":
-            if (area == false) {
-              values = values.concat(
-                objectToPath(options.path + "." + "area", feature),
-              );
-              area = true;
-            }
-            break;
-          case "information":
-            if (information == false) {
-              values = values.concat(
-                objectToPath(options.path + "." + "information", feature),
-              );
-              information = true;
-            }
-            break;
-        }
+      var values = deltas.buildUpdates(features, {
+        path: options.path,
+        pathNr: options.pathNr,
+        types: options.types,
       });
-      var pathnr = 0;
-      var maxPathNr = options.pathNr || 5;
-      app.debug("maxPathNr: %d", maxPathNr);
-      for (let nr = 0; nr < features.length && nr < maxPathNr; nr++) {
-        if (options.types[features[nr].type] == true) {
-          // Only selected types
-          values = values.concat(
-            objectToPath(options.path + "." + pathnr, features[nr]),
-          );
-          pathnr = pathnr + 1;
-        }
-      }
-      // Fill rest with -
-
-      for (let nr = pathnr; nr < maxPathNr; nr++) {
-        values = values.concat(
-          objectToPath(options.path + "." + nr, emptyFeature),
-        );
-      }
-      //app.debug('values: %s', JSON.stringify(values))
+      app.debug("sendUpdates: %s", JSON.stringify(values));
       app.handleMessage(plugin.id, {
         updates: [
           {
@@ -524,34 +440,6 @@ module.exports = function (app, options) {
           },
         ],
       });
-      return;
-    }
-
-    function deg2rad(angle) {
-      return Number(((angle * Math.PI) / 180).toFixed(3));
-    }
-
-    function objectToPath(path, object) {
-      // Add object
-      var values = [];
-      if (typeof object.id != "undefined") {
-        // Main object
-        values = [{ path: path, value: JSON.stringify(object) }];
-      }
-      // Add single paths
-      for (const [key, value] of Object.entries(object)) {
-        var newPath = path + "." + key;
-        if (typeof value == "object") {
-          values = values.concat(objectToPath(newPath, value));
-        } else {
-          values.push({ path: newPath, value: value });
-          if (key == "relativeBearing") {
-            values.push({ path: newPath + "Rad", value: deg2rad(value) });
-          }
-        }
-      }
-      app.debug("objectToPath: ", JSON.stringify(values));
-      return values;
     }
 
     function createSearchPolygon() {

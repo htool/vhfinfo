@@ -90,7 +90,7 @@ The plugin flow is as follows:
  5. Use headingTrue, headingMagnetic, COG or bbox and location to create a searchPolygon 'beam' (or bbox) using the plugin config parameters
   6. Split features in memory into **operational** and **information**, filter and sort as in [Nearby ordering](#nearby-ordering).
   7. `/plugins/vhfinfo/nearby` (and `/signalk/v1/api/vhfinfo/nearby` on SK 2.x) returns that ordered list.
-  8. Write the nearest of each type (including `vhfdata.nearest.information`) and the numbered list to the path configured in the plugin
+  8. Write a compact live delta at `vhfinfo.nearby` (`{ id, distance, bearing }` with bearing in **radians**). While `path` / `pathNr` are set, also write the existing JSON blobs (no exploded leaf paths).
 
 #### Nearby ordering
 
@@ -155,7 +155,7 @@ Coast radio A is closer than the VTS in a straight line, but it stays after ever
 SignalK App Store installs come from the npm package [`vhfinfo`](https://www.npmjs.com/package/vhfinfo). A GitHub Action publishes a new patch version at most once per UTC day when country GeoJSON in `data/` or the SignalK plugin in `plugin/` has changed since the last release (see `.github/workflows/npm-publish-geojson.yml`). Publishing uses [npm trusted publishing](https://docs.npmjs.com/trusted-publishers/) (GitHub OIDC), so you do not need a rotating npm access token. Once, as package owner on npmjs.com: **Package → Settings → Trusted Publisher → GitHub Actions**, with organization `htool`, repository `vhfinfo`, workflow filename `npm-publish-geojson.yml`, and allowed action `npm publish`.
 
 #### API
-The resulting nearby VHF info objects array can be queried here:
+The ranked Nearby list (search beam, signed boundary distance, information by centroid) is:
 ```
 /plugins/vhfinfo/nearby
 ```
@@ -164,6 +164,23 @@ On Signal K 2.x that path is admin-only. Readonly clients (MFD tiles with `allow
 /signalk/v1/api/vhfinfo/nearby
 /signalk/v1/api/vhfinfo/options
 ```
+The MFD tile (`public/index.html`) polls that nearby GET and subscribes to compact `vhfinfo.nearby`. It does not read exploded leaf paths. Compact hits are joined with the nearby payload (or a Region by id) for name and channel.
+
+Coverage polygons are also served as Signal K **regions** (read-only). The catalog around the boat is a square centered on the vessel (or query `position`) that extends **search beam length** north, south, east, and west, so each edge is **2×** that length. A client `bbox` still selects a map view. Ranked Nearby is not this list.
+
+```
+GET /signalk/v2/api/resources/regions?provider=vhfinfo
+GET /signalk/v2/api/resources/regions?provider=vhfinfo&bbox=[lon1,lat1,lon2,lat2]
+GET /signalk/v2/api/resources/regions/{id}
+```
 
 #### SignalK path
-You can configure where the plugin writes the two nearest Point of Interest (lock, bridge, marina) and VTS (Vessel Traffic Service). This can be used together with the [SignalK Instrument Display Plugin](https://www.npmjs.com/package/signalk-instrument-display-plugin) to display current VHF info on any display.
+Live nearby hits are written as one compact array (no nested leaves):
+
+```
+vhfinfo.nearby = [ { id, distance, bearing }, ... ]
+```
+
+`id` matches the Region resource. `distance` is metres (signed for operational). `bearing` is **radians** relative to heading (or 0 if there is no heading).
+
+While the plugin `path` / `pathNr` options are set (default `vhfdata.nearest`, 5 slots), the same nearest-of-type and numbered list are still written as **JSON string blobs** on those paths so the [SignalK Instrument Display Plugin](https://www.npmjs.com/package/signalk-instrument-display-plugin) keeps working. Unused numbered slots are `null`. Leaf paths such as `vhfdata.nearest.0.channel` are no longer published.
