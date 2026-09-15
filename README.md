@@ -88,10 +88,69 @@ The plugin flow is as follows:
  3. Use countries_bbox.json to create bboxes and check if they intersect with the locationBox from step 2
  4. Read features from intersecting to see which intersect with locationBox from 2 and keep them in memory (featuresInBox)
  5. Use headingTrue, headingMagnetic, COG or bbox and location to create a searchPolygon 'beam' (or bbox) using the plugin config parameters
-  6. Go through the features in featuresInBox. Operational services (VTS/lock/bridge/marina/area) must intersect the searchPolygon. Information (`information`) is included only when the ship is inside the coverage, then sorted by distance to the coverage centre (polygon centroid), ignoring heading.
-  7. Use result of 6 to calculate distance to each feature. Operational types keep signed distance to the boundary (negative means you are inside). Information uses positive distance to the centre. Sort those nearest-centre first.
-  8. /plugin/vhfinfo/nearby can be called to pull the whole result set of 7.
-  9. Write the nearest of each type (including `vhfdata.nearest.information`) and the numbered list to the path configured in the plugin
+  6. Split features in memory into **operational** and **information**, filter and sort as in [Nearby ordering](#nearby-ordering).
+  7. `/plugins/vhfinfo/nearby` (and `/signalk/v1/api/vhfinfo/nearby` on SK 2.x) returns that ordered list.
+  8. Write the nearest of each type (including `vhfdata.nearest.information`) and the numbered list to the path configured in the plugin
+
+#### Nearby ordering
+
+The Nearby list (plugin, and the same rules on [vhfinfo.org/nearby](https://vhfinfo.org/nearby.html)) is two families concatenated: **operational first**, then **information**. A coast-radio station never ranks above a lock just because its transmitter is closer.
+
+**Operational** — `vts`, `vts radar support`, `lock`, `bridge`, `marina`, `area`, `territorial`
+
+1. Keep the feature only if its polygon **intersects the search beam** (heading / COG wedge). With no heading, or below the configured minimum speed, the beam is an omnidirectional box of the same length.
+2. `distance` is **signed metres to the polygon boundary**: negative means the ship is inside (`INSIDE` in the UI).
+3. Sort by **absolute** distance, nearest boundary first.
+
+**Information** — GeoJSON type `information` (coast radio / remotes)
+
+1. Ignore the beam. Keep the feature only if the ship is **inside** the coverage polygon.
+2. `distance` is **positive metres to the polygon centroid** (the “transmitter” for a circle).
+3. Sort by that distance, nearest centre first.
+
+Metres in the API stay metres. The website may show values over 1852 m as nautical miles; that is display only and does not change the order.
+
+##### Example A — beam ahead, lock and VTS
+
+Heading east, 4 km / 90° beam. A marina astern does not intersect the beam, so it is omitted.
+
+| Feature | In beam? | Boundary distance | Rank |
+| --- | --- | --- | --- |
+| VTS sector | yes | +800 m (ahead) | 1 |
+| Lock | yes | +2100 m (ahead) | 2 |
+| Marina (behind) | no | — | omitted |
+
+##### Example B — already in the lock
+
+Same beam. Inside the chamber the boundary distance is negative; sort still uses `|distance|`.
+
+| Feature | Boundary distance | `\|d\|` | Rank |
+| --- | --- | --- | --- |
+| Lock (you are in it) | −12 m | 12 m | 1 |
+| Marina off to starboard | +400 m | 400 m | 2 |
+
+`INSIDE` is the sign of the distance, not a separate sort key.
+
+##### Example C — overlapping coast radio
+
+No heading involved. Two coverage circles overlap the ship; a third does not contain the ship.
+
+| Feature | Ship inside? | Distance to centre | Rank |
+| --- | --- | --- | --- |
+| Coast radio A | yes | 3 km | 1 among information |
+| Coast radio B | yes | 18 km | 2 among information |
+| Coast radio C | no | — | omitted |
+
+##### Example D — mixed list
+
+Operational block, then information block:
+
+1. Lock (−12 m)  
+2. VTS (+800 m)  
+3. Coast radio A (3 km to centre)  
+4. Coast radio B (18 km to centre)
+
+Coast radio A is closer than the VTS in a straight line, but it stays after every operational hit.
 
 SignalK App Store installs come from the npm package [`vhfinfo`](https://www.npmjs.com/package/vhfinfo). A GitHub Action publishes a new patch version at most once per UTC day when country GeoJSON in `data/` or the SignalK plugin in `plugin/` has changed since the last release (see `.github/workflows/npm-publish-geojson.yml`). Publishing uses [npm trusted publishing](https://docs.npmjs.com/trusted-publishers/) (GitHub OIDC), so you do not need a rotating npm access token. Once, as package owner on npmjs.com: **Package → Settings → Trusted Publisher → GitHub Actions**, with organization `htool`, repository `vhfinfo`, workflow filename `npm-publish-geojson.yml`, and allowed action `npm publish`.
 
