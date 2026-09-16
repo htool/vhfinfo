@@ -15,7 +15,22 @@
     <meta name="navico-store" content="mfd-insight-store" />
     <title>VHFinfo</title>
     <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="mfd.js"></script>
+    <script>
+      document.write(
+        '<script type="text/javascript" src="mfd.js?ver=' +
+          Math.floor(Math.random() * 1000) +
+          '"><\/script>',
+      );
+    </script>
+    <script>
+      try {
+        document.documentElement.className = vhfMfd.useNearbyLayout()
+          ? "layout-nearby"
+          : "layout-mfd";
+      } catch (err) {
+        document.documentElement.className = "layout-mfd";
+      }
+    </script>
     <script>
       document.write(
         '<link rel="stylesheet" href="style.css?ver=' +
@@ -44,21 +59,18 @@
   var catalog = {};
   var shownCount = 0;
   var lastCompact = null;
+  var lastNearby = null;
   var NEARBY_URL = "/signalk/v1/api/vhfinfo/nearby";
   var OPTIONS_URL = "/signalk/v1/api/vhfinfo/options";
   var COMPACT_PATH = "vhfinfo.nearby";
 
-  function pathNr() {
-    return options.pathNr || 5;
-  }
-
   function rememberCatalog(list) {
-    catalog = Object.assign(catalog, vhfMfd.catalogFromList(list));
+    catalog = vhfMfd.assign(catalog, vhfMfd.catalogFromList(list));
   }
 
   function applyRecords(records) {
     var listEl = document.getElementById("list");
-    var slots = vhfMfd.slotsForDisplay(records, pathNr());
+    var slots = vhfMfd.slotsForDisplay(records, vhfMfd.MAX_RESULTS);
     var i;
     if (slots.length === 0) {
       listEl.innerHTML = "No VHF stations nearby";
@@ -84,18 +96,15 @@
     shownCount = slots.length;
   }
 
-  function fetchNearby(thenApply) {
+  function fetchNearby() {
     $.getJSON(NEARBY_URL)
       .done(function (list) {
         if (!Array.isArray(list)) {
           return;
         }
+        lastNearby = list;
         rememberCatalog(list);
-        if (lastCompact) {
-          applyRecords(vhfMfd.mergeHits(lastCompact, catalog));
-        } else if (thenApply !== false) {
-          applyRecords(list);
-        }
+        applyRecords(rankedRecords());
       })
       .fail(function () {
         if (shownCount === 0) {
@@ -105,12 +114,33 @@
       });
   }
 
+  function compactById(hits) {
+    var map = {};
+    (hits || []).forEach(function (hit) {
+      if (hit && hit.id != null && hit.id !== "") {
+        map[String(hit.id)] = hit;
+      }
+    });
+    return map;
+  }
+
+  function rankedRecords() {
+    if (lastNearby && lastNearby.length) {
+      var live = compactById(lastCompact);
+      return lastNearby.map(function (item) {
+        var hit = item && item.id != null ? live[String(item.id)] : null;
+        return hit ? vhfMfd.mergeHit(hit, catalog) : item;
+      });
+    }
+    return vhfMfd.mergeHits(lastCompact, catalog);
+  }
+
   function applyCompact(hits) {
     lastCompact = hits;
     if (vhfMfd.needsCatalog(hits, catalog)) {
-      fetchNearby(false);
+      fetchNearby();
     }
-    applyRecords(vhfMfd.mergeHits(hits, catalog));
+    applyRecords(rankedRecords());
   }
 
   function readOptions() {
@@ -119,7 +149,7 @@
         options = json || {};
       })
       .always(function () {
-        fetchNearby(true);
+        fetchNearby();
         connect();
       });
   }
@@ -160,7 +190,7 @@
       });
       console.log("subscriptionMessage: " + subscriptionMessage);
       ws.send(subscriptionMessage);
-      fetchNearby(true);
+      fetchNearby();
     };
     ws.onmessage = function (event) {
       if (String(event.data).indexOf("signalk-server") !== -1) {
@@ -191,145 +221,122 @@
       return;
     }
     var nameEl = document.getElementById("name_" + id);
-    var callEl = document.getElementById("callname_" + id);
     var channelEl = document.getElementById("channel_" + id);
     var typeEl = document.getElementById("type_" + id);
-    var modeEl = document.getElementById("mode_" + id);
-    var distanceEl = document.getElementById("distance_" + id);
     var urlEl = document.getElementById("url_" + id);
     var phoneEl = document.getElementById("phone_" + id);
+    var noteEl = document.getElementById("note_" + id);
+    var notes = document.getElementById("notes_" + id);
     if (nameEl) {
-      nameEl.innerHTML = record.name ? "Name: " + record.name : "";
-    }
-    if (callEl) {
-      callEl.innerHTML = record.callname ? "Callsign: " + record.callname : "";
+      nameEl.innerHTML = vhfMfd.escapeHtml(vhfMfd.displayName(record));
     }
     if (channelEl) {
-      channelEl.innerHTML = record.channel || "";
+      var channel = vhfMfd.channelText(record);
+      channelEl.innerHTML = vhfMfd.escapeHtml(channel);
+      if (vhfMfd.useNearbyLayout()) {
+        channelEl.style.fontSize =
+          vhfMfd.channelFontSizeEm(channel, 0.68) + "em";
+      } else {
+        channelEl.style.fontSize = "";
+      }
     }
     if (typeEl) {
-      typeEl.innerHTML = String(record.type || "").toUpperCase();
-    }
-    if (modeEl) {
-      modeEl.innerHTML = vhfMfd.displayMode(record);
-    }
-    if (distanceEl) {
-      var distance = record.distance;
-      distanceEl.innerHTML =
-        distance == null || distance === "" ? "" : distance + "m";
+      typeEl.innerHTML = vhfMfd.useNearbyLayout()
+        ? vhfMfd.typeLineHtml(record)
+        : vhfMfd.escapeHtml(vhfMfd.typeLine(record));
     }
     if (urlEl) {
-      urlEl.innerHTML = record.url
-        ? '<a href="' +
-          record.url +
-          '" style="text-decoration:none; color: white">&#128279;</a>'
-        : "";
+      urlEl.innerHTML = vhfMfd.urlIconHtml(vhfMfd.pickBlockUrl(record));
     }
     if (phoneEl) {
-      phoneEl.innerHTML = record.phone
-        ? '<a href="tel:' +
-          record.phone +
-          '" style="text-decoration:none; color: white">&#9990;</a>'
-        : "";
+      phoneEl.innerHTML = vhfMfd.phoneIconHtml(vhfMfd.pickBlockPhone(record));
     }
-    var note = false;
-    var sub_types = ["generic", "pleasure", "cargo"];
-    sub_types.forEach(function (sub_type) {
-      var el = document.getElementById(sub_type + "_note_" + id);
-      if (!el) {
-        return;
-      }
-      if (
-        record.vhfdata &&
-        record.vhfdata[sub_type] &&
-        record.vhfdata[sub_type].note
-      ) {
-        el.innerHTML =
-          sub_type.toUpperCase() + ": " + record.vhfdata[sub_type].note;
-        note = true;
-      } else {
-        el.innerHTML = "";
-      }
-    });
-    var notes = document.getElementById("notes_" + id);
+    var note = vhfMfd.pickBlockNote(record);
+    if (noteEl) {
+      noteEl.innerHTML = note ? vhfMfd.escapeHtml(String(note)) : "";
+    }
     if (notes) {
       notes.style.display = note ? "" : "none";
     }
   }
 
-  function createEntry(id) {
-    const entry = document.createElement("div");
-    entry.classList.add("entry");
+  function createNearbyEntry(id) {
+    var wrap = document.createElement("article");
+    wrap.className = "vhf-info-block nearby";
+    wrap.id = "entry_" + id;
+    wrap.innerHTML =
+      '<div class="channel" id="channel_' +
+      id +
+      '"></div>' +
+      '<div class="type" id="type_' +
+      id +
+      '"></div>' +
+      '<h2 class="name" id="name_' +
+      id +
+      '"></h2>' +
+      '<div class="note" id="note_' +
+      id +
+      '"></div>' +
+      '<div class="phone" id="phone_' +
+      id +
+      '"></div>' +
+      '<div class="url" id="url_' +
+      id +
+      '"></div>';
+    document.getElementById("list").appendChild(wrap);
+  }
+
+  function createMfdEntry(id) {
+    var entry = document.createElement("div");
+    var channelblock = document.createElement("div");
+    var channel = document.createElement("div");
+    var typeblock = document.createElement("div");
+    var type = document.createElement("div");
+    var phone = document.createElement("div");
+    var url = document.createElement("div");
+    var name = document.createElement("div");
+    var notes = document.createElement("div");
+    var note = document.createElement("div");
+    entry.className = "entry";
     entry.id = "entry_" + id;
-
-    const channelblock = document.createElement("div");
-    channelblock.classList.add("channelblock");
-
-    const channel = document.createElement("div");
-    channel.classList.add("channel");
+    channelblock.className = "channelblock";
+    channel.className = "channel";
     channel.id = "channel_" + id;
     channelblock.appendChild(channel);
-
-    const typeblock = document.createElement("div");
-    typeblock.classList.add("typeblock");
-    const type = document.createElement("div");
-    type.classList.add("type");
+    typeblock.className = "typeblock";
+    type.className = "type";
     type.id = "type_" + id;
     typeblock.appendChild(type);
-    const mode = document.createElement("div");
-    mode.classList.add("mode");
-    mode.id = "mode_" + id;
-    typeblock.appendChild(mode);
-    const distance = document.createElement("div");
-    distance.classList.add("distance");
-    distance.id = "distance_" + id;
-    typeblock.appendChild(distance);
-    const phone = document.createElement("div");
-    phone.classList.add("phone");
+    phone.className = "phone";
     phone.id = "phone_" + id;
     typeblock.appendChild(phone);
-    const url = document.createElement("div");
-    url.classList.add("url");
+    url.className = "url";
     url.id = "url_" + id;
     typeblock.appendChild(url);
     channelblock.appendChild(typeblock);
     entry.appendChild(channelblock);
-
-    const name = document.createElement("div");
-    name.classList.add("name");
+    name.className = "name";
     name.id = "name_" + id;
     entry.appendChild(name);
-
-    const callname = document.createElement("div");
-    callname.classList.add("name");
-    callname.id = "callname_" + id;
-    entry.appendChild(callname);
-
-    const notes = document.createElement("div");
-    notes.classList.add("notes");
+    notes.className = "notes";
     notes.id = "notes_" + id;
     entry.appendChild(notes);
-
-    const generic_note = document.createElement("div");
-    generic_note.classList.add("note");
-    generic_note.id = "generic_note_" + id;
-    notes.appendChild(generic_note);
-
-    const pleasure_note = document.createElement("div");
-    pleasure_note.classList.add("note");
-    pleasure_note.id = "pleasure_note_" + id;
-    notes.appendChild(pleasure_note);
-
-    const cargo_note = document.createElement("div");
-    cargo_note.classList.add("note");
-    cargo_note.id = "cargo_note_" + id;
-    notes.appendChild(cargo_note);
-
+    note.className = "note";
+    note.id = "note_" + id;
+    notes.appendChild(note);
     document.getElementById("list").appendChild(entry);
+  }
+
+  function createEntry(id) {
+    if (vhfMfd.useNearbyLayout()) {
+      createNearbyEntry(id);
+      return;
+    }
+    createMfdEntry(id);
   }
 
   readOptions();
   setInterval(function () {
-    fetchNearby(true);
+    fetchNearby();
   }, 5000);
 </script>

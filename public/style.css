@@ -16,7 +16,6 @@ body {
   font-size: 2rem;
   margin-left: 2px;
   margin-right: 2px;
-  overflow-anchor: none;
 }
 
 br {
@@ -42,14 +41,12 @@ br {
 }
 
 .channelblock {
-  display: grid;
   position: relative;
 }
 
 .channel {
   font-size: 6rem;
   text-align: center;
-  display: grid;
   position: relative;
   left: 0%;
   top: 0%;
@@ -57,8 +54,6 @@ br {
 
 .nameblock {
   text-align: left;
-  display: grid;
-  grid-column-start: none;
   position: absolute;
 }
 
@@ -82,8 +77,6 @@ br {
 .typeblock {
   font-size: 1.5rem;
   text-align: left;
-  display: grid;
-  grid-column-start: none;
   position: relative;
   padding-bottom: 8px;
   left: 2%;
@@ -91,18 +84,9 @@ br {
 }
 
 .type {
-  display: inline-block;
+  display: block;
   position: relative;
-}
-
-.mode {
-  display: inline-block;
-  position: relative;
-}
-
-.distance {
-  display: inline-block;
-  position: relative;
+  width: 100%;
 }
 
 .phone {
@@ -139,4 +123,124 @@ br {
   display: block;
   position: relative;
   text-align: left;
+}
+
+/* Phone / App Dock: same card layout as nearby.html. Not used on the MFD. */
+html.layout-nearby body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+html.layout-nearby .header {
+  padding: 0.55rem 0.8rem 0.35rem;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+html.layout-nearby #list {
+  padding: 0 0.4rem 1.25rem;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+html.layout-nearby .vhf-info-block {
+  display: grid;
+  grid-template-columns: minmax(4.4rem, 6rem) minmax(0, 1fr) auto auto;
+  grid-template-areas:
+    "channel type phone url"
+    "channel name name name"
+    "channel note note note";
+  column-gap: 0.9rem;
+  row-gap: 0.2rem;
+  align-items: start;
+  box-sizing: border-box;
+  min-height: 8.75rem;
+  width: 100%;
+  padding: 0.85rem 0.95rem 1.05rem;
+  color: #fff;
+  background: #000;
+  border-bottom: 1px solid #404040;
+}
+
+html.layout-nearby .vhf-info-block .channel,
+html.layout-nearby .vhf-info-block .type,
+html.layout-nearby .vhf-info-block .name,
+html.layout-nearby .vhf-info-block .note,
+html.layout-nearby .vhf-info-block .phone,
+html.layout-nearby .vhf-info-block .url {
+  position: static;
+  display: block;
+  left: auto;
+  right: auto;
+  top: auto;
+  bottom: auto;
+  width: auto;
+}
+
+html.layout-nearby .vhf-info-block .channel {
+  grid-area: channel;
+  align-self: center;
+  justify-self: end;
+  text-align: right;
+  font-size: 3.8em;
+  font-weight: 700;
+  line-height: 0.85;
+}
+
+html.layout-nearby .vhf-info-block .type {
+  grid-area: type;
+  padding-top: 0.2rem;
+  font-size: 1em;
+  white-space: normal;
+}
+
+html.layout-nearby .vhf-info-block .name {
+  grid-area: name;
+  margin: 0;
+  left: 0;
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1.15;
+  white-space: normal;
+}
+
+html.layout-nearby .vhf-info-block .note {
+  grid-area: note;
+  font-size: 0.9em;
+}
+
+html.layout-nearby .vhf-info-block .phone {
+  grid-area: phone;
+  font-size: 1.6em;
+}
+
+html.layout-nearby .vhf-info-block .url {
+  grid-area: url;
+  font-size: 1.2em;
+}
+
+html.layout-nearby .vhf-info-block .phone a,
+html.layout-nearby .vhf-info-block .url a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 560px) {
+  html.layout-nearby .vhf-info-block {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    grid-template-areas:
+      "channel phone url"
+      "type type type"
+      "name name name"
+      "note note note";
+    min-height: 9.25rem;
+    column-gap: 0.55rem;
+    padding: 0.7rem 0.8rem 0.95rem;
+  }
+
+  html.layout-nearby .vhf-info-block .channel {
+    justify-self: start;
+    text-align: left;
+  }
 }

@@ -668,11 +668,32 @@ module.exports = function (app, options) {
       return feature.properties;
     }
 
+    function skipNearbyType(type) {
+      var t = String(type || "").toLowerCase();
+      return t === "territorial" || t === "12nm";
+    }
+
+    function promoteVtsOverRadar(operational) {
+      if (
+        operational.length > 1 &&
+        operational[0].distance < 0 &&
+        operational[1].distance < 0 &&
+        String(operational[0].type).toLowerCase() === "vts radar support" &&
+        String(operational[1].type).toLowerCase() === "vts"
+      ) {
+        operational[0] = operational.splice(1, 1, operational[0])[0];
+      }
+      return operational;
+    }
+
     function findNearbyFeatures(currentCoordinates, features) {
       var operationalFeatures = [];
       var informationFeatures = [];
       currentPosition = turf.point(currentCoordinates, {});
       features.forEach((feature) => {
+        if (skipNearbyType(feature.properties && feature.properties.type)) {
+          return;
+        }
         if (
           isInformationType(feature.properties && feature.properties.type)
         ) {
@@ -692,6 +713,7 @@ module.exports = function (app, options) {
           parseFloat(Math.abs(a.distance)) - parseFloat(Math.abs(b.distance))
         );
       });
+      promoteVtsOverRadar(operationalFeatures);
       informationFeatures.sort(function (a, b) {
         return parseFloat(a.distance) - parseFloat(b.distance);
       });
